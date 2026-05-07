@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-05-07T06:51:40.613409Z",
-  "duration_seconds": 144.6,
+  "last_run": "2026-05-07T07:18:05.159961Z",
+  "duration_seconds": 983.5,
   "sources": {
     "gdelt": {
       "status": "ok",
-      "features": 871
+      "features": 938
     },
     "acled": {
       "status": "skipped",
@@ -15,8 +15,8 @@
       "features": 1298
     },
     "bellingcat": {
-      "status": "skipped",
-      "reason": "no data"
+      "status": "ok",
+      "features": 2515
     },
     "ofac": {
       "status": "ok",
@@ -26,7 +26,7 @@
     },
     "ais": {
       "status": "ok",
-      "features": 3,
+      "features": 50,
       "sanctioned_in_chokepoints": 0
     }
   }
