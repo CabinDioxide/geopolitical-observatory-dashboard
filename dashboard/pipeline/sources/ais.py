@@ -30,13 +30,24 @@ AISSTREAM_API_KEY = os.environ.get("AISSTREAM_API_KEY", "")
 AISSTREAM_WS_URL = "wss://stream.aisstream.io/v0/stream"
 
 # Strategic chokepoint bounding boxes [[[lat1, lon1], [lat2, lon2]]]
+# 2026-05-07 EXPERIMENT: temporarily reduced to 4 bboxes (mix of known-good
+# from prior 8-bbox run + known-silent) to test the hypothesis that the
+# 8-bbox subscription is hitting an aisstream per-subscription bbox cap.
+# Hormuz + Malacca were the only regions returning vessels with 8 bboxes;
+# Suez + South China Sea returned 0 despite being among densest regions.
+# If all 4 return vessels in this run, the cap hypothesis is confirmed.
 CHOKEPOINT_BOXES = {
     "Strait of Hormuz": [[25.0, 55.0], [27.0, 57.5]],
     "Strait of Malacca": [[-1.0, 100.0], [4.0, 105.0]],
     "Suez Canal": [[29.5, 32.0], [31.5, 33.0]],
+    "South China Sea": [[8.0, 110.0], [16.0, 118.0]],
+}
+
+# Temporarily disabled for the cap-test experiment. Will be restored or
+# reorganized after the result decides on next architecture.
+_DISABLED_BOXES_PENDING_TEST = {
     "Bab el-Mandeb": [[12.0, 42.5], [13.5, 44.0]],
     "Taiwan Strait": [[23.0, 117.0], [26.0, 121.0]],
-    "South China Sea": [[8.0, 110.0], [16.0, 118.0]],
     "Strait of Gibraltar": [[35.5, -6.5], [36.5, -5.0]],
     "Korea Strait": [[33.5, 128.0], [35.5, 131.0]],
 }
