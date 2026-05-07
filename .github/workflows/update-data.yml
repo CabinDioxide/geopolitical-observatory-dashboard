@@ -8,6 +8,7 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # bound the whole job; AIS hangs in May 2026 took 15min before this guard
     permissions:
       contents: write
 
@@ -31,8 +32,10 @@ jobs:
           # Conflict events (pipeline-generated)
           cp -r dashboard/data/conflicts/ dashboard/public/data/conflicts/
 
-          # Maritime vessels snapshot (pipeline-generated)
+          # Maritime vessels snapshots (pipeline-generated)
           cp dashboard/data/maritime/vessels_snapshot.geojson dashboard/public/data/maritime/ 2>/dev/null || true
+          cp dashboard/data/maritime/sanctioned_vessels_in_chokepoints.geojson dashboard/public/data/maritime/ 2>/dev/null || true
+          cp dashboard/data/maritime/sanctioned_vessels.json dashboard/public/data/maritime/ 2>/dev/null || true
 
           # Static data (already in repo, ensure copies exist in public)
           cp dashboard/data/bases/military_bases.geojson dashboard/public/data/bases/

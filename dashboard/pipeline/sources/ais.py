@@ -99,11 +99,22 @@ def _capture_region(region_name: str, bbox: list, duration: int, vessels: dict):
         AISSTREAM_WS_URL,
         on_open=on_open, on_message=on_message, on_error=on_error,
     )
-    ws_thread = threading.Thread(target=ws.run_forever)
+    # ping_interval/ping_timeout prevent the connection from silently hanging:
+    # if no pong within ping_timeout, run_forever raises and the thread exits.
+    ws_thread = threading.Thread(
+        target=lambda: ws.run_forever(ping_interval=10, ping_timeout=5)
+    )
     ws_thread.daemon = True
     ws_thread.start()
     time.sleep(duration)
-    ws.close()
+    try:
+        ws.close()
+    except Exception:
+        pass
+    # Give the thread a bounded window to actually exit. If close() didn't
+    # terminate it cleanly, leave it as a zombie daemon — it dies with the
+    # process. This bounds total run time per region to duration + 5s.
+    ws_thread.join(timeout=5)
 
 
 def capture_snapshot(per_region_seconds: int = 15) -> list[dict]:
@@ -137,10 +148,30 @@ def capture_snapshot(per_region_seconds: int = 15) -> list[dict]:
     return list(vessels.values())
 
 
-def vessels_to_geojson(vessels: list[dict]) -> dict:
-    """Convert vessel positions to GeoJSON."""
+def vessels_to_geojson(vessels: list[dict], sanctions_lookup: dict | None = None) -> dict:
+    """Convert vessel positions to GeoJSON, optionally enriched with sanctions data.
+
+    If sanctions_lookup is provided (the dict returned by ofac.run()), each
+    feature gains `sanctioned`, `sanctions_programs`, and `sdn_name` fields.
+    Joining is by MMSI — IMO is not available in PositionReports.
+    """
+    by_mmsi = (sanctions_lookup or {}).get("by_mmsi", {})
+
     features = []
     for v in vessels:
+        sanctioned = False
+        sanctions_programs: list[str] = []
+        sdn_name: str | None = None
+        sdn_remarks: str | None = None
+
+        if by_mmsi:
+            match = by_mmsi.get(v["mmsi"])
+            if match:
+                sanctioned = True
+                sanctions_programs = match.get("programs", [])
+                sdn_name = match.get("name")
+                sdn_remarks = match.get("remarks")
+
         feature = {
             "type": "Feature",
             "geometry": {
@@ -158,6 +189,10 @@ def vessels_to_geojson(vessels: list[dict]) -> dict:
                 "timestamp": v["timestamp"],
                 "region": v.get("region", ""),
                 "type": "vessel",
+                "sanctioned": sanctioned,
+                "sanctions_programs": sanctions_programs,
+                "sdn_name": sdn_name,
+                "sdn_remarks": sdn_remarks,
             },
         }
         features.append(feature)
@@ -175,11 +210,54 @@ def save_ais_snapshot(geojson: dict) -> Path:
     return out_path
 
 
-def run(per_region: int = 15) -> dict:
-    """Capture AIS snapshot from all regions and save. Returns GeoJSON dict."""
+def filter_sanctioned(geojson: dict) -> dict:
+    """Extract only the sanctioned vessels from an enriched vessel GeoJSON."""
+    features = [
+        f for f in geojson.get("features", [])
+        if f.get("properties", {}).get("sanctioned")
+    ]
+    return {"type": "FeatureCollection", "features": features}
+
+
+def save_sanctioned_snapshot(geojson: dict) -> Path:
+    """Save sanctioned-only vessel snapshot for fast frontend layer."""
+    MARITIME_DIR.mkdir(parents=True, exist_ok=True)
+    out_path = MARITIME_DIR / "sanctioned_vessels_in_chokepoints.geojson"
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(geojson, f, ensure_ascii=False)
+    logger.info(
+        f"Saved {len(geojson['features'])} sanctioned vessels to {out_path}"
+    )
+    return out_path
+
+
+def run(per_region: int = 15, sanctions_lookup: dict | None = None) -> dict:
+    """Capture AIS snapshot, optionally cross-referenced with sanctions list.
+
+    Returns the enriched GeoJSON. If sanctions_lookup is provided, also
+    writes a separate sanctioned-only file for the frontend to consume.
+    """
     vessels = capture_snapshot(per_region_seconds=per_region)
     if not vessels:
         return {"type": "FeatureCollection", "features": []}
-    geojson = vessels_to_geojson(vessels)
+
+    geojson = vessels_to_geojson(vessels, sanctions_lookup=sanctions_lookup)
     save_ais_snapshot(geojson)
+
+    if sanctions_lookup and sanctions_lookup.get("by_mmsi"):
+        sanctioned = filter_sanctioned(geojson)
+        save_sanctioned_snapshot(sanctioned)
+        n = len(sanctioned["features"])
+        if n > 0:
+            programs = {}
+            for f in sanctioned["features"]:
+                for p in f["properties"].get("sanctions_programs", []):
+                    programs[p] = programs.get(p, 0) + 1
+            logger.info(
+                f"AIS+OFAC: {n} sanctioned vessels currently in monitored "
+                f"chokepoints; programs: {programs}"
+            )
+        else:
+            logger.info("AIS+OFAC: no sanctioned vessels currently visible")
+
     return geojson

@@ -21,7 +21,7 @@ dashboard_dir = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(dashboard_dir))
 
 from pipeline.config import CONFLICTS_DIR, META_DIR, LOG_DIR
-from pipeline.sources import gdelt, acled, ucdp, bellingcat, ais
+from pipeline.sources import gdelt, acled, ucdp, bellingcat, ais, ofac
 from pipeline.processors.normalize import normalize_gdelt, normalize_acled, merge_conflict_sources
 
 # --- Logging ---
@@ -112,14 +112,40 @@ def run_pipeline():
         logger.error(f"Bellingcat failed: {e}")
         sources_status["bellingcat"] = {"status": "error", "error": str(e)}
 
+    # --- OFAC SDN (sanctioned vessels — public, no auth) ---
+    # Run before AIS so AIS can join against the sanctions lookup. Failures
+    # here don't block AIS; they just leave sanctions enrichment empty.
+    sanctions_lookup = None
+    try:
+        logger.info("--- Fetching OFAC SDN ---")
+        sanctions_lookup = ofac.run()
+        meta = sanctions_lookup.get("_meta", {})
+        if meta.get("error"):
+            sources_status["ofac"] = {"status": "error", "error": meta["error"]}
+        else:
+            sources_status["ofac"] = {
+                "status": "ok",
+                "vessels": meta.get("total_vessels", 0),
+                "with_mmsi": meta.get("with_mmsi", 0),
+                "with_imo": meta.get("with_imo", 0),
+            }
+    except Exception as e:
+        logger.error(f"OFAC failed: {e}")
+        sources_status["ofac"] = {"status": "error", "error": str(e)}
+
     # --- AIS Vessel Snapshot (requires AISSTREAM_API_KEY) ---
     try:
         logger.info("--- AIS Vessel Snapshot ---")
-        ais_raw = ais.run(per_region=15)
+        ais_raw = ais.run(per_region=15, sanctions_lookup=sanctions_lookup)
         if ais_raw.get("features"):
+            sanctioned_count = sum(
+                1 for f in ais_raw["features"]
+                if f["properties"].get("sanctioned")
+            )
             sources_status["ais"] = {
                 "status": "ok",
                 "features": len(ais_raw.get("features", [])),
+                "sanctioned_in_chokepoints": sanctioned_count,
             }
         else:
             sources_status["ais"] = {"status": "skipped", "reason": "no API key or no data"}
