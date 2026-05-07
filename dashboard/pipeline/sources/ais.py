@@ -1,12 +1,18 @@
 """
 AIS vessel tracking via aisstream.io WebSocket.
 
-Takes a 30-second snapshot of vessel positions in key strategic chokepoints.
+Subscribes to all monitored chokepoint bounding boxes in a SINGLE websocket
+connection (multi-bbox subscription). Earlier sequential per-region approach
+was discovered to silently fail after the second region — aisstream appears
+to throttle/reject rapid sequential connections from the same API key.
+Single-stream avoids that and also runs ~8x faster.
+
+Region attribution is done in the message handler by lat/lon → bbox lookup,
+since aisstream doesn't tell us which subscription bbox a given message
+matched.
+
 Register at https://aisstream.io/ (GitHub login) to get an API key.
 Set env: AISSTREAM_API_KEY=your_key
-
-Each pipeline run connects briefly, captures current vessel positions,
-and saves as GeoJSON for dashboard display.
 """
 from __future__ import annotations
 
@@ -47,16 +53,44 @@ NAV_STATUS = {
 }
 
 
-def _capture_region(region_name: str, bbox: list, duration: int, vessels: dict):
-    """Capture vessels from a single region for N seconds."""
+def _find_region(lat: float, lon: float) -> str:
+    """Return which chokepoint bbox contains this point, '' if none.
+
+    Boxes don't overlap, so first match wins.
+    """
+    for region, ((lat1, lon1), (lat2, lon2)) in CHOKEPOINT_BOXES.items():
+        if lat1 <= lat <= lat2 and lon1 <= lon <= lon2:
+            return region
+    return ""
+
+
+def capture_snapshot(duration_seconds: int = 240) -> list[dict]:
+    """Capture vessels from all chokepoint regions in a single multi-bbox stream.
+
+    Opens one websocket subscribing to all CHOKEPOINT_BOXES at once.
+    Listens for `duration_seconds`. Region attribution is done by lat/lon →
+    bbox lookup in the message handler (aisstream doesn't echo which
+    subscription bbox a message matched).
+    """
+    if not AISSTREAM_API_KEY:
+        logger.warning(
+            "AISSTREAM_API_KEY not set. "
+            "Register at https://aisstream.io/ and set env var."
+        )
+        return []
+
     try:
         import websocket
     except ImportError:
-        return
+        logger.error("websocket-client not installed. Run: pip install websocket-client")
+        return []
+
+    vessels: dict[str, dict] = {}
+    bboxes = list(CHOKEPOINT_BOXES.values())
 
     subscription = {
         "APIKey": AISSTREAM_API_KEY,
-        "BoundingBoxes": [bbox],
+        "BoundingBoxes": bboxes,
         "FilterMessageTypes": ["PositionReport"],
     }
 
@@ -83,7 +117,7 @@ def _capture_region(region_name: str, bbox: list, duration: int, vessels: dict):
                 "heading": report.get("TrueHeading", 0),
                 "nav_status": NAV_STATUS.get(report.get("NavigationalStatus", -1), "Unknown"),
                 "timestamp": meta.get("time_utc", ""),
-                "region": region_name,
+                "region": _find_region(lat, lon),
             }
         except Exception:
             pass
@@ -99,52 +133,51 @@ def _capture_region(region_name: str, bbox: list, duration: int, vessels: dict):
         AISSTREAM_WS_URL,
         on_open=on_open, on_message=on_message, on_error=on_error,
     )
-    # ping_interval/ping_timeout prevent the connection from silently hanging:
-    # if no pong within ping_timeout, run_forever raises and the thread exits.
+    # ping_interval/ping_timeout prevent silent hangs: if no pong within
+    # ping_timeout, run_forever raises and the thread exits.
     ws_thread = threading.Thread(
         target=lambda: ws.run_forever(ping_interval=10, ping_timeout=5)
     )
     ws_thread.daemon = True
     ws_thread.start()
-    time.sleep(duration)
+
+    logger.info(
+        f"AIS: subscribing to {len(bboxes)} chokepoint bboxes in single stream, "
+        f"sampling for {duration_seconds}s"
+    )
+
+    # Periodic progress logging so the run isn't silent for 4+ minutes.
+    interval = 60
+    elapsed = 0
+    last_count = 0
+    while elapsed < duration_seconds:
+        sleep_for = min(interval, duration_seconds - elapsed)
+        time.sleep(sleep_for)
+        elapsed += sleep_for
+        if len(vessels) > last_count:
+            logger.info(
+                f"  +{len(vessels) - last_count} vessels at {elapsed}s "
+                f"(total: {len(vessels)})"
+            )
+            last_count = len(vessels)
+
     try:
         ws.close()
     except Exception:
         pass
-    # Give the thread a bounded window to actually exit. If close() didn't
-    # terminate it cleanly, leave it as a zombie daemon — it dies with the
-    # process. This bounds total run time per region to duration + 5s.
     ws_thread.join(timeout=5)
 
-
-def capture_snapshot(per_region_seconds: int = 15) -> list[dict]:
-    """Capture vessels from each chokepoint region sequentially."""
-    if not AISSTREAM_API_KEY:
-        logger.warning(
-            "AISSTREAM_API_KEY not set. "
-            "Register at https://aisstream.io/ and set env var."
-        )
-        return []
-
-    try:
-        import websocket
-    except ImportError:
-        logger.error("websocket-client not installed. Run: pip install websocket-client")
-        return []
-
-    vessels = {}  # MMSI -> latest position
-    total_regions = len(CHOKEPOINT_BOXES)
-    total_time = per_region_seconds * total_regions
-
-    logger.info(f"AIS: scanning {total_regions} regions, {per_region_seconds}s each (~{total_time}s total)")
-
-    for i, (region, bbox) in enumerate(CHOKEPOINT_BOXES.items()):
-        before = len(vessels)
-        _capture_region(region, bbox, per_region_seconds, vessels)
-        captured = len(vessels) - before
-        logger.info(f"  [{i+1}/{total_regions}] {region}: +{captured} vessels (total: {len(vessels)})")
-
-    logger.info(f"AIS snapshot complete: {len(vessels)} unique vessels across {total_regions} regions")
+    # Per-region breakdown for monitoring (uneven distributions are real —
+    # Malacca has 10x Hormuz traffic — but a region returning 0 in a 240s
+    # window across the whole sample is a signal worth seeing in logs).
+    region_counts: dict[str, int] = {}
+    for v in vessels.values():
+        r = v.get("region") or "(out of bounds)"
+        region_counts[r] = region_counts.get(r, 0) + 1
+    logger.info(
+        f"AIS snapshot complete: {len(vessels)} unique vessels; "
+        f"per-region: {region_counts}"
+    )
     return list(vessels.values())
 
 
@@ -231,13 +264,17 @@ def save_sanctioned_snapshot(geojson: dict) -> Path:
     return out_path
 
 
-def run(per_region: int = 15, sanctions_lookup: dict | None = None) -> dict:
+def run(duration: int = 240, sanctions_lookup: dict | None = None) -> dict:
     """Capture AIS snapshot, optionally cross-referenced with sanctions list.
+
+    `duration` is the total sample window in seconds across ALL chokepoint
+    regions (not per-region — the multi-bbox subscription listens to all
+    regions simultaneously).
 
     Returns the enriched GeoJSON. If sanctions_lookup is provided, also
     writes a separate sanctioned-only file for the frontend to consume.
     """
-    vessels = capture_snapshot(per_region_seconds=per_region)
+    vessels = capture_snapshot(duration_seconds=duration)
     if not vessels:
         return {"type": "FeatureCollection", "features": []}
 

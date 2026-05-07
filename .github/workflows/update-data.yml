@@ -8,9 +8,10 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    # AIS at 240s/region × 8 regions = 32 min, plus other sources + setup ~3 min.
-    # Free Actions on public repos has unlimited minutes, so set generous bound.
-    timeout-minutes: 45
+    # AIS now uses a single 240s multi-bbox subscription (was 8 × 240s
+    # sequential), so the AIS step is ~4 min, not 32 min. Total run ~6-8 min.
+    # Set 15 to leave headroom; will revisit if pipeline grows.
+    timeout-minutes: 15
     permissions:
       contents: write
 

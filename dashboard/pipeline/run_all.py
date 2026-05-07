@@ -134,13 +134,13 @@ def run_pipeline():
         sources_status["ofac"] = {"status": "error", "error": str(e)}
 
     # --- AIS Vessel Snapshot (requires AISSTREAM_API_KEY) ---
-    # 240s/region. 120s captured ~50 vessels across 8 regions on 5/7/2026,
-    # below the threshold (~100-200) where sanctioned-vessel hits become
-    # statistically reliable in a 746-MMSI sanction pool. Doubling to 240s
-    # should land in the right range. Total AIS time = 8 × 240 = 32 min.
+    # Single multi-bbox subscription listening to all 8 chokepoints
+    # simultaneously for `duration` seconds. Replaces the earlier sequential
+    # per-region approach which silently failed after the second region
+    # (aisstream throttles rapid sequential connections from the same key).
     try:
         logger.info("--- AIS Vessel Snapshot ---")
-        ais_raw = ais.run(per_region=240, sanctions_lookup=sanctions_lookup)
+        ais_raw = ais.run(duration=240, sanctions_lookup=sanctions_lookup)
         if ais_raw.get("features"):
             sanctioned_count = sum(
                 1 for f in ais_raw["features"]
