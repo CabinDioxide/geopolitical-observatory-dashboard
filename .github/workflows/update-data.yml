@@ -8,9 +8,9 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    # AIS at 120s/region × 8 regions = 16 min, plus other sources + setup ~3 min.
+    # AIS at 240s/region × 8 regions = 32 min, plus other sources + setup ~3 min.
     # Free Actions on public repos has unlimited minutes, so set generous bound.
-    timeout-minutes: 30
+    timeout-minutes: 45
     permissions:
       contents: write
 
