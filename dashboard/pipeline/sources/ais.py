@@ -30,22 +30,22 @@ AISSTREAM_API_KEY = os.environ.get("AISSTREAM_API_KEY", "")
 AISSTREAM_WS_URL = "wss://stream.aisstream.io/v0/stream"
 
 # Strategic chokepoint bounding boxes [[[lat1, lon1], [lat2, lon2]]]
-# 2026-05-07 EXPERIMENT: temporarily reduced to 4 bboxes (mix of known-good
-# from prior 8-bbox run + known-silent) to test the hypothesis that the
-# 8-bbox subscription is hitting an aisstream per-subscription bbox cap.
-# Hormuz + Malacca were the only regions returning vessels with 8 bboxes;
-# Suez + South China Sea returned 0 despite being among densest regions.
-# If all 4 return vessels in this run, the cap hypothesis is confirmed.
+# 2026-05-07 DIAGNOSTIC TEST 2: single-bbox subscription on SCS only.
+# Earlier tests (8 bboxes and 4 bboxes) consistently returned data only
+# from Malacca + Hormuz; SCS, Suez, Bab el-Mandeb, Gibraltar, Korea
+# always returned 0. This run isolates SCS in a 1-bbox subscription to
+# distinguish two hypotheses: (a) aisstream coverage gap on those regions
+# vs (b) some multi-bbox interaction issue. If SCS returns vessels with
+# only itself in the subscription -> (b); if still 0 -> (a).
 CHOKEPOINT_BOXES = {
-    "Strait of Hormuz": [[25.0, 55.0], [27.0, 57.5]],
-    "Strait of Malacca": [[-1.0, 100.0], [4.0, 105.0]],
-    "Suez Canal": [[29.5, 32.0], [31.5, 33.0]],
     "South China Sea": [[8.0, 110.0], [16.0, 118.0]],
 }
 
-# Temporarily disabled for the cap-test experiment. Will be restored or
-# reorganized after the result decides on next architecture.
+# Temporarily set aside for the diagnostic. Will be restored after.
 _DISABLED_BOXES_PENDING_TEST = {
+    "Strait of Hormuz": [[25.0, 55.0], [27.0, 57.5]],
+    "Strait of Malacca": [[-1.0, 100.0], [4.0, 105.0]],
+    "Suez Canal": [[29.5, 32.0], [31.5, 33.0]],
     "Bab el-Mandeb": [[12.0, 42.5], [13.5, 44.0]],
     "Taiwan Strait": [[23.0, 117.0], [26.0, 121.0]],
     "Strait of Gibraltar": [[35.5, -6.5], [36.5, -5.0]],
