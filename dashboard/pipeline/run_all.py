@@ -134,9 +134,14 @@ def run_pipeline():
         sources_status["ofac"] = {"status": "error", "error": str(e)}
 
     # --- AIS Vessel Snapshot (requires AISSTREAM_API_KEY) ---
+    # 120s/region (was 15s) — 15s caught only 0-2 vessels per region because
+    # aisstream sends PositionReport on each ship's broadcast, and ships
+    # broadcast every 6-180s. With 120s windows we capture ~30-100 vessels
+    # per region, which is what's needed for sanctioned-vessel detection
+    # to have meaningful hit probability.
     try:
         logger.info("--- AIS Vessel Snapshot ---")
-        ais_raw = ais.run(per_region=15, sanctions_lookup=sanctions_lookup)
+        ais_raw = ais.run(per_region=120, sanctions_lookup=sanctions_lookup)
         if ais_raw.get("features"):
             sanctioned_count = sum(
                 1 for f in ais_raw["features"]

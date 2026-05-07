@@ -8,7 +8,9 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 10  # bound the whole job; AIS hangs in May 2026 took 15min before this guard
+    # AIS at 120s/region × 8 regions = 16 min, plus other sources + setup ~3 min.
+    # Free Actions on public repos has unlimited minutes, so set generous bound.
+    timeout-minutes: 30
     permissions:
       contents: write
 
@@ -20,7 +22,9 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests geojson flask flask-cors websocket-client
+        # osint-geo-extractor is required by the bellingcat source — without
+        # it that source silently fails (logged as "geo_extractor not installed").
+        run: pip install requests geojson flask flask-cors websocket-client osint-geo-extractor
 
       - name: Run data pipeline
         env:
