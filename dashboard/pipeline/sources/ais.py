@@ -30,24 +30,32 @@ AISSTREAM_API_KEY = os.environ.get("AISSTREAM_API_KEY", "")
 AISSTREAM_WS_URL = "wss://stream.aisstream.io/v0/stream"
 
 # Strategic chokepoint bounding boxes [[[lat1, lon1], [lat2, lon2]]]
-# 2026-05-07 DIAGNOSTIC TEST 2: single-bbox subscription on SCS only.
-# Earlier tests (8 bboxes and 4 bboxes) consistently returned data only
-# from Malacca + Hormuz; SCS, Suez, Bab el-Mandeb, Gibraltar, Korea
-# always returned 0. This run isolates SCS in a 1-bbox subscription to
-# distinguish two hypotheses: (a) aisstream coverage gap on those regions
-# vs (b) some multi-bbox interaction issue. If SCS returns vessels with
-# only itself in the subscription -> (b); if still 0 -> (a).
+#
+# aisstream coverage notes (verified 2026-05-07 across multiple subscription
+# configurations: 8-bbox sequential, 8-bbox multi, 4-bbox multi, 1-bbox SCS):
+# - Reliably returns vessels: Strait of Malacca, Strait of Hormuz
+# - Occasionally returns 1-2: Taiwan Strait
+# - Returns 0: Suez Canal, Bab el-Mandeb, South China Sea, Strait of
+#   Gibraltar, Korea Strait
+#
+# The 0-coverage regions appear to be aisstream's free-tier data limitation
+# (no contributing terrestrial AIS receivers in their free pool, and no
+# satellite AIS on free tier), not a subscription-mode issue. Bboxes are
+# kept here anyway — submitting them costs nothing if no data flows back,
+# and if aisstream's coverage expands we'll start receiving data
+# automatically. For Iranian shadow fleet detection specifically, the
+# Malacca + Hormuz pair already covers loading + ship-to-ship transshipment
+# nodes, which is the primary use case.
+#
+# Future fallback data sources for the gap regions: BarentsWatch (Mediterranean
+# / Northern Europe), AIS Hub (community), Spire Maritime (paid satellite).
 CHOKEPOINT_BOXES = {
-    "South China Sea": [[8.0, 110.0], [16.0, 118.0]],
-}
-
-# Temporarily set aside for the diagnostic. Will be restored after.
-_DISABLED_BOXES_PENDING_TEST = {
     "Strait of Hormuz": [[25.0, 55.0], [27.0, 57.5]],
     "Strait of Malacca": [[-1.0, 100.0], [4.0, 105.0]],
     "Suez Canal": [[29.5, 32.0], [31.5, 33.0]],
     "Bab el-Mandeb": [[12.0, 42.5], [13.5, 44.0]],
     "Taiwan Strait": [[23.0, 117.0], [26.0, 121.0]],
+    "South China Sea": [[8.0, 110.0], [16.0, 118.0]],
     "Strait of Gibraltar": [[35.5, -6.5], [36.5, -5.0]],
     "Korea Strait": [[33.5, 128.0], [35.5, 131.0]],
 }
