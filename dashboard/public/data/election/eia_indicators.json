@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "fetched_at": "2026-05-08T03:24:55.282148Z",
+=======
   "fetched_at": "2026-05-08T07:18:42.113067Z",
+>>>>>>> origin/main
   "source": "https://ir.eia.gov/wpsr/table1.csv",
   "metrics": {
     "commercial_crude_mbbl": {

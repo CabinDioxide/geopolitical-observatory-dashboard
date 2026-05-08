@@ -142,8 +142,12 @@ HORMUZ_SCENARIOS = {
         "brent_avg_to_election": 90,  # 油价相对稳定，但有持续溢价
         "duration_months": 12,         # 军事部署长期化
         "probability_prior": 0.15,
-        "rally_effect_pp": 4,          # 军事胜利的支持率短期 rally
-        "casualty_drag_pp": -2,        # 持续部署 → 伤亡累积 → Hibbs WAR 项激活
+        # Rally 校准：历史区间 5-35pp（Bush 41 Desert Storm +24, Bush 43 9/11 +35,
+        # Carter 伊朗人质 +18）。"成功护航"小于全面战争胜利，取中位 +8pp。
+        "rally_effect_pp": 8,
+        # 伤亡累积：长期军事部署，Hibbs WAR 项激活。Bush 41 海湾战争 ~150 死，
+        # 长期阿富汗 ~2400 死。护航行动伤亡通常较低，估 -3pp 长期拖累。
+        "casualty_drag_pp": -3,
     },
     "E_total_war": {
         "label": "演变为地区全面战争",

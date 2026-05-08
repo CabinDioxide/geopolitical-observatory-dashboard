@@ -23,12 +23,20 @@ const I18N = {
     // Tab 2
     'scen.title': '5 种情形的推演：霍尔木兹未来走向对 2026 中期 + 2028 大选的影响',
     'scen.intro1': '每种霍尔木兹未来走向通过传导链产生不同的宏观结果（油价、通胀、收入、信心、支持率），再带入 4 个学术模型输出选举结果。下方每张卡片展示一个情形的<b>选举含义</b>：共和党在 2026 中期会失多少席位、控不控得住众议院；2028 大选会输多少（或赢多少）。带宽为 ±2·均方根误差（RMSE，95% 置信区间）。',
-    'scen.intro2': '<b>预测模型说明</b>：2026 中期众议院使用 Bafumi-Erikson-Wlezien 模型；2028 总统大选取三个独立模型（Fair Vote Equation、Hibbs 面包与和平、Abramowitz Time-for-Change）的反向 RMSE 加权集合预测。各模型公式与选择理由见⑤方法论页。',
+    'scen.intro2': '<b>预测模型说明</b>：2026 中期参议院使用 PVI + 国家环境的 logistic 州层模型 + 蒙特卡洛多数概率；2026 中期众议院使用 Bafumi-Erikson-Wlezien 模型；2028 总统大选取三个独立模型（Fair Vote Equation、Hibbs 面包与和平、Abramowitz Time-for-Change）的反向 RMSE 加权集合预测。各模型公式与选择理由见⑤方法论页。',
+    'scen.senate_caveat': '<b>⚠️ 关于参议院预测的诚实说明</b>：2026 参议院 Class II 改选结构对民主党极不友好——22 个共和党席位防守 vs 11 个民主党席位。即便霍尔木兹冲击大幅恶化政治环境，民主党最多净增 2-4 席。<br><br><b>各情景的差异主要体现在两个维度</b>：(1) 油价/通胀传导对选民信心的影响（A 缓解 → E 全面战争 共和党两党票从 49.7% 下降到 44.7%）；(2) 美军直接介入（情景 D）触发"军事胜利 rally + 长期伤亡拖累"双重效应——短期参议院多数概率从 60% 降至 53%（rally 拉高支持率有利共和党守 ME/NC 等关键席位），但 2028 总统大选 rally 完全衰减后 (Mueller 1973 半衰期 ~6 个月)，伤亡累积反而把支持率拖到 -16，反不如其他情景。这是 1991 老布什"沙漠风暴 89% 支持率 → 18 个月后 34%"的镜像。',
     'scen.table_h': '各情景下的政治结果对比表',
     'scen.table_desc': '下表按情景列出宏观传导结果（油价/增长/通胀/信心/支持率）与最终选举预测（2028 共和党两党票集合预测、2026 共和党众院净增减席位）。最后一行是按各情景先验概率的加权汇总。',
     'scen.scenario_label': '情景',
     'scen.prior_prob': '先验概率',
     'scen.macro_summary': '油价均值 ${brent}/桶 · 通胀峰 ${cpi}% · 信心 ${ics}',
+    'scen.senate_h': '2026 中期参议院',
+    'scen.senate_d_gain': '民主党净增 {n} 席',
+    'scen.senate_d_loss': '民主党净失 {n} 席',
+    'scen.senate_no_change': '民主党席位变化不显著',
+    'scen.senate_d_flip': '民主党翻转参议院',
+    'scen.senate_r_hold': '共和党守住参议院',
+    'scen.d_majority_prob': '民主党多数概率',
     'scen.midterm_h': '2026 中期众议院',
     'scen.party_loses_seats': '共和党失 {n} 席',
     'scen.party_gains_seats': '共和党增 {n} 席',
@@ -144,12 +152,20 @@ const I18N = {
     // Tab 2
     'scen.title': '5 Scenario Walk-throughs: How Hormuz Trajectories Affect 2026 Midterms + 2028 Presidential',
     'scen.intro1': 'Each Hormuz future propagates through the transmission chain producing different macro outcomes (oil prices, inflation, income, sentiment, approval), then runs through 4 academic models for electoral output. Each card below shows a scenario\'s <b>electoral implications</b>: how many seats the Republicans lose in the 2026 midterms, whether they hold the House; and the 2028 presidential margin (win or loss). Bands are ±2·root mean squared error (RMSE, 95% CI).',
-    'scen.intro2': '<b>Forecasting models</b>: the 2026 midterm House uses the Bafumi-Erikson-Wlezien model; the 2028 presidential takes the inverse-RMSE weighted ensemble of three independent models (Fair Vote Equation, Hibbs Bread-and-Peace, Abramowitz Time-for-Change). Formulas and selection rationale are in the ⑤ Methodology tab.',
+    'scen.intro2': '<b>Forecasting models</b>: the 2026 Senate uses a PVI + national-environment logistic state-level model with Monte Carlo majority probability; the 2026 House uses the Bafumi-Erikson-Wlezien model; the 2028 presidential takes the inverse-RMSE weighted ensemble of three independent models (Fair Vote Equation, Hibbs Bread-and-Peace, Abramowitz Time-for-Change). Formulas and selection rationale are in the ⑤ Methodology tab.',
+    'scen.senate_caveat': '<b>⚠️ An honest note on Senate forecasts</b>: The 2026 Senate Class II map is structurally hostile to Democrats — 22 Republican seats defending vs only 11 Democratic seats. Even a major Hormuz shock can yield Democrats at most 2-4 net seat gains.<br><br><b>Scenario differences operate on two dimensions</b>: (1) Oil/inflation transmission to voter sentiment (Republican 2028 two-party share ranges 49.7% under A_easing down to 44.7% under E_total_war); (2) Direct US military intervention (scenario D) triggers a dual "military victory rally + long-term casualty drag" effect — short-term D Senate majority probability drops from 60% to 53% (rally lifts approval, helping R hold ME/NC), but by 2028 the rally has fully decayed (Mueller 1973 half-life ~6 months) and accumulated casualties pull approval to -16, leaving R worse off than under the baseline scenarios. This mirrors the 1991 Bush 41 case ("Desert Storm 89% approval → 34% after 18 months").',
     'scen.table_h': 'Comparison table of political outcomes by scenario',
     'scen.table_desc': 'Below: macro transmission outputs (oil/growth/inflation/sentiment/approval) and final electoral predictions (2028 Republican two-party share via ensemble; 2026 Republican net House seat change) for each scenario. Last row is the prior-probability-weighted aggregate.',
     'scen.scenario_label': 'Scenario',
     'scen.prior_prob': 'Prior probability',
     'scen.macro_summary': 'Avg oil ${brent}/bbl · Inflation peak ${cpi}% · Sentiment ${ics}',
+    'scen.senate_h': '2026 Senate Midterms',
+    'scen.senate_d_gain': 'Democrats net gain {n} seats',
+    'scen.senate_d_loss': 'Democrats net lose {n} seats',
+    'scen.senate_no_change': 'Democratic seat change negligible',
+    'scen.senate_d_flip': 'Democrats flip Senate',
+    'scen.senate_r_hold': 'Republicans hold Senate',
+    'scen.d_majority_prob': 'D majority probability',
     'scen.midterm_h': '2026 House Midterms',
     'scen.party_loses_seats': 'Republicans lose {n} seats',
     'scen.party_gains_seats': 'Republicans gain {n} seats',
@@ -485,6 +501,7 @@ function renderScenarios(data, summary) {
     c.style.setProperty('--scen-color', SCEN_COLORS[sc.scenario] || '#94a3b8');
     const ens = sc.ensemble_2028;
     const bew = sc.bew_2026_house;
+    const sen = sc.senate_2026 || {};
     const seatChange = bew.in_party_seat_change;
     const seatText = seatChange < 0
       ? t('scen.party_loses_seats').replace('{n}', Math.abs(seatChange).toFixed(0))
@@ -498,14 +515,29 @@ function renderScenarios(data, summary) {
     const winText = ens.incumbent_two_party_pct >= 50
       ? t('scen.party_wins').replace('{n}', fmt(ens.incumbent_two_party_pct - 50, 1))
       : t('scen.party_loses').replace('{n}', fmt(50 - ens.incumbent_two_party_pct, 1));
-    // Translate scenario label if EN
     const scLabel = (CURRENT_LANG === 'en' && SCEN_LABELS_EN[sc.scenario]) ? SCEN_LABELS_EN[sc.scenario] : sc.label;
+    // Senate text per scenario
+    const senDChange = sen.d_net_change || 0;
+    const senChangeText = senDChange > 0
+      ? t('scen.senate_d_gain').replace('{n}', senDChange.toFixed(1))
+      : senDChange < 0
+        ? t('scen.senate_d_loss').replace('{n}', Math.abs(senDChange).toFixed(1))
+        : t('scen.senate_no_change');
+    const senControl = sen.d_majority_prob > 0.5 ? t('scen.senate_d_flip') : t('scen.senate_r_hold');
+    const senDmajPct = (sen.d_majority_prob * 100).toFixed(0);
 
     c.innerHTML = `
       <div class="scen-key">${t('scen.scenario_label')} ${sc.scenario.split('_')[0]} · ${t('scen.prior_prob')} ${(sc.probability_prior * 100).toFixed(0)}%</div>
       <div class="scen-label">${scLabel}</div>
       <div style="margin-top:10px; padding:8px; background:#f8fafc; border-radius:5px; font-size:12px; color:#64748b;">
         ${macroLine}
+      </div>
+      <div style="margin-top:12px;">
+        <div style="font-size:11px; color:#94a3b8; text-transform:uppercase; margin-bottom:4px;">${t('scen.senate_h')}</div>
+        <div style="font-size:15px; color:#0f172a; font-weight:600;">${senChangeText}</div>
+        <div style="font-size:12px; color:${sen.d_majority_prob > 0.5 ? '#2563eb' : '#dc2626'};">
+          ${senControl}（${t('scen.d_majority_prob')} ${senDmajPct}%）
+        </div>
       </div>
       <div style="margin-top:12px;">
         <div style="font-size:11px; color:#94a3b8; text-transform:uppercase; margin-bottom:4px;">${t('scen.midterm_h')}</div>

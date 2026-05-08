@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
+  "computed_at": "2026-05-08T07:17:33.977350Z",
+  "national_environment_d_pp_shift_vs_2024": 6.03,
+=======
   "computed_at": "2026-05-08T06:20:01.834056Z",
   "national_environment_d_pp_shift_vs_2024": 6.14,
+>>>>>>> origin/main
   "races": [
     {
       "state": "AK",
@@ -8,11 +13,19 @@
       "incumbent_running": true,
       "pvi": 8,
       "notes": "Sullivan defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -7.5,
+      "d_win_prob": 0.256,
+      "r_win_prob": 0.744,
+      "incumbent_holds_prob": 0.744,
+      "flip_prob": 0.256
+=======
       "projected_d_margin_pp": -7.4,
       "d_win_prob": 0.258,
       "r_win_prob": 0.742,
       "incumbent_holds_prob": 0.742,
       "flip_prob": 0.258
+>>>>>>> origin/main
     },
     {
       "state": "AL",
@@ -20,11 +33,19 @@
       "incumbent_running": true,
       "pvi": 15,
       "notes": "Tuberville defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -14.5,
+      "d_win_prob": 0.112,
+      "r_win_prob": 0.888,
+      "incumbent_holds_prob": 0.888,
+      "flip_prob": 0.112
+=======
       "projected_d_margin_pp": -14.4,
       "d_win_prob": 0.113,
       "r_win_prob": 0.887,
       "incumbent_holds_prob": 0.887,
       "flip_prob": 0.113
+>>>>>>> origin/main
     },
     {
       "state": "AR",
@@ -32,11 +53,19 @@
       "incumbent_running": true,
       "pvi": 16,
       "notes": "Cotton defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -15.5,
+      "d_win_prob": 0.099,
+      "r_win_prob": 0.901,
+      "incumbent_holds_prob": 0.901,
+      "flip_prob": 0.099
+=======
       "projected_d_margin_pp": -15.4,
       "d_win_prob": 0.1,
       "r_win_prob": 0.9,
       "incumbent_holds_prob": 0.9,
       "flip_prob": 0.1
+>>>>>>> origin/main
     },
     {
       "state": "CO",
@@ -44,11 +73,19 @@
       "incumbent_running": true,
       "pvi": -3,
       "notes": "Hickenlooper defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 11.5,
+      "d_win_prob": 0.838,
+      "r_win_prob": 0.162,
+      "incumbent_holds_prob": 0.838,
+      "flip_prob": 0.162
+=======
       "projected_d_margin_pp": 11.6,
       "d_win_prob": 0.84,
       "r_win_prob": 0.16,
       "incumbent_holds_prob": 0.84,
       "flip_prob": 0.16
+>>>>>>> origin/main
     },
     {
       "state": "DE",
@@ -56,11 +93,19 @@
       "incumbent_running": true,
       "pvi": -5,
       "notes": "Coons defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 13.5,
+      "d_win_prob": 0.873,
+      "r_win_prob": 0.127,
+      "incumbent_holds_prob": 0.873,
+      "flip_prob": 0.127
+=======
       "projected_d_margin_pp": 13.6,
       "d_win_prob": 0.875,
       "r_win_prob": 0.125,
       "incumbent_holds_prob": 0.875,
       "flip_prob": 0.125
+>>>>>>> origin/main
     },
     {
       "state": "GA",
@@ -68,11 +113,19 @@
       "incumbent_running": true,
       "pvi": 3,
       "notes": "Ossoff defending \u2014 top D vulnerability",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 5.5,
+      "d_win_prob": 0.688,
+      "r_win_prob": 0.312,
+      "incumbent_holds_prob": 0.688,
+      "flip_prob": 0.312
+=======
       "projected_d_margin_pp": 5.6,
       "d_win_prob": 0.69,
       "r_win_prob": 0.31,
       "incumbent_holds_prob": 0.69,
       "flip_prob": 0.31
+>>>>>>> origin/main
     },
     {
       "state": "IA",
@@ -80,11 +133,19 @@
       "incumbent_running": true,
       "pvi": 6,
       "notes": "Ernst defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -5.5,
+      "d_win_prob": 0.314,
+      "r_win_prob": 0.686,
+      "incumbent_holds_prob": 0.686,
+      "flip_prob": 0.314
+=======
       "projected_d_margin_pp": -5.4,
       "d_win_prob": 0.316,
       "r_win_prob": 0.684,
       "incumbent_holds_prob": 0.684,
       "flip_prob": 0.316
+>>>>>>> origin/main
     },
     {
       "state": "ID",
@@ -92,11 +153,19 @@
       "incumbent_running": true,
       "pvi": 18,
       "notes": "Risch defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -17.5,
+      "d_win_prob": 0.076,
+      "r_win_prob": 0.924,
+      "incumbent_holds_prob": 0.924,
+      "flip_prob": 0.076
+=======
       "projected_d_margin_pp": -17.4,
       "d_win_prob": 0.077,
       "r_win_prob": 0.923,
       "incumbent_holds_prob": 0.923,
       "flip_prob": 0.077
+>>>>>>> origin/main
     },
     {
       "state": "IL",
@@ -104,11 +173,19 @@
       "incumbent_running": true,
       "pvi": -8,
       "notes": "Durbin defending (or open if retires)",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 16.5,
+      "d_win_prob": 0.914,
+      "r_win_prob": 0.086,
+      "incumbent_holds_prob": 0.914,
+      "flip_prob": 0.086
+=======
       "projected_d_margin_pp": 16.6,
       "d_win_prob": 0.915,
       "r_win_prob": 0.085,
       "incumbent_holds_prob": 0.915,
       "flip_prob": 0.085
+>>>>>>> origin/main
     },
     {
       "state": "KS",
@@ -116,11 +193,19 @@
       "incumbent_running": true,
       "pvi": 10,
       "notes": "Marshall defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -9.5,
+      "d_win_prob": 0.205,
+      "r_win_prob": 0.795,
+      "incumbent_holds_prob": 0.795,
+      "flip_prob": 0.205
+=======
       "projected_d_margin_pp": -9.4,
       "d_win_prob": 0.207,
       "r_win_prob": 0.793,
       "incumbent_holds_prob": 0.793,
       "flip_prob": 0.207
+>>>>>>> origin/main
     },
     {
       "state": "KY",
@@ -128,11 +213,19 @@
       "incumbent_running": false,
       "pvi": 15,
       "notes": "OPEN \u2014 McConnell retiring",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -10.5,
+      "d_win_prob": 0.183,
+      "r_win_prob": 0.817,
+      "incumbent_holds_prob": 0.817,
+      "flip_prob": 0.183
+=======
       "projected_d_margin_pp": -10.4,
       "d_win_prob": 0.185,
       "r_win_prob": 0.815,
       "incumbent_holds_prob": 0.815,
       "flip_prob": 0.185
+>>>>>>> origin/main
     },
     {
       "state": "LA",
@@ -140,11 +233,19 @@
       "incumbent_running": true,
       "pvi": 12,
       "notes": "Cassidy defending \u2014 primary risk",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -11.5,
+      "d_win_prob": 0.162,
+      "r_win_prob": 0.838,
+      "incumbent_holds_prob": 0.838,
+      "flip_prob": 0.162
+=======
       "projected_d_margin_pp": -11.4,
       "d_win_prob": 0.164,
       "r_win_prob": 0.836,
       "incumbent_holds_prob": 0.836,
       "flip_prob": 0.164
+>>>>>>> origin/main
     },
     {
       "state": "MA",
@@ -152,11 +253,19 @@
       "incumbent_running": true,
       "pvi": -15,
       "notes": "Markey defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 23.5,
+      "d_win_prob": 0.966,
+      "r_win_prob": 0.034,
+      "incumbent_holds_prob": 0.966,
+      "flip_prob": 0.034
+=======
       "projected_d_margin_pp": 23.6,
       "d_win_prob": 0.967,
       "r_win_prob": 0.033,
       "incumbent_holds_prob": 0.967,
       "flip_prob": 0.033
+>>>>>>> origin/main
     },
     {
       "state": "ME",
@@ -164,11 +273,19 @@
       "incumbent_running": true,
       "pvi": -2,
       "notes": "Collins defending \u2014 top R vulnerability",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 2.5,
+      "d_win_prob": 0.589,
+      "r_win_prob": 0.411,
+      "incumbent_holds_prob": 0.411,
+      "flip_prob": 0.589
+=======
       "projected_d_margin_pp": 2.6,
       "d_win_prob": 0.592,
       "r_win_prob": 0.408,
       "incumbent_holds_prob": 0.408,
       "flip_prob": 0.592
+>>>>>>> origin/main
     },
     {
       "state": "MI",
@@ -176,11 +293,19 @@
       "incumbent_running": true,
       "pvi": -1,
       "notes": "Peters defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 9.5,
+      "d_win_prob": 0.796,
+      "r_win_prob": 0.204,
+      "incumbent_holds_prob": 0.796,
+      "flip_prob": 0.204
+=======
       "projected_d_margin_pp": 9.6,
       "d_win_prob": 0.798,
       "r_win_prob": 0.202,
       "incumbent_holds_prob": 0.798,
       "flip_prob": 0.202
+>>>>>>> origin/main
     },
     {
       "state": "MN",
@@ -188,11 +313,19 @@
       "incumbent_running": true,
       "pvi": -2,
       "notes": "Smith defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 10.5,
+      "d_win_prob": 0.818,
+      "r_win_prob": 0.182,
+      "incumbent_holds_prob": 0.818,
+      "flip_prob": 0.182
+=======
       "projected_d_margin_pp": 10.6,
       "d_win_prob": 0.82,
       "r_win_prob": 0.18,
       "incumbent_holds_prob": 0.82,
       "flip_prob": 0.18
+>>>>>>> origin/main
     },
     {
       "state": "MS",
@@ -200,11 +333,19 @@
       "incumbent_running": true,
       "pvi": 11,
       "notes": "Hyde-Smith defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -10.5,
+      "d_win_prob": 0.183,
+      "r_win_prob": 0.817,
+      "incumbent_holds_prob": 0.817,
+      "flip_prob": 0.183
+=======
       "projected_d_margin_pp": -10.4,
       "d_win_prob": 0.185,
       "r_win_prob": 0.815,
       "incumbent_holds_prob": 0.815,
       "flip_prob": 0.185
+>>>>>>> origin/main
     },
     {
       "state": "MT",
@@ -212,11 +353,19 @@
       "incumbent_running": true,
       "pvi": 11,
       "notes": "Daines defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -10.5,
+      "d_win_prob": 0.183,
+      "r_win_prob": 0.817,
+      "incumbent_holds_prob": 0.817,
+      "flip_prob": 0.183
+=======
       "projected_d_margin_pp": -10.4,
       "d_win_prob": 0.185,
       "r_win_prob": 0.815,
       "incumbent_holds_prob": 0.815,
       "flip_prob": 0.185
+>>>>>>> origin/main
     },
     {
       "state": "NC",
@@ -224,11 +373,19 @@
       "incumbent_running": true,
       "pvi": 3,
       "notes": "Tillis defending \u2014 competitive",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -2.5,
+      "d_win_prob": 0.412,
+      "r_win_prob": 0.588,
+      "incumbent_holds_prob": 0.588,
+      "flip_prob": 0.412
+=======
       "projected_d_margin_pp": -2.4,
       "d_win_prob": 0.415,
       "r_win_prob": 0.585,
       "incumbent_holds_prob": 0.585,
       "flip_prob": 0.415
+>>>>>>> origin/main
     },
     {
       "state": "NE",
@@ -236,11 +393,19 @@
       "incumbent_running": true,
       "pvi": 13,
       "notes": "Ricketts defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -12.5,
+      "d_win_prob": 0.144,
+      "r_win_prob": 0.856,
+      "incumbent_holds_prob": 0.856,
+      "flip_prob": 0.144
+=======
       "projected_d_margin_pp": -12.4,
       "d_win_prob": 0.145,
       "r_win_prob": 0.855,
       "incumbent_holds_prob": 0.855,
       "flip_prob": 0.145
+>>>>>>> origin/main
     },
     {
       "state": "NH",
@@ -248,11 +413,19 @@
       "incumbent_running": true,
       "pvi": -1,
       "notes": "Shaheen defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 9.5,
+      "d_win_prob": 0.796,
+      "r_win_prob": 0.204,
+      "incumbent_holds_prob": 0.796,
+      "flip_prob": 0.204
+=======
       "projected_d_margin_pp": 9.6,
       "d_win_prob": 0.798,
       "r_win_prob": 0.202,
       "incumbent_holds_prob": 0.798,
       "flip_prob": 0.202
+>>>>>>> origin/main
     },
     {
       "state": "NJ",
@@ -260,11 +433,19 @@
       "incumbent_running": true,
       "pvi": -6,
       "notes": "Booker defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 14.5,
+      "d_win_prob": 0.888,
+      "r_win_prob": 0.112,
+      "incumbent_holds_prob": 0.888,
+      "flip_prob": 0.112
+=======
       "projected_d_margin_pp": 14.6,
       "d_win_prob": 0.89,
       "r_win_prob": 0.11,
       "incumbent_holds_prob": 0.89,
       "flip_prob": 0.11
+>>>>>>> origin/main
     },
     {
       "state": "NM",
@@ -272,11 +453,19 @@
       "incumbent_running": true,
       "pvi": -3,
       "notes": "Lujan defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 11.5,
+      "d_win_prob": 0.838,
+      "r_win_prob": 0.162,
+      "incumbent_holds_prob": 0.838,
+      "flip_prob": 0.162
+=======
       "projected_d_margin_pp": 11.6,
       "d_win_prob": 0.84,
       "r_win_prob": 0.16,
       "incumbent_holds_prob": 0.84,
       "flip_prob": 0.16
+>>>>>>> origin/main
     },
     {
       "state": "OK",
@@ -284,11 +473,19 @@
       "incumbent_running": true,
       "pvi": 17,
       "notes": "Lankford defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -16.5,
+      "d_win_prob": 0.087,
+      "r_win_prob": 0.913,
+      "incumbent_holds_prob": 0.913,
+      "flip_prob": 0.087
+=======
       "projected_d_margin_pp": -16.4,
       "d_win_prob": 0.088,
       "r_win_prob": 0.912,
       "incumbent_holds_prob": 0.912,
       "flip_prob": 0.088
+>>>>>>> origin/main
     },
     {
       "state": "OR",
@@ -296,11 +493,19 @@
       "incumbent_running": true,
       "pvi": -6,
       "notes": "Merkley defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 14.5,
+      "d_win_prob": 0.888,
+      "r_win_prob": 0.112,
+      "incumbent_holds_prob": 0.888,
+      "flip_prob": 0.112
+=======
       "projected_d_margin_pp": 14.6,
       "d_win_prob": 0.89,
       "r_win_prob": 0.11,
       "incumbent_holds_prob": 0.89,
       "flip_prob": 0.11
+>>>>>>> origin/main
     },
     {
       "state": "RI",
@@ -308,11 +513,19 @@
       "incumbent_running": true,
       "pvi": -8,
       "notes": "Reed defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 16.5,
+      "d_win_prob": 0.914,
+      "r_win_prob": 0.086,
+      "incumbent_holds_prob": 0.914,
+      "flip_prob": 0.086
+=======
       "projected_d_margin_pp": 16.6,
       "d_win_prob": 0.915,
       "r_win_prob": 0.085,
       "incumbent_holds_prob": 0.915,
       "flip_prob": 0.085
+>>>>>>> origin/main
     },
     {
       "state": "SC",
@@ -320,11 +533,19 @@
       "incumbent_running": true,
       "pvi": 8,
       "notes": "Graham defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -7.5,
+      "d_win_prob": 0.256,
+      "r_win_prob": 0.744,
+      "incumbent_holds_prob": 0.744,
+      "flip_prob": 0.256
+=======
       "projected_d_margin_pp": -7.4,
       "d_win_prob": 0.258,
       "r_win_prob": 0.742,
       "incumbent_holds_prob": 0.742,
       "flip_prob": 0.258
+>>>>>>> origin/main
     },
     {
       "state": "SD",
@@ -332,11 +553,19 @@
       "incumbent_running": true,
       "pvi": 16,
       "notes": "Rounds defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -15.5,
+      "d_win_prob": 0.099,
+      "r_win_prob": 0.901,
+      "incumbent_holds_prob": 0.901,
+      "flip_prob": 0.099
+=======
       "projected_d_margin_pp": -15.4,
       "d_win_prob": 0.1,
       "r_win_prob": 0.9,
       "incumbent_holds_prob": 0.9,
       "flip_prob": 0.1
+>>>>>>> origin/main
     },
     {
       "state": "TN",
@@ -344,11 +573,19 @@
       "incumbent_running": true,
       "pvi": 14,
       "notes": "Hagerty defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -13.5,
+      "d_win_prob": 0.127,
+      "r_win_prob": 0.873,
+      "incumbent_holds_prob": 0.873,
+      "flip_prob": 0.127
+=======
       "projected_d_margin_pp": -13.4,
       "d_win_prob": 0.129,
       "r_win_prob": 0.871,
       "incumbent_holds_prob": 0.871,
       "flip_prob": 0.129
+>>>>>>> origin/main
     },
     {
       "state": "TX",
@@ -356,11 +593,19 @@
       "incumbent_running": true,
       "pvi": 5,
       "notes": "Cornyn defending \u2014 primary risk",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -4.5,
+      "d_win_prob": 0.345,
+      "r_win_prob": 0.655,
+      "incumbent_holds_prob": 0.655,
+      "flip_prob": 0.345
+=======
       "projected_d_margin_pp": -4.4,
       "d_win_prob": 0.348,
       "r_win_prob": 0.652,
       "incumbent_holds_prob": 0.652,
       "flip_prob": 0.348
+>>>>>>> origin/main
     },
     {
       "state": "VA",
@@ -368,11 +613,19 @@
       "incumbent_running": true,
       "pvi": -3,
       "notes": "Warner defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": 11.5,
+      "d_win_prob": 0.838,
+      "r_win_prob": 0.162,
+      "incumbent_holds_prob": 0.838,
+      "flip_prob": 0.162
+=======
       "projected_d_margin_pp": 11.6,
       "d_win_prob": 0.84,
       "r_win_prob": 0.16,
       "incumbent_holds_prob": 0.84,
       "flip_prob": 0.16
+>>>>>>> origin/main
     },
     {
       "state": "WV",
@@ -380,11 +633,19 @@
       "incumbent_running": true,
       "pvi": 22,
       "notes": "Capito defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -21.5,
+      "d_win_prob": 0.044,
+      "r_win_prob": 0.956,
+      "incumbent_holds_prob": 0.956,
+      "flip_prob": 0.044
+=======
       "projected_d_margin_pp": -21.4,
       "d_win_prob": 0.045,
       "r_win_prob": 0.955,
       "incumbent_holds_prob": 0.955,
       "flip_prob": 0.045
+>>>>>>> origin/main
     },
     {
       "state": "WY",
@@ -392,11 +653,19 @@
       "incumbent_running": true,
       "pvi": 25,
       "notes": "Lummis defending",
+<<<<<<< HEAD
+      "projected_d_margin_pp": -24.5,
+      "d_win_prob": 0.029,
+      "r_win_prob": 0.971,
+      "incumbent_holds_prob": 0.971,
+      "flip_prob": 0.029
+=======
       "projected_d_margin_pp": -24.4,
       "d_win_prob": 0.03,
       "r_win_prob": 0.97,
       "incumbent_holds_prob": 0.97,
       "flip_prob": 0.03
+>>>>>>> origin/main
     }
   ],
   "expected_seats_after_2026": {
@@ -404,6 +673,17 @@
     "R": 49.0
   },
   "majority_probability": {
+<<<<<<< HEAD
+    "D_majority_prob": 0.585,
+    "R_majority_prob": 0.41500000000000004
+  },
+  "method_notes": [
+    "PVI from Cook 2025 (approximate \u2014 verify before quoting).",
+    "Incumbent advantage 4pp; 2 incumbents not running treated as toss-up.",
+    "National environment derived from probability-weighted generic ballot across all 5 Hormuz scenarios.",
+    "Win probabilities use logistic with scale 7pp (typical state-level forecast SE).",
+    "Per-scenario Senate predictions are computed separately and stored in scenarios.json."
+=======
     "D_majority_prob": 0.596,
     "R_majority_prob": 0.404
   },
@@ -412,5 +692,6 @@
     "Incumbent advantage flat 3pp; 2 incumbents not running treated as toss-up.",
     "National environment derived from BEW seat change \u2192 generic ballot conversion.",
     "Win probabilities use logistic with scale 5pp (typical state-level forecast SE)."
+>>>>>>> origin/main
   ]
 }
