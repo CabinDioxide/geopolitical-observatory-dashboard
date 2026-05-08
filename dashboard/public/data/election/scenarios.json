@@ -1,0 +1,527 @@
+{
+  "computed_at": "2026-05-08T06:20:01.833390Z",
+  "scenarios": [
+    {
+      "scenario": "A_easing",
+      "label": "\u505c\u706b\u6301\u7a33\uff0c\u970d\u5c14\u6728\u5179\u5206\u9636\u6bb5\u91cd\u5f00",
+      "probability_prior": 0.25,
+      "macro_projection": {
+        "scenario_key": "A_easing",
+        "scenario_label": "\u505c\u706b\u6301\u7a33\uff0c\u970d\u5c14\u6728\u5179\u5206\u9636\u6bb5\u91cd\u5f00",
+        "brent_avg_to_election": 82,
+        "brent_premium_vs_baseline": 7,
+        "projected_2026_2028_macro": {
+          "G_real_growth_pct": 1.74,
+          "P_admin_inflation_pct": 3.07,
+          "Z_good_news_quarters": 5,
+          "cpi_yoy_2026_2028": 3.43,
+          "michigan_ics": 52.8,
+          "approval_net": -13.4
+        }
+      },
+      "fair_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 56.44,
+        "lower_95ci": 51.44,
+        "upper_95ci": 61.44,
+        "rmse": 2.5,
+        "win_prob": 0.995,
+        "decomposition": {
+          "intercept_contribution_dem": 47.42,
+          "g_contribution_dem": -1.16,
+          "p_contribution_dem": 2.12,
+          "z_contribution_dem": -4.92,
+          "dper_contribution_dem": 0.0,
+          "dur_contribution_dem": 0.0,
+          "i_contribution_dem": 0.1
+        },
+        "inputs": {
+          "G": 1.74,
+          "P": 3.07,
+          "Z": 5,
+          "DPER": 0,
+          "DUR": 0,
+          "I": -1
+        }
+      },
+      "hibbs_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 51.26,
+        "lower_95ci": 47.56,
+        "upper_95ci": 54.96,
+        "rmse": 1.85,
+        "win_prob": 0.753,
+        "inputs": {
+          "weighted_real_dpi_growth": 1.4797915126683912,
+          "cumulative_fatalities": 0
+        }
+      },
+      "abramowitz_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 42.99,
+        "lower_95ci": 39.19,
+        "upper_95ci": 46.79,
+        "rmse": 1.9,
+        "win_prob": 0.0,
+        "inputs": {
+          "g_q2": 1.74,
+          "june_net_approval": -13.4,
+          "term2": 0
+        }
+      },
+      "ensemble_2028": {
+        "incumbent_two_party_pct": 49.71,
+        "lower_95ci": 47.34,
+        "upper_95ci": 52.07,
+        "ensemble_rmse": 1.18,
+        "win_prob": 0.401,
+        "weights": {
+          "fair": 0.273,
+          "hibbs": 0.369,
+          "abramowitz": 0.359
+        },
+        "components": {
+          "fair_pct": 56.44,
+          "hibbs_pct": 51.26,
+          "abramowitz_pct": 42.99
+        }
+      },
+      "bew_2026_house": {
+        "in_party": "R",
+        "in_party_seat_change": -39.5,
+        "lower_95ci": -63.5,
+        "upper_95ci": -15.5,
+        "rmse": 12.0,
+        "current_in_party_seats": 220,
+        "predicted_in_party_seats_post_election": 180.0,
+        "control_flip_probability": 0.999,
+        "inputs": {
+          "generic_ballot_dem_lead": 3.47,
+          "approval_net": -13.4,
+          "in_party": "R"
+        }
+      }
+    },
+    {
+      "scenario": "B_drag",
+      "label": "\u95f4\u6b47\u6027\u4e2d\u65ad\u5230\u79cb\u5b63\uff08\u57fa\u7ebf\uff09",
+      "probability_prior": 0.35,
+      "macro_projection": {
+        "scenario_key": "B_drag",
+        "scenario_label": "\u95f4\u6b47\u6027\u4e2d\u65ad\u5230\u79cb\u5b63\uff08\u57fa\u7ebf\uff09",
+        "brent_avg_to_election": 100,
+        "brent_premium_vs_baseline": 25,
+        "projected_2026_2028_macro": {
+          "G_real_growth_pct": 1.07,
+          "P_admin_inflation_pct": 3.27,
+          "Z_good_news_quarters": 4,
+          "cpi_yoy_2026_2028": 3.82,
+          "michigan_ics": 51.6,
+          "approval_net": -13.3
+        }
+      },
+      "fair_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 54.87,
+        "lower_95ci": 49.87,
+        "upper_95ci": 59.87,
+        "rmse": 2.5,
+        "win_prob": 0.974,
+        "decomposition": {
+          "intercept_contribution_dem": 47.42,
+          "g_contribution_dem": -0.71,
+          "p_contribution_dem": 2.26,
+          "z_contribution_dem": -3.94,
+          "dper_contribution_dem": 0.0,
+          "dur_contribution_dem": 0.0,
+          "i_contribution_dem": 0.1
+        },
+        "inputs": {
+          "G": 1.07,
+          "P": 3.27,
+          "Z": 4,
+          "DPER": 0,
+          "DUR": 0,
+          "I": -1
+        }
+      },
+      "hibbs_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 49.39,
+        "lower_95ci": 45.69,
+        "upper_95ci": 53.09,
+        "rmse": 1.85,
+        "win_prob": 0.372,
+        "inputs": {
+          "weighted_real_dpi_growth": 0.9440547556927679,
+          "cumulative_fatalities": 0
+        }
+      },
+      "abramowitz_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 42.98,
+        "lower_95ci": 39.18,
+        "upper_95ci": 46.78,
+        "rmse": 1.9,
+        "win_prob": 0.0,
+        "inputs": {
+          "g_q2": 1.07,
+          "june_net_approval": -13.3,
+          "term2": 0
+        }
+      },
+      "ensemble_2028": {
+        "incumbent_two_party_pct": 48.58,
+        "lower_95ci": 46.22,
+        "upper_95ci": 50.95,
+        "ensemble_rmse": 1.18,
+        "win_prob": 0.115,
+        "weights": {
+          "fair": 0.273,
+          "hibbs": 0.369,
+          "abramowitz": 0.359
+        },
+        "components": {
+          "fair_pct": 54.87,
+          "hibbs_pct": 49.39,
+          "abramowitz_pct": 42.98
+        }
+      },
+      "bew_2026_house": {
+        "in_party": "R",
+        "in_party_seat_change": -39.4,
+        "lower_95ci": -63.4,
+        "upper_95ci": -15.4,
+        "rmse": 12.0,
+        "current_in_party_seats": 220,
+        "predicted_in_party_seats_post_election": 181.0,
+        "control_flip_probability": 0.999,
+        "inputs": {
+          "generic_ballot_dem_lead": 3.4400000000000004,
+          "approval_net": -13.3,
+          "in_party": "R"
+        }
+      }
+    },
+    {
+      "scenario": "C_reescalation",
+      "label": "\u505c\u706b\u5d29\u6e83\uff0c\u7b2c\u4e8c\u8f6e\u5c01\u9501",
+      "probability_prior": 0.2,
+      "macro_projection": {
+        "scenario_key": "C_reescalation",
+        "scenario_label": "\u505c\u706b\u5d29\u6e83\uff0c\u7b2c\u4e8c\u8f6e\u5c01\u9501",
+        "brent_avg_to_election": 120,
+        "brent_premium_vs_baseline": 45,
+        "projected_2026_2028_macro": {
+          "G_real_growth_pct": 0.32,
+          "P_admin_inflation_pct": 3.48,
+          "Z_good_news_quarters": 3,
+          "cpi_yoy_2026_2028": 4.24,
+          "michigan_ics": 50.2,
+          "approval_net": -13.2
+        }
+      },
+      "fair_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 53.24,
+        "lower_95ci": 48.24,
+        "upper_95ci": 58.24,
+        "rmse": 2.5,
+        "win_prob": 0.902,
+        "decomposition": {
+          "intercept_contribution_dem": 47.42,
+          "g_contribution_dem": -0.21,
+          "p_contribution_dem": 2.4,
+          "z_contribution_dem": -2.95,
+          "dper_contribution_dem": 0.0,
+          "dur_contribution_dem": 0.0,
+          "i_contribution_dem": 0.1
+        },
+        "inputs": {
+          "G": 0.32,
+          "P": 3.48,
+          "Z": 3,
+          "DPER": 0,
+          "DUR": 0,
+          "I": -1
+        }
+      },
+      "hibbs_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 47.3,
+        "lower_95ci": 43.6,
+        "upper_95ci": 51.0,
+        "rmse": 1.85,
+        "win_prob": 0.072,
+        "inputs": {
+          "weighted_real_dpi_growth": 0.34434943072005536,
+          "cumulative_fatalities": 0
+        }
+      },
+      "abramowitz_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 42.96,
+        "lower_95ci": 39.16,
+        "upper_95ci": 46.76,
+        "rmse": 1.9,
+        "win_prob": 0.0,
+        "inputs": {
+          "g_q2": 0.32,
+          "june_net_approval": -13.2,
+          "term2": 0
+        }
+      },
+      "ensemble_2028": {
+        "incumbent_two_party_pct": 47.36,
+        "lower_95ci": 45.0,
+        "upper_95ci": 49.72,
+        "ensemble_rmse": 1.18,
+        "win_prob": 0.013,
+        "weights": {
+          "fair": 0.273,
+          "hibbs": 0.369,
+          "abramowitz": 0.359
+        },
+        "components": {
+          "fair_pct": 53.24,
+          "hibbs_pct": 47.3,
+          "abramowitz_pct": 42.96
+        }
+      },
+      "bew_2026_house": {
+        "in_party": "R",
+        "in_party_seat_change": -39.2,
+        "lower_95ci": -63.2,
+        "upper_95ci": -15.2,
+        "rmse": 12.0,
+        "current_in_party_seats": 220,
+        "predicted_in_party_seats_post_election": 181.0,
+        "control_flip_probability": 0.999,
+        "inputs": {
+          "generic_ballot_dem_lead": 3.4099999999999997,
+          "approval_net": -13.2,
+          "in_party": "R"
+        }
+      }
+    },
+    {
+      "scenario": "D_us_control",
+      "label": "\u7f8e\u519b\u76f4\u63a5\u63a7\u5236\u6d77\u5ce1 / \u5f3a\u529b\u62a4\u822a",
+      "probability_prior": 0.15,
+      "macro_projection": {
+        "scenario_key": "D_us_control",
+        "scenario_label": "\u7f8e\u519b\u76f4\u63a5\u63a7\u5236\u6d77\u5ce1 / \u5f3a\u529b\u62a4\u822a",
+        "brent_avg_to_election": 90,
+        "brent_premium_vs_baseline": 15,
+        "projected_2026_2028_macro": {
+          "G_real_growth_pct": 1.44,
+          "P_admin_inflation_pct": 3.16,
+          "Z_good_news_quarters": 4,
+          "cpi_yoy_2026_2028": 3.6,
+          "michigan_ics": 52.3,
+          "approval_net": -13.4
+        }
+      },
+      "fair_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 55.19,
+        "lower_95ci": 50.19,
+        "upper_95ci": 60.19,
+        "rmse": 2.5,
+        "win_prob": 0.981,
+        "decomposition": {
+          "intercept_contribution_dem": 47.42,
+          "g_contribution_dem": -0.96,
+          "p_contribution_dem": 2.18,
+          "z_contribution_dem": -3.94,
+          "dper_contribution_dem": 0.0,
+          "dur_contribution_dem": 0.0,
+          "i_contribution_dem": 0.1
+        },
+        "inputs": {
+          "G": 1.44,
+          "P": 3.16,
+          "Z": 4,
+          "DPER": 0,
+          "DUR": 0,
+          "I": -1
+        }
+      },
+      "hibbs_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 50.43,
+        "lower_95ci": 46.73,
+        "upper_95ci": 54.13,
+        "rmse": 1.85,
+        "win_prob": 0.591,
+        "inputs": {
+          "weighted_real_dpi_growth": 1.239909382679306,
+          "cumulative_fatalities": 0
+        }
+      },
+      "abramowitz_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 42.95,
+        "lower_95ci": 39.15,
+        "upper_95ci": 46.75,
+        "rmse": 1.9,
+        "win_prob": 0.0,
+        "inputs": {
+          "g_q2": 1.44,
+          "june_net_approval": -13.4,
+          "term2": 0
+        }
+      },
+      "ensemble_2028": {
+        "incumbent_two_party_pct": 49.04,
+        "lower_95ci": 46.68,
+        "upper_95ci": 51.41,
+        "ensemble_rmse": 1.18,
+        "win_prob": 0.209,
+        "weights": {
+          "fair": 0.273,
+          "hibbs": 0.369,
+          "abramowitz": 0.359
+        },
+        "components": {
+          "fair_pct": 55.19,
+          "hibbs_pct": 50.43,
+          "abramowitz_pct": 42.95
+        }
+      },
+      "bew_2026_house": {
+        "in_party": "R",
+        "in_party_seat_change": -39.5,
+        "lower_95ci": -63.5,
+        "upper_95ci": -15.5,
+        "rmse": 12.0,
+        "current_in_party_seats": 220,
+        "predicted_in_party_seats_post_election": 180.0,
+        "control_flip_probability": 0.999,
+        "inputs": {
+          "generic_ballot_dem_lead": 3.47,
+          "approval_net": -13.4,
+          "in_party": "R"
+        }
+      }
+    },
+    {
+      "scenario": "E_total_war",
+      "label": "\u6f14\u53d8\u4e3a\u5730\u533a\u5168\u9762\u6218\u4e89",
+      "probability_prior": 0.05,
+      "macro_projection": {
+        "scenario_key": "E_total_war",
+        "scenario_label": "\u6f14\u53d8\u4e3a\u5730\u533a\u5168\u9762\u6218\u4e89",
+        "brent_avg_to_election": 165,
+        "brent_premium_vs_baseline": 90,
+        "projected_2026_2028_macro": {
+          "G_real_growth_pct": -1.36,
+          "P_admin_inflation_pct": 3.96,
+          "Z_good_news_quarters": 1,
+          "cpi_yoy_2026_2028": 5.2,
+          "michigan_ics": 47.2,
+          "approval_net": -12.8
+        }
+      },
+      "fair_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 49.82,
+        "lower_95ci": 44.82,
+        "upper_95ci": 54.82,
+        "rmse": 2.5,
+        "win_prob": 0.471,
+        "decomposition": {
+          "intercept_contribution_dem": 47.42,
+          "g_contribution_dem": 0.91,
+          "p_contribution_dem": 2.73,
+          "z_contribution_dem": -0.98,
+          "dper_contribution_dem": 0.0,
+          "dur_contribution_dem": 0.0,
+          "i_contribution_dem": 0.1
+        },
+        "inputs": {
+          "G": -1.36,
+          "P": 3.96,
+          "Z": 1,
+          "DPER": 0,
+          "DUR": 0,
+          "I": -1
+        }
+      },
+      "hibbs_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 42.61,
+        "lower_95ci": 38.91,
+        "upper_95ci": 46.31,
+        "rmse": 1.85,
+        "win_prob": 0.0,
+        "inputs": {
+          "weighted_real_dpi_growth": -0.9989904972188208,
+          "cumulative_fatalities": 0
+        }
+      },
+      "abramowitz_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 43.04,
+        "lower_95ci": 39.24,
+        "upper_95ci": 46.84,
+        "rmse": 1.9,
+        "win_prob": 0.0,
+        "inputs": {
+          "g_q2": -1.36,
+          "june_net_approval": -12.8,
+          "term2": 0
+        }
+      },
+      "ensemble_2028": {
+        "incumbent_two_party_pct": 44.73,
+        "lower_95ci": 42.37,
+        "upper_95ci": 47.09,
+        "ensemble_rmse": 1.18,
+        "win_prob": 0.0,
+        "weights": {
+          "fair": 0.273,
+          "hibbs": 0.369,
+          "abramowitz": 0.359
+        },
+        "components": {
+          "fair_pct": 49.82,
+          "hibbs_pct": 42.61,
+          "abramowitz_pct": 43.04
+        }
+      },
+      "bew_2026_house": {
+        "in_party": "R",
+        "in_party_seat_change": -38.6,
+        "lower_95ci": -62.6,
+        "upper_95ci": -14.6,
+        "rmse": 12.0,
+        "current_in_party_seats": 220,
+        "predicted_in_party_seats_post_election": 181.0,
+        "control_flip_probability": 0.999,
+        "inputs": {
+          "generic_ballot_dem_lead": 3.29,
+          "approval_net": -12.8,
+          "in_party": "R"
+        }
+      }
+    }
+  ],
+  "weighted_summary": {
+    "2028_R_two_party_fair": 54.73,
+    "2028_R_two_party_hibbs": 49.26,
+    "2028_R_two_party_abramowitz": 42.98,
+    "2028_R_two_party_ensemble": 48.49,
+    "2028_incumbent_two_party_pct": 48.49,
+    "2028_incumbent_party": "R",
+    "2026_in_party_seat_change": -39.4
+  },
+  "method_notes": [
+    "Three-model ensemble: Fair (rmse 2.5) + Hibbs Bread&Peace (rmse 1.85) + Abramowitz Time-for-Change (rmse 1.90).",
+    "Inverse-RMSE weights: Hibbs ~0.36, Abramowitz ~0.36, Fair ~0.27.",
+    "All 2028 calcs assume R is open-seat, first-term incumbent party (DPER=0, DUR=0, TERM2=0).",
+    "Hibbs's R = \u03bb-weighted real per-capita DPI growth across 15 quarters (\u03bb=0.915).",
+    "BEW House: 2026 in-party=R defending ~220 seats; flip threshold = 218.",
+    "Macro projection elasticities calibrated from 1980 Iran-Iraq, 1990 Gulf War, 2008 oil peak, 2022 RU-UA."
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "_meta": {
+    "description": "Event studies of major oil shocks → political transmission. Used to calibrate the elasticities in TRANSMISSION_ELASTICITIES (config.py). Not auto-updated — these are one-time historical anchors.",
+    "compiled": "2026-05-08",
+    "compiler_note": "Numbers are from EIA, BLS, BEA, Gallup historical archives. Where I'm hedging on a specific number I've added a 'confidence' field. Verify against original sources before quoting in formal analysis."
+  },
+
+  "events": [
+    {
+      "id": "1980_iran_iraq",
+      "label": "1980 伊朗革命 + 两伊战争",
+      "label_en": "1980 Iranian Revolution + Iran-Iraq War",
+      "shock_period": "1979-09 至 1981-12",
+      "shock_period_en": "1979-09 to 1981-12",
+      "context": "1979 年 1 月伊朗革命使伊朗原油产量从 600 万桶/日骤降至约 100 万桶/日。1980 年 9 月两伊战争爆发，再有 400 万桶/日产能离市。叠加 1979-1981 美伊人质危机，波斯湾持续地缘风险溢价。",
+      "context_en": "The January 1979 Iranian Revolution cut Iranian crude output from 6 mb/d to ~1 mb/d. The Iran-Iraq war beginning September 1980 took another 4 mb/d offline at peak. Combined with the 1979-1981 US-Iran hostage crisis, this created sustained Persian Gulf risk premium.",
+      "oil_price": {
+        "pre_shock_usd_bbl": 14,
+        "peak_usd_bbl": 39,
+        "peak_date": "1980-04",
+        "pct_increase_peak": 179,
+        "duration_above_30usd_months": 30
+      },
+      "macro_transmission": {
+        "us_retail_gasoline_pre_usd_gal": 0.86,
+        "us_retail_gasoline_peak_usd_gal": 1.31,
+        "cpi_yoy_pre_pct": 7.6,
+        "cpi_yoy_peak_pct": 14.8,
+        "real_gdp_growth_election_year_pct": -0.3,
+        "good_news_quarters_carter_admin": 4,
+        "michigan_ics_pre": 75,
+        "michigan_ics_election_month": 51,
+        "ics_drop": -24
+      },
+      "political_outcome": {
+        "incumbent": "Carter (D)",
+        "approval_oct_pre_election_pct": 37,
+        "approval_change_during_shock": -25,
+        "two_party_vote_share_incumbent": 44.7,
+        "ec_outcome": "Carter loses 489-49",
+        "fair_model_predicted": "Carter loss (correct direction; precise number unverified)",
+        "rally_effect_observed": "Brief +18pp rally on Iran hostage crisis Nov 1979, fully decayed by April 1980 Desert One failure"
+      },
+      "elasticities_implied": {
+        "oil_to_gasoline_passthrough": 0.5,
+        "oil_to_cpi_yoy_per_pct_increase": 0.040,
+        "ics_drop_per_cpi_pp": -3.3,
+        "approval_drop_per_ics_drop_10pts": -10,
+        "two_party_loss_per_pct_inflation": -0.65
+      },
+      "lessons_for_hormuz": "当下霍尔木兹危机最直接的历史类比。波斯湾供应危机 + 美伊直接对抗 + 18+ 个月持续高油价 → 执政党选举溃败。卡特败选主因是通胀（P 项）而非增长（G 项）。对 2028：若霍尔木兹中断持续 12+ 个月，共和党执政党面临同一风险通道。重要提醒：卡特同时遭遇党内初选挑战（肯尼迪），Fair 模型无法捕捉这一项；纯经济效应估计约为 -3 到 -5pp，并非整个 489-49 选举人团差距。",
+      "lessons_for_hormuz_en": "The most direct historical analogue to the current Hormuz crisis. Persian Gulf supply crisis + direct US-Iran confrontation + 18+ months of sustained high oil prices → catastrophic incumbent party defeat. Carter's loss was driven primarily by inflation (P term) more than growth (G term). For 2028: if Hormuz disruption persists 12+ months, the Republican incumbent party faces the same risk channel. Important caveat: Carter also faced a primary challenge (Kennedy) which the Fair model doesn't capture; pure economic effect was probably -3 to -5pp, not the full 489-49 EC margin.",
+      "confidence_high": ["oil prices", "CPI", "approval", "vote share"],
+      "confidence_medium": ["michigan ICS specific values", "Fair model exact prediction"]
+    },
+
+    {
+      "id": "1990_gulf_war",
+      "label": "1990-91 海湾战争（伊拉克入侵科威特 → 沙漠风暴）",
+      "label_en": "1990-91 Gulf War (Iraqi Invasion of Kuwait → Desert Storm)",
+      "shock_period": "1990-08 至 1991-03",
+      "shock_period_en": "1990-08 to 1991-03",
+      "context": "1990 年 8 月 2 日伊拉克入侵科威特，400 万桶/日产能瞬间离市。1991 年 1-2 月沙漠风暴行动结束危机。短促、剧烈的供应冲击。",
+      "context_en": "On August 2, 1990, Iraq invaded Kuwait — 4 mb/d production left the market instantly. Operation Desert Storm in January-February 1991 ended the crisis. A short, sharp supply shock.",
+      "oil_price": {
+        "pre_shock_usd_bbl": 17,
+        "peak_usd_bbl": 41,
+        "peak_date": "1990-10",
+        "pct_increase_peak": 141,
+        "duration_above_30usd_months": 5
+      },
+      "macro_transmission": {
+        "us_retail_gasoline_pre_usd_gal": 1.08,
+        "us_retail_gasoline_peak_usd_gal": 1.38,
+        "cpi_yoy_pre_pct": 4.8,
+        "cpi_yoy_peak_pct": 6.3,
+        "real_gdp_growth_election_year_pct": 3.5,
+        "michigan_ics_pre": 89,
+        "michigan_ics_trough": 64,
+        "ics_drop": -25
+      },
+      "political_outcome": {
+        "incumbent": "Bush 41 (R)",
+        "rally_peak_approval_pct": 89,
+        "approval_election_year_1992_pct": 34,
+        "two_party_vote_share_incumbent": 46.5,
+        "outcome": "Bush 41 loses to Clinton (despite military victory)",
+        "fair_model_predicted": "Bush win ~55% (MAJOR MISS)",
+        "rally_effect_observed": "+24pp rally on Desert Storm Jan-Mar 1991, fully decayed by mid-1992"
+      },
+      "elasticities_implied": {
+        "oil_to_gasoline_passthrough": 0.42,
+        "ics_drop_per_cpi_pp": -16.7,
+        "rally_decay_half_life_months": 6
+      },
+      "lessons_for_hormuz": "(1) 即使短促油价冲击也会通过消费者信心通道留下持续 18+ 个月的政治后效，价格回落后政治影响仍未结束。(2) 军事胜利无法庇护执政党——老布什从 89% 支持率 18 个月内跌至 34%。(3) Fair 模型最著名失败案例——高增长、温和通胀，模型预测轻松获胜，但选民'衰退'感知压过了硬数据。对 2028 直接相关：'数据 vs 感知'背离是模型的最大盲点。",
+      "lessons_for_hormuz_en": "(1) Even brief oil shocks leave political effects lasting 18+ months through the consumer sentiment channel — political impact does not end when prices fall back. (2) Military victory does not shield incumbents — Bush 41 fell from 89% approval to 34% in 18 months. (3) Fair model's most famous failure — high growth, mild inflation, model predicted easy win, but voter 'recession' perception overrode hard data. Direct relevance for 2028: the 'data vs perception' divergence is the model's biggest blind spot.",
+      "confidence_high": ["oil prices", "rally effect", "vote share"],
+      "confidence_medium": ["Fair model exact prediction"]
+    },
+
+    {
+      "id": "2008_oil_peak",
+      "label": "2008 油价峰值（$147）",
+      "label_en": "2008 Oil Price Peak ($147)",
+      "shock_period": "2007-01 至 2008-09",
+      "shock_period_en": "2007-01 to 2008-09",
+      "context": "由中国和新兴市场增长推动的持续需求驱动型油价上涨，叠加投机因素。非地缘政治驱动，但传导机制有启示价值。期间次贷危机酝酿中。",
+      "context_en": "Sustained demand-driven oil price rise (China + emerging market growth) compounded by speculation. Not geopolitically driven, but the transmission mechanism is instructive. Subprime crisis was brewing simultaneously.",
+      "oil_price": {
+        "pre_shock_usd_bbl": 60,
+        "peak_usd_bbl": 147,
+        "peak_date": "2008-07",
+        "pct_increase_peak": 145,
+        "duration_above_100usd_months": 8
+      },
+      "macro_transmission": {
+        "us_retail_gasoline_pre_usd_gal": 2.34,
+        "us_retail_gasoline_peak_usd_gal": 4.11,
+        "cpi_yoy_pre_pct": 2.0,
+        "cpi_yoy_peak_pct": 5.6,
+        "real_gdp_growth_election_year_pct": -0.1,
+        "michigan_ics_pre": 96,
+        "michigan_ics_trough": 55,
+        "ics_drop": -41
+      },
+      "political_outcome": {
+        "incumbent": "Bush 43 (R) → open seat (McCain)",
+        "approval_election_year_pct": 28,
+        "two_party_vote_share_incumbent": 46.3,
+        "outcome": "Obama defeats McCain by 7.3pp (two-party 53.7-46.3)",
+        "fair_model_predicted": "McCain ~48% (close)",
+        "rally_effect_observed": "None (no rally event)"
+      },
+      "elasticities_implied": {
+        "oil_to_gasoline_passthrough": 0.45,
+        "oil_to_cpi_yoy_per_pct_increase": 0.025,
+        "approval_drop_per_ics_drop_10pts": -4
+      },
+      "lessons_for_hormuz": "和平年代最大的油价冲击 + 金融危机 = 执政党在开放席位（McCain 接棒）情况下仍输 7+ pp。验证了传导弹性链：$60→$147（+145%）→ 汽油 $2.34→$4.11（+76%）→ CPI +3.6pp → ICS -41 点。对 2028 霍尔木兹情景 C/D，量级相当。混淆因素：2008 年 9 月雷曼危机的影响掩盖了油价冲击的纯效应。",
+      "lessons_for_hormuz_en": "Largest peacetime oil shock + financial crisis = incumbent party loses 7+ pp despite an open seat (McCain). Verifies the transmission elasticity chain: $60→$147 (+145%) → gas $2.34→$4.11 (+76%) → CPI +3.6pp → ICS -41 pts. Comparable in magnitude to 2028 Hormuz scenarios C/D. Confounder: September 2008 Lehman crisis obscured the pure oil shock effect.",
+      "confidence_high": ["oil", "CPI", "vote outcome", "Fair prediction"],
+      "confidence_medium": ["isolating oil from financial crisis effects"]
+    },
+
+    {
+      "id": "2022_russia_ukraine",
+      "label": "2022 俄乌战争油价冲击",
+      "label_en": "2022 Russia-Ukraine War Oil Shock",
+      "shock_period": "2022-02 至 2022-12",
+      "shock_period_en": "2022-02 to 2022-12",
+      "context": "2022 年 2 月 24 日俄罗斯入侵乌克兰 → 对俄油制裁 → 布伦特油价飙升。当时新冠疫情后通胀已达 7%+，使油价冲击的政治杀伤力倍增。",
+      "context_en": "Russia invaded Ukraine on February 24, 2022 → sanctions on Russian oil → Brent surged. Inflation was already at 7%+ after COVID, multiplying the political damage of the oil shock.",
+      "oil_price": {
+        "pre_shock_usd_bbl": 90,
+        "peak_usd_bbl": 128,
+        "peak_date": "2022-03",
+        "pct_increase_peak": 42,
+        "duration_above_100usd_months": 6
+      },
+      "macro_transmission": {
+        "us_retail_gasoline_pre_usd_gal": 3.54,
+        "us_retail_gasoline_peak_usd_gal": 5.03,
+        "cpi_yoy_pre_pct": 7.5,
+        "cpi_yoy_peak_pct": 9.1,
+        "real_gdp_growth_election_year_pct": 2.5,
+        "michigan_ics_pre": 67,
+        "michigan_ics_trough": 50,
+        "ics_drop": -17
+      },
+      "political_outcome": {
+        "incumbent": "Biden (D)",
+        "approval_election_year_2022_pct": 42,
+        "midterm_house_outcome": "Dems lose 9 seats (vs ~30-40 expected)",
+        "midterm_explanation": "Dobbs decision (Jun 2022) mobilized Dem turnout; oil/inflation hit was real but offset",
+        "two_party_vote_share_2024_incumbent_party": 48.3,
+        "outcome_2024": "Trump wins (Biden replaced by Harris)",
+        "rally_effect_observed": "Minor +3pp on Ukraine support, decayed in 8 weeks"
+      },
+      "elasticities_implied": {
+        "oil_to_gasoline_passthrough": 0.039,
+        "gasoline_pct_to_ics_per_10pct": -4.0,
+        "approval_drop_per_cpi_pp": -2.0,
+        "comment": "2022 transmission was DAMPENED on the headline because gasoline and CPI were already high; perception adapted slowly. But the 2024 hangover effect was severe (cumulative price level memory)."
+      },
+      "lessons_for_hormuz": "(1) 现代信息环境下：油价冲击到选民感知的传导比 1980/1990 更慢，但持续时间更长。(2) 累积价格水平比峰值通胀率更重要（Stantcheva 2024）。(3) 非经济议题（Dobbs 堕胎判决）的反向动员可抵消纯经济效应——对 2026，堕胎/IVF 议题可能起类似作用。(4) 2024 结果证明：即使 18 个月前的油价冲击也会通过'累积通胀记忆'渗透到下个选举周期。",
+      "lessons_for_hormuz_en": "(1) In the modern information environment, oil-shock-to-voter-perception transmission is slower than 1980/1990 but more durable. (2) Cumulative price level matters more than peak inflation rate (Stantcheva 2024). (3) Non-economic issues (Dobbs abortion ruling) can offset pure economic effects via counter-mobilization — abortion/IVF could play a similar role in 2026. (4) The 2024 result proves that even 18-month-old oil shocks bleed into the next election cycle via 'cumulative inflation' memory.",
+      "confidence_high": ["oil", "CPI", "midterm outcome"],
+      "confidence_medium": ["isolating Dobbs effect from economic effect"]
+    }
+  ],
+
+  "calibration_summary": {
+    "transmission_chain_typical_lag": {
+      "oil_to_gasoline_weeks": "2-6",
+      "gasoline_to_cpi_months": "1-3",
+      "cpi_to_michigan_ics_months": "1-2",
+      "ics_to_presidential_approval_months": "2-4",
+      "total_oil_to_approval_months": "4-9"
+    },
+    "median_elasticities": {
+      "oil_to_gasoline_passthrough_pct": 0.45,
+      "gasoline_pct_to_cpi_yoy_pp": 0.035,
+      "cpi_pp_to_ics_pts": -3.2,
+      "ics_pts_to_approval_pp_per_10": -1.1,
+      "approval_pp_to_two_party_vote_pp": 0.2
+    },
+    "implied_total_oil_to_vote_elasticity": "A 50% sustained oil shock → ~22pp gasoline rise → ~0.8pp CPI YoY rise → ~-3 ICS pts → ~-0.3pp approval → ~-0.06pp vote share. Direct mechanical effect is SMALL. The bigger transmission is via the Z (good news quarters) channel and via media salience effects that compound over months.",
+    "warning": "These median elasticities mask significant variance. 1990 Gulf War showed oil shock → outsized political effect (Bush 41 collapse). 2022 Ukraine showed muted immediate political effect but large 18-month-lagged effect (Biden 2024 problem). The 'when the shock happens' matters as much as 'how big the shock is'."
+  }
+}

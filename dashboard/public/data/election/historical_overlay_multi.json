@@ -1,0 +1,163 @@
+{
+  "_meta": {
+    "description": "四次危机的月度指标轨迹，按 t=危机起点对齐，方便和当下 2026 比较。每个事件都标注了它对应的总统选举（如果有）和最终政治结果。",
+    "compiled": "2026-05-08",
+    "warning": "这些数字是从 EIA / BLS / Gallup 历史档案拼接出来的，部分月份做了线性插值。正式分析前应核对原始来源。"
+  },
+
+  "events": {
+
+    "1980_iran_iraq": {
+      "label": "1980 伊朗革命+两伊战争",
+      "label_en": "1980 Iranian Revolution + Iran-Iraq War",
+      "anchor_date": "1979-11",
+      "anchor_event": "伊朗人质危机爆发",
+      "election_date": "1980-11",
+      "election_t_offset": 12,
+      "incumbent": "Carter (D)",
+      "outcome": "Carter 惨败 489-49 EC，普选 41% vs Reagan 50.7%",
+      "outcome_en": "Carter lost 489-49 EC, popular vote 41% vs Reagan 50.7%",
+      "key_dynamic": "持续 18+ 个月的波斯湾溢价；通胀峰 14.8%；消费者信心从 75 跌到 51 再回升到 64 但已无救",
+      "monthly": [
+        {"t":  0, "month": "1979-11", "brent": 24, "cpi_yoy": 12.6, "gas": 0.86, "ics": 75, "approval_net": 11},
+        {"t":  1, "month": "1979-12", "brent": 26, "cpi_yoy": 13.3, "gas": 0.92, "ics": 73, "approval_net": 5},
+        {"t":  2, "month": "1980-01", "brent": 30, "cpi_yoy": 13.9, "gas": 0.98, "ics": 67, "approval_net": 3},
+        {"t":  3, "month": "1980-02", "brent": 35, "cpi_yoy": 14.2, "gas": 1.06, "ics": 63, "approval_net": -2},
+        {"t":  4, "month": "1980-03", "brent": 38, "cpi_yoy": 14.6, "gas": 1.15, "ics": 56, "approval_net": -8},
+        {"t":  5, "month": "1980-04", "brent": 39, "cpi_yoy": 14.8, "gas": 1.22, "ics": 52, "approval_net": -19},
+        {"t":  6, "month": "1980-05", "brent": 38, "cpi_yoy": 14.4, "gas": 1.27, "ics": 51, "approval_net": -22},
+        {"t":  7, "month": "1980-06", "brent": 37, "cpi_yoy": 14.4, "gas": 1.29, "ics": 53, "approval_net": -22},
+        {"t":  8, "month": "1980-07", "brent": 36, "cpi_yoy": 13.1, "gas": 1.27, "ics": 58, "approval_net": -18},
+        {"t":  9, "month": "1980-08", "brent": 36, "cpi_yoy": 12.9, "gas": 1.25, "ics": 65, "approval_net": -13},
+        {"t": 10, "month": "1980-09", "brent": 36, "cpi_yoy": 12.6, "gas": 1.25, "ics": 70, "approval_net": -10},
+        {"t": 11, "month": "1980-10", "brent": 37, "cpi_yoy": 12.8, "gas": 1.30, "ics": 68, "approval_net": -9},
+        {"t": 12, "month": "1980-11", "brent": 37, "cpi_yoy": 12.6, "gas": 1.31, "ics": 64, "approval_net": -10}
+      ]
+    },
+
+    "1990_gulf_war": {
+      "label": "1990-91 海湾战争",
+      "label_en": "1990-91 Gulf War",
+      "anchor_date": "1990-08",
+      "anchor_event": "伊拉克入侵科威特",
+      "election_date": "1992-11",
+      "election_t_offset": 27,
+      "incumbent": "Bush 41 (R)",
+      "outcome": "Bush 1992 败给 Clinton；两党票 46.5% vs 53.5%；Fair 模型预测 Bush 赢 55%（最著名失败案例）",
+      "outcome_en": "Bush 41 lost to Clinton in 1992; two-party 46.5% vs 53.5%; Fair model predicted Bush win at 55% (most famous failure case)",
+      "key_dynamic": "短促油价冲击 4 mb/d 离市；Desert Storm 创下 89% 战时支持率峰值；但 ICS 已经先崩到 64，1992 选民拒绝奖励军事胜利",
+      "monthly": [
+        {"t":  0, "month": "1990-08", "brent": 27, "cpi_yoy": 5.6, "gas": 1.19, "ics": 76, "approval_net": 35},
+        {"t":  1, "month": "1990-09", "brent": 35, "cpi_yoy": 6.2, "gas": 1.29, "ics": 72, "approval_net": 30},
+        {"t":  2, "month": "1990-10", "brent": 38, "cpi_yoy": 6.3, "gas": 1.36, "ics": 64, "approval_net": 25},
+        {"t":  3, "month": "1990-11", "brent": 35, "cpi_yoy": 6.3, "gas": 1.38, "ics": 66, "approval_net": 22},
+        {"t":  4, "month": "1990-12", "brent": 28, "cpi_yoy": 6.1, "gas": 1.36, "ics": 65, "approval_net": 25},
+        {"t":  5, "month": "1991-01", "brent": 25, "cpi_yoy": 5.7, "gas": 1.25, "ics": 66, "approval_net": 30},
+        {"t":  6, "month": "1991-02", "brent": 19, "cpi_yoy": 5.3, "gas": 1.13, "ics": 71, "approval_net": 56},
+        {"t":  7, "month": "1991-03", "brent": 19, "cpi_yoy": 4.9, "gas": 1.10, "ics": 87, "approval_net": 65},
+        {"t":  9, "month": "1991-05", "brent": 19, "cpi_yoy": 5.0, "gas": 1.16, "ics": 81, "approval_net": 50},
+        {"t": 12, "month": "1991-08", "brent": 21, "cpi_yoy": 4.0, "gas": 1.14, "ics": 78, "approval_net": 35},
+        {"t": 18, "month": "1992-02", "brent": 18, "cpi_yoy": 2.8, "gas": 1.04, "ics": 68, "approval_net": -8},
+        {"t": 22, "month": "1992-06", "brent": 22, "cpi_yoy": 3.1, "gas": 1.17, "ics": 71, "approval_net": -20},
+        {"t": 27, "month": "1992-11", "brent": 19, "cpi_yoy": 3.0, "gas": 1.16, "ics": 85, "approval_net": -10}
+      ]
+    },
+
+    "2008_oil_peak": {
+      "label": "2008 油价峰值（$147）",
+      "label_en": "2008 Oil Price Peak ($147)",
+      "anchor_date": "2007-12",
+      "anchor_event": "次贷危机苗头 + 油价启动",
+      "election_date": "2008-11",
+      "election_t_offset": 11,
+      "incumbent": "Bush 43 (R) → open seat (McCain)",
+      "outcome": "Obama 53.7% vs McCain 46.3%；Fair 预测 McCain 48%（接近）",
+      "outcome_en": "Obama 53.7% vs McCain 46.3%; Fair predicted McCain 48% (close)",
+      "key_dynamic": "油价 $60 → $147（最大和平时期油价冲击）；ICS 96 → 55；Lehman 9月叠加放大效应；但因为开放席位，DPER 项归零反而拖累共和党",
+      "monthly": [
+        {"t":  0, "month": "2007-12", "brent": 91, "cpi_yoy": 4.1, "gas": 3.02, "ics": 75, "approval_net": -29},
+        {"t":  2, "month": "2008-02", "brent": 95, "cpi_yoy": 4.0, "gas": 3.04, "ics": 70, "approval_net": -32},
+        {"t":  4, "month": "2008-04", "brent": 109, "cpi_yoy": 3.9, "gas": 3.46, "ics": 62, "approval_net": -38},
+        {"t":  6, "month": "2008-06", "brent": 132, "cpi_yoy": 5.0, "gas": 4.06, "ics": 56, "approval_net": -41},
+        {"t":  7, "month": "2008-07", "brent": 133, "cpi_yoy": 5.6, "gas": 4.11, "ics": 61, "approval_net": -42},
+        {"t":  8, "month": "2008-08", "brent": 113, "cpi_yoy": 5.4, "gas": 3.81, "ics": 63, "approval_net": -39},
+        {"t":  9, "month": "2008-09", "brent": 99, "cpi_yoy": 4.9, "gas": 3.71, "ics": 70, "approval_net": -39},
+        {"t": 10, "month": "2008-10", "brent": 72, "cpi_yoy": 3.7, "gas": 3.07, "ics": 57, "approval_net": -42},
+        {"t": 11, "month": "2008-11", "brent": 53, "cpi_yoy": 1.1, "gas": 2.15, "ics": 55, "approval_net": -42}
+      ]
+    },
+
+    "2026_current": {
+      "label": "2026 霍尔木兹危机（当前进行中）",
+      "label_en": "2026 Hormuz Crisis (ongoing)",
+      "anchor_date": "2026-02",
+      "anchor_event": "美以空袭伊朗 + 哈梅内伊被刺",
+      "election_date_midterm": "2026-11",
+      "midterm_t_offset": 8,
+      "election_date_pres": "2028-11",
+      "pres_t_offset": 33,
+      "incumbent": "Trump (R) → 2028 open seat",
+      "outcome": "尚在进行——观测点 t=2/t=3",
+      "outcome_en": "Ongoing — observation points t=2/t=3",
+      "key_dynamic": "波斯湾地缘政治 + 通胀温和但消费者信心已崩。属于 Stantcheva 'cumulative price level memory' 模式。",
+      "monthly": [
+        {"t":  0, "month": "2026-02", "brent": 78,  "cpi_yoy": 3.0, "gas": 3.45, "ics": 62, "approval_net": -10},
+        {"t":  1, "month": "2026-03", "brent": 95,  "cpi_yoy": 3.1, "gas": 3.80, "ics": 58, "approval_net": -12},
+        {"t":  2, "month": "2026-04", "brent": 118, "cpi_yoy": 3.3, "gas": 4.45, "ics": 53, "approval_net": -13.5},
+        {"t":  3, "month": "2026-05", "brent": 100, "cpi_yoy": 3.4, "gas": 4.40, "ics": 53, "approval_net": -13.5}
+      ]
+    },
+
+    "2022_russia_ukraine": {
+      "label": "2022 俄乌战争油价冲击",
+      "label_en": "2022 Russia-Ukraine War Oil Shock",
+      "anchor_date": "2022-02",
+      "anchor_event": "俄罗斯入侵乌克兰",
+      "election_date_midterm": "2022-11",
+      "midterm_t_offset": 9,
+      "election_date_pres": "2024-11",
+      "pres_t_offset": 33,
+      "incumbent": "Biden (D)",
+      "outcome_midterm": "民主党失 9 席（vs 预期失 30+）；Dobbs 抵消油价冲击",
+      "outcome_midterm_en": "Democrats lost 9 seats (vs expected 30+); Dobbs offset the oil shock",
+      "outcome_pres": "拜登退选 / Harris 输给 Trump，两党票 48.3% vs 51.7%；'累积价格记忆'拖累 24 个月",
+      "outcome_pres_en": "Biden withdrew / Harris lost to Trump, two-party 48.3% vs 51.7%; 'cumulative price memory' weighed for 24 months",
+      "outcome_en": "Midterms: Dems -9 seats (Dobbs offset oil shock); 2024 Pres: Harris lost 48.3% vs Trump 51.7%",
+      "key_dynamic": "油价 $90 → $128 短促但叠加既有通胀；ICS 67 → 50；2024 选举里被'累积通胀'惯性拖死",
+      "monthly": [
+        {"t":  0, "month": "2022-02", "brent": 97, "cpi_yoy": 7.9, "gas": 3.61, "ics": 62, "approval_net": -10},
+        {"t":  1, "month": "2022-03", "brent": 117, "cpi_yoy": 8.5, "gas": 4.32, "ics": 59, "approval_net": -12},
+        {"t":  2, "month": "2022-04", "brent": 105, "cpi_yoy": 8.3, "gas": 4.10, "ics": 65, "approval_net": -13},
+        {"t":  3, "month": "2022-05", "brent": 113, "cpi_yoy": 8.6, "gas": 4.44, "ics": 58, "approval_net": -15},
+        {"t":  4, "month": "2022-06", "brent": 123, "cpi_yoy": 9.1, "gas": 4.93, "ics": 50, "approval_net": -19},
+        {"t":  5, "month": "2022-07", "brent": 112, "cpi_yoy": 8.5, "gas": 4.67, "ics": 51, "approval_net": -19},
+        {"t":  6, "month": "2022-08", "brent": 100, "cpi_yoy": 8.3, "gas": 4.09, "ics": 58, "approval_net": -14},
+        {"t":  7, "month": "2022-09", "brent": 91, "cpi_yoy": 8.2, "gas": 3.81, "ics": 59, "approval_net": -13},
+        {"t":  8, "month": "2022-10", "brent": 93, "cpi_yoy": 7.7, "gas": 3.91, "ics": 59, "approval_net": -13},
+        {"t":  9, "month": "2022-11", "brent": 91, "cpi_yoy": 7.1, "gas": 3.80, "ics": 56, "approval_net": -14},
+        {"t": 12, "month": "2023-02", "brent": 83, "cpi_yoy": 6.0, "gas": 3.39, "ics": 64, "approval_net": -12},
+        {"t": 22, "month": "2023-12", "brent": 78, "cpi_yoy": 3.4, "gas": 3.13, "ics": 69, "approval_net": -16},
+        {"t": 33, "month": "2024-11", "brent": 73, "cpi_yoy": 2.7, "gas": 3.06, "ics": 71, "approval_net": -16}
+      ]
+    }
+  },
+
+  "current_2026_anchor": {
+    "anchor_date": "2026-02",
+    "anchor_event": "美以空袭伊朗 + 哈梅内伊被刺",
+    "current_t": 2,
+    "midterm_t_offset": 8,
+    "pres_t_offset": 33
+  },
+
+  "comparison_at_t2": {
+    "what_2026_is_at": "t=2 (2026-04 estimate / current)",
+    "1980_at_t2":   {"month": "1980-01", "ics": 67, "cpi_yoy": 13.9, "approval": 3,   "outcome_at_t12": "Carter -55pp EC margin loss"},
+    "1990_at_t2":   {"month": "1990-10", "ics": 64, "cpi_yoy": 6.3,  "approval": 25,  "outcome_at_t27": "Bush 41 -7pp popular vote loss"},
+    "2008_at_t2":   {"month": "2008-02", "ics": 70, "cpi_yoy": 4.0,  "approval": -32, "outcome_at_t11": "McCain -7.4pp loss"},
+    "2022_at_t2":   {"month": "2022-04", "ics": 65, "cpi_yoy": 8.3,  "approval": -13, "outcome_at_t9":  "Dems -9 House (better than feared); but lost 2024"},
+    "2026_today":   {"month": "2026-04", "ics": 53, "cpi_yoy": 3.3,  "approval": -13.5,"outcome_pending": "进行中：距 2026 中期 8 个月，距 2028 大选 33 个月"},
+    "key_insight": "2026 当下（t=2）的 Michigan 消费者信心指数为 53，低于过去 50 年所有四次能源-政治危机的同期水平：1980 年 1 月为 67，1990 年 10 月为 64，2008 年 2 月为 70，2022 年 4 月为 65。然而 2026 当下的 CPI 通胀仅为 3.3%，远低于 2022 同期的 8.3% 与 1980 同期的 13.9%。\n\n这种『低通胀 + 极低信心』的组合在历史上是异常的——通常消费者信心与通胀率高度负相关，但当下出现通胀温和、信心却已崩盘。Stantcheva (2024 NBER) 论文将此称为『累积价格水平记忆』效应：选民厌恶的不是当期通胀率，而是过去几年累计的物价水平偏离基线，因此通胀回落到温和水平后，政治压力仍持续存在。\n\n这种经济数据与选民感知严重背离的状态，过去 50 年仅出现于 1992（老布什执政期 GDP 回升但选民感知仍认为是衰退，最终败选）和 2024（拜登执政期通胀回落但选民仍痛恨累积价格上涨，哈里斯败选）。两次共同特征是经济模型预测执政党赢、实际却败。当下 2026 的背离程度比这两次更严重，对共和党 2026 中期 + 2028 大选构成显著政治风险。",
+    "key_insight_en": "Michigan Consumer Sentiment at t=2 (currently April 2026) is 53 — lower than the same-period reading in all four major energy-political crises of the past 50 years: January 1980 was 67, October 1990 was 64, February 2008 was 70, April 2022 was 65. Yet 2026 CPI inflation is only 3.3%, far below 2022's 8.3% or 1980's 13.9% at the same offset.\n\nThis 'low inflation + extremely low confidence' combination is historically anomalous — voter sentiment is normally highly negatively correlated with inflation, but we now see mild inflation with collapsed confidence. Stantcheva (2024 NBER) terms this the 'cumulative price level memory' effect: voters dislike not the current inflation rate but the cumulative deviation of price levels from baseline over the past few years. Political pressure persists even after inflation moderates.\n\nThis severe data-perception divergence has occurred only twice in the past 50 years: 1992 (Bush 41 saw GDP recover but voters still perceived recession — he lost) and 2024 (Biden saw inflation moderate but voters resented cumulative price increases — Harris lost). Common feature: economic models predicted the incumbent party would win; reality went the other way. The 2026 divergence is more severe than either, posing significant political risk to Republicans in the 2026 midterms and 2028 presidential."
+  }
+}
