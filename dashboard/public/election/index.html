@@ -293,7 +293,97 @@
       <p style="margin-top:14px;">链条<b>总传导时滞约 4-9 个月</b>。Dashboard 追踪每步压力分以识别传导阶段——例如当下油价（第 1 步）已进入告警，CPI（第 4 步）尚未充分传导；待 CPI 反映完毕时，整链将同步进入告警状态。</p>
     </div>
 
-    <h3 class="method-h">四、传导弹性的校准来源</h3>
+    <h3 class="method-h">四、军事干预的额外传导通道（情景 D 专用）</h3>
+    <div class="method-block">
+      <p>第三节描述的九步传导链覆盖<b>经济通道</b>——油价通过通胀和实际收入影响选民感知。但情景 D（美军直接控制海峡）涉及军事行动，触发两个完全独立的<b>非经济通道</b>。本节解释这两个通道的工作机制，以及为什么"军事胜利"对参议院、众议院、总统大选的影响截然不同。</p>
+
+      <h4 style="margin-top:14px; font-size:14px; color:#0f172a;">通道 A：Rally-around-the-flag（爱国情绪聚集）</h4>
+      <p style="margin-top:8px;"><b>机制</b>：当美国进行重大军事行动时，公众情绪短期内出现爱国主义聚集，对总统支持率产生瞬时正向冲击，即便许多选民平时不支持总统。</p>
+      <p style="margin-top:8px;"><b>历史校准</b>（来自 Mueller 1973 经典论文 <i>War, Presidents and Public Opinion</i>）：</p>
+      <ul class="method-list">
+        <li>1979 年 11 月 Iran 人质危机：Carter 支持率 <b>+18pp</b></li>
+        <li>1991 年 1-2 月 Desert Storm：Bush 41 支持率从 60% 涨到 <b>89%</b>（+29pp 峰值）</li>
+        <li>2001 年 9 月 9/11 事件：Bush 43 支持率 <b>+35pp</b>（历史峰值）</li>
+      </ul>
+      <p style="margin-top:8px;">本 dashboard 对"成功护航 / 控制海峡"取 <b>+8pp</b>（小型军事行动的中位估计，远低于全面战争）。</p>
+      <p style="margin-top:8px;"><b>关键特征：rally 是脉冲信号，会衰减</b>。Mueller 测得半衰期约 6 个月——意思是每过 6 个月，剩余强度减半。下表展示衰减过程：</p>
+      <table class="method-table" style="margin-top:8px;">
+        <thead><tr><th>距事件月数</th><th>剩余强度</th><th>对应支持率提升</th></tr></thead>
+        <tbody>
+          <tr><td>0（事件刚发生）</td><td>100%</td><td>+8pp</td></tr>
+          <tr><td>6（一个半衰期）</td><td>50%</td><td>+4pp</td></tr>
+          <tr><td>12（两个半衰期）</td><td>25%</td><td>+2pp</td></tr>
+          <tr><td>30（2026 大选）</td><td>3%</td><td>+0.2pp（基本归零）</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:8px;"><b>历史镜像</b>：Bush 41 在 Desert Storm 后支持率 89%，但 18 个月后跌至 34%——克林顿因此赢得 1992 大选。这是 Fair 模型最著名的失败案例：经济数据看起来不错，模型预测 Bush 赢 55%，但 rally 早已衰减，选民只记得衰退。</p>
+
+      <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">通道 B：Casualty drag（伤亡累积）</h4>
+      <p style="margin-top:8px;"><b>机制</b>：长期军事部署不可避免产生美军阵亡，每位阵亡士兵都在选民记忆中累积负面权重。Hibbs Bread &amp; Peace 模型把这个变量正式纳入：每位阵亡 ≈ -0.00355pp 选票（系数来自 1952-2012 历史数据回归）。</p>
+      <p style="margin-top:8px;"><b>历史校准</b>：</p>
+      <ul class="method-list">
+        <li>Bush 41 海湾战争：~150 美军阵亡（短期，效应有限）</li>
+        <li>Bush 43 阿富汗战争：累积 ~2400 美军阵亡（拖累共和党 2008 / 2012 选举）</li>
+        <li>霍尔木兹护航行动：估计远低于战争，本 dashboard 对情景 D 取 <b>-3pp</b> 长期拖累</li>
+      </ul>
+      <p style="margin-top:8px;"><b>关键特征：伤亡是累积信号，不衰减</b>。每位阵亡都进入永久记账，永远不忘。下表展示累积过程：</p>
+      <table class="method-table" style="margin-top:8px;">
+        <thead><tr><th>距事件月数</th><th>累积比例</th><th>对应支持率拖累</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>0%</td><td>0pp</td></tr>
+          <tr><td>6（2026 中期）</td><td>50%</td><td>-1.5pp</td></tr>
+          <tr><td>30（2028 大选）</td><td>100%</td><td>-3pp（全部累积）</td></tr>
+        </tbody>
+      </table>
+
+      <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">两个通道相加 = 时间剪刀差</h4>
+      <p style="margin-top:8px;">把 rally（衰减）和伤亡（累积）叠在一起，会得到一个反直觉的曲线：<b>军事干预对短期选举有帮助，但对长期选举反而是负的</b>。具体到 dashboard 的两个时点：</p>
+      <table class="method-table" style="margin-top:8px;">
+        <thead><tr><th>时点</th><th>Rally 残留</th><th>伤亡累积</th><th>净支持率影响</th></tr></thead>
+        <tbody>
+          <tr><td>2026 中期（6 个月后）</td><td>+4.0pp（剩 50%）</td><td>-1.5pp（累积一半）</td><td><b>+2.5pp（共和党受益）</b></td></tr>
+          <tr><td>2028 大选（30 个月后）</td><td>+0.2pp（基本归零）</td><td>-3.0pp（全部累积）</td><td><b>-2.8pp（共和党受损）</b></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:8px;"><b>对照基线情景（B 拖延）</b>：D 控制场景下油价是 $90/桶（基线 B 是 $100），所以经济通道对共和党<b>有利</b>（油价低 → 通胀低 → 实际收入好）。但 rally 衰减+伤亡累积的非经济通道把这个经济好处抵消了。</p>
+
+      <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">为什么对参议院、众议院、总统的影响不同</h4>
+      <p style="margin-top:8px;">同样的支持率变化，三个层级响应不一样。原因是输入变量、响应公式和结构限制都不同：</p>
+      <table class="method-table" style="margin-top:8px;">
+        <thead><tr><th>层级</th><th>输入指标</th><th>结构限制</th><th>D 控制 vs B 基线效应</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>2026 参议院</b></td>
+            <td>Generic Ballot（推算）</td>
+            <td>Class II 结构 22R 防守 vs 11D，硬上限 D 净增 ≤4 席</td>
+            <td>D 多数概率 60% → 53%（rally 帮 R 守住 ME / NC 等关键席位）</td>
+          </tr>
+          <tr>
+            <td><b>2026 众议院</b></td>
+            <td>Generic Ballot + 净支持率（双输入）</td>
+            <td>全 435 席改选，无结构限制</td>
+            <td>R 失 39 席 → 失 36 席（rally 帮 R 守 3 席）</td>
+          </tr>
+          <tr>
+            <td><b>2028 总统</b></td>
+            <td>Q2 GDP + 6 月支持率 + 任期变量</td>
+            <td>2028 是开放席位，无现任优势</td>
+            <td>R 票 48.6% → 48.4%（rally 已衰减，伤亡抵消油价好处）</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:8px;"><b>反直觉发现</b>：D 控制场景在<b>参议院</b>的百分比效应（D 多数概率 -7pp）比<b>众议院</b>更明显。这是因为参议院 33 席规模小、ME / NC / TX 等摇摆席位都在边缘——支持率小幅上涨就能让 R 多守 1-2 席。众议院 435 席规模大，几个 pp 的支持率变化被结构稀释。</p>
+
+      <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">模型局限</h4>
+      <ul class="method-list" style="border-left-color:#dc2626;">
+        <li>Rally 和伤亡这两个通道都对所有 35 个参众议席候选人<b>同等</b>影响——模型假设候选人外交立场是中性的。但真实世界候选人立场各异（鹰派 vs 鸽派），可能产生差异化效应。</li>
+        <li>Rally 系数 +8pp 是中位估计，实际可能 5-15pp（视具体战果而定）。如果美军快速取胜伤亡极少（如 1991 Desert Storm），rally 可达 +24pp；如果陷入泥潭（如 2003-2008 伊拉克），rally 转为长期负效应。</li>
+        <li>伤亡系数 -3pp 是基于"成功护航"假设。如果实际是 Iraq War 级别的部署，应该用 -10pp 以上。</li>
+        <li>本 dashboard 不建模候选人质量、初选动员、广告战、辩论表现等竞选过程因素——这些可能放大或抵消上述传导效应。</li>
+      </ul>
+    </div>
+
+    <h3 class="method-h">五、传导弹性的校准来源</h3>
     <div class="method-block">
       <p>采用四次历史石油冲击事件作为校准基准：</p>
       <ul class="method-list">
@@ -304,7 +394,7 @@
       </ul>
     </div>
 
-    <h3 class="method-h">五、数据源</h3>
+    <h3 class="method-h">六、数据源</h3>
     <div class="method-block">
       <table class="method-table">
         <thead><tr><th>数据</th><th>来源</th><th>更新频率</th><th>需要 API key？</th></tr></thead>
@@ -324,7 +414,7 @@
       <p style="margin-top:12px;"><b>更新机制</b>：GitHub Actions 每日 14:00 北京时间自动运行 pipeline，将新数据写入 dashboard。RCP 民调一项需每周一手动更新 JSON——因 RCP 无公开 API，自动抓取 HTML 稳定性较低，不建议自动化。</p>
     </div>
 
-    <h3 class="method-h">六、Dashboard 的能力边界</h3>
+    <h3 class="method-h">七、Dashboard 的能力边界</h3>
     <div class="method-block">
       <ul class="method-list" style="border-left-color:#dc2626;">
         <li><b>不输出 2028 大选州层预测</b>。候选人未定（特朗普任期满，开放席位）、初选未开始、2.5 年外州层数据噪音远大于信号。任何具体 2028 州层数字均属假精度。</li>
@@ -335,7 +425,7 @@
       </ul>
     </div>
 
-    <h3 class="method-h">七、术语表</h3>
+    <h3 class="method-h">八、术语表</h3>
     <div class="method-block">
       <dl class="method-glossary">
         <dt>RMSE</dt><dd>均方根误差。模型历史预测值偏离真实值的平均幅度。Fair 模型 RMSE 2.5pp 意为：预测共和党得票 50% 时，实际值 95% 落在 45-55% 区间内。</dd>
@@ -501,7 +591,97 @@ Ensemble variance = Σ w_i² × RMSE_i² (assuming independence)</pre>
       <p style="margin-top:14px;">Typical <b>total transmission lag is 4-9 months</b>. The dashboard tracks each step's pressure score to identify the transmission stage — for example, oil prices (step 1) are currently in alarm zone, but CPI (step 4) has not yet fully transmitted. By the time CPI catches up, the entire chain will be in alarm simultaneously.</p>
     </div>
 
-    <h3 class="method-h">4. Calibration sources for transmission elasticities</h3>
+    <h3 class="method-h">4. Additional transmission channels under military intervention (scenario D)</h3>
+    <div class="method-block">
+      <p>Section 3's nine-step transmission chain covers <b>economic channels</b> — oil prices propagate through inflation and real income to voter perception. But scenario D (US Navy directly enforces the strait) involves military action, activating two completely independent <b>non-economic channels</b>. This section explains how these channels work and why "military victory" affects the Senate, House, and presidential election quite differently.</p>
+
+      <h4 style="margin-top:14px; font-size:14px; color:#0f172a;">Channel A: Rally-around-the-flag (patriotic surge)</h4>
+      <p style="margin-top:8px;"><b>Mechanism</b>: When the US conducts major military action, public sentiment briefly converges in patriotic support, producing an instantaneous positive shock to presidential approval — even among voters who don't normally support the president.</p>
+      <p style="margin-top:8px;"><b>Historical calibration</b> (from Mueller's 1973 classic <i>War, Presidents and Public Opinion</i>):</p>
+      <ul class="method-list">
+        <li>1979 Iran hostage crisis: Carter approval <b>+18pp</b></li>
+        <li>1991 Desert Storm: Bush 41 approval rose from 60% to <b>89%</b> (+29pp peak)</li>
+        <li>2001 9/11: Bush 43 approval <b>+35pp</b> (historical maximum)</li>
+      </ul>
+      <p style="margin-top:8px;">For "successful escort/strait control" we use <b>+8pp</b> (median estimate for small-scale military operations, far below full-scale war).</p>
+      <p style="margin-top:8px;"><b>Key feature: rally is a pulse signal that decays</b>. Mueller measured a half-life of approximately 6 months — meaning each 6-month interval cuts remaining strength in half:</p>
+      <table class="method-table" style="margin-top:8px;">
+        <thead><tr><th>Months past event</th><th>Remaining strength</th><th>Approval bump</th></tr></thead>
+        <tbody>
+          <tr><td>0 (event just occurred)</td><td>100%</td><td>+8pp</td></tr>
+          <tr><td>6 (one half-life)</td><td>50%</td><td>+4pp</td></tr>
+          <tr><td>12 (two half-lives)</td><td>25%</td><td>+2pp</td></tr>
+          <tr><td>30 (2028 election)</td><td>3%</td><td>+0.2pp (essentially gone)</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:8px;"><b>Historical mirror</b>: Bush 41's approval after Desert Storm was 89%, but fell to 34% within 18 months — Clinton thus won the 1992 election. This was the Fair model's most famous failure: economic data looked acceptable, the model predicted Bush winning at 55%, but the rally had long faded and voters only remembered the recession.</p>
+
+      <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">Channel B: Casualty drag</h4>
+      <p style="margin-top:8px;"><b>Mechanism</b>: Long-term military deployment inevitably produces US military casualties. Each fatality accumulates as a negative weight in voter memory. Hibbs Bread &amp; Peace formally captures this: each fatality ≈ -0.00355pp vote share (coefficient from 1952-2012 historical regression).</p>
+      <p style="margin-top:8px;"><b>Historical calibration</b>:</p>
+      <ul class="method-list">
+        <li>Bush 41 Gulf War: ~150 US fatalities (short duration, limited effect)</li>
+        <li>Bush 43 Afghanistan war: cumulative ~2400 US fatalities (dragged on R in 2008/2012)</li>
+        <li>Hormuz escort operation: estimated far below war scale; this dashboard uses <b>-3pp</b> long-term drag for scenario D</li>
+      </ul>
+      <p style="margin-top:8px;"><b>Key feature: casualty is a cumulative signal that does NOT decay</b>. Each fatality enters the permanent ledger and is never forgotten:</p>
+      <table class="method-table" style="margin-top:8px;">
+        <thead><tr><th>Months past event</th><th>Cumulative ratio</th><th>Approval drag</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>0%</td><td>0pp</td></tr>
+          <tr><td>6 (2026 midterm)</td><td>50%</td><td>-1.5pp</td></tr>
+          <tr><td>30 (2028 presidential)</td><td>100%</td><td>-3pp (full)</td></tr>
+        </tbody>
+      </table>
+
+      <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">Combining both channels = the time scissors</h4>
+      <p style="margin-top:8px;">Stacking decaying rally and accumulating casualty drag yields a counterintuitive curve: <b>military intervention helps in the short-term election but actually hurts in the long-term election</b>. For the dashboard's two horizons:</p>
+      <table class="method-table" style="margin-top:8px;">
+        <thead><tr><th>Horizon</th><th>Rally remaining</th><th>Casualty accumulated</th><th>Net approval impact</th></tr></thead>
+        <tbody>
+          <tr><td>2026 midterm (6 months out)</td><td>+4.0pp (50% remaining)</td><td>-1.5pp (half accumulated)</td><td><b>+2.5pp (R benefits)</b></td></tr>
+          <tr><td>2028 presidential (30 months out)</td><td>+0.2pp (essentially zero)</td><td>-3.0pp (fully accumulated)</td><td><b>-2.8pp (R hurt)</b></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:8px;"><b>Comparison to baseline (B drag)</b>: under D control, oil is $90/barrel (vs B baseline's $100), so the economic channel <b>helps</b> Republicans (lower oil → lower inflation → better real income). But the rally-decay + casualty-accumulation non-economic channels offset this economic benefit.</p>
+
+      <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">Why the effect differs between Senate, House, and presidential</h4>
+      <p style="margin-top:8px;">The same approval shift produces different responses at the three levels because input variables, response formulas, and structural constraints all differ:</p>
+      <table class="method-table" style="margin-top:8px;">
+        <thead><tr><th>Level</th><th>Input indicator</th><th>Structural constraint</th><th>D control vs B baseline effect</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>2026 Senate</b></td>
+            <td>Generic Ballot (derived)</td>
+            <td>Class II structure: 22 R defending vs 11 D — hard ceiling on D net gain ≤4 seats</td>
+            <td>D majority probability 60% → 53% (rally helps R hold ME / NC and other key seats)</td>
+          </tr>
+          <tr>
+            <td><b>2026 House</b></td>
+            <td>Generic Ballot + net approval (dual input)</td>
+            <td>All 435 seats up; no structural constraint</td>
+            <td>R loses 39 seats → 36 (rally helps R hold 3 more seats)</td>
+          </tr>
+          <tr>
+            <td><b>2028 Presidential</b></td>
+            <td>Q2 GDP + June approval + term variable</td>
+            <td>2028 is open seat, no incumbency advantage</td>
+            <td>R two-party 48.6% → 48.4% (rally has decayed, casualty offsets oil benefit)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:8px;"><b>Counterintuitive finding</b>: D control's percentage effect on the <b>Senate</b> (D majority probability -7pp) is more visible than on the <b>House</b>. This is because the Senate has only 33 races, and the swing seats (ME / NC / TX) are at the margin — a small approval bump can flip 1-2 seats relative to a 33-seat denominator. The House has 435 seats, so a few-pp approval shift gets diluted in the structural noise.</p>
+
+      <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">Model limitations</h4>
+      <ul class="method-list" style="border-left-color:#dc2626;">
+        <li>Both rally and casualty channels affect all 35 Senate/House race candidates <b>uniformly</b> — the model assumes candidates are foreign-policy neutral. In reality, candidates have varied stances (hawk vs dove) and could produce differentiated effects.</li>
+        <li>The +8pp rally coefficient is a median estimate; actual values may range 5-15pp depending on outcome. A clean fast win with minimal casualties (like 1991 Desert Storm) can produce +24pp; getting bogged down (like 2003-2008 Iraq) flips rally into long-term negative.</li>
+        <li>The -3pp casualty coefficient assumes "successful escort." If the deployment escalates to Iraq War scale, use -10pp or worse.</li>
+        <li>This dashboard does not model candidate quality, primary mobilization, advertising war, or debate performance — these may amplify or offset the transmission effects above.</li>
+      </ul>
+    </div>
+
+    <h3 class="method-h">5. Calibration sources for transmission elasticities</h3>
     <div class="method-block">
       <p>Four historical oil-shock events serve as calibration anchors:</p>
       <ul class="method-list">
@@ -512,7 +692,7 @@ Ensemble variance = Σ w_i² × RMSE_i² (assuming independence)</pre>
       </ul>
     </div>
 
-    <h3 class="method-h">5. Data sources</h3>
+    <h3 class="method-h">6. Data sources</h3>
     <div class="method-block">
       <table class="method-table">
         <thead><tr><th>Data</th><th>Source</th><th>Update frequency</th><th>API key required?</th></tr></thead>
@@ -532,7 +712,7 @@ Ensemble variance = Σ w_i² × RMSE_i² (assuming independence)</pre>
       <p style="margin-top:12px;"><b>Update mechanism</b>: GitHub Actions runs the pipeline daily at 14:00 Beijing time and writes new data into the dashboard. The RCP polling data must be manually updated in JSON each Monday — RCP has no public API and HTML scraping is fragile, so automation is not recommended.</p>
     </div>
 
-    <h3 class="method-h">6. Dashboard capability boundaries</h3>
+    <h3 class="method-h">7. Dashboard capability boundaries</h3>
     <div class="method-block">
       <ul class="method-list" style="border-left-color:#dc2626;">
         <li><b>Does not output 2028 presidential state-level forecasts</b>. Candidates undecided (Trump term-limited, open seat); primaries haven't begun; state-level data noise vastly exceeds signal 2.5 years out. Any specific 2028 state-level number is false precision.</li>
@@ -543,7 +723,7 @@ Ensemble variance = Σ w_i² × RMSE_i² (assuming independence)</pre>
       </ul>
     </div>
 
-    <h3 class="method-h">7. Glossary</h3>
+    <h3 class="method-h">8. Glossary</h3>
     <div class="method-block">
       <dl class="method-glossary">
         <dt>RMSE (Root Mean Squared Error)</dt><dd>The average magnitude by which a model's historical predictions deviate from true values. Fair model's RMSE of 2.5pp means: if it predicts the Republicans at 50%, the true value will be in the 45-55% range 95% of the time.</dd>
