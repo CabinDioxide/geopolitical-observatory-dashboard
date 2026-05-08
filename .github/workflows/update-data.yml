@@ -30,6 +30,7 @@ jobs:
       - name: Run data pipeline
         env:
           AISSTREAM_API_KEY: ${{ secrets.AISSTREAM_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: cd dashboard && python -m pipeline.run_all
 
       - name: Copy data to public directory for static serving
@@ -47,6 +48,10 @@ jobs:
           cp dashboard/data/trade/strategic_flows.geojson dashboard/public/data/trade/
           cp dashboard/data/trade/country_centroids.json dashboard/public/data/trade/
           cp dashboard/data/maritime/chokepoints.geojson dashboard/public/data/maritime/
+
+          # Election forecast data (FRED indicators + Fair/BEW model outputs)
+          mkdir -p dashboard/public/data/election
+          cp dashboard/data/election/*.json dashboard/public/data/election/ 2>/dev/null || true
 
           # Metadata
           cp dashboard/data/_meta/last_update.json dashboard/public/data/_meta/ 2>/dev/null || true

@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "description": "Manually maintained political inputs. Update from RCP / Silver Bulletin / 538 weekly. The model reads from here directly. Auto-fetch is deferred to Phase 2 because aggregator scraping is fragile.",
+    "last_updated": "2026-05-08",
+    "next_review": "2026-05-15",
+    "sources": {
+      "approval": "https://www.realclearpolling.com/polls/approval/donald-trump/approval",
+      "generic_ballot": "https://www.realclearpolling.com/polls/generic-congressional-vote",
+      "silver_bulletin": "https://www.natesilver.net/p/silver-bulletin-2026-midterm-elections"
+    }
+  },
+
+  "trump_approval": {
+    "approve_pct": 41.5,
+    "disapprove_pct": 55.0,
+    "net": -13.5,
+    "as_of": "2026-05-05",
+    "source": "RCP average"
+  },
+
+  "generic_ballot": {
+    "dem_pct": 47.0,
+    "rep_pct": 43.5,
+    "dem_lead": 3.5,
+    "as_of": "2026-05-05",
+    "source": "RCP average"
+  },
+
+  "right_track_wrong_track": {
+    "right_track_pct": 28,
+    "wrong_track_pct": 64,
+    "net": -36,
+    "as_of": "2026-04",
+    "source": "RCP average / NBC poll"
+  },
+
+  "most_important_problem_economy_pct": {
+    "value": 41,
+    "as_of": "2026-04",
+    "source": "Gallup MIP",
+    "note": "Combined economy + inflation + cost of living"
+  },
+
+  "structural_2026_midterm": {
+    "house_seats_in_party": 220,
+    "house_seats_out_party": 215,
+    "in_party": "R",
+    "senate_seats_in_party": 53,
+    "senate_seats_out_party": 47,
+    "senate_seats_up_for_grabs_2026_in_party": 22,
+    "senate_seats_up_for_grabs_2026_out_party": 11,
+    "note": "Senate Class II is heavily R-leaning in 2026 (22 R defending vs 11 D defending), which structurally limits the size of any Dem wave in Senate even if national environment is D+5."
+  },
+
+  "structural_2028_presidential": {
+    "incumbent_party": "R",
+    "incumbent_running": false,
+    "incumbent_party_consecutive_terms_pre_2028": 1,
+    "dper": 0,
+    "dur": 0,
+    "note": "Trump term-limited. 2028 is open seat → DPER=0 (no personal incumbency boost), DUR=0 (only 1 consecutive term). This removes ~3-4pp of structural advantage from Republican party vote share vs counterfactual where Trump could run."
+  }
+}

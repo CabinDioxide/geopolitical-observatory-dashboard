@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Election Forecast · Hormuz Impact · Geopolitical Observatory</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="forecast.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body data-lang="zh">
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <div>
+      <h1 data-i18n="header.title">霍尔木兹冲击 → 美国大选追踪盘</h1>
+      <div class="sub" data-i18n="header.sub">2026 中期 + 2028 总统 · 传导链 · 5 种情形的推演 · 美国地图 · 历史对照</div>
+    </div>
+    <div class="hdr-meta">
+      <span id="last-updated">—</span>
+      <button id="lang-toggle" class="lang-toggle" title="Switch language">中 / EN</button>
+      <a href="/" class="back" data-i18n="header.back_map">← 主图</a>
+      <a href="/reports/" class="back" data-i18n="header.back_reports">📊 分析报告</a>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-tab="chain" data-i18n="tab.chain">① 传导链</button>
+  <button class="tab" data-tab="scenarios" data-i18n="tab.scenarios">② 5 种情形的推演</button>
+  <button class="tab" data-tab="senate" data-i18n="tab.senate">③ 美国地图</button>
+  <button class="tab" data-tab="overlay" data-i18n="tab.overlay">④ 历史对照</button>
+  <button class="tab" data-tab="methodology" data-i18n="tab.methodology">⑤ 方法论</button>
+</nav>
+
+<main class="container">
+
+  <!-- TAB 1: 传导链 -->
+  <section id="tab-chain" class="tab-pane active">
+    <div class="intro">
+      <h2 data-i18n="chain.title">传导链：从油价到选票的九个观测点</h2>
+      <p data-i18n="chain.intro1">霍尔木兹封锁通过九个步骤传导至选举结果。每一格显示当前值、基线（中性水平）、告警（5pp 选票损失对应水平）。每条 bar 分三段彩色区间——指针落在哪一段，直接读出风险级别：</p>
+      <p style="margin-top:8px;" data-i18n="chain.intro2">
+        <span class="tag-inline" style="background:#2a9d8f; color:#fff;">上游</span>（绿，0–33）该指标处于安全区间，风险尚未传导到下一环节；
+        <span class="tag-inline" style="background:#f4a261; color:#fff;">中游</span>（橙，33–66）指标正在恶化，下游将开始受影响；
+        <span class="tag-inline" style="background:#e63946; color:#fff;">下游</span>（红，66–100）指标接近或突破告警，对选票已构成直接威胁。
+      </p>
+      <p style="margin-top:8px;" data-i18n="chain.intro3"><b>告警的统一定义</b>：每个指标的告警阈值都对应"该指标单独达到此水平时，历史上执政党在下次选举损失 ≥5pp 两党票"。</p>
+    </div>
+    <div id="chain-grid" class="chain-grid"></div>
+    <div class="meta-strip">
+      <div class="meta-item"><span class="lbl" data-i18n="chain.epu_label">EPU 经济政策不确定性</span><span id="epu-val">—</span></div>
+      <div class="meta-item"><span class="lbl" data-i18n="chain.updated_label">最近更新</span><span id="chain-updated">—</span></div>
+    </div>
+  </section>
+
+  <!-- TAB 2: Scenarios -->
+  <section id="tab-scenarios" class="tab-pane">
+    <div class="intro">
+      <h2 data-i18n="scen.title">5 种情形的推演：霍尔木兹未来走向对 2026 中期 + 2028 大选的影响</h2>
+      <p data-i18n="scen.intro1">每种霍尔木兹未来走向通过传导链产生不同的宏观结果（油价、通胀、收入、信心、支持率），再带入 4 个学术模型输出选举结果。下方每张卡片展示一个情形的<b>选举含义</b>：共和党在 2026 中期会失多少席位、控不控得住众议院；2028 大选会输多少（或赢多少）。带宽为 ±2·均方根误差（RMSE，95% 置信区间）。</p>
+      <p style="margin-top:8px;" data-i18n="scen.intro2"><b>预测模型说明</b>：2026 中期众议院使用 Bafumi-Erikson-Wlezien 模型；2028 总统大选取三个独立模型（Fair Vote Equation、Hibbs 面包与和平、Abramowitz Time-for-Change）的反向 RMSE 加权集合预测。各模型公式与选择理由见⑤方法论页。</p>
+    </div>
+    <div id="scenario-summary" class="summary-cards"></div>
+    <h3 class="section-h" data-i18n="scen.table_h">各情景下的政治结果对比表</h3>
+    <p style="font-size:13px; color:#64748b; margin-bottom:12px;" data-i18n="scen.table_desc">下表按情景列出宏观传导结果（油价/增长/通胀/信心/支持率）与最终选举预测（2028 共和党两党票集合预测、2026 共和党众院净增减席位）。最后一行是按各情景先验概率的加权汇总。</p>
+    <table id="scenario-table" class="scenario-table"></table>
+  </section>
+
+  <!-- TAB 3: 美国地图 (参议院 + 众议院) -->
+  <section id="tab-senate" class="tab-pane">
+    <div class="intro">
+      <h2 data-i18n="map.title">2026 美国地图：参议院 + 众议院预测</h2>
+      <p data-i18n="map.intro">各州预测结果以颜色编码呈现。点击州可查看详情面板。2028 大选与众议院因数据不足（候选人未定 + 2030 重新划区）暂不做严肃预测；2028 参议院 Class III 33 席位仅作地图示意。</p>
+    </div>
+    <div class="map-controls">
+      <span class="ctrl-label" data-i18n="map.ctrl_label">看哪个：</span>
+      <button class="map-toggle active" data-layer="senate2026" data-i18n="map.layer_senate2026">2026 参议院（33 席）</button>
+      <button class="map-toggle" data-layer="house2026" data-i18n="map.layer_house2026">2026 众议院（435 席州层估算）</button>
+      <button class="map-toggle" data-layer="senate2028" data-i18n="map.layer_senate2028">2028 参议院（示意，缺数据）</button>
+      <button class="map-toggle" data-layer="house2028" disabled style="opacity:0.4;" data-i18n="map.layer_house2028">2028 众议院（不做）</button>
+    </div>
+    <div class="map-layout">
+      <div id="us-map"></div>
+      <div id="map-side-panel">
+        <div id="map-summary-cards"></div>
+        <div id="state-detail-panel">
+          <div class="placeholder" data-i18n="map.click_state">点地图上的州看详情</div>
+        </div>
+      </div>
+    </div>
+    <details style="margin-top:18px;">
+      <summary class="section-h" style="cursor:pointer;" data-i18n="map.senate_full_table">参议院全部 33 席原始表格（按竞争度排序）</summary>
+      <table id="senate-table" class="senate-table" style="margin-top:12px;"></table>
+    </details>
+    <details>
+      <summary class="section-h" style="cursor:pointer;" data-i18n="map.house_full_table">众议院各州预测表（按 D 净增席位排序）</summary>
+      <table id="house-table" class="house-table" style="margin-top:12px;"></table>
+    </details>
+  </section>
+
+  <!-- TAB 4: 历史对照（合并轨迹 + 详情） -->
+  <section id="tab-overlay" class="tab-pane">
+    <div class="intro">
+      <h2 data-i18n="ovl.title">历史对照：2026 与四次历史石油-政治危机的全面比较</h2>
+      <p data-i18n="ovl.intro1">过去 50 年里，美国执政党遭遇过四次显著的能源/政治冲击：1980 伊朗革命+两伊战争、1990 海湾战争、2008 油价峰值、2022 俄乌战争。这四次事件均提供了"地缘政治冲击 → 油价 → 通胀 → 选民感知 → 选举结果"的完整案例。本节将四次事件按 <b>t=0</b>（事件起点）对齐，与当前 2026 危机进行直接同期比较。</p>
+      <p style="margin-top:8px;" data-i18n="ovl.intro2">阅读建议：先看顶部"同期对比卡"了解 2026 的相对位置；再看"指标对比图"观察各危机的演化轨迹；最后看"事件详情"了解每次危机的完整背景与最终政治后果。</p>
+    </div>
+
+    <h3 class="section-h" data-i18n="ovl.sec1">第一部分：t=2（事件起点后 2 个月）的同期对比</h3>
+    <p style="font-size:13px; color:#64748b; margin-bottom:12px;" data-i18n="ovl.sec1_desc">2026 危机起点为 2026-02-28（美以空袭伊朗），当前 t=2 对应 2026-04。下方卡片显示同样 t=2 时各次历史危机的指标读数与最终政治结果，便于直接判断 2026 的相对严重程度。</p>
+    <div id="overlay-comparison-grid" class="overlay-comparison-grid"></div>
+
+    <h3 class="section-h" data-i18n="ovl.sec2">第二部分：指标对比图（按月对齐 t=0 至 t=33）</h3>
+    <p style="font-size:13px; color:#64748b; margin-bottom:12px;" data-i18n="ovl.sec2_desc">五条颜色线分别代表 1980/1990/2008/2022 四次历史危机轨迹 + 2026 当前危机轨迹（黑色加粗线，已观测 t=0 至 t=3 共 4 个数据点）。X 轴是事件起点后的月数，Y 轴是所选指标。红色虚线标记 2026 中期选举（t=8）和 2028 大选（t=33）的位置——可以直接读出"在那个时间点，历史上各次危机的指标处于什么位置，2026 的轨迹延伸到哪里会和哪条历史线接近"。</p>
+    <div class="chart-controls">
+      <span style="font-size:12px; color:#64748b;" data-i18n="ovl.metric_label">选择指标：</span>
+      <button class="chart-toggle active" data-metric="ics" data-i18n="ovl.metric_ics">密歇根大学消费者信心 (ICS)</button>
+      <button class="chart-toggle" data-metric="cpi_yoy" data-i18n="ovl.metric_cpi">消费者价格指数 (CPI) 同比</button>
+      <button class="chart-toggle" data-metric="brent" data-i18n="ovl.metric_brent">布伦特原油</button>
+      <button class="chart-toggle" data-metric="approval_net" data-i18n="ovl.metric_approval">总统净支持率</button>
+      <button class="chart-toggle" data-metric="gas" data-i18n="ovl.metric_gas">汽油价格</button>
+    </div>
+    <div id="overlay-chart" class="overlay-chart"></div>
+
+    <h3 class="section-h" data-i18n="ovl.sec3">第三部分：核心结论 — 2026 在四次危机中的相对位置</h3>
+    <div id="overlay-key-insight" class="overlay-key-insight"></div>
+
+    <h3 class="section-h" data-i18n="ovl.sec4">第四部分：四次历史危机详情</h3>
+    <p style="font-size:13px; color:#64748b; margin-bottom:12px;" data-i18n="ovl.sec4_desc">每张卡片包含一次危机的完整背景、关键宏观数据（油价/汽油/CPI/ICS/支持率）、最终政治结果，以及对当前 2026 危机的具体启示。这些案例是模型传导弹性参数的校准来源。</p>
+    <div id="history-grid" class="history-grid"></div>
+
+    <h3 class="section-h" data-i18n="ovl.sec5">第五部分：四次危机的逐月详细数据表（点击展开）</h3>
+    <p style="font-size:13px; color:#64748b; margin-bottom:12px;" data-i18n="ovl.sec5_desc">每次危机的全部月度指标。点击事件名称展开。</p>
+    <div id="overlay-event-tables"></div>
+  </section>
+
+  <!-- TAB 6: 方法论 -->
+  <section id="tab-methodology" class="tab-pane">
+    <div class="intro">
+      <h2 data-i18n="meth.title">方法论说明</h2>
+      <p data-i18n="meth.intro">本 dashboard 的核心任务是将地缘政治冲击（霍尔木兹海峡封锁）通过宏观与政治传导链转换为美国选举结果预测。下文逐项说明所用模型、选择理由、历史预测准确度、传导链结构与数据来源。</p>
+    </div>
+
+    <div class="lang-zh">
+    <h3 class="method-h">一、为什么选这三个模型？为什么没选其他模型？</h3>
+    <div class="method-block">
+      <p>美国选举预测领域约有 6-8 个有学术背书的模型。本 dashboard 挑选三个互补模型（Fair / Hibbs / Abramowitz）并构建集合预测，理由如下：</p>
+
+      <h4 style="margin-top:14px; font-size:14px; color:#0f172a;">入选三个模型的具体公式</h4>
+
+      <p style="margin-top:10px;"><b>1. Fair Vote Equation（Ray Fair, Yale 1978）</b>，预测现任党两党票份额：</p>
+      <pre style="background:#f8fafc; padding:12px; border-radius:5px; font-size:12px; overflow-x:auto;">V_民主党 = 47.42 + 0.667·G·I + (-0.690)·P·I + 0.984·Z·I
+        + 3.41·DPER + (-3.46)·DUR·I + (-0.105)·I
+
+参数定义：
+  G    = 选举年 Q1-Q3 实际人均国内生产总值（GDP）增长率（年化 %）
+  P    = 任期内国内生产总值平减指数 15 季度增长率绝对值（年化 %）
+  Z    = 任期内 15 季度中实际人均增长 >3.2% 的"好消息季度"数量（最大 15）
+  DPER = 现任总统亲自参选系数（D=+1, R=-1, 开放席位=0）
+  DUR  = 在位时长系数（首任=0, 二连任=1, 三连任=1.25...）
+  I    = 党派虚拟变量（D=+1, R=-1）
+均方根误差（RMSE）= ±2.5pp（全国两党票出样本）</pre>
+
+      <p style="margin-top:14px;"><b>2. Hibbs 面包与和平模型（Douglas Hibbs, 1982/2008）</b>，预测现任党两党票份额：</p>
+      <pre style="background:#f8fafc; padding:12px; border-radius:5px; font-size:12px; overflow-x:auto;">V_现任党 = 46.10 + 3.49·R + (-0.00355)·累计战争伤亡
+
+参数定义：
+  R = λ-加权 15 季度实际人均可支配收入（RDPI）增长率（年化 %）
+  λ = 0.915（按季度几何衰减——最近季度权重最大）
+  累计战争伤亡 = 任期内非主动战争中美军死亡人数（2026-2028 期间为 0）
+均方根误差（RMSE）= ±1.85pp（全国两党票，1952-2012 历史样本）</pre>
+
+      <p style="margin-top:14px;"><b>3. Abramowitz Time-for-Change（Alan Abramowitz, 1988）</b>，预测现任党两党票份额：</p>
+      <pre style="background:#f8fafc; padding:12px; border-radius:5px; font-size:12px; overflow-x:auto;">V_现任党 = 51.40 + 0.108·G_Q2 + 0.642·NETAPP + (-4.0)·TERM2
+
+参数定义：
+  G_Q2    = 选举年第二季度实际国内生产总值（GDP）增长率（年化 %）
+  NETAPP  = 现任总统 6 月净支持率（赞同率 - 反对率）
+  TERM2   = 现任党连续执政是否 ≥2 任的虚拟变量（是=1, 否=0）
+均方根误差（RMSE）= ±1.90pp</pre>
+
+      <p style="margin-top:14px;"><b>4. Bafumi-Erikson-Wlezien（BEW, 2010）</b>，预测中期众议院席位变化：</p>
+      <pre style="background:#f8fafc; padding:12px; border-radius:5px; font-size:12px; overflow-x:auto;">现任党席位变化 = -22 + 3.5·现任党通用国会选票领先 + 0.4·现任总统净支持率
+
+参数定义：
+  现任党通用国会选票领先 = 通用国会选票（Generic Ballot）现任党 - 在野党，pp 单位
+  现任总统净支持率 = 赞同率 - 反对率，pp 单位
+  -22 截距 = 历史中期选举现任党平均失席位
+均方根误差（RMSE）= ±12 席</pre>
+
+      <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">入选三个模型 + 一个中期模型的集体特征</h4>
+      <table class="method-table">
+        <thead>
+          <tr><th>模型</th><th>核心变量</th><th>历史 RMSE</th><th>著名成功</th><th>著名失败</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Fair Vote Equation</b></td>
+            <td>综合：增长 + 通胀 + 结构</td>
+            <td>±2.5pp</td>
+            <td>1980 卡特败、1984 里根赢、2008 麦凯恩败</td>
+            <td><b>1992</b>：预测老布什赢 55%，实际败 46%（最著名翻车——经济数据 vs 选民感知背离）</td>
+          </tr>
+          <tr>
+            <td><b>Hibbs 面包与和平</b></td>
+            <td>极简：实际收入 + 战争伤亡</td>
+            <td>±1.85pp</td>
+            <td>1952-2012 八个选举平均误差最低</td>
+            <td>2016（共和党选民关注"非经济"议题）</td>
+          </tr>
+          <tr>
+            <td><b>Abramowitz Time-for-Change</b></td>
+            <td>支持率主导：Q2 GDP + 6 月支持率 + 任期</td>
+            <td>±1.90pp</td>
+            <td>2016 准确预测特朗普（Trump）赢；1988-2012 八届里六届方向对</td>
+            <td>2020 原版预测特朗普赢；作者本人加了主观修正</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px;">三个模型使用不同输入变量：<b>Fair</b> 综合考虑增长、通胀与结构因素；<b>Hibbs</b> 仅观察实际收入但加权 15 季度记忆；<b>Abramowitz</b> 主要看支持率（民意层）。三模型预测一致时可信度高；分歧大时（如当下 Fair 与 Abramowitz 差 11.7pp）则提示经济数据与选民感知出现严重背离，1992 和 2024 选举均属此种情形。</p>
+
+      <h4 style="margin-top:20px; font-size:14px; color:#0f172a;">为什么没选其他常见模型？</h4>
+      <table class="method-table" style="margin-top:10px;">
+        <thead>
+          <tr><th>未选模型</th><th>排除理由</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Lichtman 13 Keys to the White House</b></td>
+            <td>方法论：13 个二元判断（每个由分析师主观打分）。学界对其科学性争议大——2024 年预测哈里斯赢哈里斯（Harris）是其首次失败，揭穿"必胜"神话。<b>排除原因</b>：变量本质是定性主观判断，不可机械计算；不能纳入自动化 dashboard。</td>
+          </tr>
+          <tr>
+            <td><b>Norpoth Primary Model（Helmut Norpoth）</b></td>
+            <td>方法论：仅用初选表现 + 钟摆效应。声称 1912 年以来 25 次预测对 22 次。2016/2024 都正确预测特朗普赢。<b>排除原因</b>：变量选择被怀疑过拟合——25 次中错过几次的模式不可重复验证；初选数据 2027 年才有，对 2028 当下无前瞻价值。</td>
+          </tr>
+          <tr>
+            <td><b>Lewis-Beck-Tien Political Economy</b></td>
+            <td>方法论：Fair 模型的扩展，加入消费者信心 ICS 和"job approval × growth"交互项。<b>排除原因</b>：实际上是 Fair + ICS 的微调版本——增加 ICS 等于把"感知层"半重复纳入；与 Hibbs 和 Abramowitz 已经覆盖的感知通道高度相关，不增加独立信息。</td>
+          </tr>
+          <tr>
+            <td><b>Drew Linzer Dynamic Bayesian Model（2013）</b></td>
+            <td>方法论：贝叶斯州层模型 + Kalman filter 实时更新。Economist 2020 模型、Silver Bulletin 都用类似架构。<b>排除原因</b>：需要每周民调数据 + 州层模型，数据需求量大；本 dashboard 走的是"基本面 + 情景分析"路径，不是民调驱动。Linzer 类模型适合选举前 6 个月的预测窗口，不适合距大选 2.5 年的当下 2028。</td>
+          </tr>
+          <tr>
+            <td><b>Justin Grimmer 等人的"朴素预测"（2024）</b></td>
+            <td>方法论：用"上届结果 + 现任党"作基线，论证学术模型在统计上不优于此基线。<b>排除原因</b>：本身是元批评，不是预测工具；其结论已通过我们的"模型分歧 = 警报"机制吸收。</td>
+          </tr>
+          <tr>
+            <td><b>Allan Lichtman 之外的其他经济模型（如 Cuzán、Holbrook）</b></td>
+            <td>方法论：与 Fair / Hibbs / Abramowitz 高度相似的回归模型。<b>排除原因</b>：与已选三个模型的输入变量重叠度高，无法增加集合预测的方差降低收益（PollyVote 论文证明：相关性高的模型加入集合反而效果有限）。</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px; font-size:13px; color:#64748b;"><b>选择原则总结</b>：(1) 学术背书 + 公开公式可复现；(2) 输入变量分散（综合、收入、支持率），互补性最大化集合预测增益；(3) 当前数据可获取（不依赖未发布的初选数据）；(4) 出样本均方根误差（RMSE）≤2.5pp。</p>
+    </div>
+
+    <h3 class="method-h">二、集合预测的方法与已知局限</h3>
+    <div class="method-block">
+      <p><b>原理</b>：单一模型必有偏好；集合互补模型可降低平均误差。德国学者 Andreas Graefe 提出的 <b>PollyVote</b> 方法证明：将所有公开模型按"反向 RMSE"加权平均（历史误差小的模型权重大），出样本 RMSE 比任何单一模型低 30-40%。</p>
+      <p><b>本 dashboard 采用的具体计算</b>：</p>
+      <pre style="background:#f8fafc; padding:12px; border-radius:5px; font-size:12px; overflow-x:auto;">权重 w_i = (1 / RMSE_i) / Σ(1 / RMSE_j)
+集合预测 = Σ w_i × 模型_i 预测值
+集合方差 = Σ w_i² × RMSE_i² （假设独立性）</pre>
+      <p>当下权重：Hibbs ≈ 36%（RMSE 1.85），Abramowitz ≈ 36%（RMSE 1.90），Fair ≈ 27%（RMSE 2.50）。集合预测带宽约 ±1.1pp。</p>
+      <p style="margin-top:14px; padding:12px; background:#fef3c7; border-left:3px solid #d97706; border-radius:4px;"><b>⚠️ 这种计算方法的已知问题</b>：上述方差公式假设三个模型相互独立，但实际上 Fair / Hibbs / Abramowitz 都使用了重叠的宏观经济变量（GDP 增长、通胀、收入）。模型预测误差是<b>正相关</b>的，而非独立。</p>
+      <ul class="method-list" style="border-left-color:#d97706;">
+        <li><b>真实集合 RMSE 高于公式计算值</b>。真实值约在 ±1.5-2.0pp 区间（介于公式给出的 1.1pp 与最小单一模型 RMSE 1.85pp 之间）。Dashboard 显示的 ±1.1pp 是<b>下限</b>，不是真实值。</li>
+        <li><b>模型分歧大时反而更可靠</b>。当三个模型预测一致（说明输入信号强烈），集合预测可信度高。当三模型分歧大（如当下 Fair 与 Abramowitz 差 11pp），表明模型在"权重不同输入变量时给出不同结论"，这本身就是诊断信号——意味着经济数据与选民感知出现严重背离。</li>
+        <li><b>修正建议</b>：在解读集合预测时，应将名义 ±1.1pp 带宽放大约 50%，得到更现实的 ±1.5-2.0pp 不确定性。即"集合预测 R 48.4%"的真实置信区间约为 [46.4%, 50.4%]，而非 [47.3%, 49.5%]。</li>
+        <li><b>未做修正的原因</b>：精确计算模型预测误差的协方差矩阵需要每个模型在历史 60+ 选举上的逐年预测值，这些数据公开度有限，且 60 个样本估计 6 个协方差仍噪音很大。当前 dashboard 使用独立性假设的"乐观下限"，并通过这条 caveat 显式声明。</li>
+      </ul>
+    </div>
+
+    <h3 class="method-h">三、传导链：从油价到选票的九步链条</h3>
+    <div class="method-block">
+      <p>霍尔木兹冲击通过九步传导至选举结果，每一步对应一个可观测指标与传导弹性。<b>所有弹性参数均从历史事件实测得出</b>，非理论推导：</p>
+      <table class="method-table">
+        <thead><tr><th>第几步</th><th>变量</th><th>来源</th><th>到下一步的弹性</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>布伦特原油</td><td>FRED 日度</td><td>$1/桶 → 汽油 +$0.025/加仑</td></tr>
+          <tr><td>2</td><td>美国零售汽油</td><td>FRED 周度</td><td>$1/加仑 → 头条 CPI +0.85pp YoY</td></tr>
+          <tr><td>3</td><td>战略石油储备</td><td>EIA 周报</td><td>缓冲容量 — 释放可压油价 ~$5-10</td></tr>
+          <tr><td>4</td><td>头条 CPI</td><td>FRED 月度（BLS）</td><td>1pp → 密歇根 ICS -3.2 点</td></tr>
+          <tr><td>5</td><td>核心 CPI</td><td>FRED 月度</td><td>追踪是否扩散到非能源</td></tr>
+          <tr><td>6</td><td>实际可支配收入</td><td>FRED 月度（BEA）</td><td>Hibbs 模型核心输入</td></tr>
+          <tr><td>7</td><td>密歇根消费者信心</td><td>FRED 月度</td><td>-10 点 → 总统支持率 -1.1pp</td></tr>
+          <tr><td>8</td><td>总统支持率</td><td>RCP 手动每周</td><td>Abramowitz 核心输入；通用国会选票传导</td></tr>
+          <tr><td>9</td><td>通用国会选票</td><td>RCP 手动每周</td><td>Bafumi-Erikson-Wlezien 核心输入</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px;">链条<b>总传导时滞约 4-9 个月</b>。Dashboard 追踪每步压力分以识别传导阶段——例如当下油价（第 1 步）已进入告警，CPI（第 4 步）尚未充分传导；待 CPI 反映完毕时，整链将同步进入告警状态。</p>
+    </div>
+
+    <h3 class="method-h">四、传导弹性的校准来源</h3>
+    <div class="method-block">
+      <p>采用四次历史石油冲击事件作为校准基准：</p>
+      <ul class="method-list">
+        <li><b>1980 伊朗革命+两伊战争</b>：油价 $14→$39（+179%），CPI 峰值 14.8%，ICS 75→51，卡特两党票 44.7% 惨败。<b>当下霍尔木兹危机最直接的历史类比</b>——同样波斯湾起源、同样持续时间长、最终消费者信心彻底崩溃。</li>
+        <li><b>1990-91 海湾战争</b>：油价 $17→$41（+141%），持续仅 5 个月。Bush 41 最终败给克林顿——证明<b>短促油价冲击的政治后效可延续 18 个月</b>。亦为 Fair 模型最著名失败案例。</li>
+        <li><b>2008 油价峰值</b>：油价 $60→$147（+145%），持续 8 个月。McCain 败 7.4pp。证明<b>经济数据与选民感知双重恶化的破坏力</b>。</li>
+        <li><b>2022 俄乌战争</b>：油价 $90→$128，叠加 Dobbs 判决抵消。证明<b>累积通胀记忆可延续至下一选举周期</b>（2024 哈里斯仍受拖累）。</li>
+      </ul>
+    </div>
+
+    <h3 class="method-h">五、数据源</h3>
+    <div class="method-block">
+      <table class="method-table">
+        <thead><tr><th>数据</th><th>来源</th><th>更新频率</th><th>需要 API key？</th></tr></thead>
+        <tbody>
+          <tr><td>布伦特/WTI 油价</td><td>FRED (DCOILBRENTEU/DCOILWTICO)</td><td>日</td><td>FRED key 免费</td></tr>
+          <tr><td>美国零售汽油</td><td>FRED (GASREGW)</td><td>周一</td><td>FRED key</td></tr>
+          <tr><td>战略石油储备</td><td>EIA Weekly Petroleum Status Report Table 1</td><td>周三</td><td>无（公开 CSV）</td></tr>
+          <tr><td>CPI（头条/核心/能源）</td><td>FRED (CPIAUCSL/CPILFESL/CPIENGSL)</td><td>月中</td><td>FRED key</td></tr>
+          <tr><td>实际可支配收入</td><td>FRED (DSPIC96/A229RX0)</td><td>月底</td><td>FRED key</td></tr>
+          <tr><td>实际 GDP</td><td>FRED (GDPC1)</td><td>季度</td><td>FRED key</td></tr>
+          <tr><td>密歇根消费者信心 + 通胀预期</td><td>FRED (UMCSENT/MICH)</td><td>月底</td><td>FRED key</td></tr>
+          <tr><td>经济政策不确定性</td><td>FRED (USEPUINDXD)</td><td>日</td><td>FRED key</td></tr>
+          <tr><td>总统支持率 + Generic Ballot</td><td>RCP / Silver Bulletin（手动维护 political_inputs.json）</td><td>每周一手动更新</td><td>无（无可靠 API）</td></tr>
+          <tr><td>美国州地图</td><td>PublicaMundi GeoJSON（一次性下载，89KB）</td><td>静态</td><td>无</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;"><b>更新机制</b>：GitHub Actions 每日 14:00 北京时间自动运行 pipeline，将新数据写入 dashboard。RCP 民调一项需每周一手动更新 JSON——因 RCP 无公开 API，自动抓取 HTML 稳定性较低，不建议自动化。</p>
+    </div>
+
+    <h3 class="method-h">六、Dashboard 的能力边界</h3>
+    <div class="method-block">
+      <ul class="method-list" style="border-left-color:#dc2626;">
+        <li><b>不输出 2028 大选州层预测</b>。候选人未定（特朗普任期满，开放席位）、初选未开始、2.5 年外州层数据噪音远大于信号。任何具体 2028 州层数字均属假精度。</li>
+        <li><b>不输出 2026 众议院选区层预测</b>。选区级预测需 Cook PVI 选区数据 + 候选人质量 + 现任优势变量，需订阅 Cook Political Report。本 dashboard 仅提供州层估算。</li>
+        <li><b>不输出"X% 概率赢 2028"单点预测</b>。三模型集合 RMSE ±2.5pp，加上 2.5 年外的额外不确定性，单点估计具误导性。</li>
+        <li><b>不预测非经济议题影响</b>。如 Dobbs 判决（堕胎议题）等非经济变量不在任何模型内。该类变量在 2022 中期帮助民主党抵消油价冲击；2026 类似变量可能再现，但模型无法捕捉。</li>
+        <li><b>不预测黑天鹅事件</b>。新一轮 911 级恐袭、大型自然灾害、重大金融崩盘等均不在传导链内。</li>
+      </ul>
+    </div>
+
+    <h3 class="method-h">七、术语表</h3>
+    <div class="method-block">
+      <dl class="method-glossary">
+        <dt>RMSE</dt><dd>均方根误差。模型历史预测值偏离真实值的平均幅度。Fair 模型 RMSE 2.5pp 意为：预测共和党得票 50% 时，实际值 95% 落在 45-55% 区间内。</dd>
+        <dt>PVI（Cook 党派投票指数）</dt><dd>某州或选区相对全国平均的党派偏向。例如 Maine 的 D+2 意为该州比全国平均向 D 倾斜 2pp。</dd>
+        <dt>ICS（Michigan Index of Consumer Sentiment）</dt><dd>密歇根大学每月调查的消费者信心指数，1966=100 为基准。当下 53 接近 1980/2008 危机底部水平。</dd>
+        <dt>Generic Ballot</dt><dd>"不论候选人，下次国会选举投民主党或共和党"民调聚合值。Bafumi-Erikson-Wlezien 模型的核心输入。</dd>
+        <dt>DPER</dt><dd>Fair 模型变量：现任总统本人参选 = +1（D）/-1（R），开放席位 = 0。2028 R 因特朗普任期满故 = 0，失去约 3-4pp 现任优势。</dd>
+        <dt>DUR</dt><dd>Fair 模型"在位时长惩罚"变量：首任 = 0，连任两任及以上 ≥ 1。R 在 2028 仅一任，DUR = 0。</dd>
+        <dt>Z（Good News Quarters）</dt><dd>Fair 模型变量：任期前 15 季度内实际人均 GDP 增长 >3.2% 的季度数量。</dd>
+        <dt>Class II / Class III 参议院</dt><dd>美国参议员任期 6 年，分三组轮流改选。2026 改选 Class II（22 R + 11 D），2028 改选 Class III（约 21 R + 12 D）。</dd>
+        <dt>Bafumi-Erikson-Wlezien (BEW)</dt><dd>2010 年三位学者合作的中期众议院席位预测模型，generic ballot 为核心输入变量。</dd>
+      </dl>
+    </div>
+    </div><!-- /lang-zh -->
+
+    <!-- ===== ENGLISH VERSION ===== -->
+    <div class="lang-en">
+
+    <h3 class="method-h">1. Why these three models? Why not others?</h3>
+    <div class="method-block">
+      <p>The US election forecasting field has approximately 6-8 academically-backed models. This dashboard selects three complementary models (Fair / Hibbs / Abramowitz) and constructs an ensemble forecast for the following reasons:</p>
+
+      <h4 style="margin-top:14px; font-size:14px; color:#0f172a;">Explicit formulas of the three selected models</h4>
+
+      <p style="margin-top:10px;"><b>1. Fair Vote Equation (Ray Fair, Yale 1978)</b>, predicts the in-party two-party vote share:</p>
+      <pre style="background:#f8fafc; padding:12px; border-radius:5px; font-size:12px; overflow-x:auto;">V_Democrat = 47.42 + 0.667·G·I + (-0.690)·P·I + 0.984·Z·I
+        + 3.41·DPER + (-3.46)·DUR·I + (-0.105)·I
+
+Variables:
+  G    = real per-capita GDP growth, election-year Q1-Q3, annualized %
+  P    = |GDP deflator growth| over administration's first 15 quarters, annualized %
+  Z    = number of "good news quarters" (real per-capita growth >3.2%) in first 15 quarters (max 15)
+  DPER = sitting president personally running (D=+1, R=-1, open seat=0)
+  DUR  = duration penalty (first term=0, second consecutive=1, third=1.25...)
+  I    = party dummy (D=+1, R=-1)
+RMSE = ±2.5pp (national two-party vote, out-of-sample)</pre>
+
+      <p style="margin-top:14px;"><b>2. Hibbs Bread &amp; Peace (Douglas Hibbs, 1982/2008)</b>, predicts the in-party two-party vote share:</p>
+      <pre style="background:#f8fafc; padding:12px; border-radius:5px; font-size:12px; overflow-x:auto;">V_incumbent = 46.10 + 3.49·R + (-0.00355)·cumulative war fatalities
+
+Variables:
+  R = λ-weighted real per-capita disposable income (RDPI) growth over 15 quarters, annualized %
+  λ = 0.915 (geometric quarterly decay — most recent quarter weighted highest)
+  Cumulative war fatalities = US military deaths in non-defensive wars during the term (0 for 2026-2028)
+RMSE = ±1.85pp (national two-party vote, 1952-2012 historical sample)</pre>
+
+      <p style="margin-top:14px;"><b>3. Abramowitz Time-for-Change (Alan Abramowitz, 1988)</b>, predicts the in-party two-party vote share:</p>
+      <pre style="background:#f8fafc; padding:12px; border-radius:5px; font-size:12px; overflow-x:auto;">V_incumbent = 51.40 + 0.108·G_Q2 + 0.642·NETAPP + (-4.0)·TERM2
+
+Variables:
+  G_Q2    = real GDP growth in election-year Q2, annualized %
+  NETAPP  = sitting president's June net approval (approve - disapprove)
+  TERM2   = dummy for in-party serving 2+ consecutive terms (yes=1, no=0)
+RMSE = ±1.90pp</pre>
+
+      <p style="margin-top:14px;"><b>4. Bafumi-Erikson-Wlezien (BEW, 2010)</b>, predicts midterm House seat change:</p>
+      <pre style="background:#f8fafc; padding:12px; border-radius:5px; font-size:12px; overflow-x:auto;">In-party seat change = -22 + 3.5·in-party Generic Ballot lead + 0.4·sitting president's net approval
+
+Variables:
+  In-party Generic Ballot lead = Generic Ballot for in-party - opposition, in pp
+  Sitting president's net approval = approval - disapproval, in pp
+  -22 intercept = historical average midterm in-party seat loss
+RMSE = ±12 seats</pre>
+
+      <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">Comparative characteristics of the three selected models</h4>
+      <table class="method-table">
+        <thead>
+          <tr><th>Model</th><th>Core variables</th><th>RMSE</th><th>Famous successes</th><th>Famous failures</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Fair Vote Equation</b></td>
+            <td>Comprehensive: growth + inflation + structure</td>
+            <td>±2.5pp</td>
+            <td>1980 Carter loss, 1984 Reagan win, 2008 McCain loss</td>
+            <td><b>1992</b>: predicted Bush 41 win at 55%, actually lost at 46% (most famous failure — economic data vs voter perception divergence)</td>
+          </tr>
+          <tr>
+            <td><b>Hibbs Bread &amp; Peace</b></td>
+            <td>Minimalist: real income + war casualties</td>
+            <td>±1.85pp</td>
+            <td>Lowest average error across 1952-2012, 8 elections</td>
+            <td>2016 (Republican voters focused on "non-economic" issues)</td>
+          </tr>
+          <tr>
+            <td><b>Abramowitz Time-for-Change</b></td>
+            <td>Approval-led: Q2 GDP + June approval + term penalty</td>
+            <td>±1.90pp</td>
+            <td>2016 correctly predicted Trump win; 1988-2012 directionally correct in 6 of 8 elections</td>
+            <td>2020 original predicted Trump win; author manually adjusted</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px;">The three models use different input variables: <b>Fair</b> jointly considers growth, inflation, and structural factors; <b>Hibbs</b> tracks only real income but with 15-quarter weighted memory; <b>Abramowitz</b> primarily reflects approval (the public-opinion layer). When all three agree, confidence is high; when they diverge sharply (currently Fair vs Abramowitz differ by 11.7pp), this signals serious data-perception divergence — both 1992 and 2024 were such cases.</p>
+
+      <h4 style="margin-top:20px; font-size:14px; color:#0f172a;">Why other common models were not selected</h4>
+      <table class="method-table" style="margin-top:10px;">
+        <thead><tr><th>Excluded model</th><th>Rationale</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>Lichtman 13 Keys to the White House</b></td>
+            <td>Methodology: 13 binary judgments (each subjectively scored by analyst). Significant academic dispute about scientific validity — 2024 was its first failure (predicted Harris would win), debunking the "always correct" narrative. <b>Excluded because</b>: variables are inherently qualitative subjective judgments, not mechanically computable; cannot be incorporated into an automated dashboard.</td>
+          </tr>
+          <tr>
+            <td><b>Norpoth Primary Model (Helmut Norpoth)</b></td>
+            <td>Methodology: uses primary performance + pendulum effect only. Claims 22 of 25 correct since 1912. Correctly predicted Trump in 2016 and 2024. <b>Excluded because</b>: variable selection and sample period are suspected of overfitting — the few errors among 25 are not robustly identifiable; primary data won't exist until 2027 and provides no forward-looking value for 2028 today.</td>
+          </tr>
+          <tr>
+            <td><b>Lewis-Beck-Tien Political Economy</b></td>
+            <td>Methodology: extension of Fair, adds consumer sentiment (ICS) and "approval × growth" interaction. <b>Excluded because</b>: essentially Fair + ICS — adding ICS overlaps the perception channel that Hibbs and Abramowitz already capture, providing little independent information.</td>
+          </tr>
+          <tr>
+            <td><b>Drew Linzer Dynamic Bayesian Model (2013)</b></td>
+            <td>Methodology: Bayesian state-level model + Kalman filter for live updates. The Economist 2020 model and Silver Bulletin use similar architecture. <b>Excluded because</b>: requires weekly polling data + state-level model; data demands are heavy. This dashboard uses a "fundamentals + scenario analysis" approach, not a polling-driven one. Linzer-style models are appropriate for the final 6-month window before an election, not 2.5 years out.</td>
+          </tr>
+          <tr>
+            <td><b>Justin Grimmer et al. "Naive Forecast" (2024)</b></td>
+            <td>Methodology: uses "previous result + incumbent party" as baseline, argues academic models are statistically indistinguishable from this baseline. <b>Excluded because</b>: this is a meta-critique, not a forecasting tool; its conclusion is already absorbed via our "model disagreement = warning" mechanism.</td>
+          </tr>
+          <tr>
+            <td><b>Other economic models (Cuzán, Holbrook, etc.)</b></td>
+            <td>Methodology: regression models highly similar to Fair / Hibbs / Abramowitz. <b>Excluded because</b>: input variables overlap heavily with selected models, providing no incremental variance reduction in the ensemble (PollyVote literature shows that highly-correlated models contribute little to ensemble gains).</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px; font-size:13px; color:#64748b;"><b>Selection principles summarized</b>: (1) Academic backing + publicly available formulas; (2) Diverse input variables (comprehensive, income, approval) to maximize ensemble complementarity; (3) Currently available data (no dependence on yet-to-be-released primary data); (4) Out-of-sample RMSE ≤ 2.5pp.</p>
+    </div>
+
+    <h3 class="method-h">2. Ensemble forecast methodology and known limitations</h3>
+    <div class="method-block">
+      <p><b>Principle</b>: Single models always have biases; combining complementary models reduces average error. The <b>PollyVote</b> method, proposed by German researcher Andreas Graefe, has shown that weighting all public models by inverse RMSE (smaller historical error → larger weight) produces an out-of-sample RMSE 30-40% lower than any single model.</p>
+      <p><b>Specific calculation used in this dashboard</b>:</p>
+      <pre style="background:#f8fafc; padding:12px; border-radius:5px; font-size:12px; overflow-x:auto;">Weight w_i = (1 / RMSE_i) / Σ(1 / RMSE_j)
+Ensemble forecast = Σ w_i × Model_i prediction
+Ensemble variance = Σ w_i² × RMSE_i² (assuming independence)</pre>
+      <p>Current weights: Hibbs ≈ 36% (RMSE 1.85), Abramowitz ≈ 36% (RMSE 1.90), Fair ≈ 27% (RMSE 2.50). Ensemble band approximately ±1.1pp.</p>
+      <p style="margin-top:14px; padding:12px; background:#fef3c7; border-left:3px solid #d97706; border-radius:4px;"><b>⚠️ Known issue with this calculation</b>: the variance formula above assumes the three models are independent, but in reality Fair / Hibbs / Abramowitz all use overlapping macroeconomic variables (GDP growth, inflation, income). Their prediction errors are <b>positively correlated</b>, not independent.</p>
+      <ul class="method-list" style="border-left-color:#d97706;">
+        <li><b>Real ensemble RMSE is higher than the formula value</b>. The true value is approximately ±1.5-2.0pp (between the formula's 1.1pp and the smallest single-model RMSE of 1.85pp). The dashboard displays ±1.1pp as the <b>lower bound</b>, not the true value.</li>
+        <li><b>Disagreement among models is itself a more reliable signal</b>. When all three agree (input signal is strong), ensemble confidence is high. When models diverge sharply (currently Fair vs Abramowitz differ by 11pp), this indicates "models give different answers because they weight inputs differently" — itself a diagnostic signal, indicating economic data and voter perception are sharply divergent.</li>
+        <li><b>Recommended adjustment</b>: when interpreting the ensemble, scale the nominal ±1.1pp band by ~50% to get a more realistic ±1.5-2.0pp uncertainty. So "ensemble forecast R 48.4%" has a true confidence interval of approximately [46.4%, 50.4%], not [47.3%, 49.5%].</li>
+        <li><b>Reason for not formally correcting</b>: precise computation of the model error covariance matrix requires year-by-year predictions across 60+ historical elections; public data is limited and 60 samples to estimate 6 covariances is still noisy. The dashboard uses the independence-assumption "optimistic lower bound" and discloses this caveat explicitly.</li>
+      </ul>
+    </div>
+
+    <h3 class="method-h">3. Transmission chain: nine steps from oil prices to votes</h3>
+    <div class="method-block">
+      <p>A Hormuz shock propagates through nine steps to electoral outcomes. Each step has a corresponding observable indicator and a transmission elasticity. <b>All elasticity parameters are empirically derived from historical events</b>, not theoretical derivations:</p>
+      <table class="method-table">
+        <thead><tr><th>Step</th><th>Variable</th><th>Source</th><th>Elasticity to next step</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Brent crude</td><td>FRED daily</td><td>$1/bbl → gasoline +$0.025/gal</td></tr>
+          <tr><td>2</td><td>US retail gasoline</td><td>FRED weekly</td><td>$1/gal → headline CPI +0.85pp YoY</td></tr>
+          <tr><td>3</td><td>Strategic Petroleum Reserve</td><td>EIA weekly</td><td>Buffer capacity — release can suppress oil ~$5-10</td></tr>
+          <tr><td>4</td><td>Headline CPI</td><td>FRED monthly (BLS)</td><td>1pp → Michigan ICS -3.2 pts</td></tr>
+          <tr><td>5</td><td>Core CPI</td><td>FRED monthly</td><td>Tracks spillover to non-energy</td></tr>
+          <tr><td>6</td><td>Real disposable income</td><td>FRED monthly (BEA)</td><td>Core input for Hibbs</td></tr>
+          <tr><td>7</td><td>Michigan Consumer Sentiment</td><td>FRED monthly</td><td>-10 pts → presidential approval -1.1pp</td></tr>
+          <tr><td>8</td><td>Presidential approval</td><td>RCP, manual weekly</td><td>Core input for Abramowitz; transmits to Generic Ballot</td></tr>
+          <tr><td>9</td><td>Generic Ballot</td><td>RCP, manual weekly</td><td>Core input for Bafumi-Erikson-Wlezien</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px;">Typical <b>total transmission lag is 4-9 months</b>. The dashboard tracks each step's pressure score to identify the transmission stage — for example, oil prices (step 1) are currently in alarm zone, but CPI (step 4) has not yet fully transmitted. By the time CPI catches up, the entire chain will be in alarm simultaneously.</p>
+    </div>
+
+    <h3 class="method-h">4. Calibration sources for transmission elasticities</h3>
+    <div class="method-block">
+      <p>Four historical oil-shock events serve as calibration anchors:</p>
+      <ul class="method-list">
+        <li><b>1980 Iranian Revolution + Iran-Iraq War</b>: oil $14→$39 (+179%), CPI peak 14.8%, ICS 75→51, Carter two-party share 44.7% — catastrophic loss. <b>Most direct historical analogue to the current Hormuz crisis</b> — same Persian Gulf origin, same long duration, and ultimately complete voter sentiment collapse.</li>
+        <li><b>1990-91 Gulf War</b>: oil $17→$41 (+141%), but only lasted 5 months. Bush 41 ultimately lost to Clinton — proving that <b>brief oil shocks can have political aftereffects lasting 18+ months</b>. Also Fair model's most famous failure case.</li>
+        <li><b>2008 oil peak</b>: oil $60→$147 (+145%), lasted 8 months. McCain lost by 7.4pp. Proves the <b>destructive power of simultaneous economic data and voter perception deterioration</b>.</li>
+        <li><b>2022 Russia-Ukraine war</b>: oil $90→$128, offset by Dobbs ruling. Proves <b>cumulative inflation memory can persist into the next election cycle</b> (Harris 2024 still bore the burden).</li>
+      </ul>
+    </div>
+
+    <h3 class="method-h">5. Data sources</h3>
+    <div class="method-block">
+      <table class="method-table">
+        <thead><tr><th>Data</th><th>Source</th><th>Update frequency</th><th>API key required?</th></tr></thead>
+        <tbody>
+          <tr><td>Brent / WTI crude</td><td>FRED (DCOILBRENTEU/DCOILWTICO)</td><td>Daily</td><td>FRED key (free)</td></tr>
+          <tr><td>US retail gasoline</td><td>FRED (GASREGW)</td><td>Monday</td><td>FRED key</td></tr>
+          <tr><td>Strategic Petroleum Reserve</td><td>EIA Weekly Petroleum Status Report Table 1</td><td>Wednesday</td><td>None (public CSV)</td></tr>
+          <tr><td>CPI (headline / core / energy)</td><td>FRED (CPIAUCSL/CPILFESL/CPIENGSL)</td><td>Mid-month</td><td>FRED key</td></tr>
+          <tr><td>Real disposable income</td><td>FRED (DSPIC96/A229RX0)</td><td>End-of-month</td><td>FRED key</td></tr>
+          <tr><td>Real GDP</td><td>FRED (GDPC1)</td><td>Quarterly</td><td>FRED key</td></tr>
+          <tr><td>Michigan Consumer Sentiment + inflation expectations</td><td>FRED (UMCSENT/MICH)</td><td>End-of-month</td><td>FRED key</td></tr>
+          <tr><td>Economic Policy Uncertainty</td><td>FRED (USEPUINDXD)</td><td>Daily</td><td>FRED key</td></tr>
+          <tr><td>Presidential approval + Generic Ballot</td><td>RCP / Silver Bulletin (manually maintained political_inputs.json)</td><td>Manual update each Monday</td><td>None (no reliable API)</td></tr>
+          <tr><td>US states map</td><td>PublicaMundi GeoJSON (one-time download, 89KB)</td><td>Static</td><td>None</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;"><b>Update mechanism</b>: GitHub Actions runs the pipeline daily at 14:00 Beijing time and writes new data into the dashboard. The RCP polling data must be manually updated in JSON each Monday — RCP has no public API and HTML scraping is fragile, so automation is not recommended.</p>
+    </div>
+
+    <h3 class="method-h">6. Dashboard capability boundaries</h3>
+    <div class="method-block">
+      <ul class="method-list" style="border-left-color:#dc2626;">
+        <li><b>Does not output 2028 presidential state-level forecasts</b>. Candidates undecided (Trump term-limited, open seat); primaries haven't begun; state-level data noise vastly exceeds signal 2.5 years out. Any specific 2028 state-level number is false precision.</li>
+        <li><b>Does not output 2026 House district-level forecasts</b>. District-level forecast requires Cook PVI by district + candidate quality + incumbency variables, which require Cook Political Report subscription. The dashboard provides only state-level estimates.</li>
+        <li><b>Does not output single-point predictions like "X% probability R wins 2028"</b>. Three-model ensemble RMSE is ±2.5pp, plus additional uncertainty from being 2.5 years out — single-point estimates are misleading.</li>
+        <li><b>Does not predict non-economic issue effects</b>. E.g., the Dobbs ruling (abortion) — non-economic variables are not in any model. That variable helped Democrats offset the oil shock in 2022 midterms; similar variables may reappear in 2026, but the models cannot capture them.</li>
+        <li><b>Does not predict black swan events</b>. New 9/11-scale terror attacks, major natural disasters, major financial collapses — none are in the transmission chain.</li>
+      </ul>
+    </div>
+
+    <h3 class="method-h">7. Glossary</h3>
+    <div class="method-block">
+      <dl class="method-glossary">
+        <dt>RMSE (Root Mean Squared Error)</dt><dd>The average magnitude by which a model's historical predictions deviate from true values. Fair model's RMSE of 2.5pp means: if it predicts the Republicans at 50%, the true value will be in the 45-55% range 95% of the time.</dd>
+        <dt>PVI (Cook Partisan Voting Index)</dt><dd>How a state or district leans relative to the national average. E.g., Maine's D+2 means Maine leans 2pp more Democratic than the national average.</dd>
+        <dt>ICS (Michigan Index of Consumer Sentiment)</dt><dd>The University of Michigan's monthly consumer sentiment survey, indexed to 1966=100. The current 53 is near 1980/2008 crisis-bottom levels.</dd>
+        <dt>Generic Ballot</dt><dd>"Regardless of candidate, will you vote Democrat or Republican in the next congressional election" — the polling-aggregated value. Core input to the Bafumi-Erikson-Wlezien model.</dd>
+        <dt>DPER</dt><dd>Fair model variable: sitting president personally running = +1 (D) / -1 (R), open seat = 0. R in 2028 = 0 (Trump term-limited), losing approximately 3-4pp incumbency advantage.</dd>
+        <dt>DUR</dt><dd>Fair model "duration penalty" variable: first term = 0, two or more consecutive terms ≥ 1. R in 2028 has only one term, so DUR = 0.</dd>
+        <dt>Z (Good News Quarters)</dt><dd>Fair model variable: number of quarters in the first 15 quarters of the administration where real per-capita GDP growth exceeded 3.2%.</dd>
+        <dt>Class II / Class III Senate</dt><dd>US senators serve 6-year terms divided into three rotating classes. 2026 elects Class II (22 R + 11 D); 2028 elects Class III (~21 R + 12 D).</dd>
+        <dt>Bafumi-Erikson-Wlezien (BEW)</dt><dd>The 2010 midterm House seat forecasting model by these three scholars, with Generic Ballot as core input variable.</dd>
+      </dl>
+    </div>
+
+    </div><!-- /lang-en -->
+
+  </section>
+
+  <!-- Tab 5 (历史类比详情) merged into Tab 4 (历史对照) -->
+
+</main>
+
+<script src="forecast.js"></script>
+</body>
+</html>

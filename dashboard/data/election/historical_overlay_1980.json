@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "description": "Month-by-month 1980 economic + political indicators, aligned to a t=0 anchor (start of Persian Gulf supply crisis). Designed to overlay on 2026 trajectory so the user can read off 'we're at 1980 month X' in real time.",
+    "anchor_event_1980": "1979-11-04: Iran hostage crisis begins (start of sustained Persian Gulf risk premium phase)",
+    "anchor_event_2026": "2026-02-28: US-Israel airstrikes on Iran begin (start of current crisis)",
+    "alignment_method": "Calendar months from anchor. t=0 is the start month of the crisis. Use to read 'X months in, Y was the value'.",
+    "election_day_1980": "1980-11-04 (12 months after anchor)",
+    "election_day_2026_midterm": "2026-11-03 (8 months after 2026 anchor)",
+    "election_day_2028_presidential": "2028-11-07 (33 months after 2026 anchor)",
+    "warning": "1980 numbers are best-effort historical reconstructions from BLS/EIA/Gallup archives. Some months interpolated. Do not quote any single number without verifying against original source."
+  },
+
+  "indicators_by_month": [
+    {"t": 0,  "month_1980": "1979-11", "brent_usd_bbl": 24, "cpi_yoy_pct": 12.6, "gasoline_usd_gal": 0.86, "michigan_ics": 75, "carter_approval_net": 11,  "events": "Iran hostage crisis begins. Initial rally effect lifts Carter +18pp."},
+    {"t": 1,  "month_1980": "1979-12", "brent_usd_bbl": 26, "cpi_yoy_pct": 13.3, "gasoline_usd_gal": 0.92, "michigan_ics": 73, "carter_approval_net": 5,   "events": "Soviet invasion of Afghanistan. Oil hits $26."},
+    {"t": 2,  "month_1980": "1980-01", "brent_usd_bbl": 30, "cpi_yoy_pct": 13.9, "gasoline_usd_gal": 0.98, "michigan_ics": 67, "carter_approval_net": 3,   "events": "Carter Doctrine declared. Olympic boycott."},
+    {"t": 3,  "month_1980": "1980-02", "brent_usd_bbl": 35, "cpi_yoy_pct": 14.2, "gasoline_usd_gal": 1.06, "michigan_ics": 63, "carter_approval_net": -2,  "events": "Inflation peaks. Volcker tightens. Recession begins."},
+    {"t": 4,  "month_1980": "1980-03", "brent_usd_bbl": 38, "cpi_yoy_pct": 14.6, "gasoline_usd_gal": 1.15, "michigan_ics": 56, "carter_approval_net": -8,  "events": "Q1 GDP -1.6%. Credit controls."},
+    {"t": 5,  "month_1980": "1980-04", "brent_usd_bbl": 39, "cpi_yoy_pct": 14.8, "gasoline_usd_gal": 1.22, "michigan_ics": 52, "carter_approval_net": -19, "events": "Desert One rescue mission fails. Approval collapse."},
+    {"t": 6,  "month_1980": "1980-05", "brent_usd_bbl": 38, "cpi_yoy_pct": 14.4, "gasoline_usd_gal": 1.27, "michigan_ics": 51, "carter_approval_net": -22, "events": "Recession deepens. Q2 GDP -7.9% annualized."},
+    {"t": 7,  "month_1980": "1980-06", "brent_usd_bbl": 37, "cpi_yoy_pct": 14.4, "gasoline_usd_gal": 1.29, "michigan_ics": 53, "carter_approval_net": -22, "events": "Carter wins primary fight against Kennedy. Reagan locks GOP nomination."},
+    {"t": 8,  "month_1980": "1980-07", "brent_usd_bbl": 36, "cpi_yoy_pct": 13.1, "gasoline_usd_gal": 1.27, "michigan_ics": 58, "carter_approval_net": -18, "events": "GOP convention. Reagan-Bush ticket."},
+    {"t": 9,  "month_1980": "1980-08", "brent_usd_bbl": 36, "cpi_yoy_pct": 12.9, "gasoline_usd_gal": 1.25, "michigan_ics": 65, "carter_approval_net": -13, "events": "Dem convention — Carter renominated. Polls Reagan +5."},
+    {"t": 10, "month_1980": "1980-09", "brent_usd_bbl": 36, "cpi_yoy_pct": 12.6, "gasoline_usd_gal": 1.25, "michigan_ics": 70, "carter_approval_net": -10, "events": "Iran-Iraq war starts (22 Sep). Oil briefly spikes."},
+    {"t": 11, "month_1980": "1980-10", "brent_usd_bbl": 37, "cpi_yoy_pct": 12.8, "gasoline_usd_gal": 1.30, "michigan_ics": 68, "carter_approval_net": -9,  "events": "Reagan-Carter debate (28 Oct). 'Are you better off?'"},
+    {"t": 12, "month_1980": "1980-11", "brent_usd_bbl": 37, "cpi_yoy_pct": 12.6, "gasoline_usd_gal": 1.31, "michigan_ics": 64, "carter_approval_net": -10, "events": "Election day (4 Nov). Reagan wins 489-49 EC, 50.7-41.0 popular vote."}
+  ],
+
+  "alignment_with_2026": {
+    "current_2026_month_offset": 2,
+    "rationale": "2026-05 = 2.5 months after 2026-02-28 anchor. Roughly aligned with 1980-01 (t=2 since 1979-11 anchor).",
+    "next_milestones": {
+      "2026-11 midterm": "t=8 (analogous to 1980-07: GOP convention era). 1980 ICS was 58 — bouncing back from April trough; 2026 ICS already at 53 with no recovery sign.",
+      "2027-04": "t=14 (post-1980 election analog). 1980 had Carter loss already locked in; 2027 inflation dynamics still TBD.",
+      "2028-11 presidential": "t=33 (no 1980 analog — 33 months past anchor would be August 1982). Use scenario engine."
+    },
+    "key_differences_to_track": [
+      "1980 had Q1 (-1.6%) AND Q2 (-7.9%) negative GDP growth before election. 2026 hasn't yet had a quarter print negative.",
+      "1980 had peak CPI 14.8% (April). 2026 CPI is 3.3% — much lower despite ICS being similar.",
+      "1980 ICS bottom was 51 (May/June). 2026 ICS is 53 in May — same level but with 1/4 the inflation. This is the perception-data divergence Stantcheva 2024 documents.",
+      "1980 incumbent (Carter) was running for re-election. 2026 has Trump as incumbent for midterm but Trump is term-limited for 2028 — open seat.",
+      "1980 had no rally event near election. 2026 stands at ~2 months post-rally (Iran strikes Feb 28); rally has likely decayed."
+    ]
+  },
+
+  "lessons": [
+    "1980 trajectory: ICS bottomed in May (t=6) at 51, then partially recovered to 64-68 by election (t=11-12). Despite recovery, voters still punished incumbent — perception scarring durable. Implication for 2026: ICS at 53 in May will likely partially recover by November but not fully.",
+    "1980 oil prices peaked April (t=5, $39) and gradually drifted lower by election ($37). Compare 2026: April peak $128, May $100. Trajectory faster but starting from much higher base.",
+    "Carter's approval only briefly rose with rally events (Iran hostage rally Nov-Dec 1979 = +18pp; primary win June 1980 = +4pp). All decayed within 2-4 months. Implication: Trump's Iran strike rally (if it gave him +5-8pp in March) will be largely gone by November midterms.",
+    "Q2 GDP (Fair model's main G input) was -7.9% in 1980 → catastrophic. Even with Hormuz crisis, 2028 Q2 GDP unlikely to be that bad in any of our 4 scenarios. Suggests Fair model will read 'less bad than 1980' for 2028 — this is correct directionally but may understate political damage."
+  ]
+}

@@ -21,8 +21,9 @@ dashboard_dir = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(dashboard_dir))
 
 from pipeline.config import CONFLICTS_DIR, META_DIR, LOG_DIR
-from pipeline.sources import gdelt, acled, ucdp, bellingcat, ais, ofac
+from pipeline.sources import gdelt, acled, ucdp, bellingcat, ais, ofac, fred, eia
 from pipeline.processors.normalize import normalize_gdelt, normalize_acled, merge_conflict_sources
+from pipeline.processors import election_models
 
 # --- Logging ---
 LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -163,6 +164,56 @@ def run_pipeline():
         logger.info(f"Merged {len(merged.get('features', []))} total conflict events")
     else:
         logger.warning("No conflict data available from any source")
+
+    # --- FRED macro indicators (oil/CPI/income/sentiment for election model) ---
+    try:
+        logger.info("--- Fetching FRED ---")
+        fred_result = fred.run()
+        meta = fred_result.get("_meta", {})
+        if meta.get("status") == "skipped":
+            sources_status["fred"] = {"status": "skipped", "reason": meta["reason"]}
+        else:
+            sources_status["fred"] = {
+                "status": "ok",
+                "series_ok": fred_result.get("_meta", {}).get("ok", 0),
+                "series_failed": len(fred_result.get("_meta", {}).get("failed", [])),
+            }
+    except Exception as e:
+        logger.error(f"FRED failed: {e}")
+        sources_status["fred"] = {"status": "error", "error": str(e)}
+
+    # --- EIA Weekly Petroleum Status Report (SPR + commercial stocks) ---
+    try:
+        logger.info("--- Fetching EIA WPSR Table 1 ---")
+        eia_result = eia.run()
+        meta = eia_result.get("_meta", {})
+        if meta.get("status") == "ok":
+            sources_status["eia"] = {"status": "ok", "rows": meta.get("rows", 0)}
+        else:
+            sources_status["eia"] = {"status": "error", "error": meta.get("error", "unknown")}
+    except Exception as e:
+        logger.error(f"EIA failed: {e}")
+        sources_status["eia"] = {"status": "error", "error": str(e)}
+
+    # --- Election models (Fair / BEW / scenario engine / Senate state map) ---
+    # Runs only if FRED data exists. Reads political_inputs.json + historical
+    # analogues from data/election/ (manually maintained), produces:
+    #   transmission_state.json, scenarios.json, senate_2026.json, forecast_summary.json
+    try:
+        logger.info("--- Computing election models ---")
+        em_result = election_models.run()
+        if em_result.get("_meta", {}).get("status") == "skipped":
+            sources_status["election_models"] = {"status": "skipped", "reason": em_result["_meta"]["reason"]}
+        else:
+            sources_status["election_models"] = {
+                "status": "ok",
+                "transmission_max_pressure": em_result.get("transmission_max_pressure"),
+                "weighted_2028_R_pct": em_result.get("scenarios_2028_range", {}).get("weighted_R_pct"),
+                "weighted_2026_R_seat_change": em_result.get("scenarios_2026_house_range", {}).get("weighted_R_seat_change"),
+            }
+    except Exception as e:
+        logger.error(f"Election models failed: {e}")
+        sources_status["election_models"] = {"status": "error", "error": str(e)}
 
     # --- Write metadata ---
     META_DIR.mkdir(parents=True, exist_ok=True)
