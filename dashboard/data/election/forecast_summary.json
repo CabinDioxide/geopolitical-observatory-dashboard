@@ -1,27 +1,27 @@
 {
-  "computed_at": "2026-05-08T06:20:01.862473Z",
+  "computed_at": "2026-05-08T07:17:33.979228Z",
   "transmission_max_pressure": 100,
   "scenarios_2028_range": {
     "min_R_pct_ensemble": 44.73,
     "max_R_pct_ensemble": 49.71,
     "weighted_R_pct_fair": 54.73,
     "weighted_R_pct_hibbs": 49.26,
-    "weighted_R_pct_abramowitz": 42.98,
-    "weighted_R_pct_ensemble": 48.49,
-    "weighted_R_pct": 48.49
+    "weighted_R_pct_abramowitz": 42.72,
+    "weighted_R_pct_ensemble": 48.4,
+    "weighted_R_pct": 48.4
   },
   "scenarios_2026_house_range": {
     "min_R_seat_change": -39.5,
-    "max_R_seat_change": -38.6,
-    "weighted_R_seat_change": -39.4
+    "max_R_seat_change": -35.9,
+    "weighted_R_seat_change": -38.8
   },
   "senate_2026_majority_probs": {
-    "D_majority_prob": 0.596,
-    "R_majority_prob": 0.404
+    "D_majority_prob": 0.585,
+    "R_majority_prob": 0.41500000000000004
   },
   "model_disagreement": {
     "fair_minus_hibbs": 5.47,
-    "fair_minus_abramowitz": 11.75,
+    "fair_minus_abramowitz": 12.01,
     "interpretation": "Large gaps signal that perception/data divergence is driving model uncertainty (1992 Bush 41 mode)."
   }
 }

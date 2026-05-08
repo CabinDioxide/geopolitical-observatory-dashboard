@@ -59,7 +59,8 @@
     <div class="intro">
       <h2 data-i18n="scen.title">5 种情形的推演：霍尔木兹未来走向对 2026 中期 + 2028 大选的影响</h2>
       <p data-i18n="scen.intro1">每种霍尔木兹未来走向通过传导链产生不同的宏观结果（油价、通胀、收入、信心、支持率），再带入 4 个学术模型输出选举结果。下方每张卡片展示一个情形的<b>选举含义</b>：共和党在 2026 中期会失多少席位、控不控得住众议院；2028 大选会输多少（或赢多少）。带宽为 ±2·均方根误差（RMSE，95% 置信区间）。</p>
-      <p style="margin-top:8px;" data-i18n="scen.intro2"><b>预测模型说明</b>：2026 中期众议院使用 Bafumi-Erikson-Wlezien 模型；2028 总统大选取三个独立模型（Fair Vote Equation、Hibbs 面包与和平、Abramowitz Time-for-Change）的反向 RMSE 加权集合预测。各模型公式与选择理由见⑤方法论页。</p>
+      <p style="margin-top:8px;" data-i18n="scen.intro2"><b>预测模型说明</b>：2026 中期参议院使用 PVI + 国家环境的 logistic 州层模型 + 蒙特卡洛多数概率；2026 中期众议院使用 Bafumi-Erikson-Wlezien 模型；2028 总统大选取三个独立模型（Fair Vote Equation、Hibbs 面包与和平、Abramowitz Time-for-Change）的反向 RMSE 加权集合预测。各模型公式与选择理由见⑤方法论页。</p>
+      <p style="margin-top:8px; padding:10px 14px; background:#fef3c7; border-left:3px solid #d97706; border-radius:4px; font-size:13px;" data-i18n="scen.senate_caveat"><b>⚠️ 关于参议院预测的诚实说明</b>：2026 参议院 Class II 改选结构对民主党极不友好——22 个共和党席位防守 vs 11 个民主党席位。即便霍尔木兹冲击大幅恶化政治环境，民主党最多净增 2-4 席。<br><br><b>各情景的差异主要体现在两个维度</b>：(1) 油价/通胀传导对选民信心的影响（A 缓解 → E 全面战争 共和党两党票从 49.7% 下降到 44.7%）；(2) 美军直接介入（情景 D）触发"军事胜利 rally + 长期伤亡拖累"双重效应——短期参议院多数概率从 60% 降至 53%（rally 拉高支持率有利共和党守 ME/NC 等关键席位），但 2028 总统大选 rally 完全衰减后 (Mueller 1973 半衰期 ~6 个月)，伤亡累积反而把支持率拖到 -16，反不如其他情景。这是 1991 老布什"沙漠风暴 89% 支持率 → 18 个月后 34%"的镜像。</p>
     </div>
     <div id="scenario-summary" class="summary-cards"></div>
     <h3 class="section-h" data-i18n="scen.table_h">各情景下的政治结果对比表</h3>
