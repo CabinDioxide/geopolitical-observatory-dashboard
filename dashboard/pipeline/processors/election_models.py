@@ -530,11 +530,16 @@ def project_macro_under_scenario(scenario_key: str, baseline_state: dict) -> dic
     current_ics = baseline_state.get("ics") or 70
     projected_ics = current_ics + ics_drop
 
+<<<<<<< HEAD
     # Approval impact (via ICS channel) — slow, sustained
+=======
+    # Approval impact (via ICS channel)
+>>>>>>> origin/main
     approval_drop = (ics_drop / 10) * e["ics_to_approval_pp_per_10_ics"]
     current_approval_net = baseline_state.get("approval_net") or -10
     projected_approval = current_approval_net + approval_drop
 
+<<<<<<< HEAD
     # === Rally + casualty effects (military intervention scenarios) ===
     # Rally-around-the-flag: Mueller (1973) shows 5-15pp boost on military
     # intervention, decays exponentially with ~6-month half-life
@@ -556,13 +561,18 @@ def project_macro_under_scenario(scenario_key: str, baseline_state: dict) -> dic
     # Backwards-compat field uses 2026-relevant value (called by midterm models first)
     projected_approval = projected_approval_2026
 
+=======
+>>>>>>> origin/main
     return {
         "scenario_key": scenario_key,
         "scenario_label": sc["label"],
         "brent_avg_to_election": brent_avg,
         "brent_premium_vs_baseline": brent_premium,
+<<<<<<< HEAD
         "rally_2026_pp": round(rally_2026_effective, 2),
         "rally_2028_pp": round(rally_2028_effective, 2),
+=======
+>>>>>>> origin/main
         "projected_2026_2028_macro": {
             "G_real_growth_pct": round(projected_growth, 2),
             "P_admin_inflation_pct": round(p_admin_avg, 2),
@@ -570,8 +580,11 @@ def project_macro_under_scenario(scenario_key: str, baseline_state: dict) -> dic
             "cpi_yoy_2026_2028": round(projected_cpi_2026_2028, 2),
             "michigan_ics": round(projected_ics, 1),
             "approval_net": round(projected_approval, 1),
+<<<<<<< HEAD
             "approval_net_2026": round(projected_approval_2026, 1),
             "approval_net_2028": round(projected_approval_2028, 1),
+=======
+>>>>>>> origin/main
         },
     }
 
@@ -617,11 +630,19 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
         hibbs = hibbs_predict(weighted_real_dpi_growth=hibbs_R, i=i_2028)
 
         # === Abramowitz ===
+<<<<<<< HEAD
         # Q2 2028 growth + June 2028 net approval (rally-decayed by then).
         approval_2028 = m.get("approval_net_2028", m["approval_net"])
         abramowitz = abramowitz_predict(
             g_q2=m["G_real_growth_pct"],
             june_net_approval=approval_2028,
+=======
+        # Q2 2028 growth ≈ scenario-projected growth (this is the most direct input)
+        # June 2028 net approval ≈ projected approval for the period
+        abramowitz = abramowitz_predict(
+            g_q2=m["G_real_growth_pct"],
+            june_net_approval=m["approval_net"],
+>>>>>>> origin/main
             term2=term2_2028,
             i=i_2028,
         )
@@ -633,13 +654,19 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
             abramowitz["incumbent_two_party_pct"],
         )
 
+<<<<<<< HEAD
         # === 2026 House (BEW) — uses 2026-relevant approval (rally still active) ===
         approval_2026 = m.get("approval_net_2026", m["approval_net"])
         approval_shift = approval_2026 - (baseline.get("approval_net") or -10)
+=======
+        # === 2026 House (BEW) ===
+        approval_shift = m["approval_net"] - (baseline.get("approval_net") or -10)
+>>>>>>> origin/main
         gb_baseline = polit.get("generic_ballot", {}).get("dem_lead", 3.5)
         gb_projected = gb_baseline + (-approval_shift) * 0.3
         bew = bew_house_predict(
             generic_ballot_dem_lead=gb_projected,
+<<<<<<< HEAD
             approval_net=approval_2026,
             in_party="R",
         )
@@ -652,6 +679,12 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
         # Net D seat change vs current 47-D, 53-R Senate
         d_net_change = round(senate_scen["expected_seats_after_2026"]["D"] - 47, 1)
 
+=======
+            approval_net=m["approval_net"],
+            in_party="R",
+        )
+
+>>>>>>> origin/main
         results.append({
             "scenario": sk,
             "label": HORMUZ_SCENARIOS[sk]["label"],
@@ -662,6 +695,7 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
             "abramowitz_2028": abramowitz,
             "ensemble_2028": ensemble,
             "bew_2026_house": bew,
+<<<<<<< HEAD
             "senate_2026": {
                 "expected_d_seats": senate_scen["expected_seats_after_2026"]["D"],
                 "expected_r_seats": senate_scen["expected_seats_after_2026"]["R"],
@@ -670,6 +704,8 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
                 "r_majority_prob": senate_scen["majority_probability"]["R_majority_prob"],
                 "national_env_d_shift": senate_scen["national_environment_d_pp_shift_vs_2024"],
             },
+=======
+>>>>>>> origin/main
         })
 
     # Probability-weighted average across scenarios.
@@ -744,6 +780,7 @@ SENATE_2026_CLASS_II = [
 ]
 
 
+<<<<<<< HEAD
 def _senate_for_environment(generic_ballot_dem_lead: float) -> dict:
     """Compute Senate 2026 race-by-race + majority probability for a given
     generic-ballot environment. Returns dict with races, expected seats,
@@ -765,6 +802,52 @@ def _senate_for_environment(generic_ballot_dem_lead: float) -> dict:
         if inc_running:
             d_margin += incumbent_advantage_pp if inc_party == "D" else -incumbent_advantage_pp
         d_win_prob = 1.0 / (1.0 + math.exp(-d_margin / state_uncertainty_pp))
+=======
+def predict_state_senate(scenario_results: dict, polit: dict) -> dict:
+    """Predict 2026 Senate races for each Class II seat.
+
+    Methodology:
+      For each scenario, compute projected national_environment (D-pp shift
+      vs 2024 baseline), then per state:
+        D_margin = state_lean + national_env + incumbent_advantage
+        P(D wins) = sigmoid(D_margin / scale)
+      Aggregate to majority probabilities via Monte Carlo.
+
+    National environment input: probability-weighted projected generic ballot
+    across the 4 Hormuz scenarios. We compute this here from scenario macro
+    outputs (each scenario projects an approval shift → ballot shift).
+    """
+    # Weighted projected generic ballot D-lead for fall 2026.
+    weighted_gb_dem_lead = sum(
+        s["bew_2026_house"]["inputs"]["generic_ballot_dem_lead"] * s["probability_prior"]
+        for s in scenario_results["scenarios"]
+    )
+    # Reference: 2024 House national popular vote was ~R+2.7 (Republicans won
+    # the popular vote). So D+3.5 in 2026 = 6.2pp shift toward D vs 2024.
+    national_2024_d_lead = -2.7
+    national_env_shift_pp_to_dem = weighted_gb_dem_lead - national_2024_d_lead
+
+    incumbent_advantage_pp = 4.0  # senate incumbency ~4-6pp (Erikson-Gronke)
+    # Dampening factor: in the polarized era, national swings transmit ~70-80%
+    # to state outcomes. Without this, a +6pp national env converts every
+    # R+5-or-better state into a D win, which is empirically wrong.
+    national_env_transmission = 0.75
+    state_uncertainty_pp = 7.0  # combined polling + econ + candidate quality SE
+    races = []
+
+    for state, inc_party, inc_running, pvi, notes in SENATE_2026_CLASS_II:
+        # Margin (D minus R) projected for the state, in pp:
+        # Negative PVI = state leans D, so add it to D margin.
+        state_lean_d = -pvi
+        d_margin = state_lean_d + national_env_shift_pp_to_dem * national_env_transmission
+        # Incumbent advantage benefits the defending party.
+        if inc_running:
+            d_margin += incumbent_advantage_pp if inc_party == "D" else -incumbent_advantage_pp
+        # Win probability for D — sigmoid of margin / scale.
+        d_win_prob = 1.0 / (1.0 + math.exp(-d_margin / state_uncertainty_pp))
+
+        # Compare to current incumbent party.
+>>>>>>> origin/main
         flip_prob = (1 - d_win_prob) if inc_party == "D" else d_win_prob
 
         races.append({
@@ -780,6 +863,7 @@ def _senate_for_environment(generic_ballot_dem_lead: float) -> dict:
             "flip_prob": round(flip_prob, 3),
         })
 
+<<<<<<< HEAD
     expected_d_seats = sum(r["d_win_prob"] for r in races)
     expected_r_seats = len(races) - expected_d_seats
     r_safe_holdovers = 53 - 22
@@ -818,6 +902,34 @@ def predict_state_senate(scenario_results: dict, polit: dict) -> dict:
             "National environment derived from probability-weighted generic ballot across all 5 Hormuz scenarios.",
             "Win probabilities use logistic with scale 7pp (typical state-level forecast SE).",
             "Per-scenario Senate predictions are computed separately and stored in scenarios.json.",
+=======
+    # Aggregate
+    expected_d_seats = sum(r["d_win_prob"] for r in races)
+    expected_r_seats = len(races) - expected_d_seats
+    # Plus the 33 seats not up: ~30 R safe + ~37 D safe (Class I and III not up).
+    # Senate composition before 2026: R 53, D 47. Of these, 22 R and 11 D are up (Class II).
+    # So R holds 53-22=31, D holds 47-11=36 going in (excluding races up for grabs).
+    r_safe_holdovers = 53 - 22
+    d_safe_holdovers = 47 - 11
+
+    return {
+        "computed_at": datetime.utcnow().isoformat() + "Z",
+        "national_environment_d_pp_shift_vs_2024": round(national_env_shift_pp_to_dem, 2),
+        "races": races,
+        "expected_seats_after_2026": {
+            "D": round(d_safe_holdovers + expected_d_seats, 1),
+            "R": round(r_safe_holdovers + expected_r_seats, 1),
+        },
+        "majority_probability": {
+            "D_majority_prob": _senate_majority_prob(races, d_safe_holdovers, threshold=51),
+            "R_majority_prob": 1 - _senate_majority_prob(races, d_safe_holdovers, threshold=51),
+        },
+        "method_notes": [
+            "PVI from Cook 2025 (approximate — verify before quoting).",
+            "Incumbent advantage flat 3pp; 2 incumbents not running treated as toss-up.",
+            "National environment derived from BEW seat change → generic ballot conversion.",
+            "Win probabilities use logistic with scale 5pp (typical state-level forecast SE).",
+>>>>>>> origin/main
         ],
     }
 

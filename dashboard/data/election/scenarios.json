@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "computed_at": "2026-05-08T07:17:33.963878Z",
+=======
+  "computed_at": "2026-05-08T06:20:01.833390Z",
+>>>>>>> origin/main
   "scenarios": [
     {
       "scenario": "A_easing",
@@ -10,17 +14,24 @@
         "scenario_label": "\u505c\u706b\u6301\u7a33\uff0c\u970d\u5c14\u6728\u5179\u5206\u9636\u6bb5\u91cd\u5f00",
         "brent_avg_to_election": 82,
         "brent_premium_vs_baseline": 7,
+<<<<<<< HEAD
         "rally_2026_pp": 0.0,
         "rally_2028_pp": 0.0,
+=======
+>>>>>>> origin/main
         "projected_2026_2028_macro": {
           "G_real_growth_pct": 1.74,
           "P_admin_inflation_pct": 3.07,
           "Z_good_news_quarters": 5,
           "cpi_yoy_2026_2028": 3.43,
           "michigan_ics": 52.8,
+<<<<<<< HEAD
           "approval_net": -13.4,
           "approval_net_2026": -13.4,
           "approval_net_2028": -13.4
+=======
+          "approval_net": -13.4
+>>>>>>> origin/main
         }
       },
       "fair_2028": {
@@ -104,6 +115,7 @@
           "approval_net": -13.4,
           "in_party": "R"
         }
+<<<<<<< HEAD
       },
       "senate_2026": {
         "expected_d_seats": 51.0,
@@ -112,6 +124,8 @@
         "d_majority_prob": 0.599,
         "r_majority_prob": 0.401,
         "national_env_d_shift": 6.17
+=======
+>>>>>>> origin/main
       }
     },
     {
@@ -123,17 +137,24 @@
         "scenario_label": "\u95f4\u6b47\u6027\u4e2d\u65ad\u5230\u79cb\u5b63\uff08\u57fa\u7ebf\uff09",
         "brent_avg_to_election": 100,
         "brent_premium_vs_baseline": 25,
+<<<<<<< HEAD
         "rally_2026_pp": 0.0,
         "rally_2028_pp": 0.0,
+=======
+>>>>>>> origin/main
         "projected_2026_2028_macro": {
           "G_real_growth_pct": 1.07,
           "P_admin_inflation_pct": 3.27,
           "Z_good_news_quarters": 4,
           "cpi_yoy_2026_2028": 3.82,
           "michigan_ics": 51.6,
+<<<<<<< HEAD
           "approval_net": -13.3,
           "approval_net_2026": -13.3,
           "approval_net_2028": -13.3
+=======
+          "approval_net": -13.3
+>>>>>>> origin/main
         }
       },
       "fair_2028": {
@@ -217,6 +238,7 @@
           "approval_net": -13.3,
           "in_party": "R"
         }
+<<<<<<< HEAD
       },
       "senate_2026": {
         "expected_d_seats": 51.0,
@@ -225,6 +247,8 @@
         "d_majority_prob": 0.596,
         "r_majority_prob": 0.404,
         "national_env_d_shift": 6.14
+=======
+>>>>>>> origin/main
       }
     },
     {
@@ -236,17 +260,24 @@
         "scenario_label": "\u505c\u706b\u5d29\u6e83\uff0c\u7b2c\u4e8c\u8f6e\u5c01\u9501",
         "brent_avg_to_election": 120,
         "brent_premium_vs_baseline": 45,
+<<<<<<< HEAD
         "rally_2026_pp": 0.0,
         "rally_2028_pp": 0.0,
+=======
+>>>>>>> origin/main
         "projected_2026_2028_macro": {
           "G_real_growth_pct": 0.32,
           "P_admin_inflation_pct": 3.48,
           "Z_good_news_quarters": 3,
           "cpi_yoy_2026_2028": 4.24,
           "michigan_ics": 50.2,
+<<<<<<< HEAD
           "approval_net": -13.2,
           "approval_net_2026": -13.2,
           "approval_net_2028": -13.2
+=======
+          "approval_net": -13.2
+>>>>>>> origin/main
         }
       },
       "fair_2028": {
@@ -330,6 +361,7 @@
           "approval_net": -13.2,
           "in_party": "R"
         }
+<<<<<<< HEAD
       },
       "senate_2026": {
         "expected_d_seats": 51.0,
@@ -338,6 +370,8 @@
         "d_majority_prob": 0.592,
         "r_majority_prob": 0.40800000000000003,
         "national_env_d_shift": 6.11
+=======
+>>>>>>> origin/main
       }
     },
     {
@@ -349,17 +383,24 @@
         "scenario_label": "\u7f8e\u519b\u76f4\u63a5\u63a7\u5236\u6d77\u5ce1 / \u5f3a\u529b\u62a4\u822a",
         "brent_avg_to_election": 90,
         "brent_premium_vs_baseline": 15,
+<<<<<<< HEAD
         "rally_2026_pp": 2.5,
         "rally_2028_pp": -2.75,
+=======
+>>>>>>> origin/main
         "projected_2026_2028_macro": {
           "G_real_growth_pct": 1.44,
           "P_admin_inflation_pct": 3.16,
           "Z_good_news_quarters": 4,
           "cpi_yoy_2026_2028": 3.6,
           "michigan_ics": 52.3,
+<<<<<<< HEAD
           "approval_net": -10.9,
           "approval_net_2026": -10.9,
           "approval_net_2028": -16.1
+=======
+          "approval_net": -13.4
+>>>>>>> origin/main
         }
       },
       "fair_2028": {
@@ -401,23 +442,41 @@
       },
       "abramowitz_2028": {
         "incumbent_party": "R",
+<<<<<<< HEAD
         "incumbent_two_party_pct": 41.22,
         "lower_95ci": 37.42,
         "upper_95ci": 45.02,
+=======
+        "incumbent_two_party_pct": 42.95,
+        "lower_95ci": 39.15,
+        "upper_95ci": 46.75,
+>>>>>>> origin/main
         "rmse": 1.9,
         "win_prob": 0.0,
         "inputs": {
           "g_q2": 1.44,
+<<<<<<< HEAD
           "june_net_approval": -16.1,
+=======
+          "june_net_approval": -13.4,
+>>>>>>> origin/main
           "term2": 0
         }
       },
       "ensemble_2028": {
+<<<<<<< HEAD
         "incumbent_two_party_pct": 48.42,
         "lower_95ci": 46.06,
         "upper_95ci": 50.78,
         "ensemble_rmse": 1.18,
         "win_prob": 0.091,
+=======
+        "incumbent_two_party_pct": 49.04,
+        "lower_95ci": 46.68,
+        "upper_95ci": 51.41,
+        "ensemble_rmse": 1.18,
+        "win_prob": 0.209,
+>>>>>>> origin/main
         "weights": {
           "fair": 0.273,
           "hibbs": 0.369,
@@ -426,11 +485,16 @@
         "components": {
           "fair_pct": 55.19,
           "hibbs_pct": 50.43,
+<<<<<<< HEAD
           "abramowitz_pct": 41.22
+=======
+          "abramowitz_pct": 42.95
+>>>>>>> origin/main
         }
       },
       "bew_2026_house": {
         "in_party": "R",
+<<<<<<< HEAD
         "in_party_seat_change": -35.9,
         "lower_95ci": -59.9,
         "upper_95ci": -11.9,
@@ -451,6 +515,20 @@
         "d_majority_prob": 0.534,
         "r_majority_prob": 0.46599999999999997,
         "national_env_d_shift": 5.42
+=======
+        "in_party_seat_change": -39.5,
+        "lower_95ci": -63.5,
+        "upper_95ci": -15.5,
+        "rmse": 12.0,
+        "current_in_party_seats": 220,
+        "predicted_in_party_seats_post_election": 180.0,
+        "control_flip_probability": 0.999,
+        "inputs": {
+          "generic_ballot_dem_lead": 3.47,
+          "approval_net": -13.4,
+          "in_party": "R"
+        }
+>>>>>>> origin/main
       }
     },
     {
@@ -462,17 +540,24 @@
         "scenario_label": "\u6f14\u53d8\u4e3a\u5730\u533a\u5168\u9762\u6218\u4e89",
         "brent_avg_to_election": 165,
         "brent_premium_vs_baseline": 90,
+<<<<<<< HEAD
         "rally_2026_pp": 0.0,
         "rally_2028_pp": 0.0,
+=======
+>>>>>>> origin/main
         "projected_2026_2028_macro": {
           "G_real_growth_pct": -1.36,
           "P_admin_inflation_pct": 3.96,
           "Z_good_news_quarters": 1,
           "cpi_yoy_2026_2028": 5.2,
           "michigan_ics": 47.2,
+<<<<<<< HEAD
           "approval_net": -12.8,
           "approval_net_2026": -12.8,
           "approval_net_2028": -12.8
+=======
+          "approval_net": -12.8
+>>>>>>> origin/main
         }
       },
       "fair_2028": {
@@ -556,6 +641,7 @@
           "approval_net": -12.8,
           "in_party": "R"
         }
+<<<<<<< HEAD
       },
       "senate_2026": {
         "expected_d_seats": 50.9,
@@ -564,17 +650,27 @@
         "d_majority_prob": 0.582,
         "r_majority_prob": 0.41800000000000004,
         "national_env_d_shift": 5.99
+=======
+>>>>>>> origin/main
       }
     }
   ],
   "weighted_summary": {
     "2028_R_two_party_fair": 54.73,
     "2028_R_two_party_hibbs": 49.26,
+<<<<<<< HEAD
     "2028_R_two_party_abramowitz": 42.72,
     "2028_R_two_party_ensemble": 48.4,
     "2028_incumbent_two_party_pct": 48.4,
     "2028_incumbent_party": "R",
     "2026_in_party_seat_change": -38.8
+=======
+    "2028_R_two_party_abramowitz": 42.98,
+    "2028_R_two_party_ensemble": 48.49,
+    "2028_incumbent_two_party_pct": 48.49,
+    "2028_incumbent_party": "R",
+    "2026_in_party_seat_change": -39.4
+>>>>>>> origin/main
   },
   "method_notes": [
     "Three-model ensemble: Fair (rmse 2.5) + Hibbs Bread&Peace (rmse 1.85) + Abramowitz Time-for-Change (rmse 1.90).",
