@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-05-08T07:14:35.918661Z",
-    "total_vessels": 1480,
-    "with_mmsi": 746,
-    "with_imo": 1476,
+    "fetched_at": "2026-05-09T07:30:43.791774Z",
+    "total_vessels": 1479,
+    "with_mmsi": 745,
+    "with_imo": 1475,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -27,11 +27,11 @@
       "IRAN-EO13876": 1,
       "CAATSA - RUSSIA": 1,
       "PEESA-EO14039": 17,
-      "RUSSIA-EO14024": 448,
+      "RUSSIA-EO14024": 447,
       "GLOMAG": 157,
       "IRAN-EO13846": 117,
       "IRAN-EO13902": 269,
-      "UKRAINE-EO13662": 183
+      "UKRAINE-EO13662": 182
     }
   },
   "by_mmsi": {
@@ -3563,20 +3563,6 @@
       "mmsi": "574005550",
       "call_sign": "XVKF7",
       "vessel_type": "Crude Oil Tanker",
-      "flag": "Vietnam"
-    },
-    "574005470": {
-      "uid": "51551",
-      "name": "ASTRA",
-      "remarks": "(Linked To: SAO VIET PETROL TRANSPORTATION COMPANY LIMITED)",
-      "programs": [
-        "RUSSIA-EO14024",
-        "UKRAINE-EO13662"
-      ],
-      "imo": "9273387",
-      "mmsi": "574005470",
-      "call_sign": "XVJT7",
-      "vessel_type": "Chemical/Oil Tanker",
       "flag": "Vietnam"
     },
     "373482000": {
@@ -22899,20 +22885,6 @@
       "mmsi": "574005550",
       "call_sign": "XVKF7",
       "vessel_type": "Crude Oil Tanker",
-      "flag": "Vietnam"
-    },
-    "9273387": {
-      "uid": "51551",
-      "name": "ASTRA",
-      "remarks": "(Linked To: SAO VIET PETROL TRANSPORTATION COMPANY LIMITED)",
-      "programs": [
-        "RUSSIA-EO14024",
-        "UKRAINE-EO13662"
-      ],
-      "imo": "9273387",
-      "mmsi": "574005470",
-      "call_sign": "XVJT7",
-      "vessel_type": "Chemical/Oil Tanker",
       "flag": "Vietnam"
     },
     "9223540": {
