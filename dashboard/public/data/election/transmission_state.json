@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-05-11T09:01:11.149515Z",
+  "as_of": "2026-05-12T08:27:50.632102Z",
   "chain": [
     {
       "step": 1,
@@ -128,7 +128,7 @@
       "interpretation_en": "Generic Ballot maps near 1:1 to House popular vote. D+6 = R loses popular vote by ~5pp = triggers the 5pp alarm definition."
     }
   ],
-  "epu_index": 273.21,
+  "epu_index": 609.49,
   "raw_inputs_for_model": {
     "brent": 118.26,
     "wti": 109.76,
