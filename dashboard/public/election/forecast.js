@@ -20,6 +20,7 @@ const I18N = {
     'chain.zone_upstream': '上游', 'chain.zone_mid': '中游', 'chain.zone_down': '下游',
     'chain.epu_label': 'EPU 经济政策不确定性',
     'chain.updated_label': '最近更新',
+    'chain.caveats_pointer': '⚠️ 每个 link 的 evidence 评级和 caveat 已在卡片上显示。完整的诚实标注 panel（含 6 个 runtime disclosures + B3 backtest 真实 RMSE 表 + 4×4 残差相关矩阵 + ensemble 修正）已移至 <a href="#" class="goto-methodology">⑤ 方法论</a> tab 顶部，与其他方法学说明 collocate。',
     // Tab 2
     'scen.title': '5 种情形的推演：霍尔木兹未来走向对 2026 中期 + 2028 大选的影响',
     'scen.intro1': '每种霍尔木兹未来走向通过传导链产生不同的宏观结果（油价、通胀、收入、信心、支持率），再带入 4 个学术模型输出选举结果。下方每张卡片展示一个情形的<b>选举含义</b>：共和党在 2026 中期会失多少席位、控不控得住众议院；2028 大选会输多少（或赢多少）。带宽为 ±2·均方根误差（RMSE，95% 置信区间）。',
@@ -145,6 +146,7 @@ const I18N = {
     'chain.title': 'Transmission Chain: From Oil Prices to Votes via Nine Observation Points',
     'chain.intro1': 'A Hormuz blockade reaches election outcomes through nine steps. Each cell shows the current value, baseline (neutral level), and alarm (level associated with a 5pp two-party vote loss). Each bar is divided into three colored zones — where the pointer falls tells you the risk level:',
     'chain.intro2': '<span class="tag-inline" style="background:#2a9d8f; color:#fff;">Upstream</span> (green, 0–33) safe zone, risk has not propagated to the next link; <span class="tag-inline" style="background:#f4a261; color:#fff;">Midstream</span> (orange, 33–66) deteriorating, downstream beginning to react; <span class="tag-inline" style="background:#e63946; color:#fff;">Downstream</span> (red, 66–100) approaching or breaching alarm — direct threat to the in-party vote.',
+    'chain.caveats_pointer': '⚠️ Each link\'s evidence rating and caveat is shown on its card. The full honest-disclosure panel (6 runtime disclosures + B3 backtest paper-vs-sample RMSE table + 4×4 residual correlation + ensemble correction) has been moved to the top of the <a href="#" class="goto-methodology">⑤ Methodology</a> tab, collocated with the other methodology content.',
     'chain.intro3': '<b>Unified alarm definition</b>: each indicator\'s alarm corresponds to "the level at which this indicator alone has historically been associated with the in-party losing ≥5pp two-party vote in the next election."',
     'chain.zone_upstream': 'Upstream', 'chain.zone_mid': 'Midstream', 'chain.zone_down': 'Downstream',
     'chain.epu_label': 'EPU (Economic Policy Uncertainty)',
@@ -355,6 +357,24 @@ document.querySelectorAll('.tab').forEach(btn => {
       }
     }
   });
+});
+
+// Event-delegated handler for .goto-methodology cross-references injected
+// via i18n (e.g., the caveats-pointer paragraph at the bottom of the
+// chain tab links to the methodology tab where the dynamic panel lives).
+document.body.addEventListener('click', (e) => {
+  const target = e.target.closest('.goto-methodology');
+  if (!target) return;
+  e.preventDefault();
+  const methBtn = document.querySelector('.tab[data-tab="methodology"]');
+  if (methBtn) {
+    methBtn.click();
+    // Scroll to the dynamic panel after the tab switch + render
+    setTimeout(() => {
+      const panel = document.getElementById('methodology-caveats');
+      if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
 });
 
 // --- Boot ---
