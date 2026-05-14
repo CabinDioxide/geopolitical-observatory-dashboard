@@ -1,17 +1,17 @@
 {
-  "as_of": "2026-05-13T08:36:41.601847Z",
+  "as_of": "2026-05-14T08:30:55.277641Z",
   "chain": [
     {
       "step": 1,
       "name": "\u5e03\u4f26\u7279\u539f\u6cb9",
       "name_en": "Brent crude",
       "tag": "\u4e0a\u6e38",
-      "current": 118.26,
+      "current": 106.11,
       "unit": "USD/\u6876",
       "unit_en": "USD/bbl",
       "baseline": 80,
       "alarm": 145,
-      "pressure": 59,
+      "pressure": 40,
       "interpretation": "\u4f20\u5bfc\u94fe\u6e90\u5934\u3002\u672c\u8eab\u4e0d\u76f4\u63a5\u5f71\u54cd\u9009\u7968\u3002Alarm $145 \u4e3a\u63a8\u6c7d\u6cb9\u81f3\u5176 alarm $5.00 \u6240\u9700\u6cb9\u4ef7\uff08passthrough $0.025/$1\u00b7bbl\uff09\u3002",
       "interpretation_en": "Source of the transmission chain. Does not directly affect votes. Alarm of $145 is the level required to push gasoline to its alarm of $5.00 (passthrough $0.025/$1\u00b7bbl)."
     },
@@ -34,12 +34,12 @@
       "name": "\u6218\u7565\u77f3\u6cb9\u50a8\u5907 (SPR)",
       "name_en": "Strategic Petroleum Reserve (SPR)",
       "tag": "\u4e0a\u6e38",
-      "current": 392700.0,
+      "current": 384095.0,
       "unit": "\u5343\u6876",
       "unit_en": "kbbl",
       "baseline": 600000,
       "alarm": 350000,
-      "pressure": 83,
+      "pressure": 86,
       "interpretation": "\u7f8e\u56fd\u5e94\u6025\u6cb9\u50a8\u3002<3.5 \u4ebf\u6876 = 6 \u4e2a\u6708\u91ca\u653e\u5bb9\u91cf\u8017\u5c3d\uff08\u91ca\u653e\u901f\u5ea6 ~1 mb/day\uff09\uff0c\u65e0\u6cd5\u538b\u5236\u4e0b\u4e00\u8f6e\u6cb9\u4ef7\u51b2\u51fb \u2192 \u89e6\u53d1\u4e0a\u6e38 alarm\u3002",
       "interpretation_en": "US emergency oil reserve. <350 Mbbl = 6-month release capacity exhausted (release rate ~1 mb/day), cannot suppress the next oil shock \u2192 triggers upstream alarm."
     },
@@ -128,10 +128,10 @@
       "interpretation_en": "Generic Ballot maps near 1:1 to House popular vote. D+6 = R loses popular vote by ~5pp = triggers the 5pp alarm definition."
     }
   ],
-  "epu_index": 383.17,
+  "epu_index": 217.41,
   "raw_inputs_for_model": {
-    "brent": 118.26,
-    "wti": 109.76,
+    "brent": 106.11,
+    "wti": 101.56,
     "gas_retail": 4.5,
     "cpi_yoy": 3.7792458367415627,
     "core_cpi_yoy": 2.743309430968526,
