@@ -35,6 +35,7 @@ from pipeline.config import (
     LEWIS_BECK_COEFFS,
     TARIFF_AVG_RATE,
     TARIFF_PRE_2025_RATE,
+    TARIFF_SCENARIOS,
     TARIFF_TO_CPI_PP_PER_PP,
     TRANSMISSION_ELASTICITIES,
 )
@@ -392,6 +393,30 @@ def compute_transmission_state(fred: dict, polit: dict) -> dict:
     for link in chain:
         link.update(_step_evidence.get(link["step"], {"strength": None, "papers": [], "caveat": None, "caveat_en": None}))
 
+    # Mark parallel signals — chain steps that are NOT in a causal sequence
+    # but are co-driven by deeper fundamentals. Currently:
+    #   - step 7 (ICS) and step 8 (approval) co-driven by real_income +
+    #     unemployment + price_level (per Erikson-MacKuen-Stimson 2002).
+    # The 1→9 numbering is for reading order only; downstream consumers
+    # (renderChain) should visually mark same-group links as parallel.
+    _parallel_groups = {
+        7: "perception_basement",
+        8: "perception_basement",
+    }
+    _parallel_group_meta = {
+        "perception_basement": {
+            "label": "感知与归责（共同被基本面驱动）",
+            "label_en": "Perception & attribution (co-driven by fundamentals)",
+            "co_driven_by": ["real_income", "unemployment", "price_level"],
+            "explanation": "ICS 与总统支持率不是单向链——Erikson-MacKuen-Stimson (2002) The Macro Polity 用 VAR 显示二者共同被 real income / 失业率 / 物价水平驱动，approval → ICS 反向因果也存在。当作 parallel 下游信号读，不要从 step 7 推 step 8。",
+            "explanation_en": "ICS and presidential approval are NOT a one-way chain — Erikson-MacKuen-Stimson (2002) The Macro Polity uses VAR to show both are co-driven by real income / unemployment / price level, with approval→ICS reverse causation also present. Read as parallel downstream signals, not as step 7 causing step 8.",
+        },
+    }
+    for link in chain:
+        gid = _parallel_groups.get(link["step"])
+        if gid:
+            link["parallel_group"] = gid
+
     # Methodology disclosure — exposed in the UI as an expandable panel.
     methodology_caveats = {
         "ensemble_rmse_honesty": {
@@ -444,6 +469,7 @@ def compute_transmission_state(fred: dict, polit: dict) -> dict:
         "chain": chain,
         "epu_index": epu,
         "methodology_caveats": methodology_caveats,
+        "parallel_group_meta": _parallel_group_meta,
         "raw_inputs_for_model": {
             "brent": brent, "wti": wti, "gas_retail": gas_retail,
             "cpi_yoy": cpi_yoy, "core_cpi_yoy": core_cpi_yoy,
@@ -752,11 +778,19 @@ def bew_house_predict(generic_ballot_dem_lead: float, approval_net: float,
 # Hormuz scenario engine — Layer 2 transmission to Layer 3 effect
 # -----------------------------------------------------------------------------
 
-def project_macro_under_scenario(scenario_key: str, baseline_state: dict) -> dict:
+def project_macro_under_scenario(scenario_key: str, baseline_state: dict,
+                                 tariff_rate_override: float | None = None) -> dict:
     """Given current macro state + Hormuz scenario, project G, P, Z to 2028.
 
     Simplified single-shock propagation:
       ΔBrent (vs baseline $75) → ΔGasoline → ΔCPI → ΔReal income / ΔGDP growth
+
+    Args:
+      tariff_rate_override: if provided, replaces TARIFF_AVG_RATE for this
+        projection. Used by run_all_scenarios to sweep tariff sensitivity.
+        The counterfactual CPI = current CPI - (current tariff_cpi_pp) +
+        (override tariff_cpi_pp), so tariff scenarios shift CPI level
+        symmetrically.
     """
     sc = HORMUZ_SCENARIOS[scenario_key]
     e = TRANSMISSION_ELASTICITIES
@@ -771,16 +805,20 @@ def project_macro_under_scenario(scenario_key: str, baseline_state: dict) -> dic
     # CPI YoY: $1/gal sustained → ~0.85pp CPI YoY
     cpi_premium_pp = gas_premium * e["gasoline_to_headline_cpi_pp_per_dollar_gal"]
     # Tariff passthrough: separate from oil. Trump-2 effective rate vs pre-2025
-    # baseline, scaled by Cavallo-style elasticity. Already partially baked
-    # into current_cpi_yoy (May 2026), so it's a level shift, not additive.
-    tariff_delta_pct_points = (TARIFF_AVG_RATE - TARIFF_PRE_2025_RATE) * 100.0
+    # baseline, scaled by Cavallo-style elasticity. Baseline rate baked into
+    # current_cpi_yoy; if override provided, shift CPI by the rate delta.
+    effective_tariff_rate = tariff_rate_override if tariff_rate_override is not None else TARIFF_AVG_RATE
+    tariff_delta_pct_points = (effective_tariff_rate - TARIFF_PRE_2025_RATE) * 100.0
     tariff_cpi_pp = tariff_delta_pct_points * TARIFF_TO_CPI_PP_PER_PP
+    # Baseline tariff CPI pp already in current_cpi_yoy — shift by the
+    # delta vs the baseline if override differs.
+    baseline_tariff_pp = (TARIFF_AVG_RATE - TARIFF_PRE_2025_RATE) * 100.0 * TARIFF_TO_CPI_PP_PER_PP
+    tariff_shift_vs_baseline = tariff_cpi_pp - baseline_tariff_pp
     # Add to baseline current CPI YoY (assumed normalized state ~2.5%).
     current_cpi_yoy = baseline_state.get("cpi_yoy") or 3.0
-    # Oil shock additive on top of current CPI (which already contains tariff
-    # passthrough). We expose tariff_cpi_pp as a decomposition field rather
-    # than double-adding.
-    projected_cpi_2026_2028 = current_cpi_yoy + cpi_premium_pp
+    # Oil shock additive on top of current CPI; tariff shift only if override
+    # differs from baseline (baseline already in current_cpi_yoy).
+    projected_cpi_2026_2028 = current_cpi_yoy + cpi_premium_pp + tariff_shift_vs_baseline
 
     # Real GDP growth hit (Hamilton 2003): 50% sustained shock = -1.4pp growth
     shock_pct = (brent_avg - brent_baseline) / brent_baseline
@@ -843,9 +881,10 @@ def project_macro_under_scenario(scenario_key: str, baseline_state: dict) -> dic
         "rally_2026_pp": round(rally_2026_effective, 2),
         "rally_2028_pp": round(rally_2028_effective, 2),
         "tariff_decomposition": {
-            "tariff_rate_pct": round(TARIFF_AVG_RATE * 100, 1),
+            "tariff_rate_pct": round(effective_tariff_rate * 100, 1),
             "pre_2025_baseline_rate_pct": round(TARIFF_PRE_2025_RATE * 100, 1),
             "tariff_cpi_pp_in_current_yoy": round(tariff_cpi_pp, 2),
+            "tariff_shift_vs_baseline_pp": round(tariff_shift_vs_baseline, 2),
             "note": (
                 "Tariff-attributable CPI elevation is already in current_cpi_yoy "
                 "and is shown here for blame-attribution. Counterfactual 'no-tariff' "
@@ -948,6 +987,122 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
             in_party="R",
         )
 
+        # === Casualty-rally sensitivity (only for military-intervention scenarios) ===
+        # The single "+8pp rally / -3pp drag" used in the main projection is
+        # a median guess; historical range is +5 to +35pp depending on
+        # intervention type. Expose 3 calibrated variants so readers see how
+        # sensitive 2028 approval (and Abramowitz vote share) is to this
+        # parameter, without committing to one estimate.
+        casualty_sensitivity = None
+        if HORMUZ_SCENARIOS[sk].get("rally_effect_pp") is not None:
+            casualty_sensitivity = []
+            cal_points = {
+                "low_casualty": {
+                    "rally_pp": 12, "casualty_drag_pp": -1,
+                    "label": "成功护航 / 低伤亡 (1991 GW pattern, ~150 KIA)",
+                    "label_en": "Successful escort / low casualty (1991 GW, ~150 KIA)",
+                },
+                "median": {
+                    "rally_pp": HORMUZ_SCENARIOS[sk].get("rally_effect_pp", 8),
+                    "casualty_drag_pp": HORMUZ_SCENARIOS[sk].get("casualty_drag_pp", -3),
+                    "label": "当前 calibration (median guess)",
+                    "label_en": "Current calibration (median guess)",
+                },
+                "high_casualty": {
+                    "rally_pp": 15, "casualty_drag_pp": -8,
+                    "label": "持久军事行动 / 重大伤亡 (Iraq pattern, ~2400 KIA)",
+                    "label_en": "Prolonged engagement / high casualty (Iraq, ~2400 KIA)",
+                },
+            }
+            base_approval = baseline.get("approval_net") or -10
+            for ck, cv in cal_points.items():
+                # Rally decay: 6-month half-life (Mueller 1973). 2026=6mo, 2028=30mo.
+                decay_2026 = 0.5 ** (6 / 6)   # 0.5
+                decay_2028 = 0.5 ** (30 / 6)  # ~0.031
+                eff_2026 = cv["rally_pp"] * decay_2026 + cv["casualty_drag_pp"] * 0.5
+                eff_2028 = cv["rally_pp"] * decay_2028 + cv["casualty_drag_pp"] * 1.0
+                approval_2026_alt = base_approval + eff_2026
+                approval_2028_alt = base_approval + eff_2028
+                # Recompute Abramowitz under this approval (other models
+                # ~invariant to rally — Hibbs uses RDPI, Fair uses GDP/P/Z,
+                # Lewis-Beck uses UNRATE+CPI).
+                c_abram = abramowitz_predict(
+                    g_q2=m["G_real_growth_pct"],
+                    june_net_approval=approval_2028_alt,
+                    term2=term2_2028, i=i_2028,
+                )
+                c_ens = ensemble_predict(
+                    fair["incumbent_two_party_pct"],
+                    hibbs["incumbent_two_party_pct"],
+                    c_abram["incumbent_two_party_pct"],
+                    lewis_beck["incumbent_two_party_pct"],
+                )
+                casualty_sensitivity.append({
+                    "casualty_key": ck,
+                    "label": cv["label"], "label_en": cv["label_en"],
+                    "rally_effect_pp": cv["rally_pp"],
+                    "casualty_drag_pp": cv["casualty_drag_pp"],
+                    "approval_2026": round(approval_2026_alt, 1),
+                    "approval_2028": round(approval_2028_alt, 1),
+                    "abramowitz_2028_R_pct": c_abram["incumbent_two_party_pct"],
+                    "ensemble_2028_R_pct": c_ens["incumbent_two_party_pct"],
+                    "ensemble_rmse": c_ens["ensemble_rmse"],
+                })
+
+        # === Tariff sensitivity sweep ===
+        # Hold the Hormuz oil scenario fixed and vary the Trump-2 tariff
+        # rate across the 3 TARIFF_SCENARIOS (rollback / current / escalation).
+        # Hibbs is approximately invariant to tariff (uses RDPI quarterly
+        # path + scenario growth proxy); Fair/Abramowitz/Lewis-Beck shift
+        # via CPI → ICS → approval → vote chain.
+        tariff_sensitivity = []
+        for t_key, t_info in TARIFF_SCENARIOS.items():
+            t_macro = project_macro_under_scenario(
+                sk, baseline, tariff_rate_override=t_info["rate"]
+            )
+            tm = t_macro["projected_2026_2028_macro"]
+            # Recompute the 3 inflation-sensitive models under this tariff
+            t_fair = fair_predict(g=tm["G_real_growth_pct"],
+                                  p=tm["P_admin_inflation_pct"] + (tm["cpi_yoy_2026_2028"] - m["cpi_yoy_2026_2028"]),
+                                  z=tm["Z_good_news_quarters"],
+                                  dper=dper_2028, dur=dur_2028, i=i_2028)
+            t_abram = abramowitz_predict(g_q2=tm["G_real_growth_pct"],
+                                         june_net_approval=tm.get("approval_net_2028", tm["approval_net"]),
+                                         term2=term2_2028, i=i_2028)
+            t_lb = lewis_beck_predict(unrate_pct=tm["unrate_pct"],
+                                       cpi_yoy_pct=tm["cpi_yoy_2026_2028"], i=i_2028)
+            # Hibbs uses the same realized quarterly path + future growth proxy
+            # (which is largely tariff-invariant in this simplified model).
+            t_ens = ensemble_predict(
+                t_fair["incumbent_two_party_pct"],
+                hibbs["incumbent_two_party_pct"],
+                t_abram["incumbent_two_party_pct"],
+                t_lb["incumbent_two_party_pct"],
+            )
+            tariff_sensitivity.append({
+                "tariff_key": t_key,
+                "tariff_rate_pct": round(t_info["rate"] * 100, 1),
+                "label": t_info["label"],
+                "is_baseline_tariff": abs(t_info["rate"] - TARIFF_AVG_RATE) < 1e-6,
+                "projected_cpi_yoy": tm["cpi_yoy_2026_2028"],
+                "projected_approval_2028": tm.get("approval_net_2028", tm["approval_net"]),
+                "ensemble_R_two_party_pct": t_ens["incumbent_two_party_pct"],
+                "ensemble_rmse": t_ens["ensemble_rmse"],
+                "delta_vs_baseline_pp": None,  # filled in after loop
+                "components": {
+                    "fair": t_fair["incumbent_two_party_pct"],
+                    "hibbs_invariant": hibbs["incumbent_two_party_pct"],
+                    "abramowitz": t_abram["incumbent_two_party_pct"],
+                    "lewis_beck": t_lb["incumbent_two_party_pct"],
+                },
+            })
+        # Fill in delta_vs_baseline once baseline is known
+        baseline_row = next((t for t in tariff_sensitivity if t["is_baseline_tariff"]), None)
+        if baseline_row:
+            base_val = baseline_row["ensemble_R_two_party_pct"]
+            for t in tariff_sensitivity:
+                t["delta_vs_baseline_pp"] = round(t["ensemble_R_two_party_pct"] - base_val, 2)
+
         # === 2026 Senate per scenario ===
         # Same generic-ballot environment as House model. Deeper R-favorable
         # structural map (22 R defending vs 11 D), so even a strong D wave may
@@ -966,6 +1121,8 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
             "abramowitz_2028": abramowitz,
             "lewis_beck_2028": lewis_beck,
             "ensemble_2028": ensemble,
+            "tariff_sensitivity_2028": tariff_sensitivity,
+            "casualty_sensitivity_2028": casualty_sensitivity,
             "bew_2026_house": bew,
             "senate_2026": {
                 "expected_d_seats": senate_scen["expected_seats_after_2026"]["D"],

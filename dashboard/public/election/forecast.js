@@ -452,9 +452,13 @@ const TAG_COLORS = { '上游': '#94a3b8', '中游': '#f4a261', '下游': '#e6394
 function renderChain(state) {
   const grid = document.getElementById('chain-grid');
   grid.innerHTML = '';
+  // Parallel-group notice: explain to readers why some steps share a colored
+  // border and should be read as co-driven signals, not a causal sequence.
+  renderParallelNotice(state);
   state.chain.forEach(link => {
     const card = document.createElement('div');
-    card.className = 'chain-card' + (link.current === null ? ' no-data' : '');
+    const parallelClass = link.parallel_group ? ` parallel-${link.parallel_group}` : '';
+    card.className = 'chain-card' + (link.current === null ? ' no-data' : '') + parallelClass;
     const pct = link.pressure !== null ? link.pressure : 0;
     const valStr = link.current !== null ? Number(link.current).toLocaleString(undefined, {maximumFractionDigits: 2}) : 'no data';
     // Pick language-specific name + interpretation + unit if available
@@ -512,6 +516,33 @@ function renderChain(state) {
   document.getElementById('epu-val').textContent = fmt(state.epu_index, 1);
   document.getElementById('chain-updated').textContent = formatDate(state.as_of);
   renderMethodologyCaveats(state.methodology_caveats);
+}
+
+// Parallel-group notice: prepended to the chain grid so readers see the
+// structure note before reading the cards in step order. Idempotent —
+// removes existing notice before re-rendering (lang switch safe).
+function renderParallelNotice(state) {
+  const grid = document.getElementById('chain-grid');
+  // Remove any previously-rendered parallel notice
+  const existing = document.querySelector('.parallel-notice');
+  if (existing) existing.remove();
+  const meta = state.parallel_group_meta || {};
+  const groups = Object.entries(meta);
+  if (!groups.length) return;
+  const isEn = CURRENT_LANG === 'en';
+  const notice = document.createElement('div');
+  notice.className = 'parallel-notice';
+  notice.innerHTML = groups.map(([gid, g]) => {
+    const label = isEn && g.label_en ? g.label_en : g.label;
+    const text = isEn && g.explanation_en ? g.explanation_en : g.explanation;
+    const steps = state.chain.filter(c => c.parallel_group === gid).map(c => c.step).join('+');
+    return `<div class="parallel-group-note parallel-${gid}">
+      <span class="pg-pill">${isEn ? 'Parallel signals' : '并行信号'} · STEP ${steps}</span>
+      <span class="pg-label">${label}</span>
+      <div class="pg-explain">${text}</div>
+    </div>`;
+  }).join('');
+  if (grid.parentNode) grid.parentNode.insertBefore(notice, grid);
 }
 
 // Honest-disclosure panel: renders RMSE caveats + per-link issues from JSON.
@@ -636,6 +667,43 @@ function renderScenarios(data, summary) {
     const senControl = sen.d_majority_prob > 0.5 ? t('scen.senate_d_flip') : t('scen.senate_r_hold');
     const senDmajPct = (sen.d_majority_prob * 100).toFixed(0);
 
+    // Sensitivity sweeps — only show if backend computed them
+    const isEn = CURRENT_LANG === 'en';
+    const tariffSens = sc.tariff_sensitivity_2028 || [];
+    const tariffHtml = tariffSens.length ? `
+      <div class="sens-block">
+        <div class="sens-title">${isEn ? 'Tariff sensitivity (2028 R %)' : '关税敏感性（2028 R%）'}</div>
+        <div class="sens-rows">
+          ${tariffSens.map(t => {
+            const dlt = t.delta_vs_baseline_pp;
+            const dltStr = (dlt > 0 ? '+' : '') + (dlt !== null ? dlt.toFixed(2) : '—');
+            const cls = t.is_baseline_tariff ? 'sens-row baseline' : 'sens-row';
+            return `<div class="${cls}">
+              <span class="sens-label">${t.tariff_rate_pct}%</span>
+              <span class="sens-cpi">CPI ${fmt(t.projected_cpi_yoy, 1)}%</span>
+              <span class="sens-val">R ${fmt(t.ensemble_R_two_party_pct, 1)}%</span>
+              <span class="sens-delta ${dlt < 0 ? 'neg' : 'pos'}">${dltStr}pp</span>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>` : '';
+    const casualtySens = sc.casualty_sensitivity_2028 || [];
+    const casualtyHtml = casualtySens.length ? `
+      <div class="sens-block sens-casualty">
+        <div class="sens-title">${isEn ? 'Casualty / rally sensitivity (2028 R %)' : '伤亡 / Rally 敏感性（2028 R%）'}</div>
+        <div class="sens-rows">
+          ${casualtySens.map(cs => {
+            const label = isEn && cs.label_en ? cs.label_en : cs.label;
+            return `<div class="sens-row">
+              <span class="sens-label" title="${label}">${cs.casualty_key.replace('_', ' ')}</span>
+              <span class="sens-cpi">app2028 ${cs.approval_2028 > 0 ? '+' : ''}${fmt(cs.approval_2028, 1)}</span>
+              <span class="sens-val">R ${fmt(cs.ensemble_2028_R_pct, 1)}%</span>
+              <span class="sens-delta">rally +${cs.rally_effect_pp} / drag ${cs.casualty_drag_pp}</span>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>` : '';
+
     c.innerHTML = `
       <div class="scen-key">${t('scen.scenario_label')} ${sc.scenario.split('_')[0]} · ${t('scen.prior_prob')} ${(sc.probability_prior * 100).toFixed(0)}%</div>
       <div class="scen-label">${scLabel}</div>
@@ -663,6 +731,8 @@ function renderScenarios(data, summary) {
           ${t('scen.two_party_pred')} ${fmt(ens.incumbent_two_party_pct, 1)}% · ${t('scen.win_rate')} ${(ens.win_prob * 100).toFixed(0)}%
         </div>
       </div>
+      ${tariffHtml}
+      ${casualtyHtml}
     `;
     sum.appendChild(c);
   });

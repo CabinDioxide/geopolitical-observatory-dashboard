@@ -169,6 +169,71 @@ body[data-lang="en"] .lang-zh { display: none !important; }
 @media (max-width: 720px) {
   .caveat-row { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* Parallel-group notice + cards co-driven by the same fundamentals */
+.parallel-notice {
+  display: flex; flex-direction: column; gap: 10px;
+  margin: 14px 0 8px 0;
+}
+.parallel-group-note {
+  background: #eef2ff; border-left: 3px solid #6366f1; border-radius: 4px;
+  padding: 10px 12px;
+}
+.parallel-group-note .pg-pill {
+  display: inline-block; padding: 2px 8px; background: #6366f1; color: #fff;
+  border-radius: 3px; font-size: 11px; font-weight: 700; margin-right: 8px;
+}
+.parallel-group-note .pg-label {
+  font-size: 13px; font-weight: 600; color: #312e81;
+}
+.parallel-group-note .pg-explain {
+  margin-top: 6px; font-size: 12px; line-height: 1.5; color: #475569;
+}
+.chain-card.parallel-perception_basement {
+  border-top: 3px solid #6366f1;
+  position: relative;
+}
+.chain-card.parallel-perception_basement::before {
+  content: '‖'; position: absolute; top: 2px; right: 8px;
+  color: #6366f1; font-size: 16px; font-weight: 700;
+  opacity: 0.7;
+}
+
+/* Sensitivity sweep displays in scenario cards */
+.scenario-card .sens-block {
+  margin-top: 12px; padding: 8px 10px;
+  background: #f1f5f9; border-radius: 5px;
+  font-size: 11px;
+}
+.scenario-card .sens-block.sens-casualty {
+  background: #fef3c7;
+}
+.scenario-card .sens-title {
+  font-size: 10.5px; color: #475569; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.4px;
+  margin-bottom: 5px;
+}
+.scenario-card .sens-rows {
+  display: flex; flex-direction: column; gap: 3px;
+}
+.scenario-card .sens-row {
+  display: grid; grid-template-columns: 80px 1fr 1fr auto; gap: 6px;
+  align-items: baseline;
+  padding: 3px 5px; border-radius: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.scenario-card .sens-row.baseline {
+  background: #e0e7ff; font-weight: 600;
+}
+.scenario-card .sens-row .sens-label { color: #475569; font-weight: 600; }
+.scenario-card .sens-row .sens-cpi { color: #64748b; font-size: 10.5px; }
+.scenario-card .sens-row .sens-val { color: #0f172a; font-weight: 600; }
+.scenario-card .sens-row .sens-delta {
+  color: #94a3b8; font-size: 10px; padding: 0 4px;
+  border: 1px solid #cbd5e0; border-radius: 2px;
+}
+.scenario-card .sens-row .sens-delta.pos { color: #047857; border-color: #6ee7b7; }
+.scenario-card .sens-row .sens-delta.neg { color: #b91c1c; border-color: #fca5a5; }
 .chain-card .gauge {
   margin-top: 10px; height: 14px; border-radius: 3px;
   background: linear-gradient(to right,
