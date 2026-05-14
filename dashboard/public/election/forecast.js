@@ -476,8 +476,19 @@ function renderChain(state) {
     }).join('');
     subMetricsHtml = `<div class="sub-metrics">${rows}</div>`;
   }
+  // Evidence rating (stars) + papers (tooltip) + optional caveat warning
+  const strength = link.strength;
+  const starsHtml = strength ? `<span class="evidence-stars s${strength}" title="${(link.papers || []).join('; ')}">${'★'.repeat(strength)}${'☆'.repeat(3 - strength)}</span>` : '';
+  const caveatRaw = (CURRENT_LANG === 'en' && link.caveat_en) ? link.caveat_en : link.caveat;
+  const caveatHtml = caveatRaw ? `<div class="evidence-caveat">${caveatRaw}</div>` : '';
+  const papersHtml = (link.papers && link.papers.length)
+    ? `<div class="evidence-papers"><span class="papers-label">${CURRENT_LANG === 'en' ? 'Key papers' : '主要文献'}:</span> ${link.papers.join(' · ')}</div>`
+    : '';
   card.innerHTML = `
-      <div class="step-num">STEP ${link.step}</div>
+      <div class="step-row">
+        <div class="step-num">STEP ${link.step}</div>
+        ${starsHtml}
+      </div>
       <div class="name">${name}</div>
       <div class="value-row">
         <span class="value">${valStr}</span>
@@ -485,6 +496,8 @@ function renderChain(state) {
       </div>
       ${subMetricsHtml}
       <div class="interp">${interp}</div>
+      ${caveatHtml}
+      ${papersHtml}
       <div class="gauge" style="--p: ${pct}%"></div>
       <div class="gauge-zones"><span>${t('chain.zone_upstream')}</span><span>${t('chain.zone_mid')}</span><span>${t('chain.zone_down')}</span></div>
       <div class="baseline-alarm">
@@ -498,6 +511,87 @@ function renderChain(state) {
 
   document.getElementById('epu-val').textContent = fmt(state.epu_index, 1);
   document.getElementById('chain-updated').textContent = formatDate(state.as_of);
+  renderMethodologyCaveats(state.methodology_caveats);
+}
+
+// Honest-disclosure panel: renders RMSE caveats + per-link issues from JSON.
+// Sits at the bottom of the chain tab so it's read in context — readers see
+// the chain, then immediately see what NOT to over-interpret.
+function renderMethodologyCaveats(caveats) {
+  const container = document.getElementById('methodology-caveats');
+  if (!container) return;
+  if (!caveats) { container.innerHTML = ''; return; }
+  const isEn = CURRENT_LANG === 'en';
+  const pickReason = (item) => isEn && item.reason_en ? item.reason_en : (item.reason || '');
+  const pickIssue = (item) => isEn && item.issue_en ? item.issue_en : (item.issue || '');
+  const ensCav = caveats.ensemble_rmse_honesty || {};
+  const hibbsCav = caveats.hibbs_out_of_sample || {};
+  const lbCav = caveats.lewis_beck_pending || {};
+  const icsCav = caveats.ics_approval_causal || {};
+  const tariffCav = caveats.tariff_elasticity || {};
+  const rallyCav = caveats.rally_effect_estimate || {};
+  const leg = caveats.evidence_legend || {};
+  const legend = isEn
+    ? `<div class="caveat-legend">
+         <span><span class="evidence-stars s3">★★★</span> ${leg.strength_3_en || ''}</span>
+         <span><span class="evidence-stars s2">★★☆</span> ${leg.strength_2_en || ''}</span>
+         <span><span class="evidence-stars s1">★☆☆</span> ${leg.strength_1_en || ''}</span>
+       </div>`
+    : `<div class="caveat-legend">
+         <span><span class="evidence-stars s3">★★★</span> ${leg.strength_3 || ''}</span>
+         <span><span class="evidence-stars s2">★★☆</span> ${leg.strength_2 || ''}</span>
+         <span><span class="evidence-stars s1">★☆☆</span> ${leg.strength_1 || ''}</span>
+       </div>`;
+  const title = isEn ? 'Honest disclosure — what NOT to over-interpret' : '诚实标注 — 不要过度解读的部分';
+  const sub = isEn
+    ? 'Every model in this dashboard has known limitations. This panel is the runtime list — read before quoting any number.'
+    : '本 dashboard 的每个模型都有已知 limitations。本 panel 是运行时清单——引用任何具体数字之前先读。';
+  const items = [
+    {
+      tag: isEn ? 'Ensemble RMSE under-states uncertainty' : 'Ensemble RMSE 低估不确定性',
+      severity: 'high',
+      body: `${pickReason(ensCav)} <span class="caveat-num">${isEn ? 'displayed' : '当前显示'}: ±${ensCav.displayed} · ${isEn ? 'realistic range' : '真实区间'}: ±${(ensCav.realistic_estimate_range || []).join('—')}</span>`,
+    },
+    {
+      tag: isEn ? 'Hibbs out-of-sample degradation' : 'Hibbs out-of-sample 退化',
+      severity: 'med',
+      body: `${pickReason(hibbsCav)} <span class="caveat-num">in-sample: ${hibbsCav.in_sample_rmse} · out-of-sample est: ${hibbsCav.out_of_sample_rmse_estimate}</span>`,
+    },
+    {
+      tag: isEn ? 'Lewis-Beck calibration pending' : 'Lewis-Beck 系数未校准',
+      severity: 'med',
+      body: `${pickReason(lbCav)} <span class="caveat-num">${lbCav.status || ''}</span>`,
+    },
+    {
+      tag: pickIssue(icsCav),
+      severity: 'high',
+      body: pickReason(icsCav),
+    },
+    {
+      tag: isEn ? 'Tariff elasticity not swept' : 'Tariff 弹性未做 sensitivity',
+      severity: 'low',
+      body: `${pickReason(tariffCav)} <span class="caveat-num">${isEn ? 'used' : '当前用'}: ${tariffCav.displayed_value} · ${isEn ? 'lit range' : '文献区间'}: ${(tariffCav.literature_range || []).join('—')}</span>`,
+    },
+    {
+      tag: isEn ? 'Rally effect median guess' : 'Rally effect 仅 median guess',
+      severity: 'med',
+      body: `${pickReason(rallyCav)} <span class="caveat-num">${isEn ? 'used' : '当前用'}: +${rallyCav.displayed_value}pp · ${isEn ? 'historical range' : '历史区间'}: +${(rallyCav.historical_range || []).join('—')}pp</span>`,
+    },
+  ];
+  const rows = items.map(it => `
+    <div class="caveat-row sev-${it.severity}">
+      <div class="caveat-tag">${it.tag}</div>
+      <div class="caveat-body">${it.body}</div>
+    </div>
+  `).join('');
+  container.innerHTML = `
+    <div class="caveat-panel">
+      <h3 class="caveat-title">${title}</h3>
+      <p class="caveat-sub">${sub}</p>
+      ${legend}
+      <div class="caveat-rows">${rows}</div>
+    </div>
+  `;
 }
 
 function formatBaseline(v, unit) {

@@ -112,6 +112,63 @@ body[data-lang="en"] .lang-zh { display: none !important; }
 .chain-card .sub-metric .sub-value.pos { color: #2a9d8f; }
 .chain-card .sub-metric .sub-value.neg { color: #e63946; }
 .chain-card .sub-metric .sub-peak { font-size: 10px; color: #94a3b8; font-weight: 400; margin-left: 4px; }
+
+/* Evidence rating: star badge in upper-right of card + caveat warning row */
+.chain-card .step-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 4px;
+}
+.chain-card .evidence-stars {
+  font-size: 11px; letter-spacing: 1px; font-weight: 700;
+  cursor: help; user-select: none;
+}
+.evidence-stars.s3 { color: #2a9d8f; }
+.evidence-stars.s2 { color: #d97706; }
+.evidence-stars.s1 { color: #b91c1c; }
+.chain-card .evidence-caveat {
+  font-size: 10.5px; line-height: 1.4; color: #92400e;
+  background: #fef3c7; border-left: 2px solid #d97706;
+  padding: 5px 7px; border-radius: 2px; margin: 4px 0;
+}
+.chain-card .evidence-papers {
+  font-size: 10px; line-height: 1.35; color: #64748b;
+  font-style: italic; margin: 2px 0 4px 0;
+}
+.chain-card .evidence-papers .papers-label { font-weight: 600; font-style: normal; color: #475569; }
+
+/* Honest-disclosure panel under the chain grid */
+#methodology-caveats { margin: 24px 0 12px 0; }
+.caveat-panel {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  padding: 16px 18px;
+}
+.caveat-title {
+  margin: 0 0 4px 0; font-size: 15px; font-weight: 600; color: #0f172a;
+}
+.caveat-sub {
+  margin: 0 0 12px 0; font-size: 12px; color: #64748b; line-height: 1.5;
+}
+.caveat-legend {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  font-size: 11px; color: #475569;
+  padding: 8px 10px; background: #f8fafc; border-radius: 4px; margin-bottom: 12px;
+}
+.caveat-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.caveat-rows { display: flex; flex-direction: column; gap: 8px; }
+.caveat-row {
+  display: grid; grid-template-columns: 180px 1fr; gap: 12px;
+  padding: 8px 10px; border-radius: 4px; font-size: 12px; line-height: 1.5;
+}
+.caveat-row.sev-high { background: #fef2f2; border-left: 3px solid #e63946; }
+.caveat-row.sev-med  { background: #fef3c7; border-left: 3px solid #d97706; }
+.caveat-row.sev-low  { background: #f1f5f9; border-left: 3px solid #94a3b8; }
+.caveat-row .caveat-tag { font-weight: 600; color: #0f172a; }
+.caveat-row .caveat-body { color: #334155; }
+.caveat-row .caveat-num { display: inline-block; margin-left: 6px; padding: 1px 6px; background: #fff; border: 1px solid #cbd5e0; border-radius: 3px; font-size: 10.5px; color: #475569; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 720px) {
+  .caveat-row { grid-template-columns: 1fr; gap: 4px; }
+}
 .chain-card .gauge {
   margin-top: 10px; height: 14px; border-radius: 3px;
   background: linear-gradient(to right,

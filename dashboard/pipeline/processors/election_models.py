@@ -344,10 +344,106 @@ def compute_transmission_state(fred: dict, polit: dict) -> dict:
         },
     ]
 
+    # Attach per-link evidence ratings (strength 1-3 + key papers + caveat).
+    # Strength: 3 = strong (decades of replication), 2 = medium (key papers
+    # but caveats), 1 = weak (causal direction / small sample / inferred).
+    _step_evidence = {
+        1: {"strength": 3,
+            "papers": ["Borenstein, Cameron & Gilbert (1997)", "Hamilton (2003)", "Davis-Haltiwanger (2001)"],
+            "caveat": None,
+            "caveat_en": None},
+        2: {"strength": 3,
+            "papers": ["BLS CPI methodology (mechanical: gasoline ~3.5% of CPI basket)"],
+            "caveat": None,
+            "caveat_en": None},
+        3: {"strength": 1,
+            "papers": ["Bornstein (NBER 2024)", "Considine & Larson (2005)"],
+            "caveat": "实证显示 SPR 释放对油价影响有限且短暂；$5-10 估计偏乐观",
+            "caveat_en": "Empirical SPR-release studies find limited and short-lived oil-price effects; the $5-10 estimate is on the optimistic side."},
+        4: {"strength": 2,
+            "papers": ["Curtin (2007)", "Carroll-Fuhrer-Wilcox (1994)"],
+            "caveat": None,
+            "caveat_en": None},
+        5: {"strength": 2,
+            "papers": ["BLS Core CPI methodology", "Stock-Watson (2007) on core inflation persistence"],
+            "caveat": None,
+            "caveat_en": None},
+        6: {"strength": 2,
+            "papers": ["Hibbs (1982, 2000, 2008)", "Bartels (2008) Unequal Democracy ch.4", "Achen & Bartels (2016)"],
+            "caveat": "RMSE 1.85 是 1952-2012 in-sample；1992/2016/2024 out-of-sample 表现明显恶化（perception gaps），真实 out-of-sample RMSE 估计 ~2.8",
+            "caveat_en": "RMSE 1.85 is 1952-2012 in-sample; 1992/2016/2024 out-of-sample performance degraded (perception gaps), true out-of-sample RMSE estimated ~2.8."},
+        7: {"strength": 1,
+            "papers": ["Erikson, MacKuen & Stimson (2002) The Macro Polity ch.4", "De Boef & Kellstedt (2004)"],
+            "caveat": "⚠️ 因果方向有争议——Macro Polity 用 VAR 分析显示 approval → ICS 的 Granger 因果强于反向；两者主要由基本面（实际收入+失业率）共同驱动。建议作为 parallel 下游信号而非单向链条。",
+            "caveat_en": "⚠️ Causal direction is contested — Macro Polity (2002) VAR analysis shows approval → ICS Granger-causes more strongly than the reverse; both are mainly driven jointly by basement-level fundamentals (real income + unemployment). Recommended to treat as parallel downstream signals, not a one-way chain."},
+        8: {"strength": 3,
+            "papers": ["Abramowitz (1988, 2004, 2020)", "Campbell (2008)", "Sigelman (1979)"],
+            "caveat": None,
+            "caveat_en": None},
+        9: {"strength": 3,
+            "papers": ["Bafumi, Erikson & Wlezien (2010, 2016)", "Jacobson (2015)"],
+            "caveat": None,
+            "caveat_en": None},
+        10: {"strength": 2,
+             "papers": ["Lewis-Beck & Tien (1996, 2008, 2014)", "Tufte (1978) Political Control of the Economy", "Mutz (1992)"],
+             "caveat": "本模型系数为 [CALIBRATION_PENDING]——仅基于 1980/2010 两点反推 prior，未在 1948-2020 样本上做 OLS。结果应作为指示性。",
+             "caveat_en": "Coefficients are [CALIBRATION_PENDING] — derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."},
+    }
+    for link in chain:
+        link.update(_step_evidence.get(link["step"], {"strength": None, "papers": [], "caveat": None, "caveat_en": None}))
+
+    # Methodology disclosure — exposed in the UI as an expandable panel.
+    methodology_caveats = {
+        "ensemble_rmse_honesty": {
+            "displayed": 1.07,
+            "realistic_estimate_range": [1.5, 2.5],
+            "reason": "ensemble_predict 假设 4 模型残差独立，实际历史样本残差 ρ≈0.5-0.7（共享 GDP/income 变量）。真实 RMSE 区间是 1.5-2.5。当前 PR 显示的 ±2·RMSE 95% CI 应放宽 ~50%。",
+            "reason_en": "ensemble_predict assumes residual independence, but historical residual ρ≈0.5-0.7 (shared GDP/income variables). True RMSE range is 1.5-2.5. The ±2·RMSE 95% CI shown should be widened by ~50%.",
+        },
+        "hibbs_out_of_sample": {
+            "in_sample_rmse": 1.85,
+            "out_of_sample_rmse_estimate": 2.8,
+            "reason": "Hibbs 1982-2012 in-sample RMSE 1.85；1992 (Bush 41 underperformance), 2016 (Clinton overcall), 2024 (Harris underperformance) 三次大选都被低估。Perception gaps 是核心未建模变量。",
+            "reason_en": "Hibbs 1982-2012 in-sample RMSE is 1.85; 1992 (Bush 41 underperformance), 2016 (Clinton overcall), 2024 (Harris underperformance) all undershot. Perception gaps are the core unmodeled variable.",
+        },
+        "lewis_beck_pending": {
+            "status": "[CALIBRATION_PENDING]",
+            "reason": "系数 α=53, β_misery=0.85 是两点 prior（1980+2010），未在 1948-2020 全样本上 OLS。真实系数估计区间 β_misery ∈ [0.6, 1.2]。",
+            "reason_en": "Coefficients α=53, β_misery=0.85 are 2-point priors (1980+2010), not OLS on 1948-2020. Estimated coefficient range β_misery ∈ [0.6, 1.2].",
+        },
+        "ics_approval_causal": {
+            "issue": "ICS → approval 单向假设错误",
+            "issue_en": "ICS → approval one-way assumption is wrong",
+            "reason": "Macro Polity (2002) 用 VAR 显示 approval → ICS 反向更强。当前 chain 第 7→8 单向链是 misleading。结构修复在 stage 2 计划中。",
+            "reason_en": "Macro Polity (2002) VAR shows approval → ICS reverse is stronger. The current 7→8 one-way link is misleading. Structural fix planned in stage 2.",
+        },
+        "tariff_elasticity": {
+            "displayed_value": 0.10,
+            "literature_range": [0.10, 0.25],
+            "reason": "Cavallo et al (2021) Trump-1 估计弹性 ~0.25；当前用 0.10 conservative 估计考虑 Trump-2 broader-based + margin absorption。未做 sensitivity sweep。",
+            "reason_en": "Cavallo et al (2021) Trump-1 elasticity ~0.25; current uses conservative 0.10 to account for Trump-2 broader-based + margin absorption. No sensitivity sweep yet.",
+        },
+        "rally_effect_estimate": {
+            "displayed_value": 8.0,
+            "historical_range": [5, 35],
+            "reason": "1990 Bush 41 海湾 +24, 1991 +18, 2001 Bush 43 9/11 +35, 1979 Carter 伊朗人质 +18。+8 是 median guess 不是 scenario-specific 估计。D 情景内未区分低伤亡护航 vs 高伤亡军事行动。",
+            "reason_en": "1990 Bush 41 Gulf War +24, 1991 +18, 2001 Bush 43 9/11 +35, 1979 Carter Iran hostages +18. +8 is a median guess, not scenario-specific. The D scenario doesn't yet distinguish low- vs high-casualty interventions.",
+        },
+        "evidence_legend": {
+            "strength_3": "强：跨数十年文献复制 + 机械关系 / 大样本因果识别",
+            "strength_3_en": "Strong: decades of replication + mechanical / large-sample causal identification",
+            "strength_2": "中：核心论文支持，但有 calibration/out-of-sample/sample-size 等具体 caveat",
+            "strength_2_en": "Medium: core papers support, but with specific calibration / out-of-sample / sample-size caveats",
+            "strength_1": "弱：因果方向有争议 / 小样本 / 仅基于 prior 推断",
+            "strength_1_en": "Weak: causal direction contested / small sample / prior-based inference",
+        },
+    }
+
     return {
         "as_of": datetime.utcnow().isoformat() + "Z",
         "chain": chain,
         "epu_index": epu,
+        "methodology_caveats": methodology_caveats,
         "raw_inputs_for_model": {
             "brent": brent, "wti": wti, "gas_retail": gas_retail,
             "cpi_yoy": cpi_yoy, "core_cpi_yoy": core_cpi_yoy,
