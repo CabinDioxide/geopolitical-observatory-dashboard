@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-05-08T07:26:40.356632Z",
+  "as_of": "2026-05-14T14:26:39.458348Z",
   "chain": [
     {
       "step": 1,
@@ -73,17 +73,38 @@
     },
     {
       "step": 6,
-      "name": "\u5b9e\u9645\u53ef\u652f\u914d\u6536\u5165\uff08\u540c\u6bd4\uff09",
-      "name_en": "Real disposable income (YoY)",
+      "name": "\u5b9e\u9645\u53ef\u652f\u914d\u6536\u5165\uff08\u4eba\u5747\u540c\u6bd4\uff09",
+      "name_en": "Real DPI per capita (YoY)",
       "tag": "\u4e0b\u6e38",
-      "current": 0.4415084502276996,
+      "current": 0.11175512368829792,
       "unit": "%",
       "unit_en": "%",
       "baseline": 2.0,
       "alarm": -1.0,
-      "pressure": 52,
-      "interpretation": "Hibbs Bread & Peace \u76f4\u63a5\u8f93\u5165\u3002\u6301\u7eed YoY -1% \u2192 \u52a0\u6743 15 \u5b63\u5ea6 R \u2248 0.5% \u2192 Hibbs \u7cfb\u6570 3.49 \u00d7 1.43pp \u4e0b\u964d = -5pp \u9009\u7968\u3002",
-      "interpretation_en": "Direct input to Hibbs Bread & Peace. Sustained YoY -1% \u2192 weighted 15-quarter R \u2248 0.5% \u2192 Hibbs coefficient 3.49 \u00d7 1.43pp drop = -5pp votes."
+      "pressure": 63,
+      "interpretation": "Hibbs Bread & Peace \u76f4\u63a5\u8f93\u5165\u3002**\u5df2\u5207\u5230\u4eba\u5747 (A229RX0)** \u56e0\u4e3a Hibbs/Bartels \u539f\u59cb\u8bba\u6587\u5747\u660e\u786e\u4eba\u5747\u3002\u6301\u7eed YoY -1% \u2192 \u52a0\u6743 15 \u5b63\u5ea6 R \u2248 0.5% \u2192 Hibbs \u7cfb\u6570 3.49 \u00d7 1.43pp \u4e0b\u964d = -5pp \u9009\u7968\u3002\u6ce8\u610f YoY \u53ef\u80fd mask stagnation\uff1a\u770b sub-metrics \u91cc\u7684 18m \u7d2f\u8ba1\u548c\u8ddd 12m peak \u56de\u843d\u3002",
+      "interpretation_en": "Direct input to Hibbs Bread & Peace. **Switched to per-capita (A229RX0)** to match Hibbs/Bartels specifications. Sustained YoY -1% \u2192 weighted 15-quarter R \u2248 0.5% \u2192 Hibbs coefficient 3.49 \u00d7 1.43pp drop = -5pp votes. YoY alone can mask stagnation; check the 18m cumulative and drawdown-from-12m-peak sub-metrics below.",
+      "sub_metrics": [
+        {
+          "label": "18 \u4e2a\u6708\u7d2f\u8ba1\u53d8\u5316",
+          "label_en": "18-month cumulative change",
+          "value": 1.33,
+          "unit": "%",
+          "unit_en": "%",
+          "interpretation": "\u4ece\u4e0a\u4e00\u6b21\u4e2d\u671f\u9009\u4e3e\u81f3\u4eca\u7684\u771f\u5b9e\u8d2d\u4e70\u529b\u51c0\u53d8\u5316\u3002\u8d1f\u503c = \u9009\u6c11\u4e24\u5e74\u5185\u66f4\u7a77\u3002",
+          "interpretation_en": "Net real purchasing-power change since the last midterm. Negative = voters are poorer than two years ago."
+        },
+        {
+          "label": "\u8ddd\u8fc7\u53bb 12 \u6708\u5cf0\u503c\u56de\u843d",
+          "label_en": "Drawdown from trailing 12-month peak",
+          "value": -0.45,
+          "unit": "%",
+          "unit_en": "%",
+          "peak_date": "2026-01-01",
+          "interpretation": "Loss-aversion \u89c6\u89d2\uff1a\u9009\u6c11\u5bf9'\u4ece\u5cf0\u503c\u8dcc\u4e0b\u6765'\u7684\u53cd\u5e94\u5927\u4e8e\u5bf9'\u4f4e\u4e8e\u8d8b\u52bf'\u3002\u5f53\u524d\u56de\u843d = stagnation \u4fe1\u53f7\u3002",
+          "interpretation_en": "Loss-aversion lens: voters react more to falling from a peak than to being below trend. A drawdown signals stagnation even when YoY looks flat."
+        }
+      ]
     },
     {
       "step": 7,
@@ -126,6 +147,20 @@
       "pressure": 50,
       "interpretation": "GB \u4e0e House \u666e\u9009\u8fd1 1:1 \u6620\u5c04\u3002D+6 = R \u666e\u9009\u8f93\u7ea6 5pp = \u89e6\u53d1 5pp alarm \u5b9a\u4e49\u3002",
       "interpretation_en": "Generic Ballot maps near 1:1 to House popular vote. D+6 = R loses popular vote by ~5pp = triggers the 5pp alarm definition."
+    },
+    {
+      "step": 10,
+      "name": "\u5931\u4e1a\u7387 (U-3)",
+      "name_en": "Unemployment rate (U-3)",
+      "tag": "\u4e0b\u6e38",
+      "current": null,
+      "unit": "%",
+      "unit_en": "%",
+      "baseline": 4.5,
+      "alarm": 6.5,
+      "pressure": null,
+      "interpretation": "\u4e0e RDPI \u5e73\u884c\u7684\u57fa\u672c\u9762\u53d8\u91cf\uff08\u4e0d\u662f 9 \u6b65\u94fe\u4e0b\u6e38\uff0c\u800c\u662f sociotropic \u7b2c\u4e8c\u652f\u67f1\uff09\u3002Lewis-Beck failure rate \u6a21\u578b\u6838\u5fc3\u8f93\u5165\u3002Alarm 6.5% \u951a\u5b9a 1982 (10.8%, \u5931 26 \u5e2d) \u4e0e 2010 (9.6%, \u5931 63 \u5e2d)\u2014\u2014\u4e24\u6b21\u90fd\u662f\u4f4e\u901a\u80c0\u4f46\u9ad8\u5931\u4e1a\u4e3b\u5bfc\u5931\u5e2d\u6570\u3002\u57fa\u7ebf 4.5% \u63a5\u8fd1 Fed NAIRU \u4f30\u8ba1\u3002",
+      "interpretation_en": "Parallel basement variable to RDPI (not downstream of the 9-step chain \u2014 second sociotropic pillar). Core input to the Lewis-Beck failure-rate model. Alarm 6.5% anchored to 1982 (10.8%, -26 seats) and 2010 (9.6%, -63 seats): both midterms saw low inflation but unemployment-driven seat losses. Baseline 4.5% approximates Fed NAIRU estimates."
     }
   ],
   "epu_index": 282.79,
@@ -135,7 +170,18 @@
     "gas_retail": 4.452,
     "cpi_yoy": 3.2859577528652,
     "core_cpi_yoy": 2.6021677054868197,
-    "rdpi_yoy": 0.4415084502276996,
+    "rdpi_yoy": 0.11175512368829792,
+    "rdpi_level_per_capita": 52853.0,
+    "rdpi_quarterly_path": [
+      1.4034783048083588,
+      1.808591398741477,
+      1.3615306438583996,
+      0.5548276129290652,
+      -0.30010223947097847,
+      1.3228752581060377
+    ],
+    "unrate": null,
+    "unrate_yoy_pct_change": null,
     "ics": 53.3,
     "inflation_expect": 3.8,
     "approval_net": -13.5,
