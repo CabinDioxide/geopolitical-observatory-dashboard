@@ -52,7 +52,7 @@
       <div class="meta-item"><span class="lbl" data-i18n="chain.epu_label">EPU 经济政策不确定性</span><span id="epu-val">—</span></div>
       <div class="meta-item"><span class="lbl" data-i18n="chain.updated_label">最近更新</span><span id="chain-updated">—</span></div>
     </div>
-    <div id="methodology-caveats"></div>
+    <p class="caveats-pointer" data-i18n="chain.caveats_pointer">⚠️ 每个 link 的 evidence 评级和 caveat 已在卡片上显示。完整的诚实标注 panel（含 6 个 runtime disclosures + B3 backtest 真实 RMSE 表 + 4×4 残差相关矩阵 + ensemble 修正）已移至 <a href="#" class="goto-methodology">⑤ 方法论</a> tab 顶部，与其他方法学说明 collocate。</p>
   </section>
 
   <!-- TAB 2: Scenarios -->
@@ -143,6 +143,14 @@
       <h2 data-i18n="meth.title">方法论说明</h2>
       <p data-i18n="meth.intro">本 dashboard 的核心任务是将地缘政治冲击（霍尔木兹海峡封锁）通过宏观与政治传导链转换为美国选举结果预测。下文逐项说明所用模型、选择理由、历史预测准确度、传导链结构与数据来源。</p>
     </div>
+
+    <!-- Dynamic methodology caveats + B3 backtest runtime panel.
+         Rendered by forecast.js renderMethodologyCaveats() from
+         transmission_state.methodology_caveats (which merges backtest
+         results from backtest_results.json). Placed at the top of
+         the methodology tab so readers entering this tab see the
+         honest disclosures before reading the static formula sections. -->
+    <div id="methodology-caveats"></div>
 
     <div class="lang-zh">
     <h3 class="method-h">一、为什么选这四个模型？为什么没选其他模型？</h3>
