@@ -461,6 +461,21 @@ function renderChain(state) {
   const name = (CURRENT_LANG === 'en' && link.name_en) ? link.name_en : link.name;
   const interp = (CURRENT_LANG === 'en' && link.interpretation_en) ? link.interpretation_en : link.interpretation;
   const unit = (CURRENT_LANG === 'en' && link.unit_en) ? link.unit_en : link.unit;
+  // Optional sub-metrics (e.g., RDPI 18m cumulative + drawdown-from-peak)
+  let subMetricsHtml = '';
+  if (Array.isArray(link.sub_metrics) && link.sub_metrics.length) {
+    const rows = link.sub_metrics.map(sm => {
+      const subLabel = (CURRENT_LANG === 'en' && sm.label_en) ? sm.label_en : sm.label;
+      const subUnit = (CURRENT_LANG === 'en' && sm.unit_en) ? sm.unit_en : (sm.unit || '');
+      const subVal = sm.value !== null && sm.value !== undefined
+        ? Number(sm.value).toLocaleString(undefined, {maximumFractionDigits: 2})
+        : '—';
+      const cls = (typeof sm.value === 'number' && sm.value < 0) ? 'neg' : 'pos';
+      const peakBadge = sm.peak_date ? `<span class="sub-peak"> (peak ${sm.peak_date})</span>` : '';
+      return `<div class="sub-metric"><span class="sub-label">${subLabel}</span><span class="sub-value ${cls}">${subVal}${subUnit}${peakBadge}</span></div>`;
+    }).join('');
+    subMetricsHtml = `<div class="sub-metrics">${rows}</div>`;
+  }
   card.innerHTML = `
       <div class="step-num">STEP ${link.step}</div>
       <div class="name">${name}</div>
@@ -468,6 +483,7 @@ function renderChain(state) {
         <span class="value">${valStr}</span>
         <span class="unit">${unit}</span>
       </div>
+      ${subMetricsHtml}
       <div class="interp">${interp}</div>
       <div class="gauge" style="--p: ${pct}%"></div>
       <div class="gauge-zones"><span>${t('chain.zone_upstream')}</span><span>${t('chain.zone_mid')}</span><span>${t('chain.zone_down')}</span></div>

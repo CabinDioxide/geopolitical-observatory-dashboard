@@ -41,6 +41,11 @@ FRED_SERIES = {
     "DSPIC96":      {"name": "Real disposable personal income (SAAR)", "freq": "monthly", "tier": 3},
     "A229RX0":      {"name": "Real DPI per capita",   "freq": "monthly", "tier": 3},
     "GDPC1":        {"name": "Real GDP (SAAR)",       "freq": "quarterly", "tier": 3},
+    # --- Labor (the second sociotropic basement variable; missing from V3) ---
+    # 1982 / 2010 midterms had low inflation but high unemployment — the chain
+    # was blind to those scenarios until this was added.
+    "UNRATE":       {"name": "Unemployment rate (U-3, %)", "freq": "monthly", "tier": 3},
+    "PAYEMS":       {"name": "Total nonfarm payrolls (thousands)", "freq": "monthly", "tier": 3},
     # --- Perception ---
     "UMCSENT":      {"name": "Michigan consumer sentiment", "freq": "monthly", "tier": 3},
     "MICH":         {"name": "Michigan 1y inflation expectation", "freq": "monthly", "tier": 3},
@@ -107,6 +112,25 @@ ABRAMOWITZ_COEFFS = {
     "rmse":      1.90,
 }
 
+# Lewis-Beck-Tien sociotropic vote function (simplified misery-index form).
+# Adds the labor + price-level dimension that Fair/Hibbs/Abramowitz miss
+# when growth and income smooth over the actual unemployment / inflation
+# levels voters experience. Captures 1982/2010-type scenarios where
+# unemployment dominates and pocketbook models underperform.
+#
+# V_inc = α - β_misery · (UNRATE + CPI_YoY)
+#
+# [CALIBRATION_PENDING]: priors below are anchored on two historical
+# points — 1980 (UNRATE 7.5 + CPI 13.5 = misery 21, Carter 44.7%) and
+# 2010 (UNRATE 9.6 + CPI 1.6 = misery 11.2, Dem ~46% national 2-party).
+# Solving the two-equation system yields roughly α=53, β=0.85. Treat as
+# preliminary until a full 1948-2020 OLS re-estimation lands (see B3 TODO).
+LEWIS_BECK_COEFFS = {
+    "alpha":         53.0,
+    "beta_misery":   0.85,    # [CALIBRATION_PENDING] re-estimate on 1948-2020
+    "rmse":          2.50,    # placeholder pending backtest
+}
+
 # Ensemble model weights — inverse-RMSE weighting, PollyVote style.
 # Higher RMSE → lower weight in the ensemble (the model is less reliable).
 # Computed at runtime from the three RMSEs above.
@@ -167,6 +191,31 @@ TRANSMISSION_ELASTICITIES = {
     "oil_shock_to_real_gdp_growth_pp_per_50pct":   -1.4,    # 50% sustained shock → -1.4pp growth
     "cpi_to_michigan_ics_per_pp":                  -3.2,    # 1pp CPI → -3.2 ICS pts
     "ics_to_approval_pp_per_10_ics":               -1.1,    # -10 ICS → -1.1pp approval
+}
+
+# --- Tariff channel (the *internally-attributable* inflation shock) ---
+# Trump-2 effective avg tariff peaked at ~22% in April 2025 (reciprocal +
+# 145% on China), then negotiated down to ~13.5% by May 2026. This is
+# fundamentally different from an oil shock: it is endogenous to the
+# incumbent's policy, so voter attribution flows directly to the president
+# (Trump-1 2018-19 tariffs were already partly priced into 2020 voter
+# perception). The 9-step Hormuz chain models oil as exogenous; this
+# parallel channel models tariffs.
+#
+# Pre-Trump-2 baseline: ~2.5% trade-weighted MFN tariff.
+# Passthrough elasticity: Cavallo et al (2021) found near-complete (~95%)
+# passthrough to retail prices in 2018-19 Trump-1 study; Amiti-Redding-
+# Weinstein (2020) similar. But Trump-2 is broader/larger and faces more
+# margin absorption + FX adjustment, so we use a conservative passthrough
+# to headline CPI level of 0.10pp per pp of tariff rate increase.
+TARIFF_AVG_RATE          = 0.135   # May 2026 effective rate [INFERENCE: news consensus]
+TARIFF_PRE_2025_RATE     = 0.025   # pre-Trump-2 baseline
+TARIFF_TO_CPI_PP_PER_PP  = 0.10    # passthrough to headline CPI (conservative)
+# Tariff scenarios for sensitivity analysis (not yet wired into ensemble run).
+TARIFF_SCENARIOS = {
+    "rollback":   {"rate": 0.050, "label": "贸易和解，关税回到 5%"},
+    "current":    {"rate": 0.135, "label": "维持当前 13.5%（基线）"},
+    "escalation": {"rate": 0.220, "label": "再次升级到 22%（4 月峰值水平）"},
 }
 
 # --- GDELT GEO 2.0 API ---

@@ -32,6 +32,10 @@ from pipeline.config import (
     FAIR_COEFFS,
     HIBBS_COEFFS,
     HORMUZ_SCENARIOS,
+    LEWIS_BECK_COEFFS,
+    TARIFF_AVG_RATE,
+    TARIFF_PRE_2025_RATE,
+    TARIFF_TO_CPI_PP_PER_PP,
     TRANSMISSION_ELASTICITIES,
 )
 
@@ -96,6 +100,78 @@ def _quarters_since(date_str: str, ref_str: str = "2025-01-20") -> int:
     return max(0, months // 3)
 
 
+def _rdpi_sub_metrics(fred: dict, series_id: str = "A229RX0") -> dict:
+    """18m cumulative change + drawdown from trailing 12m peak.
+
+    Surfaced on the chain step 6 card so stagnation is visible even when
+    YoY looks marginally positive (the 2025-04 → 2026-03 case where nominal
+    income gains were fully eroded by PCE inflation).
+    """
+    obs = fred.get("series", {}).get(series_id, {}).get("observations", [])
+    if len(obs) < 19:
+        return {}
+    latest = obs[-1]
+    obs_18m_ago = obs[-19]
+    if obs_18m_ago["value"] <= 0:
+        return {}
+    cumulative_18m_pct = 100.0 * (latest["value"] - obs_18m_ago["value"]) / obs_18m_ago["value"]
+    last_12 = obs[-12:]
+    peak = max(last_12, key=lambda o: o["value"])
+    if peak["value"] <= 0:
+        return {}
+    drawdown_pct = 100.0 * (latest["value"] - peak["value"]) / peak["value"]
+    return {
+        "cumulative_18m_pct": round(cumulative_18m_pct, 2),
+        "drawdown_from_12m_peak_pct": round(drawdown_pct, 2),
+        "peak_date_12m": peak["date"],
+    }
+
+
+def _rdpi_quarterly_growth_path(fred: dict, series_id: str = "A229RX0",
+                                n_quarters: int = 6) -> list[float]:
+    """Trailing QoQ annualized growth path from monthly real DPI observations.
+
+    Hibbs's R variable is the λ-weighted mean of *quarter-over-quarter
+    annualized* real per-capita DPI growth. Feeding YoY changes (12-month %
+    change) into compute_hibbs_R double-counts smoothing and mis-weights the
+    λ-decay — the historical RMSE 1.85 only holds with the original QoQ
+    units. We rebuild the quarterly path from FRED's monthly per-capita
+    series (A229RX0): average 3 months per calendar quarter, then take
+    ((Q_t / Q_{t-1})^4 - 1) * 100.
+
+    Returns oldest→newest list (length up to n_quarters). Empty if too few
+    observations are available.
+    """
+    obs = fred.get("series", {}).get(series_id, {}).get("observations", [])
+    if len(obs) < 6:
+        return []
+    # Group monthly obs into calendar quarters: key = (year, quarter_index 0-3).
+    quarter_buckets: dict[tuple[int, int], list[float]] = {}
+    for o in obs:
+        try:
+            d = datetime.strptime(o["date"], "%Y-%m-%d")
+        except (KeyError, ValueError):
+            continue
+        q_key = (d.year, (d.month - 1) // 3)
+        quarter_buckets.setdefault(q_key, []).append(o["value"])
+    # Keep only fully-observed quarters (3 monthly readings).
+    complete_quarters = [
+        (k, sum(v) / len(v)) for k, v in sorted(quarter_buckets.items())
+        if len(v) >= 3
+    ]
+    if len(complete_quarters) < 2:
+        return []
+    annualized = []
+    for i in range(1, len(complete_quarters)):
+        prev = complete_quarters[i - 1][1]
+        curr = complete_quarters[i][1]
+        if prev <= 0:
+            continue
+        qoq = curr / prev - 1.0
+        annualized.append(((1.0 + qoq) ** 4 - 1.0) * 100.0)
+    return annualized[-n_quarters:]
+
+
 # -----------------------------------------------------------------------------
 # Transmission chain — sustains the dashboard's Layer 1 monitoring page
 # -----------------------------------------------------------------------------
@@ -118,8 +194,20 @@ def compute_transmission_state(fred: dict, polit: dict) -> dict:
     cpi_yoy = _yoy_change(fred, "CPIAUCSL")
     core_cpi_yoy = _yoy_change(fred, "CPILFESL")
     cpi_energy_yoy = _yoy_change(fred, "CPIENGSL")
-    rdpi = _latest_value(fred, "DSPIC96")
-    rdpi_yoy = _yoy_change(fred, "DSPIC96")
+    # A229RX0 = real DPI per capita (chained 2017 dollars). Hibbs (1982/2008)
+    # and Bartels (2008) both specify *per capita* — total RDPI absorbs
+    # population growth, which can't shift voter preferences.
+    rdpi = _latest_value(fred, "A229RX0")
+    rdpi_yoy = _yoy_change(fred, "A229RX0")
+    # Quarterly path for Hibbs's R (separate from the YoY shown on the chain).
+    rdpi_quarterly_path = _rdpi_quarterly_growth_path(fred, "A229RX0", n_quarters=6)
+    rdpi_sub = _rdpi_sub_metrics(fred, "A229RX0")
+    # Sociotropic-tradition labor variable. Lewis-Beck/Tien (1996) and Mutz
+    # (1992) argue voters react to "national unemployment" more than to their
+    # own paycheck — adding this lets the dashboard model 1982/2010-type
+    # scenarios (low inflation, high unemployment) that pure Hibbs misses.
+    unrate = _latest_value(fred, "UNRATE")
+    unrate_12m_ago = _yoy_change(fred, "UNRATE")  # % change YoY of UNRATE itself
     ics = _latest_value(fred, "UMCSENT")
     inflation_expect = _latest_value(fred, "MICH")
     epu = _latest_value(fred, "USEPUINDXD")
@@ -196,12 +284,31 @@ def compute_transmission_state(fred: dict, polit: dict) -> dict:
             "interpretation_en": "Alarm 5% = wage-price spiral threshold. Fed aggressive hiking → recession risk → real income downstream impact.",
         },
         {
-            "step": 6, "name": "实际可支配收入（同比）", "name_en": "Real disposable income (YoY)", "tag": "下游",
+            "step": 6, "name": "实际可支配收入（人均同比）", "name_en": "Real DPI per capita (YoY)", "tag": "下游",
             "current": rdpi_yoy, "unit": "%", "unit_en": "%",
             "baseline": 2.0, "alarm": -1.0,
             "pressure": pressure(rdpi_yoy, 2.0, -1.0) if rdpi_yoy is not None else None,
-            "interpretation": "Hibbs Bread & Peace 直接输入。持续 YoY -1% → 加权 15 季度 R ≈ 0.5% → Hibbs 系数 3.49 × 1.43pp 下降 = -5pp 选票。",
-            "interpretation_en": "Direct input to Hibbs Bread & Peace. Sustained YoY -1% → weighted 15-quarter R ≈ 0.5% → Hibbs coefficient 3.49 × 1.43pp drop = -5pp votes.",
+            "interpretation": "Hibbs Bread & Peace 直接输入。**已切到人均 (A229RX0)** 因为 Hibbs/Bartels 原始论文均明确人均。持续 YoY -1% → 加权 15 季度 R ≈ 0.5% → Hibbs 系数 3.49 × 1.43pp 下降 = -5pp 选票。注意 YoY 可能 mask stagnation：看 sub-metrics 里的 18m 累计和距 12m peak 回落。",
+            "interpretation_en": "Direct input to Hibbs Bread & Peace. **Switched to per-capita (A229RX0)** to match Hibbs/Bartels specifications. Sustained YoY -1% → weighted 15-quarter R ≈ 0.5% → Hibbs coefficient 3.49 × 1.43pp drop = -5pp votes. YoY alone can mask stagnation; check the 18m cumulative and drawdown-from-12m-peak sub-metrics below.",
+            "sub_metrics": [
+                {
+                    "label": "18 个月累计变化",
+                    "label_en": "18-month cumulative change",
+                    "value": rdpi_sub.get("cumulative_18m_pct"),
+                    "unit": "%", "unit_en": "%",
+                    "interpretation": "从上一次中期选举至今的真实购买力净变化。负值 = 选民两年内更穷。",
+                    "interpretation_en": "Net real purchasing-power change since the last midterm. Negative = voters are poorer than two years ago.",
+                },
+                {
+                    "label": "距过去 12 月峰值回落",
+                    "label_en": "Drawdown from trailing 12-month peak",
+                    "value": rdpi_sub.get("drawdown_from_12m_peak_pct"),
+                    "unit": "%", "unit_en": "%",
+                    "peak_date": rdpi_sub.get("peak_date_12m"),
+                    "interpretation": "Loss-aversion 视角：选民对'从峰值跌下来'的反应大于对'低于趋势'。当前回落 = stagnation 信号。",
+                    "interpretation_en": "Loss-aversion lens: voters react more to falling from a peak than to being below trend. A drawdown signals stagnation even when YoY looks flat.",
+                },
+            ],
         },
         {
             "step": 7, "name": "密歇根大学消费者信心 (ICS)", "name_en": "Michigan Consumer Sentiment (ICS)", "tag": "下游",
@@ -227,6 +334,14 @@ def compute_transmission_state(fred: dict, polit: dict) -> dict:
             "interpretation": "GB 与 House 普选近 1:1 映射。D+6 = R 普选输约 5pp = 触发 5pp alarm 定义。",
             "interpretation_en": "Generic Ballot maps near 1:1 to House popular vote. D+6 = R loses popular vote by ~5pp = triggers the 5pp alarm definition.",
         },
+        {
+            "step": 10, "name": "失业率 (U-3)", "name_en": "Unemployment rate (U-3)", "tag": "下游",
+            "current": unrate, "unit": "%", "unit_en": "%",
+            "baseline": 4.5, "alarm": 6.5,
+            "pressure": pressure(unrate, 4.5, 6.5),
+            "interpretation": "与 RDPI 平行的基本面变量（不是 9 步链下游，而是 sociotropic 第二支柱）。Lewis-Beck failure rate 模型核心输入。Alarm 6.5% 锚定 1982 (10.8%, 失 26 席) 与 2010 (9.6%, 失 63 席)——两次都是低通胀但高失业主导失席数。基线 4.5% 接近 Fed NAIRU 估计。",
+            "interpretation_en": "Parallel basement variable to RDPI (not downstream of the 9-step chain — second sociotropic pillar). Core input to the Lewis-Beck failure-rate model. Alarm 6.5% anchored to 1982 (10.8%, -26 seats) and 2010 (9.6%, -63 seats): both midterms saw low inflation but unemployment-driven seat losses. Baseline 4.5% approximates Fed NAIRU estimates.",
+        },
     ]
 
     return {
@@ -236,7 +351,10 @@ def compute_transmission_state(fred: dict, polit: dict) -> dict:
         "raw_inputs_for_model": {
             "brent": brent, "wti": wti, "gas_retail": gas_retail,
             "cpi_yoy": cpi_yoy, "core_cpi_yoy": core_cpi_yoy,
-            "rdpi_yoy": rdpi_yoy, "ics": ics, "inflation_expect": inflation_expect,
+            "rdpi_yoy": rdpi_yoy, "rdpi_level_per_capita": rdpi,
+            "rdpi_quarterly_path": rdpi_quarterly_path,
+            "unrate": unrate, "unrate_yoy_pct_change": unrate_12m_ago,
+            "ics": ics, "inflation_expect": inflation_expect,
             "approval_net": approval_net,
             "generic_ballot_dem_lead": generic_ballot_dem_lead,
         },
@@ -402,40 +520,90 @@ def abramowitz_predict(g_q2: float, june_net_approval: float, term2: int = 0,
 
 
 # -----------------------------------------------------------------------------
+# Lewis-Beck-Tien — sociotropic misery index (the missing 4th model)
+# -----------------------------------------------------------------------------
+
+def lewis_beck_predict(unrate_pct: float, cpi_yoy_pct: float, i: int = -1) -> dict:
+    """Lewis-Beck-Tien-style sociotropic vote function.
+
+    V_inc = α - β_misery · (UNRATE + CPI_YoY)
+
+    Captures the 1982/2010-style scenarios where unemployment dominates and
+    Hibbs/Fair underperform (their growth/real-income variables smooth over
+    labor-market and price-level conditions voters actually feel). Adding
+    this model as the 4th ensemble member is the sociotropic correction to
+    the otherwise pocketbook-heavy lineup.
+
+    Args:
+      unrate_pct:  U-3 unemployment rate, %
+      cpi_yoy_pct: CPI YoY headline inflation, %
+      i: party (cosmetic — output is incumbent-party share)
+    """
+    c = LEWIS_BECK_COEFFS
+    misery = unrate_pct + cpi_yoy_pct
+    v_inc = c["alpha"] - c["beta_misery"] * misery
+    return {
+        "incumbent_party": "R" if i == -1 else "D",
+        "incumbent_two_party_pct": round(v_inc, 2),
+        "lower_95ci": round(v_inc - 2 * c["rmse"], 2),
+        "upper_95ci": round(v_inc + 2 * c["rmse"], 2),
+        "rmse": c["rmse"],
+        "win_prob": _normal_cdf((v_inc - 50) / c["rmse"]),
+        "inputs": {
+            "unrate_pct": unrate_pct,
+            "cpi_yoy_pct": cpi_yoy_pct,
+            "misery_index": round(misery, 2),
+        },
+        "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample.",
+    }
+
+
+# -----------------------------------------------------------------------------
 # Ensemble — inverse-RMSE weighting (PollyVote-style)
 # -----------------------------------------------------------------------------
 
-def ensemble_predict(fair_pct: float, hibbs_pct: float, abramowitz_pct: float) -> dict:
-    """Combine three models. Lower-RMSE models get higher weight.
+def ensemble_predict(fair_pct: float, hibbs_pct: float, abramowitz_pct: float,
+                     lewis_beck_pct: float | None = None) -> dict:
+    """Combine 3 or 4 models. Lower-RMSE models get higher weight.
 
     PollyVote (Graefe et al) shows ensembles consistently beat any single model
     out-of-sample by ~30-40% RMSE reduction.
+
+    The Lewis-Beck addition counter-balances the pocketbook lean of Fair +
+    Hibbs + Abramowitz by injecting a sociotropic (national misery) signal.
     """
-    rmses = [FAIR_COEFFS["rmse"], HIBBS_COEFFS["rmse"], ABRAMOWITZ_COEFFS["rmse"]]
+    model_specs = [
+        ("fair", fair_pct, FAIR_COEFFS["rmse"]),
+        ("hibbs", hibbs_pct, HIBBS_COEFFS["rmse"]),
+        ("abramowitz", abramowitz_pct, ABRAMOWITZ_COEFFS["rmse"]),
+    ]
+    if lewis_beck_pct is not None:
+        model_specs.append(("lewis_beck", lewis_beck_pct, LEWIS_BECK_COEFFS["rmse"]))
+
+    rmses = [r for _, _, r in model_specs]
     inv = [1 / r for r in rmses]
     total = sum(inv)
     weights = [w / total for w in inv]
-    preds = [fair_pct, hibbs_pct, abramowitz_pct]
+    preds = [p for _, p, _ in model_specs]
     weighted = sum(w * p for w, p in zip(weights, preds))
-    # Combined RMSE — assume independence (optimistic; correlation reduces the gain).
-    # σ²_ensemble = Σ w²·σ² → σ_ensemble = sqrt of that.
+    # TODO [B3]: this assumes residual independence. Fair/Hibbs/Abramowitz
+    # share GDP/income variables and historically have residual ρ ≈ 0.5-0.7;
+    # Lewis-Beck adds the sociotropic dimension and is more independent.
+    # Realistic ensemble RMSE under correlated residuals is ~1.5-2.0 (vs the
+    # ~1.1 below). Backtest on 1948-2020 needed to compute true covariance
+    # matrix before tightening confidence bands.
     combined_rmse = math.sqrt(sum((w * r) ** 2 for w, r in zip(weights, rmses)))
+    weights_dict = {name: round(w, 3) for (name, _, _), w in zip(model_specs, weights)}
+    components = {f"{name}_pct": p for name, p, _ in model_specs}
     return {
         "incumbent_two_party_pct": round(weighted, 2),
         "lower_95ci": round(weighted - 2 * combined_rmse, 2),
         "upper_95ci": round(weighted + 2 * combined_rmse, 2),
         "ensemble_rmse": round(combined_rmse, 2),
+        "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
         "win_prob": _normal_cdf((weighted - 50) / combined_rmse),
-        "weights": {
-            "fair": round(weights[0], 3),
-            "hibbs": round(weights[1], 3),
-            "abramowitz": round(weights[2], 3),
-        },
-        "components": {
-            "fair_pct": fair_pct,
-            "hibbs_pct": hibbs_pct,
-            "abramowitz_pct": abramowitz_pct,
-        },
+        "weights": weights_dict,
+        "components": components,
     }
 
 
@@ -506,8 +674,16 @@ def project_macro_under_scenario(scenario_key: str, baseline_state: dict) -> dic
 
     # CPI YoY: $1/gal sustained → ~0.85pp CPI YoY
     cpi_premium_pp = gas_premium * e["gasoline_to_headline_cpi_pp_per_dollar_gal"]
+    # Tariff passthrough: separate from oil. Trump-2 effective rate vs pre-2025
+    # baseline, scaled by Cavallo-style elasticity. Already partially baked
+    # into current_cpi_yoy (May 2026), so it's a level shift, not additive.
+    tariff_delta_pct_points = (TARIFF_AVG_RATE - TARIFF_PRE_2025_RATE) * 100.0
+    tariff_cpi_pp = tariff_delta_pct_points * TARIFF_TO_CPI_PP_PER_PP
     # Add to baseline current CPI YoY (assumed normalized state ~2.5%).
     current_cpi_yoy = baseline_state.get("cpi_yoy") or 3.0
+    # Oil shock additive on top of current CPI (which already contains tariff
+    # passthrough). We expose tariff_cpi_pp as a decomposition field rather
+    # than double-adding.
     projected_cpi_2026_2028 = current_cpi_yoy + cpi_premium_pp
 
     # Real GDP growth hit (Hamilton 2003): 50% sustained shock = -1.4pp growth
@@ -534,6 +710,13 @@ def project_macro_under_scenario(scenario_key: str, baseline_state: dict) -> dic
     approval_drop = (ics_drop / 10) * e["ics_to_approval_pp_per_10_ics"]
     current_approval_net = baseline_state.get("approval_net") or -10
     projected_approval = current_approval_net + approval_drop
+
+    # Unemployment projection via Okun's law: ΔUNRATE ≈ -0.5 · (growth - trend).
+    # Used by Lewis-Beck. Oil shock drags growth → drags employment with lag.
+    current_unrate = baseline_state.get("unrate") or 4.5
+    trend_growth = 2.0
+    unrate_change = -0.5 * (projected_growth - trend_growth)
+    projected_unrate = max(3.5, current_unrate + unrate_change)
 
     # === Rally + casualty effects (military intervention scenarios) ===
     # Rally-around-the-flag: Mueller (1973) shows 5-15pp boost on military
@@ -563,11 +746,23 @@ def project_macro_under_scenario(scenario_key: str, baseline_state: dict) -> dic
         "brent_premium_vs_baseline": brent_premium,
         "rally_2026_pp": round(rally_2026_effective, 2),
         "rally_2028_pp": round(rally_2028_effective, 2),
+        "tariff_decomposition": {
+            "tariff_rate_pct": round(TARIFF_AVG_RATE * 100, 1),
+            "pre_2025_baseline_rate_pct": round(TARIFF_PRE_2025_RATE * 100, 1),
+            "tariff_cpi_pp_in_current_yoy": round(tariff_cpi_pp, 2),
+            "note": (
+                "Tariff-attributable CPI elevation is already in current_cpi_yoy "
+                "and is shown here for blame-attribution. Counterfactual 'no-tariff' "
+                "CPI YoY would be lower by tariff_cpi_pp_in_current_yoy."
+            ),
+        },
         "projected_2026_2028_macro": {
             "G_real_growth_pct": round(projected_growth, 2),
             "P_admin_inflation_pct": round(p_admin_avg, 2),
             "Z_good_news_quarters": z_projected,
             "cpi_yoy_2026_2028": round(projected_cpi_2026_2028, 2),
+            "cpi_yoy_no_tariff_counterfactual": round(projected_cpi_2026_2028 - tariff_cpi_pp, 2),
+            "unrate_pct": round(projected_unrate, 2),
             "michigan_ics": round(projected_ics, 1),
             "approval_net": round(projected_approval, 1),
             "approval_net_2026": round(projected_approval_2026, 1),
@@ -586,10 +781,10 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
     term2_2028 = 0  # R only completed 1 consecutive term by 2028
     i_2028 = -1     # Republican incumbent
 
-    # Current weighted-R input for Hibbs needs a quarterly-growth time series.
-    # We approximate using the latest real DPI YoY as a current quarter rate
-    # and project forward under each scenario.
-    current_rdpi_yoy = baseline.get("rdpi_yoy") or 1.0
+    # Hibbs requires *quarter-over-quarter annualized* per-capita RDPI growth
+    # (NOT YoY). The realized path is rebuilt from BEA monthly A229RX0 in
+    # compute_transmission_state; fallback to YoY only if FRED unavailable.
+    realized_past = baseline.get("rdpi_quarterly_path") or []
 
     results = []
     for sk in HORMUZ_SCENARIOS:
@@ -607,12 +802,16 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
         )
 
         # === Hibbs ===
-        # Build a 15-quarter QoQ growth path: assume past quarters used
-        # current_rdpi_yoy, future quarters degrade per macro projection.
-        # G_real_growth_pct is admin-period real GDP growth proxy → use as
-        # average for remaining quarters, blended with current YoY.
-        past_quarters = [current_rdpi_yoy] * 5            # 2025 Q1 - 2026 Q1 (5 quarters)
-        future_quarters = [m["G_real_growth_pct"]] * 10   # 2026 Q2 - 2028 Q3 (10 quarters)
+        # 15-quarter QoQ annualized path: past from BEA realized data,
+        # future degraded per scenario.
+        if realized_past:
+            past_quarters = (
+                realized_past[-5:] if len(realized_past) >= 5
+                else [realized_past[0]] * (5 - len(realized_past)) + realized_past
+            )
+        else:
+            past_quarters = [(baseline.get("rdpi_yoy") or 1.0)] * 5  # degraded fallback
+        future_quarters = [m["G_real_growth_pct"]] * 10   # 2026 Q2 - 2028 Q3
         hibbs_R = compute_hibbs_R(past_quarters + future_quarters)
         hibbs = hibbs_predict(weighted_real_dpi_growth=hibbs_R, i=i_2028)
 
@@ -626,11 +825,20 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
             i=i_2028,
         )
 
-        # === Ensemble ===
+        # === Lewis-Beck (sociotropic) ===
+        # Misery index = projected UNRATE + projected CPI YoY.
+        lewis_beck = lewis_beck_predict(
+            unrate_pct=m["unrate_pct"],
+            cpi_yoy_pct=m["cpi_yoy_2026_2028"],
+            i=i_2028,
+        )
+
+        # === Ensemble (4-way) ===
         ensemble = ensemble_predict(
             fair["incumbent_two_party_pct"],
             hibbs["incumbent_two_party_pct"],
             abramowitz["incumbent_two_party_pct"],
+            lewis_beck["incumbent_two_party_pct"],
         )
 
         # === 2026 House (BEW) — uses 2026-relevant approval (rally still active) ===
@@ -660,6 +868,7 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
             "fair_2028": fair,
             "hibbs_2028": hibbs,
             "abramowitz_2028": abramowitz,
+            "lewis_beck_2028": lewis_beck,
             "ensemble_2028": ensemble,
             "bew_2026_house": bew,
             "senate_2026": {
@@ -684,18 +893,22 @@ def run_all_scenarios(transmission_state: dict, polit: dict) -> dict:
             "2028_R_two_party_fair":       round(wmean(lambda r: r["fair_2028"]["incumbent_two_party_pct"]), 2),
             "2028_R_two_party_hibbs":      round(wmean(lambda r: r["hibbs_2028"]["incumbent_two_party_pct"]), 2),
             "2028_R_two_party_abramowitz": round(wmean(lambda r: r["abramowitz_2028"]["incumbent_two_party_pct"]), 2),
+            "2028_R_two_party_lewis_beck": round(wmean(lambda r: r["lewis_beck_2028"]["incumbent_two_party_pct"]), 2),
             "2028_R_two_party_ensemble":   round(wmean(lambda r: r["ensemble_2028"]["incumbent_two_party_pct"]), 2),
             "2028_incumbent_two_party_pct": round(wmean(lambda r: r["ensemble_2028"]["incumbent_two_party_pct"]), 2),  # legacy alias
             "2028_incumbent_party": "R",
             "2026_in_party_seat_change": round(wmean(lambda r: r["bew_2026_house"]["in_party_seat_change"]), 1),
         },
         "method_notes": [
-            "Three-model ensemble: Fair (rmse 2.5) + Hibbs Bread&Peace (rmse 1.85) + Abramowitz Time-for-Change (rmse 1.90).",
-            "Inverse-RMSE weights: Hibbs ~0.36, Abramowitz ~0.36, Fair ~0.27.",
+            "Four-model ensemble: Fair (rmse 2.5) + Hibbs Bread&Peace (rmse 1.85) + Abramowitz Time-for-Change (rmse 1.90) + Lewis-Beck-Tien sociotropic (rmse 2.5, [CALIBRATION_PENDING]).",
+            "Inverse-RMSE weights: Hibbs ~0.30, Abramowitz ~0.29, Fair ~0.22, Lewis-Beck ~0.22 (approx).",
             "All 2028 calcs assume R is open-seat, first-term incumbent party (DPER=0, DUR=0, TERM2=0).",
-            "Hibbs's R = λ-weighted real per-capita DPI growth across 15 quarters (λ=0.915).",
+            "Hibbs's R = λ-weighted real per-capita DPI growth across 15 quarters (λ=0.915). Past quarters now use BEA-realized QoQ annualized (not YoY).",
             "BEW House: 2026 in-party=R defending ~220 seats; flip threshold = 218.",
             "Macro projection elasticities calibrated from 1980 Iran-Iraq, 1990 Gulf War, 2008 oil peak, 2022 RU-UA.",
+            "Lewis-Beck misery index uses projected UNRATE (Okun's law from growth) + projected CPI YoY.",
+            "Tariff CPI passthrough exposed as 'tariff_decomposition' in each scenario; pre-2025 baseline 2.5%, current 13.5%, elasticity 0.10pp CPI per pp tariff (Cavallo et al 2021 conservative).",
+            "TODO [B3]: ensemble RMSE assumes residual independence; backtest on 1948-2020 needed for realistic confidence bands.",
         ],
     }
 

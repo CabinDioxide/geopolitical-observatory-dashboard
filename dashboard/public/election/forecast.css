@@ -98,6 +98,20 @@ body[data-lang="en"] .lang-zh { display: none !important; }
 .chain-card .value { font-size: 26px; font-weight: 600; color: #0f172a; }
 .chain-card .unit { font-size: 12px; color: #94a3b8; }
 .chain-card .interp { font-size: 11px; color: #64748b; line-height: 1.45; min-height: 30px; }
+.chain-card .sub-metrics {
+  display: flex; flex-direction: column; gap: 3px;
+  margin: 4px 0 8px 0; padding: 6px 8px;
+  background: #f8fafc; border-left: 2px solid #cbd5e0; border-radius: 2px;
+}
+.chain-card .sub-metric {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 11px;
+}
+.chain-card .sub-metric .sub-label { color: #64748b; }
+.chain-card .sub-metric .sub-value { font-weight: 600; font-variant-numeric: tabular-nums; }
+.chain-card .sub-metric .sub-value.pos { color: #2a9d8f; }
+.chain-card .sub-metric .sub-value.neg { color: #e63946; }
+.chain-card .sub-metric .sub-peak { font-size: 10px; color: #94a3b8; font-weight: 400; margin-left: 4px; }
 .chain-card .gauge {
   margin-top: 10px; height: 14px; border-radius: 3px;
   background: linear-gradient(to right,
