@@ -452,23 +452,56 @@ const TAG_COLORS = { '上游': '#94a3b8', '中游': '#f4a261', '下游': '#e6394
 function renderChain(state) {
   const grid = document.getElementById('chain-grid');
   grid.innerHTML = '';
+  // Parallel-group notice: explain to readers why some steps share a colored
+  // border and should be read as co-driven signals, not a causal sequence.
+  renderParallelNotice(state);
   state.chain.forEach(link => {
     const card = document.createElement('div');
-    card.className = 'chain-card' + (link.current === null ? ' no-data' : '');
+    const parallelClass = link.parallel_group ? ` parallel-${link.parallel_group}` : '';
+    card.className = 'chain-card' + (link.current === null ? ' no-data' : '') + parallelClass;
     const pct = link.pressure !== null ? link.pressure : 0;
     const valStr = link.current !== null ? Number(link.current).toLocaleString(undefined, {maximumFractionDigits: 2}) : 'no data';
     // Pick language-specific name + interpretation + unit if available
   const name = (CURRENT_LANG === 'en' && link.name_en) ? link.name_en : link.name;
   const interp = (CURRENT_LANG === 'en' && link.interpretation_en) ? link.interpretation_en : link.interpretation;
   const unit = (CURRENT_LANG === 'en' && link.unit_en) ? link.unit_en : link.unit;
+  // Optional sub-metrics (e.g., RDPI 18m cumulative + drawdown-from-peak)
+  let subMetricsHtml = '';
+  if (Array.isArray(link.sub_metrics) && link.sub_metrics.length) {
+    const rows = link.sub_metrics.map(sm => {
+      const subLabel = (CURRENT_LANG === 'en' && sm.label_en) ? sm.label_en : sm.label;
+      const subUnit = (CURRENT_LANG === 'en' && sm.unit_en) ? sm.unit_en : (sm.unit || '');
+      const subVal = sm.value !== null && sm.value !== undefined
+        ? Number(sm.value).toLocaleString(undefined, {maximumFractionDigits: 2})
+        : '—';
+      const cls = (typeof sm.value === 'number' && sm.value < 0) ? 'neg' : 'pos';
+      const peakBadge = sm.peak_date ? `<span class="sub-peak"> (peak ${sm.peak_date})</span>` : '';
+      return `<div class="sub-metric"><span class="sub-label">${subLabel}</span><span class="sub-value ${cls}">${subVal}${subUnit}${peakBadge}</span></div>`;
+    }).join('');
+    subMetricsHtml = `<div class="sub-metrics">${rows}</div>`;
+  }
+  // Evidence rating (stars) + papers (tooltip) + optional caveat warning
+  const strength = link.strength;
+  const starsHtml = strength ? `<span class="evidence-stars s${strength}" title="${(link.papers || []).join('; ')}">${'★'.repeat(strength)}${'☆'.repeat(3 - strength)}</span>` : '';
+  const caveatRaw = (CURRENT_LANG === 'en' && link.caveat_en) ? link.caveat_en : link.caveat;
+  const caveatHtml = caveatRaw ? `<div class="evidence-caveat">${caveatRaw}</div>` : '';
+  const papersHtml = (link.papers && link.papers.length)
+    ? `<div class="evidence-papers"><span class="papers-label">${CURRENT_LANG === 'en' ? 'Key papers' : '主要文献'}:</span> ${link.papers.join(' · ')}</div>`
+    : '';
   card.innerHTML = `
-      <div class="step-num">STEP ${link.step}</div>
+      <div class="step-row">
+        <div class="step-num">STEP ${link.step}</div>
+        ${starsHtml}
+      </div>
       <div class="name">${name}</div>
       <div class="value-row">
         <span class="value">${valStr}</span>
         <span class="unit">${unit}</span>
       </div>
+      ${subMetricsHtml}
       <div class="interp">${interp}</div>
+      ${caveatHtml}
+      ${papersHtml}
       <div class="gauge" style="--p: ${pct}%"></div>
       <div class="gauge-zones"><span>${t('chain.zone_upstream')}</span><span>${t('chain.zone_mid')}</span><span>${t('chain.zone_down')}</span></div>
       <div class="baseline-alarm">
@@ -482,6 +515,208 @@ function renderChain(state) {
 
   document.getElementById('epu-val').textContent = fmt(state.epu_index, 1);
   document.getElementById('chain-updated').textContent = formatDate(state.as_of);
+  renderMethodologyCaveats(state.methodology_caveats);
+}
+
+// Parallel-group notice: prepended to the chain grid so readers see the
+// structure note before reading the cards in step order. Idempotent —
+// removes existing notice before re-rendering (lang switch safe).
+function renderParallelNotice(state) {
+  const grid = document.getElementById('chain-grid');
+  // Remove any previously-rendered parallel notice
+  const existing = document.querySelector('.parallel-notice');
+  if (existing) existing.remove();
+  const meta = state.parallel_group_meta || {};
+  const groups = Object.entries(meta);
+  if (!groups.length) return;
+  const isEn = CURRENT_LANG === 'en';
+  const notice = document.createElement('div');
+  notice.className = 'parallel-notice';
+  notice.innerHTML = groups.map(([gid, g]) => {
+    const label = isEn && g.label_en ? g.label_en : g.label;
+    const text = isEn && g.explanation_en ? g.explanation_en : g.explanation;
+    const steps = state.chain.filter(c => c.parallel_group === gid).map(c => c.step).join('+');
+    return `<div class="parallel-group-note parallel-${gid}">
+      <span class="pg-pill">${isEn ? 'Parallel signals' : '并行信号'} · STEP ${steps}</span>
+      <span class="pg-label">${label}</span>
+      <div class="pg-explain">${text}</div>
+    </div>`;
+  }).join('');
+  if (grid.parentNode) grid.parentNode.insertBefore(notice, grid);
+}
+
+// Honest-disclosure panel: renders RMSE caveats + per-link issues from JSON.
+// Sits at the bottom of the chain tab so it's read in context — readers see
+// the chain, then immediately see what NOT to over-interpret.
+function renderMethodologyCaveats(caveats) {
+  const container = document.getElementById('methodology-caveats');
+  if (!container) return;
+  if (!caveats) { container.innerHTML = ''; return; }
+  const isEn = CURRENT_LANG === 'en';
+  const pickReason = (item) => isEn && item.reason_en ? item.reason_en : (item.reason || '');
+  const pickIssue = (item) => isEn && item.issue_en ? item.issue_en : (item.issue || '');
+  const ensCav = caveats.ensemble_rmse_honesty || {};
+  const hibbsCav = caveats.hibbs_out_of_sample || {};
+  const lbCav = caveats.lewis_beck_pending || {};
+  const icsCav = caveats.ics_approval_causal || {};
+  const tariffCav = caveats.tariff_elasticity || {};
+  const rallyCav = caveats.rally_effect_estimate || {};
+  const leg = caveats.evidence_legend || {};
+  const legend = isEn
+    ? `<div class="caveat-legend">
+         <span><span class="evidence-stars s3">★★★</span> ${leg.strength_3_en || ''}</span>
+         <span><span class="evidence-stars s2">★★☆</span> ${leg.strength_2_en || ''}</span>
+         <span><span class="evidence-stars s1">★☆☆</span> ${leg.strength_1_en || ''}</span>
+       </div>`
+    : `<div class="caveat-legend">
+         <span><span class="evidence-stars s3">★★★</span> ${leg.strength_3 || ''}</span>
+         <span><span class="evidence-stars s2">★★☆</span> ${leg.strength_2 || ''}</span>
+         <span><span class="evidence-stars s1">★☆☆</span> ${leg.strength_1 || ''}</span>
+       </div>`;
+  const title = isEn ? 'Honest disclosure — what NOT to over-interpret' : '诚实标注 — 不要过度解读的部分';
+  const sub = isEn
+    ? 'Every model in this dashboard has known limitations. This panel is the runtime list — read before quoting any number.'
+    : '本 dashboard 的每个模型都有已知 limitations。本 panel 是运行时清单——引用任何具体数字之前先读。';
+  const items = [
+    {
+      tag: isEn ? 'Ensemble RMSE under-states uncertainty' : 'Ensemble RMSE 低估不确定性',
+      severity: 'high',
+      body: `${pickReason(ensCav)} <span class="caveat-num">${isEn ? 'displayed' : '当前显示'}: ±${ensCav.displayed} · ${isEn ? 'realistic range' : '真实区间'}: ±${(ensCav.realistic_estimate_range || []).join('—')}</span>`,
+    },
+    {
+      tag: isEn ? 'Hibbs out-of-sample degradation' : 'Hibbs out-of-sample 退化',
+      severity: 'med',
+      body: `${pickReason(hibbsCav)} <span class="caveat-num">in-sample: ${hibbsCav.in_sample_rmse} · out-of-sample est: ${hibbsCav.out_of_sample_rmse_estimate}</span>`,
+    },
+    {
+      tag: isEn ? 'Lewis-Beck calibration pending' : 'Lewis-Beck 系数未校准',
+      severity: 'med',
+      body: `${pickReason(lbCav)} <span class="caveat-num">${lbCav.status || ''}</span>`,
+    },
+    {
+      tag: pickIssue(icsCav),
+      severity: 'high',
+      body: pickReason(icsCav),
+    },
+    {
+      tag: isEn ? 'Tariff elasticity not swept' : 'Tariff 弹性未做 sensitivity',
+      severity: 'low',
+      body: `${pickReason(tariffCav)} <span class="caveat-num">${isEn ? 'used' : '当前用'}: ${tariffCav.displayed_value} · ${isEn ? 'lit range' : '文献区间'}: ${(tariffCav.literature_range || []).join('—')}</span>`,
+    },
+    {
+      tag: isEn ? 'Rally effect median guess' : 'Rally effect 仅 median guess',
+      severity: 'med',
+      body: `${pickReason(rallyCav)} <span class="caveat-num">${isEn ? 'used' : '当前用'}: +${rallyCav.displayed_value}pp · ${isEn ? 'historical range' : '历史区间'}: +${(rallyCav.historical_range || []).join('—')}pp</span>`,
+    },
+  ];
+  const rows = items.map(it => `
+    <div class="caveat-row sev-${it.severity}">
+      <div class="caveat-tag">${it.tag}</div>
+      <div class="caveat-body">${it.body}</div>
+    </div>
+  `).join('');
+  // Optional backtest results block — only if backtest has been run
+  const backtestHtml = caveats.backtest ? renderBacktestBlock(caveats.backtest, isEn) : '';
+  container.innerHTML = `
+    <div class="caveat-panel">
+      <h3 class="caveat-title">${title}</h3>
+      <p class="caveat-sub">${sub}</p>
+      ${legend}
+      <div class="caveat-rows">${rows}</div>
+      ${backtestHtml}
+    </div>
+  `;
+}
+
+// Backtest results sub-section — displays n, paper vs sample RMSE,
+// residual correlation, and the corrected ensemble RMSE.
+function renderBacktestBlock(bt, isEn) {
+  const electionsTxt = bt.elections ? bt.elections.join(', ') : '';
+  const paperRmse = bt.paper_rmse_per_model || {};
+  const correction = bt.ensemble_rmse_correction || {};
+  const corr = bt.residual_correlation || [];
+  const legend = bt.residual_correlation_legend || ['fair','hibbs','abramowitz','lewis_beck'];
+  const reCoefs = bt.re_estimated_coefficients || {};
+  const warnings = bt.warnings || [];
+
+  // Paper RMSE comparison table
+  const productionRmse = { fair: 2.5, hibbs: 1.85, abramowitz: 1.9, lewis_beck: 2.5 };
+  const rmseRows = Object.entries(paperRmse).map(([model, sampleR]) => {
+    const paperR = productionRmse[model] || '—';
+    const ratio = paperR ? (sampleR / paperR).toFixed(2) : '—';
+    return `<tr>
+      <td>${model}</td>
+      <td>${paperR}</td>
+      <td>${sampleR.toFixed(2)}</td>
+      <td class="${sampleR > paperR * 1.5 ? 'bt-bad' : sampleR > paperR ? 'bt-warn' : 'bt-ok'}">${ratio}×</td>
+    </tr>`;
+  }).join('');
+
+  // Correlation matrix as small heatmap
+  const corrRows = corr.map((row, i) => {
+    const cells = row.map((v, j) => {
+      const intensity = Math.abs(v);
+      const color = v >= 0 ? `rgba(99, 102, 241, ${intensity})` : `rgba(220, 38, 38, ${intensity})`;
+      return `<td style="background:${color}; color:${intensity > 0.5 ? '#fff' : '#0f172a'};">${v.toFixed(2)}</td>`;
+    }).join('');
+    return `<tr><th>${legend[i] || ''}</th>${cells}</tr>`;
+  }).join('');
+  const corrHeader = `<tr><th></th>${legend.map(l => `<th>${l}</th>`).join('')}</tr>`;
+
+  // Re-estimated coefs (small print)
+  const coefRows = Object.entries(reCoefs).map(([model, c]) => {
+    const cells = Object.entries(c)
+      .filter(([k]) => k !== 'n' && k !== 'rmse_in_sample')
+      .map(([k, v]) => `<span class="coef-cell">${k}=${v}</span>`).join(' ');
+    return `<div class="bt-coef-row"><b>${model}:</b> ${cells} <span class="coef-cell rmse-cell">in-sample RMSE=${c.rmse_in_sample}</span></div>`;
+  }).join('');
+
+  const t1 = isEn ? 'B3 backtest results' : 'B3 回测结果';
+  const t2 = isEn
+    ? `Partial sample n=${bt.n} (${electionsTxt}). Computed ${bt.computed_at?.slice(0, 10) || ''}. NOT used to update config.py — for inspection only.`
+    : `部分样本 n=${bt.n} 次选举 (${electionsTxt})。计算于 ${bt.computed_at?.slice(0, 10) || ''}。不用于更新 config.py——仅供 inspection。`;
+  const tRmse = isEn ? 'Paper RMSE vs out-of-sample RMSE' : 'Paper RMSE vs 实际样本 RMSE';
+  const tCorr = isEn ? 'Residual correlation matrix (Pearson)' : '残差相关矩阵（Pearson）';
+  const tEns = isEn ? 'Ensemble RMSE correction' : 'Ensemble RMSE 修正';
+  const tCoef = isEn ? 'Re-estimated coefficients (do NOT use — small sample, may have sign-flip noise)' : '重估系数（不要用——小样本，可能有符号翻转噪音）';
+  const ensTxt = isEn
+    ? `Independence assumption: ±${correction.independence_assumption_rmse} → realistic (correlated): ±${correction.correlated_realistic_rmse} (×${correction.inflation_factor} inflation). The 95% CI shown on the scenarios tab should be widened by this factor.`
+    : `独立假设: ±${correction.independence_assumption_rmse} → 真实（含相关性）: ±${correction.correlated_realistic_rmse} （×${correction.inflation_factor} 放大）。情景 tab 显示的 95% 置信区间应按此倍数放宽。`;
+  const warnHtml = warnings.length
+    ? `<ul class="bt-warnings">${warnings.map(w => `<li>${w}</li>`).join('')}</ul>`
+    : '';
+
+  return `
+    <div class="bt-block">
+      <h4 class="bt-title">${t1}</h4>
+      <p class="bt-sub">${t2}</p>
+      <div class="bt-grid">
+        <div class="bt-section">
+          <h5>${tRmse}</h5>
+          <table class="bt-table">
+            <thead><tr><th>${isEn ? 'Model' : '模型'}</th><th>Paper</th><th>${isEn ? 'Sample' : '样本'}</th><th>${isEn ? 'Ratio' : '比率'}</th></tr></thead>
+            <tbody>${rmseRows}</tbody>
+          </table>
+        </div>
+        <div class="bt-section">
+          <h5>${tCorr}</h5>
+          <table class="bt-corr-table">
+            <thead>${corrHeader}</thead>
+            <tbody>${corrRows}</tbody>
+          </table>
+        </div>
+      </div>
+      <div class="bt-section bt-ens-section">
+        <h5>${tEns}</h5>
+        <p>${ensTxt}</p>
+      </div>
+      <details class="bt-coef-details">
+        <summary>${tCoef}</summary>
+        <div class="bt-coef-list">${coefRows}</div>
+      </details>
+      ${warnHtml}
+    </div>
+  `;
 }
 
 function formatBaseline(v, unit) {
@@ -526,6 +761,43 @@ function renderScenarios(data, summary) {
     const senControl = sen.d_majority_prob > 0.5 ? t('scen.senate_d_flip') : t('scen.senate_r_hold');
     const senDmajPct = (sen.d_majority_prob * 100).toFixed(0);
 
+    // Sensitivity sweeps — only show if backend computed them
+    const isEn = CURRENT_LANG === 'en';
+    const tariffSens = sc.tariff_sensitivity_2028 || [];
+    const tariffHtml = tariffSens.length ? `
+      <div class="sens-block">
+        <div class="sens-title">${isEn ? 'Tariff sensitivity (2028 R %)' : '关税敏感性（2028 R%）'}</div>
+        <div class="sens-rows">
+          ${tariffSens.map(t => {
+            const dlt = t.delta_vs_baseline_pp;
+            const dltStr = (dlt > 0 ? '+' : '') + (dlt !== null ? dlt.toFixed(2) : '—');
+            const cls = t.is_baseline_tariff ? 'sens-row baseline' : 'sens-row';
+            return `<div class="${cls}">
+              <span class="sens-label">${t.tariff_rate_pct}%</span>
+              <span class="sens-cpi">CPI ${fmt(t.projected_cpi_yoy, 1)}%</span>
+              <span class="sens-val">R ${fmt(t.ensemble_R_two_party_pct, 1)}%</span>
+              <span class="sens-delta ${dlt < 0 ? 'neg' : 'pos'}">${dltStr}pp</span>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>` : '';
+    const casualtySens = sc.casualty_sensitivity_2028 || [];
+    const casualtyHtml = casualtySens.length ? `
+      <div class="sens-block sens-casualty">
+        <div class="sens-title">${isEn ? 'Casualty / rally sensitivity (2028 R %)' : '伤亡 / Rally 敏感性（2028 R%）'}</div>
+        <div class="sens-rows">
+          ${casualtySens.map(cs => {
+            const label = isEn && cs.label_en ? cs.label_en : cs.label;
+            return `<div class="sens-row">
+              <span class="sens-label" title="${label}">${cs.casualty_key.replace('_', ' ')}</span>
+              <span class="sens-cpi">app2028 ${cs.approval_2028 > 0 ? '+' : ''}${fmt(cs.approval_2028, 1)}</span>
+              <span class="sens-val">R ${fmt(cs.ensemble_2028_R_pct, 1)}%</span>
+              <span class="sens-delta">rally +${cs.rally_effect_pp} / drag ${cs.casualty_drag_pp}</span>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>` : '';
+
     c.innerHTML = `
       <div class="scen-key">${t('scen.scenario_label')} ${sc.scenario.split('_')[0]} · ${t('scen.prior_prob')} ${(sc.probability_prior * 100).toFixed(0)}%</div>
       <div class="scen-label">${scLabel}</div>
@@ -553,6 +825,8 @@ function renderScenarios(data, summary) {
           ${t('scen.two_party_pred')} ${fmt(ens.incumbent_two_party_pct, 1)}% · ${t('scen.win_rate')} ${(ens.win_prob * 100).toFixed(0)}%
         </div>
       </div>
+      ${tariffHtml}
+      ${casualtyHtml}
     `;
     sum.appendChild(c);
   });
