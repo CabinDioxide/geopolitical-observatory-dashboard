@@ -615,12 +615,106 @@ function renderMethodologyCaveats(caveats) {
       <div class="caveat-body">${it.body}</div>
     </div>
   `).join('');
+  // Optional backtest results block — only if backtest has been run
+  const backtestHtml = caveats.backtest ? renderBacktestBlock(caveats.backtest, isEn) : '';
   container.innerHTML = `
     <div class="caveat-panel">
       <h3 class="caveat-title">${title}</h3>
       <p class="caveat-sub">${sub}</p>
       ${legend}
       <div class="caveat-rows">${rows}</div>
+      ${backtestHtml}
+    </div>
+  `;
+}
+
+// Backtest results sub-section — displays n, paper vs sample RMSE,
+// residual correlation, and the corrected ensemble RMSE.
+function renderBacktestBlock(bt, isEn) {
+  const electionsTxt = bt.elections ? bt.elections.join(', ') : '';
+  const paperRmse = bt.paper_rmse_per_model || {};
+  const correction = bt.ensemble_rmse_correction || {};
+  const corr = bt.residual_correlation || [];
+  const legend = bt.residual_correlation_legend || ['fair','hibbs','abramowitz','lewis_beck'];
+  const reCoefs = bt.re_estimated_coefficients || {};
+  const warnings = bt.warnings || [];
+
+  // Paper RMSE comparison table
+  const productionRmse = { fair: 2.5, hibbs: 1.85, abramowitz: 1.9, lewis_beck: 2.5 };
+  const rmseRows = Object.entries(paperRmse).map(([model, sampleR]) => {
+    const paperR = productionRmse[model] || '—';
+    const ratio = paperR ? (sampleR / paperR).toFixed(2) : '—';
+    return `<tr>
+      <td>${model}</td>
+      <td>${paperR}</td>
+      <td>${sampleR.toFixed(2)}</td>
+      <td class="${sampleR > paperR * 1.5 ? 'bt-bad' : sampleR > paperR ? 'bt-warn' : 'bt-ok'}">${ratio}×</td>
+    </tr>`;
+  }).join('');
+
+  // Correlation matrix as small heatmap
+  const corrRows = corr.map((row, i) => {
+    const cells = row.map((v, j) => {
+      const intensity = Math.abs(v);
+      const color = v >= 0 ? `rgba(99, 102, 241, ${intensity})` : `rgba(220, 38, 38, ${intensity})`;
+      return `<td style="background:${color}; color:${intensity > 0.5 ? '#fff' : '#0f172a'};">${v.toFixed(2)}</td>`;
+    }).join('');
+    return `<tr><th>${legend[i] || ''}</th>${cells}</tr>`;
+  }).join('');
+  const corrHeader = `<tr><th></th>${legend.map(l => `<th>${l}</th>`).join('')}</tr>`;
+
+  // Re-estimated coefs (small print)
+  const coefRows = Object.entries(reCoefs).map(([model, c]) => {
+    const cells = Object.entries(c)
+      .filter(([k]) => k !== 'n' && k !== 'rmse_in_sample')
+      .map(([k, v]) => `<span class="coef-cell">${k}=${v}</span>`).join(' ');
+    return `<div class="bt-coef-row"><b>${model}:</b> ${cells} <span class="coef-cell rmse-cell">in-sample RMSE=${c.rmse_in_sample}</span></div>`;
+  }).join('');
+
+  const t1 = isEn ? 'B3 backtest results' : 'B3 回测结果';
+  const t2 = isEn
+    ? `Partial sample n=${bt.n} (${electionsTxt}). Computed ${bt.computed_at?.slice(0, 10) || ''}. NOT used to update config.py — for inspection only.`
+    : `部分样本 n=${bt.n} 次选举 (${electionsTxt})。计算于 ${bt.computed_at?.slice(0, 10) || ''}。不用于更新 config.py——仅供 inspection。`;
+  const tRmse = isEn ? 'Paper RMSE vs out-of-sample RMSE' : 'Paper RMSE vs 实际样本 RMSE';
+  const tCorr = isEn ? 'Residual correlation matrix (Pearson)' : '残差相关矩阵（Pearson）';
+  const tEns = isEn ? 'Ensemble RMSE correction' : 'Ensemble RMSE 修正';
+  const tCoef = isEn ? 'Re-estimated coefficients (do NOT use — small sample, may have sign-flip noise)' : '重估系数（不要用——小样本，可能有符号翻转噪音）';
+  const ensTxt = isEn
+    ? `Independence assumption: ±${correction.independence_assumption_rmse} → realistic (correlated): ±${correction.correlated_realistic_rmse} (×${correction.inflation_factor} inflation). The 95% CI shown on the scenarios tab should be widened by this factor.`
+    : `独立假设: ±${correction.independence_assumption_rmse} → 真实（含相关性）: ±${correction.correlated_realistic_rmse} （×${correction.inflation_factor} 放大）。情景 tab 显示的 95% 置信区间应按此倍数放宽。`;
+  const warnHtml = warnings.length
+    ? `<ul class="bt-warnings">${warnings.map(w => `<li>${w}</li>`).join('')}</ul>`
+    : '';
+
+  return `
+    <div class="bt-block">
+      <h4 class="bt-title">${t1}</h4>
+      <p class="bt-sub">${t2}</p>
+      <div class="bt-grid">
+        <div class="bt-section">
+          <h5>${tRmse}</h5>
+          <table class="bt-table">
+            <thead><tr><th>${isEn ? 'Model' : '模型'}</th><th>Paper</th><th>${isEn ? 'Sample' : '样本'}</th><th>${isEn ? 'Ratio' : '比率'}</th></tr></thead>
+            <tbody>${rmseRows}</tbody>
+          </table>
+        </div>
+        <div class="bt-section">
+          <h5>${tCorr}</h5>
+          <table class="bt-corr-table">
+            <thead>${corrHeader}</thead>
+            <tbody>${corrRows}</tbody>
+          </table>
+        </div>
+      </div>
+      <div class="bt-section bt-ens-section">
+        <h5>${tEns}</h5>
+        <p>${ensTxt}</p>
+      </div>
+      <details class="bt-coef-details">
+        <summary>${tCoef}</summary>
+        <div class="bt-coef-list">${coefRows}</div>
+      </details>
+      ${warnHtml}
     </div>
   `;
 }

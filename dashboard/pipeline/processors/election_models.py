@@ -1435,6 +1435,33 @@ def run() -> dict:
         return {"_meta": {"status": "skipped", "reason": "no fred data"}}
 
     transmission = compute_transmission_state(fred, polit)
+
+    # Merge backtest results into methodology_caveats if available.
+    # Backtest is computed by `python -m pipeline.processors.backtest` and is
+    # optional — if the file is absent, the methodology panel just doesn't
+    # show the backtest section. This keeps backtest a manual decision rather
+    # than auto-overwriting on every pipeline run.
+    backtest_path = ELECTION_DIR / "backtest_results.json"
+    if backtest_path.exists():
+        try:
+            with open(backtest_path) as f:
+                bt = json.load(f)
+            if bt.get("_meta", {}).get("status") == "ok":
+                transmission["methodology_caveats"]["backtest"] = {
+                    "n": bt["_meta"]["n"],
+                    "elections": bt["_meta"]["elections"],
+                    "paper_rmse_per_model": bt["paper_coefficient_evaluation"]["rmse_per_model"],
+                    "residual_correlation": bt["paper_coefficient_evaluation"]["residual_correlation_matrix"],
+                    "residual_correlation_legend": bt["paper_coefficient_evaluation"]["residual_correlation_legend"],
+                    "ensemble_rmse_correction": bt["ensemble_rmse_correction"],
+                    "re_estimated_coefficients": bt["re_estimated_coefficients"],
+                    "warnings": bt.get("warnings", []),
+                    "computed_at": bt["_meta"]["computed_at"],
+                }
+                logger.info(f"Merged backtest results (n={bt['_meta']['n']}) into methodology_caveats")
+        except Exception as e:
+            logger.warning(f"Could not merge backtest results: {e}")
+
     with open(ELECTION_DIR / "transmission_state.json", "w") as f:
         json.dump(transmission, f, indent=2)
 

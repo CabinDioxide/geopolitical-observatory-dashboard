@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-05-14T14:44:54.367060Z",
+  "as_of": "2026-05-14T14:50:05.901936Z",
   "chain": [
     {
       "step": 1,
@@ -291,6 +291,111 @@
       "strength_2_en": "Medium: core papers support, but with specific calibration / out-of-sample / sample-size caveats",
       "strength_1": "\u5f31\uff1a\u56e0\u679c\u65b9\u5411\u6709\u4e89\u8bae / \u5c0f\u6837\u672c / \u4ec5\u57fa\u4e8e prior \u63a8\u65ad",
       "strength_1_en": "Weak: causal direction contested / small sample / prior-based inference"
+    },
+    "backtest": {
+      "n": 11,
+      "elections": [
+        1980,
+        1984,
+        1988,
+        1992,
+        1996,
+        2000,
+        2004,
+        2008,
+        2012,
+        2016,
+        2020
+      ],
+      "paper_rmse_per_model": {
+        "fair": 4.485,
+        "hibbs": 3.161,
+        "abramowitz": 9.959,
+        "lewis_beck": 7.614
+      },
+      "residual_correlation": [
+        [
+          1.0,
+          -0.038,
+          -0.168,
+          -0.128
+        ],
+        [
+          -0.038,
+          1.0,
+          0.28,
+          0.325
+        ],
+        [
+          -0.168,
+          0.28,
+          1.0,
+          0.178
+        ],
+        [
+          -0.128,
+          0.325,
+          0.178,
+          1.0
+        ]
+      ],
+      "residual_correlation_legend": [
+        "fair",
+        "hibbs",
+        "abramowitz",
+        "lewis_beck"
+      ],
+      "ensemble_rmse_correction": {
+        "independence_assumption_rmse": 2.594,
+        "correlated_realistic_rmse": 3.01,
+        "inflation_factor": 1.16,
+        "weights_used": {
+          "fair": 0.289,
+          "hibbs": 0.41,
+          "abramowitz": 0.13,
+          "lewis_beck": 0.17
+        },
+        "interpretation": "Independence-assumption ensemble RMSE under-states uncertainty when residuals are correlated. The corrected RMSE accounts for the actual residual covariance observed in this backtest sample."
+      },
+      "re_estimated_coefficients": {
+        "fair": {
+          "alpha": 55.934,
+          "beta_g": 1.4694,
+          "beta_p": -1.1324,
+          "beta_z": -0.8976,
+          "beta_dper": -6.8226,
+          "beta_dur": 9.1029,
+          "rmse_in_sample": 1.926,
+          "n": 11
+        },
+        "hibbs": {
+          "alpha": 48.339,
+          "beta_r": 2.1739,
+          "rmse_in_sample": 2.499,
+          "n": 11
+        },
+        "abramowitz": {
+          "alpha": 52.386,
+          "beta_g": 0.1308,
+          "beta_app": 0.1497,
+          "beta_t2": -2.1413,
+          "rmse_in_sample": 2.626,
+          "n": 11
+        },
+        "lewis_beck": {
+          "alpha": 54.95,
+          "beta_misery": 0.415,
+          "rmse_in_sample": 4.204,
+          "n": 11
+        }
+      },
+      "warnings": [
+        "Sample size n=11 is small \u2014 coefficient point estimates have wide standard errors.",
+        "Re-estimated coefficients are reported for inspection only and do NOT replace config.py.",
+        "Hibbs R values are sourced from Hibbs's published spreadsheet; G/P/Z values are from Fair's spreadsheet \u2014 recheck on extension.",
+        "1948-1976 elections are excluded for now (confidence='low'); fill those in to expand to full 18-election sample."
+      ],
+      "computed_at": "2026-05-14T14:48:11.644100Z"
     }
   },
   "parallel_group_meta": {
