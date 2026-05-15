@@ -38,8 +38,8 @@
   <!-- TAB 1: 传导链 -->
   <section id="tab-chain" class="tab-pane active">
     <div class="intro">
-      <h2 data-i18n="chain.title">传导链：从油价到选票的九个观测点</h2>
-      <p data-i18n="chain.intro1">霍尔木兹封锁通过九个步骤传导至选举结果。每一格显示当前值、基线（中性水平）、告警（5pp 选票损失对应水平）。每条 bar 分三段彩色区间——指针落在哪一段，直接读出风险级别：</p>
+      <h2 data-i18n="chain.title">传导链：从油价到选票的十个观测点</h2>
+      <p data-i18n="chain.intro1">霍尔木兹封锁通过十个步骤传导至选举结果（2026-05 PR 加入第 10 步失业率作为 sociotropic 第二支柱，与 step 6 RDPI 平行）。每一格显示当前值、基线（中性水平）、告警（5pp 选票损失对应水平）。每条 bar 分三段彩色区间——指针落在哪一段，直接读出风险级别：</p>
       <p style="margin-top:8px;" data-i18n="chain.intro2">
         <span class="tag-inline" style="background:#2a9d8f; color:#fff;">上游</span>（绿，0–33）该指标处于安全区间，风险尚未传导到下一环节；
         <span class="tag-inline" style="background:#f4a261; color:#fff;">中游</span>（橙，33–66）指标正在恶化，下游将开始受影响；
@@ -61,7 +61,7 @@
       <h2 data-i18n="scen.title">5 种情形的推演：霍尔木兹未来走向对 2026 中期 + 2028 大选的影响</h2>
       <p data-i18n="scen.intro1">每种霍尔木兹未来走向通过传导链产生不同的宏观结果（油价、通胀、收入、信心、支持率），再带入 4 个学术模型输出选举结果。下方每张卡片展示一个情形的<b>选举含义</b>：共和党在 2026 中期会失多少席位、控不控得住众议院；2028 大选会输多少（或赢多少）。带宽为 ±2·均方根误差（RMSE，95% 置信区间）。</p>
       <p style="margin-top:8px;" data-i18n="scen.intro2"><b>预测模型说明</b>：2026 中期参议院使用 PVI + 国家环境的 logistic 州层模型 + 蒙特卡洛多数概率；2026 中期众议院使用 Bafumi-Erikson-Wlezien 模型；2028 总统大选取三个独立模型（Fair Vote Equation、Hibbs 面包与和平、Abramowitz Time-for-Change）的反向 RMSE 加权集合预测。各模型公式与选择理由见⑤方法论页。</p>
-      <p style="margin-top:8px; padding:10px 14px; background:#fef3c7; border-left:3px solid #d97706; border-radius:4px; font-size:13px;" data-i18n="scen.senate_caveat"><b>⚠️ 关于参议院预测的诚实说明</b>：2026 参议院 Class II 改选结构对民主党极不友好——22 个共和党席位防守 vs 11 个民主党席位。即便霍尔木兹冲击大幅恶化政治环境，民主党最多净增 2-4 席。<br><br><b>各情景的差异主要体现在两个维度</b>：(1) 油价/通胀传导对选民信心的影响（A 缓解 → E 全面战争 共和党两党票从 49.7% 下降到 44.7%）；(2) 美军直接介入（情景 D）触发"军事胜利 rally + 长期伤亡拖累"双重效应——短期参议院多数概率从 60% 降至 53%（rally 拉高支持率有利共和党守 ME/NC 等关键席位），但 2028 总统大选 rally 完全衰减后 (Mueller 1973 半衰期 ~6 个月)，伤亡累积反而把支持率拖到 -16，反不如其他情景。这是 1991 老布什"沙漠风暴 89% 支持率 → 18 个月后 34%"的镜像。</p>
+      <p style="margin-top:8px; padding:10px 14px; background:#fef3c7; border-left:3px solid #d97706; border-radius:4px; font-size:13px;" data-i18n="scen.senate_caveat"><b>⚠️ 关于参议院预测的诚实说明</b>：2026 参议院 Class II 改选结构对民主党极不友好——22 个共和党席位防守 vs 11 个民主党席位。即便霍尔木兹冲击大幅恶化政治环境，民主党最多净增 2-4 席。<br><br><b>各情景的差异主要体现在两个维度</b>（2026-05-14 快照）：(1) 油价/通胀传导对选民信心的影响（A 缓解 → E 全面战争 共和党两党票从 49.0% 下降到 44.5%，4.5pp 跨度）；(2) 美军直接介入（情景 D）触发"军事胜利 rally + 长期伤亡拖累"双重效应——短期参议院多数概率从 60% 降至 53%（rally 拉高支持率有利共和党守 ME/NC 等关键席位），但 2028 总统大选 rally 完全衰减后 (Mueller 1973 半衰期 ~6 个月)，伤亡累积反而把支持率拖到 -16，反不如其他情景。这是 1991 老布什"沙漠风暴 89% 支持率 → 18 个月后 34%"的镜像。</p>
     </div>
     <div id="scenario-summary" class="summary-cards"></div>
     <h3 class="section-h" data-i18n="scen.table_h">各情景下的政治结果对比表</h3>
@@ -142,6 +142,7 @@
     <div class="intro">
       <h2 data-i18n="meth.title">方法论说明</h2>
       <p data-i18n="meth.intro">本 dashboard 的核心任务是将地缘政治冲击（霍尔木兹海峡封锁）通过宏观与政治传导链转换为美国选举结果预测。下文逐项说明所用模型、选择理由、历史预测准确度、传导链结构与数据来源。</p>
+      <p data-i18n="meth.snapshot" style="margin-top:8px; padding:8px 12px; background:#f1f5f9; border-left:3px solid #94a3b8; border-radius:3px; font-size:12px; color:#475569;"><b>关于本页硬编码数字</b>：以下章节中的具体数值（ensemble R %、scenario 跨度、Fair vs Abramowitz gap 等）是 <b>2026-05-14 快照</b>。实时数字以本页顶部 panel + ② 情景 tab + ① 传导链 tab 卡片为准（由 daily cron 自动更新）。如硬编码数字与顶部 panel 数据不一致，以 panel 数据为准——本节文本是叙述性，runtime panel 是单一事实来源。</p>
     </div>
 
     <!-- Dynamic methodology caveats + B3 backtest runtime panel.
@@ -246,7 +247,7 @@
           </tr>
         </tbody>
       </table>
-      <p style="margin-top:14px;">四个模型使用不同输入变量：<b>Fair</b> 综合考虑增长、通胀与结构因素；<b>Hibbs</b> 仅观察实际人均可支配收入但加权 15 季度记忆（<b>注：2026-05 PR 后修正——之前误用总额 DSPIC96，现切到人均 A229RX0，符合 Hibbs 1982/2008 原始 specification</b>）；<b>Abramowitz</b> 主要看支持率（民意层）；<b>Lewis-Beck</b> 加入失业率 + 通胀 sociotropic 维度。Fair / Hibbs / Abramowitz 是 pocketbook 谱系（个人收入），Lewis-Beck 是 sociotropic 谱系（国家整体经济新闻）——两个谱系的对冲让 ensemble 不再单边偏向 retrospective 视角。四模型预测一致时可信度高；分歧大时（如当下 Fair 与 Abramowitz 差 11.7pp）则提示经济数据与选民感知出现严重背离，1992 / 2016 / 2024 选举均属此种情形。</p>
+      <p style="margin-top:14px;">四个模型使用不同输入变量：<b>Fair</b> 综合考虑增长、通胀与结构因素；<b>Hibbs</b> 仅观察实际人均可支配收入但加权 15 季度记忆（<b>注：2026-05 PR 后修正——之前误用总额 DSPIC96，现切到人均 A229RX0，符合 Hibbs 1982/2008 原始 specification</b>）；<b>Abramowitz</b> 主要看支持率（民意层）；<b>Lewis-Beck</b> 加入失业率 + 通胀 sociotropic 维度。Fair / Hibbs / Abramowitz 是 pocketbook 谱系（个人收入），Lewis-Beck 是 sociotropic 谱系（国家整体经济新闻）——两个谱系的对冲让 ensemble 不再单边偏向 retrospective 视角。四模型预测一致时可信度高；分歧大时（如 2026-05-14 快照 Fair 54.7% vs Abramowitz 42.7% 差 12.0pp）则提示经济数据与选民感知出现严重背离，1992 / 2016 / 2024 选举均属此种情形。</p>
 
       <h4 style="margin-top:20px; font-size:14px; color:#0f172a;">为什么没选其他常见模型？</h4>
       <table class="method-table" style="margin-top:10px;">
@@ -329,7 +330,7 @@
         <li><b>实际相关性修正后</b>：±3.01pp</li>
         <li><b>放大倍数 ×1.16</b>——dashboard 显示的 95% 置信区间应按此倍数放宽</li>
       </ul>
-      <p style="margin-top:10px;">具体来说："集合预测 R 48.4%"的<b>真实 95% 置信区间</b>约为 [42.4%, 54.4%]（按 ×3.01 双侧），而非生产代码显示的 [46.3%, 50.5%]（按 ×1.07 双侧）。<b>放宽倍数 ×2.8</b>，因为 paper RMSE 严重低估实际 out-of-sample RMSE。</p>
+      <p style="margin-top:10px;">具体来说（基于 2026-05-14 快照 weighted ensemble R = 47.9%）："集合预测 R 47.9%"的<b>真实 95% 置信区间</b>约为 [41.9%, 53.9%]（按 ±3.01·2 = ±6.02pp 双侧），而非生产代码显示的 [45.8%, 50.0%]（按 ±1.07·2 = ±2.14pp 双侧）。<b>放宽倍数 ×2.8</b>，因为 paper RMSE 严重低估实际 out-of-sample RMSE。</p>
 
       <h4 style="margin-top:14px; font-size:14px; color:#0f172a;">为什么 backtest 不自动改 config.py 系数</h4>
       <ul class="method-list" style="border-left-color:#475569;">
@@ -340,7 +341,7 @@
       </ul>
 
       <h4 style="margin-top:14px; font-size:14px; color:#0f172a;">模型分歧本身是信号</h4>
-      <p>当四个模型预测一致（说明输入信号强烈），集合预测可信度高。当四模型分歧大（如当下 Fair 与 Abramowitz 差 11pp），表明模型在"权重不同输入变量时给出不同结论"——这本身就是诊断信号，意味着经济数据与选民感知出现严重背离，1992 / 2016 / 2024 选举均属此种情形。<b>2026 dashboard 显示的 Fair vs Abramowitz gap 是一个 attention signal</b>，不是单纯的 noise。</p>
+      <p>当四个模型预测一致（说明输入信号强烈），集合预测可信度高。当四模型分歧大（2026-05-14 快照 Fair 54.7% vs Abramowitz 42.7%，差 12.0pp），表明模型在"权重不同输入变量时给出不同结论"——这本身就是诊断信号，意味着经济数据与选民感知出现严重背离，1992 / 2016 / 2024 选举均属此种情形。<b>2026 dashboard 显示的 Fair vs Abramowitz gap 是一个 attention signal</b>，不是单纯的 noise。</p>
     </div>
 
     <h3 class="method-h">三、传导链：从油价到选票的十步链条（2026-05 PR 升级）</h3>
@@ -375,7 +376,7 @@
 
     <h3 class="method-h">四、军事干预的额外传导通道（情景 D 专用）</h3>
     <div class="method-block">
-      <p>第三节描述的九步传导链覆盖<b>经济通道</b>——油价通过通胀和实际收入影响选民感知。但情景 D（美军直接控制海峡）涉及军事行动，触发两个完全独立的<b>非经济通道</b>。本节解释这两个通道的工作机制，以及为什么"军事胜利"对参议院、众议院、总统大选的影响截然不同。</p>
+      <p>第三节描述的十步传导链覆盖<b>经济通道</b>（油价 + 关税通过通胀和实际收入影响选民感知）+ <b>劳动通道</b>（step 10 失业率作为 sociotropic 第二支柱）。但情景 D（美军直接控制海峡）涉及军事行动，触发两个完全独立的<b>非经济通道</b>。本节解释这两个通道的工作机制，以及为什么"军事胜利"对参议院、众议院、总统大选的影响截然不同。</p>
 
       <h4 style="margin-top:14px; font-size:14px; color:#0f172a;">通道 A：Rally-around-the-flag（爱国情绪聚集）</h4>
       <p style="margin-top:8px;"><b>机制</b>：当美国进行重大军事行动时，公众情绪短期内出现爱国主义聚集，对总统支持率产生瞬时正向冲击，即便许多选民平时不支持总统。</p>
@@ -464,7 +465,7 @@
           <tr><td><b>high_casualty</b></td><td>+15</td><td>-8</td><td>-21.0</td><td>47.1%</td><td>Iraq War pattern (~2400 KIA)</td></tr>
         </tbody>
       </table>
-      <p style="margin-top:10px;">2028 R 两党票<b>跨度 1.25pp</b>（48.3% → 47.1%）——比 Hormuz 油价情景 A→E 的 5pp 跨度小一个数量级。原因：rally 衰减后只剩伤亡 drag 起作用，rally +12 vs +15 在 30 个月后 ×0.03 衰减系数下都 ≈ +0.4，差异微小；真正区分的是 drag (-1 vs -8) 通过 Abramowitz 系数 0.642 × approval 差异传导。<b>读 dashboard 时</b>：D 情景下方的"伤亡 / Rally 敏感性"琥珀色 panel 直接显示这三个 calibration 的 ensemble 结果。</p>
+      <p style="margin-top:10px;">2028 R 两党票<b>跨度 1.25pp</b>（48.3% → 47.1%）——比 Hormuz 油价情景 A→E 的 4.5pp 跨度小约一个数量级。原因：rally 衰减后只剩伤亡 drag 起作用，rally +12 vs +15 在 30 个月后 ×0.03 衰减系数下都 ≈ +0.4，差异微小；真正区分的是 drag (-1 vs -8) 通过 Abramowitz 系数 0.642 × approval 差异传导。<b>读 dashboard 时</b>：D 情景下方的"伤亡 / Rally 敏感性"琥珀色 panel 直接显示这三个 calibration 的 ensemble 结果。</p>
 
       <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">模型局限</h4>
       <ul class="method-list" style="border-left-color:#dc2626;">
@@ -485,7 +486,7 @@
           <tr><td><b>2026 众议院</b> 共和党失席位</td><td>-36 到 -40（4 席跨度）</td><td>几乎无差别</td></tr>
           <tr><td><b>2026 参议院</b> 民主党净增席位</td><td>+3.7 到 +4.0（0.3 席跨度）</td><td>几乎无差别</td></tr>
           <tr><td><b>2026 参议院</b> 民主党多数概率</td><td>53% 到 60%（7pp 跨度）</td><td>较小差异</td></tr>
-          <tr><td><b>2028 总统</b> 共和党两党票</td><td><b>44.7% 到 49.7%（5pp 跨度）</b></td><td><b>跨度大得多</b></td></tr>
+          <tr><td><b>2028 总统</b> 共和党两党票</td><td><b>44.5% 到 49.0%（4.5pp 跨度）</b></td><td><b>跨度大得多</b></td></tr>
         </tbody>
       </table>
 
@@ -511,17 +512,17 @@
       <p style="margin-top:14px;"><b>原因三：参议院席位地图本身的硬约束</b>。Class II 改选 22R / 11D 防守，民主党最多净增 2-4 席。这是<b>结构性物理约束</b>，不受任何油价情景影响。</p>
 
       <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">真正的"伊朗战争效应"在 2028</h4>
-      <p style="margin-top:8px;">把 2028 共和党两党票数字看清楚：A 缓解 49.7% → E 全面战争 44.7% = <b>5pp 跨度</b>。这相当于：</p>
+      <p style="margin-top:8px;">把 2028 共和党两党票数字看清楚（2026-05-14 快照）：A 缓解 49.0% → E 全面战争 44.5% = <b>4.5pp 跨度</b>。这相当于：</p>
       <ul class="method-list">
-        <li><b>49.7%</b>：共和党几乎追平民主党（虚拟选举团差距 &lt;50 票）</li>
-        <li><b>44.7%</b>：共和党类似 1980 卡特 / 2008 麦凯恩级别的惨败（电学院差距 200+ 票）</li>
+        <li><b>49.0%</b>：共和党几乎追平民主党（虚拟选举团差距 &lt;50 票）</li>
+        <li><b>44.5%</b>：共和党类似 1980 卡特 / 2008 麦凯恩级别的惨败（电学院差距 200+ 票）</li>
       </ul>
       <p style="margin-top:8px;">两个完全不同的政治世界。这才是伊朗战争的真正赌注。</p>
 
       <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">这对分析意味着什么</h4>
       <ul class="method-list">
         <li><b>不要再追问"伊朗战争对 2026 中期影响多大"</b>——答案是"很小，因为基本面已定"。</li>
-        <li><b>应该追问</b>：当前 -13.5 支持率 + 53 ICS 是怎么形成的？6/9/10 月分别会更新哪些指标？2028 大选的 5pp 跨度赌的是什么？</li>
+        <li><b>应该追问</b>：当前 -13.5 支持率 + 53 ICS 是怎么形成的？6/9/10 月分别会更新哪些指标？2028 大选的 4.5pp 跨度赌的是什么？</li>
         <li><b>简言之</b>：2026 中期已经是"民主党大概率拿下众议院 + 参议院僵持"的基线。伊朗战争已经变成 2028 的故事，不再是 2026 的故事。</li>
       </ul>
 
@@ -789,7 +790,7 @@ RMSE = ±12 seats</pre>
           </tr>
         </tbody>
       </table>
-      <p style="margin-top:14px;">The four models use different input variables: <b>Fair</b> jointly considers growth, inflation, and structural factors; <b>Hibbs</b> tracks real per-capita disposable income but with 15-quarter weighted memory (<b>NOTE: 2026-05 PR corrected — formerly used total DSPIC96 by mistake, now switched to per-capita A229RX0 to match Hibbs 1982/2008 original specification</b>); <b>Abramowitz</b> primarily reflects approval (the public-opinion layer); <b>Lewis-Beck</b> adds the unemployment + inflation sociotropic dimension. Fair / Hibbs / Abramowitz are pocketbook tradition (individual income), Lewis-Beck is sociotropic tradition (national economic news) — the two-tradition hedge prevents the ensemble from being one-sidedly retrospective. When all four agree, confidence is high; when they diverge sharply (currently Fair vs Abramowitz differ by 11.7pp), this signals serious data-perception divergence — 1992 / 2016 / 2024 elections were all such cases.</p>
+      <p style="margin-top:14px;">The four models use different input variables: <b>Fair</b> jointly considers growth, inflation, and structural factors; <b>Hibbs</b> tracks real per-capita disposable income but with 15-quarter weighted memory (<b>NOTE: 2026-05 PR corrected — formerly used total DSPIC96 by mistake, now switched to per-capita A229RX0 to match Hibbs 1982/2008 original specification</b>); <b>Abramowitz</b> primarily reflects approval (the public-opinion layer); <b>Lewis-Beck</b> adds the unemployment + inflation sociotropic dimension. Fair / Hibbs / Abramowitz are pocketbook tradition (individual income), Lewis-Beck is sociotropic tradition (national economic news) — the two-tradition hedge prevents the ensemble from being one-sidedly retrospective. When all four agree, confidence is high; when they diverge sharply (2026-05-14 snapshot: Fair 54.7% vs Abramowitz 42.7%, a 12.0pp gap), this signals serious data-perception divergence — 1992 / 2016 / 2024 elections were all such cases.</p>
 
       <h4 style="margin-top:20px; font-size:14px; color:#0f172a;">Why other common models were not selected</h4>
       <table class="method-table" style="margin-top:10px;">
@@ -870,7 +871,7 @@ Ensemble variance = Σ w_i² × RMSE_i² (assuming independence — see ⚠️ b
         <li><b>Realistic with correlation</b>: ±3.01pp</li>
         <li><b>Inflation factor ×1.16</b> — the 95% CI shown on the dashboard should be widened by this factor</li>
       </ul>
-      <p style="margin-top:10px;">Concretely: "ensemble forecast R 48.4%" has a <b>true 95% confidence interval</b> of approximately [42.4%, 54.4%] (using ×3.01 two-sided), NOT the production-code-displayed [46.3%, 50.5%] (using ×1.07 two-sided). <b>Widening factor ×2.8</b>, because paper RMSEs severely understate out-of-sample reality.</p>
+      <p style="margin-top:10px;">Concretely (based on 2026-05-14 snapshot weighted ensemble R = 47.9%): "ensemble forecast R 47.9%" has a <b>true 95% confidence interval</b> of approximately [41.9%, 53.9%] (using ±3.01·2 = ±6.02pp two-sided), NOT the production-code-displayed [45.8%, 50.0%] (using ±1.07·2 = ±2.14pp two-sided). <b>Widening factor ×2.8</b>, because paper RMSEs severely understate out-of-sample reality.</p>
 
       <h4 style="margin-top:14px; font-size:14px; color:#0f172a;">Why backtest does NOT auto-update config.py coefficients</h4>
       <ul class="method-list" style="border-left-color:#475569;">
@@ -881,7 +882,7 @@ Ensemble variance = Σ w_i² × RMSE_i² (assuming independence — see ⚠️ b
       </ul>
 
       <h4 style="margin-top:14px; font-size:14px; color:#0f172a;">Model disagreement is itself a signal</h4>
-      <p>When all four models agree (strong input signal), ensemble confidence is high. When they diverge sharply (currently Fair vs Abramowitz differ by 11pp), it indicates "models give different answers because they weight inputs differently" — this itself is a diagnostic signal, indicating economic data and voter perception are sharply divergent. 1992 / 2016 / 2024 elections were all such cases. <b>The Fair vs Abramowitz gap shown on the 2026 dashboard is an attention signal</b>, not pure noise.</p>
+      <p>When all four models agree (strong input signal), ensemble confidence is high. When they diverge sharply (2026-05-14 snapshot: Fair 54.7% vs Abramowitz 42.7%, a 12.0pp gap), it indicates "models give different answers because they weight inputs differently" — this itself is a diagnostic signal, indicating economic data and voter perception are sharply divergent. 1992 / 2016 / 2024 elections were all such cases. <b>The Fair vs Abramowitz gap shown on the 2026 dashboard is an attention signal</b>, not pure noise.</p>
     </div>
 
     <h3 class="method-h">3. Transmission chain: ten steps from oil prices to votes (2026-05 PR upgrade)</h3>
@@ -916,7 +917,7 @@ Ensemble variance = Σ w_i² × RMSE_i² (assuming independence — see ⚠️ b
 
     <h3 class="method-h">4. Additional transmission channels under military intervention (scenario D)</h3>
     <div class="method-block">
-      <p>Section 3's nine-step transmission chain covers <b>economic channels</b> — oil prices propagate through inflation and real income to voter perception. But scenario D (US Navy directly enforces the strait) involves military action, activating two completely independent <b>non-economic channels</b>. This section explains how these channels work and why "military victory" affects the Senate, House, and presidential election quite differently.</p>
+      <p>Section 3's ten-step transmission chain covers the <b>economic channel</b> (oil + tariffs propagating through inflation and real income) and the <b>labor channel</b> (step 10 unemployment as a sociotropic second pillar). But scenario D (US Navy directly enforces the strait) involves military action, activating two completely independent <b>non-economic channels</b>. This section explains how these channels work and why "military victory" affects the Senate, House, and presidential election quite differently.</p>
 
       <h4 style="margin-top:14px; font-size:14px; color:#0f172a;">Channel A: Rally-around-the-flag (patriotic surge)</h4>
       <p style="margin-top:8px;"><b>Mechanism</b>: When the US conducts major military action, public sentiment briefly converges in patriotic support, producing an instantaneous positive shock to presidential approval — even among voters who don't normally support the president.</p>
@@ -1005,7 +1006,7 @@ Ensemble variance = Σ w_i² × RMSE_i² (assuming independence — see ⚠️ b
           <tr><td><b>high_casualty</b></td><td>+15</td><td>-8</td><td>-21.0</td><td>47.1%</td><td>Iraq War pattern (~2400 KIA)</td></tr>
         </tbody>
       </table>
-      <p style="margin-top:10px;">2028 R two-party <b>spans 1.25pp</b> (48.3% → 47.1%) — about an order of magnitude smaller than the Hormuz oil A→E 5pp range. Reason: rally decays so by 30 months out +12 vs +15 both ≈ +0.4pp after ×0.03 decay; what really distinguishes is casualty drag (-1 vs -8) transmitting through Abramowitz coefficient 0.642 × approval. <b>When reading the dashboard</b>: the amber "Casualty / Rally sensitivity" panel under scenario D directly shows these three calibration points' ensemble outputs.</p>
+      <p style="margin-top:10px;">2028 R two-party <b>spans 1.25pp</b> (48.3% → 47.1%) — about an order of magnitude smaller than the Hormuz oil A→E 4.5pp range. Reason: rally decays so by 30 months out +12 vs +15 both ≈ +0.4pp after ×0.03 decay; what really distinguishes is casualty drag (-1 vs -8) transmitting through Abramowitz coefficient 0.642 × approval. <b>When reading the dashboard</b>: the amber "Casualty / Rally sensitivity" panel under scenario D directly shows these three calibration points' ensemble outputs.</p>
 
       <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">Model limitations</h4>
       <ul class="method-list" style="border-left-color:#dc2626;">
@@ -1026,7 +1027,7 @@ Ensemble variance = Σ w_i² × RMSE_i² (assuming independence — see ⚠️ b
           <tr><td><b>2026 House</b> R seat loss</td><td>-36 to -40 (4-seat range)</td><td>Almost identical</td></tr>
           <tr><td><b>2026 Senate</b> D net seat gain</td><td>+3.7 to +4.0 (0.3-seat range)</td><td>Almost identical</td></tr>
           <tr><td><b>2026 Senate</b> D majority probability</td><td>53% to 60% (7pp range)</td><td>Small variation</td></tr>
-          <tr><td><b>2028 Presidential</b> R two-party share</td><td><b>44.7% to 49.7% (5pp range)</b></td><td><b>Much wider variation</b></td></tr>
+          <tr><td><b>2028 Presidential</b> R two-party share</td><td><b>44.5% to 49.0% (4.5pp range)</b></td><td><b>Much wider variation</b></td></tr>
         </tbody>
       </table>
 
@@ -1052,17 +1053,17 @@ Ensemble variance = Σ w_i² × RMSE_i² (assuming independence — see ⚠️ b
       <p style="margin-top:14px;"><b>Reason 3: Senate map's hard structural ceiling</b>. Class II Senate map has 22 R defending vs 11 D defending. Democrats can net at most 2-4 seats. This is a <b>structural physical constraint</b>, unaffected by any oil scenario.</p>
 
       <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">The real "Iran war effect" lives in 2028</h4>
-      <p style="margin-top:8px;">Look at the 2028 R two-party numbers carefully: A_easing 49.7% → E_total_war 44.7% = <b>5pp range</b>. This corresponds to:</p>
+      <p style="margin-top:8px;">Look at the 2028 R two-party numbers carefully (2026-05-14 snapshot): A_easing 49.0% → E_total_war 44.5% = <b>4.5pp range</b>. This corresponds to:</p>
       <ul class="method-list">
-        <li><b>49.7%</b>: Republicans nearly tied with Democrats (hypothetical EC margin &lt;50 votes)</li>
-        <li><b>44.7%</b>: Republicans suffer a 1980 Carter / 2008 McCain-level defeat (EC margin 200+ votes)</li>
+        <li><b>49.0%</b>: Republicans nearly tied with Democrats (hypothetical EC margin &lt;50 votes)</li>
+        <li><b>44.5%</b>: Republicans suffer a 1980 Carter / 2008 McCain-level defeat (EC margin 200+ votes)</li>
       </ul>
       <p style="margin-top:8px;">Two completely different political worlds. This is what the Iran war is actually wagering.</p>
 
       <h4 style="margin-top:18px; font-size:14px; color:#0f172a;">What this means for analysis</h4>
       <ul class="method-list">
         <li><b>Stop asking "how much will the Iran war affect the 2026 midterms"</b> — the answer is "very little, because the fundamentals are already set."</li>
-        <li><b>Ask instead</b>: How did current -13.5 approval + 53 ICS form? What indicators will update in June, September, October? What is the 5pp range for 2028 actually wagering?</li>
+        <li><b>Ask instead</b>: How did current -13.5 approval + 53 ICS form? What indicators will update in June, September, October? What is the 4.5pp range for 2028 actually wagering?</li>
         <li><b>In short</b>: 2026 midterm has already become a baseline of "Democrats likely take House + Senate stalemate." The Iran war is now a 2028 story, no longer a 2026 story.</li>
       </ul>
 
