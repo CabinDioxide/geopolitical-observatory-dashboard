@@ -13,8 +13,8 @@ const I18N = {
     'tab.overlay': '④ 历史对照',
     'tab.methodology': '⑤ 方法论',
     // Tab 1
-    'chain.title': '传导链：从油价到选票的九个观测点',
-    'chain.intro1': '霍尔木兹封锁通过九个步骤传导至选举结果。每一格显示当前值、基线（中性水平）、告警（5pp 选票损失对应水平）。每条 bar 分三段彩色区间——指针落在哪一段，直接读出风险级别：',
+    'chain.title': '传导链：从油价到选票的十个观测点',
+    'chain.intro1': '霍尔木兹封锁通过十个步骤传导至选举结果（2026-05 PR 加入第 10 步失业率作为 sociotropic 第二支柱，与 step 6 RDPI 平行）。每一格显示当前值、基线（中性水平）、告警（5pp 选票损失对应水平）。每条 bar 分三段彩色区间——指针落在哪一段，直接读出风险级别：',
     'chain.intro2': '<span class="tag-inline" style="background:#2a9d8f; color:#fff;">上游</span>（绿，0–33）该指标处于安全区间，风险尚未传导到下一环节；<span class="tag-inline" style="background:#f4a261; color:#fff;">中游</span>（橙，33–66）指标正在恶化，下游将开始受影响；<span class="tag-inline" style="background:#e63946; color:#fff;">下游</span>（红，66–100）指标接近或突破告警，对选票已构成直接威胁。',
     'chain.intro3': '<b>告警的统一定义</b>：每个指标的告警阈值都对应"该指标单独达到此水平时，历史上执政党在下次选举损失 ≥5pp 两党票"。',
     'chain.zone_upstream': '上游', 'chain.zone_mid': '中游', 'chain.zone_down': '下游',
@@ -117,6 +117,7 @@ const I18N = {
     // Tab 5
     'meth.title': '方法论说明',
     'meth.intro': '本 dashboard 的核心任务是将地缘政治冲击（霍尔木兹海峡封锁）通过宏观与政治传导链转换为美国选举结果预测。下文逐项说明所用模型、选择理由、历史预测准确度、传导链结构与数据来源。',
+    'meth.snapshot': '<b>关于本页硬编码数字</b>：以下章节中的具体数值（ensemble R %、scenario 跨度、Fair vs Abramowitz gap 等）是 <b>2026-05-14 快照</b>。实时数字以本页顶部 panel + ② 情景 tab + ① 传导链 tab 卡片为准（由 daily cron 自动更新）。如硬编码数字与顶部 panel 数据不一致，以 panel 数据为准——本节文本是叙述性，runtime panel 是单一事实来源。',
     // Tab 3 collapsibles
     'map.senate_full_table': '参议院全部 33 席原始表格（按竞争度排序）',
     'map.house_full_table': '众议院各州预测表（按 D 净增席位排序）',
@@ -143,8 +144,8 @@ const I18N = {
     'tab.overlay': '④ Historical Comparison',
     'tab.methodology': '⑤ Methodology',
     // Tab 1
-    'chain.title': 'Transmission Chain: From Oil Prices to Votes via Nine Observation Points',
-    'chain.intro1': 'A Hormuz blockade reaches election outcomes through nine steps. Each cell shows the current value, baseline (neutral level), and alarm (level associated with a 5pp two-party vote loss). Each bar is divided into three colored zones — where the pointer falls tells you the risk level:',
+    'chain.title': 'Transmission Chain: From Oil Prices to Votes via Ten Observation Points',
+    'chain.intro1': 'A Hormuz blockade reaches election outcomes through ten steps (the 2026-05 PR added step 10 unemployment as a sociotropic second pillar parallel to step 6 RDPI). Each cell shows the current value, baseline (neutral level), and alarm (level associated with a 5pp two-party vote loss). Each bar is divided into three colored zones — where the pointer falls tells you the risk level:',
     'chain.intro2': '<span class="tag-inline" style="background:#2a9d8f; color:#fff;">Upstream</span> (green, 0–33) safe zone, risk has not propagated to the next link; <span class="tag-inline" style="background:#f4a261; color:#fff;">Midstream</span> (orange, 33–66) deteriorating, downstream beginning to react; <span class="tag-inline" style="background:#e63946; color:#fff;">Downstream</span> (red, 66–100) approaching or breaching alarm — direct threat to the in-party vote.',
     'chain.caveats_pointer': '⚠️ Each link\'s evidence rating and caveat is shown on its card. The full honest-disclosure panel (6 runtime disclosures + B3 backtest paper-vs-sample RMSE table + 4×4 residual correlation + ensemble correction) has been moved to the top of the <a href="#" class="goto-methodology">⑤ Methodology</a> tab, collocated with the other methodology content.',
     'chain.intro3': '<b>Unified alarm definition</b>: each indicator\'s alarm corresponds to "the level at which this indicator alone has historically been associated with the in-party losing ≥5pp two-party vote in the next election."',
@@ -247,6 +248,7 @@ const I18N = {
     // Tab 5
     'meth.title': 'Methodology',
     'meth.intro': 'The dashboard\'s core task is to convert geopolitical shocks (a Hormuz Strait blockade) through macro and political transmission chains into US electoral predictions. Below we describe each model used, the rationale for choosing it, historical predictive accuracy, transmission chain structure, and data sources.',
+    'meth.snapshot': '<b>About hardcoded numbers on this page</b>: the specific values in the sections below (ensemble R %, scenario ranges, Fair vs Abramowitz gap, etc.) are a <b>2026-05-14 snapshot</b>. Live numbers are sourced from the panel at the top of this page + ② Scenarios tab + ① Chain tab cards (auto-updated by the daily cron). If hardcoded values disagree with the top-of-page panel, treat the panel as authoritative — this section is narrative; the runtime panel is the single source of truth.',
     // Tab 3 collapsibles
     'map.senate_full_table': 'All 33 Senate races (raw table, sorted by competitiveness)',
     'map.house_full_table': 'All states House projection table (sorted by D net seat change)',
