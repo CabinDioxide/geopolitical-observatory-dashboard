@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-05-18T09:41:56.510488Z",
-  "duration_seconds": 261.4,
+  "last_run": "2026-05-19T09:01:04.596043Z",
+  "duration_seconds": 277.9,
   "sources": {
     "gdelt": {
       "status": "ok",
-      "features": 1137
+      "features": 1285
     },
     "acled": {
       "status": "skipped",
@@ -26,13 +26,13 @@
     },
     "ais": {
       "status": "ok",
-      "features": 408,
+      "features": 451,
       "sanctioned_in_chokepoints": 0
     },
     "fred": {
       "status": "ok",
-      "series_ok": 14,
-      "series_failed": 0
+      "series_ok": 13,
+      "series_failed": 1
     },
     "eia": {
       "status": "ok",
@@ -41,7 +41,7 @@
     "election_models": {
       "status": "ok",
       "transmission_max_pressure": 100,
-      "weighted_2028_R_pct": 47.82,
+      "weighted_2028_R_pct": 47.79,
       "weighted_2026_R_seat_change": -38.8
     }
   }

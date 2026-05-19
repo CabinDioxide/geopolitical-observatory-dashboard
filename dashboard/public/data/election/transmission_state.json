@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-05-18T09:41:56.426885Z",
+  "as_of": "2026-05-19T09:01:04.511656Z",
   "chain": [
     {
       "step": 1,
@@ -220,12 +220,12 @@
       "name": "\u5931\u4e1a\u7387 (U-3)",
       "name_en": "Unemployment rate (U-3)",
       "tag": "\u4e0b\u6e38",
-      "current": 4.3,
+      "current": null,
       "unit": "%",
       "unit_en": "%",
       "baseline": 4.5,
       "alarm": 6.5,
-      "pressure": 0,
+      "pressure": null,
       "interpretation": "\u4e0e RDPI \u5e73\u884c\u7684\u57fa\u672c\u9762\u53d8\u91cf\uff08\u4e0d\u662f 9 \u6b65\u94fe\u4e0b\u6e38\uff0c\u800c\u662f sociotropic \u7b2c\u4e8c\u652f\u67f1\uff09\u3002Lewis-Beck failure rate \u6a21\u578b\u6838\u5fc3\u8f93\u5165\u3002Alarm 6.5% \u951a\u5b9a 1982 (10.8%, \u5931 26 \u5e2d) \u4e0e 2010 (9.6%, \u5931 63 \u5e2d)\u2014\u2014\u4e24\u6b21\u90fd\u662f\u4f4e\u901a\u80c0\u4f46\u9ad8\u5931\u4e1a\u4e3b\u5bfc\u5931\u5e2d\u6570\u3002\u57fa\u7ebf 4.5% \u63a5\u8fd1 Fed NAIRU \u4f30\u8ba1\u3002",
       "interpretation_en": "Parallel basement variable to RDPI (not downstream of the 9-step chain \u2014 second sociotropic pillar). Core input to the Lewis-Beck failure-rate model. Alarm 6.5% anchored to 1982 (10.8%, -26 seats) and 2010 (9.6%, -63 seats): both midterms saw low inflation but unemployment-driven seat losses. Baseline 4.5% approximates Fed NAIRU estimates.",
       "strength": 2,
@@ -238,7 +238,7 @@
       "caveat_en": "Coefficients are [CALIBRATION_PENDING] \u2014 derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."
     }
   ],
-  "epu_index": 151.67,
+  "epu_index": 685.18,
   "methodology_caveats": {
     "ensemble_rmse_honesty": {
       "displayed": 1.07,
@@ -427,8 +427,8 @@
       -0.30010223947097847,
       1.3228752581060377
     ],
-    "unrate": 4.3,
-    "unrate_yoy_pct_change": 2.3809523809523725,
+    "unrate": null,
+    "unrate_yoy_pct_change": null,
     "ics": 53.3,
     "inflation_expect": 3.8,
     "approval_net": -13.5,
