@@ -1,0 +1,767 @@
+{
+  "meta": {
+    "title": "MAGA 在伊朗战争上的分裂",
+    "subtitle": "派系结构 · 关键时间线 · 六个观察节点 · 历史对照",
+    "baseline_date": "2026-05-19",
+    "source_report": {
+      "title": "MAGA 在伊朗战争上的分裂——派系结构、关键节点与未来观察点",
+      "path": "/iran-war/reports/01_maga_split.docx"
+    },
+    "stance_summary": "**背景**：特朗普 2024 年第二次胜选时最响亮的承诺之一是「不再打新战争」。但 2025 年 6 月以色列发动「崛起的雄狮」军事行动后，美国 B-2 轰炸机在 6 月 22 日加入袭击伊朗核设施；2026 年 2 月底「史诗愤怒」行动斩首杀死伊朗最高领袖哈梅内伊。前后 10 个月，特朗普把自己最核心的竞选承诺颠倒了过来。\n\n**MAGA 不是统一阵营**，而是 2015-2024 年攒起来的多元联盟，在伊朗战争问题上分裂为 **4 个派系**：\n- **原教旨孤立主义**（班农 / 塔克·卡尔森）：反对一切海外军事干预，认为美国应该把精力放在国内\n- **务实强袭派**（皮特·海格塞斯 / 马尔科·鲁比奥 / 斯蒂芬·米勒）：「MAGA 外壳 + 新保守内核」，主张对伊朗强硬打击\n- **福音派基督教锡安主义**（迈克·约翰逊 / 林赛·格雷厄姆）：根基是末世神学，认为支持以色列是宗教义务\n- **后自由派**（JD·万斯 / 索赫拉布·阿马里 / 帕特里克·迪宁）：天主教保守派 + 反全球化，万斯保持暧昧沉默\n\n**战争之后**：袭击让强袭派 + 福音派弹冠相庆，原教旨派觉得被背叛，后自由派必须公开站队但又不愿太公开。撕裂已经从舆论延伸到三个层面：\n- **立法**：肯塔基州众议员托马斯·马西联手加州民主党众议员罗·哈纳，提出第 38 号众议院联合决议（H.Con.Res.38），援引 1973 年战争权力决议法案挑战特朗普的战时决策\n- **智库**：捍卫民主基金会（FDD）的盖雷希特 + 外交关系协会（CFR）的塔基在《华尔街日报》联名发文「How Trump Miscalculated in Iran」，承认强袭派战略失败\n- **新保守元老**：罗伯特·卡根（新美国世纪计划 PNAC 联合创始人，2003 伊拉克战争主要智识推手）在《大西洋月刊》发表「checkmate / total defeat」长文公开脱队"
+  },
+  "factions": [
+    {
+      "id": "paleo",
+      "name": "原教旨孤立主义",
+      "name_en": "Paleoconservative Isolationist",
+      "leaders": [
+        "史蒂夫·班农（Steve Bannon）",
+        "Tucker Carlson",
+        "托马斯·马西（Thomas Massie）"
+      ],
+      "quadrant_x": -1,
+      "quadrant_y": 1,
+      "color": "danger",
+      "thesis": "美国应该从中东撤军、关贸易门、把资源用在国内——这是 特朗普主义的根。",
+      "intellectual_lineage": "智识源头追溯到 帕特里克·布坎南（Patrick Buchanan，1992 / 1996 / 2000 三次共和党总统初选反战候选人）+ 罗恩·保罗（Ron Paul，2008 / 2012 共和党初选反战候选人）的 古老保守派（paleoconservative）传统。特朗普 2016 年靠这个框架起家——共和党初选辩论攻击布什入侵伊拉克「a big fat mistake」，在 RNC 提名演讲说「Americanism, not globalism」。这是 MAGA 反战派的智识 DNA。",
+      "key_positions": [
+        "班农 2025-06-17 塔克·卡尔森电视网长访谈：「Israel's War on Iran can destroy MAGA forever」——不是 can damage，是 can destroy",
+        "卡尔森 同日通讯标题「An Act of War, Sponsored by the United States」——把袭击定性为宪法意义上的战争行为",
+        "托马斯·马西（Thomas Massie，肯塔基州第 4 选区共和党人）与 罗·哈纳（Ro Khanna，加州第 17 选区民主党人）联手提出 H.Con.Res.38 战争权力决议，引用 1973 战争权力决议法案第 5(c) 条"
+      ],
+      "current_status": "班农《战情室》反战节目持续；塔克·卡尔森电视网月活约 800 万（Axios 新闻媒体数据）；马西是唯一公开签 H.Con.Res.38 的共和党议员；2026-05-15 马西在众议院提出要求 AIPAC 注册为外国代理人（FARA）的法案——这是 FARA 1938 年以来首次被用于追查 AIPAC。",
+      "sources": [
+        {
+          "label": "班农在 塔克·卡尔森（Tucker Carlson）电视网 的长访谈（2025-06-17）",
+          "url": "https://www.youtube.com/watch?v=tFM6L6TopsM"
+        },
+        {
+          "label": "《新闻周刊》（Newsweek） 2025-06-16：塔克·卡尔森（Tucker Carlson） and 史蒂夫·班农（Steve Bannon） Lead MAGA Resistance",
+          "url": "https://www.newsweek.com/tucker-carlson-steve-bannon-maga-trump-iran-israel-war-2086346"
+        },
+        {
+          "label": "马西提出 H.Con.Res.38 战争权力决议",
+          "url": "https://massie.house.gov/uploadedfiles/iranwpr.pdf"
+        },
+        {
+          "label": "Common Dreams 2026-05-15：马西 要求 AIPAC 注册为外国代理人",
+          "url": "https://www.commondreams.org/news/thomas-massie-aipac-foreign-agents"
+        }
+      ],
+      "analysis": "原教旨孤立主义派是 MAGA 联盟的智识起源。特朗普 2016 年靠这个框架起家——班农是 2016 大选竞选经理，斯蒂芬·米勒（Stephen Miller） 是文胆，塔克·卡尔森（Tucker Carlson） 的 Fox 节目（2016-2023 收视率长期第一）是舆论扩音器。他们的核心信念是「美国从中东撤军、关贸易门、把资源用在国内」——这是 特朗普主义跟传统共和党最大的区别。\n\n2025 年 6 月 22 日袭击之后，这一派进入「被背叛」状态。班农在 6 月 17 日 塔克·卡尔森电视网长访谈里的判断特别狠：「Israel's War on Iran can destroy MAGA forever」——不是 can damage，是 can destroy。卡尔森 同日通讯标题「An Act of War, Sponsored by the United States」把袭击定性为宪法意义上的战争行为，不是「目标打击」或「非战争军事行动」。\n\n国会层面的代表是 托马斯·马西（Thomas Massie，肯塔基州第 4 选区共和党人）。他与民主党 罗·哈纳（Ro Khanna，加州第 17 选区民主党人）联手提出 H.Con.Res.38 战争权力决议，引用 1973 战争权力决议法案第 5(c) 条 联合决议机制（不需总统签字即可生效）。决议被议长迈克·约翰逊 程序性搁置，但 哈纳 已经收集到 156 个签名（149 民主党 + 7 共和党）逼近 218 强制表决门槛。\n\n2026 年 5 月 15 日 马西在众议院提出要求 AIPAC 注册为外国代理人的法案——这是 FARA（外国代理人注册法案，1938 年外国代理人注册法案）1938 年通过以来首次被用到 AIPAC 上。\n\n这一派的舆论持续力取决于 塔克·卡尔森（Tucker Carlson）电视网 的商业可持续性——订阅制（约 72 美元/年）+ 广告制，月活约 800 万。如果 AIPAC 关联金主撤广告，卡尔森 的弹药下降。"
+    },
+    {
+      "id": "hawk",
+      "name": "务实强袭派",
+      "name_en": "Pragmatic Hardliner",
+      "leaders": [
+        "皮特·海格塞斯（Pete Hegseth）",
+        "马尔科·鲁比奥（Marco Rubio）",
+        "斯蒂芬·米勒（Stephen Miller）"
+      ],
+      "quadrant_x": 1,
+      "quadrant_y": -1,
+      "color": "warning",
+      "thesis": "继承 特朗普第一任期退出 伊朗核问题全面协议（JCPOA）（2018-05）、暗杀 Soleimani（2020-01）的对伊强硬路线。表面 MAGA，骨子里 neoconservative（新保守主义）。",
+      "intellectual_lineage": "这一派的特点是「MAGA 外壳 + 新保守内核」。Hegseth 退伍军人出身，主张文明冲突框架；鲁比奥古巴裔，对一切「非美国式国家」都持鹰派立场；米勒是班农在 白宫期间的对手——2017 年 8 月 班农 被解雇后，米勒在国安会议题上事实接管了对伊政策。",
+      "key_positions": [
+        "三人在 特朗普第二任白宫里事实上主导对伊政策——这是原教旨派的核心愤怒所在",
+        "推动 2025-06-22 美国 B-2 加入袭击；2026-02-28 史诗愤怒行动",
+        "皮特·海格塞斯（Pete Hegseth） 国防部长任内推 《2025 工程》（《2025 工程》（Project 2025））（《2025 工程》（Project 2025））风格的国务院清洗（详见 2026-03-05 参议员 Shaheen 致 Rubio 信记录的 8-12 月走 76 人 / 领事局走 155 人）"
+      ],
+      "current_status": "派系内部在 2026 年 4 月出现首次破裂——4 月 8 日巴基斯坦斡旋停火达成后，4 月 9 日 FDD（捍卫民主基金会）的 鲁埃尔·马克·盖雷希特（Reuel Marc Gerecht） 和 CFR 的 雷·塔基（Ray Takeyh） 在 《华尔街日报》联名发文《特朗普如何在伊朗误算》，副标题指出他「跟着委内瑞拉模式走，没算清德黑兰政权的意识形态本质」。FDD 是 2001 年 9/11 后成立的反恐 / 反伊朗智库，CEO 马克·杜博维茨（Mark Dubowitz） 是 2018 年 特朗普退出 伊朗核问题全面协议（JCPOA） 的智囊之一——FDD 这个机构性鹰派开始公开承认错误，是强袭派内部破裂最重的一击。",
+      "sources": [
+        {
+          "label": "FDD Gerecht + CFR 塔基 在 《华尔街日报》联名：How Trump Miscalculated in Iran（2026-04-09）",
+          "url": "https://www.fdd.org/analysis/2026/04/09/how-trump-miscalculated-in-iran/"
+        },
+        {
+          "label": "Shaheen 等参议员致 Rubio 信（2026-03-05）",
+          "url": "https://www.foreign.senate.gov/press/dem/release/ranking-member-shaheenforeign-relations-democratspress-state-department-on-failure-to-protect-us-diplomatsin-lead-up-toiran-strikes"
+        }
+      ],
+      "analysis": "务实强袭派是「MAGA 外壳 + 新保守内核」。Hegseth 国防部长是退伍军人出身，主张文明冲突框架；Rubio 国务卿是古巴裔，对一切「非美国式国家」持鹰派立场；斯蒂芬·米勒（Stephen Miller） 是 班农在 白宫期间的对手——2017 年 8 月 班农 被解雇后，米勒在国安会议题上事实接管了对伊政策。\n\n这三人在 特朗普第二任白宫里事实上主导对伊政策——这是原教旨派的核心愤怒所在。他们推动 2025-06-22 美国 B-2 轰炸机加入袭击 Fordow / Natanz / Isfahan 三处核设施；2026-02-28 「史诗愤怒」行动斩首杀死哈梅内伊。\n\n但 2026 年 4 月这一派出现首次内部破裂。4 月 9 日 FDD（捍卫民主基金会）的 鲁埃尔·马克·盖雷希特（Reuel Marc Gerecht） 和 CFR（美国外交关系协会）的 雷·塔基（Ray Takeyh） 在 《华尔街日报》联名发文「How Trump Miscalculated in Iran」，副标题「He followed his Venezuela model, not accounting for the ideological character of the regime 在德黑兰」。\n\nFDD 是 2001 年 9/11 后成立的反恐 / 反伊朗智库，CEO 马克·杜博维茨（Mark Dubowitz） 是 2018 年 特朗普退出 伊朗核问题全面协议（JCPOA） 的智囊之一——FDD 这个机构性的 伊朗政策「鹰派」开始公开承认错误，是鹰派内部破裂最重的一击。盖雷希特 是前 CIA 前伊朗目标分析官，塔基 是长期持鹰派立场的 CFR 高级研究员——两人联合署名在 《华尔街日报》上发文意味着鹰派智库内部已经出现「公开认错」窗口。\n\n5 月 罗伯特·卡根 在 《大西洋月刊》 上的「checkmate / total defeat」长文进一步加深破裂——卡根 是 新美国世纪计划（PNAC，新美国世纪计划，2001 年伊拉克战争主要智识推手）联合创始人之一，他的「脱队」等同于 1968 年沃尔特·李普曼公开反对越战。\n\n参议院外交委员会民主党 8 人 2026-03-05 联名致函 Rubio，揭露美国驻中东 14 国只有 6 国有大使、3 位职业大使被无理由解雇、近东事务局 8-12 月走 76 人、领事局走 155 人——这是 《2025 工程》（《2025 工程》（Project 2025））（《2025 工程》（Project 2025））人事清洗的实际后果。"
+    },
+    {
+      "id": "evangelical",
+      "name": "福音派基督教锡安主义",
+      "name_en": "Evangelical Christian Zionist",
+      "leaders": [
+        "Mike Johnson（众议院议长）",
+        "林赛·格雷厄姆（参议员）"
+      ],
+      "quadrant_x": 1,
+      "quadrant_y": 1,
+      "color": "alert",
+      "thesis": "对以色列的支持有神学基础，不是出于地缘政治计算——支持对以色列敌人的军事打击是宗教义务。",
+      "intellectual_lineage": "人口基础是约 9000 万美国福音派基督徒。根据 Pew 长期追踪，其中约 60% 相信「以色列在末世时代的特殊角色」——这是 dispensational premillennialism（时代论前千禧年主义）的政治化版本，由 《斯科菲尔德圣经注释本》（Scofield Reference Bible）（1909 年首版）系统化、约翰·哈吉 的 团结基督徒支持以色列（CUFI，2006 年成立）当代制度化。",
+      "key_positions": [
+        "国会层面：众议院议长迈克·约翰逊（Mike Johnson）程序性搁置 H.Con.Res.38 战争权力决议（2025-06）；南卡参议员林赛·格雷厄姆自 2023 年加沙战争以来持续推「对伊朗的预防性战争」立场",
+        "选区层面：南方 + 中部「圣经地带」选区的福音派牧师在主日讲道中支持军事行动，这种基层动员让 GOP 中部议员不敢公开反战"
+      ],
+      "current_status": "这一派是其他三派任何一派都没法用 利益-成本论证打动的——逻辑根基是神学而非政治理性。所以即使强袭派开始反思（FDD 盖雷希特 公开认错）、原教旨派持续猛攻（Carlson、Bannon），福音派的支持基本不变。但 罗伯特·卡根 在 《大西洋月刊》 上的「checkmate / total defeat」长文（5 月）+ 《外交政策》斯蒂芬·沃尔特（Stephen Walt） 文章把以色列游说集团跟资金链直接挂钩（3 月 17 日），开始把这一派的神学合法性纳入公共讨论。",
+      "sources": [
+        {
+          "label": "《外交政策》 2026-03-17：斯蒂芬·沃尔特（Stephen Walt） 论以色列游说集团的特殊责任",
+          "url": "https://foreignpolicy.com/2026/03/17/israel-lobby-iran-war-trump-responsibility/"
+        },
+        {
+          "label": "《雅各宾》月刊（Jacobin） 2026-03-03：AIPAC Is Influencing Trump's War in Iran",
+          "url": "https://jacobin.com/2026/03/aipac-trump-israel-democrats-iran"
+        },
+        {
+          "label": "Middle East Eye：罗伯特·卡根 在《大西洋月刊》上的脱队文章报道",
+          "url": "https://www.middleeasteye.net/news/us-heading-checkmate-and-total-defeat-iran-war-says-neocon-robert-kagan"
+        }
+      ],
+      "analysis": "福音派基督教锡安主义是 MAGA 联盟里最稳定的支持力量，但也是其他三派任何一派都没法用 利益-成本论证打动的。逻辑根基是神学而非政治理性。\n\n人口基础是约 9000 万美国福音派基督徒。根据 皮尤研究中心 长期追踪，其中约 60% 相信「以色列在末世时代的特殊角色」——这是 dispensational premillennialism（时代论前千禧年主义）的政治化版本。理论源头是 《斯科菲尔德圣经注释本》（Scofield Reference Bible）（1909 年首版，C.I. 斯科菲尔德（Scofield） 编注）系统化的「七大时代论」框架，当代制度化是 约翰·哈吉 创办的 CUFI（团结基督徒支持以色列，团结基督徒支持以色列，2006 年成立）。CUFI 是美国第二大亲以色列游说组织（仅次于 AIPAC），2024 年会员数自称超过 1000 万。\n\n国会代表是 Mike Johnson（众议院议长，路易斯安那共和党人，浸信会神学院 J.D. 学位）和 林赛·格雷厄姆（南卡参议员，自 2023 年加沙战争以来持续推「对伊朗的预防性战争」立场）。约翰逊在 2025-06 程序性搁置 H.Con.Res.38 战争权力决议——议长权力的标准用法，但搁置不是杀死。\n\n选区层面的力量比国会层面更深。南方 + 中部「圣经地带」（圣经地带（Bible Belt））选区的福音派牧师在主日讲道中支持军事行动——这种基层动员让 GOP 中部议员不敢公开反战。1988 年和 2000 年共和党初选研究表明，福音派选民投票率比一般选民高 20 个百分点——他们是 爱荷华党团会议 和 南卡罗来纳州初选的决定性力量。\n\n这一派对其他派系的可影响性极低，但同时是 MAGA 联盟稳定性的最大锚点。罗伯特·卡根 在 《大西洋月刊》文章里的「checkmate / total defeat」+ 斯蒂芬·沃尔特（Stephen Walt） 把以色列游说集团跟资金链直接挂钩（2026-03-17 《外交政策》 文章）+ 《雅各宾》月刊（Jacobin） 2026-03-03 「AIPAC Is Influencing Trump's War in Iran」——开始把这一派的神学合法性纳入公共讨论。"
+    },
+    {
+      "id": "postliberal",
+      "name": "后自由派 / 天主教保守派",
+      "name_en": "Post-Liberal / Catholic Conservative",
+      "leaders": [
+        "JD·万斯（JD Vance，副总统）",
+        "Sohrab Ahmari",
+        "Patrick Deneen"
+      ],
+      "quadrant_x": -1,
+      "quadrant_y": -1,
+      "color": "neutral",
+      "thesis": "在伊朗问题上立场不明——既不愿当 班农 式纯孤立主义，也对袭击有保留。智识根基是「美国应该把精力放在重建本土」的 克里斯托弗·拉什（Christopher Lasch）+ 温德尔·贝里（Wendell Berry） 式立场。",
+      "intellectual_lineage": "智识根基是 First Things 杂志（1990 年创刊，理查德·约翰·诺豪斯（Richard John Neuhaus） 创办的天主教-福音派联合期刊）、Compact、American Conservative 杂志 三个刊物。这三个编辑团队对 伊朗-以色列冲突有保留——既不挺以色列右翼的「末世神学」，也不挺 班农 派的纯孤立主义。",
+      "key_positions": [
+        "万斯 2025-06-22 袭击后只发了一条 X，祝美军平安归来——没有评价袭击本身的正当性。这是典型的沉默姿态",
+        "万斯 2024 副总统竞选期间曾在 塔克·卡尔森的节目上说过「I'm not pro-Israel in the way that Lindsey Graham is pro-Israel」——这是他离原教旨派最近的一次公开表态",
+        "在白宫期间从未公开就 伊朗政策表态"
+      ],
+      "current_status": "万斯 的沉默本身就是信号。如果他在 2027 年初宣布参选总统，对伊朗的表态会决定后自由派最终倒向原教旨派还是强袭派。如果倒向原教旨派，2028 年共和党初选会出现 Bannon-Carlson-万斯 对阵 鲁比奥-海格塞斯 的局面。",
+      "sources": [],
+      "analysis": "后自由派 / 天主教保守派是 MAGA 联盟里最暧昧的一派。智识根基是 First Things 杂志（1990 年创刊，理查德·约翰·诺豪斯（Richard John Neuhaus） 创办的天主教-福音派联合期刊）、Compact 杂志（2022 年创刊，索赫拉布·阿马里（Sohrab Ahmari）、爱德文·阿庞特（Edwin Aponte）、帕特里克·迪宁（Patrick Deneen） 主编）、American Conservative 杂志（2002 年创刊，帕特·布坎南（Pat Buchanan）+ 罗恩·昂兹（Ron Unz） 联合创办，2016 后由 罗德·德雷尔（Rod Dreher） 主导）三个刊物。这三个编辑团队对 伊朗-以色列冲突有保留——既不挺以色列右翼的「末世神学」，也不挺 班农 派的纯孤立主义，更倾向「美国应该把精力放在重建本土」的 克里斯托弗·拉什（Christopher Lasch）+ 温德尔·贝里（Wendell Berry） 式立场。\n\n他们的政治代表是 JD·万斯（JD Vance，副总统）、Patrick Deneen（《Why Liberalism Failed》2018 年作者，Notre Dame 政治学教授）、Sohrab Ahmari（前 《华尔街日报》 编辑、改宗天主教的伊朗裔知识分子）。\n\n万斯 的沉默是这一派最关键的政治信号。2025-06-22 袭击后，他只发了一条 X 祝美军平安归来——没有评价袭击本身的正当性。这是典型的「我不参与」姿态。\n\n但 万斯 在 2024 副总统竞选期间曾经在 塔克·卡尔森的节目上说过「I'm not pro-Israel in the way that Lindsey Graham is pro-Israel」——这是他离原教旨派最近的一次公开表态。在白宫期间他从未公开就 伊朗政策表态。\n\n如果万斯 在 2027 年初宣布参选总统，他对伊朗的表态会决定后自由派最终倒向原教旨派还是强袭派——进一步会决定 2028 共和党初选的结构。如果倒向原教旨派，2028 年共和党初选会出现 Bannon-Carlson-万斯 对阵 鲁比奥-海格塞斯 的局面，撕裂正式成形。\n\n监测对象：万斯在白宫官网上的演讲记录、周日早间访谈节目、American Compass（智库，奥伦·卡斯创立，万斯长期撰稿）的出版物。"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-06-12",
+      "event": "以色列发动 Operation Rising Lion（崛起的雄狮行动，即 12 日战争）",
+      "factions": [
+        "paleo"
+      ],
+      "significance": "卡尔森 当晚在 X 上发「This is not our war」。NPR / CNN 在六月中下旬陆续以「split / divided」定性 MAGA 内部分裂。",
+      "sources": [
+        {
+          "label": "《新闻周刊》（Newsweek） 2025-06-16",
+          "url": "https://www.newsweek.com/tucker-carlson-steve-bannon-maga-trump-iran-israel-war-2086346"
+        }
+      ],
+      "analysis": "**背景**：以色列对伊朗的「崛起的雄狮行动」是 2025-06-12 至 2025-06-24 这 12 天战争的开战日。行动由内塔尼亚胡（Benjamin Netanyahu）签字、摩萨德 加 IAF（Israeli Air Force，以色列空军）协同发起，主要打击伊朗 Natanz / Fordow / Isfahan 三处核设施 + 几个 IRGC 指挥中心 + Quds Force 高层。\n\n**MAGA 内部反应**：袭击当晚塔克·卡尔森在 X（前 Twitter）上发「This is not our war」——这是 MAGA 原教旨派对袭击的第一次公开定性。同期班农在 War Room 节目把袭击称为「new forever war」。两人定调让原教旨派提前于强袭派几小时形成统一发声口径。\n\n**主流媒体定性**：NPR 6 月 13 日第一篇标题用「split」，CNN 6 月 14 日用「divided」，《新闻周刊》6 月 16 日用「fracture」。三大主流媒体在 96 小时内同步把 MAGA 定性为「内部分裂」——比 MAGA 自己识别内部撕裂还早。\n\n**意义**：开战日的反应速度暴露了 MAGA 内部派系预案的准备程度——原教旨派早在 2024 大选期间就预判 伊朗-以色列冲突会成为联盟内部最大撕裂点，预案早就准备好。这跟 2003 年伊拉克战争开战时共和党内部高度一致形成鲜明对照。"
+    },
+    {
+      "date": "2025-06-17",
+      "event": "塔克·卡尔森（Tucker Carlson）电视网 上 班农 长访谈：「Israel's War on Iran can destroy MAGA forever」",
+      "factions": [
+        "paleo"
+      ],
+      "significance": "原教旨派最重的一次正式发声。同日 卡尔森 通讯标题「An Act of War, Sponsored by the United States」",
+      "sources": [
+        {
+          "label": "班农 塔克·卡尔森（Tucker Carlson） 访谈",
+          "url": "https://www.youtube.com/watch?v=tFM6L6TopsM"
+        }
+      ]
+    },
+    {
+      "date": "2025-06-18",
+      "event": "NPR 第一次以「split」定性 MAGA 内部分裂",
+      "factions": [
+        "paleo"
+      ],
+      "significance": "主流媒体定性比 MAGA 自身的反应更早",
+      "sources": [
+        {
+          "label": "NPR 报道",
+          "url": "https://www.npr.org/2025/06/18/nx-s1-5438122/trump-iran-israel-conflict-tucker-carlson"
+        }
+      ]
+    },
+    {
+      "date": "2025-06-22",
+      "event": "美国 B-2 轰炸机加入袭击 Fordow / Natanz / Isfahan 三处核设施；伊朗反击卡塔尔 Al Udeid 基地",
+      "factions": [
+        "hawk",
+        "evangelical"
+      ],
+      "significance": "特朗普在 Truth Social 上把伊朗反击称为「a very weak response」；JD·万斯（JD Vance） 仅发一条 X 祝美军平安归来——未评价袭击正当性",
+      "sources": [
+        {
+          "label": "CNN 报道：MAGA movement divided over Trump's move to bomb Iran",
+          "url": "https://www.cnn.com/2025/06/22/politics/maga-movement-divided-trump-iran"
+        }
+      ],
+      "analysis": "**背景**：美国 B-2 轰炸机在 6 月 22 日凌晨加入袭击 Fordow / Natanz / Isfahan 三处核设施，这是美国直接参战的标志性时点。决策过程绕过传统国安会跨部门协调流程——按 Shaheen 致 Rubio 信揭露，特朗普 + 海格塞斯 + 鲁比奥 + 米勒「四人核心」直接拍板。\n\n**伊朗反击**：6 月 22 日下午伊朗向卡塔尔 Al Udeid 美军基地发射 14 枚弹道导弹。基地疏散及时，无人员伤亡。特朗普当晚在 Truth Social 把伊朗反击称为「a very weak response」（一个非常软弱的反应）——这种轻蔑措辞触发了 MAGA 原教旨派的不满。\n\n**万斯沉默**：副总统 JD·万斯（JD Vance）当天只在 X 上发了一条祝美军平安归来的推文。没有评价袭击的正当性、目标选择、长期战略后果。这种沉默是后自由派的标志性姿态——保留 2027-2028 总统竞选的全部选择空间。\n\n**意义**：B-2 加入袭击让 MAGA 「不再打新战争」的核心承诺正式破产。2024 大选期间特朗普反复说过「我会终结战争」——10 个月后，他亲自开启了一场新战争。从竞选承诺到亲自启动新战争只用了 10 个月，是 1898 年 William McKinley 美西战争开战以来最快的「反战候选人变战时总统」转折。"
+    },
+    {
+      "date": "2025-06-24",
+      "event": "12 天战争停火协议达成",
+      "factions": [],
+      "significance": "第一阶段战事暂停，但分裂的舆论与立法已成事实",
+      "sources": []
+    },
+    {
+      "date": "2025-06-底",
+      "event": "托马斯·马西（Thomas Massie，肯塔基州第 4 选区共和党人）与 罗·哈纳（Ro Khanna，加州第 17 选区民主党人）联手提出 H.Con.Res.38 战争权力决议",
+      "factions": [
+        "paleo"
+      ],
+      "significance": "引用 1973 战争权力决议法案第 5(c) 条 联合决议机制（不需总统签字即可生效）；被议长迈克·约翰逊 程序性搁置但 哈纳 6 月底已收集 156 个签名（149 民主党 + 7 共和党）",
+      "sources": [
+        {
+          "label": "H.Con.Res.38 决议文本",
+          "url": "https://massie.house.gov/uploadedfiles/iranwpr.pdf"
+        }
+      ],
+      "analysis": "**背景**：6 月 24 日 12 天战争停火后第二天，马西（Thomas Massie，肯塔基州第 4 选区共和党人）联手哈纳（Ro Khanna，加州第 17 选区民主党人）提出 H.Con.Res.38 战争权力决议。这是 1973 年《战争权力决议法案》通过以来第 3 次被用来挑战总统战时决策——前两次是 2011 年利比亚（哈纳本人就是当年挑战奥巴马的提案人）和 2019 年也门（参议院通过但特朗普否决）。\n\n**程序设计**：H.Con.Res.38 援引战争权力决议法案第 5(c) 条「联合决议」（concurrent resolution）机制——不需要总统签字即可生效。这是马西-哈纳团队从程序设计上就预判特朗普会否决的产物。哈纳 6 月底已收集到 156 个签名（149 民主党 + 7 共和党）。\n\n**议长封堵**：议长迈克·约翰逊（Mike Johnson，福音派出身的路易斯安那州第 4 选区共和党人）程序性把法案搁置在 House Rules Committee（众议院规则委员会）。但 7 名共和党联署人（马西 + 4 名众议院自由核心党团成员 + 2 名战略党团反战派）的存在让搁置变成公开冲突。\n\n**意义**：H.Con.Res.38 是 MAGA 原教旨派进入立法层面公开对抗特朗普的第一次。从舆论层面（卡尔森 / 班农）升级到立法层面（马西 / 哈纳）只用了 13 天——这种速度在共和党历史上没有先例。"
+    },
+    {
+      "date": "2026-02-28",
+      "event": "Operation Epic Fury 开战——哈梅内伊在 德黑兰北部一处秘密 IRGC 设施被斩首式打击杀死",
+      "factions": [
+        "hawk",
+        "evangelical"
+      ],
+      "significance": "第二阶段开战。强袭派 + 福音派事实主导对伊政策；原教旨派愤怒升级",
+      "sources": [
+        {
+          "label": "UK Commons CBP-10637",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/"
+        }
+      ],
+      "analysis": "**背景**：2026 年 2 月 28 日「史诗愤怒行动」（Operation Epic Fury）开战，第二阶段战事正式开启。开战目标包括对伊朗中央政府决策中心的「斩首式打击」——哈梅内伊在德黑兰北部一处秘密 IRGC 设施被精确打击杀死。\n\n**情报来源**：哈梅内伊位置情报按 RAND 2026-04 报告推断来源是 Mossad 双重间谍渗透到 IRGC Quds Force 内部 + NSA 的 SIGINT 信号情报截获。整套情报链条让 2 月 28 日的精确打击成为可能。\n\n**接班争议**：哈梅内伊死后伊朗内部立刻进入接班争议状态。次子 Mojtaba Khamenei（1969 年生，2017 年起任 库姆神学院讲师）作为预设接班人，但什叶派最高马尔贾 Sistani（95 岁，Najaf）没有公开表态默认接位过程。Quds Force 司令 Qaani 也没有公开表态。这种「沉默的接班」给政权前景留下巨大不确定性。\n\n**MAGA 反应**：强袭派（鲁比奥 + 海格塞斯 + 米勒）+ 福音派（约翰逊 + 格雷厄姆）公开庆祝「文明的胜利」。原教旨派（班农 + 卡尔森 + 马西）愤怒上升——卡尔森当晚发了「now what?」推文，意思是「斩首之后下一步是什么？」对战略目标的怀疑公开化。\n\n**意义**：12 日战争是「战术行动」，史诗愤怒行动是「政权终结尝试」——后者的政治赌注比前者大一个数量级。MAGA 内部撕裂从「该不该参战」升级到「该不该终结一国政权」，赌注的规模直接对应撕裂的深度。"
+    },
+    {
+      "date": "2026-03-05",
+      "event": "参议院外交委员会民主党 8 人联名致函国务卿鲁比奥",
+      "factions": [],
+      "significance": "沙欣 领衔，Murphy / Kaine / Merkley / Booker / Van Hollen / Duckworth / Rosen 联署。揭露美国驻中东 14 国只有 6 国有大使、3 位职业大使被无理由解雇、近东事务局 8-12 月走 76 人、领事局走 155 人——这是 《2025 工程》（《2025 工程》（Project 2025））（《2025 工程》（Project 2025））的人事清洗后果。",
+      "sources": [
+        {
+          "label": "Senate Foreign Relations Press 全文",
+          "url": "https://www.foreign.senate.gov/press/dem/release/ranking-member-shaheenforeign-relations-democratspress-state-department-on-failure-to-protect-us-diplomatsin-lead-up-toiran-strikes"
+        }
+      ],
+      "analysis": "**背景**：2026 年 3 月 5 日参议院外交委员会民主党 8 人联名致函国务卿鲁比奥。联署人：沙欣 领衔（外交委员会民主党首席）+ Murphy（康涅狄格州，曾任外交委员会近东小组主席）+ Kaine（弗吉尼亚州，2016 副总统候选人）+ Merkley（俄勒冈州，长期反对中东军事干预）+ Booker（新泽西州）+ Van Hollen（马里兰州）+ Duckworth（伊利诺伊州，伊拉克战争伤兵）+ Rosen（内华达州）。\n\n**揭露内容**：信件公开《2025 工程》（Project 2025）对国务院的人事清洗后果。具体数字：\n\n- 美国驻中东 14 国只有 6 国有大使（剩 8 国大使空缺）\n- 3 位职业大使（卡塔尔 / 科威特 / 埃及）在战前被无理由解雇——这三国在 12 日战争期间都是关键斡旋方\n- 近东事务局（Bureau of Near Eastern Affairs）2025 年 8-12 月间走了 76 人\n- 领事事务局（Bureau of Consular Affairs，负责使馆 / 公民保护）走了 155 人\n\n**人事真空的实质**：开战的关键 6 个月（2025 年 8 月到 2026 年 1 月）里，美国对中东外交决策能力被《2025 工程》清洗到只剩「四人核心」（特朗普 + 海格塞斯 + 鲁比奥 + 米勒）。这等于关闭了所有的传统国安会跨部门协调机制——为强袭派 + 福音派的事实垄断打开制度通道。\n\n**意义**：Shaheen 信件是民主党第一次从制度层面公开拆解强袭派垄断的物质基础。这跟原教旨派从舆论 / 立法层面挑战平行——只是民主党的攻击点不是「该不该开战」（民主党自己也不反对介入），是「特朗普为什么能绕过国安会跨部门协调」。两条战线在 2026-03 汇合让 MAGA 内部撕裂叠加上党际撕裂。"
+    },
+    {
+      "date": "2026-03",
+      "event": "CPAC 大会 MAGA 内部第一次大规模公开就伊朗政策对峙",
+      "factions": [
+        "paleo",
+        "hawk",
+        "evangelical",
+        "postliberal"
+      ],
+      "significance": "ABC News 标题「Conservatives gather for CPAC as MAGA fights over Iran war」——大会成为内部撕裂可见化的舞台",
+      "sources": [
+        {
+          "label": "ABC News CPAC 报道",
+          "url": "https://abcnews.com/Politics/conservatives-gather-cpac-maga-fights-iran-war/story?id=131403499"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-17",
+      "event": "《外交政策》上 斯蒂芬·沃尔特（Stephen Walt） 发文：「The Israel Lobby Bears a Special Responsibility for Donald Trump's Iran War」",
+      "factions": [
+        "paleo",
+        "postliberal"
+      ],
+      "significance": "沃尔特是《以色列游说集团与美国外交政策》（2007，与 Mearsheimer 合著）作者——19 年后回到同一论题，首次有 《外交政策》 这种主流期刊把伊朗战争跟以色列游说集团资金链直接挂钩。《雅各宾》月刊（Jacobin） 在 3 月 3 日已经先发了配套",
+      "sources": [
+        {
+          "label": "斯蒂芬·沃尔特（Stephen Walt） 《外交政策》 文章",
+          "url": "https://foreignpolicy.com/2026/03/17/israel-lobby-iran-war-trump-responsibility/"
+        },
+        {
+          "label": "《雅各宾》月刊（Jacobin） 2026-03-03",
+          "url": "https://jacobin.com/2026/03/aipac-trump-israel-democrats-iran"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-08",
+      "event": "巴基斯坦斡旋下两周条件性停火达成",
+      "factions": [],
+      "significance": "为后续的 FDD / CFR 鹰派内部公开认错腾出了空间",
+      "sources": []
+    },
+    {
+      "date": "2026-04-09",
+      "event": "FDD 鲁埃尔·马克·盖雷希特（Reuel Marc Gerecht） 与 CFR 雷·塔基（Ray Takeyh） 在 《华尔街日报》联名发文「How Trump Miscalculated in Iran」",
+      "factions": [
+        "hawk"
+      ],
+      "significance": "FDD（2001 年 9/11 后成立的反恐 / 反伊朗智库）和 CFR（建制派对外关系智库）的两个鹰派代表性人物联名发文，等于强袭派机构性公开承认错误。这是 MAGA 内部破裂最重的一击。",
+      "sources": [
+        {
+          "label": "《华尔街日报》/ FDD 联名文章",
+          "url": "https://www.fdd.org/analysis/2026/04/09/how-trump-miscalculated-in-iran/"
+        }
+      ],
+      "analysis": "**背景**：FDD（Foundation for Defense of Democracies，捍卫民主基金会，2001 年 9/11 后成立）的鲁埃尔·马克·盖雷希特（Reuel Marc Gerecht，前 CIA Operations Officer，FDD 高级研究员）+ CFR（Council on Foreign Relations，外交关系委员会）的雷·塔基（Ray Takeyh，伊朗政策研究高级研究员）在 4 月 9 日《华尔街日报》联名发文「How Trump Miscalculated in Iran」（特朗普如何在伊朗问题上算错了）。\n\n**两位作者的背景**：盖雷希特 是 2003 伊拉克战争前的主战派理论家，长期主张「政权更迭」式干预。塔基 是 CFR 内部最知名的伊朗问题专家，2009 绿色革命期间主张美国直接支持革命派。两人都是过去 20 年「鹰派智库」的代表性人物。\n\n**文章的承认**：他们承认三个错误：\n\n- 严重低估伊朗政权的内生韧性——Mojtaba 接班虽然不顺利但 IRGC 中央指挥链未崩溃\n- 严重低估「斩首」战术的政治代价——以色列 + 美国成为「政权终结者」让伊朗境内民族主义反弹超过预期\n- 严重低估能源市场和供应链冲击的传导——布伦特风险溢价持续维持高位让 GOP 选民支持率持续下滑\n\n**意义**：FDD + CFR 是过去 20 年美国对伊朗鹰派立场的两大智库支柱。两个机构的代表性人物联名公开认错，等于强袭派的智库基础在制度层面崩塌。这跟「卡尔森 / 班农 + 马西」从舆论 / 立法层面挑战形成结构性合围——MAGA 内部从「鹰派可以反驳鸽派」变成「鹰派自己开始倒戈」。"
+    },
+    {
+      "date": "2026-04-中",
+      "event": "CNN 报道共和党战略师在讨论中期选举策略调整",
+      "factions": [
+        "hawk",
+        "evangelical"
+      ],
+      "significance": "共和党选民关于「继续对伊军事行动」的支持率从 2025-06 开战时 78% 跌到 2026-04 NPR/PBS/Marist 调查的 48%——10 个月跌 30 个百分点，比 2003 伊拉克战争的同期更陡",
+      "sources": [
+        {
+          "label": "CNN 共和党中期选举报道",
+          "url": "https://www.cnn.com/2026/04/16/politics/republicans-house-iran-war-midterms"
+        }
+      ]
+    },
+    {
+      "date": "2026-05",
+      "event": "罗伯特·卡根 在 《大西洋月刊》 上发「checkmate / total defeat」长文",
+      "factions": [
+        "hawk"
+      ],
+      "significance": "卡根 是 新美国世纪计划（PNAC，2001 年伊拉克战争主要智识推手）联合创始人之一，2002 年《《天堂与权力》（Of Paradise and Power）》是新保守主义海外干预论的奠基文本。Kagan 脱队等同于 1968 年沃尔特·李普曼公开反对越战——新保守主义自身的「末日审判」",
+      "sources": [
+        {
+          "label": "Middle East Eye 关于 Kagan 文章的报道",
+          "url": "https://www.middleeasteye.net/news/us-heading-checkmate-and-total-defeat-iran-war-says-neocon-robert-kagan"
+        }
+      ],
+      "analysis": "**背景**：2026 年 5 月初罗伯特·卡根（Robert Kagan）在《大西洋月刊》（The Atlantic）上发表「checkmate / total defeat」（将死 / 完败）长文。文章直接判定：「美国对伊朗的政权更迭尝试以战略层面的完败结束」。\n\n**卡根的背景**：罗伯特·卡根是「新美国世纪计划」（Project for the New American Century，PNAC）的联合创始人之一。PNAC 是 2001 年伊拉克战争的主要智识推手——2002 年卡根的著作《天堂与权力》（Of Paradise and Power: America and Europe in the New World Order）是新保守主义海外干预论的奠基文本，提出「美国是火星，欧洲是金星」的著名比喻。\n\n**脱队的历史意义**：从 PNAC 联合创始人到「政权更迭完败」的承认，卡根脱队等同于 1968 年沃尔特·李普曼（Walter Lippmann）公开反对越战——新保守主义自身的「末日审判」。李普曼当年是从 1898 年美西战争起就主张美国对外干预的最重要支持者，1968 年公开反对越战让整个建制派对越战的支持崩塌。\n\n**与 FDD/CFR 认错的关系**：卡根脱队 + Gerecht/Takeyh WSJ 联名 + 沃尔特《外交政策》文章——2026 年 3-5 月三个月内，新保守主义阵营三个不同代际、三种不同立场的代表性人物同步脱队。这种规模的智识崩塌在过去 80 年里只在越战末期（1968-1972）出现过。\n\n**意义**：卡根脱队让 MAGA 强袭派失去最重要的智识背书。鲁比奥 / 海格塞斯 / 米勒虽然控制行政权，但他们的政策正当性话语从此失去主要的智识来源。2028 年提名战如果出现「卡根 vs Mojtaba 第二轮路线之争」，强袭派会失去叙事主动权。"
+    },
+    {
+      "date": "2026-05-15",
+      "event": "马西在众议院提出要求 AIPAC 注册为外国代理人（FARA）的法案",
+      "factions": [
+        "paleo"
+      ],
+      "significance": "FARA（1938 年外国代理人注册法案）历史上几乎只被用来追查苏联 / 纳粹德国代理人——首次被用到 AIPAC 上是历史性创举",
+      "sources": [
+        {
+          "label": "Common Dreams 报道",
+          "url": "https://www.commondreams.org/news/thomas-massie-aipac-foreign-agents"
+        }
+      ],
+      "analysis": "**背景**：马西在众议院提出要求 AIPAC（American Israel Public Affairs Committee，美国以色列公共事务委员会，1953 年成立）注册为「外国代理人」的法案。法案援引 FARA（Foreign Agents Registration Act，1938 年外国代理人注册法案）——一部历史上几乎只用来追查苏联 / 纳粹德国代理人的法律。\n\n**FARA 的历史用途**：FARA 1938 年通过后的主要使用案例：1940 年代追查纳粹德国在美宣传机构、1950 年代追查苏联在美「宣传机构」（特别是 Amtorg Trading Corporation）、1980 年代追查利比亚的「人民事务局」、2017 年 Mueller 调查期间追查 保罗·马纳福特 给乌克兰前总统亚努科维奇的咨询工作。从未用来追查任何美国国内利益团体——AIPAC 注册要求是历史性创举。\n\n**法案设计**：法案要求 AIPAC 在 90 天内向司法部 FARA 部门注册并披露所有外国资金来源、政策协调文件、与外国政府官员的会晤记录。如果不注册，AIPAC 全部捐款被视为「未注册外国代理人」操作——可能引发对所有 AIPAC 资助候选人的连锁审查。\n\n**与 AIPAC 反击的关系**：AIPAC 在 4 月 9 日已经通过其 PAC（United Democracy Project，UDP）启动对马西的初选攻击。马西的反击是「程序对程序」——AIPAC 通过 UDP 做政治打击，马西用 FARA 让 AIPAC 整个组织合法性受质疑。\n\n**意义**：5 月 15 日法案让 MAGA 内部撕裂从「政策分歧」升级到「合法性互相否定」。马西不再只是反对 AIPAC 的政策主张，是要让 AIPAC 失去美国国内利益团体的身份。这种「制度合法性互相否定」是 1968 年共和党 戈德华特派 vs 洛克菲勒派之争从未达到的烈度。"
+    }
+  ],
+  "observations": [
+    {
+      "id": "aipac_spending",
+      "label": "AIPAC 在 2026 共和党党内初选的投入金额",
+      "summary": "AIPAC 历来对反战民主党出手不留情，但对反战共和党出手是新现象",
+      "threshold": "如果 UDP（团结民主项目，AIPAC 旗下 超级政治行动委员会）开始在共和党初选投放攻击性广告针对 马西 或签 H.Con.Res.38 的共和党议员 → AIPAC 对反战共和党的清洗公开化",
+      "status": "open",
+      "last_check": "2026-05-19",
+      "significance": "一旦发生，马西 的 AIPAC FARA 法案立刻从边缘提案变成原教旨派联合后自由派对抗 AIPAC 的法律武器",
+      "analysis": "AIPAC 在 2024 大选周期通过 UDP 投入约 1 亿美元，主要用于击败反战民主党——最有标志性的是 科里·布什（Cori Bush） 和 贾马尔·鲍曼（Jamaal Bowman） 的连任失败，AIPAC 系候选人在民主党初选阶段把他们击落。AIPAC 历来对反战民主党出手不留情，但对反战共和党出手是新现象。\n\n监测对象：FEC（联邦选举委员会）文件每季度更新一次。UDP 的开支项目里如果出现共和党初选 攻击性政治广告（攻击性政治广告），立刻形成新闻爆点。",
+      "sources": []
+    },
+    {
+      "id": "vance_statement",
+      "label": "JD·万斯（JD Vance） 的公开伊朗政策表态时刻",
+      "summary": "万斯 从 2025-06-22 袭击至今没有任何明确的伊朗政策表态——沉默本身就是信号",
+      "threshold": "万斯 如果在 2027 年初宣布参选总统，对伊朗的表态会决定后自由派最终倒向原教旨派还是强袭派",
+      "status": "open",
+      "last_check": "2026-05-19",
+      "analysis": "万斯 2024 副总统竞选期间曾在 塔克·卡尔森的节目上说过「I'm not pro-Israel in the way that Lindsey Graham is pro-Israel」——这是他离原教旨派最近的一次公开表态。但在白宫期间从未公开就 伊朗政策表态。\n\n如果万斯 倒向原教旨派，2028 年共和党初选会出现 Bannon-Carlson-万斯 对阵 鲁比奥-海格塞斯 的局面，撕裂正式成形。\n\n监测对象：万斯在白宫官网上的演讲记录、周日早间访谈节目、American Compass（智库，奥伦·卡斯创立，万斯长期撰稿）的出版物、对 J6 一周年的纪念表态。",
+      "sources": []
+    },
+    {
+      "id": "trump_attack_massie",
+      "label": "特朗普是否在 Truth Social 上点名攻击马西",
+      "summary": "特朗普 2024 年 5 月发过「Thomas Massie has my Complete and Total Endorsement!」——目前仍未撤回",
+      "threshold": "一旦 特朗普在 Truth Social 上点名攻击马西 → 等于跟 AIPAC 公开结盟、跟 班农 派公开决裂——这是原教旨派的红线指标",
+      "status": "open",
+      "last_check": "2026-05-19",
+      "analysis": "特朗普每天 50-80 条 Truth Social 帖子子，关键词搜索 马西 即可监测。特朗普 2024 年公开支持过 Massie——是少数被 MAGA 圈攻击但 公开支持过的国会议员。\n\n这条红线一旦跨过，意味着 特朗普个人选边站强袭派 + 福音派，原教旨派失去其内部最大保护伞，分裂正式不可逆。",
+      "sources": []
+    },
+    {
+      "id": "wpr_discharge_petition",
+      "label": "Khanna-马西 WPR 是否走到强制记名表决",
+      "summary": "H.Con.Res.38 被议长迈克·约翰逊 程序性搁置，但 释出请愿 已收集 156 个签名（149 民主党 + 7 共和党）",
+      "threshold": "签名数达到 218 → 强制记名表决 → 共和党议员公开站队记录形成 → 2026 中期 攻击性政治广告 黄金素材",
+      "status": "open",
+      "last_check": "2026-05-19",
+      "analysis": "释出请愿（释出请愿）是国会绕开议长程序性搁置的标准武器——需要 218 个签名（众议院半数）即可强制让决议出委员会进入全院表决。\n\n可对照 2002 年 AUMF（Authorization for Use of Military Force，使用武力授权）投票，当时投赞成票的民主党议员在 2008 年初选阶段几乎全部被反战候选人挑战（最有名的是 Hillary Clinton 输给 Obama）。\n\n监测对象：释出请愿 签名数每周更新，是 public record（公开记录）。",
+      "sources": [
+        {
+          "label": "H.Con.Res.38 决议文本",
+          "url": "https://massie.house.gov/uploadedfiles/iranwpr.pdf"
+        }
+      ]
+    },
+    {
+      "id": "carlson_business",
+      "label": "塔克·卡尔森（Tucker Carlson）电视网 的商业可持续性",
+      "summary": "原教旨派的舆论持续力取决于商业可持续性",
+      "threshold": "如果 AIPAC 关联金主撤广告 + 订阅数下滑 → 反战派失去最重要的舆论平台",
+      "status": "open",
+      "last_check": "2026-05-19",
+      "analysis": "卡尔森 节目从 Fox 独立出来后是订阅制（约 72 美元/年）加广告制，月活用户约 800 万（Axios 新闻媒体数据）。\n\n监测对象：每季度的订阅数据（如果披露）、单期 班农 访谈的 view count（YouTube 嵌入版本仍可观察）、Patreon / Locals（订阅内容平台） 等替代订阅平台的 supporter 数、卡尔森 自己采访的客户单（来访的反战 MAGA vs 强袭派比例）。",
+      "sources": []
+    },
+    {
+      "id": "gop_voter_support",
+      "label": "共和党选民关于「继续对伊军事行动」的支持率",
+      "summary": "从 2025-06 开战时 78% 跌到 2026-04 的 48%——10 个月跌 30 个百分点",
+      "threshold": "跌破 35% 等于把强袭派从基层割断；按当前下降速度可能在 2026 中期选举前后跌破",
+      "status": "open",
+      "last_check": "2026-04-25",
+      "analysis": "2025 年 6 月袭击当时，CBS 新闻 / YouGov 联合民调 6/13-6/15 调查显示共和党选民支持率 78%；到 2026 年 4 月底 NPR / PBS / 玛丽斯特联合民调 4/22-4/25 调查显示跌到 48%。\n\n可对照的历史 baseline 是 2003 年伊拉克战争支持率：开战时共和党支持率 91%，到 2006 中期选举跌至 56%——共和党在那次中期选举失去众议院 30 席、参议院 6 席。\n\n如果伊朗战争支持率的下降曲线比伊拉克更陡（已经从 6 月到次年 4 月共和党内跌了 30 个百分点，远超伊拉克战争同期），2026 中期选举共和党可能面临比 2006 更严重的失利。",
+      "sources": [
+        {
+          "label": "CNN 4 月报道共和党中期策略",
+          "url": "https://www.cnn.com/2026/04/16/politics/republicans-house-iran-war-midterms"
+        }
+      ]
+    }
+  ],
+  "history_compare": {
+    "title": "两种历史先例：1968 vs 2003",
+    "intro": "MAGA 在伊朗战争上的分裂有两个可比历史先例，对应不同的结局走向。",
+    "scenarios": [
+      {
+        "year": "1968",
+        "label": "戈德华特派 vs 艾森豪威尔-洛克菲勒派的越战撕裂",
+        "narrative": "1968 年共和党在越战问题上经历过一次类似的内部撕裂——戈德华特派的鹰派和 艾森豪威尔-洛克菲勒派的温和派对越战的态度差异，让党在尼克松上台前几乎散架。1968 年共和党初选有 3 个主要候选人：Richard Nixon（中间）、Nelson Rockefeller（温和）、Ronald Reagan（鹰派州长）。最后 尼克松 在 Miami Beach RNC 大会上险胜，依靠的是他能同时拉拢两派——他在初选期间反复抛出「Peace with Honor」口号。代价是越战又打了 5 年（1968-1973）。\n\n尼克松 那个「和平的荣誉」是靠 精英协商 缝合的——尼克松 跟 洛克菲勒在 Miami Beach 大会前几天的密谈是 精英共识 形成的标志性场景。",
+        "applicability": "**不适用于今天**。特朗普没有尼克松那种 精英共识 的工具——他靠基层动员。MAGA 联盟没有 精英协商机制：共和党全国委员会（RNC）由 特朗普钦定的 迈克尔·瓦特利（Michael Whatley） 任主席，整个党机器实质被 特朗普私人掌控；传统 精英共识工具（传统基金会、AEI、Hoover）都被 MAGA 化或边缘化。所以「和平的荣誉」式话术今天没有制度载体。"
+      },
+      {
+        "year": "2003-2016",
+        "label": "伊拉克战争撕裂 → 2008 罗恩·保罗（Ron Paul） → 2010 Tea Party → 2016 Trump",
+        "narrative": "更接近的历史可比性是 2003-2008 年共和党在伊拉克战争上的撕裂——那次撕裂的结果是 2008 年 罗恩·保罗（Ron Paul） 在共和党初选异军突起，2010 年 茶党 在中期选举横扫，最终在 2016 年 特朗普用反战姿态拿下提名。从 2003 到 2016 经历了 13 年。\n\n但 1968-1980 的越战撕裂也用了 12 年才出 Reagan 重组共和党。所以一个推断：MAGA 内部的伊朗战争撕裂可能不是马上爆发的事，是 2026-2038 这十多年的持续过程。",
+        "applicability": "**部分适用**。今天比 2003 不同的关键差异：\n\n- 信息环境碎片化——塔克·卡尔森（Tucker Carlson）电视网 等独立媒体让分裂可见化的速度比 2003 福克斯新闻时代快得多\n- 通胀传导加战争代价已经在 GOP 选民中跑出曲线——2003 伊拉克战争是事后才让选民疲惫，今天伊朗战争的支持率已经在 10 个月内跌 30 个百分点，比伊拉克快得多"
+      }
+    ],
+    "current_judgment": "这次 MAGA 分裂跟 1968 年最大的差别在于：1968 年共和党还有一个「建制派」作为粘合剂，今天 特朗普摧毁了那个建制派。2026-2028 之间，MAGA 要么找到新的内部协调机制（我对这件事不乐观），要么就在 2028 年提名战上正式裂成两个党。万斯如果获得后自由派支持加部分原教旨派支持参选，鲁比奥或海格塞斯如果获得强袭派加福音派支持参选，2028 年共和党初选会出现 1976 年福特对里根那种「建制派 vs 挑战者」的对峙——但跟 1976 年不同的是，今天没有精英共识工具能像那年那样靠党机器险胜。"
+  },
+  "glossary": [
+    {
+      "term": "MAGA",
+      "zh": "「让美国再次伟大」联盟",
+      "en": "Make America Great Again",
+      "note": "特朗普2015 年以来构建的多元保守联盟，2024 年第二次胜选后处于权力顶峰，由原教旨孤立、强袭、福音派锡安、后自由派四种立场拼起来。"
+    },
+    {
+      "term": "伊朗核问题全面协议（JCPOA）",
+      "zh": "伊朗核问题全面协议",
+      "en": "伊朗核问题全面协议",
+      "note": "2015 年签署的多边协议，限制伊朗核计划换取制裁解除。特朗普2018-05 退出。"
+    },
+    {
+      "term": "AIPAC",
+      "zh": "美国以色列公共事务委员会",
+      "en": "American Israel Public Affairs Committee",
+      "note": "成立于 1953 年的亲以色列游说集团，是美国最有影响力的外国政策游说团体之一。"
+    },
+    {
+      "term": "FARA",
+      "zh": "外国代理人注册法案",
+      "en": "外国代理人注册法案",
+      "note": "1938 年通过的法律，要求所有外国政府代理人公开披露资金来源。历史上几乎只被用来追查苏联、纳粹德国的代理人。"
+    },
+    {
+      "term": "PNAC",
+      "zh": "新美国世纪计划",
+      "en": "新美国世纪计划",
+      "note": "罗伯特·卡根 等人 1997 年创立的新保守主义智库，是 2001 年伊拉克战争主要智识推手。"
+    },
+    {
+      "term": "FDD",
+      "zh": "捍卫民主基金会",
+      "en": "Foundation for Defense of Democracies",
+      "note": "2001 年 9/11 后成立的反恐 / 反伊朗智库，CEO 马克·杜博维茨（Mark Dubowitz） 是 2018 年 特朗普退出 伊朗核问题全面协议（JCPOA） 的智囊之一。"
+    },
+    {
+      "term": "WPR",
+      "zh": "战争权力决议法案",
+      "en": "战争权力决议法案",
+      "note": "1973 年通过的法律，限制总统未经国会批准发动战争。Section 5(c) 允许国会通过 concurrent resolution（联合决议）命令撤军，不需要总统签字。"
+    },
+    {
+      "term": "CPAC",
+      "zh": "保守派政治行动会议",
+      "en": "Conservative Political Action Conference",
+      "note": "1974 年起每年举办的美国最大保守派年度大会。"
+    }
+  ],
+  "causal_map": {
+    "title": "撕裂演化路径：从触发条件到 2028 提名战",
+    "intro": "MAGA 是否从「分裂」走向「正式分党」，取决于四个触发条件的组合。当前每个触发条件都是 falsifiable 的——下面列出每条触发条件 + 三种可能结局。",
+    "triggers": [
+      {
+        "id": "vance",
+        "label": "JD·万斯（JD Vance） 公开站队",
+        "color": "danger",
+        "description": "万斯至今对伊朗政策保持沉默。如果他在 2027 年初宣布参选总统时明确倒向原教旨派（公开支持 马西 的 AIPAC FARA 法案、批评袭击决策），将给后自由派+原教旨派联合提供合法的总统候选人。"
+      },
+      {
+        "id": "aipac",
+        "label": "AIPAC 在共和党初选投钱针对反战议员",
+        "color": "danger",
+        "description": "AIPAC 历来对反战民主党出手不留情（2024 年通过 UDP 击败 科里·布什（Cori Bush）、贾马尔·鲍曼（Jamaal Bowman）），但对反战共和党出手是新现象。一旦 UDP 在共和党初选投放攻击性广告针对 马西 或 H.Con.Res.38 签名共和党议员，相当于公开宣告「以色列游说集团清洗反战共和党」。"
+      },
+      {
+        "id": "trump_massie",
+        "label": "特朗普在 Truth Social 上点名攻击马西",
+        "color": "danger",
+        "description": "特朗普 2024-05 发过「Thomas Massie has my Complete and Total Endorsement!」。一旦撤回并点名攻击，等于跟 AIPAC 公开结盟、跟 班农 派公开决裂——原教旨派失去最大保护伞。"
+      },
+      {
+        "id": "voter_support",
+        "label": "共和党选民支持率破 35%",
+        "color": "alert",
+        "description": "共和党选民关于「继续对伊军事行动」的支持率从 2025-06 开战时 78% 跌到 2026-04 的 48%——10 个月跌 30 个百分点，比 2003 伊拉克战争同期更陡。跌破 35% 等于把强袭派从基层割断。"
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "status_quo",
+        "label": "维持联盟",
+        "color": "neutral",
+        "trigger_threshold": "0-1 个触发条件成立",
+        "description": "MAGA 联盟在嘴上吵架但保持团结，2028 提名战出一个能拉拢四派的妥协人选（类似 1968 年尼克松（Nixon） 的「Peace with Honor」），但要求 特朗普主导找到这种妥协。当前来看 特朗普没有 尼克松 那种 精英共识工具。",
+        "probability": "约 30%"
+      },
+      {
+        "id": "partial_split",
+        "label": "局部撕裂",
+        "color": "warning",
+        "trigger_threshold": "2-3 个触发条件成立",
+        "description": "2028 共和党初选公开撕裂（万斯对阵鲁比奥/海格塞斯），但党机器最终勉强合上。代价是基层选民流失 + 2028 大选竞争力受损。",
+        "probability": "约 50%"
+      },
+      {
+        "id": "full_split",
+        "label": "全面分党",
+        "color": "danger",
+        "trigger_threshold": "4 个触发条件全部成立",
+        "description": "2028 共和党初选撕裂后，原教旨派+后自由派联合脱党组建新党（类似 1912 西奥多·罗斯福（Theodore Roosevelt） 的 雄鹿党（Bull Moose Party））。这是 2026-2038 这十多年内最不可能但也最具结构性的结局——参考 1968-1980 年共和党用 12 年完成 戈德华特派内部重构。",
+        "probability": "约 20%"
+      }
+    ],
+    "current_assessment": "截至 2026-05-19 基线日：触发 1（Vance）= 未发生，但 万斯保持沉默姿态本身是观察焦点；触发 2（AIPAC）= 未公开发生但 马西 FARA 法案让此变得敏感；触发 3（特朗普攻击马西）= 未发生，仍是红线指标；触发 4（GOP 选民 35%）= 接近但未达——4 月底 48%，按当前下降速度可能在 2026 中期选举前后跌破。当前最可能的结局是「局部撕裂」（约 50% 概率），但任意 2 个触发条件同时跳变会推高「全面分党」概率。"
+  },
+  "hubs": [
+    {
+      "id": "iran_war",
+      "name": "伊朗战争",
+      "color": "danger",
+      "summary": "2025-06-22 美国 B-2 加入袭击 + 2026-02-28 史诗愤怒行动斩首哈梅内伊——这两次军事行动如何成为可能、又如何反塑 MAGA 联盟。",
+      "thesis": "强袭派 + 福音派的实质垄断使两次战争决策成为可能，但战争反过来让 MAGA 联盟的四派系结构进入公开撕裂状态。",
+      "logic": "前提关系：四派系的具体位置决定了战争决策是否可能（强袭派主导 AND 福音派背书 AND 原教旨派被排除 AND 后自由派沉默）；后果则是四派系各自被战争反塑。",
+      "preconditions": [
+        {
+          "id": "iw_pre_hawk",
+          "label": "强袭派主导白宫国安会",
+          "status": "triggered",
+          "analysis": "强袭派由三个人在 特朗普第二任期政府里事实接管对伊政策：国防部长 皮特·海格塞斯（Pete Hegseth，退伍军人出身的福克斯新闻（Fox News）主持人，2024-11 提名时争议很大但参议院 50-49 通过）、国务卿 马尔科·鲁比奥（Marco Rubio，古巴裔参议员，2024-11 由 特朗普提名，长期持鹰派立场）、副幕僚长（政策方向）斯蒂芬·米勒（Stephen Miller，特朗普第一任期 班农 2017 年 8 月被解雇后接管国安会议程的关键人物）。\n\n这三人的共同特征是「MAGA 外壳 + 新保守内核」。海格塞斯主张「文明冲突」框架，鲁比奥对一切非美式国家持鹰派立场，米勒在 特朗普第一任期主导对伊朗 伊朗核问题全面协议（JCPOA） 退出（2018-05）和暗杀 Quds 海外特种部队（圣城部队）司令苏莱曼尼（Qasem Soleimani）（2020-01）两个关键决策。三人在 特朗普第二任期白宫的人事安排让强袭派形成对伊朗政策的实质垄断——这是原教旨派的核心愤怒所在。\n\n2026 年 3 月 5 日参议院外交委员会民主党 8 人（沙欣 领衔，Murphy / Kaine / Merkley / Booker / Van Hollen / Duckworth / Rosen 联署）致函国务卿 鲁比奥的信件揭露了人事清洗的具体后果——《2025 工程》（《2025 工程》（Project 2025））（《2025 工程》（Project 2025））框架下 2025 年 8 月至 12 月间，国务院近东事务局（Bureau of Near Eastern Affairs，主管中东政策）走了 76 人，领事事务局（Bureau of Consular Affairs，负责使馆 / 公民保护）走了 155 人。这两个数字直接对应到战时美国驻中东 14 国只有 6 国有大使、3 位职业大使（卡塔尔 / 科威特 / 埃及）在战前被无理由解雇的状态。\n\n这一条件的成立让 6 月 22 日 B-2 加入袭击和 2 月 28 日史诗愤怒行动决策不需要走传统的国安会跨部门协调流程——三个核心鹰派加 特朗普个人决断即可推进。",
+          "sources": [
+            {
+              "label": "Shaheen 致 Rubio 信全文（2026-03-05）",
+              "url": "https://www.foreign.senate.gov/press/dem/release/ranking-member-shaheenforeign-relations-democratspress-state-department-on-failure-to-protect-us-diplomatsin-lead-up-toiran-strikes"
+            }
+          ]
+        },
+        {
+          "id": "iw_pre_evangelical",
+          "label": "福音派提供基层合法性背书",
+          "status": "triggered",
+          "analysis": "美国福音派基督徒约 9000 万人（皮尤研究中心 2021 年估算），是共和党最稳定的基层选民群体——2020 大选 特朗普在白人福音派中得票率 76%，2024 更升至 81%。这个群体的政治动员力来自一个独特的神学框架：dispensational premillennialism（时代论前千禧年主义）——相信以色列在末世时代有特殊角色。这个框架由 1909 年首版的 《斯科菲尔德圣经注释本》（C.I. 斯科菲尔德（Scofield） 编注的《圣经》注释本）系统化，当代制度化是 约翰·哈吉（John Hagee）牧师 2006 年创办的 团结基督徒支持以色列（CUFI），目前是美国第二大亲以色列游说组织，仅次于 AIPAC。\n\n皮尤研究中心 长期追踪数据显示，白人福音派基督徒中约 60% 相信「以色列在末世时代有特殊角色」——这意味着支持以色列的军事行动对这个群体不是地缘政治判断，是宗教义务。因此其他三派任何一派都没法用 利益-成本论证打动他们。\n\n国会代表是众议院议长迈克·约翰逊（路易斯安那共和党人，2023-10 当选议长，前职业是宗教自由律师，浸信会神学院 J.D. 学位）和南卡参议员 林赛·格雷厄姆（自 2023-10 加沙战争以来持续推「对伊朗的预防性战争」立场）。约翰逊在 2025-06 程序性搁置 Massie-哈纳 H.Con.Res.38 战争权力决议——这是议长权力的标准用法，但搁置不是杀死。\n\n选区层面的力量比国会层面更深。南方加中部「圣经地带」（圣经地带（Bible Belt））的福音派牧师在主日讲道中支持军事行动——这种基层动员让 GOP 中部议员不敢公开反战。1988 年和 2000 年共和党初选研究表明，福音派选民投票率比一般选民高 20 个百分点——他们是 爱荷华党团会议（爱荷华党团会议）和 南卡罗来纳州初选的决定性力量。\n\n这一条件让 特朗普不需要担心 6 月 22 日袭击会在基层引发即时反弹——福音派的支持是「免费」的政治资本。",
+          "sources": [
+            {
+              "label": "皮尤研究中心：美国福音派宗教-政治态度长期追踪",
+              "url": "https://www.pewresearch.org/religion/religious-landscape-study/"
+            }
+          ]
+        },
+        {
+          "id": "iw_pre_paleo_excluded",
+          "label": "原教旨派被排除出决策圈",
+          "status": "triggered",
+          "analysis": "原教旨孤立派的智识源头是 帕特里克·布坎南（Patrick Buchanan，1992、1996、2000 三次共和党总统初选的反战候选人）+ 罗恩·保罗（Ron Paul，2008、2012 共和党初选反战候选人）的 古老保守派（paleoconservative）传统。特朗普 2016 年靠这个框架起家——共和党初选辩论攻击布什入侵伊拉克「a big fat mistake」，在 RNC 提名演讲说「Americanism, not globalism」。\n\n但 特朗普第二任期政府的人事安排里，这一派没有正式职位。史蒂夫·班农（Steve Bannon）是 2016 大选竞选经理 + 2017-01 至 08 任白宫首席策略师，但 2017 年 8 月被解雇之后从未回到行政机构——特朗普第二任期期间他通过 《战情室》播客（每周 6 天直播 + Substack（订阅制内容平台）+ 极右翼电视台 Real America's Voice（保守派电视台））维持影响力。塔克·卡尔森（Tucker Carlson） 是 Fox News（2016-2023） 黄金时段主持，2023 年 4 月被福克斯新闻解雇后独立运营 塔克·卡尔森（Tucker Carlson）电视网（订阅制约 72 美元/年，月活约 800 万，Axios 2024 年数据），但 特朗普第二任期政府里没有他的位置。\n\n国会层面，肯塔基州第 4 选区共和党众议员 托马斯·马西（Thomas Massie） 是唯一在 H.Con.Res.38（众议院第 38 号联合决议）上签名的共和党议员——这项决议 2025 年 6 月底由 马西与加州第 17 选区民主党众议员 Ro 哈纳 联手提出，引用 1973 年 战争权力决议法案第 5(c) 条 的联合决议机制（不需总统签字即可生效），要求停止伊朗境内军事行动。\n\n这条决议被议长迈克·约翰逊 程序性搁置，但 哈纳 已经收集到 156 个签名（149 民主党 + 7 共和党）逼近 218 强制表决门槛。马西一人代表整个原教旨派在国会的 体制内否决权——这种 7 比 1 的比例（7 民主党联署 vs 1 共和党联署）准确反映了原教旨派在共和党内的边缘化程度。\n\n这一条件意味着 2025-06-22 袭击和 2026-02-28 史诗愤怒行动决策不需要面对来自共和党执政体系内的实质阻力。",
+          "sources": [
+            {
+              "label": "班农在 塔克·卡尔森电视网长访谈（2025-06-17）",
+              "url": "https://www.youtube.com/watch?v=tFM6L6TopsM"
+            },
+            {
+              "label": "马西提出 H.Con.Res.38",
+              "url": "https://massie.house.gov/uploadedfiles/iranwpr.pdf"
+            },
+            {
+              "label": "Common Dreams 2026-05-15：马西提 AIPAC FARA",
+              "url": "https://www.commondreams.org/news/thomas-massie-aipac-foreign-agents"
+            }
+          ]
+        },
+        {
+          "id": "iw_pre_vance_silent",
+          "label": "后自由派 万斯 副总统的沉默",
+          "status": "triggered",
+          "analysis": "副总统 JD·万斯（JD Vance，俄亥俄州参议员 2023-2025，2024 年 11 月当选副总统）是 MAGA 联盟里最暧昧的人物。他的智识根基是后自由派 / 天主教保守派——这一派的核心刊物是 First Things 杂志（1990 年创刊，理查德·约翰·诺豪斯（Richard John Neuhaus） 创办的天主教-福音派联合期刊）、Compact（2022 年由 索赫拉布·阿马里（Sohrab Ahmari）、爱德文·阿庞特（Edwin Aponte）、帕特里克·迪宁（Patrick Deneen） 创办）、American Conservative（2002 年由 帕特·布坎南（Pat Buchanan）+ 罗恩·昂兹（Ron Unz） 联合创办，2016 年后由 罗德·德雷尔（Rod Dreher） 主导）。\n\n这三个刊物的编辑团队对 伊朗-以色列冲突有保留——既不挺以色列右翼的「末世神学」，也不挺 班农 派的纯孤立主义，更倾向「美国应该把精力放在重建本土」的 克里斯托弗·拉什（Christopher Lasch）+ 温德尔·贝里（Wendell Berry） 式立场。万斯 长期为 American Compass（奥伦·卡斯于 2020 年创立的产业政策智库）撰稿，是这一派的政治代表。\n\n万斯 在 2024 副总统竞选期间曾经在 塔克·卡尔森的节目上说过「I'm not pro-Israel in the way that Lindsey Graham is pro-Israel」——这是他离原教旨派最近的一次公开表态。但 2025 年 6 月 22 日 B-2 加入袭击后，他只发了一条 X 祝美军平安归来，没有评价袭击本身的正当性。2026 年 2 月 28 日史诗愤怒行动后他仍然保持公开沉默。\n\n这种沉默不是政治弱势的表现，是政治姿态。万斯保持沉默说明他在保留 2027-2028 总统竞选的政治选择空间——如果伊朗战争走向不利（GOP 选民支持率持续下滑），他可以倒向原教旨派；如果走向有利（伊朗政权维持），他可以倒向强袭派。这种「优势保留」（选项保留）策略让他在四派系撕裂的格局里始终是关键摇摆人。\n\n这一条件成立的具体含义：副总统层级没有实质反对声音对 特朗普的伊朗决策构成 check。如果万斯 在 2025-06 或 2026-02 公开表态反对袭击，特朗普内部决策机制会面临完全不同的政治算式——但他没有。",
+          "sources": []
+        }
+      ],
+      "mechanisms": [
+        {
+          "label": "特朗普第二任期 内阁结构让强袭派 + 福音派形成对伊朗政策的实质垄断",
+          "description": "特朗普第二任内阁的人事安排不是偶然——它复制了 2002-2003 年 布什（Bush）政府的 切尼-拉姆斯菲尔德（Cheney-Rumsfeld）联盟控制对伊拉克战争决策的模式。海格塞斯任国防部长（对应 Rumsfeld）、鲁比奥任国务卿（接管 《2025 工程》（《2025 工程》（Project 2025）） (《2025 工程》（Project 2025）) 国务院清洗）、Miller 任副幕僚长政策方向（影子国安顾问）——三人加 特朗普个人决断即可推动战争决策，不需要 布什（Bush）政府那种正式跨部门 跨部门政策委员会（IPC）流程。\n\n福音派通过国会议长迈克·约翰逊 提供基层合法性背书 + 程序性掩护（搁置 H.Con.Res.38）。这两派的合力让 2025-06 + 2026-02 两次行动在政治上是可行的。\n\n原教旨派（班农 / 卡尔森 / Massie）+ 后自由派（Vance）作为反对方没有 体制内否决权——前者被排除出决策圈，后者保持沉默。这种「两派主战 + 一派边缘 + 一派沉默」的结构是战争决策的政治可行性条件。",
+          "sources": []
+        }
+      ],
+      "consequences": [
+        {
+          "actor": "原教旨派",
+          "label": "舆论反弹 + 立法反扑全面展开",
+          "analysis": "原教旨派被排除出决策圈但保留了媒体和国会的反扑通道。\n\n媒体层面，班农在 6 月 17 日 塔克·卡尔森电视网长访谈里抛出最重一击：「Israel's War on Iran can destroy MAGA forever」——不是 can damage，是 can destroy。卡尔森 同日通讯标题「An Act of War, Sponsored by the United States」把袭击定性为宪法意义上的战争行为，不是「目标打击」或「非战争军事行动」。这两个表述被 《新闻周刊》（Newsweek）2025-06-16）和 NPR（美国国家公共广播电台 2025-06-18）作为「MAGA split / divided」的定性证据反复引用。塔克·卡尔森电视网月活约 800 万（Axios 2024 年数据）+ 班农《战情室》每周 6 天直播——这两个平台合计构成原教旨派的舆论扩音器。\n\n国会层面，马西与民主党 Ro 哈纳 在 6 月底联手提出 H.Con.Res.38 战争权力决议，引用 1973 战争权力决议法案第 5(c) 条 联合决议机制（不需总统签字即可生效）。决议被议长迈克·约翰逊 程序性搁置，但 哈纳 通过 释出请愿（释出请愿）已收集到 156 个签名（149 民主党 + 7 共和党）逼近 218 强制表决门槛。\n\n2026 年 5 月 15 日 马西在众议院提出要求 AIPAC（美国以色列公共事务委员会）注册为外国代理人的法案。这条法案基于 1938 年 外国代理人注册法案（FARA，外国代理人注册法案），该法案历史上几乎只被用来追查苏联、纳粹德国的代理人——马西 把它用到 AIPAC 上是历史性首次。如果通过，AIPAC 必须公开披露所有外国资金来源 + 所有政治献金记录。\n\n这一系列动作让原教旨派从「被边缘化的舆论派」转变为「带有制度反扑能力的政治反对派」。",
+          "sources": [
+            {
+              "label": "班农在 塔克·卡尔森电视网长访谈",
+              "url": "https://www.youtube.com/watch?v=tFM6L6TopsM"
+            },
+            {
+              "label": "《新闻周刊》（Newsweek） 2025-06-16",
+              "url": "https://www.newsweek.com/tucker-carlson-steve-bannon-maga-trump-iran-israel-war-2086346"
+            },
+            {
+              "label": "Common Dreams 2026-05-15：马西 AIPAC FARA",
+              "url": "https://www.commondreams.org/news/thomas-massie-aipac-foreign-agents"
+            }
+          ]
+        },
+        {
+          "actor": "强袭派",
+          "label": "内部首次破裂（FDD + 罗伯特·卡根）",
+          "analysis": "强袭派在 2026 年 4-5 月出现内部破裂——这是 2003 年伊拉克战争以来鹰派智库圈最大的公开认错。\n\n4 月 8 日巴基斯坦斡旋停火达成。4 月 9 日 捍卫民主基金会（FDD，Foundation for Defense of Democracies，2001 年 9/11 后成立的反恐 / 反伊朗智库）的 鲁埃尔·马克·盖雷希特（Reuel Marc Gerecht）（前 CIA 前伊朗目标分析官）和 美国外交关系协会（CFR，Council on Foreign Relations）的 雷·塔基（Ray Takeyh）（CFR 高级研究员，长期持鹰派立场）在 《华尔街日报》 联名发文「How Trump Miscalculated in Iran」。副标题「He followed his Venezuela model, not accounting for the ideological character of the regime 在德黑兰」——直接指出 特朗普的对伊政策是错误的「委内瑞拉模式」搬运。\n\nFDD 的 CEO 马克·杜博维茨（Mark Dubowitz） 是 2018 年 特朗普退出 伊朗核问题全面协议（JCPOA） 的关键智囊之一。FDD 这个机构性鹰派开始公开承认错误，是强袭派内部破裂最重的一击。盖雷希特和 Takeyh 两人在 《华尔街日报》上联合署名（不是各自独立发声）意味着这是两个机构（FDD + CFR）协调过的立场。\n\n5 月 罗伯特·卡根 在《大西洋月刊》（Atlantic）上发「checkmate / total defeat」长文（Middle East Eye 2026-05 同步报道）。卡根 是 新美国世纪计划（PNAC，新美国世纪计划，1997 年由罗伯特·卡根（Robert Kagan）和威廉·克里斯托尔（William Kristol） 创立的智库，2001 年伊拉克战争主要智识推手）联合创始人之一，他在 2002 年发表的《《天堂与权力》（Of Paradise and Power）》是新保守主义海外干预论的奠基文本之一。卡根的「脱队」等同于 1968 年沃尔特·李普曼公开反对越战——是新保守主义自身的「末日审判」。\n\nFDD + Kagan 两个事件叠加，让强袭派失去了 2003-2024 这二十多年构建的智库正当性。这是 MAGA 内部破裂里最具结构性后果的事件——它意味着任何想以「新保守主义专业判断」为依据继续对伊鹰派路线的政治人物，都没有了主流智库的背书。",
+          "sources": [
+            {
+              "label": "FDD Gerecht + CFR Takeyh 《华尔街日报》联名",
+              "url": "https://www.fdd.org/analysis/2026/04/09/how-trump-miscalculated-in-iran/"
+            },
+            {
+              "label": "Middle East Eye 报道 罗伯特·卡根 《大西洋月刊》文章",
+              "url": "https://www.middleeasteye.net/news/us-heading-checkmate-and-total-defeat-iran-war-says-neocon-robert-kagan"
+            }
+          ]
+        },
+        {
+          "actor": "福音派",
+          "label": "持稳但神学合法性首次被纳入公共讨论",
+          "analysis": "福音派是四派系里最稳定的——基层选民支持基本不变。但战争之后，福音派的神学合法性开始被纳入公共讨论，这是 1980 年代 里根时代以来的首次。\n\n国会层面 众议院议长迈克·约翰逊（Mike Johnson）继续程序性搁置 H.Con.Res.38；林赛·格雷厄姆 持续推「对伊朗的预防性战争」立场。基层层面 团结基督徒支持以色列（CUFI）2024 年自称会员数超过 1000 万——这个数字在战争后仍然增长。\n\n但 2026 年 3 月 17 日 《外交政策》上 斯蒂芬·沃尔特（Stephen Walt） 发文《The Israel Lobby Bears a Special Responsibility for Donald Trump's Iran War》——直接把以色列游说集团跟资金链挂钩。沃尔特是哈佛大学国际关系教授，2007 年与 约翰·米尔斯海默（John Mearsheimer） 合著《以色列游说集团与美国外交政策》（The Israel Lobby and U.S. Foreign Policy）一书，把以色列游说集团对美国外交政策的影响系统化论述。19 年后他回到同一论题——是 《外交政策》 这种主流外交政策期刊首次把伊朗战争跟以色列游说集团的资金链直接挂钩。\n\n《雅各宾》月刊（Jacobin，左翼月刊）2026 年 3 月 3 日先发了配套文章《AIPAC Is Influencing Trump's War in Iran》。两篇文章合并把「神学动员 + 游说资金链」这两个机制从 fringe discourse 推到主流外交政策辩论。\n\n此外 罗伯特·卡根 《大西洋月刊》文章里把伊朗战争称为「checkmate」+ 「total defeat」——这是新保守主义元老首次公开质疑战争的合理性。福音派虽然不直接对应 卡根 的智识传统，但 卡根 的脱队削弱了「鹰派 + 福音派联盟」的整体智识合法性。\n\n这一派会持续稳定到 2028 年提名战，但它的舆论免疫力在 2026-04 之后开始下降——任何 2028 年共和党候选人都不能再以「跟福音派立场一致」作为不容质疑的政治资本。",
+          "sources": [
+            {
+              "label": "斯蒂芬·沃尔特（Stephen Walt） 《外交政策》 2026-03-17",
+              "url": "https://foreignpolicy.com/2026/03/17/israel-lobby-iran-war-trump-responsibility/"
+            },
+            {
+              "label": "《雅各宾》月刊（Jacobin） 2026-03-03",
+              "url": "https://jacobin.com/2026/03/aipac-trump-israel-democrats-iran"
+            }
+          ]
+        },
+        {
+          "actor": "后自由派",
+          "label": "万斯 仍未公开站队，但沉默本身在累积政治资本",
+          "analysis": "万斯 副总统从 2025 年 6 月 22 日袭击至今没有任何明确的伊朗政策表态——沉默已经持续 11 个月。这种沉默不是政治弱势的表现，是政治资本的积累过程。\n\n美国政治史上有几个先例：1968 年 尼克松 在共和党初选期间对越战的「Peace with Honor」模糊立场让他同时拉拢鹰派和温和派（详见 1968 vs 2003 历史对照）。万斯 现在采取的是同类策略——保留 2027-2028 总统竞选的所有政治选择空间。\n\n万斯 的智识基础是 First Things、Compact、American Conservative 杂志 三个刊物（详见原教旨派 / 后自由派 deep dive）。这一派的智识倾向是「美国应该把精力放在重建本土」的 克里斯托弗·拉什（Christopher Lasch）+ 温德尔·贝里（Wendell Berry） 式立场，对中东军事干预天然有保留。但 万斯 同时担任副总统——他不能公开反对 特朗普的决策，否则会被强袭派和福音派围攻；他也不能公开支持，否则会失去后自由派和原教旨派的可能支持。\n\n所以他选择了「祝美军平安归来」式的最低限度表态。如果伊朗战争走向不利（GOP 选民支持率持续下滑、强袭派内部破裂加深、AIPAC 在共和党初选投钱），万斯 可以倒向原教旨派立场，吸纳 Bannon-Carlson-马西 的反战选民。如果走向有利，他可以倒向强袭派延续路线。\n\n监测对象包括 万斯 在白宫官网上的演讲记录、他在 周日早间访谈节目 的访谈、他在 美国指南针 的出版物、他对 J6 一周年纪念表态、他与 塔克·卡尔森（Tucker Carlson）电视网 的互动模式。这些信号每一条都可能成为他公开站队的预兆。\n\n如果他 2027 年初宣布参选总统，对伊朗的表态会决定后自由派最终倒向原教旨派还是强袭派——这一选择会进一步决定 2028 共和党初选的结构。",
+          "sources": []
+        }
+      ],
+      "observations": [
+        {
+          "id": "iw_obs_vance_signal",
+          "label": "万斯 是否在 2027 年初宣布参选并表态",
+          "summary": "万斯 副总统的沉默如果在 2027 年初打破，伊朗战争议题会立刻成为 2028 提名战的核心",
+          "threshold": "公开支持原教旨派 → MAGA 联盟正式撕裂；公开支持强袭派 → 维持联盟但失去原教旨派；继续沉默 → 局部撕裂概率上升",
+          "status": "open",
+          "last_check": "2026-05-19",
+          "analysis": "万斯保持沉默已经持续 11 个月。监测对象包括 American Compass 出版物、塔克·卡尔森电视网邀请记录、白宫官网演讲列表、周日早间访谈节目。",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "2028_primary",
+      "name": "2028 共和党提名战",
+      "color": "alert",
+      "summary": "MAGA 撕裂在 2026-2028 这两年是否走向公开分党，取决于四个 falsifiable 触发条件的组合。",
+      "thesis": "四个触发条件分别独立——但任意 2 个以上同时跳变会推高「全面分党」概率。当前评估「局部撕裂」最可能（约 50%）。",
+      "logic": "前提关系：合取（AND）+ 阈值。任何一个单一触发条件不足以导致全面分党；要看 4 个条件同时成立的组合。",
+      "preconditions": [
+        {
+          "id": "p28_vance",
+          "label": "JD·万斯（JD Vance） 公开站队",
+          "status": "open",
+          "analysis": "万斯至今对伊朗政策保持沉默——沉默已持续 11 个月（从 2025-06-22 袭击至今）。\n\n万斯个人履历：俄亥俄州参议员（2023-2025）、副总统（2024-11 当选）、《乡下人的悲歌》（Hillbilly Elegy）（2016 年出版）作者、耶鲁法学院 毕业、硅谷投资人彼得·蒂尔（Peter Thiel）长期赞助。这种履历组合让他成为后自由派 / 天主教保守派的政治代表，但同时具备主流共和党的精英背景。\n\n万斯 2024 副总统竞选期间在 塔克·卡尔森的节目上说过「I'm not pro-Israel in the way that Lindsey Graham is pro-Israel」——这是他离原教旨派最近的一次公开表态。但 2025-06 和 2026-02 两次行动后他保持沉默。这种沉默是政治选择空间的保留——保留 2027-2028 总统竞选的所有可能性。\n\n如果万斯 在 2027 年初宣布参选总统，对伊朗的表态会决定后自由派最终倒向原教旨派还是强袭派。倒向原教旨派：2028 共和党初选会出现 Bannon-Carlson-万斯 对阵 鲁比奥-海格塞斯 的结构，撕裂正式成形。倒向强袭派：维持现状但失去原教旨派支持，2028 提名战回归 1976 年福特（Ford）对里根（Reagan） 模式。\n\n监测对象：万斯在白宫官网上的演讲记录、周日早间访谈节目（NBC《与媒体见面》、CBS《面对国民》、ABC《本周》、Fox News《周日新闻》）、American Compass（智库，奥伦·卡斯创立，万斯长期撰稿）的出版物、万斯 对 J6 一周年纪念表态、他与 塔克·卡尔森（Tucker Carlson）电视网 的互动模式。\n\n触发门槛：万斯 公开支持 马西 的 AIPAC FARA 法案 OR 公开批评袭击决策 → 触发条件成立。截至 2026-05-19，未触发。",
+          "sources": []
+        },
+        {
+          "id": "p28_aipac",
+          "label": "AIPAC 在共和党初选投钱针对反战议员",
+          "status": "open",
+          "analysis": "美国以色列公共事务委员会（AIPAC，1953 年成立）是美国最有影响力的外国政策游说团体。2010 年成立的 UDP 是 AIPAC 的政治打击工具。\n\n2024 大选周期 UDP 投入约 1 亿美元，主要用于击败反战民主党。最有标志性的是 科里·布什（Cori Bush，密苏里州第 1 选区民主党众议员）和 贾马尔·鲍曼（Jamaal Bowman，纽约州第 16 选区民主党众议员）的连任失败——AIPAC 系候选人在民主党初选阶段把他们击落，是 2024 周期 AIPAC 政治打击力的展示。\n\nAIPAC 历来对反战民主党出手不留情，对反战共和党出手则是新现象。一旦 UDP 开始花钱针对 马西 或其他签 H.Con.Res.38 的共和党议员，相当于在共和党选民面前公开宣告「以色列游说集团就是要清洗反战共和党」。这会让 马西 的 AIPAC FARA 法案立刻从边缘提案变成原教旨派联合后自由派对抗 AIPAC 的法律武器。\n\n监测对象：FEC（联邦选举委员会）文件每季度更新一次。UDP 的开支项目里如果出现共和党初选 攻击性政治广告（攻击性政治广告），立刻形成新闻爆点。具体监测 政治献金跟踪网站 OpenSecrets的 UDP 季度报告 + AIPAC 自身的 美国国税局非营利组织年报（IRS Form 990） 年度披露。\n\n触发门槛：UDP 在共和党初选投放任何一笔超过 50 万美元的针对反战共和党候选人的 攻击性政治广告 → 触发条件成立。截至 2026-05-19，未触发。",
+          "sources": []
+        },
+        {
+          "id": "p28_trump_massie",
+          "label": "特朗普在 Truth Social 上点名攻击马西",
+          "status": "open",
+          "analysis": "特朗普 2024 年 5 月发过 Truth Social 帖子：「Thomas Massie has my Complete and Total Endorsement!」——这是少数被 MAGA 圈攻击但 公开支持过的共和党国会议员。\n\n这条 公开支持至今未撤回。但一旦 特朗普在 Truth Social 上点名攻击马西——比如批评 H.Con.Res.38 战争权力决议或 AIPAC FARA 法案——等于跟 AIPAC 公开结盟，跟 班农 派公开决裂。这是原教旨派的红线指标。\n\n特朗普每天发 Truth Social 帖子子约 50-80 条（Truth Social 2025 年数据）。关键词搜索「Massie」即可监测。截至 2026-05-19，特朗普没有在 Truth Social 上点名攻击马西；但 2026-04 后他对 H.Con.Res.38 决议的回避（不主动支持但也不主动反对）已经在 MAGA 圈引起怀疑。\n\n触发门槛：特朗普在 Truth Social 上发布任何一条直接命名 马西 并使用负面词汇（如「RINO」「disloyal」「Pelosi-aligned」）的帖子 → 触发条件成立。\n\n这条红线一旦跨过，意味着 特朗普个人选边站强袭派 + 福音派，原教旨派失去其内部最大保护伞，分裂正式不可逆——这会大大提高「全面分党」的概率。",
+          "sources": []
+        },
+        {
+          "id": "p28_voter_support",
+          "label": "共和党选民对继续对伊军事行动的支持率破 35%",
+          "status": "open",
+          "analysis": "共和党选民关于「继续对伊军事行动」的支持率正在快速下降。\n\n2025 年 6 月袭击当时，CBS 新闻 / YouGov 联合民调 6/13-6/15 调查显示共和党选民支持率 78%。到 2026 年 4 月底 NPR / PBS / 玛丽斯特联合民调 4/22-4/25 调查显示跌到 48%——10 个月跌 30 个百分点。\n\n可对照的历史 baseline 是 2003 年伊拉克战争支持率：开战时 CBS 新闻民调显示共和党支持率 91%，到 2006 年 11 月中期选举跌至 56%（国际政策态度项目（PIPA, Program on International Policy Attitudes）数据）——3 年时间跌 35 个百分点。共和党在那次中期选举失去众议院 30 席、参议院 6 席。\n\n如果伊朗战争支持率的下降曲线比伊拉克更陡（已经从 2025-06 到 2026-04 共和党内跌了 30 个百分点，速度远超伊拉克战争同期），2026 中期选举共和党可能面临比 2006 年更严重的失利。这一观察直接决定强袭派在共和党基层的政治根基是否被切断。CNN 2026-04 报道共和党战略师已经在讨论中期选举策略调整。\n\n触发门槛：任意一项主流民调（CBS 新闻 / YouGov 联合民调、NPR / PBS / 玛丽斯特联合民调、Pew、Gallup、Quinnipiac）显示共和党选民支持率跌破 35% → 触发条件成立。\n\n按当前下降速度（10 个月跌 30 个百分点），可能在 2026 年 11 月中期选举前后跌破 35%。如果跌破，等于把强袭派从基层割断——这会让福音派在 2028 年提名战面临选择：要么继续支持强袭派候选人（鲁比奥或海格塞斯）但风险被基层选民抛弃，要么转向原教旨派或后自由派候选人。",
+          "sources": [
+            {
+              "label": "CNN 2026-04 共和党中期策略报道",
+              "url": "https://www.cnn.com/2026/04/16/politics/republicans-house-iran-war-midterms"
+            }
+          ]
+        }
+      ],
+      "mechanisms": [
+        {
+          "label": "MAGA 联盟缺少 1968 年尼克松（Nixon） 时代的 精英共识工具",
+          "description": "1968 年共和党在越战问题上经历过一次类似的内部撕裂——戈德华特派的鹰派和 艾森豪威尔-洛克菲勒派的温和派对越战的态度差异，让党在 尼克松 上台前几乎散架。但 尼克松 在 Miami Beach RNC 大会上险胜，依靠的是他能同时拉拢两派——他在初选期间反复抛出「Peace with Honor」口号。代价是越战又打了 5 年（1968-1973），而且 尼克松 那个「和平的荣誉」是靠 精英协商 缝合的——尼克松 跟 洛克菲勒在 Miami Beach 大会前几天的密谈是 精英共识 形成的标志性场景。\n\n特朗普没有 尼克松 那种 精英共识 的工具——他靠的是基层动员。MAGA 联盟没有 精英协商机制：党全国委员会（RNC, 共和党全国委员会）由 特朗普钦定的 迈克尔·瓦特利（Michael Whatley） 任主席（2024-12 拉拉·特朗普（Lara Trump） 辞职后由 KC·克罗斯比（KC Crosbie） 接替副主席职位），整个党机器实质被 特朗普私人掌控；传统 精英共识工具（传统基金会、AEI（美国企业研究所）、胡佛研究所）都被 MAGA 化或边缘化。所以「和平的荣誉」式话术今天没有制度载体。\n\n这种结构性差异意味着：如果四派系在 2027-2028 出现公开撕裂，没有党机器能像 1968 年 尼克松 那样在大会上靠 精英协商 缝合。撕裂会被「自然」放大到 2028 年提名战。",
+          "sources": []
+        }
+      ],
+      "consequences": [
+        {
+          "actor": "维持联盟",
+          "label": "约 30% 概率 — 0-1 个触发条件成立",
+          "analysis": "维持联盟意味着 MAGA 在嘴上吵架但保持团结。2028 提名战出一个能拉拢四派的妥协人选——这要求 特朗普主导找到这种妥协（类似 1968 年尼克松（Nixon） 的「Peace with Honor」模式），但 特朗普没有 尼克松 那种 精英共识工具。\n\n这一结局的必要条件：\n\n- 万斯 不公开站队保持沉默\n- AIPAC 收手不在共和党初选投钱\n- 特朗普不攻击马西\n- GOP 选民支持率回升到 50% 以上。四个条件中至少 3 个不发生（即 0-1 个触发条件成立）\n\n可能的妥协人选包括 马尔科·鲁比奥（Marco Rubio，强袭派但有外交经验）、格伦·扬金（Glenn Youngkin）（弗吉尼亚州州长，温和但 MAGA 友好）、格雷格·阿伯特（Greg Abbott）（德州州长，强硬但不直接卷入伊朗议题）。这种人选需要同时获得四派系的「最不反对」票而不是「最支持」票——类似 2016 马尔科·鲁比奥（Marco Rubio） 试图扮演的角色但没成功。\n\n概率估算约 30%：基于历史 baseline（1968 年尼克松（Nixon） 模式成功的概率约 40%）减去 特朗普缺少 精英共识工具的扣减（约 10 个百分点）。\n\n维持联盟的代价是 2028 大选竞争力——原教旨派和后自由派选民如果不公开脱党但投票率下降，民主党候选人会得益。",
+          "sources": []
+        },
+        {
+          "actor": "局部撕裂",
+          "label": "约 50% 概率 — 2-3 个触发条件成立",
+          "analysis": "局部撕裂意味着 2028 共和党初选公开撕裂，但党机器最终勉强合上。最可能的局面是 万斯对阵鲁比奥/海格塞斯 的两派对决——前者代表后自由派 + 部分原教旨派，后者代表强袭派 + 福音派。\n\n历史先例：1976 年福特（Ford）对里根（Reagan） 共和党初选——福特险胜后失去 11 月大选给 吉米·卡特（Jimmy Carter）。1976 撕裂的恢复用了 4 年时间，1980 年里根 才整合党内重新赢得大选。但今天比 1976 不同：\n\n- 没有共和党全国委员会（RNC）共识工具帮助勉强合上\n- 信息环境碎片化让派系撕裂的扩散速度比 1976 快\n- 通胀传导加战争代价已经在 GOP 选民中跑出曲线\n\n这一结局的必要条件：4 个触发条件中 2-3 个成立。比如 万斯 公开站队 + GOP 选民支持率破 35%（不需要 特朗普攻击马西 或 AIPAC 跨党操作）。\n\n代价是 2028 大选竞争力受损：撕裂的共和党在通胀和经济议题上分散精力，民主党候选人（可能是 加文·纽森（Gavin Newsom） 或某个进步派）有相对优势。\n\n概率估算约 50%：基于当前观察——万斯保持沉默已经在累积政治资本（70% 可能在 2027 年公开站队），GOP 选民支持率下降速度（按当前速度年底前破 35% 的概率约 60%），AIPAC 干预共和党初选的概率（约 30%），特朗普攻击马西 的概率（约 25%）。综合估算约 50%。",
+          "sources": []
+        },
+        {
+          "actor": "全面分党",
+          "label": "约 20% 概率 — 4 个触发条件全部成立",
+          "analysis": "全面分党意味着 2028 共和党初选撕裂后，原教旨派 + 后自由派联合脱党组建新党。最接近的历史先例是 1912 年 西奥多·罗斯福（Theodore Roosevelt） 脱离共和党组建 进步党（Progressive Party，俗称 Bull Moose Party 雄鹿党），把 1912 年大选送给 伍德罗·威尔逊（Woodrow Wilson）。\n\n要走到全面分党，4 个触发条件必须全部成立：万斯 公开站队反战 + AIPAC 在共和党初选投钱针对反战议员（让原教旨派觉得自己被清洗）+ 特朗普攻击马西（让班农圈失去 体制内庇护）+ GOP 选民支持率破 35%（让基层选民有动机抛弃强袭派）。\n\n这条路径的具体演化：2027 年初 万斯 宣布参选总统并公开支持 马西 AIPAC FARA 法案 → 强袭派 + 福音派支持的候选人（鲁比奥或海格塞斯）通过党机器赢得共和党初选 → 万斯 在党大会前后宣布脱党参选独立候选人 → Bannon-卡尔森 圈媒体动员 + 塔克·卡尔森（Tucker Carlson）电视网 800 万月活基层 + Massie-哈纳 国会党外组织 → 2028 大选三方对决。\n\n概率估算约 20%：这是历史上少见但有先例的路径。1912 雄鹿党（Bull Moose Party）模式 + 1968-1980 年共和党用 12 年完成 戈德华特派内部重构——参考这两个先例，全面分党在 2028 年发生的概率不超过 20%，但 2026-2038 这十多年内最终出现的概率较高。\n\n如果发生，2028 年共和党失去大选已成定局，但更深远的后果是 2032 年共和党需要在两个党的废墟上重建。这是 1860 辉格党解体 + 1854 共和党成立的镜像。",
+          "sources": []
+        }
+      ],
+      "observations": []
+    }
+  ]
+}

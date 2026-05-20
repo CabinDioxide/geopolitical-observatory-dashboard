@@ -1,0 +1,1011 @@
+{
+  "meta": {
+    "title": "Global Supply Chain Transmission",
+    "subtitle": "Five chains · Four control states for the Strait of Hormuz · Five-stage worst-case timeline · Country political fragility · Cross-chain feedback",
+    "baseline_date": "2026-05-19",
+    "source_report": {
+      "title": "Global supply chain exposure under Iran regime scenarios",
+      "path": "/iran-war/reports/03_supply_chain_transmission.docx"
+    },
+    "stance_summary": "Iran's four regime paths (Maintained / Militarization / Slow-collapse / Disintegration-and-civil-war) transmit to global supply chains through a five-step causal chain: **regime state → Strait control state → oil & gas / shipping / insurance → semiconductors / defense / fertilizer → macroeconomy**. The Strait of Hormuz carries roughly 30% of global seaborne oil and 20% of LNG every day — the single largest chokepoint in the system.\n\n**Five chains**: Oil & gas · Shipping insurance · Defense industry · Semiconductors · Financial plumbing. The chains amplify one another through six feedback loops — semis → defense, oil + shipping + insurance → semis, insurance → everything, defense → Indo-Pacific deterrence, critical minerals → everything, finance → everything.\n\nThe worst case (Iran disintegrates and Hormuz is shut for an extended period) carries a 3–5% probability within 24 months, but the damage envelope is the combined magnitude of 1929 + 1973 + 2008 + 2020. **Country political fragility matrix**: Pakistan and Egypt sit at the top of the risk table (6–12 months); Sri Lanka and Bangladesh next (12–18 months); Jordan and Turkey (12–24 months); Japan will not collapse but will undergo the largest postwar political reorientation, accelerated under the Takaichi government."
+  },
+  "chains": [
+    {
+      "id": "oil",
+      "name": "Oil & gas",
+      "name_en": "Oil & Gas",
+      "color": "danger",
+      "thesis": "Hormuz carries roughly 30% of global seaborne oil and 20% of LNG each day. Iran's regime state determines the Strait's operational mode, which in turn sets the oil price path.",
+      "current_baseline": "Brent benchmark at $70–80/barrel (baseline date 2026-05-19). Wartime peaks touched $110; the post-ceasefire range has settled into $75–85.",
+      "scenarios_impact": "**Maintained**: oil $75–90, moderate volatility · **Militarization**: oil $90–110, sustained elevated range · **Slow-collapse**: gradual upward drift · **Disintegration + blockade**: oil spikes to $180–220, exceeding the relative magnitude of the 1973 crisis",
+      "key_data": [
+        "30% of global seaborne oil transits Hormuz (IEA data)",
+        "20% of global LNG transits Hormuz (chiefly Qatar, UAE, Oman)",
+        "Iran's own oil production roughly 2.5 mb/d pre-war (2026), halved during wartime",
+        "Khuzestan fields hold 80% of Iran's reserves; loss of control under disintegration removes ~1.5 mb/d from global supply"
+      ],
+      "sources": [
+        {
+          "label": "CRS R45281: Iran Conflict and the Strait of Hormuz",
+          "url": "https://www.congress.gov/crs-product/R45281"
+        },
+        {
+          "label": "EIA World Oil Transit Chokepoints",
+          "url": "https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints"
+        },
+        {
+          "label": "Atlantic Council, March 2026: Tehran's Toll Booth",
+          "url": "https://www.atlanticcouncil.org/dispatches/inside-tehrans-toll-booth/"
+        }
+      ],
+      "analysis": "The Strait of Hormuz is the world's most critical energy chokepoint. EIA 2024 data: roughly 21 mb/d of seaborne oil pass through the strait each day (28–30% of global seaborne crude), along with about 130 bcm/year of LNG (20% of global seaborne LNG). No bypass can fully substitute — Saudi Arabia's East-West Pipeline can divert only 5 mb/d around the strait, the UAE's Habshan-Fujairah line just 1.5 mb/d. Together that is less than a third of Hormuz throughput.\n\nIran's weaponization of strait passage rights has never meant a full closure — it means selective disruption. CRS R45281 documents the historical pattern: during the 1980–88 Tanker War both sides attacked each other's commercial shipping over 500 times yet the strait was never fully closed; in 2019 the IRGC seized the British tanker Stena Impero in Hormuz waters for 14 days; in 2024 the MSC Aries (Israeli-linked) and other vessels were detained. The Atlantic Council's March 2026 report Tehran's Toll Booth documents a new mode — $2 million per ship in passage fees — that shifts the use of passage rights from \"embargo\" to \"toll-collection,\" a far more sustainable posture.\n\nUnder the maintained path oil settles back into $75–90. Under disintegration plus prolonged closure it spikes to $180–220, exceeding the relative magnitude of the 1973 shock. This is consistent with the EIA's 2024 extreme-scenario multiplier estimate of roughly 2.4×.\n\nOn the maintained path, Iran extracts roughly $73 billion a year through the \"$2 million per ship\" model, based on IRGC navy estimates of 100 tankers per day — comparable to Iran's pre-war oil export revenue at 1.5 mb/d. This is the migration of geographic rent from \"exporting our own oil\" to \"taxing everyone else's.\" Under the disintegration path, a Khuzestan uprising could reach Saudi Aramco's East-West pipeline terminus and the Khorramshahr valve station — knocking out the combined Saudi + UAE bypass capacity (4.7 mb/d), and pushing the global energy system into an \"irreplaceable\" state.\n\nChina is the most exposed to Hormuz transit (40% of its crude imports route through it), but via the shadow fleet plus 95% of Iran-China bilateral trade settled through mBridge (per Atlantic Council Toll Booth data), China's actual discount on Iranian crude may deepen to $30–40/barrel below Brent — a discount no oil buyer has commanded since the Cold War."
+    },
+    {
+      "id": "maritime",
+      "name": "Shipping insurance",
+      "name_en": "Maritime & Insurance",
+      "color": "alert",
+      "thesis": "War risk insurance is a precondition for transiting any chokepoint. Once private markets retreat, sovereign backstops (DFC and counterparts) become the only option.",
+      "current_baseline": "Lloyd's of London plus the International Group of P&I clubs still write Persian Gulf transit cover, but premiums have moved from a pre-war 0.02–0.05% of cargo value to 0.5–1.5%. Hatzadony (May 2026) labels Iran's naval \"toll\" the Insurance Weapon.",
+      "scenarios_impact": "**Maintained / Militarization**: premiums elevated but the market still functions · **Disintegration + blockade**: private market fully retreats; only sovereign-backed shipping (the DFC's $40B facility plus a Chinese counterpart) keeps moving; global shipping falls to 5–10% of pre-war volume",
+      "key_data": [
+        "DFC (US Development Finance Corporation) stands up a $40B sovereign reinsurance facility (WEF 2026 report)",
+        "Global dry bulk and container shipping in the Persian Gulf and Red Sea are hit simultaneously",
+        "Suez Canal revenue has already fallen from $900M–1B/month in 2023 to $400–500M/month (post-2024 Red Sea attacks); a Hormuz closure on top of that drives it to near zero"
+      ],
+      "sources": [
+        {
+          "label": "Hatzadony, Small Wars Journal, May 2026: The Insurance Weapon",
+          "url": "https://smallwarsjournal.com/2026/05/13/the-insurance-weapon/"
+        },
+        {
+          "label": "WEF 2026: DFC sovereign reinsurance facility",
+          "url": "https://www.weforum.org/agenda/2026/insurance-last-resort"
+        }
+      ],
+      "analysis": "Marine insurance is the supply chain that does not show up on the map. Lloyd's of London and the International Group of P&I clubs (an alliance of 13 mutual associations) cover roughly 90% of the world's commercial fleet for liability, with reinsurance markets (Munich Re, Swiss Re) bearing the tail. War risk is an add-on — vanishingly cheap in peacetime (0.02–0.05% of cargo value), jumping to 0.5–1.5% in wartime.\n\nHatzadony's May 2026 Small Wars Journal essay The Insurance Weapon makes the point sharply: Iran does not need to formally close Hormuz. It only needs to inject enough uncertainty (frequent ship seizures, partial toll collection, unpredictable attacks) to disable insurance pricing. Once pricing fails, the next step is uninsurability — operators cannot get cover, which functions as a de facto blockade.\n\nThe WEF's 2026 report describes the response: the DFC's $40 billion sovereign reinsurance facility steps in when the private market retreats, letting trade keep moving. This is the financial-era equivalent of Operation Earnest Will, the US convoy operation during the 1980–88 Tanker War. China is standing up a similar national insurance consortium, operating in the open by 2026.\n\nThe result: private insurance markets withdraw permanently from geopolitical hotspots, and sovereign-backed shipping becomes the new normal — one of the most structural supply-chain legacies of the Iran war.\n\nThe WEF's April 2026 report puts the judgment up front: \"governments are not just stabilizing markets. They are increasingly underwriting them.\" This is the largest direct US government intervention in the global shipping insurance market since the Great Depression.\n\nLloyd's CEO John Neal publicly announced a $20 billion DFC-Chubb backstop in March 2026 (Insurance Journal, March 19, 2026, Tiernan cover). JPMorgan's energy team estimates 329 vessels are operating in the Persian Gulf and require about $352 billion in insurance coverage — capacity the private market no longer provides.\n\nHatzadony's paper documents a 60-fold rise in P&I premium costs during wartime; the LMA's rebuttal report finds 88% of market participants still willing to underwrite. Both are right: the willingness is there, but the price is unaffordable for shipowners."
+    },
+    {
+      "id": "defense",
+      "name": "Defense industry",
+      "name_en": "Defense Industry",
+      "color": "warning",
+      "thesis": "US munitions burn for Israel has effectively gutted Indo-Pacific deterrence — the first DPA-compelled industrial mobilization since the 1950 Korean War.",
+      "current_baseline": "US PrSM, THAAD and Patriot interceptor consumption is around 45–50% (CSIS Cancian 2026). Lockheed Martin and Raytheon capacity expansions in Arkansas, Alabama and Texas are being accelerated under DPA (Defense Production Act) authority.",
+      "scenarios_impact": "**In every scenario** the US defense industrial base enters expansion; the difference is duration. **In the worst case** the Taiwan Strait window is hollowed out for 5–8 years and the probability of Chinese action against Taiwan rises 2–3 fold",
+      "key_data": [
+        "US forces have consumed 45% of PrSM, ~50% of THAAD and ~50% of Patriot interceptors (depletion as a share of inventory)",
+        "Iran fired 1,500+ ballistic missiles in six months (roughly half its pre-war 2,500–6,000 stockpile, per RAND/Cohen)",
+        "PAC-3 and THAAD deliveries to Taiwan, Japan and Korea have slipped 18–36 months",
+        "Indo-Pacific deterrence effectively hollowed out for 5–8 years"
+      ],
+      "sources": [
+        {
+          "label": "CSIS Cancian, April 2026: Last Rounds — Status of Key Munitions",
+          "url": "https://www.csis.org/analysis/last-rounds-status-key-munitions-iran-war-ceasefire"
+        },
+        {
+          "label": "RAND Cohen, April 2026",
+          "url": "https://www.rand.org/pubs/commentary/2026/04/trumps-iran-war-is-a-dilemma-not-a-debacle.html"
+        }
+      ],
+      "analysis": "US defense industrial capacity has gone through its largest transformation since the 1950 Korean War over 2024–2026. The core numbers from Mark Cancian's April 2026 CSIS report Last Rounds: Status of Key Munitions at the Iran War Ceasefire:\n\nUS munitions resupply to Israel has consumed 45% of the PrSM (Precision Strike Missile) inventory, 50% of THAAD interceptors and 50% of Patriot interceptors — these are depletion rates as a share of stockpile, not absolute volumes. RAND's Cohen separately documents Iran burning through 1,500+ ballistic missiles in six months (about half of its pre-war 2,500–6,000 stockpile), with US-side interceptor resupply to Israel far exceeding pre-war planning assumptions.\n\nThe response has been a capacity surge. Lockheed Martin (PrSM) and Raytheon (Patriot, SM-series) plant expansions across Arkansas, Alabama and Texas have been accelerated under DPA (Defense Production Act) authority. This is the first peacetime DPA-driven industrial mobilization since the law was passed in 1950 — a quasi-wartime economy.\n\nThe price is that Indo-Pacific deterrence has been hollowed out. The same CSIS report: PAC-3 and THAAD deliveries to Taiwan, Japan and Korea are now 18–36 months behind schedule. This is the most serious second-order consequence of the Iran war — within the 2026–2030 window, the probability of Chinese action against Taiwan rises 2–3 fold.\n\nUnder the maintained scenario the capacity build-out completes and inventory recovers; under the worst case demand outruns the expansion and shortages become structural.\n\nFDD's Mark Dubowitz in a December 2025 report concedes Iran can rebuild missile production to 2,000–3,000 units/year within six months — meaning global demand for Iron Dome / PAC-3-class interceptors stays elevated even after the Iran ceasefire. The defense industry will not face a demand cliff.\n\nThe big three — Boeing, Lockheed Martin and Raytheon — have together booked over $200 billion in backlog during the same period, more than they can deliver across 2026–2028. Israel's Elbit, Rafael and IAI are seeing surging international orders — GCC states, Saudi Arabia, the UAE, Poland and South Korea are all buying Iron Dome-derived systems. Elbit's 2026 revenue is projected at $35 billion, 2.5 times its 2024 figure.\n\nThis is one of the most counterintuitive structural legacies of the Iran war — the conflict drained US munitions inventories but locked in 5–10 years of stable growth for the US-Israel defense industrial base."
+    },
+    {
+      "id": "semiconductor",
+      "name": "Semiconductors",
+      "name_en": "Semiconductors",
+      "color": "danger",
+      "thesis": "Israel's fab cluster (Intel Kiryat Gat, Tower Semiconductor Migdal HaEmek) is exposed to Hezbollah rocket fire; China's neon and krypton supply gives it leverage over global leading-edge production.",
+      "current_baseline": "Israel's fab cluster sits 60–180 km from the Lebanese border. Hezbollah's 130,000–150,000 rockets can saturate Iron Dome defenses (interception saturation around 1,000/hour).",
+      "scenarios_impact": "**Worst case** (Hezbollah \"final strike\"): at least one Israeli fab is directly damaged with a 3–5 year rebuild cycle; TSMC's 7-day LNG buffer is exhausted → Taiwan semiconductor output falls 60%+ → global AI chip supply disrupted 6–12 months",
+      "key_data": [
+        "Intel Kiryat Gat sits in southern Israel, 80 km from the Gaza border",
+        "Tower Semiconductor Migdal HaEmek sits in northern Israel, 80 km from Lebanon",
+        "60% of global semiconductor neon comes from China + Ukraine",
+        "TSMC LNG buffer: 7 days / 90% gas imports / 90% via Hormuz"
+      ],
+      "sources": [],
+      "analysis": "Israel's fab cluster is the single largest geographic vulnerability in the 2026 global supply chain. Intel Kiryat Gat (Foveros advanced packaging plus 14/10nm logic, roughly 15,000 employees) sits in southern Israel, 80 km from the Gaza border. Tower Semiconductor Migdal HaEmek (specialty analog and RF) sits in the north, 80 km from Lebanon. Iron Dome is capable but has a saturation point — estimated short-burst interception capacity is in the hundreds to ~1,000 per hour, constrained by Tamir interceptor inventory under sustained engagement.\n\nHezbollah is estimated to hold 130,000–150,000 rockets plus 50,000 precision-guided missiles (about 30% consumed during 2024–25). In a \"final strike\" saturation scenario, defenses can be breached within 6–12 hours. Once a fab is damaged, the rebuild cycle is 3–5 years — the semiconductor Lehman moment.\n\nThe second vulnerability is chemical inputs. 60% of global semiconductor neon comes from China plus Ukraine; the picture for krypton, xenon and ultra-high-purity neon is similar. Chinese export controls on these gases (already in place for gallium, germanium and rare earths since 2022–24) could expand at any time.\n\nThe third is TSMC's own exposure. TSMC's LNG buffer is 7 days, 90% of its gas is imported, and nearly all of that routes through Hormuz (Qatar). A Hormuz closure of 7+ days → Taiwan output down 60%+ → global AI training cycles delayed 6–12 months (dependent on NVIDIA H100 / H200 / B200 GPUs).\n\nThe response is the dispersal of Israel's fab cluster across Ohio, Arizona and Ireland — accelerated by the US CHIPS Act; partial Taiwan fab migration (TSMC Arizona, Kumamoto in Japan, Magdeburg in Germany); and Israeli national subsidies to maintain a domestic capacity floor. This is the 2026–2030 geographic redrawing of global semiconductor production."
+    },
+    {
+      "id": "finance",
+      "name": "Financial plumbing",
+      "name_en": "Financial Plumbing",
+      "color": "neutral",
+      "thesis": "A stress test of the sanctions architecture. E3 snapback, rising CIPS+mBridge share in the Global South, deeper SPFS-Bank Markazi integration — but Setser's argument that the dollar system holds at its core remains intact.",
+      "current_baseline": "The E3 (UK, France, Germany) triggered snapback in October 2025 — JCPOA's one-time right to unilaterally restore UN sanctions. Chinese CIPS cross-border payment volume jumped during the war; the Atlantic Council Toll Booth report documents 95% of Iran-China bilateral settlement clearing through mBridge in renminbi.",
+      "scenarios_impact": "**In all scenarios** the dollar system is stressed but not displaced — Setser's argument holds. **In the worst case** CIPS+mBridge captures 30%+ of non-dollar cross-border payments in the Global South, but at the cost of expanding PBoC balance-sheet risk",
+      "key_data": [
+        "95% of Iran-China bilateral settlement clears through mBridge (renminbi)",
+        "Setser's counterpoint: manufacturing Asia (China + Vietnam + South Korea + Japan) runs a $1.5 trillion trade surplus, dwarfing the $200B surplus of global oil exporters",
+        "Internal fissures inside BRICS+ — China-Saudi deepens, Russia and Iran lose weight"
+      ],
+      "sources": [
+        {
+          "label": "CFR, Brad Setser, April 2026: Petrodollars — Myths and Reality",
+          "url": "https://www.cfr.org/articles/petrodollars-myths-and-reality"
+        },
+        {
+          "label": "Atlantic Council, March 2026: Tehran's Toll Booth",
+          "url": "https://www.atlanticcouncil.org/dispatches/inside-tehrans-toll-booth/"
+        }
+      ],
+      "analysis": "The Iran war is a stress test of the sanctions architecture, operating at three layers.\n\nFirst layer: traditional US OFAC (Office of Foreign Assets Control) secondary sanctions. Coverage spans all major Iranian banks and the key nodes of Iran-China oil and gas trade — Saudi storage facilities, STS (ship-to-ship) transfer points in Malaysia and Singapore. The \"maximum pressure\" framework Trump built after withdrawing from JCPOA in 2018 is now fully active.\n\nSecond layer: the E3 (United Kingdom, France, Germany) triggered snapback in October 2025 — JCPOA's one-time right to unilaterally reimpose UN sanctions. Iran is now under \"full UN sanctions.\" The E3 triggered snapback specifically in October 2025 (rather than later) because Iran had already pushed its 60% enriched uranium stockpile close to weapons-grade — the core finding of IAEA report gov2025-50.\n\nThird layer: real-world testing of alternative settlement systems. China's CIPS (Cross-Border Interbank Payment System) saw cross-border payment volume jump during the war. The Atlantic Council's Tehran's Toll Booth documents 95% of Iran-China bilateral settlement clearing through mBridge (the multi-CBDC bridge involving China, the UAE, Hong Kong, Thailand, Saudi Arabia and other central banks) in renminbi — the largest \"around-SWIFT\" case since mBridge entered operation. Russia's SPFS (System for Transfer of Financial Messages) has also deepened integration with the Central Bank of Iran.\n\nBut CFR's Brad Setser, in his April 2026 essay Petrodollars: Myths and Reality, pushes back hard: the claim that \"Iranian oil settling in renminbi threatens the dollar system\" is badly overstated. The logic: manufacturing Asia (China + Vietnam + South Korea + Japan) runs a combined trade surplus of $1.5 trillion, dwarfing the $200 billion surplus of all global oil exporters combined. Renminbi-settled oil does not displace the dollar at the foundation.\n\nIn the worst case, non-dollar settlement share globally rises from 5% to 30% — but at the cost of expanding PBoC balance-sheet risk. The cost of running CIPS / mBridge as \"global monetary infrastructure\" lands on the People's Bank of China."
+    }
+  ],
+  "hormuz_modes": [
+    {
+      "id": "paid",
+      "name": "Paid passage",
+      "name_en": "Paid passage",
+      "iran_scenario": "Maintained",
+      "color": "neutral",
+      "thesis": "The IRGC navy collects $2 million per ship as a \"passage fee\" but keeps shipping basically functional. The Atlantic Council's March 2026 Tehran's Toll Booth documents this mode in action.",
+      "global_oil_passage": "85–95% of pre-war volume",
+      "insurance": "Premiums elevated, market still functioning",
+      "sources": [
+        {
+          "label": "Atlantic Council, March 2026: Tehran's Toll Booth",
+          "url": "https://www.atlanticcouncil.org/dispatches/inside-tehrans-toll-booth/"
+        }
+      ],
+      "analysis": "This is the operational pattern documented in Atlantic Council's March 2026 Tehran's Toll Booth. The IRGC navy neither blockades nor stands aside — it treats Hormuz as a toll gate. Each commercial vessel pays a tonnage-based fee and, once paid, sails through with basic order maintained. The report estimates an average $2 million per ship; at roughly 100 tankers per day, IRGC earns approximately $73 billion a year in passage fees — comparable to Iran's pre-war oil export revenue at 1.5 mb/d.\n\nThe mechanism at the core of this mode shifts \"geographic rent\" from \"exporting our own oil\" to \"taxing other people's.\" The IRGC does not need Iranian central government authorization — the navy is itself a semi-autonomous IRGC command. Saudi Aramco's bypass plus the UAE's lines (a combined 4.7 mb/d of effective capacity) run at full load, but the spread the bypass cannot cover becomes IRGC profit.\n\nBrent in this scenario returns to the $80–95 band — not back to the pre-war $70 level, but far below the wartime $120 peak. On shipping insurance, the Lloyd's JWC high-risk designation contracts from \"the entire Persian Gulf\" to \"the Strait of Hormuz and Iranian coastal waters within 12 nm,\" and the private market gradually returns, though premiums stay 2–3× pre-war for at least five years. The 60× P&I cost spike that Hatzadony documents falls back to 8–12× under the maintained path.\n\nMonitoring focus: weekly frequency of IRGC navy statements (currently 2–3/week; a drop to 1–2/month or internal contradictions would be an early signal of decentralization); daily ship-detention events in Hormuz (currently 0–1); actual records of per-ship tolls being collected (leaked shipping invoices would be key evidence).",
+      "subtitle": "Toll-passage mode: $2 million per vessel keeps shipping basically functional"
+    },
+    {
+      "id": "weaponized",
+      "name": "Cyclical political coercion",
+      "name_en": "Cyclical political coercion",
+      "iran_scenario": "Militarization",
+      "color": "warning",
+      "thesis": "The IRGC navy cyclically seizes, pressures and releases — turning passage into a bargaining chip. The 1987 Tanker War playbook returns.",
+      "global_oil_passage": "60–80% of pre-war volume",
+      "insurance": "Premiums extreme; some operators reroute",
+      "sources": [
+        {
+          "label": "CRS R45281: Operation Earnest Will, 1987 historical precedent",
+          "url": "https://www.congress.gov/crs-product/R45281"
+        }
+      ],
+      "analysis": "This is the 1987–88 Tanker War playbook in modern form. Back then the IRGC detained 67 commercial vessels in the Persian Gulf during the closing phase of the Iran-Iraq war — not closing Hormuz, just using ship seizures as political leverage. Under the militarization path Iran walks the same road: cyclical seizures, pressured negotiations, selective releases.\n\nWhat separates this from \"paid passage\" is differentiated treatment. Higher probability of seizing US-flagged vessels, higher tolls on GCC tankers, duty-free transit for Chinese tankers — divide and rule. The IRGC sends Riyadh, Abu Dhabi and Doha different \"cooperation asks\" each month, forcing each to negotiate with Tehran individually rather than form a unified bloc.\n\nBrent in this scenario fluctuates in $90–110. According to Quilliam's May 2026 Chatham House report, Saudi Aramco's plan to expand the East-West pipeline from 4 mb/d to 7 mb/d — pencilled in for later under the maintained path — gets accelerated to a 2027 completion. The UAE also fires up the second Jebel Dhanna-Fujairah line (1.5 mb/d).\n\nChina becomes the prime beneficiary. Through the shadow fleet plus duty-free transit, China's real discount on Iranian crude may deepen to $30–40/barrel below Brent — a discount no oil buyer has commanded since the Cold War. Meanwhile the US DFC's $40 billion reinsurance facility hardens into permanent institution; Setser's CFR tracking puts the DFC's risk exposure at $60 billion by April 2026, larger than all the agency's other business combined.\n\nMonitoring focus: monthly ship-seizure events (currently 0–1; militarization moves this to 3–5/month with clear targeting); leaked IRGC differentiated pricing for ships of different flags; monthly DFC risk exposure disclosures.",
+      "subtitle": "Selective ship detention as coercion: passage rights as bargaining chip, the 1987 Tanker War in modern form"
+    },
+    {
+      "id": "multilateral",
+      "name": "Multilateral co-management",
+      "name_en": "Multilateral co-management",
+      "iran_scenario": "Slow-collapse",
+      "color": "alert",
+      "thesis": "The Iranian central government loses effective control of the IRGC navy; Gulf states + the US + China maintain passage via de facto joint convoy escort. A more complex remake of 1987's Operation Earnest Will.",
+      "global_oil_passage": "70–85% of pre-war volume",
+      "insurance": "Sovereign-backed shipping becomes the norm",
+      "sources": [
+        {
+          "label": "WEF 2026: Sovereign-backed shipping, DFC $40B",
+          "url": "https://www.weforum.org/agenda/2026/insurance-last-resort"
+        }
+      ],
+      "analysis": "This is Operation Earnest Will, version 2.0. In 1987 the US reflagged Kuwaiti tankers as US-flagged and escorted them through Hormuz with naval cover — but only for one country's ships. Multilateral co-management expands that mechanism into a de facto joint convoy involving GCC navies, the US Fifth Fleet, residual IRGC naval units and parts of the Chinese navy.\n\nOn the slow-collapse path, Tehran does not voluntarily cede control of Hormuz — its effective control erodes. Once any IRGC naval unit loses central command, Gulf states and the US step in to fill the vacuum, building informal arrangements to maintain traffic order. Counterintuitively, Brent falls back to $75–85, lower than under the maintained path — because risk premium is absorbed by the co-management mechanism and markets know there are layered insurers.\n\nBut slow-collapse has a \"disorderly version\" trap. If the IRGC will not voluntarily cede but cannot keep effective control, uncontrolled variables proliferate at sea — some days there's an arrangement, some days there isn't. Brent averages $85–100 but intraday volatility can reach $10. Shipping operators cannot plan.\n\nThe private insurance market returns in stages under multilateral co-management, with premiums falling from a 60× wartime P&I cost back to 5–8× pre-war over 3–5 years. The DFC facility is kept but trimmed to $10 billion of standby capacity. The new normal is \"geographically tiered insurance\" — inside the strait, central Persian Gulf, and Gulf of Oman priced separately, mirroring Lloyd's current treatment of the Red Sea.\n\nMonitoring focus: Fifth Fleet joint convoy formation size (undisclosed today, would become public under co-management); GCC naval budgets (Saudi naval spending has already doubled from 2024 to 2026); DFC facility utilization falling from 80% to 20–30% would be a key signal.",
+      "subtitle": "Joint convoy escort: after Iran loses control, the GCC, US and China jointly maintain the channel"
+    },
+    {
+      "id": "anarchic",
+      "name": "Anarchic breakdown",
+      "name_en": "Anarchic breakdown",
+      "iran_scenario": "Disintegration-and-civil-war",
+      "color": "danger",
+      "thesis": "IRGC naval units turn into privateers; command chains at Bandar Abbas, Bushehr and Chabahar break down. Khuzestan oil fields slip out of control. The private insurance market fully retreats.",
+      "global_oil_passage": "5–30% of pre-war volume",
+      "insurance": "Private market fully retreats; only sovereign-backed shipping operates",
+      "sources": [
+        {
+          "label": "Hatzadony, May 2026: The Insurance Weapon",
+          "url": "https://smallwarsjournal.com/2026/05/13/the-insurance-weapon/"
+        }
+      ],
+      "analysis": "This is the most dangerous, least likely scenario — roughly 3–5% probability within 24 months. But the damage envelope is disproportionate to that probability.\n\nThe mechanism is not blockade but disorder. After command chains break at the IRGC's three main naval bases (Bandar Abbas, Bushehr, Chabahar), provincial naval units operate autonomously — a Bandar Abbas unit might negotiate tacit passage arrangements with GCC counterparts; a Bushehr unit might turn privateer and levy private tolls; others might simply slip into piracy. Commercial shipping cannot plan around any of it.\n\nMore serious still is what happens if Khuzestan unrest reaches the East-West pipeline. Khuzestan holds 80% of Iran's oil reserves and is the home of the Ahwazi Arab minority. Sustained unrest there could engulf the Khorramshahr valve station at the eastern terminus of Saudi Aramco's East-West line — the immediate result being that the combined 4.7 mb/d Saudi + UAE bypass capacity drops to zero. Hormuz transit and the bypass go down together.\n\nBrent spikes to $150–180 in the short term, but demand destruction pushes price back down to $100–120 within 6–12 months. The way back down is via shrinking global industrial output — recession kills demand, not supply improvement.\n\nPrivate insurance fully fails for 6–18 months. The cause is not lost appetite (the LMA data shows 88% still willing) but the inability to price — without a central government, there is no model for the probability of a risk event. Lloyd's only historical precedent is the eight-year non-coverage of the Port of Beirut during the 1982–1990 Lebanese civil war. Under disintegration the entire Persian Gulf could enter that \"pricing paused\" state.\n\nThe secondary shock is simultaneous degradation of the Bab el-Mandeb — the Houthis exploit Iran's weakening to expand attacks. With both the Persian Gulf and Red Sea routes failing, Eurasian shipping is forced onto the Cape of Good Hope for an extended period, and the just-in-time architecture of global supply chains breaks structurally. TSMC's LNG buffer is just 7 days; if Qatari LNG disruption and Hormuz closure combine, TSMC begins reducing output after seven days. That is the scenario the semiconductor industry least wants to hear in May 2026.",
+      "subtitle": "Maritime anarchy: command chains at the three IRGC bases break, naval units turn privateer"
+    }
+  ],
+  "worst_case_timeline": [
+    {
+      "stage": "Day 1–30",
+      "phase": "Trigger phase",
+      "color": "warning",
+      "events": "Mojtaba succeeds, but Sistani is publicly silent or refuses to bless. Large-scale Arab unrest in Khuzestan and synchronized PJAK Kurdish action on the western border. At least one provincial IRGC commander publicly dissents. IRGC central authority loses coordinated control over local commands. Central Bank of Iran FX reserves run out; the rial breaks 1:150K. Hezbollah, sensing its supply line is about to be cut, opens its \"final strike\" decision window.",
+      "sources": [
+        {
+          "label": "UK Commons CBP-10637",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/"
+        }
+      ]
+    },
+    {
+      "stage": "Day 30–90",
+      "phase": "First wave shock",
+      "color": "alert",
+      "events": "Hezbollah fires 50,000–80,000 rockets and drones at Israel (about half its stockpile), saturating defenses over 6–12 hours in multiple waves. Iron Dome saturates; hundreds of warheads land on Israeli soil. At least one of Intel Kiryat Gat or Tower Semiconductor Migdal HaEmek takes direct damage — fab rebuild cycle 3–5 years. Simultaneously the Houthis escalate strikes on Bab el-Mandeb shipping. Khuzestan oilfields slip out of control, removing ~1.5 mb/d from global supply. The IRGC navy's command chains at Bandar Abbas, Bushehr and Chabahar break; some vessels go privateer.",
+      "sources": [
+        {
+          "label": "RAND Cohen, April 2026",
+          "url": "https://www.rand.org/pubs/commentary/2026/04/trumps-iran-war-is-a-dilemma-not-a-debacle.html"
+        },
+        {
+          "label": "Hatzadony, May 2026: The Insurance Weapon",
+          "url": "https://smallwarsjournal.com/2026/05/13/the-insurance-weapon/"
+        }
+      ]
+    },
+    {
+      "stage": "Day 90–180",
+      "phase": "Second wave transmission",
+      "color": "danger",
+      "events": "Oil spikes to $180–220 — exceeding the relative magnitude of 1973. Global marine insurance pricing fails; Persian Gulf and Red Sea transit falls to 5–10% of pre-war volume. TSMC's 7-day LNG buffer is exhausted → Taiwan semiconductor output drops 60%+ → global semiconductor shortage. AI training cycles slip 6–12 months. European winter gas crunch — 50% of Qatari LNG unavailable. Fertilizer prices spike as gas-based Middle Eastern plants go offline. Global wheat and corn trade is hit by the Red Sea closure.",
+      "sources": [
+        {
+          "label": "CSIS Cancian, April 2026: Last Rounds",
+          "url": "https://www.csis.org/analysis/last-rounds-status-key-munitions-iran-war-ceasefire"
+        }
+      ]
+    },
+    {
+      "stage": "Day 180–360",
+      "phase": "Political chain reaction",
+      "color": "danger",
+      "events": "Egypt's Sisi government enters fiscal collapse — Suez Canal revenue to zero, Gulf aid dries up, tourism collapses. Sisi faces an Assad-style impasse: a coup, removal by his own circle, or forced re-accommodation with the Muslim Brotherhood. Pakistan's Balochistan cross-border insurgency escalates — the largest territorial-integrity threat ever faced by a nuclear-armed state. Indian investment in Chabahar/INSTC goes to zero. Lebanon as a state finally fails. Multiple European governing coalitions (Germany, France, Italy, Netherlands) fall under combined energy shock + recession + migration pressure. Saudi Arabia's Vision 2030 enters \"crisis survival mode.\"",
+      "sources": [
+        {
+          "label": "Chatham House, Quilliam, May 2026",
+          "url": "https://www.chathamhouse.org/2026/05/how-iran-war-reshaping-saudi-strategy-hormuz-and-houthis-uaes-opec-exit"
+        },
+        {
+          "label": "INSS, Guzansky, February 2026: Saudi Arabia-UAE 2026",
+          "url": "https://www.inss.org.il/publication/saudi-arabia-uae-2026/"
+        }
+      ]
+    },
+    {
+      "stage": "Day 360+",
+      "phase": "Systemic reordering",
+      "color": "danger",
+      "events": "Global GDP contracts 2.5–3.5% — comparable to the 2008 financial crisis plus the first wave of COVID. The dollar system is stressed but retains primacy (Setser's argument holds). China's CIPS+mBridge captures 30%+ of non-dollar cross-border payments in the Global South, but at the cost of an expanding PBoC balance sheet. India strategically realigns — deeper ties with the GCC instead of Iran/Russia, accelerated alignment with the United States (QUAD upgraded toward a quasi-military alliance). US strategic attention is forced to remain anchored in the Middle East — the Taiwan Strait window is hollowed out for 5–8 years. Israeli military hegemony peaks but at the cost of industrial hollowing. Internal fissures inside BRICS+ deepen.",
+      "sources": [
+        {
+          "label": "CFR Setser, April 2026: Petrodollars — Myths and Reality",
+          "url": "https://www.cfr.org/articles/petrodollars-myths-and-reality"
+        }
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "id": "pakistan",
+      "name": "Pakistan",
+      "name_en": "Pakistan",
+      "risk_window": "Most dangerous in 6–12 months",
+      "color": "danger",
+      "thesis": "The most dangerous country overall — highest probability of dual collapse. Triple economic pressure stacks onto triple political fragility.",
+      "economic_exposure": [
+        "Gulf remittances ~$30B/year (8% of GDP), 4.5 million workers in the Gulf",
+        "100% crude import dependence; an oil spike instantly breaks the 2024 IMF $7B EFF program",
+        "FX reserves ~$9B in May 2026 (1.5 months of imports), depleted within 3 months",
+        "The China-Pakistan Economic Corridor (CPEC) Gwadar port project has stalled on Balochistan unrest"
+      ],
+      "political_fragility": [
+        "Civil-military standoff — Asim Munir vs PTI supporters has remained unresolved since the May 9, 2023 riots",
+        "Balochistan Liberation Army (BLA) activity escalating; an Iranian Baluch uprising would activate the BLA",
+        "Tehrik-i-Taliban Pakistan (TTP) is resurgent in KPK; attacks rose 73% YoY in 2024"
+      ],
+      "upheaval_scenarios": "Economic collapse triggers street protests (the 2022 Sri Lanka template) → military intervention → three possible outcomes:\n\n- military coup (Munir takes over)\n- military-PTI compromise, Imran Khan released\n- state fracture (Balochistan slips effectively out of control)",
+      "external_risk": "**The most dangerous international spillover** — Pakistan effectively collapses → the Modi government uses the moment to adjust the Kashmir status quo → an India-Pakistan border conflict at the highest intensity since the 1999 Kargil War (a border conflict between two nuclear-armed states)",
+      "analysis": "Pakistan is the most dangerous country overall. Three layers of economic pressure plus three layers of political fragility, on top of nuclear-armed-state status, make it the most likely flashpoint within the 6–12 month window.\n\nOn the economic side: Gulf remittances of ~$30B/year (8% of GDP, 4.5 million Gulf workers) are the backbone of Pakistan's current account. A move in oil from $70 to $180–220 instantly breaks the 2024 IMF $7B EFF (Extended Fund Facility) — every macro assumption in the EFF was built around $70–90 oil. FX reserves of about $9B in May 2026 (just 1.5 months of import cover) would be depleted within three months. At the same time the China-Pakistan Economic Corridor (CPEC) Gwadar port project has stalled on Balochistan unrest — China's single largest investment in Pakistan (a $60B commitment).\n\nOn the political side: Army Chief Asim Munir's standoff with PTI (Pakistan Tehreek-e-Insaf, Imran Khan's party) supporters has been unresolved since the May 9, 2023 riots; in the February 2024 elections PTI won the most votes but was pushed to the margins of a military-arranged coalition. The Balochistan Liberation Army (BLA) sustains its campaign — averaging 2–3 attacks per month on CPEC projects since 2024. In the northwest, Tehrik-i-Taliban Pakistan (TTP) is resurgent in Khyber Pakhtunkhwa (KPK), with attacks up 73% YoY in 2024 (PICSS, the Pak Institute for Conflict and Security Studies).\n\nThe shape of upheaval: economic collapse triggers street protests (a Sri Lanka, July 2022 Gotabaya Rajapaksa template) → military intervention → three possible outcomes:\n\n- a military coup (Munir takes over directly, à la Musharraf 1999)\n- a military-PTI compromise, Imran Khan released and brought back in\n- state fracture — Balochistan slips effectively out of control, KPK enters TTP quasi-governance\n\nThe most dangerous international spillover is India's response. The Modi government may use the moment to push the Kashmir status quo further (the second move after the 2019 abrogation of Article 35A). An India-Pakistan border conflict in 2027 could reach the highest intensity since the 1999 Kargil War — a border clash between two nuclear-armed states is the most dangerous tail of this transmission chain.",
+      "sources": [
+        {
+          "label": "Stimson 2026: Iran-aligned militias threaten Iraq and the Gulf",
+          "url": "https://www.stimson.org/2026/iran-aligned-militias-jeopardize-iraqs-gulf-reset/"
+        }
+      ]
+    },
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "name_en": "Egypt",
+      "risk_window": "Most dangerous in 6–12 months",
+      "color": "danger",
+      "thesis": "Second-highest probability of political-economic dual collapse — Suez Canal, tourism, Gulf remittances and energy subsidies all under pressure simultaneously.",
+      "economic_exposure": [
+        "Suez Canal revenue to zero (normal $900M–1B/month in 2023, already halved to $400–500M by 2024)",
+        "Tourism is 12% of GDP; already down 40% in 2024 on Gaza war, regional conflict knocks another 60%",
+        "Gulf remittances ~$32B/year (7–8% of GDP)",
+        "Fuel subsidies (8% of fiscal spending) cannot absorb the oil + LNG spike"
+      ],
+      "political_fragility": [
+        "Sisi has ruled by authoritarian means since the 2013 coup; the 2024 currency devaluation (Egyptian pound 1:30 → 1:50) has triggered shortages",
+        "The Muslim Brotherhood is designated a terrorist organization but its grassroots network persists",
+        "Internal factions within the military — Sisi personally vs the military as institution (30–40% of GDP, vast commercial empire)",
+        "Sustained pressure on the 1979 Camp David Accords with Israel from the Gaza war"
+      ],
+      "upheaval_scenarios": "Fuel subsidy cuts trigger bread riots (the 1977 Sadat-era template) → protests larger than the eve of Morsi's 2013 ouster → three outcomes:\n\n- internal military coup replaces Sisi\n- the vice president takes over but loses control\n- Muslim Brotherhood political return",
+      "external_risk": "Shocks ripple to Israel's southern border (Rafah crossing management vacuum + Gaza humanitarian crisis intensification + space for ISIS-affiliated militancy in Sinai)",
+      "analysis": "Egypt has the second-highest probability of political-economic dual collapse. Four economic pressures stack onto four political vulnerabilities; the collapse risk in the 6–12 month window is second only to Pakistan.\n\nThe four economic pressures:\n\n- Suez Canal revenue collapses — from a normal $900M–1B/month in 2023 to $400–500M in 2024 after Red Sea attacks; combined Red Sea + Hormuz closure drives revenue to near zero\n- Tourism collapses — 12% of GDP, already down 40% in 2024 from the Gaza war; full regional conflict knocks another 60% off\n- Gulf remittances ~$32B/year (7–8% of GDP), chiefly from Saudi Arabia and the UAE\n- Energy imports — Egypt became a net gas importer in 2022 and is now deeply dependent on Hormuz LNG; rising oil and LNG prices make the fuel subsidy system (8% of fiscal spending) unaffordable\n\nThe four political vulnerabilities:\n\n- Sisi has held power since the 2013 coup, but the foundation is brittle — the 2024 devaluation (Egyptian pound from 1:30 to 1:50) has already produced sporadic street unrest over shortages\n- the Muslim Brotherhood is designated a terrorist organization but the grassroots network persists\n- internal military factions — tension between Sisi personally and the military as an institution (30–40% of GDP, a vast commercial empire)\n- the Gaza war continues to strain the 1979 Camp David Accords with Israel\n\nUpheaval form: fuel subsidy cuts trigger bread riots (the 1977 Sadat template) → protests larger than the eve of Morsi's 2013 ouster → three outcomes:\n\n- an internal military coup replaces Sisi\n- power passes to the vice president but slips out of his hands\n- pressure for a Muslim Brotherhood return becomes acute\n\nInternational spillover: shocks reach Israel's southern border (Rafah management vacuum + Gaza humanitarian crisis intensification + space for ISIS-affiliated militancy in Sinai). The risk profile is second only to Pakistan.",
+      "sources": []
+    },
+    {
+      "id": "srilanka",
+      "name": "Sri Lanka",
+      "name_en": "Sri Lanka",
+      "risk_window": "High risk in 12–18 months",
+      "color": "alert",
+      "thesis": "The memory of 2022 is fresh, and the structural fragility is almost a repeat.",
+      "economic_exposure": [
+        "Crude + refined products + coal account for ~25% of imports",
+        "Gulf remittances ~$6B/year (7% of GDP)",
+        "Tourism is 12% of GDP"
+      ],
+      "political_fragility": [
+        "The leftist NPP government elected in November 2024 has limited economic-management experience",
+        "The memory of 2022 leaves the public with very low tolerance for a second deterioration"
+      ],
+      "upheaval_scenarios": "Another FX crisis → street protests go straight to the 2022 mode (storming the presidential palace) → government falls / military steps in / fresh elections — but without the Indian-and-IMF emergency package this time (India is preoccupied with Pakistan, IMF resources are spread thin)",
+      "analysis": "Sri Lanka's memory is still raw — between April and July 2022, FX reserves collapsed, inflation topped 70%+, fuel was rationed, and protesters stormed the presidential palace before Gotabaya Rajapaksa fled. The 2026 worst-case scenario is structurally almost a rerun.\n\nEconomic exposure:\n\n- completely import-dependent on energy — crude, refined products and coal are ~25% of imports\n- Gulf remittances ~$6B/year (7% of GDP) — any sharp drop hits reserves directly\n- tourism (12% of GDP) collapses again\n\nPolitical fragility: the leftist NPP (National People's Power), elected in September 2024 and led by Anura Kumara Dissanayake from the JVP (Janatha Vimukthi Peramuna, People's Liberation Front), has limited economic-management experience. The public memory of 2022 leaves no tolerance for a second deterioration.\n\nUpheaval form: another FX crisis → street protests go straight to the 2022 mode → government falls / military steps in / fresh elections. Unlike 2022, this time there is no emergency Indian-plus-IMF package (India is preoccupied with Pakistan, IMF resources are spread among other crisis countries). The recovery path looks more like a 1980s Uruguay-style \"lost decade.\"\n\nThe IMF gave Sri Lanka $3B in March 2023; the NPP government took office in November 2024 and continued the program. But the IMF's early-2026 emergency lending designs assume Brent stays below $100 — under cyclical coercion or disintegration scenarios Brent breaks $100 and IMF program pressure rises sharply.\n\nMonitoring signals: monthly Central Bank of Sri Lanka FX reserve disclosure (~$7B in December 2025, 3.5 months of import cover); IMF Article IV consultation reports; monthly Modi-government aid figures to Sri Lanka.\n\nA 2.0 revolution will not have the Gotabaya-style \"storming the palace\" form — the NPP has been in office only 14 months and the public will give it longer before tolerance breaks. But if inflation returns to 50%+ for six months or more, street mobilization could move even faster than 2022.",
+      "sources": []
+    },
+    {
+      "id": "bangladesh",
+      "name": "Bangladesh",
+      "name_en": "Bangladesh",
+      "risk_window": "High risk in 12–18 months",
+      "color": "alert",
+      "thesis": "Still in the unsteady transition that began with Sheikh Hasina's August 2024 ouster.",
+      "economic_exposure": [
+        "Gulf remittances ~$22B/year (5% of GDP)",
+        "Ready-Made Garments (RMG) is 84% of exports, 11% of GDP"
+      ],
+      "political_fragility": [
+        "The Yunus interim government has no electoral mandate",
+        "BNP and Awami League remnants are both waiting for their moment",
+        "The military is watching closely (a long coup history: 1975, 1981, 1982, 1990)"
+      ],
+      "upheaval_scenarios": "RMG layoffs → urban slum protests → Yunus government fails to stabilize → military intervention / chaotic elections / escalation along the Myanmar border (Rohingya crisis)",
+      "analysis": "Bangladesh is still in the unsteady political transition that began with Sheikh Hasina's August 2024 ouster and the installation of the Muhammad Yunus interim government.\n\nEconomic exposure:\n\n- Gulf remittances ~$22B/year (5% of GDP)\n- the Ready-Made Garments (RMG) sector is 84% of exports and 11% of GDP — end demand is Western, but operations depend on energy and cotton imports\n- an oil spike plus marine insurance pricing failure hits RMG export competitiveness directly\n\nPolitical fragility: the Yunus interim government has no electoral mandate (Yunus, the 2006 Nobel Peace Prize laureate, was invited in as a technocratic transitional figure). The BNP (Bangladesh Nationalist Party) and Awami League remnants are both waiting for their moment. The military watches closely — Bangladesh has a long coup history (1975, 1981, 1982, 1990).\n\nUpheaval form: RMG layoffs → urban slum protests → Yunus government cannot stabilize → military steps in or elections turn chaotic.\n\nSpillover risk: escalation along the Myanmar border (the Rohingya crisis intensifies) — Bangladesh hosts roughly 1 million Rohingya refugees in camps already under sustained economic strain.\n\nThe stability foundation of the Yunus interim government is Western aid + Indian cooperation + a $4.7B IMF package. Hasina remains in exile in India and may return after a power transition — itself the largest variable in the India-Bangladesh relationship.\n\nIf the Strait control state worsens, Bangladesh's RMG exports (about $35B/year, the country's main FX earner) take a double hit: rising shipping insurance costs plus weakening Western demand. Order cuts from Walmart, Zara and H&M flow directly to 3.5 million RMG workers.\n\nMonitoring signals: monthly Central Bank of Bangladesh FX reserves (~$22B in December 2025, 4 months of imports); Yunus government approval ratings; public Indian government posture toward Yunus; preparation for the 2027 elections. The political legitimacy window for the Yunus government is narrowing.",
+      "sources": []
+    },
+    {
+      "id": "jordan",
+      "name": "Jordan",
+      "name_en": "Jordan",
+      "risk_window": "Medium risk in 12–24 months",
+      "color": "warning",
+      "thesis": "The Hashemite monarchy looks stable but carries structural weaknesses.",
+      "economic_exposure": [
+        "Gulf aid ~$3–4B/year (7–9% of GDP)",
+        "Energy is 95% imported",
+        "Tourism is 11% of GDP"
+      ],
+      "political_fragility": [
+        "Palestinian-origin population is 60%+ of the total and reacts strongly to the Gaza war",
+        "King Abdullah II's legitimacy rests on \"maintaining regional balance\"",
+        "The Muslim Brotherhood's Islamic Action Front (IAF) took 31 seats in the September 2024 election — the largest single bloc in parliament"
+      ],
+      "upheaval_scenarios": "A repeat of the 2011 Arab Spring template — pressure for \"constitutional monarchy reform,\" effective erosion of the 1994 peace treaty with Israel",
+      "analysis": "Jordan's Hashemite monarchy looks stable but carries structural weaknesses.\n\nEconomic exposure:\n\n- Gulf aid of $3–4B/year (7–9% of GDP) is political subsidy — it dries up when Gulf states have their own fiscal crises\n- energy is 95% imported (Iraq pipelines + Egyptian gas); an oil and LNG spike makes fuel subsidies unsustainable\n- tourism (Petra, the Dead Sea) is 11% of GDP — regional conflict drives it to zero\n\nPolitical fragility:\n\n- Palestinian-origin population is 60%+ of the total and reacts strongly to the Gaza war\n- King Abdullah II's legitimacy (since 1999) rests on \"maintaining regional balance\" — when the balance breaks, legitimacy loosens with it\n- the Muslim Brotherhood's Islamic Action Front (IAF) is the largest opposition party in parliament, with 31 seats (of 138) won in September 2024 — the largest single bloc\n\nUpheaval form: a repeat of the 2011 Arab Spring template (Jordan saw only limited protests back then but underlying discontent has accumulated since) — pressure for \"constitutional monarchy reform,\" effective erosion of the 1994 peace treaty with Israel, friction with Israel over the Gaza humanitarian corridor.\n\nThe IAF took 31 seats in September 2024 (22.5% of 138), making it the largest party — 13 seats more than the monarchy-aligned governing party. This is the strongest Muslim Brotherhood parliamentary presence since Jordan restored parliamentary democracy in 1989.\n\nKing Abdullah II (since 1999) maintains rule through royal tradition + US aid + Gulf aid. But the Trump administration's MAGA aid cuts (US aid to Jordan dropping from $1.8B to about $1.2B in FY2026) plus Gulf states' own fiscal preoccupations remove two pillars from the monarchy's financial base simultaneously.\n\nMonitoring signals: IAF parliamentary moves (especially proposals on the 1994 Jordan-Israel peace treaty); Central Bank of Jordan FX reserves; monthly Gulf aid figures to Jordan; royal public appearance frequency (Abdullah II's health is a taboo subject but appearance frequency is a defensible proxy).",
+      "sources": []
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "name_en": "Turkey",
+      "risk_window": "Medium risk in 12–24 months",
+      "color": "warning",
+      "thesis": "Energy imports + a fragile lira + the Kurdish question, all pressing at once.",
+      "economic_exposure": [
+        "Energy imports (Russia + Azerbaijan + Iraq + Iran pipelines) — oil, gas and LNG combined run about $70B/year",
+        "The lira has already collapsed (2021 1:7 → 2026 1:36+); inflation 60%+"
+      ],
+      "political_fragility": [
+        "Erdoğan's AKP holds the executive completely but lost the March 2024 local elections (CHP swept Istanbul and Ankara)",
+        "The PKK issue will heat up again once the PJAK is activated by Iranian civil war"
+      ],
+      "upheaval_scenarios": "Erdoğan further hardens authoritarianism / escalation against Kurdish militants (including further military action against the KRG in northern Iraq) / push for Turkish-Azeri-area independence inside Iran",
+      "analysis": "Turkey faces triple pressure: energy + currency + the Kurdish question.\n\nEconomic exposure:\n\n- energy imports (Russia + Azerbaijan + Iraq + Iran pipelines) — oil plus LNG run about $70B/year; an oil spike pressures the lira again\n- The lira is in hyperinflationary collapse (2021 1:7 → 2026 1:36+), inflation 60%+\n- Manufacturing exports depend on three markets — Gulf + North Africa + Europe — all contracting at once\n\nPolitical fragility: Erdoğan's AKP (Adalet ve Kalkınma Partisi, Justice and Development Party) holds the executive completely but lost the March 2024 local elections — the CHP (Cumhuriyet Halk Partisi, Republican People's Party) swept Istanbul and Ankara, with urban middle-class frustration over economic management piling up. The Kurdistan Workers' Party (PKK) issue will heat up again once Iran's internal collapse activates the PJAK (Iranian Kurdish militants).\n\nUpheaval form: Erdoğan hardens authoritarianism (cracks down on CHP, manipulates the judiciary) / escalation against Kurdish militants (including further military action against the KRG, the Kurdistan Regional Government in northern Iraq) / pushes for Turkish-Azeri-area independence inside Iran — the last option costs Erdoğan his Russia relationship (Russia has strategic interests in Azerbaijan).\n\nThe Erdoğan regime (since 2003, 22 years) faces dual pressure:\n\n- economic — the lira has lost a cumulative 40% in 2024–2025, inflation runs above 50%, and a worsening Strait control state pushes energy import costs higher\n- PKK military action intensifies — under an Iran disintegration scenario, instability in Iran's Kurdish regions lets the PKK expand operations into southeastern Turkey\n\nThe AKP's defeat in March 2024 local elections (CHP winning Istanbul and Ankara) was the worst urban-voter loss in 22 years of AKP rule. The 2028 presidential election finds Erdoğan at his term limit (under the 2017 constitutional amendments) — he can extend only via constitutional change or by transferring power within the AKP, but there is no consensus successor and AKP internal factional conflict could spill into the open in his final two years.\n\nMonitoring signals: the lira rate (1:50 is a key threshold); Central Bank of Turkey FX reserves (~$48B in December 2025, but about $100B in hidden swap-line debt); PKK public action frequency; Erdoğan's relationship with the military (deeply purged after the 2016 coup attempt but factions remain).",
+      "sources": [
+        {
+          "label": "INSS, Guzansky, February 2026",
+          "url": "https://www.inss.org.il/publication/saudi-arabia-uae-2026/"
+        }
+      ]
+    },
+    {
+      "id": "japan",
+      "name": "Japan",
+      "name_en": "Japan",
+      "risk_window": "High-exposure stable state under accelerated pivot",
+      "color": "neutral",
+      "thesis": "**No collapse, but the largest political pivot since 1945**. The biggest reorientation of Japan's national character since 1945 is already underway in 2025–2026; the worst case only compresses the timeline from 5–7 years to 2–3.",
+      "economic_exposure": [
+        "Crude is 95% imported, 88% via Hormuz (Saudi 40% + UAE 35% + Qatar 8% + Kuwait 7%)",
+        "LNG: 8–12% from the Middle East (chiefly Qatar), nearly all via Hormuz",
+        "SPR + commercial mandatory reserves: 240 days of import equivalent (90 days at the national level)",
+        "Oil spike → crude import bill from $100B → $250–300B; yen from 1:160 to 1:200+",
+        "CPI inflation pushed from 2–3% to 5–7% — a structural shock to Japan's long-running deflationary psyche"
+      ],
+      "political_fragility": [
+        "**The Takaichi Sanae government** has been in office since October 21, 2025 — an LDP + Ishin coalition (Komeito left the coalition in October 2025, the first break since 1999)",
+        "Six Takaichi policy preferences: 3% GDP defense spending / large-scale nuclear restart / expansion of economic security / constitutional revision / China deterrence / loose monetary policy — the first five align closely with the worst-case scenario",
+        "Sole policy contradiction: Takaichi's dovishness on rates vs Bank of Japan Governor Ueda Kazuo's hawkish tilt → Ueda may resign early"
+      ],
+      "upheaval_scenarios": "Four acceleration paths open simultaneously:\n\n- defense spending 3% of GDP pulled into FY2027\n- Article 9 \"interpretation revision 2.0\" — MSDF special legislation for Hormuz\n- nuclear pushed from 7–8% to 20–25%\n- JOGMEC's US LNG long-term contracts complete the move away from the Middle East (Middle East share down from 88% to 60–65% over 5–7 years)",
+      "external_risk": "US relations — the \"money (defense) for money (tariffs)\" trade framework may be formalized. China relations — a two-track structure of economic cooperation plus military confrontation comes to the fore. India, Australia, Korea — QUAD upgraded to a quasi-military alliance, with Japan leading Indian Ocean naval cooperation.",
+      "analysis": "Japan will not collapse, but it will undergo the largest political pivot since 1945 — and that pivot is already underway in 2025–2026. The worst case only compresses the timeline from 5–7 years to 2–3.\n\nPrime Minister Takaichi Sanae took office on October 21, 2025, leading an LDP + Ishin coalition (Komeito exited in October 2025, the first break in the coalition since 1999). As of the May 19, 2026 baseline she has been in office about seven months — Japan's first female prime minister.\n\nSix Takaichi policy preferences:\n\n- defense spending above 2% of GDP, moving toward 3%\n- large-scale post-Fukushima nuclear restart\n- expansion of the economic security framework\n- constitutional revision of Article 9\n- explicit deterrence posture toward China\n- loose monetary policy. The first five align tightly with the worst-case scenario — crisis would let her achieve agenda items that would otherwise require politically painful pushes. Only the sixth (monetary policy) directly conflicts with the inflation shock; this is the largest internal contradiction in the Takaichi cabinet, with Bank of Japan Governor Ueda Kazuo leaning hawkish against her dovish stance\n\nFour acceleration paths:\n\n- defense spending at 3% of GDP gets pulled in from \"within five years\" to FY2027 — Japan already hit the 2% target ahead of schedule in FY2025\n- Article 9 \"interpretation revision 2.0\" via MSDF (Maritime Self-Defense Force) special legislation on Hormuz\n- nuclear pushed from 7–8% to 20–25% — the Takaichi government has already in early 2026 affirmed nuclear as a \"dual necessity for decarbonization and energy security\"\n- JOGMEC's (Japan Oil, Gas and Metals National Corporation) US LNG long-term contracts move Middle East share down from 88% to 60–65% over 5–7 years\n\nNine observation indicators: yen/USD breaking 1:200; CPI above 6%; Takaichi cabinet approval below 30%; official announcement that 3% GDP defense spending is pulled into FY2027; SDF Hormuz special legislation submitted to the Diet; Komeito returning to the coalition on specific issues; Ueda Kazuo resigning early; restart decisions from the Nuclear Regulation Authority on batch reactor restarts; JOGMEC US LNG long-term contracts signed. Any four firing simultaneously confirms Japan has entered the acceleration phase of its largest postwar political pivot.",
+      "sources": []
+    },
+    {
+      "id": "philippines",
+      "name": "Philippines",
+      "name_en": "Philippines",
+      "risk_window": "Most dangerous in Southeast Asia (12–18 months)",
+      "color": "alert",
+      "thesis": "The most dangerous country in Southeast Asia — structurally comparable to Bangladesh but with deeper political polarization.",
+      "economic_exposure": [
+        "OFWs (Overseas Filipino Workers) in the Gulf number 2.2–2.4 million, sending home $13–15B/year (out of $37B in total remittances, 8.5% of GDP)",
+        "100% crude import dependence",
+        "Semiconductor back-end (OSAT) is about 7% of Philippine exports; a Taiwan fab slowdown hits 350,000 jobs"
+      ],
+      "political_fragility": [
+        "Marcos Jr. vs the Duterte family in open rupture — Sara Duterte was impeached in 2024",
+        "Rodrigo Duterte was arrested by the ICC on crimes against humanity charges in March 2025",
+        "MILF Bangsamoro transition + NPA remnants + South China Sea tensions with China"
+      ],
+      "upheaval_scenarios": "Gulf remittances drop + oil spike → middle-class consumption contracts + OFW family income breaks → anti-Marcos street protests → Marcos relies on military repression or steps down early",
+      "external_risk": "China could exploit the moment to press on Second Thomas Shoal and other disputed waters",
+      "analysis": "The Philippines is the most dangerous country in Southeast Asia — structurally comparable to Bangladesh but with deeper political polarization.\n\nTriple economic exposure:\n\n- OFWs (Overseas Filipino Workers) total about 10 million, with 2.2–2.4 million in the Gulf (Saudi Arabia, UAE, Qatar, Kuwait); Gulf-sourced remittances are $13–15B/year (out of $37B in total remittances, 8.5% of GDP)\n- 100% crude import dependence — an oil spike transmits directly to ordinary citizens via LRT fares, taxi rates and fishing-fleet diesel; the 2018 oil spike alone dropped Duterte's approval by 8 points in the short term\n- semiconductor back-end (OSAT, Outsourced Semiconductor Assembly and Test) is about 7% of exports; a Taiwan fab slowdown hits Philippine back-end employment (~350,000 jobs)\n\nPolitical fragility: Marcos Jr. (Bongbong Marcos Jr.) allied with the Duterte family in 2022 (Sara Duterte as vice president) to win the election, but the two families openly broke in the second half of 2024 — Sara Duterte was impeached (the second VP impeachment in Philippine history); former president Rodrigo Duterte was arrested by the International Criminal Court (ICC) in March 2025 on crimes against humanity charges; in the May 2025 midterm elections the Duterte faction recovered Senate seats. Open warfare between two political dynasties + the Bangsamoro autonomous region transition (MILF, Moro Islamic Liberation Front) + NPA (New People's Army) remnants + South China Sea tensions with China all overlap.\n\nUpheaval form: Gulf remittances drop + oil spike → middle-class consumption contracts + OFW family income breaks → anti-Marcos street protests (organized by the Duterte faction) → Marcos either leans on military repression (restarting the Duterte-era \"drug war\" model but with political opponents as targets) or steps down early.\n\nAdditional risk: China judges the South China Sea dispute window favorable, presses on Second Thomas Shoal and other contested features, and Manila is forced to pick between internal crisis and external conflict.",
+      "sources": []
+    },
+    {
+      "id": "indonesia",
+      "name": "Indonesia",
+      "name_en": "Indonesia",
+      "risk_window": "Largest Southeast Asian economy at risk (18–24 months)",
+      "color": "warning",
+      "thesis": "The vulnerability is Pertamina's fuel subsidy system — in the worst case subsidies balloon to $60–70B, completely beyond what the budget can absorb.",
+      "economic_exposure": [
+        "Pertamina fuel subsidies ~$28B in 2024 (2.3% of GDP); worst case $60–70B",
+        "1.5 million Gulf workers, $8–9B/year in remittances (0.6% of GDP)",
+        "LNG exports a short-term tailwind (~$7B/year)"
+      ],
+      "political_fragility": [
+        "Prabowo is a former Suharto-era general, Suharto's son-in-law, expelled by East Timor forces over the 1998 kidnapping of activists",
+        "Prabowo needs economic results to sustain approval, but the rupiah is already on a depreciation path"
+      ],
+      "upheaval_scenarios": "Fuel subsidy reform → student-led protests → Prabowo caught in his \"father's trap\" — either repress (losing democratic standing) or abandon reform (fiscal collapse). High risk of a 1998 krismon rerun",
+      "analysis": "Indonesia is Southeast Asia's largest economy (GDP $1.4 trillion, population 280 million), but the vulnerability is not GDP scale — it is the Pertamina (national oil company) fuel subsidy system.\n\nEconomic exposure:\n\n- net oil importer (since 2004; current imports about 700,000 b/d) — a move in oil from $70 to $180–220 would expand Pertamina's 2024 fuel subsidy from ~$28B (12% of fiscal spending, 2.3% of GDP) to $60–70B, completely beyond what the budget can absorb\n- Indonesian workers in the Gulf number about 1.5 million (mainly Saudi domestic workers + UAE construction workers), sending home $8–9B/year (0.6% of GDP)\n- LNG is an Indonesian export (about $7B/year, chiefly to Japan, Korea and China) — a price spike is a short-term tailwind, but medium term Indonesia faces shrinking global demand\n\nPolitical fragility: Prabowo Subianto took office in October 2024. He is a former Suharto-era general, Suharto's son-in-law, and was expelled by East Timor forces for kidnapping pro-democracy activists in 1998 — his authoritarian instincts sit on a fragile legitimacy base. Prabowo needs economic results to sustain support, but he inherited a rupiah already on a depreciation path, and the industrial-upgrade promise tied to copper and nickel export controls needs 5–10 years to bear fruit.\n\nUpheaval form: if forced to cut fuel subsidies in 2025–2026, this rehearses the 1998 \"krismon\" (kris monetier, financial crisis) that toppled Suharto — back then oil spikes plus the Asian financial crisis combined; Jakarta fuel subsidy cuts triggered nationwide riots, 1,300 dead in three weeks, Suharto out. Prabowo's bloodline to Suharto makes this Indonesia's most politically sensitive nerve.\n\nSpillover risk: effective erosion of the 2005 Aceh peace agreement, with the Aceh independence movement (GAM, Gerakan Aceh Merdeka) reactivating, and intensification of the West Papua independence movement.",
+      "sources": []
+    },
+    {
+      "id": "thailand",
+      "name": "Thailand",
+      "name_en": "Thailand",
+      "risk_window": "Chronic fragility (12–24 months)",
+      "color": "warning",
+      "thesis": "Chronic political fragility layered with supply chain shocks.",
+      "economic_exposure": [
+        "Crude is 90% imported, LNG heavily dependent on Qatar",
+        "Tourism (12% of GDP) has only recovered to 75% of pre-COVID levels",
+        "Semiconductor back-end + auto parts depend on global demand"
+      ],
+      "political_fragility": [
+        "MFP won the most votes in 2023 but was blocked from forming a government; dissolved in 2024 into the People's Party",
+        "Pheu Thai + military + conservative coalition is internally tense",
+        "King Rama X succession is taboo (lèse-majesté Article 112)"
+      ],
+      "upheaval_scenarios": "Economic shock + tourism contraction → Pheu Thai loses economic-management legitimacy → repeat of 2006/2014 coup template, or 2010 Red Shirt street politics",
+      "analysis": "Thailand is chronic political fragility layered with supply chain shock.\n\nEconomic exposure:\n\n- crude 90% imported, LNG heavily dependent on Qatar (~$10B/year of imports) — an oil and gas spike hits industrial power costs directly\n- tourism (12% of GDP) has only just recovered to 75% of pre-COVID; full regional conflict drops visitor numbers another 30–50% (especially Middle East + India + China)\n- semiconductor back-end (as with the Philippines) + auto parts (Toyota, Honda, Ford all have major production in Thailand) depend on global demand\n\nPolitical fragility: in the 2023 election the anti-establishment Move Forward Party (MFP) won the most votes but was blocked from forming government; the eventual coalition was Pheu Thai + the military + conservatives, with high internal tension; Thaksin Shinawatra returned in 2023 and secured judicial protection but with diluted effective power; in 2024 the Constitutional Court dissolved MFP, with its successor People's Party inheriting seats and remaining the largest opposition, but the dissolution threat is not fully lifted; most sensitive is the royal succession — King Rama X's (Maha Vajiralongkorn) health remains a taboo topic (lèse-majesté Article 112), and any activation of the succession question immediately becomes a political fault line.\n\nUpheaval form: economic shock + tourism contraction → Pheu Thai coalition loses economic-management legitimacy → both the anti-establishment Move Forward camp and the military try to fill the vacuum → either a repeat of the 2006/2014 coup template, or in the other direction something resembling the 2010 Red Shirt street politics.\n\nSpecial risk: this is one of the most fragile windows for democratic constitutionalism since 1932, layered with royal-succession uncertainty. A 1957 Sarit Thanarat-style military takeover could re-emerge in 2026–2027.",
+      "sources": []
+    },
+    {
+      "id": "myanmar",
+      "name": "Myanmar",
+      "name_en": "Myanmar",
+      "risk_window": "Acceleration of ongoing collapse (6–12 months)",
+      "color": "danger",
+      "thesis": "Already in full-scale civil war following the February 2021 coup. The Iran war effect is to accelerate an existing collapse.",
+      "economic_exposure": [
+        "Gas exports (Yunnan-Myanmar-Indian Ocean pipeline) bring $3B/year — the junta's main FX source",
+        "Black-market diesel prices broke 3× the official price by early 2026",
+        "Chinese support for the junta hinges on pipeline security; the October 2023 Three Brotherhood Alliance attacks made Beijing reassess investment"
+      ],
+      "political_fragility": [
+        "Effective SAC junta territory has shrunk from 70% to 50–55%",
+        "Three Brotherhood Alliance (MNDAA + TNLA + AA) + NUG/PDF keep advancing",
+        "Unstable generational handover between Min Aung Hlaing and the next tier (Soe Win and others)"
+      ],
+      "upheaval_scenarios": "Three possibilities:\n\n- the junta accepts the ASEAN Five-Point Consensus and opens a transition (least likely)\n- the junta dissolves but no unified successor → Libya-style fragmentation\n- the junta hardens its grip on core regions and abandons the periphery. Refugee outflows push into Thailand (Chiang Mai/Chiang Rai) and Bangladesh (Rohingya camps already overloaded)",
+      "analysis": "Myanmar has been in full-scale civil war since the February 2021 coup (the SAC, State Administration Council junta against the NUG, National Unity Government, plus the ethnic armed organizations, EAOs). The Iran war effect on Myanmar is to accelerate ongoing collapse rather than trigger a new one.\n\nEconomic exposure:\n\n- gas exports (mainly via pipelines to China + Thailand, ~$3B/year) are the junta's main FX source — rising global LNG prices are a short-term tailwind for the junta\n- refined product imports (diesel + gasoline) — oil price spikes have pushed black-market prices to 3× the official price by early 2026, putting them beyond ordinary citizens\n- Chinese support for the junta hinges on the security of the Yunnan-Myanmar-Indian Ocean oil and gas pipelines, and the Three Brotherhood Alliance's pressure along that line since the October 2023 \"1027 Operation\" has forced Beijing to reassess investment\n\nPolitical fragility: SAC effective territorial control has shrunk from about 70% to 50–55% since 2023 (UN estimate); three EAOs (Kokang MNDAA, Ta'ang TNLA, Arakan AA) plus NUG-affiliated People's Defense Forces (PDF) continue to advance; Aung San Suu Kyi (Aung San Suu Kyi) remains in prison at age 80 (as of mid-2025) with health concealed; within the military, generational handover between Min Aung Hlaing and the next tier (Soe Win and others) is unstable.\n\nUpheaval form: oil prices + black-market economy + Chinese investment in wait-and-see → junta-controlled territory shrinks further → three possibilities:\n\n- the junta accepts the ASEAN Five-Point Consensus (5PC), opens a transition (least likely)\n- the junta dissolves, but with no unified successor force enters \"Libya-style\" fragmentation (no central government)\n- the junta hardens its grip on core regions (Yangon, Naypyidaw, Mandalay) and abandons the periphery\n\nSpillover risk: refugee flows — about 2 million internally displaced people inside Myanmar today, further collapse pushes refugees into Thailand (Chiang Mai/Chiang Rai already absorbing them) and Bangladesh (Rohingya camps already overloaded).",
+      "sources": []
+    }
+  ],
+  "cross_chain_feedback": [
+    {
+      "id": "semi_to_defense",
+      "name": "Semiconductors → defense",
+      "description": "Israeli fabs damaged → global leading-edge capacity down 30% → tight supply of precision GaN chips for Patriot / THAAD / Iron Dome interceptors → US weapons deliveries to Taiwan, Japan and Korea slip 18–36 months",
+      "sources": []
+    },
+    {
+      "id": "oil_to_semi",
+      "name": "Oil + shipping + insurance → semiconductors",
+      "description": "Oil spike + marine insurance fails → cross-ocean transport costs for chemicals (neon, krypton) up 5× → inventory pressure at TSMC + Samsung + SK Hynix → global leading-edge output down 15–30%",
+      "sources": []
+    },
+    {
+      "id": "insurance_to_all",
+      "name": "Insurance → everything",
+      "description": "Private insurance market retreats → no operator will assume uninsured shipping risk → Persian Gulf + Red Sea transit falls to 5–10% of pre-war volume → simultaneously hits oil & gas / fertilizer / semiconductors / food trade",
+      "sources": [
+        {
+          "label": "Hatzadony, May 2026: The Insurance Weapon",
+          "url": "https://smallwarsjournal.com/2026/05/13/the-insurance-weapon/"
+        }
+      ]
+    },
+    {
+      "id": "defense_to_pacific",
+      "name": "Defense industry → Indo-Pacific deterrence",
+      "description": "US arms industry capacity expansion 100% routed to the Middle East → PAC-3 / THAAD / GMD inventories for the Taiwan theater are emptied → probability of Chinese action against Taiwan rises 2–3 fold",
+      "sources": [
+        {
+          "label": "CSIS Cancian, April 2026: Last Rounds",
+          "url": "https://www.csis.org/analysis/last-rounds-status-key-munitions-iran-war-ceasefire"
+        }
+      ]
+    },
+    {
+      "id": "minerals_to_all",
+      "name": "Critical minerals → everything",
+      "description": "Chinese export controls on gallium, germanium and rare earths → semiconductors + defense + clean energy hit simultaneously → US / Japan / EU activate critical-mineral emergency reserves",
+      "sources": []
+    },
+    {
+      "id": "finance_to_all",
+      "name": "Finance → everything",
+      "description": "OFAC sanctions + E3 snapback → all major Iranian banks cut off from SWIFT → 95% of Iran-China bilateral settlement runs through mBridge → other oil exporters (Russia, Venezuela, Iraq) watch to see whether to follow → global non-dollar settlement share rises from 5% to 30%",
+      "sources": [
+        {
+          "label": "CFR Setser, April 2026",
+          "url": "https://www.cfr.org/articles/petrodollars-myths-and-reality"
+        }
+      ]
+    }
+  ],
+  "history_compare": {
+    "title": "1973 vs 2026: structural contrast of two oil crises",
+    "intro": "The 1973 oil shock was the most consequential global supply chain event of the late twentieth century. Set against the 2026 Iran war along four dimensions:",
+    "scenarios": [
+      {
+        "year": "1973",
+        "label": "OPEC Arab members impose embargo on states supporting Israel",
+        "narrative": "The first oil crisis of 1973 — OPEC Arab members embargoed states supporting Israel. Key numbers: crude rose from $3 to $12/barrel (4×); duration five months (October 1973 to March 1974); OECD GDP fell 0.6% in 1974; equity markets dropped ~40%; inflation moved from 4% to 11%. Structural consequences: Japan and Europe launched conservation policies; North Sea + Alaska + Gulf of Mexico exploration accelerated; the IEA (International Energy Agency) was founded in 1974; the US SPR (Strategic Petroleum Reserve) launched in 1975.",
+        "applicability": "**Partial fit**. On scale, 1973 saw a 4× price move, 2026 is 1.7× ($70 → $120); 2026 is less severe (so long as the worst case doesn't crystallize). On duration, 1973 had a clean five-month arc, 2026 has dragged on 11 months with no resolution — more of a \"long tail.\""
+      },
+      {
+        "year": "2026",
+        "label": "Geographic chokepoint + geopolitical conflict + cross-chain feedback stacked",
+        "narrative": "The 2026 Iran war can be set against the 1973 crisis along four dimensions. First, scale — 1973 was 4×, 2026 is 1.7×. Second, duration — 1973 had a clean five-month arc, 2026 is in its eleventh month and recurring. Third, mechanism — 1973 was an OPEC political embargo (supply-side policy), 2026 is geographic chokepoint control + geopolitical conflict + cross-chain feedback (multiple mechanisms stacked). Fourth, financial impact — 1973 mostly transmitted through the oil price, 2026 also transmits through insurance market failure, semiconductor supply chain dispersal, defense industry capacity crowding and critical mineral leverage — four independent channels. This is a full-value-chain shock.",
+        "applicability": "**Key structural difference**: the structural legacies of 1973 were the Western completion of \"oil-non-dollar settlement\" (Saudi agreement to dollar oil settlement), North Sea exploration and Japanese automotive global expansion. The structural legacies of 2026 may be:\n\n- private insurance permanently retreats from geopolitical hotspots, sovereign backstops become standard\n- the US defense industry completes capacity expansion, but at the cost of hollowed-out Indo-Pacific deterrence through 2026–2030\n- Israel's fab cluster disperses across Ohio + Arizona + Ireland\n- China's CIPS+mBridge completes renminbi-settlement coverage of oil exporters\n- critical mineral supply chains regionalize"
+      }
+    ],
+    "current_judgment": "The danger to watch is not Iran's regime path itself, but how that path shapes the **geographic chokepoint operational mode** — and the **cross-chain feedback amplification** that follows once the operational mode slips out of control. Hormuz does not disappear; it is simply used in different ways. Every additional IRGC naval unit acting on its own, every additional ship sailing the Persian Gulf without coverage, every Patriot interceptor pulled from US stockpile to Israel, every Iran-China settlement cleared through mBridge, every semiconductor wafer relocated from Kiryat Gat to Ohio — these accumulate into a structural reset of global supply chains, from a pre-war \"efficiency-maximizing\" architecture to a post-war \"resilience-first\" one. This is a process that will unfold across the next six or seven years, 2026–2032."
+  },
+  "glossary": [
+    {
+      "zh": "Strait control state",
+      "en": "Hormuz operational mode",
+      "note": "Four possible states for Strait of Hormuz passage. The regime path sets the mode: maintained → toll-passage mode; militarization → cyclical political coercion; slow-collapse → joint convoy escort; disintegration → maritime anarchy. The geography does not change, only the way it is used."
+    },
+    {
+      "zh": "Weaponization of strait passage rights",
+      "en": "Weaponization of Hormuz",
+      "note": "Iran's IRGC turns Strait of Hormuz passage rights into political leverage — cyclical seizures, pressured negotiations and selective releases force each country to bargain with Tehran individually. Not a closure (that equals total war) — selective disruption. The IRGC's seizure of 67 vessels during the 1987–88 Tanker War is the historical precedent."
+    },
+    {
+      "term": "Hormuz",
+      "zh": "Strait of Hormuz",
+      "en": "Strait of Hormuz",
+      "note": "The only maritime route from the Persian Gulf to the Indian Ocean. About 30% of global seaborne oil and 20% of LNG transit. Narrowest width about 33 km."
+    },
+    {
+      "term": "OPEC",
+      "zh": "Organization of the Petroleum Exporting Countries",
+      "en": "Organization of the Petroleum Exporting Countries",
+      "note": "Oil-producer cartel founded 1960, currently 13 members. Imposed the embargo on supporters of Israel during the 1973 first oil crisis."
+    },
+    {
+      "term": "JCPOA",
+      "zh": "Joint Comprehensive Plan of Action",
+      "en": "Joint Comprehensive Plan of Action",
+      "note": "2015 multilateral agreement limiting Iran's nuclear program in exchange for sanctions relief. Trump withdrew in May 2018. The E3 (UK, France, Germany) triggered snapback in October 2025 — the agreement's one-time right to unilaterally restore UN sanctions."
+    },
+    {
+      "term": "CIPS",
+      "zh": "Cross-Border Interbank Payment System",
+      "en": "Cross-Border Interbank Payment System",
+      "note": "Cross-border renminbi clearing system launched by the People's Bank of China in 2015; a potential SWIFT alternative. Cross-border payment volume jumped during the 2026 war."
+    },
+    {
+      "term": "mBridge",
+      "zh": "Multilateral CBDC Bridge",
+      "en": "Multilateral CBDC Bridge",
+      "note": "Multi-central-bank CBDC settlement project involving China, the UAE, Hong Kong, Thailand, Saudi Arabia and others. Atlantic Council reporting puts 95% of Iran-China bilateral settlement through mBridge in renminbi."
+    },
+    {
+      "term": "SPR",
+      "zh": "Strategic Petroleum Reserve",
+      "en": "Strategic Petroleum Reserve",
+      "note": "National crude stockpile for supply disruption. US SPR launched 1975, Japan's in 1978."
+    },
+    {
+      "term": "DPA",
+      "zh": "Defense Production Act",
+      "en": "Defense Production Act",
+      "note": "US law passed during the 1950 Korean War authorizing the president to compel industrial conversion for defense. The 2026 expansion of PrSM / THAAD / Patriot capacity has been accelerated under DPA authority."
+    },
+    {
+      "term": "IRGC",
+      "zh": "Islamic Revolutionary Guard Corps",
+      "en": "Islamic Revolutionary Guard Corps",
+      "note": "Iran's core armed force, with five services and 17 provincial corps. The navy is a separate command responsible for the Strait of Hormuz and the Persian Gulf."
+    },
+    {
+      "term": "DFC",
+      "zh": "Development Finance Corporation",
+      "en": "Development Finance Corporation",
+      "note": "US government overseas investment agency. In 2026 it leads the standing-up of a $40B sovereign reinsurance facility (per the WEF report) to absorb shipping risk after private insurance retreats."
+    },
+    {
+      "term": "CPEC",
+      "zh": "China-Pakistan Economic Corridor",
+      "en": "China-Pakistan Economic Corridor",
+      "note": "Belt and Road flagship project; $60B in infrastructure investment in Pakistan, concentrated in Balochistan + Khyber. The Balochistan Liberation Army (BLA) has sustained attacks on CPEC projects."
+    }
+  ],
+  "causal_map": {
+    "title": "Transmission path: from Iran regime state to country political crisis",
+    "intro": "Iran's four regime paths transmit to global supply chain shocks through a five-step causal chain, and on to specific countries' political crises. This is a multi-level causal pathway.",
+    "stages": [
+      {
+        "id": "iran_state",
+        "label": "L1 · Iran regime state",
+        "color": "danger",
+        "items": [
+          {
+            "name": "Maintained",
+            "desc": "40–45% · Mojtaba succeeds smoothly + IRGC remains intact"
+          },
+          {
+            "name": "Militarization",
+            "desc": "15–20% · IRGC sets aside religious legitimacy and takes over the state"
+          },
+          {
+            "name": "Slow-collapse",
+            "desc": "12–15% · Erosion across 3–5 years"
+          },
+          {
+            "name": "Disintegration + civil war",
+            "desc": "8–12% · Three triggers fire concurrently"
+          }
+        ]
+      },
+      {
+        "id": "hormuz_mode",
+        "label": "L2 · Strait control state",
+        "color": "alert",
+        "items": [
+          {
+            "name": "Paid passage",
+            "desc": "Maintained · transit 85–95%"
+          },
+          {
+            "name": "Cyclical political coercion",
+            "desc": "Militarization · transit 60–80%"
+          },
+          {
+            "name": "Multilateral co-management",
+            "desc": "Slow-collapse · transit 70–85%"
+          },
+          {
+            "name": "Anarchic breakdown",
+            "desc": "Disintegration · transit 5–30%"
+          }
+        ]
+      },
+      {
+        "id": "chain_impact",
+        "label": "L3 · Supply chain shock",
+        "color": "warning",
+        "items": [
+          {
+            "name": "Oil & gas prices",
+            "desc": "$75 → $180–220 (under disintegration)"
+          },
+          {
+            "name": "Shipping / insurance failure",
+            "desc": "Private insurance retreats; sovereign backstops become standard"
+          },
+          {
+            "name": "Semiconductor output cuts",
+            "desc": "TSMC LNG buffer exhausted → output down 60%+"
+          },
+          {
+            "name": "Defense industry capacity crowding",
+            "desc": "Indo-Pacific deterrence hollowed out 5–8 years"
+          },
+          {
+            "name": "Financial plumbing pressure",
+            "desc": "CIPS+mBridge share rises to 30%"
+          }
+        ]
+      },
+      {
+        "id": "country_crisis",
+        "label": "L4 · Country political crisis",
+        "color": "danger",
+        "items": [
+          {
+            "name": "Pakistan (6–12 months)",
+            "desc": "Gulf remittances break + IMF program fails + India-Pakistan border conflict risk"
+          },
+          {
+            "name": "Egypt (6–12 months)",
+            "desc": "Suez + tourism + Gulf aid + fuel subsidies all under pressure"
+          },
+          {
+            "name": "Philippines (12–18 months)",
+            "desc": "OFW remittances + open Marcos-Duterte warfare"
+          },
+          {
+            "name": "Indonesia (18–24 months)",
+            "desc": "Pertamina fuel subsidy system vs Prabowo's 1998 trap"
+          },
+          {
+            "name": "Sri Lanka / Bangladesh / Jordan / Turkey / Thailand / Myanmar (12–24 months)",
+            "desc": "Specific mechanisms for each; see country matrix"
+          },
+          {
+            "name": "Japan (no collapse, but accelerated pivot)",
+            "desc": "Takaichi government → 3% defense / Article 9 / nuclear / pivot away from the Middle East"
+          }
+        ]
+      }
+    ],
+    "current_assessment": "**Current position**: at L1 \"maintained\" (40–45%) + L2 \"paid passage\" baseline. All five chains in L3 show pressure but have not entered crisis. L4 already shows early signals — Pakistan IMF program strain, Philippine OFW income decline, the Takaichi government accelerating its defense and nuclear agendas. **Key threshold**: if Iran's regime path falls from maintained into disintegration (Sistani publicly rejects Mojtaba, or the IRGC splits openly — either alone is enough), the entire causal chain steps down one rung — L2 enters \"anarchic breakdown,\" L3 enters crisis, and at least 3–4 countries in L4 enter genuine political crisis. The cascade could complete within 6–12 months."
+  },
+  "hubs": [
+    {
+      "id": "regime_to_hormuz",
+      "name": "Iran regime → Strait control state",
+      "color": "danger",
+      "summary": "Iran's four regime paths do not set global oil prices directly. They run through two intermediate variables — IRGC command coherence and naval ROE consistency — which together determine which of the four Strait operational modes prevails.",
+      "thesis": "Geography is invariant — the Strait of Hormuz is 33 km wide, 90 m deep, and carries 29% of global seaborne oil. Regime change does not move the geography; it only changes how the geography is used.",
+      "logic": "A common intuitive error when discussing \"what happens to supply chains when Iran disintegrates\" is to imagine Hormuz returning to normal once Iran falls apart. The opposite is closer to the truth — no central control just means more uncontrolled variables at sea. Between regime state and Strait operational mode sit two key intermediate variables:\n\n- coherence of IRGC internal decisions — intact under the maintained path, fractured under disintegration\n- consistency of naval rules of engagement — determining whether transit disruption is \"toll-by-rule\" or \"random seizure.\" The combination of these two intermediate states determines which of the four Hormuz operational modes becomes reality",
+      "preconditions": [
+        {
+          "id": "rh_pre_maintain",
+          "label": "Maintained path: Mojtaba succeeds smoothly",
+          "status": "watching",
+          "analysis": "The core of the maintained path is Mojtaba Khamenei (Khamenei's second son, born 1969, lecturer at the Qom Seminary since 2017) successfully taking the Supreme Leader position. Specific conditions:\n\n- Sistani (the senior Shia marja, 95, in Najaf) tacitly accepts the succession without publicly questioning it\n- the senior clergy of the Qom Seminary (Howza Elmiyye Qom) do not publicly oppose\n- Quds Force commander Esmail Qaani accepts Mojtaba's authority as Supreme Leader\n- the IRGC central command (Bandar Abbas naval headquarters + Sepah HQ) coordination remains intact\n\nThe logical chain among these four: Sistani tacit → Qom does not oppose → Qaani complies → IRGC command holds. A break at any link converts the maintained path into militarization or slow-collapse.\n\nUnder the maintained path the IRGC navy, Aerospace Force and Quds Force coordinate normally. The navy can execute differentiated passage policy — \"duty-free for Chinese tankers today, $2 million for US-flagged ships\" — because the entire chain takes the same orders. The \"100 tankers/day × $2 million = $73B/year\" toll revenue documented by Atlantic Council's March 2026 Tehran's Toll Booth requires an intact command chain to collect stably.\n\nAs of May 2026, Sistani's health is the key variable — at 95, the actuarial probability of death within a year is about 12%. If Sistani dies before the Khamenei succession completes, Mojtaba's legitimacy across the Shia world weakens — the traditional senior marja successors Wahid Khorasani (104) and Bashir al-Najafi (80) carry more weight in the Najaf lineage than Mojtaba.",
+          "sources": [
+            {
+              "label": "Iran War 2025 / Report 2: Maintained path mechanism",
+              "url": "/iran-war/reports/02_iran_regime_scenarios.docx"
+            },
+            {
+              "label": "Atlantic Council, March 2026: Tehran's Toll Booth",
+              "url": "https://www.atlanticcouncil.org/dispatches/inside-tehrans-toll-booth/"
+            }
+          ]
+        },
+        {
+          "id": "rh_pre_military",
+          "label": "Militarization path: IRGC takes over",
+          "status": "watching",
+          "analysis": "The core of the militarization path is the IRGC effectively taking control of Iran when the Khamenei succession cannot transition smoothly. Specific conditions:\n\n- the Mojtaba succession is publicly contested (Sistani signals doubt or the Qom Seminary publicly opposes)\n- IRGC commander Hossein Salami or Quds Force commander Qaani steps in to \"stabilize the situation\"\n- the Assembly of Experts holds a leadership election but real power transfers to the IRGC\n- civilian institutions (the presidency, parliament) retain ceremonial roles but actual decision-making moves to the IRGC political wing\n\nThe template is the SAVAK-plus-military structure of late Pahlavi Iran (Mohammad Reza Pahlavi, 1953–1979), or successive Turkish military interventions during 1980–2024 (especially the transition after the 1980 Evren coup). The difference is that the Iranian IRGC will not formally declare a coup — this is a de facto takeover, not a formal one.\n\nUnder this path the IRGC uses Hormuz as political leverage. Not a closure — closure equals total war. Cyclical seizures plus selective releases, applied differentially: higher seizure probability for US-flagged ships, higher tolls for GCC tankers, duty-free transit for Chinese tankers. The IRGC's seizure of 67 vessels during the 1987–88 Tanker War is the historical precedent for this mode.\n\nPer Quilliam's May 2026 Chatham House report, under militarization Saudi Aramco accelerates the East-West pipeline expansion (4 mb/d → 7 mb/d) for completion by 2027. The UAE launches a second Jebel Dhanna-Fujairah line. China becomes the prime beneficiary — through the shadow fleet plus duty-free transit, China's real discount on Iranian crude can deepen to $30–40/barrel below Brent.",
+          "sources": [
+            {
+              "label": "Iran War 2025 / Report 2: Militarization path",
+              "url": "/iran-war/reports/02_iran_regime_scenarios.docx"
+            },
+            {
+              "label": "Quilliam, Chatham House, May 2026: Saudi strategy",
+              "url": "https://www.chathamhouse.org/2026/05/how-iran-war-reshaping-saudi-strategy-hormuz-and-houthis-uaes-opec-exit"
+            }
+          ]
+        },
+        {
+          "id": "rh_pre_slow",
+          "label": "Slow-collapse path: central authority steadily erodes",
+          "status": "watching",
+          "analysis": "The core of the slow-collapse path is the steady weakening of Iran's central authority over 12–36 months without a formal fall — a \"semi-incapacitated\" state. Specific conditions:\n\n- Mojtaba takes office but legitimacy is persistently questioned\n- Sistani publicly questions the succession process\n- provincial IRGC corps (Baluch, Kurdish, Khuzestan Arab) gain effective autonomy\n- the elected president (currently Masoud Pezeshkian) and parliament gain de facto autonomy in selected policy areas\n\nThe template is the late Gorbachev-era Soviet Union (1989–1990) — center still exists but the constituent republics are effectively autonomous. The Iranian version: Tehran is still the legitimate government, but Khuzestan oilfields, the Sistan-Baluchestan border and Iranian Kurdistan see their effective jurisdiction devolve to local warlords or provincial IRGC corps.\n\nUnder slow-collapse Hormuz evolves toward \"multilateral co-management\" — Iran tacitly cedes parts of its waters, while GCC navies + US Fifth Fleet + residual IRGC navy maintain passage through de facto joint convoy escort. This is a version 2.0 of Operation Earnest Will (the 1987 US operation that reflagged Kuwaiti tankers and escorted them through Hormuz).\n\nCounterintuitively, Brent in this scenario falls back to $75–85 — lower than under the maintained path — because risk premium is absorbed by the co-management mechanism. But slow-collapse has a \"disorderly version\" trap: if the IRGC does not voluntarily cede but cannot maintain effective control, uncontrolled variables proliferate at sea — some days agreement holds, some days not — Brent averages $85–100 but intraday swings of $10 prevent shipping operators from planning.",
+          "sources": [
+            {
+              "label": "Iran War 2025 / Report 2: Slow-collapse path",
+              "url": "/iran-war/reports/02_iran_regime_scenarios.docx"
+            },
+            {
+              "label": "CRS R45281: 1987 Operation Earnest Will precedent",
+              "url": "https://www.congress.gov/crs-product/R45281"
+            }
+          ]
+        },
+        {
+          "id": "rh_pre_collapse",
+          "label": "Disintegration-and-civil-war path: IRGC center loses control",
+          "status": "watching",
+          "analysis": "The core of the disintegration-and-civil-war path is the breakdown of command chains at the IRGC's three main naval bases (Bandar Abbas, Bushehr, Chabahar), after which provincial naval units act on their own. Specific conditions:\n\n- Mojtaba succession fails + the Khamenei system fully unravels\n- IRGC internal factional conflict goes public (Quds Force vs Basij vs navy vs Aerospace Force)\n- Khuzestan Arab uprising (Ahwaz protests escalate to armed conflict)\n- Iranian Kurdistan plus Sistan-Baluchestan enter separatist mobilization simultaneously\n\nThe templates are post-Gaddafi Libya (2011–2014) or post-Siad Barre Somalia (1990–1995). The difference is Iran's scale (88 million people) and geography (controlling Hormuz) — the external spillover from Iranian state failure dwarfs both precedents.\n\nUnder this path Hormuz enters \"anarchic breakdown.\" Provincial naval units act autonomously — a Bandar Abbas unit might negotiate tacit passage with GCC counterparts; a Bushehr unit might turn privateer and levy private tolls; others slip into piracy. Commercial shipping cannot plan in this environment. If Khuzestan unrest reaches Saudi Aramco's East-West pipeline terminus at the Khorramshahr valve station, the combined 4.7 mb/d Saudi + UAE bypass capacity falls to zero.\n\nBrent spikes to $150–180 in the short term, but demand destruction pushes price back to $100–120 within 6–12 months — at the cost of shrinking global industrial output. Private insurance fully fails for 6–18 months. Lloyd's only historical precedent is its eight-year non-coverage of the Port of Beirut during the 1982–1990 Lebanese civil war.\n\nProbability within 24 months is about 3–5%, but the damage envelope is the combined magnitude of 1929 + 1973 + 2008 + 2020.",
+          "sources": [
+            {
+              "label": "Iran War 2025 / Report 2: Disintegration path",
+              "url": "/iran-war/reports/02_iran_regime_scenarios.docx"
+            },
+            {
+              "label": "Hatzadony, May 2026: The Insurance Weapon",
+              "url": "https://smallwarsjournal.com/2026/05/13/the-insurance-weapon/"
+            }
+          ]
+        }
+      ],
+      "mechanisms": [
+        {
+          "id": "rh_mech_chain",
+          "label": "Five-step transmission: regime → command coherence → ROE consistency → Strait control state → cross-chain feedback",
+          "analysis": "Between Iran's regime state and the global supply chain shock there is not a single-step transmission but five sequential layers of intermediate variables. This is a falsifiable accumulation process, not a vague forecast.\n\n**Layer 1**: coherence of IRGC internal decisions. Intact under the maintained path; under militarization, run-in is rough but completed through coercive consolidation; under slow-collapse, central coordinating capacity declines; under disintegration, effective authority devolves to corps commanders. Observable signal: frequency and message consistency of IRGC navy headquarters statements — per Atlantic Council Toll Booth reporting, since April 2026 the navy has issued 2–3 statements per week with broadly consistent messaging.\n\n**Layer 2**: whether naval ROE is consistent. Unified command means differentiated strategies can be executed; fragmented command means a Bandar Abbas unit lets a ship through and a Bushehr unit detains it — commercial unpredictability spikes.\n\n**Layer 3**: Hormuz transit disruption mode. Consistent ROE → \"paid passage\"; inconsistent ROE → random seizures and maritime privateering. Daily seizures: 0–1 under maintained, 3–5 under militarization (with political targeting), 5–10 under slow-collapse (mixed protocol and random), unmeasurable under disintegration.\n\n**Layer 4**: direct shock to the five chains. Predictable disturbance → Brent risk premium stabilizes at $10–25/barrel, insurance pricing fluctuates but a market exists, semiconductor industry can plan geographic diversification. Unpredictable disturbance → Brent risk premium cannot be priced, insurance market fails, semiconductor industry must plan to worst case.\n\n**Layer 5**: single-chain shocks amplify each other through six cross-chain feedback loops — oil + shipping + insurance → semis, semis → defense, insurance → everything, defense → Indo-Pacific deterrence, critical minerals → everything, finance → everything. Amplification of 2–5× across 3–6 months.\n\nThe key to monitoring is not Brent itself (lagging) but the first four layers of intermediate variables."
+        }
+      ],
+      "consequences": [
+        {
+          "id": "rh_con_paid",
+          "label": "→ Paid passage",
+          "weight": 0.45,
+          "analysis": "Under the maintained path Hormuz evolves into \"paid passage.\" Each ship pays $2 million by tonnage; at an IRGC navy estimate of 100 tankers per day, annual revenue is about $73 billion — comparable to Iran's pre-war oil export revenue at 1.5 mb/d. This is the IRGC moving geographic rent from \"exporting our own oil\" to \"taxing other people's.\"\n\nBrent settles into $80–95. Saudi Aramco and UAE bypass pipelines (4.7 mb/d of effective capacity) keep running full, with new lines on a 2027 timetable. The private insurance market gradually returns to the Persian Gulf, premiums remain 2–3× pre-war for 5+ years. Lloyd's JWC high-risk designation contracts from \"the entire Persian Gulf\" to \"the Strait of Hormuz and Iranian coastal waters within 12 nm.\" The 60× P&I cost spike Hatzadony documents falls back to 8–12× under the maintained path.\n\nMonitoring signals: actual per-ship toll collection records; the frequency and consistency of IRGC navy weekly statements."
+        },
+        {
+          "id": "rh_con_weap",
+          "label": "→ Cyclical political coercion",
+          "weight": 0.25,
+          "analysis": "Under militarization Hormuz evolves into \"cyclical political coercion\" — cyclical seizures plus selective releases applied differentially. Brent fluctuates in $90–110. Saudi East-West pipeline expansion (4 → 7 mb/d) accelerates to 2027. China becomes the prime beneficiary: shadow fleet plus duty-free transit deepens China's real discount on Iranian crude to $30–40/barrel below Brent.\n\nThe US DFC's $40 billion reinsurance facility hardens into permanent institution — a version 2.0 of the Reagan-era reflagging-and-escorting of Kuwaiti tankers during the Iran-Iraq war. Setser's CFR tracking puts the DFC's balance-sheet risk exposure at $60 billion by April 2026, larger than all DFC's other business combined. China's national insurance consortium — PICC + China Re + Sinosure — provides state cover for Chinese tankers, with Iran-China route exposure reaching $80 billion in the same period. Global shipping insurance is effectively bifurcated."
+        },
+        {
+          "id": "rh_con_multi",
+          "label": "→ Multilateral co-management",
+          "weight": 0.2,
+          "analysis": "Under slow-collapse Hormuz evolves into \"multilateral co-management\" — Iran tacitly cedes parts of its waters; GCC navies + US Fifth Fleet + residual IRGC navy build an informal arrangement. Counterintuitively, Brent falls back to $75–85 (the co-management mechanism absorbs the risk premium).\n\nBut slow-collapse has a \"disorderly version\" trap: if the IRGC does not voluntarily cede but cannot keep control, uncontrolled variables proliferate at sea — some days agreement holds, some days not — Brent averages $85–100 but intraday swings can reach $10. Private insurance returns in phases, premiums fall from 60× wartime P&I to 5–8× pre-war. The DFC facility is kept but trimmed to $10B standby. The new normal is \"geographically tiered insurance\" — inside the strait, central Persian Gulf, and Gulf of Oman priced separately."
+        },
+        {
+          "id": "rh_con_anar",
+          "label": "→ Anarchic breakdown",
+          "weight": 0.1,
+          "analysis": "Under disintegration-and-civil-war Hormuz enters \"anarchic breakdown.\" Provincial naval units act autonomously — command chains at Bandar Abbas, Bushehr and Chabahar break. If Khuzestan unrest reaches the East-West pipeline terminus at the Khorramshahr valve station, Saudi + UAE bypass capacity falls to zero.\n\nBrent spikes to $150–180 short term; demand destruction pushes it back to $100–120 within 6–12 months — at the cost of shrinking global industrial output. Private insurance fully fails for 6–18 months. Lloyd's only historical precedent is its eight-year non-coverage of the Port of Beirut during the 1982–1990 Lebanese civil war.\n\nSecondary shocks: Bab el-Mandeb degrades in parallel (the Houthis exploit Iran's weakening to expand attacks); TSMC reduces output once the 7-day LNG buffer is exhausted; Suez Canal revenue collapse threatens the fiscal base of the Sisi government. Probability within 24 months is 3–5%, with a damage envelope equal to 1929 + 1973 + 2008 + 2020 combined."
+        }
+      ],
+      "observations": [
+        {
+          "id": "rh_obs_sistani",
+          "label": "Sistani public appearance frequency",
+          "threshold": "Sistani (the senior Shia marja, 95) goes 60 consecutive days without public appearance, or publicly questions Mojtaba's succession → downgrade maintained path probability",
+          "analysis": "Sistani's public appearances are the most upstream signal for regime-path triage. At 95, the actuarial probability of death within a year is about 12%. If Sistani dies before the Khamenei succession completes, Mojtaba's legitimacy across the Shia world weakens. Monitoring source: weekly updates from the Najaf Sistani office website; Sistani's video messages for religious holidays; whether Sistani attends major rites at the Imam Ali shrine. As of the May 19, 2026 baseline: Sistani's last public appearance was the March 2026 Nowruz address (filming date unclear), 60+ days without new footage. That fact itself is the focus of observation."
+        },
+        {
+          "id": "rh_obs_irgc",
+          "label": "IRGC navy weekly statement frequency and consistency",
+          "threshold": "Frequency drops to 1–2/month or content becomes self-contradictory → early signal of fragmented IRGC command",
+          "analysis": "Per Atlantic Council's March 2026 Tehran's Toll Booth, since April 2026 the IRGC navy has issued 2–3 statements per week (released simultaneously via Sepah News and Tasnim) with broadly consistent messaging. A drop to 1–2/month, or contradictions between Bandar Abbas and Bushehr commands, would be an early signal of fragmenting IRGC internal command. Monitoring source: weekly Sepah News update tallies; public statements from Bandar Abbas + Bushehr commanders; IRGC commander Hossein Salami's monthly press conferences."
+        },
+        {
+          "id": "rh_obs_detain",
+          "label": "Daily ship-detention events at Hormuz",
+          "threshold": "Jump from 0–1/day to 3–5/day with clear targeting → upgrade militarization path probability",
+          "analysis": "As of May 19, 2026, daily Hormuz ship-detention events run 0–1. Maintained path stays here; militarization moves to 3–5/day with clear targeting (differential treatment of US-flagged ships, GCC tankers, and Chinese tankers); slow-collapse moves to 5–10/day (mixed protocol and random); disintegration becomes unmeasurable. Monitoring source: monthly Lloyd's JWC reports; weekly UKMTO (UK Maritime Trade Operations) detention alerts; weekly TankerTrackers tanker tracking reports."
+        }
+      ]
+    },
+    {
+      "id": "hormuz_to_country",
+      "name": "Strait control state → Country crisis",
+      "color": "warning",
+      "summary": "The four Hormuz operational modes transmit to differently-fragile countries through three layers of shock — oil, fertilizer and marine insurance. Fuel / FX / consumer prices are the three key intermediate variables that set the crisis window for the 11 countries.",
+      "thesis": "Country political collapse is not triggered directly by the Strait control state. It is triggered by the stack of three shocks: fuel subsidy cuts + FX reserve depletion + food price inflation. The most dangerous variable is not the absolute level of oil prices but the speed of the shock — fast shocks give governments no time to adjust subsidies and FX policy.",
+      "logic": "The Strait control state is only the source. Between the Brent price and \"Imran Khan supporters in the streets\" sit at least three intermediate variables:\n\n- oil → fuel subsidy cut pressure (different IMF negotiation positions across countries)\n- oil + shipping → FX reserve depletion rate (net-importer pressure vs exporter windfall)\n- oil + fertilizer → food price inflation (fertilizer is 90% reliant on hydrogenated natural gas as feedstock; Hormuz transit affects Qatari LNG exports, which transmits directly to fertilizer). Only the three layers stacking together produce a political crisis",
+      "preconditions": [
+        {
+          "id": "hc_pre_paid",
+          "label": "Paid passage (Brent $80–95)",
+          "status": "watching",
+          "analysis": "Under paid passage Brent settles into $80–95. Shock to net importers is moderate — 14–36% higher than the pre-war $70 but well below the wartime $120 peak.\n\nCorresponding country risk map: Pakistan can still negotiate an emergency IMF facility (the IMF program assumes Brent below $100); Egypt holds Suez revenue at 80% of pre-war levels (transit volume returns to 80–95% of pre-war); Sri Lanka + Bangladesh see FX pressure rise but not pressing; Jordan + Turkey face status quo fuel subsidy strain; Japan absorbs a 30–40% LNG import cost increase, the Takaichi government advances nuclear restart but no regime crisis; the four Southeast Asian countries (Philippines, Indonesia, Thailand, Myanmar) hold status quo.\n\nThis is the \"global supply chain can absorb\" state — insurance has a market, subsidies can be adjusted, IMF programs can execute. The precondition is that this state remains stable for 18–24 months so each country's finances can adjust.\n\nIf paid passage is only transitional and flips into cyclical political coercion or multilateral co-management within 3–6 months, the fiscal-adjustment window for each country gets compressed, with cascading crisis triggers."
+        },
+        {
+          "id": "hc_pre_weap",
+          "label": "Cyclical political coercion (Brent $90–110)",
+          "status": "watching",
+          "analysis": "Under cyclical political coercion Brent oscillates in $90–110. Shock to net importers is severe — fuel subsidy cut pressure jumps, FX reserve depletion accelerates.\n\nCorresponding country risk map: Pakistan within 6–12 months could see the IMF program break — the Imran Khan faction exploits oil-driven price pressure to mobilize the street (PTI staged 3 major street mobilizations in April 2026 alone); Egypt sees Suez revenue down 20–30% (transit volume back to 60–80% of pre-war) + oil cost rise, hitting Sisi's fiscal base; Sri Lanka + Bangladesh enter a second IMF negotiation; Jordan in 12–24 months sees pressure rise from the Muslim Brotherhood's IAF (Islamic Action Front) — the IAF took 31 seats in September 2024, 13 more than the ruling party.\n\nJapan, because the Takaichi government took office on October 21, 2025 and has advanced nuclear restart + LNG diversification, does not face regime crisis under cyclical coercion. But energy price rises give the Takaichi nuclear-acceleration agenda a stronger popular mandate. That actually strengthens her government.\n\nThe key intermediate variable is IMF \"capacity\" — the IMF's early-2026 emergency lending designs assume Brent below $100; under cyclical coercion Brent breaks $100 and IMF program pressure escalates."
+        },
+        {
+          "id": "hc_pre_multi",
+          "label": "Multilateral co-management (Brent $75–85)",
+          "status": "watching",
+          "analysis": "Under multilateral co-management Brent falls back to $75–85 — only slightly above the pre-war $70, and lower than the maintained path's $80–95.\n\nThis is the surprising result. The cause is that the co-management mechanism absorbs risk premium — GCC navies + US Fifth Fleet + residual IRGC navy + partial Chinese naval presence in de facto joint escort let the market know there are layered insurers.\n\nCorresponding country risk map: net-importer pressure substantially eases — Pakistan can run the IMF program smoothly; Egypt's Suez revenue returns to 85–95% of pre-war; Sri Lanka + Bangladesh FX pressure eases; Jordan + Turkey fuel subsidy pressure declines; the four Southeast Asian countries (Philippines, Indonesia, Thailand, Myanmar) hold stable.\n\nBut there is a \"disorderly version\" trap: if the IRGC does not voluntarily cede but cannot maintain control, uncontrolled variables proliferate at sea, Brent averages $85–100 but intraday swings of $10 prevent shipping operators from planning — and \"large intraday swings\" make fiscal planning impossible for net importers.\n\nA more serious secondary effect: under the slow-collapse path Iran's \"semi-incapacitated\" central authority lasts 12–36 months. That means multilateral co-management is not a stable end state — it is transitional. Within 3–12 months it may flip into disintegration-and-civil-war, and the country risk map reshuffles."
+        },
+        {
+          "id": "hc_pre_anar",
+          "label": "Anarchic breakdown (Brent short-term $150–180)",
+          "status": "watching",
+          "analysis": "Under anarchic breakdown Brent spikes short-term to $150–180; demand destruction pushes price back to $100–120 within 6–12 months — at the cost of shrinking global industrial output.\n\nThis is the worst-case scenario. Shock to net importers is catastrophic — fuel subsidy systems collapse, FX reserves drain in 3–6 months, food price inflation runs out of control.\n\nCorresponding country risk map: Pakistan within 6 months — about 60% probability the PML-N + PPP coalition government collapses, PTI street mobilization translates into regime change; Egypt within 6–12 months — Sisi enters severe fiscal crisis (Suez revenue down 50%+, an $8.7B annual revenue halved means the loss of a key fiscal pillar), Muslim Brotherhood underground networks could reactivate; Sri Lanka + Bangladesh — short-term reruns of \"2022 Sri Lanka + 2024 Bangladesh\" revolutions; Jordan — the IAF could secure cabinet formation through parliamentary routes within 12–18 months; Turkey — Erdoğan faces more severe PKK + economic dual pressure within 12–24 months; Japan — energy prices do not trigger regime crisis but the Takaichi nuclear acceleration agenda gains historic popular legitimacy; the four Southeast Asian countries (Philippines, Indonesia, Thailand, Myanmar) take varying degrees of damage.\n\nUnder this path IMF capacity is fully exhausted — at early-2026 design capacity, the IMF can simultaneously support 4–6 sub-$10B countries or 1–2 $10B+ countries (Pakistan, Egypt, Turkey). Under disintegration 6–8 highly fragile countries apply simultaneously and the IMF has to make political choices — non-priority countries are dropped."
+        }
+      ],
+      "mechanisms": [
+        {
+          "id": "hc_mech_three",
+          "label": "Three-layer shock mechanism: fuel + FX + prices",
+          "analysis": "Between Strait control state shock and \"country political collapse\" sit three layers of intermediate variables stacked together.\n\n**Layer 1, fuel subsidies**: net importers' fuel subsidy systems serve as buffers — subsidies mean domestic retail prices don't fully reflect international oil prices, and public-perceived shock is delayed 6–18 months. But subsidy fiscal cost scales linearly with the oil price — Brent moving from $80 to $110 doubles Pakistan's subsidy cost. This directly raises IMF program pressure on \"subsidy cuts\" — IMF aid packages historically require recipients to cut fuel subsidies. Cut too fast and you trigger street protests (the proximate cause of Pakistan 2022 and Sri Lanka 2022); cut too slow and FX reserves drain.\n\n**Layer 2, FX reserves**: net importers' FX reserve drawdown is linear with Brent + marine insurance costs. Marine insurance under Hormuz cyclical political coercion or disintegration can rise 60× (Hatzadony, May 2026 data), which doubles FX consumption. Pakistan's FX reserves at $16.5B in December 2025 (4.5 months of imports), with Brent at $100 + marine premium doubling, breach the IMF $8B red line by end-2026. Egypt's FX reserves at $47B in December 2025 fall below $35B (the IMF red line) by mid-2026 under a similar shock.\n\n**Layer 3, food price inflation**: 90% of fertilizer uses hydrogenated natural gas as feedstock. Hormuz transit affects Qatari LNG exports (Qatar is one of the world's top three LNG exporters), and LNG price rises directly push fertilizer + food production costs higher. WEF data: Brent + LNG rising 50% simultaneously pushes developing-country food prices 20–30% higher within 6–12 months.\n\nThree layers stacked produce political crisis. Single-layer shocks are absorbable (IMF programs, FX borrowing, subsidy adjustments can all respond), but three layers simultaneously exceed any institution's capacity — this is the common pattern of the 1979 Iranian Revolution, 1989 Eastern Europe, 2010 Arab Spring and 2022 Sri Lanka."
+        }
+      ],
+      "consequences": [
+        {
+          "id": "hc_con_pakistan",
+          "label": "→ Pakistan (6–12 months)",
+          "weight": 0.2,
+          "analysis": "Pakistan sits at the top of the 11-country fragility matrix. The reasons:\n\n- highest IMF dependence — Pakistan has taken $24B in cumulative IMF aid since 2008, averaging a new program every 18 months\n- PML-N + PPP coalition rests on a fragile base — Imran Khan remains imprisoned but PTI is still the largest opposition force\n- FX reserves of just $16.5B in December 2025 (4.5 months of import cover)\n- 30% of Pakistan's oil imports come through Hormuz\n- Pakistan's fertilizer imports rely on Middle East LNG (Pakistan's own gas production is in rapid decline)\n\nUnder cyclical political coercion or disintegration scenarios, a regime change within 6–12 months is possible. Mechanism: fuel subsidy cuts → street protests → PTI mobilization → military steps in to \"stabilize\" → coalition reshuffle or PML-N loses ground. From 1990 to 2008 Pakistan went through four similar mechanism-driven transitions.\n\nMonitoring signals: monthly SBP (State Bank of Pakistan) FX reserve disclosure; IMF program negotiation progress; PTI street mobilization frequency; frequency of public statements from the Pakistani military."
+        },
+        {
+          "id": "hc_con_egypt",
+          "label": "→ Egypt (6–12 months)",
+          "weight": 0.18,
+          "analysis": "Egypt sits second in the fragility matrix. Distinct pressures on the Sisi government (since 2014):\n\n- Suez Canal revenue of about $8.7B in 2025 is a key FX pillar (about 15% of total FX income)\n- under Hormuz cyclical political coercion or disintegration, Eurasian shipping reroutes around the Cape, and Suez revenue is halved\n- Egypt is heavily food-import-dependent (60% of wheat, 30% of corn imported) — oil and fertilizer price rises feed directly into food\n- the Muslim Brotherhood, banned after 2013, retains a sizable popular base underground (Morsi's brief presidency in 2012 was the result of a free election)\n\nUnder cyclical political coercion or disintegration, a severe fiscal crisis is possible in 6–12 months. The Sisi government's stability rests on \"military + Gulf capital (Saudi + UAE) subsidies\" — Gulf capital injected $35B into Egypt over 2022–2025. But a worsening Strait control state forces Saudi + UAE to stabilize their own finances first, with possible cuts to Egyptian subsidies. Combined with Suez revenue being halved, both material pillars of the Sisi government collapse at once.\n\nMonitoring signals: monthly Central Bank of Egypt FX reserves; monthly Suez Canal revenue disclosure; monthly Gulf aid to Egypt; signs of Muslim Brotherhood underground mobilization."
+        },
+        {
+          "id": "hc_con_southasia",
+          "label": "→ Sri Lanka + Bangladesh (12–18 months)",
+          "weight": 0.12,
+          "analysis": "Sri Lanka and Bangladesh both lived through similar revolutions in 2022 and 2024 — this time, again.\n\nSri Lanka's 2022 trigger: oil spike + fuel subsidy cuts + fertilizer shortage + the Gotabaya Rajapaksa government's failure to respond — protesters eventually stormed the presidential palace. Today the Wickremesinghe government's stability rests on three pillars: an IMF $3B program + Chinese debt restructuring + Indian emergency fuel aid — all three come under pressure under a worsening Strait control state. Forecast: under cyclical political coercion or disintegration, a 2.0 revolution is possible in 12–18 months.\n\nBangladesh's 2024 trigger: the Hasina government's violent suppression of student protests + economic distress. Today the Yunus interim government's stability rests on Western aid + Indian cooperation + an IMF $4.7B program. Hasina remains in exile in India and could return after a power transition. Under a worsening Strait control state, Bangladesh's textile exports (about $35B/year, the country's main FX earner) take a hit — rising shipping insurance + weakening Western demand. Forecast: political turbulence within 12–18 months, but the Yunus interim government may make it to the 2027 elections.\n\nMonitoring signals: Sri Lanka IMF program execution; Yunus government approval ratings; monthly Indian aid to both countries."
+        },
+        {
+          "id": "hc_con_jordan_turkey",
+          "label": "→ Jordan + Turkey (12–24 months)",
+          "weight": 0.1,
+          "analysis": "Jordan's Hashemite monarchy faces parliamentary pressure from the Muslim Brotherhood's Islamic Action Front (IAF). The IAF took 31 seats in September 2024, the largest single bloc — 13 more than the ruling party. King Abdullah II (since 1999) relies on royal tradition + US aid for stability, but US aid may shrink under the Trump administration's MAGA aid cuts amid a worsening Strait control state. Forecast: under cyclical political coercion or disintegration, the IAF could lead cabinet formation through parliamentary routes within 12–18 months — moving Jordan from a US ironclad ally toward \"Muslim Brotherhood-sympathetic\" alignment, affecting the US-Israel strategic rear.\n\nTurkey's Erdoğan regime (since 2003, 22 years) faces dual pressure:\n\n- economic — the lira has cumulatively lost 40% in 2024–2025, inflation runs above 50%, and worsening Strait control state pushes energy import costs higher\n- PKK (Kurdistan Workers' Party) armed action intensifies — under Iran disintegration, instability in Iran's Kurdish region lets the PKK expand operations into southeastern Turkey. Forecast: under cyclical coercion, Turkish economic pressure intensifies but the Erdoğan regime holds; under disintegration, Erdoğan faces severe power crisis within 12–24 months\n\nMonitoring signals: IAF parliamentary moves; Turkish lira rate; public PKK action; Central Bank of Turkey FX reserves."
+        },
+        {
+          "id": "hc_con_japan",
+          "label": "→ Japan (Takaichi government acceleration)",
+          "weight": 0.08,
+          "analysis": "Japan is the only country in the 11-country fragility matrix where the answer is \"no collapse, but the largest postwar political pivot.\"\n\nBackground: Ishiba Shigeru took office on October 1, 2024 but stepped down on October 21, 2025 due to LDP factional fighting and fiscal policy disputes. Takaichi Sanae (LDP, former Economic Security minister) took over as Japan's first female prime minister. The core Takaichi agenda is \"energy security + defense acceleration\" — nuclear restart, LNG diversification, defense spending to 2–3% of GDP.\n\nJapan's energy imports: crude 95% from the Middle East (about 33% via Hormuz); LNG 30% from Qatar + UAE (100% via Hormuz). A worsening Strait control state is a direct shock to Japan — but Japanese institutional resilience is strong (FX reserves $1.3 trillion, JBIC sovereign credit plus insurance).\n\nUnder cyclical political coercion or disintegration, the Takaichi nuclear acceleration agenda gains historic popular legitimacy — public attitudes on nuclear, which had been wait-and-see for 14 years after Fukushima 2011, may pivot fully. Forecast: the Takaichi government may complete a fundamental shift in postwar Japanese nuclear policy in 2026–2028, analogous to the industrial-policy pivot Japan completed after the 1973 oil crisis. This is not a regime crisis but regime strengthening — but the path is \"crisis → acceleration of existing agenda\" rather than \"crisis → regime collapse.\"\n\nMonitoring signals: Takaichi cabinet approval; nuclear restart progress (Kashiwazaki-Kariwa Units 1–3 restart, Onagawa Unit 2 acceleration); defense spending as a share of GDP; JBIC lending to Middle East energy companies."
+        },
+        {
+          "id": "hc_con_seasia",
+          "label": "→ Southeast Asia four (Philippines/Indonesia/Thailand/Myanmar)",
+          "weight": 0.1,
+          "analysis": "The four Southeast Asian countries are differently fragile.\n\n**Philippines**: the Marcos Jr. government (since 2022) faces impeachment politics with Vice President Sara Duterte. Under a worsening Strait control state, Philippine energy imports (crude 100% imported, 40% via Hormuz) cost more + the Duterte faction exploits economic pressure to mobilize. Forecast: severe political crisis within 12–18 months but the Marcos government likely survives.\n\n**Indonesia**: the Prabowo Subianto government (since October 2024) faces political resistance from Jokowi-faction holdovers. Strait control state shock to Indonesia is moderate — Indonesia has its own 800,000 b/d crude production (net imports ~700,000 b/d), and the fertilizer industry has self-sufficient gas supply. Forecast: no regime crisis, but Prabowo's economic agenda gets dragged.\n\n**Thailand**: the Paetongtarn Shinawatra government (since August 2024, Thaksin's daughter) faces traditional military pressure + the political vacuum left by Move Forward's dissolution. Hormuz shock to Thailand is indirect — through tourism (Middle East visitors are about 8% of Thai tourism revenue) and fuel prices. Forecast: the Thai military may step in to \"stabilize\" within 12–24 months.\n\n**Myanmar**: currently in a junta + NUG civil war state (post-2021 coup). Strait control state shock to Myanmar is limited (the economy already operates at low levels), but Chinese energy support to Myanmar (Yunnan-Yangon pipeline) and junta legitimacy fragment further. Forecast: junta collapse probability rises to 20–30% within 12–24 months."
+        }
+      ],
+      "observations": [
+        {
+          "id": "hc_obs_pakistan_fx",
+          "label": "Central Bank of Pakistan FX reserves",
+          "threshold": "FX reserves break $10B (~2.7 months of imports) → upgrade IMF emergency program rupture probability",
+          "analysis": "Pakistan's central bank held $16.5B in FX reserves in December 2025. With the IMF red line at $8B, there is $8.5B of buffer. With Brent at $100 + marine premium doubling, FX reserves drain at $500–800M/month. Forecast: under cyclical coercion, reserves break $10B by September 2026 and $8B by December 2026. Monitoring source: SBP monthly FX reserve disclosures; IMF Article IV consultation reports; Moody's + S&P + Fitch sovereign ratings on Pakistan."
+        },
+        {
+          "id": "hc_obs_suez",
+          "label": "Monthly Suez Canal revenue",
+          "threshold": "Monthly revenue below 70% of pre-war for 3 consecutive months → upgrade Egypt fiscal crisis probability",
+          "analysis": "Suez Canal 2025 revenue was about $8.7B (~$725M/month average, with the second half of 2025 around $750M/month). Under Hormuz cyclical political coercion or disintegration, Eurasian shipping reroutes around the Cape and canal revenue drops 30–50%. Monitoring source: Suez Canal Authority (SCA) monthly revenue; Sea-Intelligence container transit data; Lars Jensen shipping analysis. Current Suez transit is already down 25–40% from Red Sea Houthi attacks — a worsening Strait control state stacks on top of an already depressed baseline."
+        },
+        {
+          "id": "hc_obs_imf",
+          "label": "Number of IMF emergency program applicants",
+          "threshold": "Three or more $10B+ class countries applying simultaneously → IMF capacity exhausted, political choices intervene",
+          "analysis": "The IMF's early-2026 emergency lending designs assume Brent below $100. Under cyclical political coercion or disintegration, with Brent breaking $100, $10B+ class borrowers (Pakistan, Egypt, Turkey, Argentina, Kenya, Ghana) apply simultaneously — at early-2026 capacity the IMF can support 1–2 such cases, beyond which political choices must enter. Monitoring source: IMF World Economic Outlook quarterly; frequency of country-specific Article IV reports; frequency of IMF Managing Director public statements."
+        }
+      ]
+    }
+  ]
+}

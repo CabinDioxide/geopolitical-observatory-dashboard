@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>哈梅内伊死后，伊朗政权会怎么走 · Iran Regime Scenarios</title>
+<link rel="stylesheet" href="css/scenarios.css">
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <div>
+      <h1 id="hdr-title">伊朗：政权维系，还是走向坍塌？</h1>
+      <div class="sub" id="hdr-sub">四种走向 · 各自的前提、机制、后果与观察节点</div>
+    </div>
+    <nav class="hdr-meta">
+      <a href="/iran-war/" data-i18n="nav.iranwar">伊朗战争分析</a>
+      <a id="source-link" href="/iran-war/reports/02_iran_regime_scenarios.docx" target="_blank" rel="noopener" data-i18n="nav.source">原文报告</a>
+      <span id="last-updated">基线 2026-05-19</span>
+      <button id="lang-toggle" class="lang-toggle" title="Switch language">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Hero: 核心判断 -->
+  <section class="stance">
+    <div class="stance-label" data-i18n="stance.label">核心判断</div>
+    <div id="stance-text" class="stance-body"></div>
+  </section>
+
+  <!-- 概率总览 -->
+  <section class="block">
+    <h2 class="block-title block-title-clickable" id="prob-title">
+      <span data-i18n="block.probability">四种走向，各占多少概率</span>
+      <span class="block-info-btn" data-i18n="block.methodology.btn">概率怎么算的 →</span>
+      <span class="block-hint" data-i18n="hint.probability">点击任一行查看细节</span>
+    </h2>
+    <div id="prob-strip" class="prob-strip"></div>
+  </section>
+
+  <!-- 情景详情卡 -->
+  <section class="block">
+    <h2 class="block-title" data-i18n="block.scenarios">情景详情</h2>
+    <div id="scenario-tabs" class="scenario-tabs"></div>
+    <div id="scenario-card" class="scenario-card"></div>
+  </section>
+
+  <!-- 观察节点汇总 -->
+  <section class="block">
+    <h2 class="block-title"><span data-i18n="block.observations">所有观察节点</span> <span class="block-hint" data-i18n="hint.observations">事件触发 → 更新数据 → 重新部署</span></h2>
+    <div class="obs-tracker">
+      <div class="obs-tracker-controls">
+        <button class="obs-filter-btn active" data-filter="all" data-i18n="filter.all">全部</button>
+        <button class="obs-filter-btn" data-filter="open" data-i18n="filter.open">未触发</button>
+        <button class="obs-filter-btn" data-filter="triggered" data-i18n="filter.triggered">已触发</button>
+        <button class="obs-filter-btn" data-filter="falsified" data-i18n="filter.falsified">已证伪</button>
+      </div>
+      <table>
+        <thead>
+          <tr><th data-i18n="tracker.col.node">观察节点</th><th data-i18n="tracker.col.scenario">情景</th><th data-i18n="tracker.col.status">状态</th><th data-i18n="tracker.col.threshold">触发门槛</th><th data-i18n="tracker.col.lastcheck">最近核查</th></tr>
+        </thead>
+        <tbody id="obs-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 历史对照 -->
+  <section class="block">
+    <h2 class="block-title" data-i18n="block.history">1991 苏联对照</h2>
+    <div id="history-compare" class="history-compare"></div>
+  </section>
+
+  <!-- 术语表 -->
+  <section class="block">
+    <h2 class="block-title" data-i18n="block.glossary">术语表</h2>
+    <div id="glossary" class="glossary"></div>
+  </section>
+
+  <footer class="footer">
+    数据基线 2026-05-19 · 主要文献：UK Commons CBP-10637 · FPRI Golkar 2025-10 · Chatham House Quilliam 2026-05 · INSS Guzansky 2026-02 · RAND Cohen 2026-04 · FDD Dubowitz 2025-12 · CFR Setser 2026-04 · Atlantic Council 2026-03 · IAEA 5 份 Iran safeguards 报告
+  </footer>
+
+</main>
+
+<!-- Detail drawer (slides from right) -->
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <div class="drawer-tag" id="drawer-tag"></div>
+    <button class="drawer-close" id="drawer-close" aria-label="关闭">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M5 5l10 10M15 5L5 15"/>
+      </svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+
+<script src="js/scenarios.js"></script>
+
+</body>
+</html>

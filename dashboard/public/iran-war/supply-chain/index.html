@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球供应链传导 · Iran Crisis Sandbox</title>
+<link rel="stylesheet" href="../regime-scenarios/css/scenarios.css">
+<link rel="stylesheet" href="css/supply.css">
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <div>
+      <h1 id="hdr-title">全球供应链传导</h1>
+      <div class="sub" id="hdr-sub">五条链 · 四种 Hormuz 模式 · 五阶段最坏情景 · 七国政治脆弱性</div>
+    </div>
+    <nav class="hdr-meta">
+      <a href="/iran-war/" data-i18n="nav.hub">← 沙盘母页</a>
+      <a id="source-link" href="/iran-war/reports/03_supply_chain_transmission.docx" target="_blank" rel="noopener" data-i18n="nav.source">原文报告</a>
+      <span id="last-updated">基线 2026-05-19</span>
+      <button id="lang-toggle" class="lang-toggle" title="Switch language">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="stance">
+    <div class="stance-label" data-i18n="stance.label">核心判断</div>
+    <div id="stance-text" class="stance-body"></div>
+  </section>
+
+  <!-- 五条链 -->
+  <section class="block">
+    <h2 class="block-title">
+      <span data-i18n="block.chains">五条供应链</span>
+      <span class="block-hint" data-i18n="hint.chains">点击任一链查看详情</span>
+    </h2>
+    <div id="chains-grid" class="chains-grid"></div>
+  </section>
+
+  <!-- 4 Hormuz 模式 -->
+  <section class="block">
+    <h2 class="block-title">
+      <span data-i18n="block.hormuz">霍尔木兹四种操作模式</span>
+      <span class="block-hint" data-i18n="hint.hormuz">伊朗政权状态决定 Hormuz 模式</span>
+    </h2>
+    <div id="hormuz-grid" class="hormuz-grid"></div>
+  </section>
+
+  <!-- 因果关系图（hub-spoke + SVG 管道） -->
+  <section class="block">
+    <h2 class="block-title">
+      <span data-i18n="block.causal">因果关系图</span>
+      <span class="block-hint" data-i18n="hint.causal">两个 hub · 点击节点查看深度分析</span>
+    </h2>
+    <div id="hub-tabs" class="scenario-tabs"></div>
+    <p id="hub-summary" class="scenario-summary"></p>
+    <div class="graph-section">
+      <div id="conn-view" class="conn-view"></div>
+    </div>
+  </section>
+
+  <!-- 最坏情景 5 阶段时间线 -->
+  <section class="block">
+    <h2 class="block-title">
+      <span data-i18n="block.worstcase">最坏情景五阶段时间线</span>
+      <span class="block-hint" data-i18n="hint.worstcase">24 个月内发生概率 3-5%，但破坏量级是 1929+1973+2008+2020 综合</span>
+    </h2>
+    <div id="worstcase-timeline" class="worstcase-timeline"></div>
+  </section>
+
+  <!-- 国家政治脆弱性矩阵 -->
+  <section class="block">
+    <h2 class="block-title">
+      <span data-i18n="block.countries">国家政治脆弱性矩阵</span>
+      <span class="block-hint" data-i18n="hint.countries">11 国 · 按风险时间窗口排序 · 点击查看详情</span>
+    </h2>
+    <div id="countries-grid" class="countries-grid"></div>
+  </section>
+
+  <!-- 跨链反馈 -->
+  <section class="block">
+    <h2 class="block-title">
+      <span data-i18n="block.crosschain">跨链反馈环</span>
+      <span class="block-hint" data-i18n="hint.crosschain">六条反馈环互相强化</span>
+    </h2>
+    <div id="crosschain" class="crosschain"></div>
+  </section>
+
+  <!-- 历史对照 -->
+  <section class="block">
+    <h2 class="block-title" data-i18n="block.history">1973 vs 2026 历史对照</h2>
+    <div id="history-compare" class="history-compare"></div>
+  </section>
+
+  <!-- 术语表 -->
+  <section class="block">
+    <h2 class="block-title" data-i18n="block.glossary">术语表</h2>
+    <div id="glossary" class="glossary"></div>
+  </section>
+
+  <footer class="footer" data-i18n="footer.text">
+    数据基线 2026-05-19 · 主要文献：CRS R45281 · EIA chokepoints · CSIS Cancian Last Rounds · RAND Cohen 2026-04 · Hatzadony Small Wars Journal 2026-05 · WEF DFC · Atlantic Council Toll Booth · CFR Setser · Chatham House Quilliam 2026-05 · INSS Guzansky 2026-02
+  </footer>
+
+</main>
+
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <div class="drawer-tag" id="drawer-tag"></div>
+    <button class="drawer-close" id="drawer-close" aria-label="关闭">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M5 5l10 10M15 5L5 15"/>
+      </svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+
+<script src="js/supply.js"></script>
+
+</body>
+</html>

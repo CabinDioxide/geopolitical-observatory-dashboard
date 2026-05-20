@@ -1,0 +1,767 @@
+{
+  "meta": {
+    "title": "The MAGA Split over the Iran War",
+    "subtitle": "Faction structure · Key timeline · Six observation nodes · Historical comparison",
+    "baseline_date": "2026-05-19",
+    "source_report": {
+      "title": "The MAGA Split over the Iran War — Faction Structure, Key Nodes, and Forward Observation Points",
+      "path": "/iran-war/reports/01_maga_split.docx"
+    },
+    "stance_summary": "One of Trump's loudest 2024 campaign promises was \"no more new wars.\" Yet in June 2025, after Israel launched Operation Rising Lion, US B-2 bombers joined the strike on June 22. In late February 2026, Operation Epic Fury decapitated and killed Khamenei. Ten months turned the central campaign pledge inside out.\n\nMAGA is not a unified camp. It is a heterogeneous coalition assembled over 2015–2024, now split into four factions: **Paleo-isolationism (Bannon / Carlson), Hawkish Pragmatism (Hegseth / Rubio / Miller), Evangelical Christian Zionism (Mike Johnson / Lindsey Graham), and Post-Liberal Conservatism (Vance / Ahmari / Deneen)**.\n\nThe Iran strikes left the hawks and Evangelicals exultant, the paleos feeling betrayed, and the Post-Liberals forced to take sides — but reluctant to do so publicly. The split has spread from opinion media into legislation (the Massie–Khanna H.Con.Res.38), into the think tanks (FDD's Gerecht and CFR's Takeyh openly conceding error), and into the neoconservative old guard (Robert Kagan breaking ranks)."
+  },
+  "factions": [
+    {
+      "id": "paleo",
+      "name": "Paleo-isolationism",
+      "name_en": "Paleoconservative Isolationist",
+      "leaders": [
+        "Steve Bannon",
+        "Tucker Carlson",
+        "Thomas Massie"
+      ],
+      "quadrant_x": -1,
+      "quadrant_y": 1,
+      "color": "danger",
+      "thesis": "The United States should withdraw from the Middle East, close the trade door, and spend its resources at home — this is the root of Trumpism.",
+      "intellectual_lineage": "The intellectual lineage traces back to Patrick Buchanan (the antiwar Republican primary candidate in 1992, 1996, and 2000) and Ron Paul (the antiwar Republican primary candidate in 2008 and 2012) — the paleoconservative tradition. Trump built his 2016 campaign on this frame: in the GOP primary debates he attacked Bush's invasion of Iraq as \"a big fat mistake,\" and in his RNC nomination speech he declared \"Americanism, not globalism.\" This is the intellectual DNA of MAGA's antiwar wing.",
+      "key_positions": [
+        "Bannon, on the Tucker Carlson Network on 2025-06-17, in a long interview: \"Israel's War on Iran can destroy MAGA forever\" — not can damage, but can destroy",
+        "Carlson the same day in his newsletter: \"An Act of War, Sponsored by the United States\" — framing the strike as a constitutional act of war",
+        "Thomas Massie (R-KY-04) and Ro Khanna (D-CA-17) jointly introduced H.Con.Res.38, a War Powers Resolution invoking Section 5(c) of the 1973 War Powers Resolution"
+      ],
+      "current_status": "Bannon's War Room continues its antiwar coverage; the Tucker Carlson Network has about 8 million monthly active users (Axios data); Massie remains the only Republican publicly signed on to H.Con.Res.38. On 2026-05-15, Massie introduced a House bill requiring AIPAC to register as a foreign agent under FARA — the first time FARA has been used to target AIPAC since the statute's 1938 passage.",
+      "sources": [
+        {
+          "label": "Bannon's long interview on the Tucker Carlson Network (2025-06-17)",
+          "url": "https://www.youtube.com/watch?v=tFM6L6TopsM"
+        },
+        {
+          "label": "Newsweek 2025-06-16: Tucker Carlson and Steve Bannon Lead MAGA Resistance",
+          "url": "https://www.newsweek.com/tucker-carlson-steve-bannon-maga-trump-iran-israel-war-2086346"
+        },
+        {
+          "label": "Massie's H.Con.Res.38 War Powers Resolution",
+          "url": "https://massie.house.gov/uploadedfiles/iranwpr.pdf"
+        },
+        {
+          "label": "Common Dreams 2026-05-15: Massie moves to register AIPAC as a foreign agent",
+          "url": "https://www.commondreams.org/news/thomas-massie-aipac-foreign-agents"
+        }
+      ],
+      "analysis": "Paleo-isolationism is the intellectual origin of the MAGA coalition. Trump built his 2016 campaign on this frame — Bannon was the 2016 campaign manager, Stephen Miller the speechwriter, and Tucker Carlson's Fox show (the top-rated cable program from 2016 to 2023) the megaphone. Their core belief — that America should pull back from the Middle East, close the trade door, and spend its resources at home — is what most sharply distinguishes Trumpism from traditional Republicanism.\n\nAfter the strikes of June 22, 2025, this faction entered \"betrayal\" mode. Bannon's June 17 verdict on the Tucker Carlson Network was especially severe: \"Israel's War on Iran can destroy MAGA forever\" — not can damage, but can destroy. Carlson's newsletter the same day, \"An Act of War, Sponsored by the United States,\" framed the strikes as a constitutional act of war — not a \"targeted strike\" or \"non-war military operation.\"\n\nIn Congress, the standard-bearer is Thomas Massie (R-KY-04). With Democrat Ro Khanna (D-CA-17), he introduced H.Con.Res.38, a War Powers Resolution invoking Section 5(c) of the 1973 War Powers Resolution — the concurrent resolution mechanism, which does not require presidential signature. Speaker Mike Johnson procedurally bottled the resolution up, but Khanna has collected 156 signatures (149 Democrats, 7 Republicans), approaching the 218 threshold that would force a floor vote.\n\nOn May 15, 2026, Massie introduced a bill in the House requiring AIPAC to register as a foreign agent — the first time FARA (the Foreign Agents Registration Act of 1938) has been turned on AIPAC since the statute's passage.\n\nThis faction's staying power in the public conversation rides on the commercial sustainability of the Tucker Carlson Network — subscription (around $72/year) plus ads, with roughly 8 million monthly actives. If AIPAC-aligned sponsors pull advertising, Carlson's ammunition shrinks."
+    },
+    {
+      "id": "hawk",
+      "name": "Hawkish Pragmatism",
+      "name_en": "Pragmatic Hardliner",
+      "leaders": [
+        "Pete Hegseth",
+        "Marco Rubio",
+        "Stephen Miller"
+      ],
+      "quadrant_x": 1,
+      "quadrant_y": -1,
+      "color": "warning",
+      "thesis": "Inherits Trump's first-term hard line on Iran — withdrawal from the JCPOA (May 2018) and the assassination of Soleimani (January 2020). MAGA on the surface, neoconservative at the core.",
+      "intellectual_lineage": "The defining feature of this faction is \"MAGA shell, neoconservative core.\" Hegseth is a veteran who frames things in civilizational-conflict terms; Rubio, Cuban-American, runs hawkish on every \"non-American-style\" state; and Miller was Bannon's rival inside the first-term White House — after Bannon was fired in August 2017, Miller effectively took over Iran policy at the NSC level.",
+      "key_positions": [
+        "These three effectively run Iran policy inside Trump's second-term White House — the core grievance of the paleos",
+        "Pushed the June 22, 2025 entry of US B-2s into the strike, and Operation Epic Fury on February 28, 2026",
+        "As Defense Secretary, Hegseth has pushed a Project 2025-style purge across the State Department (per Senator Shaheen's March 5, 2026 letter to Rubio, 76 departures from the Bureau of Near Eastern Affairs and 155 from the Bureau of Consular Affairs between August and December)"
+      ],
+      "current_status": "The first crack inside the faction appeared in April 2026. After the Pakistani-brokered ceasefire of April 8, FDD's Reuel Marc Gerecht and CFR's Ray Takeyh co-authored \"How Trump Miscalculated in Iran\" in The Wall Street Journal on April 9, with a subtitle arguing that he \"followed his Venezuela model, not accounting for the ideological character of the regime in Tehran.\" FDD — the post-9/11 counterterror / anti-Iran think tank founded in 2001, whose CEO Mark Dubowitz was one of the architects of Trump's 2018 JCPOA withdrawal — beginning to publicly admit error is the heaviest blow yet to hawkish coherence.",
+      "sources": [
+        {
+          "label": "FDD's Gerecht and CFR's Takeyh in The Wall Street Journal: How Trump Miscalculated in Iran (2026-04-09)",
+          "url": "https://www.fdd.org/analysis/2026/04/09/how-trump-miscalculated-in-iran/"
+        },
+        {
+          "label": "Shaheen and other senators' letter to Rubio (2026-03-05)",
+          "url": "https://www.foreign.senate.gov/press/dem/release/ranking-member-shaheenforeign-relations-democratspress-state-department-on-failure-to-protect-us-diplomatsin-lead-up-toiran-strikes"
+        }
+      ],
+      "analysis": "Hawkish Pragmatism is \"MAGA shell, neoconservative core.\" Defense Secretary Hegseth comes from the veterans' world and frames things as civilizational conflict; Secretary of State Rubio, Cuban-American, runs hawkish on every \"non-American-style\" state; Stephen Miller was Bannon's rival inside the first-term White House — after Bannon's August 2017 firing, Miller effectively took over Iran policy at the NSC level.\n\nThese three effectively run Iran policy inside Trump's second-term White House — the core grievance of the paleos. They pushed US B-2s into the June 22, 2025 strike on the Fordow / Natanz / Isfahan nuclear sites, and Operation Epic Fury on February 28, 2026, which decapitated and killed Khamenei.\n\nBut in April 2026 the faction split internally for the first time. On April 9, FDD's Reuel Marc Gerecht and CFR's Ray Takeyh co-authored \"How Trump Miscalculated in Iran\" in The Wall Street Journal, with a subtitle reading: \"He followed his Venezuela model, not accounting for the ideological character of the regime in Tehran.\"\n\nFDD, founded after 9/11 in 2001 as a counterterror / anti-Iran think tank, has as its CEO Mark Dubowitz — one of the architects of Trump's 2018 JCPOA withdrawal. FDD as an institution beginning to publicly concede error is the heaviest blow yet to hawkish coherence. Gerecht is a former CIA Iran targeting officer; Takeyh is a long-serving hawkish CFR senior fellow. The two of them co-signing a WSJ op-ed means a \"public admission of error\" window has opened inside the hawkish think-tank world.\n\nIn May, Robert Kagan's \"checkmate / total defeat\" long essay in The Atlantic deepened the rupture. Kagan is a co-founder of the Project for the New American Century (PNAC, the principal intellectual driver of the 2003 Iraq War). His break is comparable to Walter Lippmann's 1968 public turn against Vietnam — neoconservatism passing its own day of judgment.\n\nThe eight Senate Foreign Relations Committee Democrats' March 5, 2026 letter to Rubio revealed that of fourteen US embassies in the Middle East only six have ambassadors; three career ambassadors were dismissed without cause; the Bureau of Near Eastern Affairs lost 76 people between August and December; the Bureau of Consular Affairs lost 155 — the practical consequences of the Project 2025 personnel purge."
+    },
+    {
+      "id": "evangelical",
+      "name": "Evangelical Christian Zionism",
+      "name_en": "Evangelical Christian Zionist",
+      "leaders": [
+        "Mike Johnson (House Speaker)",
+        "Lindsey Graham (Senator)"
+      ],
+      "quadrant_x": 1,
+      "quadrant_y": 1,
+      "color": "alert",
+      "thesis": "Support for Israel rests on a theological foundation, not geopolitical calculation — backing military action against Israel's enemies is a religious obligation.",
+      "intellectual_lineage": "The demographic base is roughly 90 million American Evangelical Christians. According to long-running Pew tracking, about 60% of them believe in \"Israel's special role in the end times\" — the politicized form of dispensational premillennialism, systematized by the Scofield Reference Bible (first edition 1909) and institutionalized in our own time by John Hagee's Christians United for Israel (CUFI, founded 2006).",
+      "key_positions": [
+        "In Congress: Speaker Mike Johnson procedurally shelved the H.Con.Res.38 War Powers Resolution (June 2025); South Carolina Senator Lindsey Graham has pushed a \"preventive war on Iran\" line continuously since the 2023 Gaza war",
+        "At the district level: Evangelical pastors across the Southern and Midwestern Bible Belt back the military action from the Sunday pulpit, and this grassroots mobilization makes GOP members from the heartland unwilling to oppose the war publicly"
+      ],
+      "current_status": "This is the faction none of the other three can move by a cost-benefit argument — the logical foundation is theology, not political reason. So even as the hawks begin to reconsider (FDD's Gerecht conceding error) and the paleos keep up the attack (Carlson, Bannon), Evangelical support is essentially unchanged. But Robert Kagan's \"checkmate / total defeat\" essay in The Atlantic (May) and Stephen Walt's Foreign Policy piece directly tying the Israel lobby to the funding chain (March 17) have started to pull this faction's theological legitimacy into public debate.",
+      "sources": [
+        {
+          "label": "Foreign Policy 2026-03-17: Stephen Walt on the Israel Lobby's Special Responsibility",
+          "url": "https://foreignpolicy.com/2026/03/17/israel-lobby-iran-war-trump-responsibility/"
+        },
+        {
+          "label": "Jacobin 2026-03-03: AIPAC Is Influencing Trump's War in Iran",
+          "url": "https://jacobin.com/2026/03/aipac-trump-israel-democrats-iran"
+        },
+        {
+          "label": "Middle East Eye: coverage of Robert Kagan's Atlantic break with the hawks",
+          "url": "https://www.middleeasteye.net/news/us-heading-checkmate-and-total-defeat-iran-war-says-neocon-robert-kagan"
+        }
+      ],
+      "analysis": "Evangelical Christian Zionism is the most stable bloc of support inside the MAGA coalition — and the bloc that no other faction can move with a cost-benefit argument. The logical foundation is theology, not political reason.\n\nThe demographic base is roughly 90 million American Evangelical Christians. According to long-running Pew Research Center tracking, about 60% believe in \"Israel's special role in the end times\" — the politicized form of dispensational premillennialism. The theoretical wellspring is the Scofield Reference Bible (first edition 1909, edited by C.I. Scofield) and its systematized \"seven dispensations\" framework. The contemporary institutional vehicle is Christians United for Israel (CUFI), founded by Pastor John Hagee in 2006. CUFI is the second-largest pro-Israel lobby in the United States after AIPAC; in 2024 it claimed more than 10 million members.\n\nThe congressional representatives are Speaker Mike Johnson (R-LA, J.D. from a Baptist seminary) and South Carolina Senator Lindsey Graham (who has pushed a \"preventive war on Iran\" line continuously since the 2023 Gaza war). In June 2025, Johnson procedurally shelved the H.Con.Res.38 War Powers Resolution — a standard use of speaker's power, but shelving is not killing.\n\nThe district-level force runs deeper than the congressional one. In Bible Belt districts across the South and Midwest, Evangelical pastors back the military action from the Sunday pulpit — and this grassroots mobilization makes GOP heartland members unwilling to oppose the war publicly. Studies of the 1988 and 2000 Republican primaries show Evangelical voters turn out at rates 20 percentage points above the general electorate — they are the decisive force in the Iowa caucuses and the South Carolina primary.\n\nThis faction is nearly impermeable to influence from the other factions, but it is also the central anchor of MAGA's stability. Kagan's \"checkmate / total defeat\" framing in The Atlantic, Stephen Walt's Foreign Policy piece (2026-03-17) tying the Israel lobby directly to the funding chain, and Jacobin's March 3, 2026 \"AIPAC Is Influencing Trump's War in Iran\" — these are beginning to pull this faction's theological legitimacy into public debate."
+    },
+    {
+      "id": "postliberal",
+      "name": "Post-Liberal / Catholic Conservative",
+      "name_en": "Post-Liberal / Catholic Conservative",
+      "leaders": [
+        "JD Vance (Vice President)",
+        "Sohrab Ahmari",
+        "Patrick Deneen"
+      ],
+      "quadrant_x": -1,
+      "quadrant_y": -1,
+      "color": "neutral",
+      "thesis": "Position on Iran is unclear — unwilling to play Bannon-style pure isolationism, but also reserved about the strikes. The intellectual foundation is the Christopher Lasch / Wendell Berry line: America should put its energy into rebuilding the homeland.",
+      "intellectual_lineage": "The intellectual foundation rests on three magazines: First Things (founded 1990 by Richard John Neuhaus as a Catholic–Evangelical ecumenical journal), Compact, and The American Conservative. The editorial teams at all three have reservations about the Iran–Israel conflict — they back neither the Israeli right's \"end-times theology\" nor Bannon's pure isolationism.",
+      "key_positions": [
+        "After the June 22, 2025 strike, Vance posted only one X message wishing US service members a safe return — without judging the legitimacy of the strike. This is his characteristic silence",
+        "During the 2024 VP campaign Vance told Tucker Carlson: \"I'm not pro-Israel in the way that Lindsey Graham is pro-Israel\" — his closest public alignment with the paleos",
+        "He has not made a public Iran policy statement during his time in the White House"
+      ],
+      "current_status": "Vance's silence is itself the signal. If he announces a presidential run in early 2027, his Iran stance will determine whether the Post-Liberals end up siding with the paleos or the hawks. If they go paleo, the 2028 GOP primary will line up as Bannon–Carlson–Vance against Rubio–Hegseth.",
+      "sources": [],
+      "analysis": "The Post-Liberal / Catholic Conservative faction is the most ambiguous slice of the MAGA coalition. The intellectual foundation rests on three magazines: First Things (founded 1990 by Richard John Neuhaus as a Catholic–Evangelical ecumenical journal); Compact (founded 2022 by Sohrab Ahmari, Edwin Aponte, and Patrick Deneen); and The American Conservative (founded 2002 by Pat Buchanan and Ron Unz, and from 2016 onward led by Rod Dreher). The editorial teams at all three have reservations about the Iran–Israel conflict — they back neither the Israeli right's \"end-times theology\" nor Bannon's pure isolationism, and lean more toward the Christopher Lasch / Wendell Berry line that America should put its energy into rebuilding the homeland.\n\nTheir political representatives are JD Vance (Vice President), Patrick Deneen (author of Why Liberalism Failed (2018), professor of political science at Notre Dame), and Sohrab Ahmari (former Wall Street Journal editor and Iranian-born Catholic convert).\n\nVance's silence is this faction's most important political signal. After the June 22, 2025 strike, he posted only a single X message wishing US service members a safe return — without judging the legitimacy of the strike itself. This is the textbook \"I'm not playing\" posture.\n\nBut during the 2024 VP campaign Vance did tell Tucker Carlson, \"I'm not pro-Israel in the way that Lindsey Graham is pro-Israel\" — his closest public alignment with the paleos. Since taking office he has made no public statement on Iran policy.\n\nIf Vance announces a presidential run in early 2027, his Iran stance will determine whether the Post-Liberals end up siding with the paleos or the hawks — and in turn will shape the structure of the 2028 GOP primary. If they go paleo, the 2028 primary will line up as Bannon–Carlson–Vance against Rubio–Hegseth, and the split becomes official.\n\nWatch list: Vance's official White House speech archive, the Sunday morning interview shows, and publications from American Compass (the think tank founded by Oren Cass, for which Vance has long been a contributor)."
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-06-12",
+      "event": "Israel launches Operation Rising Lion — the opening day of the 12-Day War",
+      "factions": [
+        "paleo"
+      ],
+      "significance": "Carlson posted \"This is not our war\" on X that evening. NPR and CNN spent mid-to-late June framing MAGA as \"split / divided.\"",
+      "sources": [
+        {
+          "label": "Newsweek 2025-06-16",
+          "url": "https://www.newsweek.com/tucker-carlson-steve-bannon-maga-trump-iran-israel-war-2086346"
+        }
+      ],
+      "analysis": "**Background**: Israel's Operation Rising Lion against Iran opened the 12-Day War on June 12, 2025 (running through June 24). Signed off by Benjamin Netanyahu and executed jointly by Mossad and the Israeli Air Force, the operation targeted Iran's Natanz / Fordow / Isfahan nuclear facilities, several IRGC command centers, and senior Quds Force figures.\n\n**Reaction inside MAGA**: The night of the strike Tucker Carlson posted \"This is not our war\" on X — the first public framing of the strike from the MAGA paleo wing. The same evening Bannon called the strike a \"new forever war\" on War Room. The two of them set the line, allowing the paleos to assemble a unified message hours before the hawks could respond.\n\n**Mainstream media framing**: NPR's first headline on June 13 used \"split.\" CNN went with \"divided\" on June 14. Newsweek used \"fracture\" on June 16. Within 96 hours, the three major outlets had converged on \"internal split\" as the frame for MAGA — earlier than MAGA's own self-diagnosis.\n\n**Significance**: The speed of the reaction on opening day exposed how prepared the MAGA factions' contingency playbooks were. The paleos had been forecasting since the 2024 campaign that an Iran–Israel conflict would become the coalition's biggest rupture point, and they had their lines ready. That stands in sharp contrast to 2003, when the Republican Party held tight internal consensus at the opening of the Iraq War."
+    },
+    {
+      "date": "2025-06-17",
+      "event": "Bannon's long interview on the Tucker Carlson Network: \"Israel's War on Iran can destroy MAGA forever\"",
+      "factions": [
+        "paleo"
+      ],
+      "significance": "The paleos' heaviest formal statement to date. Carlson's newsletter that same day: \"An Act of War, Sponsored by the United States.\"",
+      "sources": [
+        {
+          "label": "Bannon's Tucker Carlson interview",
+          "url": "https://www.youtube.com/watch?v=tFM6L6TopsM"
+        }
+      ]
+    },
+    {
+      "date": "2025-06-18",
+      "event": "NPR first frames MAGA's internal divide as a \"split\"",
+      "factions": [
+        "paleo"
+      ],
+      "significance": "Mainstream media framing arrived faster than MAGA's own response",
+      "sources": [
+        {
+          "label": "NPR coverage",
+          "url": "https://www.npr.org/2025/06/18/nx-s1-5438122/trump-iran-israel-conflict-tucker-carlson"
+        }
+      ]
+    },
+    {
+      "date": "2025-06-22",
+      "event": "US B-2 bombers join the strike on the Fordow / Natanz / Isfahan nuclear facilities; Iran retaliates against the Al Udeid base in Qatar",
+      "factions": [
+        "hawk",
+        "evangelical"
+      ],
+      "significance": "Trump called Iran's retaliation \"a very weak response\" on Truth Social; JD Vance posted only a single X message wishing US service members a safe return — making no judgment on the legitimacy of the strike",
+      "sources": [
+        {
+          "label": "CNN: MAGA movement divided over Trump's move to bomb Iran",
+          "url": "https://www.cnn.com/2025/06/22/politics/maga-movement-divided-trump-iran"
+        }
+      ],
+      "analysis": "**Background**: US B-2 bombers joined the strike on the Fordow / Natanz / Isfahan nuclear facilities in the early hours of June 22 — the marker of direct US entry into the war. The decision bypassed the traditional NSC interagency coordination process. According to Senator Shaheen's letter to Rubio, the \"core four\" of Trump, Hegseth, Rubio, and Miller made the call directly.\n\n**Iranian retaliation**: On the afternoon of June 22, Iran fired 14 ballistic missiles at the US Al Udeid base in Qatar. The base was evacuated in time; there were no casualties. That evening Trump called Iran's retaliation \"a very weak response\" on Truth Social — and the dismissive phrasing triggered fresh anger from the MAGA paleo wing.\n\n**Vance's silence**: Vice President JD Vance posted only a single X message that day wishing US service members a safe return. He passed no judgment on the legitimacy of the strike, the target selection, or the long-term strategic consequences. That silence is the Post-Liberals' signature posture — keeping the full option set open for a 2027–2028 presidential run.\n\n**Significance**: The B-2s entering the strike formally bankrupted MAGA's core \"no more new wars\" pledge. Throughout the 2024 campaign Trump repeated \"I will end wars.\" Ten months later, he personally opened a new one. The pivot from antiwar candidate to wartime president inside 10 months is the fastest such reversal since William McKinley opened the Spanish-American War in 1898."
+    },
+    {
+      "date": "2025-06-24",
+      "event": "12-Day War ceasefire reached",
+      "factions": [],
+      "significance": "Phase-one hostilities suspended, but the split in opinion and legislation is already a fact",
+      "sources": []
+    },
+    {
+      "date": "2025-06-late",
+      "event": "Thomas Massie (R-KY-04) and Ro Khanna (D-CA-17) jointly introduce H.Con.Res.38, a War Powers Resolution",
+      "factions": [
+        "paleo"
+      ],
+      "significance": "Invokes the concurrent resolution mechanism under Section 5(c) of the 1973 War Powers Resolution (does not require presidential signature); shelved procedurally by Speaker Mike Johnson, but Khanna had 156 signatures (149 Democrats, 7 Republicans) by late June",
+      "sources": [
+        {
+          "label": "H.Con.Res.38 text",
+          "url": "https://massie.house.gov/uploadedfiles/iranwpr.pdf"
+        }
+      ],
+      "analysis": "**Background**: The day after the June 24 ceasefire, Massie (R-KY-04) joined Khanna (D-CA-17) in introducing H.Con.Res.38, a War Powers Resolution. This is the third time since the 1973 War Powers Resolution's passage that the statute has been used to challenge a sitting president's wartime decision-making — the previous two being Libya in 2011 (where Khanna himself was the one challenging Obama) and Yemen in 2019 (passed by the Senate but vetoed by Trump).\n\n**Procedural design**: H.Con.Res.38 invokes the concurrent resolution mechanism of Section 5(c) — which does not require presidential signature. The Massie–Khanna team designed it this way from the outset, anticipating a Trump veto. By the end of June, Khanna had collected 156 signatures (149 Democrats, 7 Republicans).\n\n**The speaker's block**: Speaker Mike Johnson (R-LA-04, Evangelical) procedurally bottled the resolution up in the House Rules Committee. But the existence of seven Republican co-signers (Massie plus four members of the House Freedom Caucus and two strategic-caucus antiwar members) has turned the shelving into an open conflict.\n\n**Significance**: H.Con.Res.38 is the first time the MAGA paleo wing has moved from opinion-media opposition into legislative confrontation with Trump. The escalation from media level (Carlson / Bannon) to legislative level (Massie / Khanna) took only 13 days — a speed without precedent in Republican Party history."
+    },
+    {
+      "date": "2026-02-28",
+      "event": "Operation Epic Fury begins — Khamenei is killed in a decapitation strike at a covert IRGC facility in northern Tehran",
+      "factions": [
+        "hawk",
+        "evangelical"
+      ],
+      "significance": "Phase two opens. The hawks and Evangelicals effectively run Iran policy; paleo anger escalates",
+      "sources": [
+        {
+          "label": "UK Commons CBP-10637",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/"
+        }
+      ],
+      "analysis": "**Background**: Operation Epic Fury began on February 28, 2026, opening the second phase of the war. The operational targets included \"decapitation\" of Iran's central decision-making — and Khamenei was killed in a precision strike at a covert IRGC facility in northern Tehran.\n\n**Intelligence source**: According to a RAND April 2026 report, the location intelligence on Khamenei came from Mossad double-agent penetration of the IRGC Quds Force combined with NSA SIGINT intercepts. The full intelligence chain made the February 28 precision strike possible.\n\n**Succession dispute**: After Khamenei's death, Iran immediately entered a succession dispute. His second son Mojtaba Khamenei (born 1969, lecturer at the Qom seminary since 2017) is the presumed successor, but Iraq's senior Shi'a marja Sistani (95, Najaf) has not publicly endorsed the transfer, and Quds Force commander Qaani has stayed silent. A \"silent succession\" leaves the regime's future deeply uncertain.\n\n**MAGA reactions**: The hawks (Rubio, Hegseth, Miller) and the Evangelicals (Johnson, Graham) publicly celebrated a \"civilizational victory.\" The paleos (Bannon, Carlson, Massie) escalated their anger — Carlson posted \"now what?\" that night, meaning \"what comes after the decapitation?\" Doubt about the strategic objective went public.\n\n**Significance**: The 12-Day War was a \"tactical operation\"; Epic Fury was an attempt at regime termination. The political stakes of the latter are an order of magnitude higher than the former. The MAGA split escalated from \"should we enter this war\" to \"should we terminate a regime\" — and the scale of the stakes maps directly onto the depth of the rupture."
+    },
+    {
+      "date": "2026-03-05",
+      "event": "Eight Senate Foreign Relations Committee Democrats jointly write to Secretary of State Rubio",
+      "factions": [],
+      "significance": "Shaheen led, joined by Murphy / Kaine / Merkley / Booker / Van Hollen / Duckworth / Rosen. The letter revealed that of fourteen US embassies in the Middle East only six have ambassadors, three career ambassadors were dismissed without cause, the Bureau of Near Eastern Affairs lost 76 people in August–December, and the Bureau of Consular Affairs lost 155 — the practical consequences of the Project 2025 personnel purge.",
+      "sources": [
+        {
+          "label": "Senate Foreign Relations press release (full text)",
+          "url": "https://www.foreign.senate.gov/press/dem/release/ranking-member-shaheenforeign-relations-democratspress-state-department-on-failure-to-protect-us-diplomatsin-lead-up-toiran-strikes"
+        }
+      ],
+      "analysis": "**Background**: On March 5, 2026, eight Senate Foreign Relations Committee Democrats jointly wrote to Secretary of State Rubio. Signatories: Shaheen, the committee's ranking Democrat, leading; Murphy (CT, former chair of the Near East subcommittee); Kaine (VA, the 2016 VP nominee); Merkley (OR, longtime opponent of Middle East military intervention); Booker (NJ); Van Hollen (MD); Duckworth (IL, an Iraq War combat veteran); and Rosen (NV).\n\n**Revelations**: The letter brought into the open the personnel consequences of Project 2025 at the State Department. The specifics:\n\n- of fourteen US embassies in the Middle East, only six have ambassadors (eight posts are vacant)\n- three career ambassadors (Qatar, Kuwait, Egypt) were dismissed without cause before the war — and all three countries were critical mediators during the 12-Day War\n- the Bureau of Near Eastern Affairs lost 76 people between August and December 2025\n- the Bureau of Consular Affairs (which handles embassies and citizen protection) lost 155\n\n**The real meaning of the personnel vacuum**: During the critical six months leading into the war (August 2025 to January 2026), US Middle East diplomatic capacity was hollowed out by Project 2025 down to the \"core four\" — Trump, Hegseth, Rubio, and Miller. That effectively shut down every traditional NSC interagency coordination mechanism — opening the institutional channel for the hawks and Evangelicals to operate without check.\n\n**Significance**: The Shaheen letter is the Democrats' first institutional-level exposé of the material basis of hawkish dominance. It runs parallel to the paleos' opinion-and-legislative attacks — but the Democratic line of attack is not \"should we enter the war\" (Democrats themselves do not oppose intervention) but \"why is Trump able to bypass NSC interagency coordination.\" The two fronts converging in March 2026 layered an interparty rupture on top of MAGA's internal one."
+    },
+    {
+      "date": "2026-03",
+      "event": "CPAC: MAGA's first large-scale public clash over Iran policy",
+      "factions": [
+        "paleo",
+        "hawk",
+        "evangelical",
+        "postliberal"
+      ],
+      "significance": "ABC News headline: \"Conservatives gather for CPAC as MAGA fights over Iran war\" — the conference became the stage on which the internal split was made visible",
+      "sources": [
+        {
+          "label": "ABC News CPAC coverage",
+          "url": "https://abcnews.com/Politics/conservatives-gather-cpac-maga-fights-iran-war/story?id=131403499"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-17",
+      "event": "Stephen Walt in Foreign Policy: \"The Israel Lobby Bears a Special Responsibility for Donald Trump's Iran War\"",
+      "factions": [
+        "paleo",
+        "postliberal"
+      ],
+      "significance": "Walt co-authored The Israel Lobby and U.S. Foreign Policy (2007, with Mearsheimer) — 19 years later he returns to the same subject, and Foreign Policy becomes the first mainstream foreign-policy journal to directly tie the Iran war to the Israel lobby's funding chain. Jacobin ran a companion piece on March 3",
+      "sources": [
+        {
+          "label": "Stephen Walt's Foreign Policy article",
+          "url": "https://foreignpolicy.com/2026/03/17/israel-lobby-iran-war-trump-responsibility/"
+        },
+        {
+          "label": "Jacobin 2026-03-03",
+          "url": "https://jacobin.com/2026/03/aipac-trump-israel-democrats-iran"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-08",
+      "event": "Two-week conditional ceasefire brokered by Pakistan",
+      "factions": [],
+      "significance": "Opened the space for the subsequent FDD / CFR public admissions of hawkish error",
+      "sources": []
+    },
+    {
+      "date": "2026-04-09",
+      "event": "FDD's Reuel Marc Gerecht and CFR's Ray Takeyh co-author \"How Trump Miscalculated in Iran\" in The Wall Street Journal",
+      "factions": [
+        "hawk"
+      ],
+      "significance": "Two emblematic hawks from FDD (the post-9/11 counterterror / anti-Iran think tank) and CFR (the establishment foreign-relations institution) co-signing an article is tantamount to an institutional admission of error by the hawkish camp. The heaviest blow to the MAGA internal rupture to date.",
+      "sources": [
+        {
+          "label": "WSJ / FDD co-authored piece",
+          "url": "https://www.fdd.org/analysis/2026/04/09/how-trump-miscalculated-in-iran/"
+        }
+      ],
+      "analysis": "**Background**: On April 9, FDD's Reuel Marc Gerecht (former CIA Operations Officer, FDD senior fellow) and CFR's Ray Takeyh (senior fellow for Iran policy research) co-authored \"How Trump Miscalculated in Iran\" in The Wall Street Journal. FDD is the Foundation for Defense of Democracies, the post-9/11 counterterror / anti-Iran think tank founded in 2001. CFR is the Council on Foreign Relations.\n\n**Both authors' backgrounds**: Gerecht was one of the principal pre-2003 theorists of the Iraq War, and a long-time advocate of regime-change-style intervention. Takeyh is CFR's best-known Iran specialist; during the 2009 Green Movement he advocated direct US support for the revolutionaries. Both are representative figures of the past two decades of \"hawkish think-tank\" Iran policy.\n\n**What the article concedes**: They concede three errors:\n\n- a serious underestimation of the regime's endogenous resilience — Mojtaba's succession has been rough, but the IRGC central command chain has not collapsed\n- a serious underestimation of the political cost of decapitation as a tactic — once Israel and the US became \"regime terminators,\" the nationalist backlash inside Iran exceeded expectations\n- a serious underestimation of the transmission of energy-market and supply-chain shocks — the persistent Brent risk premium has kept GOP voter approval sliding\n\n**Significance**: FDD and CFR have been the two think-tank pillars of US hawkish Iran policy for the past 20 years. The fact that representative figures from both institutions co-signed a public admission of error means the institutional foundation of the hawks has collapsed at the level of intellectual legitimacy. Combined with the Carlson / Bannon / Massie pressure from the opinion and legislative levels, the result is a structural encirclement — MAGA has gone from \"hawks rebutting doves\" to \"hawks defecting from their own camp.\""
+    },
+    {
+      "date": "2026-04-mid",
+      "event": "CNN reports Republican strategists debating midterm-election strategy adjustments",
+      "factions": [
+        "hawk",
+        "evangelical"
+      ],
+      "significance": "Republican voter support for \"continuing the military action against Iran\" has fallen from 78% at the war's start in June 2025 to 48% in the NPR/PBS/Marist poll in April 2026 — a 30-point drop in 10 months, steeper than the equivalent period of the 2003 Iraq War",
+      "sources": [
+        {
+          "label": "CNN Republican midterm coverage",
+          "url": "https://www.cnn.com/2026/04/16/politics/republicans-house-iran-war-midterms"
+        }
+      ]
+    },
+    {
+      "date": "2026-05",
+      "event": "Robert Kagan publishes \"checkmate / total defeat\" essay in The Atlantic",
+      "factions": [
+        "hawk"
+      ],
+      "significance": "Kagan is a co-founder of the Project for the New American Century (PNAC, the principal intellectual driver of the 2003 Iraq War); his 2002 Of Paradise and Power is a foundational text of neoconservative interventionism. His break is comparable to Walter Lippmann's 1968 public turn against Vietnam — neoconservatism's own day of judgment",
+      "sources": [
+        {
+          "label": "Middle East Eye coverage of the Kagan essay",
+          "url": "https://www.middleeasteye.net/news/us-heading-checkmate-and-total-defeat-iran-war-says-neocon-robert-kagan"
+        }
+      ],
+      "analysis": "**Background**: In early May 2026, Robert Kagan published a \"checkmate / total defeat\" long essay in The Atlantic. The piece's verdict is direct: \"the US attempt at regime change in Iran has ended in strategic total defeat.\"\n\n**Kagan's background**: Robert Kagan is a co-founder of the Project for the New American Century (PNAC). PNAC was the principal intellectual driver of the 2003 Iraq War — and Kagan's 2002 Of Paradise and Power: America and Europe in the New World Order, which famously argued \"Americans are from Mars, Europeans are from Venus,\" is a foundational text of neoconservative interventionism.\n\n**The historic significance of the break**: From PNAC co-founder to public admission of \"regime-change total defeat,\" Kagan's break is comparable to Walter Lippmann's 1968 public turn against Vietnam — neoconservatism's own day of judgment. Lippmann had been a leading advocate of US foreign intervention since the Spanish-American War of 1898; his 1968 public turn against Vietnam caused the entire establishment's support for the war to collapse.\n\n**Relation to the FDD/CFR admissions**: Kagan's break, the Gerecht/Takeyh WSJ piece, and Walt's Foreign Policy essay — across three months from March to May 2026, three representative figures from three different generations and three different positions inside the neoconservative camp defected in sync. An intellectual collapse on this scale has happened only once in the past 80 years, in the late Vietnam era (1968–1972).\n\n**Significance**: Kagan's break strips the MAGA hawks of their most important intellectual cover. Rubio, Hegseth, and Miller may control executive power, but the discourse of policy legitimacy on which they relied has lost its principal intellectual source. If the 2028 primary fight ends up featuring a \"Kagan vs. Mojtaba second-round line dispute,\" the hawks will have lost the narrative initiative."
+    },
+    {
+      "date": "2026-05-15",
+      "event": "Massie introduces a House bill to require AIPAC to register as a foreign agent under FARA",
+      "factions": [
+        "paleo"
+      ],
+      "significance": "FARA (the Foreign Agents Registration Act of 1938) has historically been used almost exclusively against Soviet / Nazi German agents — its first use against AIPAC is a historic first",
+      "sources": [
+        {
+          "label": "Common Dreams coverage",
+          "url": "https://www.commondreams.org/news/thomas-massie-aipac-foreign-agents"
+        }
+      ],
+      "analysis": "**Background**: Massie introduced a House bill requiring AIPAC (the American Israel Public Affairs Committee, founded 1953) to register as a \"foreign agent.\" The bill is grounded in FARA (the Foreign Agents Registration Act of 1938) — a statute historically used almost exclusively to pursue Soviet and Nazi German agents.\n\n**FARA's historical uses**: Since FARA's passage in 1938, the main cases have been: pursuit of Nazi German propaganda outfits in the US in the 1940s; pursuit of Soviet \"propaganda outfits\" in the US (notably Amtorg Trading Corporation) in the 1950s; pursuit of Libya's \"People's Bureau\" in the 1980s; and the 2017 Mueller investigation's pursuit of Paul Manafort for his consulting work for former Ukrainian president Yanukovych. It has never been used against any US domestic interest group — making the AIPAC registration demand a historic first.\n\n**Bill design**: The bill requires AIPAC to register with the Justice Department's FARA Unit within 90 days and disclose all foreign funding sources, policy coordination documents, and meeting records with foreign government officials. If AIPAC does not register, all of its donations would be treated as \"unregistered foreign agent\" operations — potentially triggering cascading reviews of every AIPAC-funded candidate.\n\n**Relation to AIPAC's counterattack**: On April 9, AIPAC had already launched primary-election attacks on Massie via its PAC (the United Democracy Project, UDP). Massie's response is \"procedure for procedure\" — AIPAC uses UDP for political strikes, Massie uses FARA to question AIPAC's entire institutional legitimacy.\n\n**Significance**: The May 15 bill escalates the MAGA internal split from \"policy disagreement\" to \"mutual delegitimization.\" Massie is no longer just opposing AIPAC's policy positions; he is trying to deprive AIPAC of its status as a US domestic interest group. This degree of \"mutual institutional delegitimization\" was never reached even in the 1968 Goldwater–Rockefeller intra-Republican fight."
+    }
+  ],
+  "observations": [
+    {
+      "id": "aipac_spending",
+      "label": "AIPAC spending in 2026 Republican primaries",
+      "summary": "AIPAC has historically been merciless against antiwar Democrats, but going after antiwar Republicans is a new phenomenon",
+      "threshold": "If UDP (United Democracy Project, AIPAC's super PAC) starts running attack ads in Republican primaries against Massie or Republican members who signed H.Con.Res.38 → AIPAC's purge of antiwar Republicans goes public",
+      "status": "open",
+      "last_check": "2026-05-19",
+      "significance": "Once it happens, Massie's AIPAC FARA bill instantly goes from a fringe proposal to the paleos' and Post-Liberals' joint legal weapon against AIPAC",
+      "analysis": "AIPAC spent roughly $100 million through UDP in the 2024 cycle, mainly to defeat antiwar Democrats — most emblematically the failed reelections of Cori Bush and Jamaal Bowman, both knocked out by AIPAC-backed candidates in Democratic primaries. AIPAC has historically been merciless against antiwar Democrats; going after antiwar Republicans is a new phenomenon.\n\nWhat to watch: FEC filings update quarterly. If UDP expenditures show attack ads in Republican primaries, that's an immediate news event.",
+      "sources": []
+    },
+    {
+      "id": "vance_statement",
+      "label": "JD Vance's first explicit public Iran-policy statement",
+      "summary": "Vance has made no clear Iran-policy statement from the June 22, 2025 strike to today — the silence is itself the signal",
+      "threshold": "If Vance announces a presidential run in early 2027, his Iran stance will determine whether the Post-Liberals end up siding with the paleos or the hawks",
+      "status": "open",
+      "last_check": "2026-05-19",
+      "analysis": "During the 2024 VP campaign Vance told Tucker Carlson, \"I'm not pro-Israel in the way that Lindsey Graham is pro-Israel\" — his closest public alignment with the paleos. But he has not made any public Iran-policy statement during his time in the White House.\n\nIf Vance goes paleo, the 2028 GOP primary will line up as Bannon–Carlson–Vance against Rubio–Hegseth, and the split becomes official.\n\nWatch list: Vance's White House speech archive, the Sunday morning interview shows, publications from American Compass (the think tank founded by Oren Cass, for which Vance has long been a contributor), his stance on the January 6 anniversary.",
+      "sources": []
+    },
+    {
+      "id": "trump_attack_massie",
+      "label": "Whether Trump names and attacks Massie on Truth Social",
+      "summary": "Trump posted \"Thomas Massie has my Complete and Total Endorsement!\" in May 2024 — and has not retracted it",
+      "threshold": "Once Trump names and attacks Massie on Truth Social → it amounts to a public alliance with AIPAC and a public break with the Bannon wing — this is the paleos' red-line indicator",
+      "status": "open",
+      "last_check": "2026-05-19",
+      "analysis": "Trump posts 50–80 Truth Social messages a day; a keyword search for Massie is enough to monitor. Trump endorsed Massie publicly in 2024 — Massie is one of the few members of Congress attacked by MAGA circles but publicly backed by Trump.\n\nOnce that red line is crossed, it means Trump personally has chosen the hawks plus Evangelicals, the paleos have lost their biggest internal protector, and the split is formally irreversible.",
+      "sources": []
+    },
+    {
+      "id": "wpr_discharge_petition",
+      "label": "Whether the Khanna–Massie WPR reaches a forced recorded vote",
+      "summary": "H.Con.Res.38 has been procedurally shelved by Speaker Mike Johnson, but the discharge petition has 156 signatures (149 Democrats, 7 Republicans)",
+      "threshold": "Signatures reach 218 → forced recorded vote → Republican members' public stances locked into the record → prime attack-ad material for the 2026 midterms",
+      "status": "open",
+      "last_check": "2026-05-19",
+      "analysis": "The discharge petition is Congress's standard tool for bypassing a speaker's procedural block — 218 signatures (a House majority) force a resolution out of committee and onto the floor.\n\nThe relevant precedent is the 2002 AUMF (Authorization for Use of Military Force) vote: Democrats who voted yes were almost all challenged from the antiwar left in the 2008 primaries (most famously Hillary Clinton losing to Obama).\n\nWhat to watch: discharge petition signatures update weekly and are public record.",
+      "sources": [
+        {
+          "label": "H.Con.Res.38 text",
+          "url": "https://massie.house.gov/uploadedfiles/iranwpr.pdf"
+        }
+      ]
+    },
+    {
+      "id": "carlson_business",
+      "label": "Commercial sustainability of the Tucker Carlson Network",
+      "summary": "The paleos' staying power in the public conversation tracks the network's commercial sustainability",
+      "threshold": "If AIPAC-aligned sponsors pull advertising and subscriptions decline → the antiwar wing loses its single most important media platform",
+      "status": "open",
+      "last_check": "2026-05-19",
+      "analysis": "After leaving Fox, Carlson's show runs on a subscription model (around $72/year) plus ads, with roughly 8 million monthly actives (Axios data).\n\nWhat to watch: quarterly subscriber numbers (if disclosed); view counts on individual Bannon-style interviews (YouTube embeds remain observable); supporter counts on alternative subscription platforms like Patreon and Locals; the mix of guests Carlson books (antiwar MAGA versus hawks).",
+      "sources": []
+    },
+    {
+      "id": "gop_voter_support",
+      "label": "Republican voter support for \"continuing the military action against Iran\"",
+      "summary": "Fallen from 78% at the war's start in June 2025 to 48% in April 2026 — a 30-point drop in 10 months",
+      "threshold": "Falling below 35% would sever the hawks from the grassroots; at the current rate of decline this could happen around the 2026 midterms",
+      "status": "open",
+      "last_check": "2026-04-25",
+      "analysis": "At the time of the June 2025 strike, the CBS News / YouGov poll (6/13–6/15) showed 78% support among Republican voters. By late April 2026 the NPR / PBS / Marist poll (4/22–4/25) showed 48%.\n\nThe relevant historical baseline is the 2003 Iraq War: Republican support was 91% at the war's start; by the November 2006 midterms it had fallen to 56% — and Republicans lost 30 House seats and 6 Senate seats in those midterms.\n\nIf the Iran war support curve falls steeper than Iraq's (and it already has — a 30-point drop in 10 months, well above Iraq's same-period decline), Republicans could face a worse rout in the 2026 midterms than in 2006.",
+      "sources": [
+        {
+          "label": "CNN April coverage of Republican midterm strategy",
+          "url": "https://www.cnn.com/2026/04/16/politics/republicans-house-iran-war-midterms"
+        }
+      ]
+    }
+  ],
+  "history_compare": {
+    "title": "Two historical precedents: 1968 vs. 2003",
+    "intro": "The MAGA split over the Iran war has two comparable historical precedents, each pointing to a different end state.",
+    "scenarios": [
+      {
+        "year": "1968",
+        "label": "The Goldwater wing vs. the Eisenhower–Rockefeller wing over Vietnam",
+        "narrative": "In 1968 Republicans went through a similar internal split over Vietnam — between the Goldwater hawks and the Eisenhower–Rockefeller moderates — and the party nearly came apart before Nixon took office. The 1968 GOP primary had three major candidates: Richard Nixon (centrist), Nelson Rockefeller (moderate), and Ronald Reagan (hawkish governor). Nixon narrowly prevailed at the Miami Beach RNC by pulling in both wings — campaigning under the slogan \"Peace with Honor.\" The price was five more years of war (1968–1973).\n\nNixon's \"Peace with Honor\" was stitched together by elite negotiation — his secret meeting with Rockefeller days before the Miami Beach convention is the canonical scene of elite consensus formation.",
+        "applicability": "**Does not apply today**. Trump lacks the elite-consensus instruments Nixon had — he runs on grassroots mobilization. The MAGA coalition has no elite negotiation mechanism: the RNC is chaired by Trump's hand-picked Michael Whatley, and the entire party machinery is effectively under Trump's personal control; the traditional elite-consensus institutions (Heritage Foundation, AEI, Hoover) have been MAGA-ized or sidelined. \"Peace with Honor\"-style rhetoric has no institutional carrier today."
+      },
+      {
+        "year": "2003-2016",
+        "label": "Iraq War rupture → Ron Paul 2008 → Tea Party 2010 → Trump 2016",
+        "narrative": "A closer historical parallel is the Republican rupture over the Iraq War from 2003 to 2008 — which produced Ron Paul's breakout in the 2008 Republican primary, the Tea Party's sweep of the 2010 midterms, and ultimately Trump's antiwar-stance capture of the nomination in 2016. From 2003 to 2016, the cycle ran 13 years.\n\nThe 1968–1980 Vietnam rupture also took 12 years before Reagan reorganized the Republican Party. One inference: the MAGA internal rupture over Iran is unlikely to detonate quickly — it is more likely a 2026–2038 multi-year process.",
+        "applicability": "**Partly applies**. The key differences from 2003:\n\n- information environments are fractured — independent media like the Tucker Carlson Network make a split visible faster than the 2003 Fox News era allowed\n- inflation pass-through plus war costs have already begun to bend the curve among GOP voters — in 2003 voter exhaustion only set in well after the fact; today, support for the Iran war has already dropped 30 points in 10 months, much faster than Iraq's same period"
+      }
+    ],
+    "current_judgment": "The biggest difference between today's MAGA split and 1968 is that in 1968 the Republican Party still had an \"establishment\" acting as adhesive; today Trump has destroyed that establishment. Between 2026 and 2028, MAGA either finds a new internal coordination mechanism (I am not optimistic), or formally splits into two parties in the 2028 nomination fight. If Vance runs and pulls Post-Liberal support plus part of the paleo wing, and Rubio or Hegseth runs with hawk plus Evangelical support, the 2028 GOP primary will look like the 1976 Ford–Reagan establishment-vs.-insurgent showdown — but unlike 1976, no elite-consensus tools exist today to let the party machinery scrape a narrow win the way it did that year."
+  },
+  "glossary": [
+    {
+      "term": "MAGA",
+      "zh": "「让美国再次伟大」联盟",
+      "en": "Make America Great Again",
+      "note": "The heterogeneous conservative coalition built by Trump since 2015, at its power apex after the 2024 victory, assembled from four positions: Paleo-isolationism, Hawkish Pragmatism, Evangelical Christian Zionism, and Post-Liberal Conservatism."
+    },
+    {
+      "term": "JCPOA",
+      "zh": "伊朗核问题全面协议",
+      "en": "Joint Comprehensive Plan of Action",
+      "note": "The 2015 multilateral agreement limiting Iran's nuclear program in exchange for sanctions relief. Trump withdrew in May 2018."
+    },
+    {
+      "term": "AIPAC",
+      "zh": "美国以色列公共事务委员会",
+      "en": "American Israel Public Affairs Committee",
+      "note": "Pro-Israel lobby founded in 1953, one of the most influential foreign-policy lobbies in the United States."
+    },
+    {
+      "term": "FARA",
+      "zh": "外国代理人注册法案",
+      "en": "Foreign Agents Registration Act",
+      "note": "1938 statute requiring agents of foreign governments to publicly disclose their funding sources. Historically used almost exclusively against Soviet and Nazi German agents."
+    },
+    {
+      "term": "PNAC",
+      "zh": "新美国世纪计划",
+      "en": "Project for the New American Century",
+      "note": "Neoconservative think tank founded in 1997 by Robert Kagan and others; the principal intellectual driver of the 2003 Iraq War."
+    },
+    {
+      "term": "FDD",
+      "zh": "捍卫民主基金会",
+      "en": "Foundation for Defense of Democracies",
+      "note": "Post-9/11 counterterror / anti-Iran think tank founded in 2001; CEO Mark Dubowitz was one of the architects of Trump's 2018 JCPOA withdrawal."
+    },
+    {
+      "term": "WPR",
+      "zh": "战争权力决议法案",
+      "en": "War Powers Resolution",
+      "note": "1973 statute limiting the president's authority to wage war without congressional approval. Section 5(c) allows Congress to pass a concurrent resolution ordering withdrawal, which does not require presidential signature."
+    },
+    {
+      "term": "CPAC",
+      "zh": "保守派政治行动会议",
+      "en": "Conservative Political Action Conference",
+      "note": "The largest annual American conservative gathering, held every year since 1974."
+    }
+  ],
+  "causal_map": {
+    "title": "The rupture pathway: from triggers to the 2028 primary fight",
+    "intro": "Whether MAGA moves from \"split\" to \"formal party division\" depends on the combination of four triggers. Each is currently falsifiable — below are the trigger conditions and three possible outcomes.",
+    "triggers": [
+      {
+        "id": "vance",
+        "label": "JD Vance picks a public side",
+        "color": "danger",
+        "description": "Vance has stayed silent on Iran policy. If he announces a 2027 presidential run and goes paleo (publicly backing Massie's AIPAC FARA bill, criticizing the strike decision), he will give the Post-Liberal–paleo alliance a legitimate presidential candidate."
+      },
+      {
+        "id": "aipac",
+        "label": "AIPAC spends in Republican primaries against antiwar members",
+        "color": "danger",
+        "description": "AIPAC has historically been merciless against antiwar Democrats (in 2024 it defeated Cori Bush and Jamaal Bowman through UDP), but going after antiwar Republicans is new. The moment UDP runs attack ads in Republican primaries targeting Massie or H.Con.Res.38 signatories, AIPAC will have effectively announced \"the Israel lobby is purging antiwar Republicans.\""
+      },
+      {
+        "id": "trump_massie",
+        "label": "Trump names and attacks Massie on Truth Social",
+        "color": "danger",
+        "description": "Trump posted \"Thomas Massie has my Complete and Total Endorsement!\" in May 2024. The moment he retracts and names Massie in attack, it amounts to a public alliance with AIPAC and a public break with the Bannon wing — and the paleos lose their biggest protector."
+      },
+      {
+        "id": "voter_support",
+        "label": "Republican voter support breaks below 35%",
+        "color": "alert",
+        "description": "Republican voter support for \"continuing the military action against Iran\" has fallen from 78% at the war's start in June 2025 to 48% in April 2026 — a 30-point drop in 10 months, steeper than the equivalent period of the 2003 Iraq War. Falling below 35% would sever the hawks from the grassroots."
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "status_quo",
+        "label": "Coalition holds",
+        "color": "neutral",
+        "trigger_threshold": "0–1 triggers met",
+        "description": "MAGA argues out loud but holds together, and the 2028 primary produces a compromise candidate who can pull in all four factions (the Nixon 1968 \"Peace with Honor\" model) — but this requires Trump himself to drive that compromise. As things stand, Trump has none of Nixon's elite-consensus tools.",
+        "probability": "~30%"
+      },
+      {
+        "id": "partial_split",
+        "label": "Partial split",
+        "color": "warning",
+        "trigger_threshold": "2–3 triggers met",
+        "description": "The 2028 GOP primary splits publicly (Vance vs. Rubio/Hegseth), but the party machinery just barely sutures it shut. The cost is grassroots voter attrition and weakened competitiveness in the 2028 general.",
+        "probability": "~50%"
+      },
+      {
+        "id": "full_split",
+        "label": "Full party division",
+        "color": "danger",
+        "trigger_threshold": "All 4 triggers met",
+        "description": "After the 2028 primary tears open, the paleos and Post-Liberals jointly bolt and form a new party (along the lines of Theodore Roosevelt's 1912 Bull Moose Party). This is the least likely but most structurally consequential outcome of the 2026–2038 window — see the 1968–1980 12-year internal reconfiguration of the Republican Party around the Goldwater wing.",
+        "probability": "~20%"
+      }
+    ],
+    "current_assessment": "As of the 2026-05-19 baseline: Trigger 1 (Vance) = not triggered, but Vance's silence is itself a focal observation point; Trigger 2 (AIPAC) = not publicly triggered but Massie's FARA bill has made the question live; Trigger 3 (Trump attacks Massie) = not triggered, still a red-line indicator; Trigger 4 (GOP voters 35%) = close but not reached — 48% at end of April, at the current rate of decline likely to break around the 2026 midterms. The most likely outcome is \"partial split\" (~50%), but any two triggers flipping at once would push \"full party division\" probability higher."
+  },
+  "hubs": [
+    {
+      "id": "iran_war",
+      "name": "The Iran war (2025-06 → 2026-05)",
+      "color": "danger",
+      "summary": "The June 22, 2025 entry of US B-2s into the strike, and the February 28, 2026 decapitation of Khamenei in Operation Epic Fury — how these two military actions became possible, and how they reshape the MAGA coalition in turn.",
+      "thesis": "The effective monopoly of the hawks and Evangelicals made both war decisions possible, but the war has in turn pushed MAGA's four-faction structure into open rupture.",
+      "logic": "Preconditions: the specific configuration of the four factions determined whether the war decisions were possible (hawks dominate AND Evangelicals endorse AND paleos are excluded AND Post-Liberals stay silent). Consequences: each of the four factions is reshaped by the war.",
+      "preconditions": [
+        {
+          "id": "iw_pre_hawk",
+          "label": "Hawks dominate the White House NSC",
+          "status": "triggered",
+          "analysis": "Three men in Trump's second-term government effectively took over Iran policy: Defense Secretary Pete Hegseth (veteran and former Fox News host, whose November 2024 nomination was deeply contested but cleared the Senate 50–49), Secretary of State Marco Rubio (Cuban-American senator, nominated by Trump in November 2024, with a long hawkish track record), and Deputy Chief of Staff for Policy Stephen Miller (the key figure who took over the NSC agenda after Bannon's August 2017 firing in Trump's first term).\n\nWhat unites these three is \"MAGA shell, neoconservative core.\" Hegseth runs the civilizational-conflict frame; Rubio runs hawkish on every non-American-style state; Miller drove two pivotal first-term Iran decisions — the May 2018 JCPOA withdrawal and the January 2020 assassination of Quds Force commander Qasem Soleimani. Their second-term personnel arrangement gives the hawks an effective monopoly on Iran policy — the core grievance of the paleos.\n\nThe March 5, 2026 letter from the eight Senate Foreign Relations Committee Democrats (Shaheen leading, with Murphy / Kaine / Merkley / Booker / Van Hollen / Duckworth / Rosen as co-signers) to Rubio revealed the practical consequences of the personnel purge — under Project 2025, the State Department's Bureau of Near Eastern Affairs (which runs Middle East policy) lost 76 people from August to December 2025; the Bureau of Consular Affairs (which handles embassies and citizen protection) lost 155. These numbers map directly onto the wartime reality of only six US ambassadors in the fourteen Middle East posts, and three career ambassadors (Qatar, Kuwait, Egypt) dismissed without cause before the war.\n\nThe combined effect: the June 22 B-2 entry and the February 28 Epic Fury operation could be pushed through without traditional NSC interagency coordination — three core hawks plus Trump's personal call were enough.",
+          "sources": [
+            {
+              "label": "Shaheen letter to Rubio (full text, 2026-03-05)",
+              "url": "https://www.foreign.senate.gov/press/dem/release/ranking-member-shaheenforeign-relations-democratspress-state-department-on-failure-to-protect-us-diplomatsin-lead-up-toiran-strikes"
+            }
+          ]
+        },
+        {
+          "id": "iw_pre_evangelical",
+          "label": "Evangelicals provide grassroots legitimacy",
+          "status": "triggered",
+          "analysis": "There are roughly 90 million American Evangelical Christians (Pew Research Center 2021 estimate), the most reliable grassroots base for the Republican Party — Trump won 76% of the white Evangelical vote in 2020, and 81% in 2024. The political mobilization power of this group comes from a distinctive theological frame: dispensational premillennialism — the belief that Israel plays a special role in the end times. The frame was systematized by the 1909 Scofield Reference Bible (edited by C.I. Scofield), and institutionalized in our era by Pastor John Hagee's Christians United for Israel (CUFI, founded 2006), now the second-largest pro-Israel lobby in the US after AIPAC.\n\nLong-running Pew tracking shows about 60% of white Evangelicals believe in \"Israel's special role in the end times\" — meaning, for this group, backing Israeli military action is not a geopolitical judgment but a religious obligation. None of the other three factions can move them with a cost-benefit argument.\n\nThe congressional standard-bearers are Speaker Mike Johnson (R-LA, elected speaker October 2023, a religious-liberty attorney by background, with a J.D. from a Baptist seminary) and South Carolina Senator Lindsey Graham (who has pushed a \"preventive war on Iran\" line continuously since the October 2023 Gaza war). Johnson procedurally shelved the Massie–Khanna H.Con.Res.38 War Powers Resolution in June 2025 — a standard use of speaker's power, but shelving is not killing.\n\nThe district-level force runs deeper than the congressional one. In the Bible Belt across the South and Midwest, Evangelical pastors back the military action from the Sunday pulpit — and this grassroots mobilization makes GOP heartland members unwilling to oppose the war publicly. Studies of the 1988 and 2000 Republican primaries show Evangelical voters turn out at rates 20 percentage points above the general electorate — they are the decisive force in the Iowa caucuses and the South Carolina primary.\n\nThis condition means Trump did not need to worry about immediate grassroots blowback from the June 22 strike — Evangelical support is \"free\" political capital.",
+          "sources": [
+            {
+              "label": "Pew Research Center: long-running tracking of US Evangelical religious-political attitudes",
+              "url": "https://www.pewresearch.org/religion/religious-landscape-study/"
+            }
+          ]
+        },
+        {
+          "id": "iw_pre_paleo_excluded",
+          "label": "Paleos excluded from the decision-making circle",
+          "status": "triggered",
+          "analysis": "The Paleo-isolationist intellectual lineage runs from Patrick Buchanan (antiwar Republican presidential primary candidate in 1992, 1996, and 2000) and Ron Paul (antiwar primary candidate in 2008 and 2012) — the paleoconservative tradition. Trump built his 2016 campaign on this frame: in the GOP primary debates he attacked Bush's invasion of Iraq as \"a big fat mistake,\" and in his RNC nomination speech declared \"Americanism, not globalism.\"\n\nBut in Trump's second-term personnel arrangement, this faction holds no formal position. Steve Bannon was 2016 campaign manager and chief White House strategist from January to August 2017, but after his August 2017 firing never returned to the executive branch — during the second term he maintains influence through the War Room podcast (six days a week of live broadcast, plus Substack, plus the right-wing Real America's Voice network). Tucker Carlson held the Fox News primetime slot from 2016 to 2023; since being fired by Fox in April 2023 he has run the independent Tucker Carlson Network (subscription around $72/year, roughly 8 million monthly actives, 2024 Axios data), but holds no second-term position.\n\nIn Congress, Kentucky's 4th-district Republican Thomas Massie is the only Republican signed on to H.Con.Res.38 (House Concurrent Resolution 38) — the resolution that Massie, with California's 17th-district Democrat Ro Khanna, introduced in late June 2025 invoking Section 5(c) of the 1973 War Powers Resolution (the concurrent resolution mechanism, which does not require presidential signature) to halt military action inside Iran.\n\nThe resolution was procedurally shelved by Speaker Mike Johnson, but Khanna has collected 156 signatures (149 Democrats, 7 Republicans), approaching the 218 threshold that would force a floor vote. Massie alone embodies the paleos' institutional veto power inside Congress — and the 7-to-1 ratio (7 Democratic co-sponsors vs. 1 Republican) is an accurate reading of just how marginalized the paleos are inside the Republican Party.\n\nThis condition means the June 22, 2025 strike and the February 28, 2026 Epic Fury operation faced no substantive Republican executive-branch resistance.",
+          "sources": [
+            {
+              "label": "Bannon's long interview on the Tucker Carlson Network (2025-06-17)",
+              "url": "https://www.youtube.com/watch?v=tFM6L6TopsM"
+            },
+            {
+              "label": "Massie's H.Con.Res.38",
+              "url": "https://massie.house.gov/uploadedfiles/iranwpr.pdf"
+            },
+            {
+              "label": "Common Dreams 2026-05-15: Massie's AIPAC FARA bill",
+              "url": "https://www.commondreams.org/news/thomas-massie-aipac-foreign-agents"
+            }
+          ]
+        },
+        {
+          "id": "iw_pre_vance_silent",
+          "label": "Vice President Vance's silence",
+          "status": "triggered",
+          "analysis": "Vice President JD Vance (Ohio senator 2023–2025; elected VP November 2024) is the most ambiguous figure in the MAGA coalition. His intellectual foundation is Post-Liberal / Catholic Conservative — the central magazines of this faction are First Things (founded 1990 by Richard John Neuhaus as a Catholic–Evangelical ecumenical journal), Compact (founded 2022 by Sohrab Ahmari, Edwin Aponte, and Patrick Deneen), and The American Conservative (founded 2002 by Pat Buchanan and Ron Unz, led from 2016 onward by Rod Dreher).\n\nThe editorial teams at all three have reservations about the Iran–Israel conflict — they back neither the Israeli right's \"end-times theology\" nor Bannon's pure isolationism, and lean toward the Christopher Lasch / Wendell Berry line that America should put its energy into rebuilding the homeland. Vance has long been a contributor to American Compass (the industrial-policy think tank founded by Oren Cass in 2020), and is the faction's political representative.\n\nDuring the 2024 VP campaign Vance told Tucker Carlson, \"I'm not pro-Israel in the way that Lindsey Graham is pro-Israel\" — his closest public alignment with the paleos. But after the June 22, 2025 B-2 entry, he posted only a single X message wishing US service members a safe return, with no judgment on the legitimacy of the strike. After Epic Fury on February 28, 2026, he again held his public silence.\n\nThis silence is not weakness — it is posture. Staying silent lets Vance preserve the entire option space for a 2027–2028 presidential run. If the Iran war goes badly (continued GOP voter erosion), he can go paleo; if it goes well (the regime in Tehran holds), he can go hawk. This \"optionality preservation\" strategy keeps him the pivotal swing figure in the four-faction split.\n\nThe practical meaning of this condition: there is no substantive opposition voice at the VP level to check Trump's Iran decisions. Had Vance publicly opposed the strike in June 2025 or February 2026, Trump's internal decision calculus would have looked entirely different — but he did not.",
+          "sources": []
+        }
+      ],
+      "mechanisms": [
+        {
+          "label": "Trump's second-term Cabinet structure gives the hawks and Evangelicals an effective monopoly on Iran policy",
+          "description": "Trump's second-term Cabinet arrangement is no accident — it reproduces the Cheney–Rumsfeld alliance that controlled Iraq War decisions in the 2002–2003 Bush administration. Hegseth as Defense Secretary (Rumsfeld analog), Rubio as Secretary of State (running the Project 2025 State Department purge), Miller as Deputy Chief of Staff for Policy (a shadow national security advisor) — the three of them plus Trump's personal call can push war decisions through without the formal Bush-era interagency Policy Coordination Committee process.\n\nThe Evangelicals provide grassroots legitimacy and procedural cover through Speaker Mike Johnson (the shelving of H.Con.Res.38). The combined force of these two factions made both the June 2025 and February 2026 operations politically viable.\n\nThe paleos (Bannon / Carlson / Massie) and the Post-Liberals (Vance) as the opposing side have no institutional veto — the former are excluded from the decision-making circle, the latter stay silent. This \"two factions for war, one marginalized, one silent\" structure is the political-viability condition for the war decisions.",
+          "sources": []
+        }
+      ],
+      "consequences": [
+        {
+          "actor": "Paleos",
+          "label": "Full counterattack across opinion and legislation",
+          "analysis": "The paleos were excluded from the decision-making circle but retained their counterattack channels in media and Congress.\n\nAt the media level, Bannon's heaviest blow came in his June 17 long interview on the Tucker Carlson Network: \"Israel's War on Iran can destroy MAGA forever\" — not can damage, but can destroy. Carlson's newsletter the same day, \"An Act of War, Sponsored by the United States,\" framed the strikes as a constitutional act of war, not a \"targeted strike\" or \"non-war military operation.\" Both formulations were repeatedly cited by Newsweek (2025-06-16) and NPR (2025-06-18) as their definitional evidence for the \"MAGA split / divided\" frame. The Tucker Carlson Network's roughly 8 million monthly actives (Axios 2024 data) plus Bannon's six-day-a-week War Room broadcast together constitute the paleos' opinion megaphone.\n\nAt the congressional level, Massie and Democrat Ro Khanna jointly introduced H.Con.Res.38 in late June, a War Powers Resolution invoking the concurrent resolution mechanism of Section 5(c) of the 1973 War Powers Resolution (which does not require presidential signature). The resolution was procedurally shelved by Speaker Mike Johnson, but Khanna's discharge petition has collected 156 signatures (149 Democrats, 7 Republicans), approaching the 218 threshold for a forced floor vote.\n\nOn May 15, 2026, Massie introduced a House bill requiring AIPAC (American Israel Public Affairs Committee) to register as a foreign agent. The bill is grounded in the 1938 Foreign Agents Registration Act (FARA), historically used almost exclusively to pursue Soviet and Nazi German agents — Massie's use of it against AIPAC is a historic first. If passed, AIPAC would have to disclose every foreign funding source and every political contribution record.\n\nThis sequence turned the paleos from \"a marginalized opinion faction\" into \"a political opposition with institutional counterattack capacity.\"",
+          "sources": [
+            {
+              "label": "Bannon's long interview on the Tucker Carlson Network",
+              "url": "https://www.youtube.com/watch?v=tFM6L6TopsM"
+            },
+            {
+              "label": "Newsweek 2025-06-16",
+              "url": "https://www.newsweek.com/tucker-carlson-steve-bannon-maga-trump-iran-israel-war-2086346"
+            },
+            {
+              "label": "Common Dreams 2026-05-15: Massie's AIPAC FARA",
+              "url": "https://www.commondreams.org/news/thomas-massie-aipac-foreign-agents"
+            }
+          ]
+        },
+        {
+          "actor": "Hawks",
+          "label": "First internal rupture (FDD + Robert Kagan)",
+          "analysis": "The hawks ruptured internally in April–May 2026 — the most significant public admission of error from hawkish think-tank circles since the 2003 Iraq War.\n\nApril 8 brought a Pakistani-brokered ceasefire. April 9 brought the FDD (Foundation for Defense of Democracies, the post-9/11 counterterror / anti-Iran think tank founded in 2001) — Reuel Marc Gerecht (former CIA Iran targeting officer) — and CFR (Council on Foreign Relations) — Ray Takeyh (CFR senior fellow, long hawkish track record) — co-authoring \"How Trump Miscalculated in Iran\" in The Wall Street Journal. The subtitle — \"He followed his Venezuela model, not accounting for the ideological character of the regime in Tehran\" — directly framed Trump's Iran policy as a misapplied \"Venezuela model.\"\n\nFDD's CEO Mark Dubowitz was one of the architects of Trump's 2018 JCPOA withdrawal. FDD as an institution beginning to publicly concede error is the heaviest blow to hawkish coherence to date. The fact that Gerecht and Takeyh co-signed in the Wall Street Journal (rather than speaking separately) means this is a coordinated position between two institutions (FDD and CFR).\n\nIn May, Robert Kagan published the \"checkmate / total defeat\" long essay in The Atlantic (covered simultaneously by Middle East Eye in May 2026). Kagan is a co-founder of the Project for the New American Century (PNAC, the neoconservative think tank founded in 1997 by Robert Kagan and William Kristol, and the principal intellectual driver of the 2003 Iraq War); his 2002 Of Paradise and Power is a foundational text of neoconservative interventionism. Kagan's \"break\" is comparable to Walter Lippmann's 1968 public turn against Vietnam — neoconservatism passing its own day of judgment.\n\nThe FDD-plus-Kagan combination stripped the hawks of the think-tank legitimacy they built over the past twenty years (2003–2024). This is the most structurally consequential event of the MAGA internal rupture — it means that any politician seeking to continue the hawkish Iran line under the cover of \"neoconservative professional judgment\" has lost mainstream think-tank backing.",
+          "sources": [
+            {
+              "label": "FDD Gerecht + CFR Takeyh in The Wall Street Journal",
+              "url": "https://www.fdd.org/analysis/2026/04/09/how-trump-miscalculated-in-iran/"
+            },
+            {
+              "label": "Middle East Eye coverage of Robert Kagan's Atlantic essay",
+              "url": "https://www.middleeasteye.net/news/us-heading-checkmate-and-total-defeat-iran-war-says-neocon-robert-kagan"
+            }
+          ]
+        },
+        {
+          "actor": "Evangelicals",
+          "label": "Steady, but their theological legitimacy enters public debate for the first time",
+          "analysis": "Evangelicals remain the most stable of the four factions — grassroots voter support is essentially unchanged. But after the war, the faction's theological legitimacy has begun to enter public debate — for the first time since the Reagan era of the 1980s.\n\nAt the congressional level, Speaker Mike Johnson continues to shelve H.Con.Res.38 procedurally; Lindsey Graham continues to push the \"preventive war on Iran\" line. At the grassroots, CUFI (Christians United for Israel) claimed more than 10 million members in 2024 — a figure that has continued to grow even after the war.\n\nBut on March 17, 2026, Stephen Walt published \"The Israel Lobby Bears a Special Responsibility for Donald Trump's Iran War\" in Foreign Policy — tying the Israel lobby directly to the funding chain. Walt is a Harvard international relations professor and, with John Mearsheimer, co-author of The Israel Lobby and U.S. Foreign Policy (2007), which systematically argued the Israel lobby's influence on American foreign policy. Nineteen years later he returns to the same subject — and Foreign Policy, as a mainstream foreign-policy journal, becomes the first such publication to tie the Iran war directly to the Israel lobby's funding chain.\n\nJacobin (the left magazine) ran a companion piece on March 3, 2026: \"AIPAC Is Influencing Trump's War in Iran.\" The two articles together pushed the dual mechanism of \"theological mobilization plus lobbying funding chain\" from fringe discourse into mainstream foreign-policy debate.\n\nIn addition, Robert Kagan's Atlantic essay framing the Iran war as \"checkmate\" and \"total defeat\" is the first time a neoconservative elder has publicly questioned the war's legitimacy. Evangelicals are not directly heirs to Kagan's intellectual tradition, but his break weakens the overall intellectual legitimacy of the hawk-plus-Evangelical alliance.\n\nThis faction will remain stable through the 2028 primary, but its opinion-immunity began to decline after April 2026 — no 2028 GOP candidate will be able to treat \"alignment with the Evangelical position\" as unchallengeable political capital.",
+          "sources": [
+            {
+              "label": "Stephen Walt in Foreign Policy 2026-03-17",
+              "url": "https://foreignpolicy.com/2026/03/17/israel-lobby-iran-war-trump-responsibility/"
+            },
+            {
+              "label": "Jacobin 2026-03-03",
+              "url": "https://jacobin.com/2026/03/aipac-trump-israel-democrats-iran"
+            }
+          ]
+        },
+        {
+          "actor": "Post-Liberals",
+          "label": "Vance has not yet picked a side, but the silence is itself building political capital",
+          "analysis": "Vance has made no clear Iran policy statement from the June 22, 2025 strike to today — the silence has now lasted 11 months. This silence is not political weakness but the accumulation of political capital.\n\nUS political history has precedents. In 1968 Nixon's \"Peace with Honor\" ambiguity on Vietnam during the Republican primary let him pull in both hawks and moderates simultaneously (see the 1968 vs. 2003 historical comparison). Vance's current strategy is in the same family — preserving the full option space for a 2027–2028 presidential run.\n\nVance's intellectual foundation rests on First Things, Compact, and The American Conservative (see the paleo / Post-Liberal deep dive). The faction's intellectual leaning is the Christopher Lasch / Wendell Berry line — America should put its energy into rebuilding the homeland — and is intrinsically reserved on Middle East military intervention. But Vance is simultaneously Vice President — he cannot publicly oppose Trump's decisions without being surrounded by the hawks and Evangelicals; nor can he publicly support them without forfeiting Post-Liberal and possible paleo support.\n\nHence the \"safe return for US service members\" minimum statement. If the Iran war goes badly (continued GOP voter erosion, deepening hawk rupture, AIPAC entering Republican primary spending), Vance can shift to the paleo line and absorb the Bannon–Carlson–Massie antiwar electorate. If it goes well, he can stay with the hawks.\n\nWatch list: Vance's official White House speech archive, his Sunday morning interview appearances, his publications at American Compass, his January 6 anniversary statement, his interaction patterns with the Tucker Carlson Network. Any of these could foreshadow his public alignment.\n\nIf he announces a 2027 presidential run, his Iran stance will determine whether the Post-Liberals end up siding with the paleos or the hawks — and that choice in turn will shape the 2028 GOP primary's structure.",
+          "sources": []
+        }
+      ],
+      "observations": [
+        {
+          "id": "iw_obs_vance_signal",
+          "label": "Whether Vance announces a presidential run in early 2027 with a stance",
+          "summary": "If Vance's silence breaks in early 2027, the Iran issue immediately becomes the center of the 2028 primary fight",
+          "threshold": "Public support for the paleos → MAGA coalition formally splits; public support for the hawks → coalition holds but loses the paleos; continued silence → partial split probability rises",
+          "status": "open",
+          "last_check": "2026-05-19",
+          "analysis": "Vance's silence has now lasted 11 months. Watch list: American Compass publications, Tucker Carlson Network booking records, White House official speech archive, Sunday morning interview appearances.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "2028_primary",
+      "name": "The 2028 Republican primary (2027 → 2028-11)",
+      "color": "alert",
+      "summary": "Whether the MAGA split moves to formal party division in the 2026–2028 window depends on the combination of four falsifiable triggers.",
+      "thesis": "The four triggers are independent — but any two firing simultaneously push the probability of \"full party division\" higher. Current assessment: \"partial split\" most likely (~50%).",
+      "logic": "Preconditions: conjunction (AND) plus threshold. No single trigger alone is sufficient for full division; the question is the combination of all four conditions firing together.",
+      "preconditions": [
+        {
+          "id": "p28_vance",
+          "label": "JD Vance picks a public side",
+          "status": "open",
+          "analysis": "Vance has stayed silent on Iran policy — silence has now lasted 11 months (from the June 22, 2025 strike to today).\n\nVance's personal background: Ohio senator (2023–2025), Vice President (elected November 2024), author of Hillbilly Elegy (published 2016), Yale Law graduate, long backed by Silicon Valley investor Peter Thiel. The mix of credentials makes him a political representative of the Post-Liberal / Catholic Conservative wing, while still carrying mainstream Republican elite credentials.\n\nDuring the 2024 VP campaign Vance told Tucker Carlson, \"I'm not pro-Israel in the way that Lindsey Graham is pro-Israel\" — his closest public alignment with the paleos. But he has held silence through the June 2025 and February 2026 operations. The silence preserves political optionality — keeping the full possibility set open for a 2027–2028 presidential run.\n\nIf Vance announces a 2027 presidential run, his Iran stance will determine whether the Post-Liberals end up siding with the paleos or the hawks. Going paleo: the 2028 GOP primary lines up as Bannon–Carlson–Vance against Rubio–Hegseth, and the split becomes official. Going hawk: the status quo holds but the paleos are lost, and the 2028 primary returns to a 1976-Ford–vs-Reagan-style model.\n\nWatch list: Vance's official White House speech archive, Sunday morning interview shows (NBC's Meet the Press, CBS's Face the Nation, ABC's This Week, Fox News Sunday), publications from American Compass (the think tank founded by Oren Cass, for which Vance has long been a contributor), Vance's January 6 anniversary statement, and his interaction patterns with the Tucker Carlson Network.\n\nTrigger threshold: Vance publicly backs Massie's AIPAC FARA bill, OR publicly criticizes the strike decision → trigger fires. As of 2026-05-19, not triggered.",
+          "sources": []
+        },
+        {
+          "id": "p28_aipac",
+          "label": "AIPAC spends in Republican primaries against antiwar members",
+          "status": "open",
+          "analysis": "AIPAC (American Israel Public Affairs Committee, founded 1953) is the most influential foreign-policy lobby in the United States. UDP, founded in 2010, is AIPAC's political-strike instrument.\n\nIn the 2024 cycle, UDP spent roughly $100 million, mostly to defeat antiwar Democrats. The most emblematic were the reelection losses of Cori Bush (D-MO-01) and Jamaal Bowman (D-NY-16) — both knocked out by AIPAC-backed candidates in Democratic primaries, a showcase of AIPAC's political-strike capacity in the 2024 cycle.\n\nAIPAC has historically been merciless against antiwar Democrats; going after antiwar Republicans is new. The moment UDP starts spending against Massie or other H.Con.Res.38 Republican signatories, it amounts to a public declaration to Republican voters: \"the Israel lobby is purging antiwar Republicans.\" That alone would turn Massie's AIPAC FARA bill from a fringe proposal into the paleos' and Post-Liberals' joint legal weapon against AIPAC.\n\nWhat to watch: FEC filings update quarterly. If UDP expenditures show attack ads against antiwar Republicans in primaries, it's an immediate news event. Specifically monitor OpenSecrets' UDP quarterly reports plus AIPAC's own IRS Form 990 annual nonprofit disclosure.\n\nTrigger threshold: any UDP expenditure over $500,000 on attack ads against an antiwar Republican in a primary → trigger fires. As of 2026-05-19, not triggered.",
+          "sources": []
+        },
+        {
+          "id": "p28_trump_massie",
+          "label": "Trump names and attacks Massie on Truth Social",
+          "status": "open",
+          "analysis": "In May 2024, Trump posted on Truth Social: \"Thomas Massie has my Complete and Total Endorsement!\" — Massie is one of the few Republican members attacked from inside MAGA circles but publicly backed by Trump.\n\nThat public endorsement has not been retracted. But the moment Trump names Massie in a Truth Social attack — criticizing him over H.Con.Res.38 or the AIPAC FARA bill — it amounts to a public alliance with AIPAC and a public break with the Bannon wing. That is the paleos' red-line indicator.\n\nTrump posts roughly 50–80 Truth Social messages a day (2025 Truth Social data). A keyword search for \"Massie\" is enough to monitor. As of 2026-05-19, Trump has not named and attacked Massie; but his avoidance of H.Con.Res.38 since April 2026 (neither actively supporting nor actively opposing) has already raised suspicion inside MAGA circles.\n\nTrigger threshold: any Truth Social post by Trump directly naming Massie and using a negative label (such as \"RINO,\" \"disloyal,\" \"Pelosi-aligned\") → trigger fires.\n\nOnce that red line is crossed, it means Trump has personally chosen the hawks plus Evangelicals, the paleos have lost their biggest internal protector, and the split is formally irreversible — which would significantly raise the probability of \"full party division.\"",
+          "sources": []
+        },
+        {
+          "id": "p28_voter_support",
+          "label": "Republican voter support for continuing the military action against Iran breaks below 35%",
+          "status": "open",
+          "analysis": "Republican voter support for \"continuing the military action against Iran\" is in steep decline.\n\nAt the time of the June 2025 strike, the CBS News / YouGov poll (6/13–6/15) showed 78% support among Republican voters. By late April 2026, the NPR / PBS / Marist poll (4/22–4/25) showed 48% — a 30-point drop in 10 months.\n\nThe relevant historical baseline is the 2003 Iraq War: CBS News polling at the war's start showed 91% Republican support; by the November 2006 midterms it had fallen to 56% (PIPA, Program on International Policy Attitudes data) — a 35-point drop over three years. Republicans lost 30 House seats and 6 Senate seats in those midterms.\n\nIf the Iran war's support curve falls steeper than Iraq's (and it already has — a 30-point intra-Republican drop from June 2025 to April 2026, well above Iraq's same-period decline), Republicans could face a worse defeat in the 2026 midterms than in 2006. This observation directly determines whether the hawks' grassroots base inside the Republican Party gets cut off. CNN's April 2026 reporting indicates Republican strategists are already discussing midterm strategy adjustments.\n\nTrigger threshold: any mainstream poll (CBS News / YouGov, NPR / PBS / Marist, Pew, Gallup, Quinnipiac) showing Republican voter support below 35% → trigger fires.\n\nAt the current rate of decline (30 points in 10 months), it could break 35% around the November 2026 midterms. If it does, the hawks are severed from the grassroots — and Evangelicals in the 2028 primary will face a choice: keep backing a hawkish candidate (Rubio or Hegseth) at the risk of being abandoned by the grassroots, or shift to a paleo or Post-Liberal candidate.",
+          "sources": [
+            {
+              "label": "CNN 2026-04 coverage of Republican midterm strategy",
+              "url": "https://www.cnn.com/2026/04/16/politics/republicans-house-iran-war-midterms"
+            }
+          ]
+        }
+      ],
+      "mechanisms": [
+        {
+          "label": "The MAGA coalition lacks the elite-consensus instruments Nixon had in 1968",
+          "description": "In 1968 Republicans went through a similar Vietnam-era internal split — between the Goldwater hawks and the Eisenhower–Rockefeller moderates — and the party nearly came apart before Nixon took office. But Nixon won narrowly at the Miami Beach RNC by pulling in both wings, running on \"Peace with Honor.\" The price was five more years of war (1968–1973), and Nixon's \"Peace with Honor\" was stitched together by elite negotiation — his secret meeting with Rockefeller days before the Miami Beach convention is the canonical scene of elite consensus formation.\n\nTrump has none of Nixon's elite-consensus instruments — he runs on grassroots mobilization. The MAGA coalition has no elite negotiation mechanism: the Republican National Committee is chaired by Trump's hand-picked Michael Whatley (after Lara Trump stepped down as co-chair in December 2024, KC Crosbie took the role); the entire party machinery is under Trump's personal control; the traditional elite-consensus institutions (Heritage Foundation, AEI, Hoover Institution) have been MAGA-ized or sidelined. \"Peace with Honor\"-style rhetoric has no institutional carrier today.\n\nThe structural difference means: if the four factions rupture publicly in 2027–2028, no party machinery exists to stitch the rupture shut by elite negotiation at the convention the way Nixon did in 1968. The rupture will be \"naturally\" amplified into the 2028 primary fight.",
+          "sources": []
+        }
+      ],
+      "consequences": [
+        {
+          "actor": "Coalition holds",
+          "label": "~30% probability — 0–1 triggers met",
+          "analysis": "Coalition holds means MAGA argues out loud but stays together. The 2028 primary produces a compromise candidate able to pull in all four factions — but this requires Trump himself to drive that compromise (the 1968 Nixon \"Peace with Honor\" model). Trump has none of Nixon's elite-consensus instruments.\n\nNecessary conditions:\n\n- Vance does not pick a public side and stays silent\n- AIPAC holds back from spending in Republican primaries\n- Trump does not attack Massie\n- GOP voter support rebounds above 50%. Of the four conditions, at least three must not occur (i.e., 0–1 triggers fire)\n\nPossible compromise candidates include Marco Rubio (a hawk but with foreign-policy experience), Glenn Youngkin (Virginia governor, moderate but MAGA-friendly), Greg Abbott (Texas governor, hardliner without direct Iran exposure). Such candidates need to win \"least opposed\" rather than \"most supported\" status across all four factions — much like the role Rubio tried but failed to play in 2016.\n\nProbability estimate ~30%: based on the historical baseline (Nixon-1968 model succeeded with roughly 40% probability) minus the deduction for Trump's lack of elite-consensus instruments (about 10 percentage points).\n\nThe price of holding the coalition together is 2028 general-election competitiveness — if paleos and Post-Liberals stay nominally inside but turn out less, the Democratic candidate benefits.",
+          "sources": []
+        },
+        {
+          "actor": "Partial split",
+          "label": "~50% probability — 2–3 triggers met",
+          "analysis": "Partial split means the 2028 GOP primary tears open publicly, but the party machinery just barely sutures it shut. The most likely lineup is Vance vs. Rubio/Hegseth — the former representing the Post-Liberals plus part of the paleos, the latter representing the hawks plus Evangelicals.\n\nHistorical precedent: the 1976 Ford–Reagan Republican primary — Ford narrowly prevailed but lost the November general to Jimmy Carter. The 1976 rupture took four years to repair; only in 1980 did Reagan reintegrate the party and win the general. But the contrast with 1976 is sharp today:\n\n- there is no RNC consensus instrument to help stitch things shut\n- information environments are fractured, accelerating the spread of factional rupture beyond what 1976 saw\n- inflation pass-through plus war costs have already begun to bend the curve among GOP voters\n\nNecessary conditions: 2–3 of the four triggers fire. For example, Vance picks a public side plus GOP voter support breaks below 35% (without requiring Trump to attack Massie or AIPAC to spend cross-party).\n\nThe cost is impaired 2028 general-election competitiveness: a fractured Republican Party splits its energy across inflation and economic issues, and the Democratic candidate (potentially Gavin Newsom or a progressive) gains a relative edge.\n\nProbability estimate ~50%: based on current observation — Vance's silence is accumulating political capital (70% likelihood of public alignment by 2027); GOP voter support's decline rate (about 60% likelihood of breaking 35% by year-end at the current rate); AIPAC's probability of intervening in Republican primaries (about 30%); Trump's probability of attacking Massie (about 25%). Combined estimate ~50%.",
+          "sources": []
+        },
+        {
+          "actor": "Full party division",
+          "label": "~20% probability — all 4 triggers met",
+          "analysis": "Full party division means: after the 2028 GOP primary tears open, the paleos plus Post-Liberals jointly bolt and form a new party. The closest historical precedent is Theodore Roosevelt's 1912 break from the Republicans to form the Progressive Party (informally known as the Bull Moose Party), handing the 1912 general election to Woodrow Wilson.\n\nGetting to full division requires all four triggers to fire: Vance picks an antiwar public side, AIPAC spends against antiwar members in Republican primaries (giving paleos the sense of being purged), Trump attacks Massie (depriving the Bannon circle of institutional protection), and GOP voter support breaks below 35% (giving grassroots voters reason to abandon the hawks).\n\nA specific pathway: in early 2027, Vance announces a presidential run and publicly backs Massie's AIPAC FARA bill → the hawk + Evangelical-backed candidate (Rubio or Hegseth) wins the Republican primary through the party machinery → Vance bolts to run as an independent before or after the convention → Bannon–Carlson media mobilization plus the Tucker Carlson Network's 8 million monthly actives at the grassroots plus the Massie–Khanna congressional out-party organization → the 2028 general becomes a three-way contest.\n\nProbability estimate ~20%: rare in history but with precedent. Combining the 1912 Bull Moose model with the 1968–1980 12-year internal reconfiguration of the Republican Party around the Goldwater wing, full division in 2028 has a probability not exceeding 20% — but the probability of it eventually occurring within the 2026–2038 window is higher.\n\nIf it happens, the 2028 general loss for Republicans is locked in. The deeper consequence is that by 2032, Republicans will have to rebuild on the ruins of two parties — the mirror image of the 1860 Whig collapse plus the 1854 Republican founding.",
+          "sources": []
+        }
+      ],
+      "observations": []
+    }
+  ]
+}

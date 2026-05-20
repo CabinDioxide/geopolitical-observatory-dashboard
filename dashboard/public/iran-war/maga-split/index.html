@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAGA 在伊朗战争上的分裂 · Iran Crisis Sandbox</title>
+<link rel="stylesheet" href="../regime-scenarios/css/scenarios.css">
+<link rel="stylesheet" href="css/maga.css">
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <div>
+      <h1 id="hdr-title">MAGA 在伊朗战争上的分裂</h1>
+      <div class="sub" id="hdr-sub">派系结构 · 关键时间线 · 六个观察节点 · 历史对照</div>
+    </div>
+    <nav class="hdr-meta">
+      <a href="/iran-war/" data-i18n="nav.hub">← 沙盘母页</a>
+      <a id="source-link" href="/iran-war/reports/01_maga_split.docx" target="_blank" rel="noopener" data-i18n="nav.source">原文报告</a>
+      <span id="last-updated">基线 2026-05-19</span>
+      <button id="lang-toggle" class="lang-toggle" title="Switch language">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="stance">
+    <div class="stance-label" data-i18n="stance.label">核心判断</div>
+    <div id="stance-text" class="stance-body"></div>
+  </section>
+
+  <!-- 四派系结构 -->
+  <section class="block">
+    <h2 class="block-title">
+      <span data-i18n="block.factions">四派系结构</span>
+      <span class="block-hint" data-i18n="hint.factions">点击任一卡片查看派系详情</span>
+    </h2>
+    <div id="factions-grid" class="factions-grid"></div>
+  </section>
+
+  <!-- 关键时间线 -->
+  <section class="block">
+    <h2 class="block-title">
+      <span data-i18n="block.timeline">关键时间线</span>
+      <span class="block-hint" data-i18n="hint.timeline">2025-06 → 2026-05 · 点击事件查看详情</span>
+    </h2>
+    <div id="timeline" class="timeline"></div>
+  </section>
+
+  <!-- 六个观察节点 -->
+  <section class="block">
+    <h2 class="block-title">
+      <span data-i18n="block.observations">六个可验证观察节点</span>
+      <span class="block-hint" data-i18n="hint.observations">事件触发 → 更新数据 → 重新部署</span>
+    </h2>
+    <div class="obs-tracker">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="tracker.col.node">观察节点</th>
+            <th data-i18n="tracker.col.status">状态</th>
+            <th data-i18n="tracker.col.threshold">触发门槛</th>
+            <th data-i18n="tracker.col.lastcheck">最近核查</th>
+          </tr>
+        </thead>
+        <tbody id="obs-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 因果关系图（hub-spoke + SVG 管道） -->
+  <section class="block">
+    <h2 class="block-title">
+      <span data-i18n="block.causal">因果关系图</span>
+      <span class="block-hint" data-i18n="hint.causal">两个 hub · 点击节点查看 800-1500 字深度分析</span>
+    </h2>
+    <div id="hub-tabs" class="scenario-tabs"></div>
+    <p id="hub-summary" class="scenario-summary"></p>
+    <div class="graph-section">
+      <div id="conn-view" class="conn-view"></div>
+    </div>
+  </section>
+
+  <!-- 历史对照 -->
+  <section class="block">
+    <h2 class="block-title" data-i18n="block.history">两种历史先例：1968 vs 2003</h2>
+    <div id="history-compare" class="history-compare"></div>
+  </section>
+
+  <!-- 术语表 -->
+  <section class="block">
+    <h2 class="block-title" data-i18n="block.glossary">术语表</h2>
+    <div id="glossary" class="glossary"></div>
+  </section>
+
+  <footer class="footer" data-i18n="footer.text">
+    数据基线 2026-05-19 · 主要文献：Bannon Tucker Carlson 长访谈 · NPR / CNN / Newsweek MAGA split 报道 · Massie H.Con.Res.38 · Senate Shaheen 致 Rubio 信 · FDD Gerecht + CFR Takeyh WSJ 联名 · Robert Kagan Atlantic · Stephen Walt FP · Jacobin AIPAC 系列
+  </footer>
+
+</main>
+
+<!-- Drawer (复用 scenarios 风格) -->
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <div class="drawer-tag" id="drawer-tag"></div>
+    <button class="drawer-close" id="drawer-close" aria-label="关闭">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M5 5l10 10M15 5L5 15"/>
+      </svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+
+<script src="js/maga.js"></script>
+
+</body>
+</html>

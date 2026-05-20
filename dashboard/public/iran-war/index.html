@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>伊朗危机沙盘推演 · Iran Crisis Sandbox</title>
+<link rel="stylesheet" href="regime-scenarios/css/scenarios.css">
+<style>
+.hub-intro {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--label);
+  margin: 0 0 80px;
+  max-width: 880px;
+  letter-spacing: -0.018em;
+}
+.hub-intro em { color: var(--blue); font-style: normal; font-weight: 600; }
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 72px;
+}
+.report-card {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 32px 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease);
+  cursor: pointer;
+  position: relative;
+  min-height: 240px;
+}
+.report-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 0.5px rgba(0, 0, 0, 0.06),
+    0 4px 10px rgba(0, 0, 0, 0.05),
+    0 16px 36px rgba(0, 0, 0, 0.06);
+}
+
+.card-num {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--label-3);
+  text-transform: uppercase;
+}
+.card-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--label);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.022em;
+}
+.card-thesis {
+  font-family: var(--font-text);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--label-2);
+  margin: 0;
+  flex: 1;
+  letter-spacing: -0.005em;
+}
+.card-meta {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--label-3);
+  letter-spacing: -0.005em;
+  padding-top: 12px;
+  border-top: 0.5px solid var(--hairline);
+}
+.card-cta {
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--blue);
+}
+
+.context-block {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 24px 28px;
+  margin-bottom: 56px;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  max-width: 920px;
+}
+.context-block::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 0;
+  width: 3px;
+  background: var(--orange);
+  border-radius: 0 2px 2px 0;
+}
+.context-block .label {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.context-block .label::before { content: "● "; }
+.context-block .text {
+  font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--label);
+  letter-spacing: -0.005em;
+}
+.context-block .text em { color: var(--label); font-style: italic; font-weight: 600; }
+
+.methodology-block {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 28px 32px;
+  margin-bottom: 48px;
+  box-shadow: var(--card-shadow);
+}
+.methodology-block h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--label);
+  margin: 0 0 16px;
+  letter-spacing: -0.015em;
+}
+.methodology-block ul {
+  margin: 0;
+  padding-left: 22px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--label-2);
+  letter-spacing: -0.005em;
+}
+.methodology-block li { margin-bottom: 10px; }
+.methodology-block em { color: var(--label); font-style: italic; font-weight: 500; }
+
+@media (max-width: 880px) {
+  .report-grid { grid-template-columns: 1fr; }
+  .report-card { padding: 24px 22px; }
+  .card-title { font-size: 19px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <div>
+      <h1 id="hdr-title">伊朗危机沙盘推演</h1>
+      <div class="sub" id="hdr-sub">Iran Crisis Sandbox · 哈梅内伊死后的连锁推演</div>
+    </div>
+    <nav class="hdr-meta">
+      <a href="/">主图</a>
+      <span>基线 2026-05-19</span>
+      <button id="lang-toggle" class="lang-toggle" title="Switch language">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="context-block">
+    <div class="label" data-i18n="hub.context.label">研究的事实基础</div>
+    <div class="text" data-i18n="hub.context.text">
+      哈梅内伊在 <em>2026 年 2 月 28 日「史诗愤怒」行动</em> 中被以色列斩首杀死。长子莫杰塔巴接位但缺乏什叶派宪法要求的"马尔贾"（最高宗教权威）资格，合法性悬而未决。同期：革命卫队 70% 弹道导弹发射架 + 92% 海军舰艇被摧毁、里亚尔从战前 1:42K 跌至 1:90K+、巴基斯坦斡旋两周条件性停火持续延期超过 5 周。三件事同时发生，是 1979 年以来从未有过的存量打击。
+    </div>
+  </div>
+
+  <p class="hub-intro" data-i18n="hub.intro">
+    本沙盘从四个互锁视角推演伊朗危机的连锁后果：<em>美国大选传导链</em>（霍尔木兹冲击如何转化为 2026 中期 + 2028 总统大选）、<em>伊朗政权情景</em>（哈梅内伊死后政权的四种走向 + 关键观察节点）、<em>MAGA 分裂派系</em>（伊朗战争如何撕裂 Trump 阵营内部）、<em>全球供应链传导</em>（霍尔木兹封锁的五条链冲击 + 国家政治脆弱性矩阵）。四份报告各有独立分析，但共享同一基线事实和观察节点框架。
+  </p>
+
+  <section>
+    <h2 class="block-title" data-i18n="hub.reports.title">四份分析报告</h2>
+
+    <div class="report-grid">
+
+      <!-- 1. Election -->
+      <a href="/election/" class="report-card">
+        <div class="card-num">01 · US POLITICS</div>
+        <h3 class="card-title" data-i18n="hub.card.election.title">霍尔木兹冲击 → 美国大选追踪盘</h3>
+        <p class="card-thesis" data-i18n="hub.card.election.thesis">
+          2026 中期 + 2028 总统 · 5 种情形 · 油价 → 通胀 → 选票 9 步传导链 · 美国地图 · 1980/2008 历史对照
+        </p>
+        <div class="card-meta" data-i18n="hub.card.election.meta">9 个传导观测点 · 5 种情形推演 · 双语界面</div>
+        <div class="card-cta" data-i18n="hub.card.election.cta">打开传导链 →</div>
+      </a>
+
+      <!-- 2. Iran regime -->
+      <a href="/iran-war/regime-scenarios/" class="report-card">
+        <div class="card-num">02 · IRAN REGIME</div>
+        <h3 class="card-title" data-i18n="hub.card.regime.title">伊朗政权情景前瞻</h3>
+        <p class="card-thesis" data-i18n="hub.card.regime.thesis">
+          维持 40-45% / 军政府化 15-20% / 缓慢崩塌 12-15% / 瓦解加内战 8-12% · 因果链交互图 · 关键变量：西斯塔尼
+        </p>
+        <div class="card-meta" data-i18n="hub.card.regime.meta">33 个 box 详细分析 · 10 个观察节点 · 双语界面</div>
+        <div class="card-cta" data-i18n="hub.card.regime.cta">打开情景推演 →</div>
+      </a>
+
+      <!-- 3. MAGA split -->
+      <a href="/iran-war/maga-split/" class="report-card">
+        <div class="card-num">03 · MAGA SPLIT</div>
+        <h3 class="card-title" data-i18n="hub.card.maga.title">MAGA 分裂的派系结构</h3>
+        <p class="card-thesis" data-i18n="hub.card.maga.thesis">
+          介入主义 × 收缩主义 × 建制 × 反建制 四派定位 · 2025-06 Carlson vs Shapiro 公开对撕到 2026-03 CPAC 全面分裂的时间线
+        </p>
+        <div class="card-meta" data-i18n="hub.card.maga.meta">4 派系定位 · 关键时间线 · 6 个观察节点 · 双语界面</div>
+        <div class="card-cta" data-i18n="hub.card.maga.cta">打开派系分析 →</div>
+      </a>
+
+      <!-- 4. Supply chain -->
+      <a href="/iran-war/supply-chain/" class="report-card">
+        <div class="card-num">04 · SUPPLY CHAIN</div>
+        <h3 class="card-title" data-i18n="hub.card.supply.title">全球供应链传导</h3>
+        <p class="card-thesis" data-i18n="hub.card.supply.thesis">
+          五条链（油气 / 海运保险 / 国防 / 半导体 / 金融）+ 4 种霍尔木兹操作模式 + 最坏情景 5 阶段时间线 + 7 国政治脆弱性矩阵（含日本加速转向）
+        </p>
+        <div class="card-meta" data-i18n="hub.card.supply.meta">5 条链 + 跨链反馈 · 7 国脆弱性 + 4 国际冲突焦点 · 双语界面</div>
+        <div class="card-cta" data-i18n="hub.card.supply.cta">打开供应链推演 →</div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="methodology-block">
+    <h3 data-i18n="hub.methodology.title">方法论说明</h3>
+    <ul>
+      <li data-i18n="hub.methodology.1"><em>不预测，给观察节点。</em>每份报告下都有 falsifiable 观察事件——事件触发时手动更新数据文件，看板重新渲染。</li>
+      <li data-i18n="hub.methodology.2"><em>概率手动维护。</em>当前版本不做"观察节点触发 → 自动重算概率"——这层假精确性比留白更危险。所有概率反映 2026-05-19 基线日的分析判断。</li>
+      <li data-i18n="hub.methodology.3"><em>所有结论引用一级和二级文献。</em>详情面板每个证据条目均带外部链接（智库报告、政府文件、同行评审论文）。无第一手来源的判断不写入看板。</li>
+      <li data-i18n="hub.methodology.4"><em>跨史对照只作类比启发。</em>1968/2003（MAGA 部分）、1991 苏联（伊朗政权部分）、1973 石油危机（供应链部分）、1980/2008（大选部分）—— 提供节点序列的形式参考，不作为因果根据。</li>
+    </ul>
+  </div>
+
+  <footer class="footer" data-i18n="hub.footer">
+    数据基线 2026-05-19 · 主要文献：UK Commons CBP-10637 · FPRI Golkar 2025-10 · Chatham House Quilliam 2026-05 · INSS Guzansky 2026-02 · RAND Cohen 2026-04 · FDD Dubowitz 2025-12 · CFR Setser 2026-04 · Atlantic Council 2026-03 · Hanna Notte Foreign Affairs 2026-05 · IAEA 5 份 Iran safeguards 报告
+  </footer>
+
+</main>
+
+<script>
+// Simple bilingual support for the hub page
+const HUB_I18N = {
+  zh: {
+    'hdr-title': '伊朗危机沙盘推演',
+    'hdr-sub': 'Iran Crisis Sandbox · 哈梅内伊死后的连锁推演',
+    'hub.context.label': '研究的事实基础',
+    'hub.context.text': '哈梅内伊在 <em>2026 年 2 月 28 日「史诗愤怒」行动</em> 中被以色列斩首杀死。长子莫杰塔巴接位但缺乏什叶派宪法要求的"马尔贾"（最高宗教权威）资格，合法性悬而未决。同期：革命卫队 70% 弹道导弹发射架 + 92% 海军舰艇被摧毁、里亚尔从战前 1:42K 跌至 1:90K+、巴基斯坦斡旋两周条件性停火持续延期超过 5 周。三件事同时发生，是 1979 年以来从未有过的存量打击。',
+    'hub.intro': '本沙盘从四个互锁视角推演伊朗危机的连锁后果：<em>美国大选传导链</em>（霍尔木兹冲击如何转化为 2026 中期 + 2028 总统大选）、<em>伊朗政权情景</em>（哈梅内伊死后政权的四种走向 + 关键观察节点）、<em>MAGA 分裂派系</em>（伊朗战争如何撕裂 Trump 阵营内部）、<em>全球供应链传导</em>（霍尔木兹封锁的五条链冲击 + 国家政治脆弱性矩阵）。四份报告各有独立分析，但共享同一基线事实和观察节点框架。',
+    'hub.reports.title': '四份分析报告',
+    'hub.card.election.title': '霍尔木兹冲击 → 美国大选追踪盘',
+    'hub.card.election.thesis': '2026 中期 + 2028 总统 · 5 种情形 · 油价 → 通胀 → 选票 9 步传导链 · 美国地图 · 1980/2008 历史对照',
+    'hub.card.election.meta': '9 个传导观测点 · 5 种情形推演 · 双语界面',
+    'hub.card.election.cta': '打开传导链 →',
+    'hub.card.regime.title': '伊朗政权情景前瞻',
+    'hub.card.regime.thesis': '维持 40-45% / 军政府化 15-20% / 缓慢崩塌 12-15% / 瓦解加内战 8-12% · 因果链交互图 · 关键变量：西斯塔尼',
+    'hub.card.regime.meta': '33 个 box 详细分析 · 10 个观察节点 · 双语界面',
+    'hub.card.regime.cta': '打开情景推演 →',
+    'hub.card.maga.title': 'MAGA 分裂的派系结构',
+    'hub.card.maga.thesis': '介入主义 × 收缩主义 × 建制 × 反建制 四派定位 · 2025-06 Carlson vs Shapiro 公开对撕到 2026-03 CPAC 全面分裂的时间线',
+    'hub.card.maga.meta': '4 派系定位 · 关键时间线 · 6 个观察节点 · 双语界面',
+    'hub.card.maga.cta': '打开派系分析 →',
+    'hub.card.supply.title': '全球供应链传导',
+    'hub.card.supply.thesis': '五条链（油气 / 海运保险 / 国防 / 半导体 / 金融）+ 4 种霍尔木兹操作模式 + 最坏情景 5 阶段时间线 + 7 国政治脆弱性矩阵（含日本加速转向）',
+    'hub.card.supply.meta': '5 条链 + 跨链反馈 · 7 国脆弱性 + 4 国际冲突焦点 · 双语界面',
+    'hub.card.supply.cta': '打开供应链推演 →',
+    'hub.methodology.title': '方法论说明',
+    'hub.methodology.1': '<em>不预测，给观察节点。</em>每份报告下都有 falsifiable 观察事件——事件触发时手动更新数据文件，看板重新渲染。',
+    'hub.methodology.2': '<em>概率手动维护。</em>当前版本不做"观察节点触发 → 自动重算概率"——这层假精确性比留白更危险。所有概率反映 2026-05-19 基线日的分析判断。',
+    'hub.methodology.3': '<em>所有结论引用一级和二级文献。</em>详情面板每个证据条目均带外部链接（智库报告、政府文件、同行评审论文）。无第一手来源的判断不写入看板。',
+    'hub.methodology.4': '<em>跨史对照只作类比启发。</em>1968/2003（MAGA 部分）、1991 苏联（伊朗政权部分）、1973 石油危机（供应链部分）、1980/2008（大选部分）—— 提供节点序列的形式参考，不作为因果根据。',
+    'hub.footer': '数据基线 2026-05-19 · 主要文献：UK Commons CBP-10637 · FPRI Golkar 2025-10 · Chatham House Quilliam 2026-05 · INSS Guzansky 2026-02 · RAND Cohen 2026-04 · FDD Dubowitz 2025-12 · CFR Setser 2026-04 · Atlantic Council 2026-03 · Hanna Notte Foreign Affairs 2026-05 · IAEA 5 份 Iran safeguards 报告'
+  },
+  en: {
+    'hdr-title': 'Iran Crisis Sandbox',
+    'hdr-sub': 'Iran Crisis Sandbox · cascading consequences after Khamenei\'s death',
+    'hub.context.label': 'Factual baseline',
+    'hub.context.text': 'Khamenei was killed by an Israeli decapitation strike during <em>Operation Epic Fury on 28 February 2026</em>. His eldest son Mojtaba succeeded him but lacks the "Marja" (highest Shia religious authority) qualification required by the constitution — legitimacy unresolved. At the same time: 70% of IRGC ballistic missile launchers and 92% of naval vessels destroyed; the rial fell from a pre-war 1:42K to 1:90K+; the Pakistan-brokered two-week conditional ceasefire has been rolling-extended for over 5 weeks. These three shocks stacking simultaneously has never occurred since 1979.',
+    'hub.intro': 'This sandbox tracks the cascading consequences of the Iran crisis across four interlocking perspectives: <em>US election transmission</em> (how the Hormuz shock translates into 2026 midterms + 2028 presidential), <em>Iran regime paths</em> (the four post-Khamenei trajectories + key observation nodes), <em>MAGA factional split</em> (how the Iran war tears Trump\'s coalition), and <em>global supply chain transmission</em> (the five-chain shock from Hormuz closure + the political-fragility matrix across countries). Each report stands alone but shares the same factual baseline and observation-node framework.',
+    'hub.reports.title': 'Four analytical reports',
+    'hub.card.election.title': 'Hormuz shock → US election tracker',
+    'hub.card.election.thesis': '2026 midterms + 2028 presidential · 5 scenarios · oil → inflation → vote-share 9-step chain · US map · 1980/2008 historical comparison',
+    'hub.card.election.meta': '9 transmission checkpoints · 5 scenarios · bilingual UI',
+    'hub.card.election.cta': 'Open transmission chain →',
+    'hub.card.regime.title': 'Iran regime scenarios',
+    'hub.card.regime.thesis': 'Continuity 40-45% / Junta 15-20% / Slow collapse 12-15% / Disintegration + civil war 8-12% · interactive causal map · key variable: Sistani',
+    'hub.card.regime.meta': '33 boxes of detailed analysis · 10 observation nodes · bilingual UI',
+    'hub.card.regime.cta': 'Open scenarios →',
+    'hub.card.maga.title': 'MAGA factional split',
+    'hub.card.maga.thesis': 'Interventionist × restrainer × establishment × anti-establishment four-quadrant mapping · timeline from June 2025 Carlson vs Shapiro public split to March 2026 CPAC full schism',
+    'hub.card.maga.meta': '4 factions · key timeline · 6 observation nodes · bilingual UI',
+    'hub.card.maga.cta': 'Open factional analysis →',
+    'hub.card.supply.title': 'Global supply chain transmission',
+    'hub.card.supply.thesis': 'Five chains (oil & gas / maritime & insurance / defense / semiconductors / financial) + 4 Hormuz operational modes + 5-stage worst-case timeline + 7-country political fragility matrix (including Japan\'s accelerated pivot)',
+    'hub.card.supply.meta': '5 chains + cross-chain feedback · 7 countries + 4 international conflict focal points · bilingual UI',
+    'hub.card.supply.cta': 'Open supply chain →',
+    'hub.methodology.title': 'Methodology',
+    'hub.methodology.1': '<em>No predictions, only observation nodes.</em> Each report lists falsifiable observable events — when one triggers, edit the data file and redeploy.',
+    'hub.methodology.2': '<em>Probabilities are maintained manually.</em> Current version does not auto-recompute probabilities when nodes trigger — that pseudo-precision is more dangerous than leaving the seam visible. All probabilities reflect 2026-05-19 baseline judgment.',
+    'hub.methodology.3': '<em>All conclusions cite primary or secondary literature.</em> Every evidence item in the detail panel carries an external link (think-tank reports, government documents, peer-reviewed papers). Judgments without first-hand sourcing are not published.',
+    'hub.methodology.4': '<em>Cross-historical comparisons are heuristic only.</em> 1968/2003 (MAGA), 1991 Soviet (regime), 1973 oil crisis (supply chain), 1980/2008 (election) — these provide formal node-sequence references, not causal grounding.',
+    'hub.footer': 'Data baseline 2026-05-19 · Primary sources: UK Commons CBP-10637 · FPRI Golkar 2025-10 · Chatham House Quilliam 2026-05 · INSS Guzansky 2026-02 · RAND Cohen 2026-04 · FDD Dubowitz 2025-12 · CFR Setser 2026-04 · Atlantic Council 2026-03 · Hanna Notte Foreign Affairs 2026-05 · IAEA 5 Iran safeguards reports'
+  }
+};
+
+const lang = localStorage.getItem('iran-lang') || 'zh';
+function applyLang() {
+  const dict = HUB_I18N[lang];
+  document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+  Object.entries(dict).forEach(([key, val]) => {
+    const el = key === 'hdr-title' ? document.getElementById('hdr-title')
+             : key === 'hdr-sub' ? document.getElementById('hdr-sub')
+             : document.querySelector(`[data-i18n="${key}"]`);
+    if (el) el.innerHTML = val;
+  });
+  const btn = document.getElementById('lang-toggle');
+  if (btn) btn.textContent = lang === 'zh' ? 'EN' : '中';
+}
+document.addEventListener('DOMContentLoaded', () => {
+  applyLang();
+  document.getElementById('lang-toggle').addEventListener('click', () => {
+    const newLang = lang === 'zh' ? 'en' : 'zh';
+    localStorage.setItem('iran-lang', newLang);
+    location.reload();
+  });
+});
+</script>
+
+</body>
+</html>

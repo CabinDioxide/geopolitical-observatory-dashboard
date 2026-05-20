@@ -1,0 +1,720 @@
+{
+  "meta": {
+    "title": "Iran: Regime Continuity, or Slide Toward Collapse?",
+    "subtitle": "Four trajectories — preconditions, mechanisms, consequences, and observation nodes",
+    "baseline_date": "2026-05-19",
+    "last_updated": "2026-05-19",
+    "source_report": {
+      "title": "Four Trajectories for the Iranian Regime and the Second-Order Geopolitical Transmission Across the Middle East",
+      "path": "/iran-war/reports/02_iran_regime_scenarios.docx",
+      "version": "4"
+    },
+    "stance_summary": "In February 2026, Iran's Supreme Leader Khamenei was killed in a decapitation strike during Israel's Operation Epic Fury. His eldest son Mojtaba took over, but lacks the marja (top Shia clerical authority) qualification required by the Shia constitution, leaving his legitimacy in limbo.\n\nThis page evaluates four possible trajectories for the Iranian regime over the next 12-24 months: **Continuity (40-45%), Militarization (15-20%), Slow Collapse (12-15%), Disintegration and Civil War (8-12%)**.\n\nThe single most decisive variable is whether Ali al-Sistani — the most senior marja in global Shia Islam, 96 years old and residing in Najaf, Iraq — publicly endorses Mojtaba. His posture alone can drive the continuity probability from 40-45% down to 20-25% overnight."
+  },
+  "methodology": {
+    "framework": "Probability for each trajectory = historical prior × weakening factor (or reinforcing factor)",
+    "prior_basis": "Since 1979 the Iranian regime has weathered three major crises: the Iran-Iraq War (1980-1988), the economic collapse and reformist challenge of the 1990s, and the 2009 Green Movement. After each, the Revolutionary Guard (IRGC, Islamic Revolutionary Guard Corps) emerged stronger. This gives the 'continuity' path a high historical prior.",
+    "weakening_factors": "Three structural shocks now compound in 2026: 70% of IRGC ballistic missile launchers destroyed, 92% of naval vessels destroyed, and the decapitation killing of Khamenei himself. Nothing of this scale has occurred simultaneously since 1979."
+  },
+  "glossary": [
+    {
+      "term": "IRGC",
+      "zh": "伊斯兰革命卫队",
+      "en": "Islamic Revolutionary Guard Corps",
+      "note": "Iran's core armed force, commanded by Hossein Salami. Comprises five service branches (ground forces, navy, aerospace force, Quds Force for overseas special operations, and the Basij militia) plus 17 provincial corps. Through its commercial empire it controls roughly 30-40% of Iranian GDP."
+    },
+    {
+      "term": "Marja",
+      "zh": "马尔贾",
+      "en": "Marja-e Taqlid",
+      "note": "The highest rank of Shia clerical authority, meaning 'source of emulation.' Under the Shia constitution, the Supreme Leader must hold this rank. There are roughly 8 active top-tier marjas today; Sistani is the de facto highest global authority."
+    },
+    {
+      "term": "Mojtaba",
+      "zh": "莫杰塔巴·哈梅内伊",
+      "en": "Mojtaba Khamenei",
+      "note": "Khamenei's eldest son. Declared successor in March 2026, but lacks marja qualification, leaving a constitutional grey zone over his legitimacy."
+    },
+    {
+      "term": "Sistani",
+      "zh": "西斯塔尼",
+      "en": "Ali al-Sistani",
+      "note": "Global Shia Islam's de facto highest marja. Age 96, resident in Najaf, Iraq. Final arbiter of Mojtaba's legitimacy."
+    },
+    {
+      "term": "Operation Epic Fury",
+      "zh": "史诗愤怒行动",
+      "en": "Operation Epic Fury",
+      "note": "Codename for the February 2026 Israeli military operation against Iran. The decapitation strike killed Khamenei."
+    },
+    {
+      "term": "Operation Rising Lion",
+      "zh": "崛起的雄狮行动",
+      "en": "Operation Rising Lion",
+      "note": "Codename for the June 2025 Israeli military operation against Iran, also known as the '12-Day War.' Destroyed 70% of Iranian ballistic missile launchers and 92% of its navy."
+    },
+    {
+      "term": "rial",
+      "zh": "里亚尔",
+      "en": "rial",
+      "note": "Iran's official currency. Pre-war rate was 1 USD = 42,000 rials; by May 2026 it had fallen past 1:90,000."
+    },
+    {
+      "term": "Pezeshkian",
+      "zh": "佩泽什基安",
+      "en": "Masoud Pezeshkian",
+      "note": "Iran's current president, elected July 2024 as a reformist. Does not come from the IRGC and commands no military force."
+    },
+    {
+      "term": "MBS",
+      "zh": "穆罕默德·本·萨勒曼",
+      "en": "Mohammed bin Salman",
+      "note": "Crown Prince of Saudi Arabia and the kingdom's de facto chief decision-maker."
+    },
+    {
+      "term": "Khuzestan",
+      "zh": "胡齐斯坦省",
+      "en": "Khuzestan",
+      "note": "Southwestern Iranian province with a large Arab population. Contains roughly 80% of Iran's oil reserves."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "continuity",
+      "name": "Continuity",
+      "probability": [
+        40,
+        45
+      ],
+      "color": "neutral",
+      "thesis": "Mojtaba's succession proceeds smoothly, Sistani does not openly oppose him, the IRGC avoids public fracture, and the Pakistan-brokered two-week ceasefire converts into a long-term arrangement — all four conditions hold.",
+      "probability_calc": {
+        "prior": [
+          60,
+          70
+        ],
+        "prior_basis": "Since 1979 the Iranian regime has survived three major crises. Each time the IRGC turned external threats into internal mobilization resources and emerged stronger.",
+        "factor_label": "Weakening factor",
+        "factor_basis": "Three shocks now coincide: 70% of IRGC ballistic missile launchers destroyed, 92% of the navy destroyed, and Khamenei himself killed.",
+        "result": [
+          40,
+          45
+        ]
+      },
+      "preconditions": [
+        {
+          "id": "c_pre_mojtaba",
+          "label": "Mojtaba formally confirmed by the Assembly of Experts",
+          "status": "triggered",
+          "analysis": "The Assembly of Experts, created by Iran's 1989 constitutional amendments, is an 88-seat body whose members must be clerics of marja rank (the highest rank of Shia clerical authority). Under Article 107 of Iran's constitution, the Assembly is responsible for electing and supervising the Supreme Leader; upon the Leader's death, the Assembly convenes to appoint a successor.\n\nAfter Khamenei was killed in Israel's Operation Epic Fury decapitation strike on 28 February 2026, the Assembly convened on an emergency basis in early March and formally confirmed Mojtaba's appointment. The UK House of Commons Library research briefing CBP-10637, published in April 2026, confirms this.\n\nBut procedural legitimacy is not religious legitimacy. The Assembly itself is tightly controlled by the regime — FPRI scholar Saeid Golkar, in his October 2025 essay, notes that over the past three decades the Assembly has never rejected any major personnel proposal from Khamenei. This formal 'confirmation' is therefore a necessary condition for the continuity path, but far from sufficient: it must hold alongside Sistani's posture, IRGC unity, and the ceasefire's continuation.",
+          "sources": [
+            {
+              "label": "UK Commons CBP-10637: April 2026 research briefing",
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/"
+            },
+            {
+              "label": "FPRI Golkar 2025-10: The Islamic Republic After the 12-Day War",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            }
+          ]
+        },
+        {
+          "id": "c_pre_sistani",
+          "label": "Sistani does not publicly oppose Mojtaba",
+          "status": "open",
+          "analysis": "Ali al-Sistani is the de facto highest religious authority for Shia Muslims worldwide. Now 96, he has long resided in Najaf, Iraq — one of the holiest cities of Shia Islam. His marja status (Marja-e Taqlid, meaning 'source of emulation,' the highest rank of Shia clerical authority) gives him final say on religious doctrine and political legitimacy beyond Iran's borders.\n\nArticle 107 of Iran's 1979 constitution requires that the Supreme Leader himself hold marja qualification. Khamenei, when he succeeded Khomeini in 1989, held only the rank of Hojjat al-Islam (two steps below marja). His succession was engineered through political maneuvering in the Assembly of Experts and then, over three decades, by a strategy of 'status purchase' — controlling the $20 billion-valued Astan Quds Razavi (the management body of the Imam Reza shrine) and providing long-term subsidies to the seminaries of Qom.\n\nMojtaba has not had those three decades. FPRI's Saeid Golkar makes this explicit in his October 2025 essay: whether Mojtaba's legitimacy holds depends on Sistani's posture. If Sistani personally attends the succession ceremony, he effectively lends the legitimacy of global Shia Islam's highest authority to Mojtaba and the constitutional rule is effectively rewritten. If Sistani remains silent or publicly refuses, Mojtaba's legitimacy collapses immediately. RAND's Raphael S. Cohen, in his April 2026 report, similarly identifies Sistani's posture as 'the single variable that decides whether the regime survives.'\n\nAs of the 19 May 2026 baseline, Sistani has not made a public statement. His next public appearance, in any setting, is the critical signal.",
+          "sources": [
+            {
+              "label": "FPRI Golkar 2025-10: The Islamic Republic After the 12-Day War",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            },
+            {
+              "label": "RAND Cohen 2026-04: Trump's Iran War Is a Dilemma, Not a Debacle",
+              "url": "https://www.rand.org/pubs/commentary/2026/04/trumps-iran-war-is-a-dilemma-not-a-debacle.html"
+            }
+          ]
+        },
+        {
+          "id": "c_pre_irgc_unity",
+          "label": "No public fracture within the IRGC",
+          "status": "triggered",
+          "analysis": "The IRGC (Islamic Revolutionary Guard Corps) was established under Article 150 of Iran's 1979 constitution and operates in parallel with the regular army (Artesh). It consists of five service branches (ground forces, navy, aerospace force, Quds Force for overseas special operations, and the Basij militia) and 17 provincial corps — one for each Iranian province, with additional dedicated units in major cities including Tehran, Mashhad, and Qom. The commander-in-chief is Hossein Salami; the chief of staff is Mohammad Bagheri.\n\nThrough its commercial empire — the largest arm being Khatam al-Anbiya, a construction conglomerate that began as the IRGC's combat engineering unit — the IRGC controls roughly 30-40% of Iranian GDP. This 'military-political-economic' fusion means any public factional split would shake the military, political, and economic spheres simultaneously.\n\nAs of the 19 May 2026 baseline, there is no public conflict between Salami and Bagheri, and no dissent among the 17 provincial corps commanders. FPRI's Golkar, in his October 2025 essay, terms this internal cohesion 'adaptive authoritarianism' — the ability to convert external crises into reinforced internal discipline. He documents three historical precedents: expansion to a 350,000-strong regular force plus 2 million Basij during the Iran-Iraq War (1980-1988); construction of the commercial empire during the 1990s economic crisis; and takeover of the intelligence and police apparatus after the 2009 Green Movement.\n\nGolkar simultaneously warns that Khamenei's death may break this unity for the first time, because the IRGC's ultimate arbiter is gone. This precondition is therefore currently 'triggered' (no public split), but its stability is below historical average.",
+          "sources": [
+            {
+              "label": "FPRI Golkar 2025-10: The Islamic Republic After the 12-Day War",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            }
+          ]
+        },
+        {
+          "id": "c_pre_ceasefire",
+          "label": "Pakistan-brokered ceasefire converts to a long-term agreement",
+          "status": "open",
+          "analysis": "In early March 2026, Pakistan's prime minister brokered a 'two-week conditional ceasefire' between Iran, Israel, and the Gulf states. As of mid-May 2026, the ceasefire has been rolled forward for more than five weeks but has yet to be upgraded into a formal long-term framework. The UK House of Commons Library briefing CBP-10637 documents this progression in detail.\n\nPakistan's role as mediator is structurally significant. A 2026 Stimson Center report identifies three reasons: first, Pakistan is the only nuclear-armed state in the Muslim world, giving it unique bargaining leverage; second, Pakistan shares a 900-kilometer land border with Iran but has no diplomatic relations with Israel, making it a credible intermediary; third, Pakistan's economy depends heavily on aid and remittances from the Gulf states (Saudi Arabia, UAE), forcing it to maintain regional stability.\n\nIf the ceasefire is upgraded into a formal long-term framework, Pakistan becomes a permanent Middle Eastern diplomatic asset, providing a strategic counterweight to India's India-Middle East-Europe Economic Corridor (IMEC). This is the key support pillar of the continuity path.\n\nBut as of the baseline date, the ceasefire remains a rolling extension with no formal agreement. Any breach or escalation — resumption of the nuclear program, another closure of the Strait of Hormuz, a major Hezbollah attack — could dissolve the arrangement in an instant.",
+          "sources": [
+            {
+              "label": "UK Commons CBP-10637: April 2026 research briefing",
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/"
+            },
+            {
+              "label": "Stimson 2026: Iran-Aligned Militias Jeopardize Iraq's Gulf Reset",
+              "url": "https://www.stimson.org/2026/iran-aligned-militias-jeopardize-iraqs-gulf-reset/"
+            }
+          ]
+        }
+      ],
+      "logic": "Preconditions are conjunctive (AND): all four must hold for the continuity path to materialize. Any one falsified lowers the continuity probability.",
+      "mechanisms": [
+        {
+          "label": "IRGC converts external threats into internal mobilization",
+          "description": "During the Iran-Iraq War (1980-1988) the IRGC grew from an ad-hoc revolutionary militia into a 350,000-strong regular force plus 2 million Basij; during the 1990s economic crisis it built its commercial empire starting from the Khatam al-Anbiya engineering unit; after the 2009 Green Movement it absorbed parts of the Ministry of Intelligence (MOIS), the national police (NAJA), and the border guards. Each crisis has left the IRGC stronger. FPRI's Saeid Golkar calls this the core mechanism of 'adaptive authoritarianism.'",
+          "sources": [
+            {
+              "label": "FPRI Golkar 2025-10: The Islamic Republic After the 12-Day War",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            }
+          ]
+        }
+      ],
+      "consequences": [
+        {
+          "actor": "Saudi Arabia",
+          "label": "Enters strategic reflection; Red Sea economic geography restructuring begins",
+          "analysis": "Saudi Arabia entered a period of strategic reflection after Israel launched Operation Rising Lion (the '12-Day War') in June 2025. Chatham House Middle East program scholar Neil Quilliam, in his May 2026 report, makes the point explicitly: Crown Prince Mohammed bin Salman's (MBS) decision-making style has shifted from the previous 'fast, personalized, confrontational' mode back toward 'slow, consensus-driven.'\n\nEconomic-geographic restructuring is now formally underway. Saudi Aramco's (the state oil company) core oil exports previously flowed primarily through the Strait of Hormuz (from east-coast ports including Ras Tanura and Jubail), but Hormuz exposed serious vulnerabilities during the war — the IRGC navy repeatedly seized vessels and imposed transit fees. Saudi Arabia is now accelerating the shift of exports to the Red Sea (via the west-coast port of Yanbu). Quilliam estimates that scaling the existing east-to-west oil pipeline capacity from 4 million barrels per day (mb/d) to 7 mb/d will require 'sustained, massive investment.' The Vision 2030 economic diversification strategy is structurally threatened because the core cities of Jeddah and Riyadh sit close to the Hormuz risk envelope.\n\nBut under the continuity path, Saudi Arabia will not act aggressively. In the same report, Quilliam states bluntly: 'Kinetic counterstrikes against Iran would not only raise risks to energy assets, but could drag the Houthis more directly into the conflict.' Saudi Arabia would rather apply economic pressure (halting cooperation, reducing investment) and diplomatic recalibration (deepening ties with China, India, Pakistan) than seek military confrontation.",
+          "sources": [
+            {
+              "label": "Chatham House Quilliam 2026-05: How the Iran War Is Reshaping Saudi Strategy",
+              "url": "https://www.chathamhouse.org/2026/05/how-iran-war-reshaping-saudi-strategy-hormuz-and-houthis-uaes-opec-exit"
+            }
+          ]
+        },
+        {
+          "actor": "UAE",
+          "label": "Rift with Saudi Arabia hardens",
+          "analysis": "Under the continuity path, the United Arab Emirates retains its position as the most hardline anti-Iran actor in the region. Yoel Guzansky of Israel's Institute for National Security Studies (INSS) documents the public Saudi-UAE rupture in detail in his February 2026 report.\n\nIn closed-door talks cited in the UK Commons CBP-10637 briefing, the UAE ambassador in Washington put forward three demands: first, that Iran unconditionally reopen the Strait of Hormuz; second, that Iran pay full reparations for war damage; and third, that Iran permanently abandon support for armed proxies (Hezbollah, the Houthis, Iraqi militias) and constrain its ballistic missile program. Guzansky assesses that not a single one of these would be accepted by Iran under the continuity path. The UAE will therefore remain dissatisfied but lack the capacity to act unilaterally.\n\nThe Saudi-UAE rift has already gone public on the Yemen battlefield. Guzansky documents Saudi forces directly attacking, in December 2025, vessels carrying UAE weapons to the Southern Transitional Council (STC) — separatist factions in South Yemen — forcing the UAE to withdraw entirely from Yemen. This kind of public confrontation will persist under the continuity path and may spread to other theaters (Libya, Sudan); Guzansky has already documented the two countries' proxy war pattern in Sudan, with Saudi Arabia backing the Burhan-led military and the UAE backing the Hemedti-led RSF militia.",
+          "sources": [
+            {
+              "label": "INSS Guzansky 2026-02: Saudi Arabia-UAE 2026",
+              "url": "https://www.inss.org.il/publication/saudi-arabia-uae-2026/"
+            },
+            {
+              "label": "UK Commons CBP-10637",
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/"
+            }
+          ]
+        },
+        {
+          "actor": "Iraq",
+          "label": "Caught in a two-way pull; pro-Iran militias continue low-frequency attacks",
+          "analysis": "Iraq enters a 'two-way pull' state under the continuity path. On one side stand the Popular Mobilization Forces (PMF) — a Shia militia coalition formally incorporated by the Iraqi government in 2014 to fight the Islamic State (ISIS), comprising roughly 40 brigades and an estimated 120,000-150,000 personnel, the majority of which are aligned with Iran. A 2026 Stimson Center report notes that the PMF draws legal salaries from the Iraqi government budget (roughly $2.6 billion per year), but its actual chain of command runs through the IRGC Quds Force back to Tehran.\n\nOn the other side, Iraq's new prime minister faces economic pressure from Saudi Arabia. Riyadh pledged $3 billion in investment and loans to Iraq in 2024-2025, conditional on curbing pro-Iran militia activity. Under the continuity path, the Iraqi prime minister cannot satisfy both sides simultaneously and will oscillate continuously between 'gestures' and 'substantive concessions.'\n\nRAND's Raphael S. Cohen documents in his April 2026 report that pro-Iran militias continue attacks across Iraq — targeting the Kurdish region (Erbil, Sulaymaniyah) and U.S. military positions (Ain al-Asad air base, the Baghdad embassy compound). Cohen assesses that under the continuity path these attacks become a low-frequency normal: 2-5 small-scale attacks per month, never escalating into major conflict, but never eliminated either.",
+          "sources": [
+            {
+              "label": "Stimson 2026: Iran-Aligned Militias Jeopardize Iraq's Gulf Reset",
+              "url": "https://www.stimson.org/2026/iran-aligned-militias-jeopardize-iraqs-gulf-reset/"
+            },
+            {
+              "label": "RAND Cohen 2026-04: Trump's Iran War Is a Dilemma, Not a Debacle",
+              "url": "https://www.rand.org/pubs/commentary/2026/04/trumps-iran-war-is-a-dilemma-not-a-debacle.html"
+            }
+          ]
+        },
+        {
+          "actor": "Hezbollah",
+          "label": "Counterintuitively escalates against Israel",
+          "analysis": "Hezbollah is the Lebanese Shia armed movement and political party established in 1982 with IRGC Quds Force assistance. It is Iran's most important 'forward deterrent asset' — its rocket threat against northern Israel deters Israel from striking Iran directly.\n\nThe most counterintuitive development comes under the continuity path. RAND's Raphael S. Cohen notes in his April 2026 report that under regime continuity, Hezbollah retains its supply lines through Syria (munitions, funding, training), but the attrition from the 12-Day War and Operation Epic Fury — estimated 30% losses to Hezbollah's own rocket inventory — pushes it to 'hit hard' against Israel as a way to consolidate its position within the regime and within the Lebanese Shia community.\n\nIn parallel, Lebanon's prime minister Nawaf Salam — a reformist who took office in January 2025 — has publicly blamed Hezbollah for 'dragging Lebanon into an unnecessary war' and called on Hezbollah to disarm and to expel the Iranian ambassador in Beirut. This is the most public confrontation between the Lebanese state and Hezbollah since the 1990 Taif Agreement. Cohen assesses that under the continuity path Lebanon sits 'on the verge of quasi-civil war,' but because Hezbollah retains its military advantage, the probability of full civil war remains low.",
+          "sources": [
+            {
+              "label": "RAND Cohen 2026-04: Trump's Iran War Is a Dilemma, Not a Debacle",
+              "url": "https://www.rand.org/pubs/commentary/2026/04/trumps-iran-war-is-a-dilemma-not-a-debacle.html"
+            }
+          ]
+        },
+        {
+          "actor": "China",
+          "label": "Enters dual-track mode: keeps buying oil, no incremental investment",
+          "analysis": "Under the continuity path, China shifts to a 'dual-track' approach toward Iran: economic engagement continues through oil purchases, while strategic investment freezes.\n\nThe first track is oil procurement. China continues to buy Iranian crude through its 'shadow fleet' — tankers that switch off Automatic Identification System (AIS) transponders, fly false flags, and use ship-to-ship transfers to evade sanctions. Mark Dubowitz of the Foundation for Defense of Democracies (FDD), in a December 2025 report, estimates that discounts may deepen further, from the pre-war range of $10-15 per barrel below Brent to $30-40 per barrel. Dubowitz also documents that low-intensity Chinese supply of missile-related materials to Iran continues under the continuity path, but at levels well below those seen in early 2022 supplies to Russia.\n\nThe second track is infrastructure investment. Previously promised Chinese Belt and Road Initiative (BRI) projects inside Iran — the port of Chabahar, the Iranian east-west railway, oil and gas cooperation — have halted incremental investment. China is unwilling to commit deeply while regime legitimacy remains uncertain.\n\nOn the common misreading of RMB settlement: Brad Setser of the Council on Foreign Relations (CFR), in his April 2026 piece, refutes it explicitly — claims that 'Iranian oil settled in RMB threatens the dollar system' are greatly overstated. Manufacturing Asia's (China + Vietnam + South Korea + Japan) $1.5 trillion trade surplus dwarfs the roughly $200 billion combined surplus of all global oil exporters; RMB settlement of Iranian oil does not move the needle on dollar dominance.",
+          "sources": [
+            {
+              "label": "FDD Dubowitz 2025-12: Half a Year After Operation Rising Lion",
+              "url": "https://www.fdd.org/analysis/2025/12/22/a-half-year-after-operation-rising-lion-irans-ballistic-missile-threat-re-emerges/"
+            },
+            {
+              "label": "CFR Setser 2026-04: Petrodollars — Myths and Reality",
+              "url": "https://www.cfr.org/articles/petrodollars-myths-and-reality"
+            }
+          ]
+        },
+        {
+          "actor": "Russia",
+          "label": "Plays mediator-beneficiary",
+          "analysis": "Russia plays the role of 'mediator-beneficiary' under the continuity path — neutral on the surface, advantaged underneath.\n\nOn the surface, Russia continues to sell Iran air defense systems (S-400 and the upgraded S-500) to help Iran rebuild after the Israeli strikes. But it provides no substantive war support — no weapons, intelligence, or ground advisers.\n\nHanna Notte makes the underlying argument explicit in her May 2026 Foreign Affairs piece 'Not the World Russia Wants': early in the 2022 Russia-Ukraine war Russia depended heavily on Iranian-supplied Shahed-136 loitering munitions, but since 2024 Russia has mass-produced its own Shahed copy (Geran-2) domestically and no longer relies on Iranian supply. In other words, Iran's strategic value to Russia has dropped significantly.\n\nThis shift means that under the continuity path, Russia will not pay any meaningful cost on Iran's behalf. Notte assesses that Russia actually prefers a weakened Iran (enabling Russia to negotiate solo with the West over the Middle East), but does not want Iran to disintegrate entirely (which would risk a pro-Western Iran). Russia's 'mediation' is therefore self-interested — prolonging Iran's existence in a weakened state.",
+          "sources": [
+            {
+              "label": "Hanna Notte 2026-05 Foreign Affairs: Not the World Russia Wants",
+              "url": "https://www.foreignaffairs.com/united-states/not-world-russia-wants"
+            }
+          ]
+        }
+      ],
+      "observations": [
+        {
+          "id": "c_obs_sistani",
+          "label": "Whether Sistani attends Mojtaba's succession ceremony",
+          "summary": "Sistani's posture, as the highest Shia authority, is the final arbiter of Mojtaba's legitimacy.",
+          "threshold": "Personally attends → continuity probability revised up to 50%+; sends a representative → continuity probability unchanged; remains silent → continuity drops immediately to 25-30%; publicly refuses → continuity drops to 20-25%, disintegration rises to 15-25%",
+          "status": "open",
+          "last_check": "2026-05-15",
+          "significance": "The signal strength is comparable to the fall of the Berlin Wall in November 1989 for the Soviet system — a single node lights red and the whole system reconfigures.",
+          "analysis": "Why is this the single most important variable right now?\n\nAli al-Sistani is the de facto highest religious authority for Shia Muslims worldwide. His marja status means his judgments on doctrine and political legitimacy transcend national borders — Shia in Iran, Shia in Iraq, the spiritual leadership of Hezbollah in Lebanon, and Shia minorities in Bahrain and Saudi Arabia's Eastern Province all default to accepting his rulings.\n\nMojtaba himself lacks marja qualification and, under Article 107 of Iran's 1979 constitution, should not be Supreme Leader. If Sistani personally attends the succession ceremony, he effectively lends global Shia Islam's highest authority to Mojtaba and the constitutional rule is effectively rewritten. But Sistani is known for 'silent opposition' — his refusal to publicly support or oppose is itself a form of denial.\n\nFPRI's Saeid Golkar identifies this node, in his October 2025 essay, as 'the single observation node with the strongest signal along the continuity path.' RAND's Raphael S. Cohen, in his April 2026 report, similarly identifies Sistani's posture as 'the single variable that decides whether the regime survives.' Two independent analysts converge on the same judgment, raising confidence.\n\nHow to monitor: watch Najaf's official religious media (the Sistani.org website, al-Mubin TV) and on-the-ground coverage of Mojtaba's succession ceremony (date undetermined, expected within 2026).",
+          "sources": [
+            {
+              "label": "FPRI Golkar 2025-10: The Islamic Republic After the 12-Day War",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            },
+            {
+              "label": "RAND Cohen 2026-04: Trump's Iran War Is a Dilemma, Not a Debacle",
+              "url": "https://www.rand.org/pubs/commentary/2026/04/trumps-iran-war-is-a-dilemma-not-a-debacle.html"
+            }
+          ]
+        },
+        {
+          "id": "c_obs_pakistan_deal",
+          "label": "Pakistan-brokered ceasefire upgraded to a formal long-term agreement",
+          "summary": "Two-week conditional ceasefire to long-term framework.",
+          "threshold": "Upgraded to long-term agreement → continuity confirmed; rolling extension → continuity in limbo; collapse → continuity probability immediately downgraded",
+          "status": "open",
+          "last_check": "2026-05-19",
+          "analysis": "Why this node matters.\n\nThe 'two-week conditional ceasefire' brokered by Pakistan's prime minister in early March 2026 has now been rolled forward for more than five weeks. This 'rolling extension' is an unstable equilibrium — any breach or escalation could dissolve it in an instant. If it is upgraded into a formal long-term agreement (typical form: an Iran-Gulf joint working group, specific security mechanisms governing Hormuz transit, codified penalty clauses for violations), it signals that all parties have accepted a new post-war regional equilibrium.\n\nThe UK Commons Library briefing CBP-10637 records the three demands raised by the UAE ambassador in closed-door talks (reopening Hormuz, Iranian reparations, constraints on armed proxies). If none of these are accepted, the ceasefire is likely to collapse in the second round of talks.\n\nHow to monitor: watch public statements from Pakistan's foreign ministry, remarks from Iranian foreign ministry spokesman Saeed Khatibzadeh, and the activity of Saudi and UAE embassies in Pakistan. A formal signing ceremony or parliamentary-authorized multilateral agreement would mean this node has triggered.",
+          "sources": [
+            {
+              "label": "UK Commons CBP-10637: April 2026 research briefing",
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/"
+            }
+          ]
+        },
+        {
+          "id": "c_obs_iaea_resume",
+          "label": "IAEA resumes on-the-ground inspections in Iran",
+          "summary": "On-the-ground inspections are currently at zero.",
+          "threshold": "Full resumption → continuity confirmed; partial resumption → partial support; continued refusal → continuity in limbo",
+          "status": "open",
+          "last_check": "2026-05-19",
+          "analysis": "Why this node matters.\n\nThe International Atomic Energy Agency (IAEA), under the UN system, is responsible for nuclear safety inspections. Under the 2015 nuclear deal (JCPOA), the IAEA had resident inspectors at Iran's three main nuclear facilities — Fordow, Natanz, and Isfahan. After Trump's first-term withdrawal from the JCPOA in 2018, inspections were gradually curtailed; during Operation Rising Lion in 2025, all inspectors were withdrawn.\n\nAs of the 19 May 2026 baseline, IAEA on-the-ground inspections inside Iran stand at zero. All assessments now rest on satellite remote sensing and intelligence, with low confidence. IAEA Director General Rafael Grossi has repeatedly called for resumed inspections in the most recent board report, GOV/2026/8.\n\nIf Iran allows IAEA inspections to resume — even partial, for example only at Natanz — it would mean two things: first, Iran has actively chosen 'semi-transparency' as a way to gain international acceptance of the new equilibrium; second, Iran assesses that its remaining nuclear capability is not sufficient as a deterrent, and it would rather accept external monitoring. Both strongly support the continuity path.\n\nHow to monitor: watch the IAEA's quarterly board meetings (March, June, September, December), statements from the Atomic Energy Organization of Iran (AEOI), and Grossi's travel itinerary.",
+          "sources": [
+            {
+              "label": "IAEA most recent board report GOV/2026/8",
+              "url": "https://www.iaea.org/sites/default/files/gov2026-8.pdf"
+            }
+          ]
+        },
+        {
+          "id": "c_obs_irgc_personnel",
+          "label": "Public personnel changes within the IRGC",
+          "summary": "Unusual deaths or disappearances of provincial corps commanders; restructuring of the Defense Council; changes in the Supreme National Security Council.",
+          "threshold": "No changes → continuity stable; one unnatural event → warning; two or more → militarization probability revised up",
+          "status": "open",
+          "last_check": "2026-05-19",
+          "analysis": "Why personnel changes within the IRGC matter.\n\nThe IRGC is structured at two tiers: the top tier comprises commander-in-chief Hossein Salami, chief of staff Mohammad Bagheri, and the five service branch commanders; the middle tier consists of 17 provincial corps (one per province), the Defense Council (NDC), and the Supreme National Security Council (SNSC). While Khamenei was alive, personnel moves were almost never made public — all adjustments were handled secretly through the Supreme Leader's office.\n\nAfter Khamenei's death, any public personnel change is a signal: either Mojtaba is trying to build his own power network (replacing disloyal holdovers), or factional conflict inside the IRGC has gone public (one faction 'purging' another).\n\nFPRI's Saeid Golkar, in his October 2025 essay, specifically flags 'unnatural deaths or disappearances of provincial corps commanders, sudden restructuring of the Defense Council, and the replacement of Larijani on the Supreme National Security Council' as early signals distinguishing the militarization path from the disintegration path after Khamenei's death. One event might be explained as an accident; two or more all but confirm systematic purges.\n\nHow to monitor: watch official Iranian personnel announcements (issued monthly), the personnel list on the IRGC's website sepah.ir, and hearings of the defense committee in the Iranian parliament.",
+          "sources": [
+            {
+              "label": "FPRI Golkar 2025-10: The Islamic Republic After the 12-Day War",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "junta",
+      "name": "Militarization",
+      "probability": [
+        15,
+        20
+      ],
+      "color": "warning",
+      "thesis": "The IRGC sets aside the religious-legitimacy dispute and directly takes over the state. Iran transforms into a military-political regime resembling Pakistan's Inter-Services Intelligence (ISI) plus presidential office, with religious discourse receding into the background.",
+      "probability_calc": {
+        "prior": [
+          10,
+          15
+        ],
+        "prior_basis": "Pakistan's three military takeovers (1958, 1977, 1999) followed a coup model rather than a 'religious-regime transition' precedent. This path has never occurred in Iran since 1979, leaving the prior low.",
+        "factor_label": "Reinforcing factor",
+        "factor_basis": "The IRGC's decentralization toward provincial corps has already begun (documented by FPRI Golkar 2025-10); Larijani's position on the Supreme National Security Council (SNSC) has been reconfirmed; the Defense Council was restructured after Operation Rising Lion.",
+        "result": [
+          15,
+          20
+        ]
+      },
+      "preconditions": [
+        {
+          "id": "j_pre_irgc_consensus",
+          "label": "IRGC reaches an internal consensus on a power core",
+          "status": "open",
+          "evidence": "Salami, Bagheri, and the provincial corps chiefs have yet to publicly demarcate roles.",
+          "explanation": "After Khomeini's death in 1989, it took Khamenei and Rafsanjani five years to stabilize the power relationship. The IRGC today has no such breathing room — war pressure demands resolution within months.",
+          "analysis": "The IRGC consists of five service branches and 17 provincial corps. The top-level structure is commander-in-chief Hossein Salami, chief of staff Mohammad Bagheri, and Quds Force commander Esmail Qaani. These three, together with the 17 provincial corps commanders, form the actual power pyramid of the IRGC. While Khamenei was alive, the pyramid was coordinated through the Supreme Leader's office. After Khamenei's death — who arbitrates?\n\nAfter Khomeini's death in 1989, the 'dual leadership' of Khamenei and Rafsanjani took five years to stabilize the power relationship. At the time, Iran had just emerged from the Iran-Iraq War and faced no acute external pressure. The IRGC today has no such breathing room — war losses (70% of ballistic missile launchers destroyed, 92% of the navy destroyed) plus economic collapse plus Mojtaba's legitimacy crisis demand resolution within months.\n\nFPRI's Saeid Golkar, in his October 2025 essay, notes that the IRGC's 'decentralization' — devolution of power to the provincial corps — was already underway before Khamenei's death, and has now evolved to the point where provincial corps chiefs hold substantively greater voice. If Salami, Bagheri, and the provincial corps can reach a 'military cabinet'-style consensus on a division of labor — for example modeled on Pakistan's ISI — the militarization path becomes viable.\n\nAs of the 19 May 2026 baseline, there is no public division of labor among the three, but also no public conflict. This 'ambiguous equilibrium' is the starting point of the militarization path, but its stability is extremely low.",
+          "sources": [
+            {
+              "label": "FPRI Golkar 2025-10: The Islamic Republic After the 12-Day War",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            }
+          ]
+        },
+        {
+          "id": "j_pre_marja_decline",
+          "label": "Religious-legitimacy discourse recedes to the background",
+          "status": "open",
+          "evidence": "If Sistani publicly refuses to endorse Mojtaba, the religious-legitimacy route is blocked and militarization becomes the only available backup.",
+          "explanation": "The marja system no longer serves as the regime's source of legitimacy; instead, the realpolitik of 'military-political unity' takes over. This is a fundamental shift from the legitimacy framework that has gone substantively unchallenged since the 1979 revolution.",
+          "analysis": "The marja system (Marja-e Taqlid, the highest rank of Shia clerical authority) has been the source of Iranian regime legitimacy since the 1979 revolution. Article 5 of the constitution requires the Supreme Leader to be a cleric of marja rank; Article 107 stipulates that the Assembly of Experts (88 marja-rank clerics) appoints the Supreme Leader. This mechanism binds religious authority to political power — the regime is legitimate because it is led by a religious authority.\n\nMojtaba lacks marja qualification. If Sistani (the world's most senior marja) publicly refuses endorsement, the religious-legitimacy route is blocked — Mojtaba cannot obtain the religious authority's backing, and under the constitution should not serve as Supreme Leader. In that case, the regime must find an alternative source of legitimacy.\n\nUnder the militarization path, that new source is the realpolitik of 'military-political unity.' The IRGC openly assumes responsibility for state administration, and religious discourse recedes to the background — preserved for ceremonial occasions, displaced in decision-making. This is a fundamental shift from the legitimacy framework that has gone substantively unchallenged since the 1979 revolution.\n\nFPRI's Saeid Golkar, in his October 2025 essay, assesses that this swap of legitimacy sources is not the IRGC's first choice, but the fallback option after a Sistani refusal. In other words — this precondition's activation depends on the inverse triggering of another condition (Sistani's posture).",
+          "sources": [
+            {
+              "label": "FPRI Golkar 2025-10: The Islamic Republic After the 12-Day War",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            }
+          ]
+        }
+      ],
+      "logic": "Preconditions are conjunctive (AND). If the IRGC cannot reach an internal power consensus, militarization cannot form; if religious legitimacy holds, the militarization backup is not required.",
+      "mechanisms": [
+        {
+          "label": "IRGC decentralization toward provincial corps",
+          "description": "FPRI's Golkar documents in his October 2025 essay that the IRGC had already begun devolving power to its 17 provincial corps before Khamenei's death, with provincial corps commanders gaining substantively greater voice. This is an early signal of militarization.",
+          "sources": [
+            {
+              "label": "FPRI Golkar 2025-10",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            }
+          ]
+        }
+      ],
+      "consequences": [
+        {
+          "actor": "Iranian foreign policy",
+          "label": "Harder line; sustained strikes on Israel",
+          "description": "Hebrew MABAM (Ma'arakha Bein Ha'milchamot, 'campaign between wars') frequency stays elevated. Iran-Israel enters a 'low-intensity sustained war' state, similar to the post-2006 Israel-Hezbollah 'powder keg' equilibrium.",
+          "analysis": "MABAM is the acronym for the Hebrew phrase Ma'arakha Bein Ha'milchamot, meaning 'campaign between wars' — the Israeli military's official term for sustained low-intensity strike operations, especially routine airstrikes against Iranian military assets in Syria and Hezbollah weapons supply lines. Before 2025, MABAM averaged 1-2 strikes per week, mostly inside Syria.\n\nUnder the militarization path, Iranian foreign policy hardens — because a militarized regime needs continued external conflict to justify its own existence. RAND's Raphael S. Cohen, in his April 2026 report, assesses that a militarized Iran maintains MABAM at elevated frequency (3-5 strikes per week), and missile strikes against Israel do not stop (though scale, given destroyed launchers, will not return to the 400-per-day peak of the early 12-Day War; it stays at 20-40 per month).\n\nIran-Israel therefore enters a 'low-intensity sustained war,' resembling the 'powder keg' equilibrium between Israel and Hezbollah after the 2006 war — war has not formally restarted, but continuous local clashes could escalate at any time. Cohen assesses that this state could last for years, but any single event (an Israeli mistaken strike on a senior Iranian official, or an Iranian missile hitting an Israeli nuclear reactor) could trigger full-scale war.",
+          "sources": [
+            {
+              "label": "RAND Cohen 2026-04: Trump's Iran War Is a Dilemma, Not a Debacle",
+              "url": "https://www.rand.org/pubs/commentary/2026/04/trumps-iran-war-is-a-dilemma-not-a-debacle.html"
+            }
+          ]
+        },
+        {
+          "actor": "Houthis",
+          "label": "Act more independently, counterintuitively",
+          "description": "As religious-legitimacy discourse recedes, Iran's ideological leverage over the Shia world (Iraq, Bahrain, Yemen Houthis, Saudi Arabia's Eastern Province) declines. The Houthi-Iran tie is reframed from 'religious-revolutionary' to 'anti-American military alliance' — and this redefinition may, paradoxically, lead the Houthis to act more independently as Iran weakens.",
+          "analysis": "The Houthis (formally 'Ansar Allah') are a Zaydi (a Shia branch) armed movement and political organization founded in Yemen's Saada governorate in the 1990s. In the 2014 civil war they seized Yemen's capital Sanaa and most of the north. The Houthi-Iran relationship rests on two foundations: religion (both Shia) and revolution (anti-American, anti-Saudi).\n\nUnder the militarization path, Iran's religious-legitimacy discourse recedes, and its ideological leverage over the Shia world (Iraqi PMF militias, Bahrain's Shia majority, Yemen's Houthis, Saudi Arabia's Eastern Province Shia minority) declines. This means the Houthi-Iran tie is reframed from 'religious-revolutionary' to 'anti-American military alliance.'\n\nChatham House's Quilliam, in his May 2026 report, assesses that this redefinition may, paradoxically, lead the Houthis to act more independently as Iran weakens. The reason is that the Houthis demonstrated independent operational capacity in the 2025-2026 war (Red Sea ship attacks, independent negotiations with Saudi Arabia), and no longer depend on Iranian command the way they did in 2015-2024.\n\nImplications for the regional order: Houthi independence means Red Sea maritime security is no longer framed as 'Iranian proxy' — Saudi Arabia, the UAE, Egypt, and Israel must now bargain with the Houthis directly, rather than solving the problem indirectly by 'pressuring Iran.'",
+          "sources": [
+            {
+              "label": "Chatham House Quilliam 2026-05: How the Iran War Is Reshaping Saudi Strategy",
+              "url": "https://www.chathamhouse.org/2026/05/how-iran-war-reshaping-saudi-strategy-hormuz-and-houthis-uaes-opec-exit"
+            }
+          ]
+        }
+      ],
+      "observations": [
+        {
+          "id": "j_obs_provincial_irgc",
+          "label": "Unnatural deaths or disappearances of provincial IRGC commanders",
+          "summary": "A high-risk signal during the rise of provincial corps power.",
+          "threshold": "None → process stable; 1 case → warning; 2-3 cases → militarization accelerating; systematic purge → militarization confirmed",
+          "status": "open",
+          "last_check": "2026-05-19",
+          "sources": [
+            {
+              "label": "FPRI Golkar 2025-10: The Islamic Republic After the 12-Day War",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            }
+          ],
+          "analysis": "Why are unnatural deaths or disappearances of provincial IRGC commanders a critical signal?\n\nThe IRGC's 17 provincial corps are the tier whose power has substantively grown since Khamenei's death. FPRI's Saeid Golkar explicitly notes in his October 2025 essay that the IRGC's 'decentralization' process has given provincial corps chiefs decision-making power once reserved for the Supreme Leader's office.\n\nFor the militarization path to work, the provincial corps chiefs must reach a consensus on power-sharing. But in practice there is no formal consultation mechanism among the 17 provincial corps chiefs; power relationships rest on 'unwritten rules.' Any attempt by one chief to expand turf could provoke a counter-purge.\n\nHow to distinguish accidents from purges: a single unnatural event (car accident, heart attack, disappearance) can be explained as accident; 2-3 events concentrated in a short window all but confirm systematic purges; 3 or more, with replacements clearly belonging to a single faction, mean militarization is accelerating — one faction is unifying the IRGC internally through violent means.\n\nHow to monitor: watch personnel-list updates on the IRGC's website sepah.ir, the obituary section of the official Iranian news agency IRNA, the coverage gap between Tasnim (IRGC aerospace-controlled) and other agencies, and personnel tracking by independent outlets such as Iran International (London-based, opposition-leaning)."
+        },
+        {
+          "id": "j_obs_larijani",
+          "label": "Larijani's position on the Supreme National Security Council (SNSC)",
+          "summary": "If Larijani is replaced, it signals a major shift in the militarization trajectory.",
+          "threshold": "Retains his current position → militarization continues; replaced → path reassessed",
+          "status": "open",
+          "last_check": "2026-05-19",
+          "sources": [],
+          "analysis": "Ali Larijani is a member of Iran's prominent political family, the Larijanis. He served as Speaker of the Iranian parliament (2008-2020) and as Secretary of the Supreme National Security Council (SNSC). He is widely seen as the 'coordinator' between the IRGC's hardliner and pragmatist factions, and during Khamenei's lifetime repeatedly served as a bridge between competing camps.\n\nIn late 2025, Larijani's position on the SNSC was reconfirmed (in the post-Rising Lion government restructuring). This means the IRGC chose to retain Larijani as internal coordinator, with the militarization path advancing in a 'pragmatist-led' mode.\n\nIf Larijani is replaced after Khamenei's death — especially by an unambiguous hardliner or someone with a provincial-corps-commander background — it means two things:\n\nFirst, the balance between pragmatist and hardline factions within the IRGC has broken in favor of the hardliners, and militarization shifts to a more radical 'security state' mode.\n\nSecond, the IRGC no longer needs an outside coordinator — the internal division of labor is complete and it can operate autonomously.\n\nEither way, Larijani's replacement is a strong signal for path reassessment. What to monitor: SNSC meeting announcements, the speaker list at the Iranian parliament, and Larijani's personal Telegram channel (a sudden halt in updates is itself a signal)."
+        }
+      ]
+    },
+    {
+      "id": "slow_collapse",
+      "name": "Slow Collapse",
+      "probability": [
+        12,
+        15
+      ],
+      "color": "alert",
+      "thesis": "The ceasefire holds, but the rial keeps depreciating, university student emigration applications rise, and the overseas opposition (Reza Pahlavi and others) organizes — slow attrition over 3-5 years. Follows the 1985-1991 Soviet model.",
+      "probability_calc": {
+        "prior": [
+          20,
+          25
+        ],
+        "prior_basis": "The Soviet model provides a precedent. But the Soviet slow collapse worked fundamentally because Gorbachev voluntarily let go — in the 1989 East European revolutions he explicitly ordered Soviet forces not to intervene, abandoning the traditional Soviet option of repression.",
+        "factor_label": "Weakening factor",
+        "factor_basis": "Iran today has no Gorbachev-equivalent figure: Pezeshkian is a reformist but is not IRGC-born and commands no force. With no one inside the IRGC willing to let go, slow collapse is likely to skip directly to disintegration, which pushes the probability down.",
+        "result": [
+          12,
+          15
+        ]
+      },
+      "preconditions": [
+        {
+          "id": "s_pre_ceasefire",
+          "label": "Ceasefire holds",
+          "status": "open",
+          "evidence": "Requires the Pakistan-brokered ceasefire to become durable, but does not require Mojtaba's smooth succession.",
+          "explanation": "The slow-collapse path requires that the war end while the regime's internal structure remains in place — the ceasefire itself is a necessary condition for this path.",
+          "analysis": "The slow-collapse path shares one precondition with the continuity path: a stable ceasefire. The difference is that the continuity path requires four conditions (ceasefire plus Mojtaba's smooth succession plus Sistani's non-opposition plus an undivided IRGC), while the slow-collapse path requires only the ceasefire; the other conditions can partially fail.\n\nWhy is the ceasefire necessary? If the war continues, Iran shifts into 'wartime mobilization' mode — the IRGC strengthens, reformists are suppressed, and the overseas opposition loses its mobilization window. War works against the slow-collapse path: it forces either the continuity path (IRGC adapts) or the disintegration path (direct military collapse).\n\nThe ceasefire's stability depends on Pakistani mediation; see the analysis under the continuity path's precondition 'Pakistan-brokered ceasefire converts to a long-term agreement.'\n\nIn the first two years, the slow-collapse path and the continuity path are nearly indistinguishable — both show 'ceasefire plus regime continuity.' The real divergence emerges in years 2-3 of the ceasefire: under continuity, the IRGC adapts effectively and the economy stops sliding; under slow collapse, the economy keeps deteriorating, reformists make incremental progress, and the young keep leaving. FPRI's Golkar names this state 'quiet decline.'",
+          "sources": [
+            {
+              "label": "FPRI Golkar 2025-10: The Islamic Republic After the 12-Day War",
+              "url": "https://www.fpri.org/article/2025/10/humiliation-and-transformation-the-islamic-republic-after-the-12-day-war/"
+            }
+          ]
+        },
+        {
+          "id": "s_pre_economic_decay",
+          "label": "Sustained economic deterioration without outright collapse",
+          "status": "open",
+          "evidence": "The rial has fallen from a pre-war 1:42,000 to 1:90,000+. Water crises in Khuzestan and Sistan-Baluchistan have reached structural limits.",
+          "explanation": "Slow collapse is not economic crash, but the cumulative effect of structural economic damage combined with incremental reformist gains, overseas opposition mobilization, and the regime's loss of loyalty among the young.",
+          "analysis": "Slow collapse is not economic crash; it is the accumulation of structural economic damage. The difference between the two lies in speed and irreversibility.\n\nMarkers of structural damage: the rial depreciates but still trades; the banking system functions but contracts; the government still pays wages but real purchasing power falls. This state can persist for years.\n\nThe rial (rial) has fallen from a pre-war 1 USD = 42,000 rials to 1:90,000+ in May 2026 — a more than 50% depreciation in under two years. Khuzestan (southwestern province with an Arab population, holding 80% of Iran's oil reserves) and Sistan-Baluchistan (southeastern province with a Baluchi population, bordering Pakistan) have reached structural limits on water — salinization is rendering large stretches of farmland unusable, and groundwater levels have dropped past the point of recovery.\n\nBut none of this is 'collapse.' The rial depreciates but still trades; the water crisis is severe but has not yet triggered mass displacement. The Bourse & Bazaar Foundation (an independent Iran economy tracker established in 2018) assesses that, after Operation Rising Lion, Iran's economy has entered a state of 'continuous bleeding without collapse.'\n\nFor the slow-collapse path to materialize, this sustained decline must persist for 3-5 years, layered with three cumulative effects:\n\n- incremental reformist gains (the Pezeshkian government continues, but with limited substantive reform space)\n- organization of the overseas opposition (exiled Crown Prince Reza Pahlavi and others mobilize through Telegram and Iran International)\n- loss of the regime's hold on younger generations — Iranian university student emigration applications have been rising continuously since March 2026\n\nThese three combined, 'quiet decline' accumulates over 3-5 years to the point where the regime loses its base. But any sudden shift at any stage (a public IRGC fracture, an actual economic crash, a major minority uprising) breaks the path and shifts it to disintegration.",
+          "sources": [
+            {
+              "label": "Bourse & Bazaar Foundation Iran economy tracker",
+              "url": "https://www.bourseandbazaar.com/"
+            }
+          ]
+        }
+      ],
+      "logic": "Preconditions: conjunctive (AND), plus a time dimension. Both conditions must hold simultaneously, sustained over 3-5 years. Any sudden shift at any stage (open IRGC fracture, economic crash) breaks the path.",
+      "mechanisms": [
+        {
+          "label": "Accumulation similar to the 1985-1991 Soviet slow collapse",
+          "description": "Gorbachev took power in 1985 and introduced Glasnost and Perestroika → Chernobyl in 1986 exposed systemic incompetence → the 1989 East European revolutions → the 1991 Soviet collapse. The entire process took six years. Iran's analogous sequence has already begun: the Pezeshkian government (elected July 2024) is analogous to Gorbachev; Operation Rising Lion and Operation Epic Fury are analogous to Chernobyl. What is missing is a Gorbachev-style actor willing to let go."
+        }
+      ],
+      "consequences": [
+        {
+          "actor": "Saudi Arabia-Israel",
+          "label": "Window for formal normalization",
+          "description": "Under continuity/militarization, Saudi domestic pressure makes normalization impossible; under disintegration, regional reorder is too radical for normalization to matter — only the slow-collapse path opens the best window. Low bar: opening direct flights; medium bar: MBS visits Israel; high bar: formal diplomatic relations. Saudi Arabia is best positioned to use Iran's slow exit to complete the Vision 2030 restructuring while assuming leadership of the Shia world.",
+          "analysis": "Saudi-Israeli formal normalization is the signature event of the slow-collapse path. It is impossible under the other three paths: under continuity, Saudi domestic pressure is too high (the Saudi public's opposition to Israel, especially post-Gaza, remains strong); under militarization, the Iranian military keeps striking Israel and Saudi Arabia cannot normalize during a state of war; under disintegration, the regional reorder is so radical that normalization is dwarfed by larger problems.\n\nOnly the slow-collapse path opens the best window: Iran gradually weakens without immediate collapse → Saudi Arabia has time to maneuver and need not fear provoking Iran → public sentiment can be guided into acceptance.\n\nNormalization unfolds across three thresholds: the low bar is opening direct flights between Riyadh and Tel Aviv; the medium bar is MBS's first visit to Israel (even in transit); the high bar is formal normalization with embassies on both sides.\n\nChatham House's Quilliam, in his May 2026 report, assesses that Saudi Arabia is best positioned to use Iran's slow exit to complete the Vision 2030 economic diversification and assume leadership of the Shia world (replacing Iran as the new 'arbiter of the Islamic world'). The 2023 Beijing-brokered Saudi-Iran reconciliation would, under this path, be unilaterally reframed by Riyadh as 'Saudi wins' — a side effect of Chinese mediation.",
+          "sources": [
+            {
+              "label": "Chatham House Quilliam 2026-05: How the Iran War Is Reshaping Saudi Strategy",
+              "url": "https://www.chathamhouse.org/2026/05/how-iran-war-reshaping-saudi-strategy-hormuz-and-houthis-uaes-opec-exit"
+            }
+          ]
+        },
+        {
+          "actor": "Israel",
+          "label": "Paradox: wants collapse but not immediately",
+          "description": "Wants Iran to collapse (to end the threat) but not immediately (to avoid managing the proliferation problem of loose Iranian nuclear materials and missiles). The Israeli right splits: the Likud-Bibi camp pushes 'immediate settlement'; Mossad and IDF general staff push 'managed transition.' This is the long-running Mossad operating principle documented by journalist Ronen Bergman in his 2018 book Rise and Kill First.",
+          "analysis": "Israel's posture toward the slow-collapse path is paradoxical: it wants Iran to collapse (to end decades of nuclear and missile threats), but not immediately (to avoid managing the proliferation problem of loose nuclear materials, missiles, and biological weapons).\n\nThe Israeli right is therefore divided into two camps: the Likud-Bibi camp (led personally by Netanyahu, with hardline ministers including Defense Minister Bezalel Smotrich) pushes 'immediate settlement' — striking Iran further while it is weak to force regime change. Mossad (Israel's external intelligence service) and the IDF general staff push 'managed transition' — letting the Iranian regime persist in a weakened state so that nuclear proliferation and weapons-leakage problems can be handled gradually.\n\nJournalist Ronen Bergman documents this Mossad operating principle in detail in his 2018 book Rise and Kill First: better to manage a weak government than a failed state. This principle was reinforced by the lessons Israel drew from the chaos that followed the 2003 Iraq war — Israel does not want Iran to become another Iraq.\n\nUnder the slow-collapse path, this tug-of-war persists for 3-5 years. The final direction depends on Israeli domestic elections (whether Netanyahu remains in power) and specific events (whether Iranian nuclear materials actually go missing).",
+          "sources": []
+        }
+      ],
+      "observations": [
+        {
+          "id": "s_obs_rial_120k",
+          "label": "Rial black-market rate breaches 1:120,000",
+          "summary": "The traditional threshold for market confidence in the regime.",
+          "threshold": "< 1:100,000 → path stable; 1:100,000-120,000 → accelerating; > 1:120,000 → slow collapse confirmed",
+          "status": "open",
+          "last_check": "2026-05-19",
+          "sources": [
+            {
+              "label": "Bourse & Bazaar Foundation Iran economy tracker",
+              "url": "https://www.bourseandbazaar.com/"
+            }
+          ],
+          "analysis": "Why is the 1:120,000 black-market rial rate the critical threshold?\n\nThere are two rial rates: the official rate (published by the central bank, used mainly for international trade, around 1:42,000 in May 2026) and the black-market rate (updated daily by independent platforms such as Bonbast.com, reflecting actual market demand, around 1:90,000 in May 2026).\n\nThe black-market rate reflects public confidence in the regime. Bourse & Bazaar Foundation's tracking shows several historical inflection points:\n\nIn 2018, when Trump withdrew from the JCPOA during his first term, the rial fell from 1:40,000 to 1:140,000 — a 70% depreciation in a year. The Iranian economy contracted severely, but the regime did not collapse. The reason: the IRGC mobilized commercial-empire resources to stabilize the economy.\n\nIn 2022, during the Mahsa Amini protests, the rial briefly fell past 1:500,000 but quickly recovered to the 1:300,000 range. The reason: after the protests were suppressed, markets recalibrated.\n\n1:120,000 is the market's 'confidence threshold' for the regime — breaking through it means the public has begun to treat the rial as 'regime-credit currency' rather than 'national currency' and is actively selling. If the rate fails to recover to below 1:100,000 after breaching this line, the monetary system enters a vicious cycle.\n\nHow to monitor: Bonbast.com (servers outside Iran, daily black-market rates), the live exchange-rate boards at Tehran's Grand Bazaar, and monthly tracking reports from the Bourse & Bazaar Foundation."
+        }
+      ]
+    },
+    {
+      "id": "disintegration",
+      "name": "Disintegration and Civil War",
+      "probability": [
+        8,
+        12
+      ],
+      "color": "danger",
+      "thesis": "The IRGC fractures publicly; four ethnic fault lines (Kurd, Azeri, Khuzestani Arab, Baluchi) activate simultaneously; the rial fully collapses — three triggers detonate together. Has not occurred since 1979.",
+      "probability_calc": {
+        "prior": [
+          3,
+          5
+        ],
+        "prior_basis": "Since 1979 the Iranian regime has weathered single triggers multiple times (1988 / 1999 / 2009 / 2017 / 2019 / 2022), but three simultaneously is unprecedented.",
+        "factor_label": "Reinforcing factor",
+        "factor_basis": "All three conditions now exist:\n\n- Khamenei's death plus Mojtaba's legitimacy crisis substantially raise the risk of IRGC fracture\n- all four ethnic fault lines have been activated during the war\n- the economy is near a critical threshold",
+        "result": [
+          8,
+          12
+        ]
+      },
+      "preconditions": [
+        {
+          "id": "d_pre_irgc_split",
+          "label": "Public IRGC fracture",
+          "status": "open",
+          "evidence": "Provincial corps commanders openly dissent; naval units act autonomously in Hormuz; the MOIS and IRGC Intelligence Organization denounce each other.",
+          "explanation": "The IRGC's structure of 5 service branches plus 17 provincial corps has never publicly fractured. This is the most important internal precondition for the disintegration path.",
+          "analysis": "A public IRGC fracture is the most important internal condition for the disintegration path. It would surface through four specific signals:\n\nFirst, provincial corps commanders publicly dissenting. The IRGC's 17 provincial corps chiefs have never historically questioned the Supreme Leader or commander-in-chief publicly. If a provincial commander expresses dissent through media or in a public setting, internal discipline has broken down.\n\nSecond, naval units acting autonomously in Hormuz. The IRGC navy (parallel to the regular navy) has been documented levying its own transit fees in Hormuz — $2 million per vessel — in the Atlantic Council's March 2026 report 'Inside Tehran's Toll Booth.' This levying had been authorized while Khamenei was alive; if it shifts into uncoordinated 'local-warlord' behavior, it means the chain of command has broken.\n\nThird, the Ministry of Intelligence (MOIS) and the IRGC Intelligence Organization denouncing each other. The two agencies have overlapping functions (counterintelligence and domestic surveillance) and normally coordinate through the Supreme Leader's office. Mutual denunciation would mean the regime has no ultimate arbiter.\n\nFourth, public confrontation between the regular army (Artesh) and the IRGC. This is the rarest signal — it has not occurred since the 1979 revolution.\n\nRAND's Raphael S. Cohen, in his April 2026 report, assesses that any two of these signals occurring simultaneously immediately revises the disintegration probability from 8-12% up to 20-30%.",
+          "sources": [
+            {
+              "label": "Atlantic Council 2026-03: Inside Tehran's Toll Booth",
+              "url": "https://www.atlanticcouncil.org/dispatches/inside-tehrans-toll-booth/"
+            },
+            {
+              "label": "RAND Cohen 2026-04: Trump's Iran War Is a Dilemma, Not a Debacle",
+              "url": "https://www.rand.org/pubs/commentary/2026/04/trumps-iran-war-is-a-dilemma-not-a-debacle.html"
+            }
+          ]
+        },
+        {
+          "id": "d_pre_minority_uprising",
+          "label": "Four ethnic fault lines activated simultaneously",
+          "status": "open",
+          "evidence": "Western Kurds (PJAK armed group), northwestern Azeris, Khuzestani Arabs (ASMLA), and southeastern Baluchis (Jaish al-Adl) — all four fault lines have been activated since Operation Rising Lion and Operation Epic Fury.",
+          "explanation": "Iran's ethnic fault lines are deeper today than on the eve of the 1979 revolution. The disintegration path requires uprisings in all four directions simultaneously — that is the physical base.",
+          "analysis": "Iran's ethnic fault lines are deeper today than on the eve of the 1979 revolution. The disintegration path requires uprisings in all four directions — west, northwest, southwest, southeast — simultaneously. That is the physical base.\n\nWest: Kurds. The Party of Free Life of Kurdistan (PJAK) operates along the Iran-Turkey-Iraq triple border and has organizational ties to the PKK (Kurdistan Workers' Party) inside Turkey. Estimated strength: 3,000-5,000 fighters.\n\nNorthwest: Azeris. Iran's Azeri population is roughly 15-20 million — the country's largest minority — concentrated in West Azerbaijan, East Azerbaijan, and Ardabil provinces along the border with the Republic of Azerbaijan. There is a historical 'South Azerbaijan independence' tradition, dormant since the Soviet-backed attempt in 1946 failed.\n\nSouthwest: Khuzestani Arabs. The Arab population in Khuzestan province is roughly 2-3 million, located atop 80% of Iran's oil reserves. The Arab Struggle Movement for the Liberation of Ahwaz (ASMLA), headquartered in Denmark, conducts sporadic armed activity inside Khuzestan.\n\nSoutheast: Baluchis. The Baluchi population of Sistan-Baluchistan province is roughly 1.5-2 million, predominantly Sunni (in religious contrast with the Shia regime). Jaish al-Adl (Arabic for 'Army of Justice'), an evolution of the Jundallah founded in 2012, conducts attacks along the Iran-Pakistan border.\n\nAll four fault lines have been activated since Operation Rising Lion and Operation Epic Fury — through economic collapse plus the contraction of central government authority plus the opening of external support channels. A 2026 Stimson Center report assesses that Saudi weapons could flow via Khuzestan, Turkey could support the Azeris through the northwest, and Pakistan-India dynamics could shape the Baluchi region — all four external input channels exist or are forming.",
+          "sources": [
+            {
+              "label": "Stimson 2026: Iran-Aligned Militias Jeopardize Iraq's Gulf Reset",
+              "url": "https://www.stimson.org/2026/iran-aligned-militias-jeopardize-iraqs-gulf-reset/"
+            }
+          ]
+        },
+        {
+          "id": "d_pre_economic_collapse",
+          "label": "Outright rial collapse",
+          "status": "open",
+          "evidence": "Rial black-market rate breaches 1:200,000, entering hyperinflation.",
+          "explanation": "Economic collapse differs from structural economic damage — the latter is the condition for slow collapse, the former the trigger for disintegration.",
+          "analysis": "Economic collapse and structural economic damage are two different concepts. The former is the trigger for the disintegration path; the latter is the condition for the slow-collapse path.\n\nStructural damage features: the rial depreciates but still trades; the banking system functions but contracts; the government still pays wages but real purchasing power falls. This state can persist for years.\n\nCollapse features: hyperinflation (monthly inflation above 50%), bank runs, the government unable to pay wages, mass shutdowns of commercial activity, shortages of essentials (bread, fuel, electricity). This state lasts at most a few months before triggering political consequences.\n\nA rial black-market rate breaching 1:200,000 is the first clear signal of collapse — meaning more than 100% depreciation in a year and monthly inflation past 50%. Bourse & Bazaar Foundation assesses that the depreciation pace after 1:200,000 is non-linearly accelerating; the rial could fall to 1:500,000+ within 3-6 months, entering full hyperinflation.\n\nThe role of economic collapse in the disintegration path: it directly erodes two pillars of the regime —：\n\n- the cash flow of the IRGC commercial empire (if the currency fails, the empire that constitutes 30-40% of GDP unravels)\n- the public's psychological 'we can endure this' threshold (no one can keep living through hyperinflation, mass social mobilization becomes inevitable)\n\nCollapse plus IRGC fracture plus ethnic uprising — the three triggers layered — is the standard collapse pattern of the post-August 1991 Soviet coup: internal disorder and external separatism form a positive feedback loop, dissolving within months.",
+          "sources": [
+            {
+              "label": "Bourse & Bazaar Foundation Iran economy tracker",
+              "url": "https://www.bourseandbazaar.com/"
+            }
+          ]
+        }
+      ],
+      "logic": "Preconditions: conjunctive (AND), plus a time window. All three triggers must detonate within six months. Any single trigger alone is insufficient — historically the Iranian regime has weathered single triggers many times.",
+      "mechanisms": [
+        {
+          "label": "Mutual positive feedback among the three triggers",
+          "description": "Public IRGC fracture → central government contracts → minorities gain a window to rise → economy crashes further → IRGC fractures further. This is the standard collapse pattern of the post-August 1991 Soviet coup: internal disorder and external separatism form a positive feedback loop, dissolving within months."
+        }
+      ],
+      "consequences": [
+        {
+          "actor": "Saudi Arabia vs UAE",
+          "label": "Replication of the Sudan model proxy war",
+          "description": "INSS's Guzansky has documented the two countries' proxy-war pattern in Sudan (Saudi Arabia backing the Burhan-led military, the UAE backing the Hemedti-led RSF militia). Iran's civil war would replicate this directly — Saudi Arabia inclined to back the reformists and Arab separatists in Khuzestan; the UAE possibly betting on the IRGC's pragmatist faction or a local strongman.",
+          "sources": [
+            {
+              "label": "INSS Guzansky 2026-02: Saudi Arabia-UAE 2026",
+              "url": "https://www.inss.org.il/publication/saudi-arabia-uae-2026/"
+            }
+          ],
+          "analysis": "Under the disintegration path, Saudi Arabia and the UAE would replicate the Sudan proxy-war model.\n\nINSS's Yoel Guzansky, in his February 2026 report, documents the two countries' proxy-war pattern in Sudan in detail: since the Sudanese civil war began in 2023, Saudi Arabia has backed the government forces led by Sudanese Armed Forces (SAF) commander Abdel Fattah al-Burhan, while the UAE has backed the Rapid Support Forces (RSF) led by Mohamed Hamdan 'Hemedti' Dagalo. The Sudan proxy war has lasted more than three years, killing hundreds of thousands and displacing millions, while neither external sponsor has formally intervened.\n\nIranian civil war would replicate the pattern directly. Guzansky's specific bets: Saudi Arabia inclined to back the reformists and Arab separatist forces (particularly Khuzestani Arabs, since they control Iran's main oil-producing region and Saudi Arabia has an incentive to dismantle the Iranian oil monopoly); the UAE possibly betting on the IRGC's pragmatist faction or a local strongman (the UAE has historically bet on single-strongman models in Yemen and Libya).\n\nImplications for the regional order: a post-Iran 'Saudi-UAE proxy war' would drag the entire Gulf into sustained instability. Bahrain, Qatar, Kuwait, and Oman would each have to pick sides or maintain neutrality — and this 'forced alignment' would further fragment the Gulf Cooperation Council (GCC) internally."
+        },
+        {
+          "actor": "Hezbollah",
+          "label": "May launch a 'final blow'",
+          "description": "Without Iranian lifelines, Hezbollah loses the conditions for military existence (annual operating budget ~$700M-1B, 70-80% from Iran). Three possibilities: a 'PLO-model' political accommodation with the Lebanese state; internal fracture; a pre-collapse 'final blow' — saturation rocket strikes on Israel. The third is the most dangerous: the Iron Dome's intercept capability is robust but saturation-vulnerable, and Hezbollah is estimated to have 130,000-150,000 rockets remaining, enough that saturation strikes could overwhelm Israeli air defense.",
+          "analysis": "Hezbollah loses its main lifeline if Iran disintegrates.\n\nHezbollah's annual operating budget is estimated at $700 million to $1 billion (encompassing armed wing, social services, party operations, and Iran-subsidized military salaries). RAND's Cohen, citing internal documents from the 2018 U.S. Treasury sanctions on the IRGC Quds Force, estimates that 70-80% of this comes from Iran. Iran's disintegration severs the lifeline.\n\nHezbollah would face three possible responses:\n\nFirst, a 'PLO-model' political accommodation with the Lebanese state — surrendering its arms in exchange for political status (similar to the PLO's transition after the 1993 Oslo Accords). This is the direction publicly urged by Lebanese Prime Minister Nawaf Salam since 2025, but resisted by Hezbollah hardliners.\n\nSecond, internal fracture — moderates accept political integration, hardliners continue armed resistance. This could trigger an internal Hezbollah purge, further weakening the organization.\n\nThird, a pre-collapse 'final blow' — saturation rocket strikes on Israel. This is the most dangerous possibility. RAND's Cohen assesses that the Iron Dome's intercept capability is robust but saturation-vulnerable. Hezbollah is estimated to retain 130,000-150,000 rockets and roughly 50,000 precision-guided missiles; a saturation strike (thousands of rockets within 24 hours) could overwhelm Israeli air defenses and inflict major casualties on Tel Aviv, Haifa, and other cities.\n\nThe probability of the third scenario is hard to estimate given the hardliners' 'better to die fighting' logic — typically below 30%, but with catastrophic consequences if it occurs.",
+          "sources": [
+            {
+              "label": "RAND Cohen 2026-04: Trump's Iran War Is a Dilemma, Not a Debacle",
+              "url": "https://www.rand.org/pubs/commentary/2026/04/trumps-iran-war-is-a-dilemma-not-a-debacle.html"
+            }
+          ]
+        },
+        {
+          "actor": "Pakistan",
+          "label": "Cross-border Baluchi resonance",
+          "description": "A Baluchi uprising in Iranian Sistan-Baluchistan would immediately activate the Balochistan Liberation Army (BLA) inside Pakistan. This is the single greatest threat to Pakistani territorial integrity since the 1971 East Pakistan split.",
+          "analysis": "Pakistan would face the single greatest threat to its territorial integrity since the 1971 East Pakistan (the eastern wing of Pakistan that became Bangladesh after independence) split.\n\nThe reason is cross-border Baluchi resonance. Baluchistan as an ethno-geographic concept spans three countries: southeastern Iran's Sistan-Baluchistan province (roughly 2 million Baluchis), Pakistan's Balochistan province (roughly 13 million Baluchis, more than 60% of provincial population), and a small population in southwestern Afghanistan.\n\nThe Baluchi independence movement inside Pakistan is led by the Balochistan Liberation Army (BLA). Since its founding in 2000, the BLA has carried out low-intensity armed activity inside Pakistan with the goal of an independent Baluchi state. Estimated BLA strength: 3,000-5,000 fighters, primarily targeting the Pakistani military and projects of the China-Pakistan Economic Corridor (CPEC).\n\nUnder Iranian disintegration, an uprising in Iranian Sistan-Baluchistan (led by Jaish al-Adl) would immediately activate BLA operations inside Pakistan through kinship networks, arms-smuggling channels, and shared language (Baluchi). 'Cross-border resonance' has a precedent in the 'Kurdish cross-border resonance' following the 2003 Iraq War (the Iraqi Kurdish independence referendum activated Kurdish populations in Iran, Turkey, and Syria).\n\nImpact on Pakistan: intensified BLA activity inside Pakistan would force the Pakistani military to launch counter-insurgency operations in Balochistan, potentially producing large civilian casualties and further inflaming Baluchi independence sentiment. The core mechanism is the same as the 1971 East Pakistan split — over-repression by the Pakistani military forcing an independence war.",
+          "sources": []
+        },
+        {
+          "actor": "Turkey",
+          "label": "Pushing for Iranian Azeri independence",
+          "description": "Erdoğan may seize the opportunity to push for independence or autonomy of the Turkic-Azeri region inside Iran. This would amount to the first substantive Turkish move on Iranian territory in geopolitical history in 100 years — the last being the Kemal-era border delineations of the 1920s.",
+          "analysis": "Under Iranian disintegration, Turkish President Recep Tayyip Erdoğan may seize the opportunity to push for independence or autonomy in the Turkic-Azeri region inside Iran. This would amount to the first substantive Turkish move on Iranian territory in 100 years of geopolitical history — the last being the Kemal-era border delineations of the 1920s (the 1923 Treaty of Lausanne).\n\nWhy would Turkey have this motivation?\n\nFirst, ethnic ties. Iran's three northwestern provinces (West Azerbaijan, East Azerbaijan, Ardabil) have an Azeri population of 15-20 million who speak Azerbaijani (a Turkic language) and are ethnically close to Turks and to citizens of the Republic of Azerbaijan. Turkey, as the informal leader of the 'Turkic world,' has an ideological incentive to push for 'Turkic unification' of these regions.\n\nSecond, energy corridors. Iran's northwest links the Caspian energy basin to the Mediterranean. If the region detaches from Iran or installs a pro-Turkey regime, Turkey can dominate gas pipelines from Azerbaijan through northwestern Iran to Turkey.\n\nThird, anti-Kurdish strategy. If the Azeri region of northwestern Iran becomes a pro-Turkey buffer, Turkey can more effectively suppress Kurds inside Iran (PJAK) and sever their links to PKK forces inside Turkey.\n\nINSS's Guzansky, in his February 2026 report, assesses that Turkey's specific action under Iranian disintegration is likely to be soft intervention (supporting local Azeri nationalist organizations, providing economic aid) rather than direct military intervention — but soft intervention can gradually scale into a de facto 'sphere of influence.' This is the greatest Turkish challenge to Iranian territorial integrity in 100 years.",
+          "sources": [
+            {
+              "label": "INSS Guzansky 2026-02: Saudi Arabia-UAE 2026",
+              "url": "https://www.inss.org.il/publication/saudi-arabia-uae-2026/"
+            }
+          ]
+        }
+      ],
+      "observations": [
+        {
+          "id": "d_obs_provincial_irgc_dissent",
+          "label": "Provincial IRGC commanders publicly dissenting",
+          "summary": "The most sensitive internal node along the disintegration path.",
+          "threshold": "None → path stable; 1 case → warning; multiple cases → disintegration accelerating; systematic dissent → disintegration confirmed",
+          "status": "open",
+          "last_check": "2026-05-19",
+          "sources": [
+            {
+              "label": "Atlantic Council 2026-03: Inside Tehran's Toll Booth",
+              "url": "https://www.atlanticcouncil.org/dispatches/inside-tehrans-toll-booth/"
+            }
+          ],
+          "analysis": "Why are public dissents by provincial IRGC commanders the most sensitive internal node along the disintegration path?\n\nThe IRGC's 17 provincial corps commanders have not historically questioned the Supreme Leader or commander-in-chief publicly. Across the 46 years since the 1979 revolution, all internal disagreements have been processed secretly through the Supreme Leader's office. Public dissent would be immediately classified as treason — during the Iran-Iraq War of the 1980s, provincial commanders suspected of collaboration were secretly executed, but public dissent has never occurred.\n\nIf, after Khamenei's death, a provincial corps commander dissents publicly — through Twitter (blocked inside Iran but accessible via VPN), Telegram channels (commonly used by Iranian political figures), or an interview with foreign media — it means two things:\n\nFirst, the Supreme Leader's office's 'secret coordination' mechanism has failed. Mojtaba cannot suppress internal dissent the way his father could.\n\nSecond, the provincial commander has assessed that he has nothing left to lose — possibly anticipating an impending purge, he goes public to recruit allies.\n\nThe Atlantic Council's March 2026 report 'Inside Tehran's Toll Booth' has already documented the IRGC navy's 'self-taxation' in Hormuz ($2 million per vessel). It assesses that this 'half-dissent' (operationally outside the chain of command but rhetorically loyal to the regime), if it shifts to 'full dissent' (rhetorical opposition as well), is the clear signal of disintegration accelerating.\n\nHow to monitor: Iran International (London-based opposition-leaning outlet), IranWire (founded by Maziar Bahari, an independent Iranian outlet), Iranian political accounts on Twitter/X, and how state media such as Tasnim respond to dissent (open attacks on a specific provincial commander would mean dissent has occurred and is taken seriously by the regime)."
+        }
+      ]
+    }
+  ],
+  "history_compare": {
+    "title": "1991 Soviet Collapse Comparison",
+    "intro": "The 1991 Soviet collapse was not a sudden event — it was the accumulation of specific nodes across six years from 1985 to 1991. Iran's disintegration today, if it occurs, will also not be a single event but the accumulation of nodes. From Chernobyl to the Soviet collapse took five and a half years; from Operation Rising Lion to a possible Iranian regime collapse, the window could be 4-6 years.",
+    "mapping": [
+      {
+        "soviet": "1985-03 Gorbachev takes power, introduces Glasnost and Perestroika",
+        "iran": "Pezeshkian government elected 2024-07 (reformist emerges)"
+      },
+      {
+        "soviet": "1986-04 Chernobyl nuclear accident",
+        "iran": "Operation Rising Lion / Operation Epic Fury (nuclear facilities struck plus Khamenei's death)"
+      },
+      {
+        "soviet": "1989-04 Tbilisi massacre",
+        "iran": "2022 Mahsa Amini protests + 2026-01 protester massacre"
+      },
+      {
+        "soviet": "1989-11 Fall of the Berlin Wall (external support network collapses)",
+        "iran": "Russia does not protect Iran (Hanna Notte 2025-06)"
+      },
+      {
+        "soviet": "1990-03 Lithuania declares independence (minorities formally secede)",
+        "iran": "Kurds (PJAK, the most organized) likely to be first to formally secede"
+      },
+      {
+        "soviet": "1991-08 Failed August coup (military splits publicly)",
+        "iran": "Khuzestan or Sistan-Baluchistan provincial IRGC corps publicly dissents"
+      },
+      {
+        "soviet": "1991-12 Formal dissolution of the Soviet Union",
+        "iran": "Disintegration (if it occurs) — expected 4-6 year window"
+      }
+    ],
+    "key_difference": "The Soviet slow-collapse path worked fundamentally because Gorbachev voluntarily let go — during the 1989 East European revolutions he explicitly ordered Soviet forces not to intervene, abandoning the traditional Soviet option of repression. Iran today has no Gorbachev-equivalent figure: Pezeshkian is a reformist, but he is not IRGC-born and commands no force. With no one inside the IRGC willing to let go, Iran's slow-collapse process is likely to skip directly to disintegration. This is the fundamental reason slow collapse is given only 12-15%."
+  }
+}
