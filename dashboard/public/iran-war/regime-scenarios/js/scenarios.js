@@ -219,22 +219,327 @@ async function init() {
     applyI18n();
     renderHeader();
     renderStance();
-    renderProbStrip();
-    setupMethodologyButton();
-    renderScenarioTabs();
-    renderScenarioCard(STATE.currentScenarioId);
+    // v3 new renders:
+    renderTimeAnchors();
+    renderVariableGroups();
+    renderEvolutionPhases();
+    renderWorstCase();
+    // existing (still working):
     renderObservationTracker();
     renderHistoryCompare();
     renderGlossary();
     setupObsFilter();
     setupDrawerControls();
     setupLangToggle();
+    handleHashJump();
   } catch (e) {
     console.error('Init failed:', e);
     document.querySelector('.container').innerHTML =
       '<div style="color:#ff3b30;padding:40px;text-align:center;">' + (STATE.lang === 'en' ? 'Init failed: ' : '初始化失败：') + e.message + '</div>';
   }
 }
+
+// ============ v3 renderers ============
+
+function renderTimeAnchors() {
+  const c = document.getElementById('time-anchors-strip');
+  if (!c || !STATE.data.time_anchors) return;
+  c.innerHTML = STATE.data.time_anchors.map(a => `
+    <div class="time-anchor-card">
+      <div class="time-anchor-date">${escapeHtml(a.date)}</div>
+      <div class="time-anchor-label">${escapeHtml(a.label)}</div>
+      <div class="time-anchor-desc">${escapeHtml(a.short_desc)}</div>
+      <div class="time-anchor-full">${escapeHtml(a.description)}</div>
+    </div>
+  `).join('');
+}
+
+function renderVariableGroups() {
+  const c = document.getElementById('variable-groups');
+  if (!c || !STATE.data.variable_groups) return;
+  c.innerHTML = STATE.data.variable_groups.map(group => `
+    <div class="variable-group">
+      <div class="variable-group-header">
+        <div class="variable-group-label">${escapeHtml(group.label)}</div>
+        <div class="variable-group-sublabel">${escapeHtml(group.sublabel)}</div>
+        <div class="variable-group-intro">${escapeHtml(group.intro)}</div>
+      </div>
+      <div class="variable-group-vars">
+        ${group.variables.map((v, idx) => `
+          <button class="variable-card color-${v.color || 'neutral'}" data-var-id="${v.id}" id="${v.id}">
+            <div class="variable-card-header">
+              <div class="variable-card-label">${escapeHtml(v.label)}</div>
+              ${v.cross_page_link && v.cross_page_link.label ? `
+                <a class="variable-card-link" href="${getCrossPageHref(v.cross_page_link)}" onclick="event.stopPropagation()">${escapeHtml(v.cross_page_link.label)}</a>
+              ` : ''}
+            </div>
+            <div class="variable-card-short">${escapeHtml(v.short_desc)}</div>
+            <div class="variable-card-current">
+              <span class="variable-card-current-label">当前状态</span>
+              <span class="variable-card-current-text">${escapeHtml(v.current_state)}</span>
+            </div>
+            <div class="variable-card-expand-hint">→ 点击展开因果链详细</div>
+          </button>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+  // attach click handlers
+  c.querySelectorAll('[data-var-id]').forEach(el => {
+    el.addEventListener('click', () => openVariableDrawer(el.dataset.varId));
+  });
+}
+
+function getCrossPageHref(link) {
+  if (!link.page) return '#';
+  const pageMap = {
+    'maga': '/iran-war/maga-split/',
+    'supply': '/iran-war/supply-chain/',
+    'regime': '/iran-war/regime-scenarios/'
+  };
+  const base = pageMap[link.page] || '#';
+  return base + (link.section_id ? '#' + link.section_id : '');
+}
+
+function findVariable(varId) {
+  for (const g of (STATE.data.variable_groups || [])) {
+    for (const v of (g.variables || [])) {
+      if (v.id === varId) return v;
+    }
+  }
+  return null;
+}
+
+function openVariableDrawer(varId) {
+  const v = findVariable(varId);
+  if (!v) return;
+  const mechLabel = v.mechanism ? v.mechanism.label : '';
+  const mechAnalysis = v.mechanism ? v.mechanism.analysis : '';
+  const html = `
+    <div class="d-status-row">
+      <span class="d-actor-badge">${escapeHtml(v.current_state || '')}</span>
+    </div>
+    <h2 class="d-title">${escapeHtml(v.label)}</h2>
+    <p class="d-summary">${escapeHtml(v.short_desc)}</p>
+
+    <div class="conn-view color-${v.color || 'neutral'}">
+      <div class="conn-flow">
+        <div class="conn-col conn-col-pre">
+          <div class="conn-col-label conn-label-blue">前提条件 · ${v.preconditions.length}</div>
+          ${v.preconditions.map((p, i) => `
+            <button class="conn-card conn-card-blue" data-pre-idx="${i}" data-var-id="${v.id}">
+              <div class="conn-card-label">${escapeHtml(p.label)}</div>
+            </button>
+          `).join('')}
+        </div>
+        <div class="conn-col conn-col-hub">
+          <div class="conn-source-card">
+            <div class="conn-source-tag">变量</div>
+            <div class="conn-source-name">${escapeHtml(v.label)}</div>
+            ${mechLabel ? `<div class="conn-source-mech"><div class="conn-source-mech-label">运作机制</div><div class="conn-source-mech-text">${escapeHtml(mechLabel)}</div></div>` : ''}
+          </div>
+        </div>
+        <div class="conn-col conn-col-con">
+          <div class="conn-col-label conn-label-orange">可能后果 · ${v.consequences.length}</div>
+          ${v.consequences.map((cs, i) => `
+            <button class="conn-card conn-card-orange" data-con-idx="${i}" data-var-id="${v.id}">
+              <div class="conn-card-label">${escapeHtml(cs.label)}</div>
+              ${typeof cs.weight === 'number' ? `<div class="conn-card-badge">${Math.round(cs.weight * 100)}%</div>` : ''}
+            </button>
+          `).join('')}
+        </div>
+        <svg class="conn-pipes" preserveAspectRatio="none"></svg>
+      </div>
+      ${v.observations && v.observations.length > 0 ? `
+      <div class="conn-obs-row">
+        <div class="conn-obs-header">
+          <span class="conn-obs-marker"></span>
+          <span class="conn-obs-title">监测节点</span>
+        </div>
+        <div class="conn-obs-cards">
+          ${v.observations.map((o, i) => `
+            <button class="conn-card conn-card-yellow conn-obs-card" data-obs-idx="${i}" data-var-id="${v.id}">
+              <div class="conn-card-label">${escapeHtml(o.label)}</div>
+            </button>
+          `).join('')}
+        </div>
+      </div>` : ''}
+    </div>
+
+    ${mechAnalysis ? `
+      <div class="d-section">
+        <div class="d-section-label">机制详解</div>
+        <div class="d-prose">${formatRichText(mechAnalysis, 'd-para')}</div>
+      </div>
+    ` : ''}
+  `;
+  setDrawer('变量', html);
+  setTimeout(() => {
+    drawVariablePipes();
+    attachVariableSubCardHandlers();
+  }, 60);
+}
+
+function drawVariablePipes() {
+  const view = document.querySelector('#drawer .conn-view');
+  if (!view) return;
+  const flow = view.querySelector('.conn-flow');
+  const hub = view.querySelector('.conn-source-card');
+  const svg = view.querySelector('.conn-pipes');
+  if (!flow || !hub || !svg) return;
+
+  const flowRect = flow.getBoundingClientRect();
+  const hubRect = hub.getBoundingClientRect();
+  const w = flowRect.width;
+  const h = flowRect.height;
+  svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+  svg.setAttribute('width', w);
+  svg.setAttribute('height', h);
+
+  const hubLeftX = hubRect.left - flowRect.left;
+  const hubRightX = hubRect.right - flowRect.left;
+  const hubCenterY = hubRect.top + hubRect.height / 2 - flowRect.top;
+  const paths = [];
+
+  view.querySelectorAll('[data-pre-idx]').forEach(card => {
+    const r = card.getBoundingClientRect();
+    const sx = r.right - flowRect.left;
+    const sy = r.top + r.height / 2 - flowRect.top;
+    const tx = hubLeftX;
+    const ty = hubCenterY;
+    const midX = sx + (tx - sx) * 0.55;
+    paths.push(`<path d="M ${sx} ${sy} C ${midX} ${sy}, ${midX} ${ty}, ${tx} ${ty}" stroke="#0071e3" stroke-width="4" fill="none" opacity="0.38" stroke-linecap="round"/>`);
+  });
+  view.querySelectorAll('[data-con-idx]').forEach(card => {
+    const r = card.getBoundingClientRect();
+    const sx = hubRightX;
+    const sy = hubCenterY;
+    const tx = r.left - flowRect.left;
+    const ty = r.top + r.height / 2 - flowRect.top;
+    const midX = sx + (tx - sx) * 0.45;
+    paths.push(`<path d="M ${sx} ${sy} C ${midX} ${sy}, ${midX} ${ty}, ${tx} ${ty}" stroke="#ff9500" stroke-width="4" fill="none" opacity="0.38" stroke-linecap="round"/>`);
+  });
+  svg.innerHTML = paths.join('');
+}
+
+function attachVariableSubCardHandlers() {
+  document.querySelectorAll('#drawer [data-pre-idx]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const v = findVariable(el.dataset.varId);
+      const item = v.preconditions[parseInt(el.dataset.preIdx)];
+      showSubDetail('前提条件', item);
+    });
+  });
+  document.querySelectorAll('#drawer [data-con-idx]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const v = findVariable(el.dataset.varId);
+      const item = v.consequences[parseInt(el.dataset.conIdx)];
+      showSubDetail('可能后果', item, true);
+    });
+  });
+  document.querySelectorAll('#drawer [data-obs-idx]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const v = findVariable(el.dataset.varId);
+      const item = v.observations[parseInt(el.dataset.obsIdx)];
+      showSubDetail('监测节点', item, false, true);
+    });
+  });
+}
+
+function showSubDetail(tag, item, isConsequence = false, isObservation = false) {
+  const drawerBody = document.getElementById('drawer-body');
+  if (!drawerBody) return;
+  // Append sub-detail panel
+  let extra = '';
+  if (isConsequence && typeof item.weight === 'number') {
+    extra = `<div class="d-actor-badge">${Math.round(item.weight * 100)}% 权重</div>`;
+  }
+  if (isObservation) {
+    extra = item.threshold ? `<div class="d-callout"><strong>触发门槛：</strong>${escapeHtml(item.threshold)}</div>` : '';
+    if (item.current_state) extra += `<div class="d-callout"><strong>当前状态：</strong>${escapeHtml(item.current_state)}</div>`;
+  }
+  const subHtml = `
+    <div class="d-section variable-sub-detail">
+      <div class="d-section-label">${escapeHtml(tag)}：${escapeHtml(item.label)}</div>
+      ${extra}
+      ${item.analysis ? `<div class="d-prose">${formatRichText(item.analysis, 'd-para')}</div>` : ''}
+    </div>
+  `;
+  // Remove any previous sub-detail and add new
+  const existing = drawerBody.querySelector('.variable-sub-detail');
+  if (existing) existing.remove();
+  drawerBody.insertAdjacentHTML('beforeend', subHtml);
+  // Scroll to it
+  const newEl = drawerBody.querySelector('.variable-sub-detail');
+  if (newEl) newEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderEvolutionPhases() {
+  const c = document.getElementById('evolution-phases');
+  if (!c || !STATE.data.evolution_phases) return;
+  c.innerHTML = STATE.data.evolution_phases.map(p => `
+    <div class="evolution-phase">
+      <div class="evolution-phase-header">
+        <span class="evolution-phase-num">阶段 ${p.phase}</span>
+        <span class="evolution-phase-period">${escapeHtml(p.period)}</span>
+      </div>
+      <div class="evolution-phase-label">${escapeHtml(p.label)}</div>
+      <div class="evolution-phase-desc">${formatRichText(p.description, 'd-para')}</div>
+      ${p.key_events && p.key_events.length > 0 ? `
+        <div class="evolution-phase-events">
+          <div class="evolution-phase-events-label">关键事件</div>
+          <ul class="rich-list">${p.key_events.map(e => `<li>${escapeHtml(e)}</li>`).join('')}</ul>
+        </div>
+      ` : ''}
+    </div>
+  `).join('');
+}
+
+function renderWorstCase() {
+  const c = document.getElementById('worst-case');
+  if (!c || !STATE.data.worst_case) return;
+  const w = STATE.data.worst_case;
+  c.innerHTML = `
+    <div class="worst-case-header">
+      <span class="worst-case-prob">${escapeHtml(w.probability_24m)} 概率</span>
+      <span class="worst-case-label">${escapeHtml(w.label)}</span>
+    </div>
+    <p class="worst-case-desc">${escapeHtml(w.description)}</p>
+    <div class="worst-case-grid">
+      <div class="worst-case-section">
+        <div class="worst-case-section-label">触发条件</div>
+        <ul class="rich-list">${w.triggers.map(t => `<li>${escapeHtml(t)}</li>`).join('')}</ul>
+      </div>
+      <div class="worst-case-section">
+        <div class="worst-case-section-label">破坏后果</div>
+        <ul class="rich-list">${w.consequences.map(c => `<li>${escapeHtml(c)}</li>`).join('')}</ul>
+      </div>
+      <div class="worst-case-section">
+        <div class="worst-case-section-label">监测信号</div>
+        <ul class="rich-list">${w.monitoring_signals.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ul>
+      </div>
+    </div>
+  `;
+}
+
+function handleHashJump() {
+  if (window.location.hash) {
+    const hash = window.location.hash.substring(1);
+    setTimeout(() => {
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (el.matches('[data-var-id]')) {
+          setTimeout(() => openVariableDrawer(el.dataset.varId), 400);
+        }
+      }
+    }, 200);
+  }
+}
+window.addEventListener('hashchange', handleHashJump);
 
 function renderHeader() {
   const m = STATE.data.meta;
@@ -834,11 +1139,20 @@ function renderSources(sources) {
 
 function renderObservationTracker() {
   const tbody = document.getElementById('obs-tbody');
+  if (!tbody) return;
   tbody.innerHTML = '';
   const all = [];
-  STATE.data.scenarios.forEach(s => {
-    (s.observations || []).forEach(o => {
-      all.push({ ...o, scenario_name: s.name, scenario_id: s.id });
+  // v3: pull observations from variable_groups[].variables[].observations
+  (STATE.data.variable_groups || []).forEach(g => {
+    (g.variables || []).forEach(v => {
+      (v.observations || []).forEach(o => {
+        all.push({
+          ...o,
+          scenario_name: v.label,
+          scenario_id: v.id,
+          status: o.status || 'watching'
+        });
+      });
     });
   });
 
@@ -856,7 +1170,8 @@ function renderObservationTracker() {
       <td class="date-cell">${escapeHtml(o.last_check || '—')}</td>
     `;
     tr.addEventListener('click', () => {
-      selectScenario(o.scenario_id);
+      // v3: jump to variable detail
+      if (typeof openVariableDrawer === 'function') openVariableDrawer(o.scenario_id);
     });
     tbody.appendChild(tr);
   });

@@ -109,11 +109,16 @@ async function init() {
     renderFactions();
     renderTimeline();
     renderObservations();
+    // v3 new: Trump 内部消耗战略
+    renderTrumpStrategy();
     renderHubs();
+    // v3 new: bridging section
+    renderBridgingSection();
     renderHistoryCompare();
     renderGlossary();
     setupDrawerControls();
     setupLangToggle();
+    handleHashJump();
   } catch (e) {
     console.error('Init failed:', e);
     document.querySelector('.container').innerHTML =
@@ -236,6 +241,10 @@ function openFactionDrawer(index) {
     </div>
     <h2 class="d-title">${escapeHtml(f.name)}${f.name_en ? ` · <span style="color:var(--label-3);font-weight:500">${escapeHtml(f.name_en)}</span>` : ''}</h2>
     <p class="d-summary">${escapeHtml(f.thesis)}</p>
+    ${f.internal_state_2026_05 ? `<div class="d-section">
+      <div class="d-section-label" style="color:#0071e3">2026-05 内部状态更新</div>
+      <div class="d-prose">${formatRichText(f.internal_state_2026_05, 'd-para')}</div>
+    </div>` : ''}
     ${f.analysis ? `<div class="d-section">
       <div class="d-section-label">${STATE.lang === 'en' ? 'Deep analysis' : '深度分析'}</div>
       <div class="d-prose">${formatRichText(f.analysis, 'd-para')}</div>
@@ -657,3 +666,119 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+
+// ============ v3 new renderers ============
+
+function renderTrumpStrategy() {
+  const c = document.getElementById('trump-consumption-strategy');
+  if (!c || !STATE.data.trump_internal_consumption_strategy) return;
+  const s = STATE.data.trump_internal_consumption_strategy;
+  c.innerHTML = `
+    <div class="trump-strategy-card">
+      <div class="trump-strategy-framework">${escapeHtml(s.framework_description)}</div>
+      <div class="trump-strategy-arrangements">
+        ${(s.three_arrangements || []).map((a, i) => `
+          <div class="trump-arrangement">
+            <div class="trump-arrangement-num">安排 ${i+1}</div>
+            <div class="trump-arrangement-label">${escapeHtml(a.label)}</div>
+            <div class="trump-arrangement-logic">${escapeHtml(a.logic)}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="trump-strategy-implication">
+        <div class="trump-implication-label">结果</div>
+        <div class="trump-implication-text">${formatRichText(s.implication, 'd-para')}</div>
+      </div>
+    </div>
+  `;
+}
+
+function renderBridgingSection() {
+  const c = document.getElementById('bridging-content');
+  if (!c || !STATE.data.bridging_section) return;
+  const b = STATE.data.bridging_section;
+  c.innerHTML = `
+    <div class="bridging-card">
+      <div class="bridging-window">
+        <span class="bridging-window-label">时间窗口</span>
+        <span class="bridging-window-value">${escapeHtml(b.time_window)}</span>
+      </div>
+      <div class="bridging-intro">${formatRichText(b.intro, 'd-para')}</div>
+
+      <div class="bridging-section-block">
+        <div class="bridging-section-label">${escapeHtml(b.israel_capability_constraints.label)}</div>
+        <div class="bridging-capability-grid">
+          <div class="bridging-capability-col">
+            <div class="bridging-capability-col-label">✓ 单方面能做的</div>
+            <ul class="rich-list">${b.israel_capability_constraints.can_do.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
+          </div>
+          <div class="bridging-capability-col">
+            <div class="bridging-capability-col-label">✗ 单方面不能做的</div>
+            <ul class="rich-list">${b.israel_capability_constraints.cannot_do.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
+          </div>
+        </div>
+        <div class="bridging-capability-implication">${escapeHtml(b.israel_capability_constraints.implication)}</div>
+      </div>
+
+      <div class="bridging-section-block">
+        <div class="bridging-section-label">以色列升级路径</div>
+        <div class="bridging-paths">
+          ${(b.israel_escalation_paths || []).map(p => `
+            <div class="bridging-path">
+              <div class="bridging-path-header">
+                <span class="bridging-path-label">${escapeHtml(p.label)}</span>
+                <span class="bridging-path-prob">${escapeHtml(p.probability)}</span>
+              </div>
+              <div class="bridging-path-detail">
+                <div><strong>形式</strong>：${escapeHtml(p.form || '')}</div>
+                ${p.purpose ? `<div><strong>目的</strong>：${escapeHtml(p.purpose)}</div>` : ''}
+                ${p.trigger ? `<div><strong>触发</strong>：${escapeHtml(p.trigger)}</div>` : ''}
+                ${p.constraint ? `<div><strong>约束</strong>：${escapeHtml(p.constraint)}</div>` : ''}
+                ${p.maga_reaction ? `<div><strong>MAGA 反应</strong>：${escapeHtml(p.maga_reaction)}</div>` : ''}
+                ${p.key_risk ? `<div class="bridging-path-risk"><strong>关键风险</strong>：${escapeHtml(p.key_risk)}</div>` : ''}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="bridging-section-block">
+        <div class="bridging-section-label">${escapeHtml(b.maga_faction_reaction_matrix.label)}</div>
+        <div class="bridging-matrix-wrap">
+          <table class="bridging-matrix">
+            <thead>
+              <tr><th>升级类型</th><th>原教旨派</th><th>强袭派</th><th>福音派</th><th>后自由派</th></tr>
+            </thead>
+            <tbody>
+              ${b.maga_faction_reaction_matrix.rows.map(r => `
+                <tr>
+                  <td class="bridging-matrix-rowlabel">${escapeHtml(r.escalation_type)}</td>
+                  <td>${escapeHtml(r.paleo)}</td>
+                  <td>${escapeHtml(r.hawk)}</td>
+                  <td>${escapeHtml(r.evangelical)}</td>
+                  <td>${escapeHtml(r.post_liberal)}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bridging-section-block">
+        <div class="bridging-section-label">对 2028 初选的含义</div>
+        <div class="bridging-implications">${formatRichText(b.implications_for_2028, 'd-para')}</div>
+      </div>
+    </div>
+  `;
+}
+
+function handleHashJump() {
+  if (window.location.hash) {
+    const hash = window.location.hash.substring(1);
+    setTimeout(() => {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 200);
+  }
+}
+window.addEventListener('hashchange', handleHashJump);

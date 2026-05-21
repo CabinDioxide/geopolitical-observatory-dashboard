@@ -538,3 +538,330 @@
 .d-para + .rich-list {
   margin-top: -4px;
 }
+
+/* ============ v3: US Navy Hub ============ */
+.us-navy-hub {
+  background: #fff;
+  border-radius: 16px;
+  padding: 0;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+.us-navy-card {
+  border-left: 4px solid #ff7e5f;
+  padding: 24px 28px;
+}
+.us-navy-header { margin-bottom: 18px; }
+.us-navy-label {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--label);
+  letter-spacing: -0.022em;
+}
+.us-navy-short {
+  font-size: 14px;
+  color: var(--label-2);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+.us-navy-current {
+  display: inline-flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-top: 10px;
+  padding: 6px 14px;
+  background: rgba(255,126,95,0.08);
+  border-radius: 8px;
+}
+.us-navy-current-label {
+  font-size: 11px;
+  color: var(--label-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+.us-navy-current-text {
+  font-size: 13.5px;
+  color: var(--label);
+  font-weight: 600;
+}
+.us-navy-section-label {
+  font-size: 12px;
+  color: var(--label-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 18px;
+}
+.us-navy-keydata-table {
+  width: 100%;
+  font-size: 13.5px;
+  border-collapse: collapse;
+}
+.us-navy-keydata-table td {
+  padding: 8px 0;
+  border-bottom: 0.5px solid var(--hairline);
+}
+.us-navy-keydata-table .kd-label {
+  color: var(--label-2);
+  width: 45%;
+}
+.us-navy-keydata-table .kd-value {
+  color: var(--label);
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+.us-navy-mech-text {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--label-2);
+}
+.us-navy-con-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.us-navy-con-card {
+  background: rgba(0,0,0,0.025);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.us-navy-con-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+.us-navy-con-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--label);
+}
+.us-navy-con-weight {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: #0071e3;
+  font-weight: 600;
+}
+.us-navy-con-analysis {
+  font-size: 12.5px;
+  color: var(--label-2);
+  line-height: 1.55;
+}
+
+/* ============ v3: Ras Laffan Event ============ */
+.ras-laffan-event {
+  background: linear-gradient(135deg, rgba(255,59,48,0.05), rgba(255,59,48,0.01));
+  border-radius: 14px;
+  padding: 22px 26px;
+  border: 0.5px solid rgba(255,59,48,0.15);
+}
+.ras-laffan-card { }
+.ras-laffan-header {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+}
+.ras-laffan-date {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--red);
+  background: rgba(255,59,48,0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.ras-laffan-label {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--label);
+  letter-spacing: -0.02em;
+}
+.ras-laffan-significance {
+  font-size: 14px;
+  color: var(--red);
+  font-weight: 600;
+  margin-top: 8px;
+}
+.ras-laffan-desc {
+  font-size: 14px;
+  color: var(--label-2);
+  line-height: 1.6;
+  margin: 12px 0;
+}
+.ras-laffan-section {
+  margin-top: 16px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.ras-laffan-section-label {
+  font-size: 11.5px;
+  color: var(--label-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.ras-laffan-responses {
+  width: 100%;
+  font-size: 13.5px;
+  border-collapse: collapse;
+}
+.ras-laffan-responses td {
+  padding: 8px 0;
+  border-bottom: 0.5px solid var(--hairline);
+  vertical-align: top;
+}
+.ras-laffan-responses .response-actor {
+  font-weight: 600;
+  color: var(--label);
+  width: 22%;
+  padding-right: 12px;
+}
+.ras-laffan-responses .response-text {
+  color: var(--label-2);
+  line-height: 1.5;
+}
+
+/* ============ v3: Hormuz Mode Meta ============ */
+.hormuz-meta-card {
+  background: rgba(0,113,227,0.04);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  border: 0.5px solid rgba(0,113,227,0.15);
+}
+.hormuz-meta-current {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.hormuz-meta-current-label {
+  font-size: 11.5px;
+  color: var(--label-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+.hormuz-meta-current-value {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: #0071e3;
+}
+.hormuz-meta-desc {
+  margin-top: 8px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--label-2);
+}
+.hormuz-meta-prob {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 0.5px solid rgba(0,113,227,0.15);
+}
+.hormuz-meta-prob-label {
+  font-size: 11.5px;
+  color: var(--label-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.hormuz-meta-prob-table {
+  width: 100%;
+  font-size: 13.5px;
+  border-collapse: collapse;
+}
+.hormuz-meta-prob-table td {
+  padding: 6px 0;
+  border-bottom: 0.5px solid rgba(0,113,227,0.1);
+}
+.hormuz-meta-prob-table .prob-value {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--label);
+  text-align: right;
+}
+
+/* ============ v3: Gulf Trio Role ============ */
+.gulf-trio-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 26px;
+  box-shadow: var(--card-shadow);
+}
+.gulf-trio-framework {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  padding: 6px 12px;
+  background: rgba(0,113,227,0.06);
+  border-radius: 8px;
+  align-self: flex-start;
+  display: inline-flex;
+}
+.gulf-trio-framework-label {
+  font-size: 11.5px;
+  color: var(--label-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+.gulf-trio-framework-value {
+  font-size: 13px;
+  color: #0071e3;
+  font-weight: 600;
+}
+.gulf-trio-desc {
+  margin: 14px 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--label-2);
+}
+.gulf-trio-positions {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 0.5px solid var(--hairline);
+}
+.gulf-trio-section-label {
+  font-size: 11.5px;
+  color: var(--label-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.gulf-trio-country {
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.02);
+  border-radius: 8px;
+}
+.gulf-trio-country-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--label);
+}
+.gulf-trio-country-pos {
+  font-size: 13px;
+  color: var(--label-2);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* ============ v3: Hormuz Mode v3 subtitle ============ */
+.hormuz-subtitle-v3 {
+  font-size: 11.5px;
+  color: #0071e3;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-top: 4px;
+  background: rgba(0,113,227,0.05);
+  padding: 4px 8px;
+  border-radius: 6px;
+}

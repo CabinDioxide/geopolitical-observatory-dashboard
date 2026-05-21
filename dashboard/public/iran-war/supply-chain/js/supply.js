@@ -123,7 +123,15 @@ async function init() {
     renderHeader();
     renderStance();
     renderChains();
+    // v3 new: US Navy capacity hub
+    renderUsNavyHub();
+    // v3 new: Ras Laffan event
+    renderRasLaffanEvent();
+    // v3 new: Hormuz mode meta (混合模式 as base case)
+    renderHormuzModesMeta();
     renderHormuzModes();
+    // v3 new: Gulf trio role
+    renderGulfTrioRole();
     renderHubs();
     renderWorstCase();
     renderCountries();
@@ -132,6 +140,7 @@ async function init() {
     renderGlossary();
     setupDrawerControls();
     setupLangToggle();
+    handleHashJump();
   } catch (e) {
     console.error('Init failed:', e);
     document.querySelector('.container').innerHTML =
@@ -256,6 +265,147 @@ function openChainDrawer(i) {
 
 /* ============ Hormuz modes ============ */
 
+// ============ v3 new renderers ============
+
+function renderUsNavyHub() {
+  const c = document.getElementById('us-navy-hub');
+  if (!c || !STATE.data.us_navy_capacity_hub) return;
+  const h = STATE.data.us_navy_capacity_hub;
+  c.innerHTML = `
+    <div class="us-navy-card color-${h.color || 'alert'}">
+      <div class="us-navy-header">
+        <div class="us-navy-label">${escapeHtml(h.label)}</div>
+        <div class="us-navy-short">${escapeHtml(h.short_desc)}</div>
+        <div class="us-navy-current">
+          <span class="us-navy-current-label">当前状态</span>
+          <span class="us-navy-current-text">${escapeHtml(h.current_state)}</span>
+        </div>
+      </div>
+      <div class="us-navy-keydata">
+        <div class="us-navy-keydata-label">关键数据</div>
+        <table class="us-navy-keydata-table">
+          ${(h.key_data || []).map(d => `<tr><td class="kd-label">${escapeHtml(d.label)}</td><td class="kd-value">${formatBold(d.value)}</td></tr>`).join('')}
+        </table>
+      </div>
+      <div class="us-navy-mechanism">
+        <div class="us-navy-section-label">运作机制</div>
+        <div class="us-navy-mech-text">${formatRichText(h.mechanism, 'd-para')}</div>
+      </div>
+      <div class="us-navy-consequences">
+        <div class="us-navy-section-label">可能后果</div>
+        <div class="us-navy-con-grid">
+          ${(h.consequences || []).map(con => `
+            <div class="us-navy-con-card">
+              <div class="us-navy-con-header">
+                <span class="us-navy-con-label">${escapeHtml(con.label)}</span>
+                <span class="us-navy-con-weight">${Math.round((con.weight || 0) * 100)}%</span>
+              </div>
+              <div class="us-navy-con-analysis">${escapeHtml(con.analysis)}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+      <div class="us-navy-observations">
+        <div class="us-navy-section-label">监测节点</div>
+        <ul class="rich-list">
+          ${(h.observations || []).map(o => `
+            <li><strong>${escapeHtml(o.label)}</strong>：${escapeHtml(o.threshold)}（当前：${escapeHtml(o.current_state)}）</li>
+          `).join('')}
+        </ul>
+      </div>
+    </div>
+  `;
+}
+
+function renderRasLaffanEvent() {
+  const c = document.getElementById('ras-laffan-event');
+  if (!c || !STATE.data.ras_laffan_event) return;
+  const e = STATE.data.ras_laffan_event;
+  c.innerHTML = `
+    <div class="ras-laffan-card">
+      <div class="ras-laffan-header">
+        <span class="ras-laffan-date">${escapeHtml(e.date)}</span>
+        <span class="ras-laffan-label">${escapeHtml(e.label)}</span>
+      </div>
+      <div class="ras-laffan-significance">${escapeHtml(e.significance)}</div>
+      <p class="ras-laffan-desc">${escapeHtml(e.description)}</p>
+      <div class="ras-laffan-section">
+        <div class="ras-laffan-section-label">各方反应</div>
+        <table class="ras-laffan-responses">
+          ${(e.responses || []).map(r => `<tr><td class="response-actor">${escapeHtml(r.actor)}</td><td class="response-text">${escapeHtml(r.response)}</td></tr>`).join('')}
+        </table>
+      </div>
+      <div class="ras-laffan-section">
+        <div class="ras-laffan-section-label">含义</div>
+        <ul class="rich-list">${(e.implications || []).map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>
+      </div>
+    </div>
+  `;
+}
+
+function renderHormuzModesMeta() {
+  const c = document.getElementById('hormuz-meta');
+  if (!c || !STATE.data.hormuz_modes_meta) return;
+  const m = STATE.data.hormuz_modes_meta;
+  c.innerHTML = `
+    <div class="hormuz-meta-card">
+      <div class="hormuz-meta-current">
+        <span class="hormuz-meta-current-label">当前实际状态</span>
+        <span class="hormuz-meta-current-value">${escapeHtml(m.current_actual_state)}</span>
+      </div>
+      <div class="hormuz-meta-desc">${formatRichText(m.description, 'd-para')}</div>
+      <div class="hormuz-meta-prob">
+        <div class="hormuz-meta-prob-label">24 月内概率分布</div>
+        <table class="hormuz-meta-prob-table">
+          ${Object.entries(m.base_case_probabilities_24m || {}).map(([mode, prob]) => `
+            <tr><td>${escapeHtml(mode)}</td><td class="prob-value">${escapeHtml(prob)}</td></tr>
+          `).join('')}
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+function renderGulfTrioRole() {
+  const c = document.getElementById('gulf-trio-content');
+  if (!c || !STATE.data.gulf_trio_role) return;
+  const g = STATE.data.gulf_trio_role;
+  c.innerHTML = `
+    <div class="gulf-trio-card">
+      <div class="gulf-trio-framework">
+        <span class="gulf-trio-framework-label">框架</span>
+        <span class="gulf-trio-framework-value">${escapeHtml(g.framework)}</span>
+      </div>
+      <div class="gulf-trio-desc">${formatRichText(g.description, 'd-para')}</div>
+      <div class="gulf-trio-positions">
+        <div class="gulf-trio-section-label">三国具体立场</div>
+        ${(g.specific_positions || []).map(p => `
+          <div class="gulf-trio-country">
+            <div class="gulf-trio-country-name">${escapeHtml(p.country)}</div>
+            <div class="gulf-trio-country-pos">${escapeHtml(p.position)}</div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function formatBold(text) {
+  if (!text) return '';
+  return escapeHtml(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+}
+
+function handleHashJump() {
+  if (window.location.hash) {
+    const hash = window.location.hash.substring(1);
+    setTimeout(() => {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 200);
+  }
+}
+window.addEventListener('hashchange', handleHashJump);
+
 function renderHormuzModes() {
   const c = document.getElementById('hormuz-grid');
   c.innerHTML = '';
@@ -266,6 +416,7 @@ function renderHormuzModes() {
       <div class="hormuz-scenario">${escapeHtml(m.iran_scenario)}</div>
       <div class="hormuz-name">${escapeHtml(m.name)}</div>
       ${m.subtitle ? `<div class="hormuz-subtitle">${escapeHtml(m.subtitle)}</div>` : ''}
+      ${m.updated_subtitle_2026_05 ? `<div class="hormuz-subtitle-v3">${formatBold(m.updated_subtitle_2026_05)}</div>` : ''}
       <div class="hormuz-metric"><span>${t('drawer.oil_passage')}</span><strong>${escapeHtml(m.global_oil_passage)}</strong></div>
     `;
     card.addEventListener('click', () => openHormuzDrawer(i));
@@ -348,6 +499,7 @@ function openCountryDrawer(i) {
     </div>
     <h2 class="d-title">${escapeHtml(co.name)}${co.name_en ? ` · <span style="color:var(--label-3);font-weight:500">${escapeHtml(co.name_en)}</span>` : ''}</h2>
     <p class="d-summary">${escapeHtml(co.thesis)}</p>
+    ${co.updated_analysis_2026_05 ? `<div class="d-section"><div class="d-section-label" style="color:#0071e3">2026-05 修正</div><div class="d-prose">${formatRichText(co.updated_analysis_2026_05, 'd-para')}</div></div>` : ''}
     ${co.analysis ? `<div class="d-section"><div class="d-section-label">${STATE.lang === 'en' ? 'Deep analysis' : '深度分析'}</div><div class="d-prose">${formatRichText(co.analysis, 'd-para')}</div></div>` : ''}
     <div class="d-section"><div class="d-section-label">${t('drawer.economic')}</div><ul class="evidence-list">${(co.economic_exposure || []).map(d => `<li class="evidence-item">${escapeHtml(d)}</li>`).join('')}</ul></div>
     <div class="d-section"><div class="d-section-label">${t('drawer.political')}</div><ul class="evidence-list">${(co.political_fragility || []).map(d => `<li class="evidence-item">${escapeHtml(d)}</li>`).join('')}</ul></div>
