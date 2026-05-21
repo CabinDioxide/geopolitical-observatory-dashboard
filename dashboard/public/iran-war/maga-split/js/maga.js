@@ -16,8 +16,12 @@ const I18N = {
     'hint.timeline': '2025-06 → 2026-05 · 点击事件查看详情',
     'block.observations': '六个可验证观察节点',
     'hint.observations': '事件触发 → 更新数据 → 重新部署',
+    'block.trump_strategy': 'Trump 的内部消耗战略',
+    'hint.trump_strategy': '让 MAGA 内部继承人互相消耗，自己保留最大政治控制权',
     'block.causal': '因果关系图',
     'hint.causal': '两个时间层 · 战争（已发生）→ 2028 提名战（未发生）· 点击节点查看深度分析',
+    'block.bridging': 'lame duck 窗口（2026-11 → 2028-01）',
+    'hint.bridging': '以色列动向 + MAGA 反应，决定 2028 初选格局',
     'block.history': '两种历史先例：1968 vs 2003',
     'block.glossary': '术语表',
     'footer.text': '数据基线 2026-05-19 · 主要文献：班农 / 塔克·卡尔森长访谈 · NPR / CNN / Newsweek MAGA 撕裂报道 · 马西 H.Con.Res.38 · 参议院沙欣致鲁比奥信 · FDD Gerecht + CFR Takeyh WSJ 联名 · 罗伯特·卡根《大西洋月刊》 · 斯蒂芬·沃尔特《外交政策》 · Jacobin AIPAC 系列',
@@ -56,8 +60,12 @@ const I18N = {
     'hint.timeline': 'Jun 2025 → May 2026 · click event for details',
     'block.observations': 'Six observation nodes',
     'hint.observations': 'Event triggers → update data → redeploy',
+    'block.trump_strategy': 'Trump\'s internal-consumption strategy',
+    'hint.trump_strategy': 'Let MAGA heirs consume each other while Trump retains maximum political control',
     'block.causal': 'Causal diagram',
     'hint.causal': 'Two time layers · the war (past) → 2028 primary (future) · click any node for deep analysis',
+    'block.bridging': 'Lame-duck window (Nov 2026 → Jan 2028)',
+    'hint.bridging': 'Israel moves + MAGA reactions shape the 2028 primary',
     'block.history': 'Two precedents: 1968 vs 2003',
     'block.glossary': 'Glossary',
     'footer.text': 'Baseline 2026-05-19 · Sources: Bannon / Tucker Carlson long interviews · NPR / CNN / Newsweek MAGA split coverage · Massie H.Con.Res.38 · Senate Shaheen letter to Rubio · FDD Gerecht + CFR Takeyh joint WSJ op-ed · Robert Kagan Atlantic · Stephen Walt Foreign Policy · Jacobin AIPAC series',
@@ -242,7 +250,7 @@ function openFactionDrawer(index) {
     <h2 class="d-title">${escapeHtml(f.name)}${f.name_en ? ` · <span style="color:var(--label-3);font-weight:500">${escapeHtml(f.name_en)}</span>` : ''}</h2>
     <p class="d-summary">${escapeHtml(f.thesis)}</p>
     ${f.internal_state_2026_05 ? `<div class="d-section">
-      <div class="d-section-label" style="color:#0071e3">2026-05 内部状态更新</div>
+      <div class="d-section-label" style="color:#0071e3">${STATE.lang === 'en' ? '2026-05 internal state update' : '2026-05 内部状态更新'}</div>
       <div class="d-prose">${formatRichText(f.internal_state_2026_05, 'd-para')}</div>
     </div>` : ''}
     ${f.analysis ? `<div class="d-section">
@@ -356,9 +364,14 @@ function openObservationDrawer(index) {
 
 /* ============ Hubs (dual-hub stacked flow with temporal bridge) ============ */
 
-const STATUS_LABEL = {
-  open: '未触发', triggered: '已触发', falsified: '已证伪', watching: '观察中'
-};
+const STATUS_LABEL = new Proxy({}, {
+  get: (_, s) => {
+    const key = String(s);
+    const en = { open: 'Not triggered', triggered: 'Triggered', falsified: 'Falsified', watching: 'Watching' };
+    const zh = { open: '未触发', triggered: '已触发', falsified: '已证伪', watching: '观察中' };
+    return (STATE.lang === 'en' ? en[key] : zh[key]) || key;
+  }
+});
 
 function renderHubs() {
   const tabsEl = document.getElementById('hub-tabs');
@@ -679,14 +692,14 @@ function renderTrumpStrategy() {
       <div class="trump-strategy-arrangements">
         ${(s.three_arrangements || []).map((a, i) => `
           <div class="trump-arrangement">
-            <div class="trump-arrangement-num">安排 ${i+1}</div>
+            <div class="trump-arrangement-num">${STATE.lang === 'en' ? `Arrangement ${i+1}` : `安排 ${i+1}`}</div>
             <div class="trump-arrangement-label">${escapeHtml(a.label)}</div>
             <div class="trump-arrangement-logic">${escapeHtml(a.logic)}</div>
           </div>
         `).join('')}
       </div>
       <div class="trump-strategy-implication">
-        <div class="trump-implication-label">结果</div>
+        <div class="trump-implication-label">${STATE.lang === 'en' ? 'Result' : '结果'}</div>
         <div class="trump-implication-text">${formatRichText(s.implication, 'd-para')}</div>
       </div>
     </div>
@@ -700,7 +713,7 @@ function renderBridgingSection() {
   c.innerHTML = `
     <div class="bridging-card">
       <div class="bridging-window">
-        <span class="bridging-window-label">时间窗口</span>
+        <span class="bridging-window-label">${STATE.lang === 'en' ? 'Time window' : '时间窗口'}</span>
         <span class="bridging-window-value">${escapeHtml(b.time_window)}</span>
       </div>
       <div class="bridging-intro">${formatRichText(b.intro, 'd-para')}</div>
@@ -709,11 +722,11 @@ function renderBridgingSection() {
         <div class="bridging-section-label">${escapeHtml(b.israel_capability_constraints.label)}</div>
         <div class="bridging-capability-grid">
           <div class="bridging-capability-col">
-            <div class="bridging-capability-col-label">✓ 单方面能做的</div>
+            <div class="bridging-capability-col-label">${STATE.lang === 'en' ? '✓ Can do unilaterally' : '✓ 单方面能做的'}</div>
             <ul class="rich-list">${b.israel_capability_constraints.can_do.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
           </div>
           <div class="bridging-capability-col">
-            <div class="bridging-capability-col-label">✗ 单方面不能做的</div>
+            <div class="bridging-capability-col-label">${STATE.lang === 'en' ? '✗ Cannot do unilaterally' : '✗ 单方面不能做的'}</div>
             <ul class="rich-list">${b.israel_capability_constraints.cannot_do.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
           </div>
         </div>
@@ -721,7 +734,7 @@ function renderBridgingSection() {
       </div>
 
       <div class="bridging-section-block">
-        <div class="bridging-section-label">以色列升级路径</div>
+        <div class="bridging-section-label">${STATE.lang === 'en' ? 'Israeli escalation paths' : '以色列升级路径'}</div>
         <div class="bridging-paths">
           ${(b.israel_escalation_paths || []).map(p => `
             <div class="bridging-path">
@@ -730,12 +743,12 @@ function renderBridgingSection() {
                 <span class="bridging-path-prob">${escapeHtml(p.probability)}</span>
               </div>
               <div class="bridging-path-detail">
-                <div><strong>形式</strong>：${escapeHtml(p.form || '')}</div>
-                ${p.purpose ? `<div><strong>目的</strong>：${escapeHtml(p.purpose)}</div>` : ''}
-                ${p.trigger ? `<div><strong>触发</strong>：${escapeHtml(p.trigger)}</div>` : ''}
-                ${p.constraint ? `<div><strong>约束</strong>：${escapeHtml(p.constraint)}</div>` : ''}
-                ${p.maga_reaction ? `<div><strong>MAGA 反应</strong>：${escapeHtml(p.maga_reaction)}</div>` : ''}
-                ${p.key_risk ? `<div class="bridging-path-risk"><strong>关键风险</strong>：${escapeHtml(p.key_risk)}</div>` : ''}
+                <div><strong>${STATE.lang === 'en' ? 'Form' : '形式'}</strong>：${escapeHtml(p.form || '')}</div>
+                ${p.purpose ? `<div><strong>${STATE.lang === 'en' ? 'Purpose' : '目的'}</strong>：${escapeHtml(p.purpose)}</div>` : ''}
+                ${p.trigger ? `<div><strong>${STATE.lang === 'en' ? 'Trigger' : '触发'}</strong>：${escapeHtml(p.trigger)}</div>` : ''}
+                ${p.constraint ? `<div><strong>${STATE.lang === 'en' ? 'Constraint' : '约束'}</strong>：${escapeHtml(p.constraint)}</div>` : ''}
+                ${p.maga_reaction ? `<div><strong>${STATE.lang === 'en' ? 'MAGA reaction' : 'MAGA 反应'}</strong>：${escapeHtml(p.maga_reaction)}</div>` : ''}
+                ${p.key_risk ? `<div class="bridging-path-risk"><strong>${STATE.lang === 'en' ? 'Key risk' : '关键风险'}</strong>：${escapeHtml(p.key_risk)}</div>` : ''}
               </div>
             </div>
           `).join('')}
@@ -747,7 +760,9 @@ function renderBridgingSection() {
         <div class="bridging-matrix-wrap">
           <table class="bridging-matrix">
             <thead>
-              <tr><th>升级类型</th><th>原教旨派</th><th>强袭派</th><th>福音派</th><th>后自由派</th></tr>
+              <tr>${STATE.lang === 'en'
+                ? '<th>Escalation type</th><th>Paleo</th><th>Hawk</th><th>Evangelical</th><th>Post-liberal</th>'
+                : '<th>升级类型</th><th>原教旨派</th><th>强袭派</th><th>福音派</th><th>后自由派</th>'}</tr>
             </thead>
             <tbody>
               ${b.maga_faction_reaction_matrix.rows.map(r => `
@@ -765,7 +780,7 @@ function renderBridgingSection() {
       </div>
 
       <div class="bridging-section-block">
-        <div class="bridging-section-label">对 2028 初选的含义</div>
+        <div class="bridging-section-label">${STATE.lang === 'en' ? 'Implications for 2028 primary' : '对 2028 初选的含义'}</div>
         <div class="bridging-implications">${formatRichText(b.implications_for_2028, 'd-para')}</div>
       </div>
     </div>

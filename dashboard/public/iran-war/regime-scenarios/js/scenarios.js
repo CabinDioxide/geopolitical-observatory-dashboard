@@ -94,7 +94,15 @@ const I18N = {
     'drawer.children.expand': '点击节点：展开下游',
     'drawer.children.collapse': '再次点击：收起下游',
     'footer.baseline': '数据基线',
-    'footer.sources': '主要文献'
+    'footer.sources': '主要文献',
+    'block.time_anchors': '3 个关键时间锚',
+    'hint.time_anchors': '下面 18 个月决定整体走向的 3 个时间窗口',
+    'block.variables': '7 个相互制约的变量',
+    'hint.variables': '分 3 组：结构性背景 / 当下状态 / 短期动作 · 点击任一变量查看完整因果链',
+    'block.evolution': '演化路径（2026-05 至 2028+）',
+    'hint.evolution': '4 个阶段的最可能演化',
+    'block.worst_case': '最坏情景：瓦解 + 海上无政府',
+    'hint.worst_case': '24 月内概率 3-5%，破坏量级是 1929 + 1973 + 2008 + 2020 叠加'
   },
   en: {
     'stance.label': 'Core judgment',
@@ -180,7 +188,15 @@ const I18N = {
     'drawer.children.expand': 'Click node: expand downstream',
     'drawer.children.collapse': 'Click again: collapse downstream',
     'footer.baseline': 'Data baseline',
-    'footer.sources': 'Primary sources'
+    'footer.sources': 'Primary sources',
+    'block.time_anchors': '3 key time anchors',
+    'hint.time_anchors': 'The three 18-month windows that determine the overall trajectory',
+    'block.variables': '7 interlocking variables',
+    'hint.variables': '3 groups: structural / current / short-term · click any variable for the full causal chain',
+    'block.evolution': 'Evolution path (May 2026 → 2028+)',
+    'hint.evolution': 'The 4 most likely phases',
+    'block.worst_case': 'Worst case: collapse + maritime anarchy',
+    'hint.worst_case': '24-month probability 3-5%; damage scale = 1929 + 1973 + 2008 + 2020 stacked'
   }
 };
 
@@ -275,10 +291,10 @@ function renderVariableGroups() {
             </div>
             <div class="variable-card-short">${escapeHtml(v.short_desc)}</div>
             <div class="variable-card-current">
-              <span class="variable-card-current-label">当前状态</span>
+              <span class="variable-card-current-label">${STATE.lang === 'en' ? 'Current state' : '当前状态'}</span>
               <span class="variable-card-current-text">${escapeHtml(v.current_state)}</span>
             </div>
-            <div class="variable-card-expand-hint">→ 点击展开因果链详细</div>
+            <div class="variable-card-expand-hint">${STATE.lang === 'en' ? '→ Click to expand causal chain' : '→ 点击展开因果链详细'}</div>
           </button>
         `).join('')}
       </div>
@@ -325,7 +341,7 @@ function openVariableDrawer(varId) {
     <div class="conn-view color-${v.color || 'neutral'}">
       <div class="conn-flow">
         <div class="conn-col conn-col-pre">
-          <div class="conn-col-label conn-label-blue">前提条件 · ${v.preconditions.length}</div>
+          <div class="conn-col-label conn-label-blue">${STATE.lang === 'en' ? 'Preconditions' : '前提条件'} · ${v.preconditions.length}</div>
           ${v.preconditions.map((p, i) => `
             <button class="conn-card conn-card-blue" data-pre-idx="${i}" data-var-id="${v.id}">
               <div class="conn-card-label">${escapeHtml(p.label)}</div>
@@ -334,13 +350,13 @@ function openVariableDrawer(varId) {
         </div>
         <div class="conn-col conn-col-hub">
           <div class="conn-source-card">
-            <div class="conn-source-tag">变量</div>
+            <div class="conn-source-tag">${STATE.lang === 'en' ? 'Variable' : '变量'}</div>
             <div class="conn-source-name">${escapeHtml(v.label)}</div>
-            ${mechLabel ? `<div class="conn-source-mech"><div class="conn-source-mech-label">运作机制</div><div class="conn-source-mech-text">${escapeHtml(mechLabel)}</div></div>` : ''}
+            ${mechLabel ? `<div class="conn-source-mech"><div class="conn-source-mech-label">${STATE.lang === 'en' ? 'Mechanism' : '运作机制'}</div><div class="conn-source-mech-text">${escapeHtml(mechLabel)}</div></div>` : ''}
           </div>
         </div>
         <div class="conn-col conn-col-con">
-          <div class="conn-col-label conn-label-orange">可能后果 · ${v.consequences.length}</div>
+          <div class="conn-col-label conn-label-orange">${STATE.lang === 'en' ? 'Consequences' : '可能后果'} · ${v.consequences.length}</div>
           ${v.consequences.map((cs, i) => `
             <button class="conn-card conn-card-orange" data-con-idx="${i}" data-var-id="${v.id}">
               <div class="conn-card-label">${escapeHtml(cs.label)}</div>
@@ -354,7 +370,7 @@ function openVariableDrawer(varId) {
       <div class="conn-obs-row">
         <div class="conn-obs-header">
           <span class="conn-obs-marker"></span>
-          <span class="conn-obs-title">监测节点</span>
+          <span class="conn-obs-title">${STATE.lang === 'en' ? 'Observation nodes' : '监测节点'}</span>
         </div>
         <div class="conn-obs-cards">
           ${v.observations.map((o, i) => `
@@ -368,12 +384,12 @@ function openVariableDrawer(varId) {
 
     ${mechAnalysis ? `
       <div class="d-section">
-        <div class="d-section-label">机制详解</div>
+        <div class="d-section-label">${STATE.lang === 'en' ? 'Mechanism detail' : '机制详解'}</div>
         <div class="d-prose">${formatRichText(mechAnalysis, 'd-para')}</div>
       </div>
     ` : ''}
   `;
-  setDrawer('变量', html);
+  setDrawer(STATE.lang === 'en' ? 'Variable' : '变量', html);
   setTimeout(() => {
     drawVariablePipes();
     attachVariableSubCardHandlers();
@@ -428,7 +444,7 @@ function attachVariableSubCardHandlers() {
       e.stopPropagation();
       const v = findVariable(el.dataset.varId);
       const item = v.preconditions[parseInt(el.dataset.preIdx)];
-      showSubDetail('前提条件', item);
+      showSubDetail(STATE.lang === 'en' ? 'Precondition' : '前提条件', item);
     });
   });
   document.querySelectorAll('#drawer [data-con-idx]').forEach(el => {
@@ -436,7 +452,7 @@ function attachVariableSubCardHandlers() {
       e.stopPropagation();
       const v = findVariable(el.dataset.varId);
       const item = v.consequences[parseInt(el.dataset.conIdx)];
-      showSubDetail('可能后果', item, true);
+      showSubDetail(STATE.lang === 'en' ? 'Consequence' : '可能后果', item, true);
     });
   });
   document.querySelectorAll('#drawer [data-obs-idx]').forEach(el => {
@@ -444,7 +460,7 @@ function attachVariableSubCardHandlers() {
       e.stopPropagation();
       const v = findVariable(el.dataset.varId);
       const item = v.observations[parseInt(el.dataset.obsIdx)];
-      showSubDetail('监测节点', item, false, true);
+      showSubDetail(STATE.lang === 'en' ? 'Observation node' : '监测节点', item, false, true);
     });
   });
 }
@@ -455,11 +471,11 @@ function showSubDetail(tag, item, isConsequence = false, isObservation = false) 
   // Append sub-detail panel
   let extra = '';
   if (isConsequence && typeof item.weight === 'number') {
-    extra = `<div class="d-actor-badge">${Math.round(item.weight * 100)}% 权重</div>`;
+    extra = `<div class="d-actor-badge">${Math.round(item.weight * 100)}% ${STATE.lang === 'en' ? 'weight' : '权重'}</div>`;
   }
   if (isObservation) {
-    extra = item.threshold ? `<div class="d-callout"><strong>触发门槛：</strong>${escapeHtml(item.threshold)}</div>` : '';
-    if (item.current_state) extra += `<div class="d-callout"><strong>当前状态：</strong>${escapeHtml(item.current_state)}</div>`;
+    extra = item.threshold ? `<div class="d-callout"><strong>${STATE.lang === 'en' ? 'Trigger threshold' : '触发门槛'}：</strong>${escapeHtml(item.threshold)}</div>` : '';
+    if (item.current_state) extra += `<div class="d-callout"><strong>${STATE.lang === 'en' ? 'Current state' : '当前状态'}：</strong>${escapeHtml(item.current_state)}</div>`;
   }
   const subHtml = `
     <div class="d-section variable-sub-detail">
@@ -483,14 +499,14 @@ function renderEvolutionPhases() {
   c.innerHTML = STATE.data.evolution_phases.map(p => `
     <div class="evolution-phase">
       <div class="evolution-phase-header">
-        <span class="evolution-phase-num">阶段 ${p.phase}</span>
+        <span class="evolution-phase-num">${STATE.lang === 'en' ? 'Phase' : '阶段'} ${p.phase}</span>
         <span class="evolution-phase-period">${escapeHtml(p.period)}</span>
       </div>
       <div class="evolution-phase-label">${escapeHtml(p.label)}</div>
       <div class="evolution-phase-desc">${formatRichText(p.description, 'd-para')}</div>
       ${p.key_events && p.key_events.length > 0 ? `
         <div class="evolution-phase-events">
-          <div class="evolution-phase-events-label">关键事件</div>
+          <div class="evolution-phase-events-label">${STATE.lang === 'en' ? 'Key events' : '关键事件'}</div>
           <ul class="rich-list">${p.key_events.map(e => `<li>${escapeHtml(e)}</li>`).join('')}</ul>
         </div>
       ` : ''}
@@ -504,21 +520,21 @@ function renderWorstCase() {
   const w = STATE.data.worst_case;
   c.innerHTML = `
     <div class="worst-case-header">
-      <span class="worst-case-prob">${escapeHtml(w.probability_24m)} 概率</span>
+      <span class="worst-case-prob">${escapeHtml(w.probability_24m)} ${STATE.lang === 'en' ? 'probability' : '概率'}</span>
       <span class="worst-case-label">${escapeHtml(w.label)}</span>
     </div>
     <p class="worst-case-desc">${escapeHtml(w.description)}</p>
     <div class="worst-case-grid">
       <div class="worst-case-section">
-        <div class="worst-case-section-label">触发条件</div>
+        <div class="worst-case-section-label">${STATE.lang === 'en' ? 'Triggers' : '触发条件'}</div>
         <ul class="rich-list">${w.triggers.map(t => `<li>${escapeHtml(t)}</li>`).join('')}</ul>
       </div>
       <div class="worst-case-section">
-        <div class="worst-case-section-label">破坏后果</div>
+        <div class="worst-case-section-label">${STATE.lang === 'en' ? 'Damage consequences' : '破坏后果'}</div>
         <ul class="rich-list">${w.consequences.map(c => `<li>${escapeHtml(c)}</li>`).join('')}</ul>
       </div>
       <div class="worst-case-section">
-        <div class="worst-case-section-label">监测信号</div>
+        <div class="worst-case-section-label">${STATE.lang === 'en' ? 'Monitoring signals' : '监测信号'}</div>
         <ul class="rich-list">${w.monitoring_signals.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ul>
       </div>
     </div>

@@ -9,15 +9,26 @@ const STATE = {
 
 let CURRENT_HUB_ID = null;
 
-const STATUS_LABEL = {
-  open: '未触发', triggered: '已触发', falsified: '已证伪', watching: '观察中'
-};
+const STATUS_LABEL = new Proxy({}, {
+  get: (_, s) => {
+    const key = String(s);
+    const en = { open: 'Not triggered', triggered: 'Triggered', falsified: 'Falsified', watching: 'Watching' };
+    const zh = { open: '未触发', triggered: '已触发', falsified: '已证伪', watching: '观察中' };
+    return (STATE.lang === 'en' ? en[key] : zh[key]) || key;
+  }
+});
 
 const I18N = {
   zh: {
     'stance.label': '核心判断',
     'block.chains': '五条供应链',
     'hint.chains': '点击任一链查看详情',
+    'block.us_navy': '美国海军 Hormuz 实际容量',
+    'hint.us_navy': '5th Fleet 即使全力护航也只能恢复战前 10% 流量',
+    'block.ras_laffan': '2026-03-18 Ras Laffan 事件',
+    'hint.ras_laffan': '伊朗红线已实证 + 海湾三国对伊立场逆转',
+    'block.gulf_trio': '海湾三国（Saudi / UAE / Qatar）的真实定位',
+    'hint.gulf_trio': 'Conditional Iran-weakening supporters，不是 peace makers',
     'block.hormuz': '霍尔木兹海峡的 4 种控制状态',
     'hint.hormuz': '伊朗政权状态决定通行方式 · 通行方式决定全球油价区间',
     'block.causal': '因果关系图',
@@ -64,6 +75,12 @@ const I18N = {
     'stance.label': 'Core judgment',
     'block.chains': 'Five supply chains',
     'hint.chains': 'Click any chain for details',
+    'block.us_navy': 'US Navy real-world Hormuz capacity',
+    'hint.us_navy': '5th Fleet at full surge can restore only ~10% of pre-war throughput',
+    'block.ras_laffan': '2026-03-18 Ras Laffan incident',
+    'hint.ras_laffan': 'Iranian red lines empirically demonstrated + Gulf trio positions reversed',
+    'block.gulf_trio': 'Gulf trio (Saudi / UAE / Qatar) — actual positioning',
+    'hint.gulf_trio': 'Conditional Iran-weakening supporters, not peace makers',
     'block.hormuz': 'Four control states of the Strait of Hormuz',
     'hint.hormuz': 'Iran\'s regime state determines which control state · control state sets the global oil price range',
     'block.causal': 'Causal map',
@@ -277,22 +294,22 @@ function renderUsNavyHub() {
         <div class="us-navy-label">${escapeHtml(h.label)}</div>
         <div class="us-navy-short">${escapeHtml(h.short_desc)}</div>
         <div class="us-navy-current">
-          <span class="us-navy-current-label">当前状态</span>
+          <span class="us-navy-current-label">${STATE.lang === 'en' ? 'Current state' : '当前状态'}</span>
           <span class="us-navy-current-text">${escapeHtml(h.current_state)}</span>
         </div>
       </div>
       <div class="us-navy-keydata">
-        <div class="us-navy-keydata-label">关键数据</div>
+        <div class="us-navy-keydata-label">${STATE.lang === 'en' ? 'Key data' : '关键数据'}</div>
         <table class="us-navy-keydata-table">
           ${(h.key_data || []).map(d => `<tr><td class="kd-label">${escapeHtml(d.label)}</td><td class="kd-value">${formatBold(d.value)}</td></tr>`).join('')}
         </table>
       </div>
       <div class="us-navy-mechanism">
-        <div class="us-navy-section-label">运作机制</div>
+        <div class="us-navy-section-label">${STATE.lang === 'en' ? 'Mechanism' : '运作机制'}</div>
         <div class="us-navy-mech-text">${formatRichText(h.mechanism, 'd-para')}</div>
       </div>
       <div class="us-navy-consequences">
-        <div class="us-navy-section-label">可能后果</div>
+        <div class="us-navy-section-label">${STATE.lang === 'en' ? 'Consequences' : '可能后果'}</div>
         <div class="us-navy-con-grid">
           ${(h.consequences || []).map(con => `
             <div class="us-navy-con-card">
@@ -306,10 +323,10 @@ function renderUsNavyHub() {
         </div>
       </div>
       <div class="us-navy-observations">
-        <div class="us-navy-section-label">监测节点</div>
+        <div class="us-navy-section-label">${STATE.lang === 'en' ? 'Observation nodes' : '监测节点'}</div>
         <ul class="rich-list">
           ${(h.observations || []).map(o => `
-            <li><strong>${escapeHtml(o.label)}</strong>：${escapeHtml(o.threshold)}（当前：${escapeHtml(o.current_state)}）</li>
+            <li><strong>${escapeHtml(o.label)}</strong>：${escapeHtml(o.threshold)}${STATE.lang === 'en' ? ' (current: ' : '（当前：'}${escapeHtml(o.current_state)}${STATE.lang === 'en' ? ')' : '）'}</li>
           `).join('')}
         </ul>
       </div>
@@ -330,13 +347,13 @@ function renderRasLaffanEvent() {
       <div class="ras-laffan-significance">${escapeHtml(e.significance)}</div>
       <p class="ras-laffan-desc">${escapeHtml(e.description)}</p>
       <div class="ras-laffan-section">
-        <div class="ras-laffan-section-label">各方反应</div>
+        <div class="ras-laffan-section-label">${STATE.lang === 'en' ? 'Responses' : '各方反应'}</div>
         <table class="ras-laffan-responses">
           ${(e.responses || []).map(r => `<tr><td class="response-actor">${escapeHtml(r.actor)}</td><td class="response-text">${escapeHtml(r.response)}</td></tr>`).join('')}
         </table>
       </div>
       <div class="ras-laffan-section">
-        <div class="ras-laffan-section-label">含义</div>
+        <div class="ras-laffan-section-label">${STATE.lang === 'en' ? 'Implications' : '含义'}</div>
         <ul class="rich-list">${(e.implications || []).map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>
       </div>
     </div>
@@ -350,12 +367,12 @@ function renderHormuzModesMeta() {
   c.innerHTML = `
     <div class="hormuz-meta-card">
       <div class="hormuz-meta-current">
-        <span class="hormuz-meta-current-label">当前实际状态</span>
+        <span class="hormuz-meta-current-label">${STATE.lang === 'en' ? 'Actual current state' : '当前实际状态'}</span>
         <span class="hormuz-meta-current-value">${escapeHtml(m.current_actual_state)}</span>
       </div>
       <div class="hormuz-meta-desc">${formatRichText(m.description, 'd-para')}</div>
       <div class="hormuz-meta-prob">
-        <div class="hormuz-meta-prob-label">24 月内概率分布</div>
+        <div class="hormuz-meta-prob-label">${STATE.lang === 'en' ? 'Probability distribution (24-month)' : '24 月内概率分布'}</div>
         <table class="hormuz-meta-prob-table">
           ${Object.entries(m.base_case_probabilities_24m || {}).map(([mode, prob]) => `
             <tr><td>${escapeHtml(mode)}</td><td class="prob-value">${escapeHtml(prob)}</td></tr>
@@ -373,12 +390,12 @@ function renderGulfTrioRole() {
   c.innerHTML = `
     <div class="gulf-trio-card">
       <div class="gulf-trio-framework">
-        <span class="gulf-trio-framework-label">框架</span>
+        <span class="gulf-trio-framework-label">${STATE.lang === 'en' ? 'Framework' : '框架'}</span>
         <span class="gulf-trio-framework-value">${escapeHtml(g.framework)}</span>
       </div>
       <div class="gulf-trio-desc">${formatRichText(g.description, 'd-para')}</div>
       <div class="gulf-trio-positions">
-        <div class="gulf-trio-section-label">三国具体立场</div>
+        <div class="gulf-trio-section-label">${STATE.lang === 'en' ? 'Country-specific positions' : '三国具体立场'}</div>
         ${(g.specific_positions || []).map(p => `
           <div class="gulf-trio-country">
             <div class="gulf-trio-country-name">${escapeHtml(p.country)}</div>
@@ -499,7 +516,7 @@ function openCountryDrawer(i) {
     </div>
     <h2 class="d-title">${escapeHtml(co.name)}${co.name_en ? ` · <span style="color:var(--label-3);font-weight:500">${escapeHtml(co.name_en)}</span>` : ''}</h2>
     <p class="d-summary">${escapeHtml(co.thesis)}</p>
-    ${co.updated_analysis_2026_05 ? `<div class="d-section"><div class="d-section-label" style="color:#0071e3">2026-05 修正</div><div class="d-prose">${formatRichText(co.updated_analysis_2026_05, 'd-para')}</div></div>` : ''}
+    ${co.updated_analysis_2026_05 ? `<div class="d-section"><div class="d-section-label" style="color:#0071e3">${STATE.lang === 'en' ? '2026-05 update' : '2026-05 修正'}</div><div class="d-prose">${formatRichText(co.updated_analysis_2026_05, 'd-para')}</div></div>` : ''}
     ${co.analysis ? `<div class="d-section"><div class="d-section-label">${STATE.lang === 'en' ? 'Deep analysis' : '深度分析'}</div><div class="d-prose">${formatRichText(co.analysis, 'd-para')}</div></div>` : ''}
     <div class="d-section"><div class="d-section-label">${t('drawer.economic')}</div><ul class="evidence-list">${(co.economic_exposure || []).map(d => `<li class="evidence-item">${escapeHtml(d)}</li>`).join('')}</ul></div>
     <div class="d-section"><div class="d-section-label">${t('drawer.political')}</div><ul class="evidence-list">${(co.political_fragility || []).map(d => `<li class="evidence-item">${escapeHtml(d)}</li>`).join('')}</ul></div>
