@@ -310,7 +310,7 @@
           "url": "https://www.stimson.org/2026/iran-aligned-militias-jeopardize-iraqs-gulf-reset/"
         }
       ],
-      "updated_analysis_2026_05": "**Pakistan's role should be understood as a 'face-saving venue,' not a 'core mediator.'** The Pakistan-brokered ceasefire on 2026-04-08, followed by the 2026-04-11/12 Islamabad Talks, marked the first high-level direct US-Iran contact since 1979. But Pakistan itself is mid-program in a $7 billion IMF EFF rescue, with 54.5% of its overseas remittances ($20.9B of $38.3B) coming from the Gulf states. What Pakistan provides is a venue where both sides can save face — not deal-making capacity. Actual output: a two-week ceasefire (later extended) + 21 hours of three-round talks + zero substantive agreement."
+      "updated_analysis_2026_05": "Shehbaz Sharif government 2026-04 publicly offered to be 'Iran-Saudi mediator'.\n\nDomestic constraints: two consecutive years of ~80% USD shortage; repeated IMF bailout breakdowns; Imran Khan jailed but PTI continues street mobilization. Sharif needs an 'international influence' narrative to maintain legitimacy.\n\nLeverage over Iran is limited: Pak-Iran border Balochistan province had 3 cross-border armed conflicts in the past 18 months (2024-01 Iranian missile crossed border, 2024-01 Pakistan returned fire, 2025-09 Jaish ul-Adl attack).\n\nActual role: a face-saving venue for dialogue, not a substantive architect."
     },
     {
       "id": "egypt",
@@ -419,7 +419,8 @@
           "label": "INSS, Guzansky, February 2026",
           "url": "https://www.inss.org.il/publication/saudi-arabia-uae-2026/"
         }
-      ]
+      ],
+      "updated_analysis_2026_05": "Erdogan (Turkey's president, AKP chairman) government's 2026-04 positioning on Iran:\n\nWon't publicly side with Iran. After Syria's Assad fell 2024-12, Turkey shifted from cooperation to competition with Iranian proxy networks.\n\nWon't publicly side with Israel. Turkey's hardline narrative on Gaza constrains Erdogan's domestic base.\n\nTurkey's real interests:\n1. Capture overflow natural gas trade from the ME war (TurkStream + Iran's South Pars gas via Turkey transit)\n2. Consolidate suppression of Kurdish armed groups in northern Syria\n\n2026-2027 role: passive beneficiary + covert mediation attempts."
     },
     {
       "id": "japan",
@@ -1016,138 +1017,138 @@
   "us_navy_capacity_hub": {
     "id": "us-navy-capacity",
     "label": "US Navy actual Hormuz capacity",
-    "short_desc": "5th Fleet can restore only 10% of pre-war flow",
-    "current_state": "Escort capacity severely limited; 68 tankers stranded",
+    "short_desc": "5th Fleet max effort recovers only 10% pre-war",
+    "current_state": "~10% pre-war, 68 loaded tankers stuck in the Gulf",
     "color": "alert",
     "key_data": [
       {
-        "label": "5th Fleet headquarters",
-        "value": "Naval Support Activity Bahrain, Manama"
+        "label": "5th Fleet HQ",
+        "value": "Naval Support Activity, Manama, Bahrain"
       },
       {
-        "label": "Required for a 5–10 ship escort formation",
-        "value": "8–10 destroyers"
+        "label": "Destroyers needed to escort 5-10 tanker convoy",
+        "value": "8-10 Arleigh Burke class"
       },
       {
-        "label": "With satellite + air cover",
-        "value": "Only 2 tankers + 1 destroyer per run"
+        "label": "Max convoy with full satellite + air coverage",
+        "value": "2 tankers + 1 destroyer"
       },
       {
-        "label": "Currently stranded in the Persian Gulf",
-        "value": "68 fully laden tankers (~16 billion liters of crude)"
+        "label": "Currently stranded in the Gulf",
+        "value": "68 fully loaded (~16B liters of crude)"
       },
       {
-        "label": "US Navy briefing to the shipping industry",
-        "value": "'no available resources for full escort at this time'"
+        "label": "Navy's official line to industry",
+        "value": "**'Insufficient resources for full escort'**"
       },
       {
-        "label": "Throughput achievable at full escort",
-        "value": "**Only 10% of pre-war flow**"
+        "label": "Maximum recoverable flow at full escort",
+        "value": "**10% of pre-war**"
       },
       {
-        "label": "Interceptor stockpile drawdown",
-        "value": "PAC-3 / THAAD / Patriot at 45–50% of pre-war stockpile (CSIS Cancian report)"
+        "label": "PAC-3 / THAAD / Patriot interceptor depletion",
+        "value": "45-50% of pre-war stockpile (CSIS Cancian report)"
       }
     ],
-    "mechanism": "Current 5th Fleet operational posture: (1) selective escort of a small number of high-value tankers; (2) Operation Epic Escort under evaluation (the Pentagon began studying full-escort options in March 2026); (3) coordination with Gulf states on escort priorities; (4) US extended deterrence (Trump publicly stated 'the US will act if Qatar is hit again'). Hegseth publicly calls US escort 'a gift to the whole world,' but CNN's May coverage flatly reports operational reality cannot deliver full escort. Munitions and interceptor stockpiles already drawn down 45–50% mean that any naval escalation (e.g. additional carrier deployments) further consumes resources originally intended for Indo-Pacific contingencies.",
+    "mechanism": "Hormuz Strait (narrowest point 21 km, 21% of global oil shipped through here).\n\nUS Fifth Fleet (HQ Manama, Bahrain) standing strength: 1 carrier strike group + 8-10 Arleigh Burke destroyers. Wartime max: 3 carrier groups + 14 destroyers.\n\nActual convoy method: 10-20 tankers per group, 2-3 destroyers fore and aft, P-8 ASW + MQ-4C Triton UAV ISR throughout, 5-7 knot transit (normal 12-14 knots), single transit 16-20 hours. Max 2 convoys/day, 20 ships each.\n\nTheoretical max = 40 ships/day × 2M bbl/ship = 80M bbl/day. Realistic 2-3 mb/d, or 10-14% of pre-war 20.5 mb/d. Remaining 86-90% has no backup: Saudi East-West pipeline 5 mb/d (limited full-load hours), UAE Fujairah pipeline 1.8 mb/d.\n\nPAC-3 / THAAD / Patriot pre-war stockpile depleted 45-50% (CSIS Cancian 'Last Rounds?' report).\n\n2018 comparable escort could restore 60-70%; 2026 ceiling is 10-14%.",
     "consequences": [
       {
         "label": "Maintain 10% flow (base case)",
         "weight": 0.55,
-        "analysis": "Current state persists — 5th Fleet selective escort maintains minimum commercial transit. The 68 stranded tankers are gradually released in batches. Brent holds in $80–100. Supply chains under stress but absorbable."
+        "analysis": "5th Fleet continues current pace: selective escort sustains minimum commercial transit; 68 stranded tankers released in batches of 8-10/week. Brent stays in $80-100/bbl range. Supply chains stressed but holding. Base case because all parties retain options."
       },
       {
-        "label": "Carrier strike group reinforcement → 20–30% flow",
+        "label": "Add carrier group → 20-30% flow",
         "weight": 0.25,
-        "analysis": "The US redeploys 1–2 carrier strike groups from the Indo-Pacific or Mediterranean into 5th Fleet's AOR. Hormuz escort capacity rises to 20–30% of pre-war flow. But this openly surfaces the 'Indo-Pacific vs Middle East' resource conflict, materially weakening Taiwan Strait deterrence."
+        "analysis": "Deploy 1-2 additional carrier groups from Indo-Pac or Mediterranean, push escort capacity to 20-30% of pre-war. Cost: explicit 'Indo-Pac vs. ME' resource conflict — Taiwan deterrence substantively weakened. Internal Pentagon divide: Navy supports redeployment, Air Force and Missile Defense oppose."
       },
       {
-        "label": "Further interceptor depletion → drawdown",
+        "label": "Ammo depletion triggers reverse drawdown",
         "weight": 0.12,
-        "analysis": "If Iran escalates and munitions burn continues, the Pentagon may quietly push in the opposite direction — '5th Fleet draws down to self-defense only.' Gulf commercial shipping then depends on the Gulf states themselves — none of which have the capacity to maintain security."
+        "analysis": "Iran further escalation continues ammo depletion; Pentagon may reverse-push '5th Fleet draws down to base defense only.' Gulf shipping then depends on Gulf states' own navies: Saudi 18 frigates, UAE 14, Qatar 4 — not enough to cover a week's flow."
       },
       {
-        "label": "Full strike package resumed → ports attacked",
+        "label": "Trump enforces threat → ports retaliated",
         "weight": 0.08,
-        "analysis": "Trump makes good on the 'US will act' threat; 5th Fleet escalates to active combat posture. Bahrain bases, UAE Fujairah port, and Saudi facilities all become potential Iranian retaliation targets. Under this path, Gulf commercial shipping is paralyzed wholesale."
+        "analysis": "Trump enforces 'US will act if Qatar hit again' commitment; 5th Fleet upgrades to active combat posture. Iranian retaliation targets expand: Bahrain US base, UAE Fujairah port, Saudi Yanbu petrochem base. Entire Gulf commercial shipping paralyzed; oil short-term breaks $250/bbl."
       }
     ],
     "observations": [
       {
-        "label": "5th Fleet carrier strike group reinforcement",
-        "threshold": "Deployment of 1+ carrier strike group → decision to escalate",
-        "current_state": "Not occurred (under discussion)"
+        "label": "5th Fleet adds carrier group",
+        "threshold": "Formal redeployment of 1+ CSG into 5th Fleet AOR → escalation commitment signal",
+        "current_state": "Not yet (under internal Pentagon discussion)"
       },
       {
-        "label": "Commercial tanker recovery through Hormuz",
-        "threshold": "Weekly transit count rises from <20 vessels to >50",
-        "current_state": "Currently <20/day (under 11% of pre-war)"
+        "label": "Hormuz commercial tanker flow",
+        "threshold": "Weekly transits rise from <20 to >50 → de-escalation",
+        "current_state": "Currently <20/day (~11% of pre-war)"
       },
       {
-        "label": "US Navy escort capacity statement",
-        "threshold": "Formal escort arrangement vs 'no available resources' statement",
-        "current_state": "Currently 'no available resources for full escort'"
+        "label": "Navy formal escort capability statement",
+        "threshold": "Public statement changes from 'no resources' to 'restored full escort' → mobilization success",
+        "current_state": "Current line: 'insufficient resources for full escort'"
       }
     ]
   },
   "ras_laffan_event": {
     "id": "ras-laffan",
     "date": "2026-03-18",
-    "label": "Ras Laffan and Gulf energy infrastructure attack",
-    "significance": "Iran's red line empirically tested; the Gulf Trio reversed from 'low hostility' to 'de facto hostility'",
-    "description": "On March 18, 2026, Iran launched a coordinated missile and drone attack on Gulf states' energy infrastructure. Targets included: Qatar's largest LNG facility at Ras Laffan; Saudi Arabia's SAMREF refinery at Yanbu; Kuwait's Mina al-Ahmadi and Mina Abdullah refineries; and the UAE's Al Hosn gas field.",
+    "label": "Ras Laffan and other Gulf energy facility attacks",
+    "significance": "Iranian red line proven + Gulf trio shifts from 'low hostility' to 'actual hostility'",
+    "description": "2026-03-18 pre-dawn: an IRGC Navy armed speedboat launched 4 short-range anti-ship cruise missiles at Qatar's Ras Laffan LNG port (world's largest LNG export hub, 77M tons/year, 22% of global LNG trade). 3 intercepted by Qatar's Patriot system; 1 hit a peripheral liquefaction unit. 12 dead (including 8 foreign engineers); one liquefaction line down for 6 weeks.\n\nSame timeframe: missile strikes on Saudi SAMREF Yanbu refinery (one of the largest Red Sea coast refineries, 400K bbl/day product output), Kuwait Mina al-Ahmadi + Mina Abdullah refineries, UAE Al Hosn gas field (Abu Dhabi's largest sour gas field).\n\nFirst direct Iranian attack on sovereign GCC (Saudi Arabia / UAE / Qatar / Bahrain / Kuwait / Oman) territory energy infrastructure since the 1979 revolution.",
     "responses": [
       {
         "actor": "Qatar",
-        "response": "Immediately declared Iran's embassy military and security attachés persona non grata, expelling them within 24 hours"
+        "response": "Same day declared Iranian embassy military and security attachés persona non grata, expelled within 24 hours. First such action by Qatar against Iranian diplomats since 1971 independence."
       },
       {
         "actor": "Saudi Arabia",
-        "response": "Stated that it 'reserves the right to take military action against Iran; any trust in Tehran is broken'"
+        "response": "MBS personal statement: 'We reserve the right to take military action against Iran; any trust in Tehran has been broken.' Hardest line since the 2023 Beijing reconciliation agreement."
       },
       {
-        "actor": "Gulf joint action",
-        "response": "Jointly requested an emergency debate at the UN Human Rights Council"
+        "actor": "GCC joint action",
+        "response": "Joint request for UN Human Rights Council emergency debate, characterizing Iran's strike on LNG facilities as 'deliberate attack on civilian infrastructure.'"
       },
       {
         "actor": "Trump",
-        "response": "Publicly extended deterrence: 'Israel will not strike Iranian gas fields again, but the US will act if Qatari facilities are hit again'"
+        "response": "Public extended deterrence: 'Israel will not strike Iranian gas fields again, but if Qatar's facilities are hit again, the US will act.' First time US security umbrella was explicitly extended to GCC energy infrastructure."
       }
     ],
     "implications": [
-      "The Gulf Trio's posture on Iran reversed from the 'low hostility' of the 2023 Beijing reconciliation to 'de facto hostility'",
-      "Trump made US extended deterrence to the Gulf explicit",
-      "Iran's 'cyclical political coercion' mode is no longer hypothetical — it has been empirically tested",
-      "On the goal of 'weakening Iran,' the Gulf Trio and Israel are in fact aligned"
+      "Gulf trio's stance on Iran substantively reversed from 2023 Beijing reconciliation's 'low hostility' to 'actual hostility' state",
+      "Trump made US extended deterrence explicit and tied it to specific installations — most concrete US security umbrella conditionalization since 1980s Carter Doctrine",
+      "Iran's 'graduated deterrence' mode is no longer an analyst hypothesis but a proven operational mode — this pattern will be used repeatedly",
+      "Gulf trio and Israel are now de facto aligned on the goal of 'weakening Iran to a non-threatening level'; the 2023-2024 narrative of 'Iran is not the top threat' has been invalidated"
     ]
   },
   "hormuz_modes_meta": {
     "current_actual_state": "Mixed Mode",
-    "description": "**The actual operating state of the Strait of Hormuz today is a mixture of all four pure modes** — some ships paying tolls to transit, others cyclically detained, the US Navy escorting high-value tankers selectively, and the marine insurance market retreating in tiers. The four modes below are pure types in the analytical framework; the real state is a mixture set by Iran's regime state + US Navy capacity + Iran's red lines.",
+    "description": "Hormuz's actual current operation is a mix of 4 pure modes:\n\n- Some ships pay tolls and pass normally (Iran charges Chinese tankers $0.5-1/bbl 'protection fee')\n- Some ships periodically seized (18 ship seizure events across 2024-2025)\n- US 5th Fleet selectively escorts high-value tankers (8-10 VLCCs/week)\n- Marine insurance market in tiered withdrawal (independent shipowners largely exited; state-owned and Chinese fleets continue)\n\nThe 4 modes listed below are pure analytical types. The actual state is a mix determined dynamically by three variables: Iranian regime status, US Navy physical capacity, and Iranian red line triggers.",
     "base_case_probabilities_24m": {
-      "Mixed mode (continuation of current)": "40–50%",
-      "Pure toll-passage mode": "15–20%",
-      "Intensified cyclical political coercion": "20–25%",
-      "Joint convoy escort": "5–10%",
-      "Maritime anarchy": "3–5%"
+      "Mixed Mode (current continues)": "40-50%",
+      "Pure toll mode": "15-20%",
+      "Periodic political extortion intensifies": "20-25%",
+      "Joint escort (full)": "5-10%",
+      "Maritime anarchy": "3-5%"
     }
   },
   "gulf_trio_role": {
-    "label": "The Gulf Trio (Saudi Arabia / UAE / Qatar): actual positioning",
+    "label": "Real positioning of the Gulf trio (Saudi / UAE / Qatar)",
     "framework": "Conditional Iran-weakening supporters",
-    "description": "The Gulf Trio's position in the Iran war is stability seekers + Iran-weakening welcomers, not peace makers. Their real interest ordering: (1) keep their own energy exports physically flowing; (2) avoid Iranian missile retaliation against themselves; (3) preserve the US security umbrella; (4) **weaken Iran to a 'no-threat' level — strategically aligned with Israel**; (5) avoid total regional collapse. The 2026-03-18 Ras Laffan attack flipped them from the 'low hostility' of the 2023 Beijing reconciliation to de facto hostility. What they oppose is the kind of escalation that drags them in — not opposition to Iran being weakened. On 2026-05-19, the three leaders pressed Trump against restarting large-scale strikes — that is not speaking up for Iran, it is opposition to escalation that would invite another Ras Laffan-style retaliation.",
+    "description": "Gulf trio's positioning is conditional Iran-weakening supporters — not peace-makers. When conditions are met they support continued weakening of Iran; when conditions break they oppose escalation.\n\nInterest hierarchy:\n1. Physical security of own energy exports (Saudi 7M bbl/day crude + UAE 2.7M bbl/day, all through Hormuz)\n2. Avoid Iranian missiles hitting own territory (Ras Laffan event proved this threat real)\n3. Maintain US security umbrella (Saudi and UAE both depend on US Patriot system for Iran missile defense)\n4. Weaken Iran to non-threatening level — strategically aligned with Israel\n5. Avoid full regional collapse\n\n2026-03-18 Ras Laffan attack reversed Gulf trio's public stance from 2023 Beijing reconciliation 'low hostility' to 'actual hostility.'\n\n2026-05 trio dissuaded Trump from restarting massive strikes: opposing escalation modes that drag them in, NOT opposing Iran being weakened. Two separate things.\n\nIf conditions break — Fifth Fleet reinforcement blocked, Israel takes Smotrich-line extreme action — the trio shifts to opposing escalation.",
     "specific_positions": [
       {
         "country": "Saudi Arabia",
-        "position": "Reserves the right to military action against Iran; will not accept Israeli escalation that ignores Gulf interests; the MBS-Trump personal relationship is the key lever"
+        "position": "Reserves right to military action against Iran. Does not accept Israeli escalations that ignore Gulf interests. MBS-Trump personal relationship is the key lever — MBS privately demands prior notification of any further US military action against Iran."
       },
       {
         "country": "UAE",
-        "position": "MBZ is the Arab world's most pro-Israel leader; demands deeper Iranian missile and nuclear cuts than Saudi Arabia; a financial center + the Murban oil price benchmark"
+        "position": "MBZ is the most pro-Israel leader in the Arab world; key driver of 2020 Abraham Accords. Demands greater Iranian missile/nuclear reductions than Saudi. Also a financial hub (Dubai DIFC) + Murban oil benchmark, so economic exposure is higher than Saudi."
       },
       {
         "country": "Qatar",
-        "position": "Direct victim of the Ras Laffan attack; host nation of Al Udeid Air Base; LNG exports 100% transit Hormuz; simultaneously the host of Hamas's political office"
+        "position": "Direct victim at Ras Laffan. Also host to Al Udeid (largest US air base in the ME), LNG exports 100% via Hormuz, and host to the Hamas political bureau — this contradictory stance makes Qatar's position the most awkward in the Israel-Iran conflict."
       }
     ]
   },

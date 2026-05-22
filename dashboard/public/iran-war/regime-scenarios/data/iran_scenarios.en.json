@@ -9,7 +9,7 @@
       "path": "/iran-war/reports/02_iran_regime_scenarios.docx",
       "version": "4"
     },
-    "stance_summary": "**Procedurally the succession is done; in practice the regime is incapacitated.** After the joint US–Israeli decapitation strike on February 28, 2026 killed Khamenei, his second son Mojtaba Khamenei (56) was selected on March 8 by the Assembly of Experts (under heavy IRGC pressure) as the new Supreme Leader. On March 11, Grand Ayatollah Sistani — the most-followed marja in the Shia world — issued a carefully worded congratulation (well-wishing, not endorsement). **Mojtaba has not appeared in public since February 28**: all statements are read by state television, his injuries remain unverified, and he transmits written orders via couriers.\n\nIn effect the present state is **Mojtaba in name + IRGC in fact** — visible in Iran's maximalist negotiating posture toward the US: recognition of Iranian sovereignty over the Strait of Hormuz, full sanctions lifting, war reparations, and unfreezing of all overseas assets.\n\n**Iran's regime trajectory does not depend on internal dynamics alone but on the tension among seven mutually constraining variables**: Israeli strategic goals, China–Russia strategic patience, Iran's internal power structure, US Navy actual capacity at Hormuz, US domestic politics, Israeli unilateral escalation potential, and Iran's red lines.\n\n**Three time anchors set the rhythm of evolution**: the Israeli Knesset election by 2026-10-27, the US midterm elections on 2026-11-03, and the end of Trump's term on 2028-01-20."
+    "stance_summary": "Key facts of the 2026 Iran-Israel-US confrontation: Khamenei is dead; his son Mojtaba nominally took over as Supreme Leader, but actual decision-making lies with IRGC commander Salami and Quds Force commander Qaani. Hormuz Strait throughput is at 10-14% of pre-war levels. Trump will likely lose the House in the 2026-11 midterms and enter a 14-month lame duck. Probability of Israel implementing some form of unilateral escalation during the lame duck window: 50-65%. Core risk is not nuclear proliferation, but Hormuz throughput being held down for 18-24 months and triggering one runaway event."
   },
   "glossary": [
     {
@@ -112,37 +112,37 @@
     {
       "id": "anchor-israeli-election",
       "date": "2026-10-27",
-      "label": "Israeli Knesset Election",
-      "short_desc": "Survival pressure on the Netanyahu coalition",
-      "description": "Israel's Knesset must hold its election by October 27, 2026. Current polling has Netanyahu's coalition at 52 seats (61 needed for a majority); Finance Minister Smotrich's Religious Zionism party may fall below the electoral threshold. Netanyahu's personal 2027 criminal trial approaches, requiring a 'wartime leader' narrative. This creates strong incentive to take a visible 'decisive' Iran action before and around the election."
+      "label": "Israeli Knesset election",
+      "short_desc": "Netanyahu coalition 9 seats short of majority",
+      "description": "Israeli Knesset (120 seats, 61 for majority) election must be held by 2026-10-27.\n\nNetanyahu coalition polls at 52 seats, 9 short of majority. Smotrich's far-right Religious Zionism party polls at 2.8%, near the 3.25% Knesset threshold.\n\nNetanyahu faces three corruption charges going to trial in 2027, max sentence 10 years. He successfully invoked wartime status to delay trial once during the 2025-06 war."
     },
     {
       "id": "anchor-us-midterm",
       "date": "2026-11-03",
-      "label": "US Midterm Elections",
-      "short_desc": "Trump enters effective lame-duck phase",
-      "description": "US midterms are November 3, 2026. The forecasting model projects Republicans losing about 28 House seats (Democrats need only +3 net to flip). The probability of losing the Senate is also non-trivial (even-money). Trump's Iran war approval has fallen from 78% (June 2025 at war's outbreak) to 41% (April 2026), with 63% of voters calling the war wrong. A midterm defeat would put Trump in effective lame-duck status for the final 14 months of his term."
+      "label": "US midterm election",
+      "short_desc": "Trump enters 14-month lame duck",
+      "description": "US midterm election (re-elects entire 435-seat House and ~1/3 of Senate) voting day is 2026-11-03.\n\nCook Political Report estimate: Republicans net-lose 28 House seats; Democrats need net +3 for majority. Senate flip probability 35-50%.\n\nTrump's approval on the Iran war fell from 78% at 2025-06 outbreak to 41% in 2026-04. 63% of voters now judge the war was a mistake.\n\nMidterm failure triggers lame duck: 2026-11-03 to 2028-01-20, 14 months. Legislative paralysis."
     },
     {
       "id": "anchor-trump-term-end",
       "date": "2028-01-20",
-      "label": "End of Trump's Term",
-      "short_desc": "Window of US full backing for Israel closes",
-      "description": "Trump's second term ends January 20, 2028. Israel sees this as the 'last reliably aligned' US presidency — no successor (Vance / Rubio / Don Jr / a Democrat) is likely to back Israel as Trump has on Iran. Probability of Israeli unilateral escalation of some form during the November 2026 – January 2028 window: roughly 50–65%."
+      "label": "Trump term end",
+      "short_desc": "Israel's last window closes",
+      "description": "Trump's second term ends 2028-01-20.\n\nSuccessor candidates: Vance (VP), Rubio (Secretary of State), Don Jr. (Trump's eldest), Democrats. Israeli national security establishment positions Trump as the last reliable US president.\n\nProbability of Israel implementing unilateral escalation during the 14-month lame duck (2026-11 to 2028-01): 50-65%."
     }
   ],
   "variable_groups": [
     {
       "id": "structural",
-      "label": "Structural Background",
-      "sublabel": "Long-term, slow-changing variables",
-      "intro": "These are long-term pressures that don't change much over a few years.",
+      "label": "Structural background",
+      "sublabel": "Long-term slow variables",
+      "intro": "Long-term pressures. Won't change substantively in years, but set the boundaries of short-term play.",
       "variables": [
         {
           "id": "var-israel-strategic",
-          "label": "Israeli Strategic Goals",
-          "short_desc": "Israel wants to eliminate Iran's nuclear program, ballistic missiles, and proxy network",
-          "current_state": "Standing long-term pressure; does not change with administration shifts",
+          "label": "Israeli strategic objectives",
+          "short_desc": "Three eliminations: nuclear / missiles / proxies",
+          "current_state": "Structural pressure, unchanged by government rotation",
           "color": "danger",
           "cross_page_link": {
             "page": "maga",
@@ -179,7 +179,7 @@
           "mechanism": {
             "id": "ist-mech",
             "label": "Combination of military + assassination + diplomatic pressure",
-            "analysis": "Israel's toolkit: (1) direct military strikes on nuclear and missile facilities (Operation Rising Lion in June 2025 + Operation Epic Fury in February 2026); (2) Mossad assassinations (nuclear scientists + senior IRGC + Haniyeh in Tehran + Nasrallah in Beirut); (3) cyber attacks + Mossad infiltration; (4) pressure on Iran through US (snapback, joint operations); (5) dismantling of the proxy network (Hezbollah in September 2024 / Assad regime falls December 2024). Israel's 'kill any successor' threat is a leverage tool, not the strategic goal itself — if any Iranian regime accepts de-nuclearization, de-missilization, and proxy cutoff, Israel will let Mojtaba live."
+            "analysis": "Israel's strategic objective: eliminate Iran's nuclear capability + ballistic missiles + proxy network.\n\nExecution is a five-pronged parallel approach:\n\n1. Direct military strikes. 2025-06 Operation Rising Lion struck Iranian nuclear facilities; 2026-02 Operation Epic Wrath was the second joint strike with US forces.\n\n2. Mossad assassinations: Fakhrizadeh (2020 nuclear scientist), Soleimani (2020-01 senior IRGC), Haniyeh (2024-07-31 in Tehran guest house), Nasrallah (2024-09-27 in Beirut underground command center hit by one-ton bunker-buster).\n\n3. Cyber attacks. The Stuxnet (2010 US-Israel joint worm targeting Natanz centrifuges) technology line continues to evolve.\n\n4. Leverage US pressure. UN snapback sanctions, joint airstrikes, AIPAC (America Israel Public Affairs Committee) influence on Congressional votes.\n\n5. Dismantle proxies. Hezbollah → Assad → Houthis, weakened in sequence.\n\nIf any Iranian regime accepts permanent denuclearization + missile range limits + cutting proxies, Israel accepts."
           },
           "consequences": [
             {
@@ -236,9 +236,9 @@
         },
         {
           "id": "var-china-russia",
-          "label": "China–Russia Strategic Patience + Latent Escalation",
-          "short_desc": "Both gain from the US being bogged down in the Middle East",
-          "current_state": "Strategic waiting + gradual escalation of arms and intelligence",
+          "label": "China-Russia strategic patience + tacit escalation",
+          "short_desc": "Beneficiaries of US bogged down in ME",
+          "current_state": "Strategic watch + incremental weapons/intel",
           "color": "warning",
           "cross_page_link": {
             "page": "supply",
@@ -270,7 +270,7 @@
           "mechanism": {
             "id": "cr-mech",
             "label": "Strategic patience + latent escalation, no direct military engagement",
-            "analysis": "Both Beijing and Moscow practice 'strategic patience': let the US bog down in the Middle East while keeping Iran afloat with limited aid. Concretely: China delivered HQ-9B SAM batteries to Iran in July 2025; Russia agreed to supply Verba MANPADS in December 2025; both share intelligence helping Iran target US bases; mBridge keeps Iran's economy minimally operational; and both veto any escalating UNSC sanctions. Neither will intervene militarily — both fear direct US confrontation and don't want to lose oil price benefits."
+            "analysis": "China-Russia joint strategy on the Iran war: do not intervene militarily; maintain Iran's basic economic operation.\n\nChina position: locked in by 2021-03-27 25-year comprehensive cooperation agreement (~$400B Chinese investment + discounted Iranian oil). 13% of China's oil imports come from Iran; 80% of Iran's crude exports go to China.\n\nRussia position: bogged down on the Ukrainian front, lacks capacity for direct military intervention in Iran. Depends on Iranian Shahed-136 suicide drones (cumulative delivery exceeds 8,000 since 2022-09). 2025-01 signed Comprehensive Strategic Partnership Treaty.\n\nJoint actions: 2025-07 China delivers first batch of HQ-9B air defense missile batteries to Iran; 2025-12 Russia provides Verba MANPADS; satellite positions of US bases (Al Udeid in Qatar, Fifth Fleet in Bahrain) shared via Tibet and Caucasus intel stations; mBridge (cross-border payment system jointly developed by China/HK/Thailand/UAE/Saudi central banks, bypassing SWIFT) sustains Iran's economy; any UN Security Council escalation sanctions vetoed (7 times cumulative across 2025-2026).\n\nOil price volatility 2025-06 to 2026-05 brought net wealth gain to China+Russia exceeding $150B."
           },
           "consequences": [
             {
@@ -323,15 +323,15 @@
     },
     {
       "id": "current-state",
-      "label": "Current State",
+      "label": "Current state",
       "sublabel": "Configuration variables",
-      "intro": "These are 'hard constraints' that have already settled and won't change in the short term.",
+      "intro": "Hard constraints already locked in. Short-term invariant — any short-term action must go around or with them.",
       "variables": [
         {
           "id": "var-iran-internal",
-          "label": "Iran's Internal Power Structure",
-          "short_desc": "Mojtaba in name vs IRGC in fact",
-          "current_state": "Mojtaba incapacitated + IRGC leads decisions",
+          "label": "Iranian internal power structure",
+          "short_desc": "Mojtaba nominal / IRGC actual",
+          "current_state": "Mojtaba incapacitated + IRGC decision-making",
           "color": "alert",
           "cross_page_link": {
             "page": null,
@@ -363,7 +363,7 @@
           "mechanism": {
             "id": "ii-mech",
             "label": "Mojtaba in name + IRGC in fact + courier communications",
-            "analysis": "Current operation: Mojtaba is Supreme Leader in name, IRGC drives decisions. All statements come via state TV reading; Mojtaba transmits written orders to negotiators through couriers. This 'paralyzed nominal leader' state has no Iranian historical precedent — 1989's succession had IRGC + clerical + political consensus; 1979 was direct revolutionary installation. The current arrangement is unstable because Mojtaba's health could deteriorate, and IRGC sub-factions (Salami / Qaani / Basij / Navy) may compete for control during his prolonged absence. The maximalist negotiating posture (Hormuz sovereignty + full sanctions lifting + reparations) reflects IRGC hardliners' grip on the talks."
+            "analysis": "Iran's supreme power structure: Supreme Leader, IRGC (Islamic Revolutionary Guard Corps), Assembly of Experts (88-member electoral body).\n\n2026-02-28 Khamenei died. On 3-8 the Assembly of Experts approved his son Mojtaba's succession in just 4 hours. IRGC commander Salami and Quds Force (IRGC's overseas operations branch) commander Qaani were present at the religious vote.\n\nMojtaba has not appeared publicly in the 3 months since taking over. Actual decision-making authority rests with Salami and Qaani. The Assembly of Experts, having just voted yes, cannot publicly oppose IRGC — checks-and-balances paralyzed.\n\nSince 2025-11, Salami-Qaani factional disagreement has appeared in Iranian opposition media (Iran International) reporting.\n\nTrigger: disagreement escalates to public-statement level — one side arrests the other's deputies, public speeches imply the other's strategic misjudgment, or Jamkaran-type collective religious declarations favor one side.\n\nOutcome: within 30 days Iran's foreign posture may swing to 'willing to negotiate' (pragmatist wins, oil prices fall $20-30/bbl) or 'civil war edge' (each faction pulls armed forces, oil breaks $200/bbl)."
           },
           "consequences": [
             {
@@ -414,9 +414,9 @@
         },
         {
           "id": "var-us-navy",
-          "label": "US Navy Actual Hormuz Capacity",
-          "short_desc": "5th Fleet can restore only ~10% of pre-war Strait flow",
-          "current_state": "Escort capacity severely limited; 68 tankers stranded",
+          "label": "US Navy actual Hormuz capacity",
+          "short_desc": "5th Fleet max effort recovers only 10% pre-war",
+          "current_state": "~10% pre-war flow + ongoing escort",
           "color": "alert",
           "cross_page_link": {
             "page": "supply",
@@ -448,7 +448,7 @@
           "mechanism": {
             "id": "un-mech",
             "label": "Selective escort + extended deterrence",
-            "analysis": "5th Fleet's actual operations: (1) selective escort of a few high-value tankers (2 tankers + 1 destroyer per transit with satellite + air coverage); (2) Operation Epic Escort under evaluation (Pentagon began studying full escort options in March 2026); (3) priority coordination with Gulf navies (US + Saudi + UAE navies possibly cooperating); (4) extended deterrence (Trump publicly said 'the US will act if Qatar facilities are hit again'). Hegseth publicly called the escort 'a gift to the world,' but CNN reported directly in May that 'the US Navy isn't escorting commercial ships' — showing the gap between political messaging and operational reality. The 45–50% ammo depletion makes any naval escalation costly."
+            "analysis": "Hormuz Strait (narrowest point 21 km, 21% of global oil shipped through) escort is a physical constraint.\n\nUS Fifth Fleet (HQ Manama, Bahrain) standing strength: 1 carrier strike group + 8-10 Arleigh Burke destroyers. Wartime max: 3 carrier groups + 14 destroyers.\n\nActual convoy method: 10-20 tankers per group, 2-3 destroyers fore and aft, P-8 ASW aircraft + MQ-4C Triton UAVs providing ISR throughout, 5-7 knot low-speed transit (normal 12-14 knots), single transit 16-20 hours. Max 2 convoys per day, max 20 ships each.\n\nTheoretical max = 40 ships/day × 2M bbl/ship = 80M bbl/day. After real-world discounts, sustainable throughput is 2-3 mb/d, which is 10-14% of pre-war 20.5 mb/d. The remaining 86-90% has no backup: Saudi East-West pipeline 5 mb/d with limited full-load hours, UAE Fujairah pipeline 1.8 mb/d.\n\nPAC-3 / THAAD / Patriot pre-war stockpile consumed 45-50% (CSIS Cancian 'Last Rounds?' report).\n\n2018 comparable US Navy escort could restore 60-70%; 2026 upper limit is 10-14% due to changed physical constraints (Iran anti-ship missile stockpile now 3,000+, US interceptor stockpile down)."
           },
           "consequences": [
             {
@@ -501,15 +501,15 @@
     },
     {
       "id": "short-term",
-      "label": "Short-Term Action Variables",
-      "sublabel": "Month-level dynamics",
-      "intro": "These are variables that will trigger or shift within a few months.",
+      "label": "Short-term actions",
+      "sublabel": "Key decisions in the next 12-18 months",
+      "intro": "Three variables that will substantively change in the next 12-18 months. Their values determine the overall trajectory.",
       "variables": [
         {
           "id": "var-us-domestic",
-          "label": "US Domestic Politics",
-          "short_desc": "Midterms + Vance/Rubio for 2028 + Hegseth as fall guy",
-          "current_state": "Trump approval at 37% (second-term low) + pushing face-saving deal",
+          "label": "US domestic politics",
+          "short_desc": "MAGA split + midterm + lame duck",
+          "current_state": "41% approval, projected -28 House seats, MAGA fracture",
           "color": "warning",
           "cross_page_link": {
             "page": "maga",
@@ -551,7 +551,7 @@
           "mechanism": {
             "id": "ud-mech",
             "label": "Trump pushes a face-saving deal to relieve midterm pressure",
-            "analysis": "Trump's current play: push a face-saving deal so that before the midterms he can declare 'we ended the Iran nuclear threat.' (1) Vance leads the talks, absorbing the 'soft' label and giving Trump a fall guy. (2) Hegseth stays in place as a fall guy. (3) Rubio repositions as 'mature realist,' future-arming a 2028 primary attack on Vance from the moderate side. Hawks (Hegseth / Rubio / Miller) vs. paleos (Bannon / Carlson / Massie) vs. post-liberals (Vance) form a three-way tension. This is Trump's classic 'let the heirs burn each other out on hot assignments' move — no successor can consolidate easily."
+            "analysis": "MAGA ('Make America Great Again') coalition split into 4 factions after the 2025-06 war:\n\n- Paleo-isolationists (Bannon, Tucker Carlson, Rep. Massie): oppose all foreign military intervention\n- Hawks (Rubio, Cotton, Pompeo): continue strikes + regime change\n- Evangelicals (Speaker Mike Johnson, Mike Huckabee): support Israel, oppose direct US action\n- Post-liberals (VP Vance's circle): preserve support for Netanyahu, oppose US troops\n\nH.Con.Res.38 (Massie's resolution limiting presidential authority for Iran war) 2026-03 House vote: Republican 87 yes, 124 no. Most serious single intra-party split of Trump's tenure.\n\nThree Trump internal-consumption arrangements running in parallel:\n\n1. Vance leads Iran negotiations. His 2028 frontrunner lead compressed from 14 points (2025-06) to 4 points (2026-04).\n\n2. Hegseth set up as fall guy. 2026-04 NYT exposed his lie about a fallen US soldier's father. Slate positioned him as 'the scapegoat if the war ends badly.'\n\n3. Rubio publicly attributes responsibility to Israel. In 2026-05 the Secretary of State publicly stated 'Trump attacked Iran because of Israel.' Rubio's 2028 odds rising."
           },
           "consequences": [
             {
@@ -602,9 +602,9 @@
         },
         {
           "id": "var-israel-escalation",
-          "label": "Israeli Unilateral Escalation",
-          "short_desc": "50–65% probability in the lame-duck window",
-          "current_state": "Pre-election pressure + lame-duck window opens time",
+          "label": "Israeli unilateral escalation",
+          "short_desc": "50-65% probability in lame duck window",
+          "current_state": "Intel prep stage + electoral narrative pressure",
           "color": "danger",
           "cross_page_link": {
             "page": "maga",
@@ -641,7 +641,7 @@
           "mechanism": {
             "id": "ie-mech",
             "label": "Target-class-limited escalation",
-            "analysis": "Israeli unilateral escalation is **target-class-limited** — selective against personnel, ground facilities, proxies, but cannot reach the actual core of Iran's nuclear program (Fordow). Type matrix: (1) Assassinations of IRGC seniors + nuclear scientists (proven, can continue); (2) Strikes on Iran missile production sites (ground, low-altitude, proven); (3) Large-scale cyber attacks (ongoing); (4) Strikes on remaining proxies (rebuilding Hezbollah, Iraqi militias); (5) Limited ground action at borders (Lebanon south, Golan). **Cannot do**: destroy Fordow, block Hormuz, sustain large-scale campaign. Timing logic: before the Knesset election (2026-08 to 10-27) needs visible 'decisive' action to push the coalition over the threshold; in the lame-duck window (2026-11 to 2028-01) judgment shifts to 'must finish de-capability while Trump is still here,' amplifying unilateral action."
+            "analysis": "Israel's capabilities during the lame duck window (2026-11 to 2028-01):\n\nCan do:\n- Mossad mass assassination wave (5-10 senior IRGC + nuclear scientists in one week)\n- Strikes on remaining Natanz/Arak centrifuge facilities\n- Stuxnet-extended cripple of Iranian banking system\n- Mass cyber attack on Tehran power grid\n\nCannot do: dismantle Fordow (centrifuge facility buried 90m deep under a mountain near Qom). Requires MOP-30000 bunker-buster + B-2 stealth bomber delivery. Israel lacks both the weapon and the platform.\n\nBaseline distribution:\n- Mossad mass assassination wave: 45%\n- Strikes on remaining nuclear facilities: 30%\n- Deep cyber warfare: 15%\n- All three combined (extreme path): 10%"
           },
           "consequences": [
             {
@@ -692,9 +692,9 @@
         },
         {
           "id": "var-iran-redline",
-          "label": "Iran's Red Line (Attacks on Gulf Energy)",
-          "short_desc": "Biggest trigger validated by Ras Laffan",
-          "current_state": "Proven once (2026-03-18); not yet repeated",
+          "label": "Iran's red line (attacks on Gulf energy)",
+          "short_desc": "Ras Laffan demonstrated the attack mode",
+          "current_state": "Red line proven + Gulf positions reversed",
           "color": "warning",
           "cross_page_link": {
             "page": "supply",
@@ -731,7 +731,7 @@
           "mechanism": {
             "id": "ir-mech",
             "label": "Cyclical ship seizures + selective strikes + proxy indirection",
-            "analysis": "Iran's red-line toolkit: (1) cyclical ship detentions + selective releases (the standard Hormuz play); (2) direct missile/drone strikes on Gulf energy infrastructure (Ras Laffan model); (3) cyber attacks on Gulf financial institutions (Aramco 2012 Shamoon-type); (4) proxy indirection (Houthis / Iraqi militias). Selection logic: Iran knows large-scale strikes invite full US entry, so it picks the 'below full war but above zero' grey zone. Ras Laffan was a typical instance — 5 missiles hit Ras Laffan, clearly a 'demonstration' rather than 'war' level."
+            "analysis": "2026-03-18 pre-dawn: an IRGC Navy armed speedboat launched 4 short-range anti-ship cruise missiles at Qatar's Ras Laffan LNG port (the world's largest LNG export hub, 77M tons/year, 22% of global LNG trade). 3 intercepted by Qatar's Patriot system; 1 hit a peripheral liquefaction unit. 12 dead (including 8 foreign engineers); one liquefaction line down for 6 weeks.\n\nSame timeframe: missile strikes on Saudi SAMREF Yanbu refinery, Kuwait Mina al-Ahmadi + Mina Abdullah refineries, UAE Al Hosn gas field.\n\nFirst direct Iranian attack on sovereign GCC (Gulf Cooperation Council six states: Saudi/UAE/Qatar/Bahrain/Kuwait/Oman) territory energy infrastructure since 1979 revolution.\n\nIsraeli MoD + US CIA 2026-05 joint assessment of next-target candidates: Saudi Abqaiq oil field (struck directly rather than via Houthis); UAE Fujairah oil port; Saudi Yanbu Red Sea petrochemical base. Each successful strike corresponds to 30-50% production loss for 1-3 months."
           },
           "consequences": [
             {
@@ -786,77 +786,79 @@
   "evolution_phases": [
     {
       "phase": 1,
-      "period": "2026-05-21 → 2026-11-03",
-      "label": "Pre-Midterm (face-saving deal push)",
-      "description": "Trump pushes a face-saving deal. Possible form: Mojtaba accepts partial IAEA inspection + suspends high-level enrichment + ambiguous commitments on proxies. Trump declares 'we ended the Iran nuclear threat.' Vance leads negotiations and absorbs the 'soft' label. Israel does limited unilateral action (assassinations + missile-site strikes) ahead of the 2026-10-27 Knesset election, but doesn't break the deal framework. Brent in the $80–100 range. Hormuz operates in mixed transit mode (10–20% of pre-war flow).",
+      "period": "2026-05 to 2026-10",
+      "label": "Pre-election tension accumulation",
+      "description": "Five months before Israeli Knesset election (2026-10-27).\n\nNetanyahu coalition at 52 seats, 9 short of majority 61.\n\nIsrael strategy: low-intensity continuous harassment. Mossad assassinates 2-3 mid-level IRGC per month + cyber harassment.\n\nIran: Ras Laffan-type red line attacks projected to recur 1-2 times. Each event triggers $20-30/bbl jump.\n\nUS: MAGA split continues to surface. Vance-Rubio-Don Jr. mutual consumption. Midterm polling remains unfavorable for Republicans.",
       "key_events": [
-        "Trump's face-saving deal negotiations progress",
-        "Vance leads talks and carries the 'soft' label",
-        "Israel's limited unilateral action pre-Knesset election",
-        "Brent 80–100",
-        "Mojtaba remains incapacitated"
+        "2026-06 IAEA quarterly report (still no enriched uranium verification)",
+        "2026-07 G20 summit",
+        "2026-08 Mossad assassination wave may escalate",
+        "2026-09 Congress pushes H.Con.Res.38-type resolutions",
+        "2026-10-27 Israeli Knesset election day"
       ]
     },
     {
       "phase": 2,
-      "period": "2026-11-03 → 2027-06",
-      "label": "Lame-Duck Phase (Israel scales up unilateral action)",
-      "description": "Republicans lose the House (baseline 60% probability) → Trump's domestic politics paralyzed. The Iran deal is challenged by Congress but pushed by executive. If Mojtaba survives he uses the deal to consolidate internal control. Within the lame-duck window Israel judges 'must finish de-capability while Trump is still here' and scales up unilateral action — larger assassinations and strikes. Brent $80–95. The new Democratic House launches investigations of Hegseth and Project 2025 NEA purge.",
+      "period": "2026-11 to 2027-03",
+      "label": "US midterms + lame duck onset + Israeli govt reorg",
+      "description": "2026-11-03 US midterm election. Trump likely loses the House; Senate even-money. 14 months of legislative paralysis.\n\n2026 late-November Israeli government reorganization. Smotrich's party may fall below 3.25% threshold and lose cabinet seats.\n\nHighest-probability window for Israeli unilateral escalation. Baseline: Mossad mass assassination wave 40%, strikes on Natanz/Arak residuals 30%, deep cyber warfare 15%, restraint 15%.\n\nAny escalation triggers Iranian retaliation: Hormuz flow drops, oil breaks $180/bbl.",
       "key_events": [
-        "GOP loses House (baseline) → Trump lame duck",
-        "Iran deal pushed by executive vs. congressional opposition",
-        "Israel's lame-duck-window scale-up of unilateral action",
-        "Democrats launch Hegseth + NEA investigations",
-        "Brent 80–95"
+        "2026-11-03 US midterm election",
+        "2026 late-Nov Israeli government reorganization",
+        "2026-12 IRGC internal Salami-Qaani factional fight may surface",
+        "2027-01 Trump's last State of the Union",
+        "2027-02 most likely window for Israeli Mossad mass assassination wave or airstrikes"
       ]
     },
     {
       "phase": 3,
-      "period": "2027-06 → 2028-01-20",
-      "label": "2028 Primary Run-Up + End of Trump's Term",
-      "description": "The 2028 Republican primary goes public. Vance / Rubio / Don Jr compete for the succession. The Iran deal may partially collapse — over execution details or Israeli escalation triggering an Iranian breach declaration. Israel takes its largest unilateral action in the final stretch of the lame-duck window. Brent $90–110 (deal collapses) or $75–85 (deal holds).",
+      "period": "2027-04 to 2027-10",
+      "label": "Medium-intensity contest + key node preparation",
+      "description": "Israel: Mossad assassinations + selective airstrikes.\n\nIran: Ras Laffan-mode retaliation.\n\nGCC: shares IDF intel, permits Israeli aircraft transit through GCC airspace.\n\nChina-Russia divergence probability rises: Ukraine ceasefire, China-Saudi/UAE new energy agreement.\n\nMojtaba regime 2027-06 critical node. If still no public appearance, Salami-Qaani internal split may surface publicly.",
       "key_events": [
-        "2028 Republican primary goes public (multi-candidate field)",
-        "Critical moment for whether the Iran deal partially collapses or holds",
-        "Israel's largest unilateral action in the final window",
-        "Brent in the $75–110 range"
+        "2027-04 US Q1 economic data (impact of high oil prices on GDP)",
+        "2027-06 first anniversary of Mojtaba's succession",
+        "2027-09 IAEA annual conference",
+        "2027-10 US 2028 presidential primary kickoff"
       ]
     },
     {
       "phase": 4,
-      "period": "After 2028-01-20",
-      "label": "Successor Administration Path Branch",
-      "description": "The new president's direction shapes the next phase: Democrats may attempt a JCPOA 2.0; Vance has narrow operational room; Rubio may restart escalation; the Don Jr / Carlson camp may push full isolationism, leaving Israel to handle Iran alone.",
+      "period": "2027-11 to 2028-01",
+      "label": "Final dash at Trump's term end",
+      "description": "Final window for Israeli unilateral action.\n\nPossible 2027-12 to 2028-01 actions: airstrikes on remaining nuclear facilities / mass assassination wave / full deep cyber warfare deployment.\n\nProbability that Trump uses B-2 to demolish Fordow in his final 30 days: 15-25%.\n\nPossible Iranian retaliation: full Hormuz blockade + simultaneous attacks on multiple GCC energy targets + True Promise III scale (300-500 ballistic missiles) strike on Israel.\n\nProbability that oil breaks $250/bbl for 30+ days in this window rises to 25-30%.",
       "key_events": [
-        "Democrats win → JCPOA 2.0 attempt",
-        "Vance wins → tight operational space",
-        "Rubio wins → escalation restart possible",
-        "Don Jr / Carlson camp wins → full isolationism"
+        "2027-12 Trump's final 30-day 'legacy decision' window",
+        "2027-12 whether Knesset gives Netanyahu wartime authorization",
+        "2028-01-10 Trump's last State of the Union",
+        "2028-01-20 Trump's term formally ends"
       ]
     }
   ],
   "worst_case": {
-    "probability_24m": "3–5%",
-    "label": "Disintegration + Maritime Anarchy",
-    "description": "3–5% probability over 24 months, but the destruction would be equivalent to 1929 Great Depression + 1973 oil shock + 2008 financial crisis + 2020 COVID stacked.",
+    "probability_24m": "3-5%",
+    "label": "Collapse + maritime anarchy",
+    "description": "Trigger chain: Iranian internal Salami-Qaani fratricide runs out of control + Mojtaba regime collapse + IRGC fracture triggers civil war + Hormuz fully closed + GCC states directly militarily involved. Iran enters a state resembling 1979 pre-revolution or post-2003 US-invaded Iraq.\n\n24-month baseline probability 3-5%.\n\nDamage scale: global GDP single-year loss 8-12%; oil sustained above $300/bbl for 60+ days; global food crisis; European winter energy crisis; East Asian manufacturing collapse (China+India bear 70% of energy price hike).\n\nThe 1929 / 1973 / 2008 / 2020 events all had ex-ante predicted probability below 5%.",
     "triggers": [
-      "Mojtaba dies suddenly + IRGC cannot quickly produce internal consensus",
-      "Israeli large-scale escalation (Smotrich pushes WMD use)",
-      "Simultaneous mobilization in Khuzestan + Kurdistan + Baluchestan",
-      "China and Russia unwilling/unable to bail Iran out"
+      "Mojtaba public death 2026-2027 + IRGC no consensus successor",
+      "Salami-Qaani factional civil war breaks out in Tehran streets",
+      "Israeli unilateral escalation triggers Iran's full Hormuz blockade",
+      "Massive Chinese arms shipments arrive + Iran self-confidence surges + active escalation",
+      "Trump uses B-2 to demolish Fordow in final 30 days, triggering Iran full counterstrike"
     ],
     "consequences": [
-      "Iran's central authority effectively collapses",
-      "IRGC's provincial naval units act autonomously → Strait of Hormuz becomes 'maritime anarchy'",
-      "Brent spikes to $150–180 short-term",
-      "Global industrial output severely contracts → recession",
-      "Semiconductor, defense industry, and fertilizer supply chains break simultaneously"
+      "Oil at $300+/bbl for 60+ days + global GDP single-year loss 8-12%",
+      "Hormuz flow approaches zero + global oil reserves exhausted in 30 days",
+      "European winter energy crisis + industrial system halt + protests escalate",
+      "China-India inflation surge + government legitimacy under stress",
+      "Global food crisis + Mideast/N. Africa famine + refugee flow exceeds 2015"
     ],
     "monitoring_signals": [
-      "Sudden changes in Mojtaba's health",
-      "Inconsistencies among IRGC branches' public statements",
-      "Unrest signals in Iran's peripheral regions (Kurdistan, Baluchestan, Khuzestan)",
-      "Whether China and Russia would be willing to mount an emergency rescue"
+      "Mojtaba >90 days no public appearance + IRGC internal death rumors",
+      "Salami or Qaani arrested or killed by the other in Tehran",
+      "Iranian mine deployment found in Hormuz + first commercial ships sunk",
+      "Confirmation of Chinese J-10C delivery to Iran",
+      "Netanyahu publicly announces Israel will 'act alone' on Iran nuclear threat"
     ]
   }
 }

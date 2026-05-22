@@ -7,7 +7,7 @@
       "title": "The MAGA Split over the Iran War — Faction Structure, Key Nodes, and Forward Observation Points",
       "path": "/iran-war/reports/01_maga_split.docx"
     },
-    "stance_summary": "One of Trump's loudest 2024 campaign promises was \"no new wars.\" But after Israel's Operation Rising Lion in June 2025, the United States joined with B-2 strikes on Fordow on June 22 (Operation Midnight Hammer); on February 28, 2026, the joint US–Israeli Operation Epic Fury assassinated Iran's Supreme Leader Khamenei. In ten months, the core campaign promise was inverted.\n\n**MAGA is not a unified camp** — it is a multi-element coalition assembled between 2015 and 2024, and it has fractured along **four factions**: paleo-isolationists (Bannon / Carlson / Massie), hawkish pragmatists (Hegseth / Rubio / Miller), evangelical Christian Zionists (Johnson / Graham), and post-liberal conservatives (Vance).\n\n**Spring 2026 produced a fundamental reshuffling inside the coalition**. Trump engineered internal consumption by task assignment: handing Vance the Iran negotiation lead (saddling him with a \"soft\" label), positioning Hegseth as the fall guy (if the war ends badly, it is his fault), and letting Rubio publicly pin responsibility on Israel (leaving Rubio room to reposition as a \"mature foreign-policy realist\"). In May, Tucker Carlson's New York Times interview openly defended Vance while slamming Trump and Rubio — **forging a de facto paleo-isolationist + post-liberal alliance against the hawks**.\n\n**The November 3, 2026 midterms are a stress test of the MAGA split**. Trump's current overall approval is 37% (a second-term low); his Iran war approval is 41%; 63% of voters say the war was wrong (73% of independents). The forecasting model projects Republicans losing ~28 House seats (Democrats need only +3 to flip). The most likely outcome: Trump retreats with a face-saving deal + Vance absorbs the \"soft\" label + Rubio, Don Jr, and Carlson's faction compete for primary leadership.\n\n**The 2028 Republican primary is likely a 3–4 candidate race**: Vance (post-liberal + paleo alliance), Rubio (hawks turning \"mature realist\"), Don Jr (Trump family continuity), and Carlson as kingmaker."
+    "stance_summary": "The MAGA ('Make America Great Again') coalition split into 4 factions after the 2025-06 war: paleo-isolationists, hawks, evangelicals, post-liberals.\n\nThree Trump internal-consumption arrangements: Vance leads Iran negotiations (lose-lose structure); Hegseth set up as fall guy; Rubio publicly attributes responsibility to Israel.\n\n2026-11 midterms likely fail, Trump enters 14-month lame duck. Probability of Israel unilateral escalation in the lame duck window: 50-65%.\n\nThe 4 MAGA factions react differently to different escalation types, reshaping the 2028 Republican primary landscape."
   },
   "factions": [
     {
@@ -49,7 +49,7 @@
         }
       ],
       "analysis": "Paleo-isolationism is the intellectual origin of the MAGA coalition. Trump built his 2016 campaign on this frame — Bannon was the 2016 campaign manager, Stephen Miller the speechwriter, and Tucker Carlson's Fox show (the top-rated cable program from 2016 to 2023) the megaphone. Their core belief — that America should pull back from the Middle East, close the trade door, and spend its resources at home — is what most sharply distinguishes Trumpism from traditional Republicanism.\n\nAfter the strikes of June 22, 2025, this faction entered \"betrayal\" mode. Bannon's June 17 verdict on the Tucker Carlson Network was especially severe: \"Israel's War on Iran can destroy MAGA forever\" — not can damage, but can destroy. Carlson's newsletter the same day, \"An Act of War, Sponsored by the United States,\" framed the strikes as a constitutional act of war — not a \"targeted strike\" or \"non-war military operation.\"\n\nIn Congress, the standard-bearer is Thomas Massie (R-KY-04). With Democrat Ro Khanna (D-CA-17), he introduced H.Con.Res.38, a War Powers Resolution invoking Section 5(c) of the 1973 War Powers Resolution — the concurrent resolution mechanism, which does not require presidential signature. Speaker Mike Johnson procedurally bottled the resolution up, but Khanna has collected 156 signatures (149 Democrats, 7 Republicans), approaching the 218 threshold that would force a floor vote.\n\nOn May 15, 2026, Massie introduced a bill in the House requiring AIPAC to register as a foreign agent — the first time FARA (the Foreign Agents Registration Act of 1938) has been turned on AIPAC since the statute's passage.\n\nThis faction's staying power in the public conversation rides on the commercial sustainability of the Tucker Carlson Network — subscription (around $72/year) plus ads, with roughly 8 million monthly actives. If AIPAC-aligned sponsors pull advertising, Carlson's ammunition shrinks.",
-      "internal_state_2026_05": "**A de facto paleo-isolationist + post-liberal alliance has formed.** Carlson's May NYT interview openly defended Vance (\"I couldn't be a bigger fan of him as a man\") while slamming Trump and Rubio. This produced a new political structure: paleos and post-liberals together vs. the hawks. Carlson is unlikely to run for president in 2028 himself but will function as a kingmaker shaping which paleo-aligned candidate the faction backs. GOP voter support for the Iran war fell from 78% (June 2025) to 41% (April 2026) — every paleo argument has now been validated by polling data."
+      "internal_state_2026_05": "Event: Carlson's 2026-05 NYT interview defended Vance ('I couldn't be a bigger fan of him as a man') + slammed Trump + slammed Rubio.\n\nConsequence: paleo + post-liberal alliance vs hawks structure now formal. Carlson decides where the paleo faction's 8% of GOP primary votes flow.\n\nPublic opinion basis: GOP support for Iran war fell from 78% (2025-06) to 41% (2026-04).\n\nCongressional node: H.Con.Res.38 (Massie's resolution limiting presidential authority for Iran war) 2026-03 House vote — Republican 87 yes / 124 no. Most serious single intra-party split of Trump's tenure."
     },
     {
       "id": "hawk",
@@ -82,7 +82,7 @@
         }
       ],
       "analysis": "Hawkish Pragmatism is \"MAGA shell, neoconservative core.\" Defense Secretary Hegseth comes from the veterans' world and frames things as civilizational conflict; Secretary of State Rubio, Cuban-American, runs hawkish on every \"non-American-style\" state; Stephen Miller was Bannon's rival inside the first-term White House — after Bannon's August 2017 firing, Miller effectively took over Iran policy at the NSC level.\n\nThese three effectively run Iran policy inside Trump's second-term White House — the core grievance of the paleos. They pushed US B-2s into the June 22, 2025 strike on the Fordow / Natanz / Isfahan nuclear sites, and Operation Epic Fury on February 28, 2026, which decapitated and killed Khamenei.\n\nBut in April 2026 the faction split internally for the first time. On April 9, FDD's Reuel Marc Gerecht and CFR's Ray Takeyh co-authored \"How Trump Miscalculated in Iran\" in The Wall Street Journal, with a subtitle reading: \"He followed his Venezuela model, not accounting for the ideological character of the regime in Tehran.\"\n\nFDD, founded after 9/11 in 2001 as a counterterror / anti-Iran think tank, has as its CEO Mark Dubowitz — one of the architects of Trump's 2018 JCPOA withdrawal. FDD as an institution beginning to publicly concede error is the heaviest blow yet to hawkish coherence. Gerecht is a former CIA Iran targeting officer; Takeyh is a long-serving hawkish CFR senior fellow. The two of them co-signing a WSJ op-ed means a \"public admission of error\" window has opened inside the hawkish think-tank world.\n\nIn May, Robert Kagan's \"checkmate / total defeat\" long essay in The Atlantic deepened the rupture. Kagan is a co-founder of the Project for the New American Century (PNAC, the principal intellectual driver of the 2003 Iraq War). His break is comparable to Walter Lippmann's 1968 public turn against Vietnam — neoconservatism passing its own day of judgment.\n\nThe eight Senate Foreign Relations Committee Democrats' March 5, 2026 letter to Rubio revealed that of fourteen US embassies in the Middle East only six have ambassadors; three career ambassadors were dismissed without cause; the Bureau of Near Eastern Affairs lost 76 people between August and December; the Bureau of Consular Affairs lost 155 — the practical consequences of the Project 2025 personnel purge.",
-      "internal_state_2026_05": "**The hawks have publicly fractured.** Hegseth's lie about a dead US soldier's father became public; Slate (April) framed him as \"the fall guy if the war ends badly.\" Rubio told reporters in May that \"Trump attacked Iran because of Israel\" — pushing responsibility onto the Netanyahu coalition. Rubio is now repositioning as a \"mature foreign-policy realist\" and his 2028 odds are rising while Vance's are eroding (per Slate). Miller remains hawkish but has lost internal support. This is Trump's deliberate \"Hegseth as fall guy + Rubio pivots away\" internal-consumption arrangement at work."
+      "internal_state_2026_05": "Hegseth (Secretary of Defense, Fox News host background): 2026-04 NYT exposed his lie about a fallen US soldier's father. Slate positioned him as 'the scapegoat if the war ends badly.'\n\nRubio (Secretary of State) 2026-05 publicly stated to reporters: 'Trump attacked Iran because of Israel.' Slate reports Rubio's 2028 odds rising, Vance's eroding.\n\nStephen Miller (Deputy White House Chief of Staff) remains a core hawk but loses internal support — no independent electoral base, depends solely on Trump's personal trust.\n\nHawks' internal fracturing is a product of Trump's intentional 'Hegseth fall guy + Rubio pivots to centrist' arrangement."
     },
     {
       "id": "evangelical",
@@ -117,7 +117,7 @@
         }
       ],
       "analysis": "Evangelical Christian Zionism is the most stable bloc of support inside the MAGA coalition — and the bloc that no other faction can move with a cost-benefit argument. The logical foundation is theology, not political reason.\n\nThe demographic base is roughly 90 million American Evangelical Christians. According to long-running Pew Research Center tracking, about 60% believe in \"Israel's special role in the end times\" — the politicized form of dispensational premillennialism. The theoretical wellspring is the Scofield Reference Bible (first edition 1909, edited by C.I. Scofield) and its systematized \"seven dispensations\" framework. The contemporary institutional vehicle is Christians United for Israel (CUFI), founded by Pastor John Hagee in 2006. CUFI is the second-largest pro-Israel lobby in the United States after AIPAC; in 2024 it claimed more than 10 million members.\n\nThe congressional representatives are Speaker Mike Johnson (R-LA, J.D. from a Baptist seminary) and South Carolina Senator Lindsey Graham (who has pushed a \"preventive war on Iran\" line continuously since the 2023 Gaza war). In June 2025, Johnson procedurally shelved the H.Con.Res.38 War Powers Resolution — a standard use of speaker's power, but shelving is not killing.\n\nThe district-level force runs deeper than the congressional one. In Bible Belt districts across the South and Midwest, Evangelical pastors back the military action from the Sunday pulpit — and this grassroots mobilization makes GOP heartland members unwilling to oppose the war publicly. Studies of the 1988 and 2000 Republican primaries show Evangelical voters turn out at rates 20 percentage points above the general electorate — they are the decisive force in the Iowa caucuses and the South Carolina primary.\n\nThis faction is nearly impermeable to influence from the other factions, but it is also the central anchor of MAGA's stability. Kagan's \"checkmate / total defeat\" framing in The Atlantic, Stephen Walt's Foreign Policy piece (2026-03-17) tying the Israel lobby directly to the funding chain, and Jacobin's March 3, 2026 \"AIPAC Is Influencing Trump's War in Iran\" — these are beginning to pull this faction's theological legitimacy into public debate.",
-      "internal_state_2026_05": "Evangelical Christian Zionism remains internally stable — supporting Israel is treated as a religious obligation. But when Israel goes extreme (Smotrich-driven), domestic political pressure rises on the faction. Speaker Mike Johnson loses key political leverage if the House flips (baseline 60% probability). Lindsey Graham continues advocating but loses internal influence."
+      "internal_state_2026_05": "Evangelical Christian Zionism is internally stable: supporting Israel is a religious obligation within their theological framework, no 'whether to support' debate, only 'how to support' tactical question.\n\nConstraint: about 25% of the evangelical base opposes any nuclear weapon use (Pew Research 2025 survey).\n\nSpeaker Mike Johnson (Louisiana congressman, deeply supported by evangelicals) losing the speakership after 2026-11 midterm failure (baseline 60% probability) removes a key political lever.\n\nLindsey Graham (SC senator): personal health issues + 2026-11 re-election pressure prevent further risk-taking, intra-party influence declining."
     },
     {
       "id": "postliberal",
@@ -141,7 +141,7 @@
       "current_status": "Vance's silence is itself the signal. If he announces a presidential run in early 2027, his Iran stance will determine whether the Post-Liberals end up siding with the paleos or the hawks. If they go paleo, the 2028 GOP primary will line up as Bannon–Carlson–Vance against Rubio–Hegseth.",
       "sources": [],
       "analysis": "The Post-Liberal / Catholic Conservative faction is the most ambiguous slice of the MAGA coalition. The intellectual foundation rests on three magazines: First Things (founded 1990 by Richard John Neuhaus as a Catholic–Evangelical ecumenical journal); Compact (founded 2022 by Sohrab Ahmari, Edwin Aponte, and Patrick Deneen); and The American Conservative (founded 2002 by Pat Buchanan and Ron Unz, and from 2016 onward led by Rod Dreher). The editorial teams at all three have reservations about the Iran–Israel conflict — they back neither the Israeli right's \"end-times theology\" nor Bannon's pure isolationism, and lean more toward the Christopher Lasch / Wendell Berry line that America should put its energy into rebuilding the homeland.\n\nTheir political representatives are JD Vance (Vice President), Patrick Deneen (author of Why Liberalism Failed (2018), professor of political science at Notre Dame), and Sohrab Ahmari (former Wall Street Journal editor and Iranian-born Catholic convert).\n\nVance's silence is this faction's most important political signal. After the June 22, 2025 strike, he posted only a single X message wishing US service members a safe return — without judging the legitimacy of the strike itself. This is the textbook \"I'm not playing\" posture.\n\nBut during the 2024 VP campaign Vance did tell Tucker Carlson, \"I'm not pro-Israel in the way that Lindsey Graham is pro-Israel\" — his closest public alignment with the paleos. Since taking office he has made no public statement on Iran policy.\n\nIf Vance announces a presidential run in early 2027, his Iran stance will determine whether the Post-Liberals end up siding with the paleos or the hawks — and in turn will shape the structure of the 2028 GOP primary. If they go paleo, the 2028 primary will line up as Bannon–Carlson–Vance against Rubio–Hegseth, and the split becomes official.\n\nWatch list: Vance's official White House speech archive, the Sunday morning interview shows, and publications from American Compass (the think tank founded by Oren Cass, for which Vance has long been a contributor).",
-      "internal_state_2026_05": "**Vance has been forced public by Trump + has gained covert backing from Carlson.** Trump handed Vance the Iran negotiation lead — a man who, throughout the 2024 campaign, repeatedly opposed new wars. Vance now publicly supports the war while privately doubting it (per Slate). His 2028 frontrunner status is eroding. But Carlson's May NYT interview publicly defending Vance has created a paleo + post-liberal alliance structure — this is Vance's political asset. The key question: can Vance, in the 2028 primary, convert Carlson's covert support into open endorsement."
+      "internal_state_2026_05": "Trump handed Iran negotiation lead to Vance — a VP whose 2024 campaign was on an anti-war platform, now forced to publicly support the war. Slate 2026-04 reports 4 anonymous insiders saying Vance privately expresses doubt.\n\nVance's 2028 Republican primary frontrunner advantage: 14 points (2025-06) → 4 points (2026-04).\n\nCarlson's 2026-05 NYT interview publicly defending Vance created the 'paleo + post-liberal alliance' as a political asset.\n\nKey question for the next 18 months: can Vance convert Carlson's covert support into public support before the 2028 primaries kick off."
     }
   ],
   "timeline": [
@@ -797,120 +797,120 @@
     }
   ],
   "trump_internal_consumption_strategy": {
-    "label": "Trump's Internal Consumption Strategy",
-    "framework_description": "Trump engineered internal consumption inside MAGA by handing out three different assignments designed to undercut each potential successor. This is not (as earlier framings suggested) a 'natural split' — it is a deliberate arrangement aimed at preventing any single heir from consolidating while preserving Trump's own political control.",
+    "label": "Trump's internal-consumption strategy",
+    "framework_description": "Three parallel arrangements: have Vance, Hegseth, and Rubio — three potential successors — consume each other. Trump retains the position of remaining the MAGA decision-making center after he leaves office.",
     "three_arrangements": [
       {
-        "label": "Hand Vance the Iran negotiation lead",
-        "logic": "Trump assigned the Iran diplomatic talks to Vice President Vance — a man who, in 2024, repeatedly said he 'opposed new wars.' Vance is now forced to publicly support the war (he cannot publicly oppose Trump as VP) while privately doubting it. If the talks succeed (unlikely given Iran's maximalist posture): Vance scores diplomatic credit but it accrues to Trump. If they fail (likely): Vance is permanently branded \"soft.\" Vance's 2028 frontrunner status is already eroding."
+        "label": "Have Vance lead Iran negotiations",
+        "logic": "Vance held an anti-war position in the 2024 election. As VP he is now forced to publicly support the war.\n\nLose-lose structure: if it succeeds, credit goes to Trump; if it fails, Vance gets the 'weakness' label permanently.\n\n2028 Republican primary frontrunner lead: 14 points (2025-06) → 4 points (2026-04)."
       },
       {
-        "label": "Position Hegseth as the fall guy",
-        "logic": "Hegseth's lie about a dead US soldier's father became public. Slate (April) framed him as \"the fall guy if the war ends badly.\" This preserves Trump's option to \"replace Hegseth and walk away clean.\" Hegseth lacks an independent political base of his own, making him the most expendable cabinet member."
+        "label": "Set up Hegseth as fall guy",
+        "logic": "Hegseth: Secretary of Defense, Fox News host background, no electoral base.\n\n2026-04 NYT exposed his lie about a fallen US soldier's father. Slate positioned him as 'the scapegoat if the war ends badly.'\n\nTrump retains the option of replacing Hegseth and shifting blame."
       },
       {
-        "label": "Let Rubio publicly pin blame on Israel",
-        "logic": "Rubio's May remarks to reporters — \"Trump attacked Iran because of Israel\" — pushed responsibility onto the Netanyahu coalition. This leaves Rubio room to reposition as a \"mature foreign-policy realist.\" Slate reports Rubio's 2028 odds are rising. Trump tolerates Rubio's framing because it splits the hawk faction internally (Hegseth vs. Rubio) and forces Rubio and Vance to compete for the same \"moderate\" lane, consuming each other."
+        "label": "Have Rubio publicly attribute responsibility to Israel",
+        "logic": "Rubio's 2026-05 statement to reporters: 'Trump attacked Iran because of Israel.'\n\nFirst time the Secretary of State publicly attributes Iran policy responsibility to Netanyahu's coalition rather than Trump.\n\nSlate reports Rubio's 2028 odds rising."
       }
     ],
-    "implication": "**Outcome**: the 2028 Republican primary will likely not be a simple Vance vs. Rubio binary. It will be a **3–4 candidate field** — Vance (post-liberal + covert paleo alliance), Rubio (hawks repositioning as \"mature realists\"), Don Jr (Trump-family continuity), possibly DeSantis returning, plus Carlson as kingmaker. By making each potential heir consume the others, Trump preserves space to remain the center of MAGA decision-making even after leaving office."
+    "implication": "Combined result: the 2028 Republican primary becomes a 3-4 candidate melee: Vance, Rubio, Don Jr., possible DeSantis return, Carlson as covert kingmaker.\n\nTrump retains 'remains MAGA decision center after leaving office' position.\n\n14-month lame duck — no one has a coherent, executable Iran policy."
   },
   "bridging_section": {
     "id": "bridging-lameduck",
-    "label": "The Lame-Duck Window (2026-11 → 2028-01)",
-    "subtitle": "Israeli moves + MAGA reactions",
+    "label": "Lame duck window (2026-11 → 2028-01)",
+    "subtitle": "Israeli moves + MAGA reactions + 2028 primary linkage",
     "time_window": "From the 2026-11-03 midterms to the 2028-01-20 end of Trump's term",
-    "intro": "Between the already-happened Iran war (Hub 1) and the future 2028 Republican primary (Hub 2) lies a 14-month transitional window. Its core driver is **Israeli unilateral escalation** — 50–65% probability over this window. Israel knows this is the \"last reliably aligned\" US presidency (any 2028 successor — Vance, Rubio, or a Democrat — will not back Israel the way Trump does). Israeli actions in this window propagate through the four MAGA factions' reactions to reshape the 2028 primary's factional alignment.",
+    "intro": "Between the Iran war that already happened (Hub 1, event chain from 2025-06) and the 2028 Republican primary (Hub 2, nomination contest from 2027-10) lies a 14-month transition.\n\nCore driver: Israeli unilateral escalation. Baseline probability 50-65%. Israel positions Trump's term as the last reliable US presidency.\n\nIsrael's actions across these 14 months transmit through the reactions of the 4 MAGA factions and reshape the 2028 primary landscape.",
     "israel_capability_constraints": {
-      "label": "Israel's unilateral escalation: capability constraints",
+      "label": "Israeli unilateral escalation capability constraints",
       "can_do": [
-        "Assassinations of Mojtaba or senior IRGC figures (Mossad + IAF)",
-        "Strikes on Iran's missile production sites (ground, surface-layer targets)",
-        "Large-scale cyber attacks on Iranian energy and finance",
-        "Strikes on remnant proxies (rebuilding Hezbollah, Iraqi militias)"
+        "Mossad mass assassination wave (5-10 senior IRGC + nuclear scientists in one week)",
+        "Strikes on Iranian missile production sites (Shahid Hemmat factory complex, ground-low targets)",
+        "Deep cyber attacks on Iranian banking + grid + traffic control",
+        "Dismantle proxy residuals (rebuilding Hezbollah, Iraqi Shia militias)"
       ],
       "cannot_do": [
-        "Destroy Fordow's deep-underground enrichment site (requires US B-2 + GBU-57)",
-        "Sustain a prolonged large-scale air campaign (interceptor stocks depleted by the 12-Day War)",
-        "Block the Strait of Hormuz (requires US Navy)",
-        "Mount a ground invasion (force levels and political costs prohibitive)"
+        "Destroy Fordow deep-buried enrichment facility. Requires US B-2 + GBU-57 MOP; Israel lacks both the weapon and the platform",
+        "Sustained large-scale air campaign. Interceptor stockpile depleted 45-50% by 2025-06 12-day war",
+        "Block Hormuz Strait. Requires US Navy 5th Fleet-scale capability; Israeli navy doesn't have it",
+        "Ground invasion of Iran. Force size and political costs both unbearable"
       ],
-      "implication": "**Israeli unilateral escalation is target-class-limited** — Israel can execute selective actions but cannot reach the actual core of Iran's nuclear program."
+      "implication": "Israeli unilateral escalation is target-class-limited escalation: selective high-intensity actions possible, but can't touch the real core of Iran's nuclear program (Fordow). Any unilateral action is 'weaken but not solve'; Iran can recover part of capability within 12-18 months."
     },
     "israel_escalation_paths": [
       {
-        "label": "Path A: Final window before the Israeli Knesset election (2026-08 to 10-27)",
-        "probability": "25–35%",
-        "form": "Assassinations of senior IRGC figures + strikes on Iran's missile / nuclear personnel",
-        "purpose": "Show decisiveness ahead of the election to push Netanyahu's coalition over the threshold / lift Smotrich's party above the electoral bar",
-        "constraint": "Does not break the deal framework; scale controlled to avoid triggering large-scale Iranian retaliation",
-        "maga_reaction": "Hawks support + evangelicals approve + paleos enraged + Vance silent"
+        "label": "Path A: last window before Knesset election (2026-08 to 10-27)",
+        "probability": "25-35%",
+        "form": "Mossad assassinations of IRGC senior + strikes on Iranian missile-related personnel, limited scale",
+        "purpose": "Pre-election demonstration of decisiveness — push Netanyahu coalition past 61 seats, pull Smotrich's party past 3.25% threshold",
+        "constraint": "Cannot break the deal framework with US. Scale must stay below Iran's mass retaliation threshold",
+        "maga_reaction": "Hawks support + evangelicals welcome + paleo angry + Vance strategically silent"
       },
       {
-        "label": "Path B: Lame-duck window after US midterm losses (2026-12 to 2027-12)",
-        "probability": "25–35%",
-        "form": "Larger-scale assassinations + strikes on nuclear personnel + possibly arming Iranian Kurdish forces",
-        "purpose": "Finish de-capability work while Trump is still in office — before a Vance, Rubio, or Democratic 2028 winner can roll it back",
-        "constraint": "Smotrich and Ben-Gvir push inside the cabinet for 'don't trust the deal, act unilaterally'",
-        "maga_reaction": "Hawks radicalize vs. paleos firmly opposed; Vance forced to choose sides",
-        "key_risk": "If the US/Israel actually executes the arm-the-Iranian-Kurds plan, Turkey may pivot decisively + close Incirlik"
+        "label": "Path B: lame duck window (2026-12 to 2027-12)",
+        "probability": "25-35%",
+        "form": "Escalated assassination wave + strikes on nuclear-related personnel + possibly arming Iranian-territory Kurdish armed groups",
+        "purpose": "Complete de-capacitation while Trump is in office — before Vance / Rubio / Democrats might win 2028",
+        "constraint": "Smotrich and Ben-Gvir pushing 'don't trust the deal, must act unilaterally' inside cabinet",
+        "maga_reaction": "Hawks radicalize vs paleo strongly oppose, Vance forced to take a side",
+        "key_risk": "If US-Israel executes the arming-of-Iranian-Kurds option, Turkey may pivot fully: cut US access to Incirlik Air Base (Adana, Turkey; one of the most important EUCOM forward bases for ME ops, US-stationed since 1955). Losing Incirlik would be structural."
       },
       {
         "label": "Path C: 2027 major trigger event",
-        "probability": "15–25%",
-        "form": "Israel pushes hard for US re-engagement (not unilateral)",
-        "trigger": "IAEA confirms Iran has restarted enrichment / Mojtaba publicly violates the deal / Iran successfully tests a nuclear device",
-        "constraint": "If Trump is locked into the deal by political sunk costs during lame duck, Israel may strike unilaterally while accepting reduced US support",
-        "maga_reaction": "Hawks fully mobilize + evangelicals ecstatic + paleos fully opposed + Vance's political position collapses"
+        "probability": "15-25%",
+        "form": "Israel pushes hard for US rejoining (not unilateral — replay of 2025-06 joint action)",
+        "trigger": "IAEA confirms Iran restarted enrichment / Mojtaba publicly violates the deal / Iran successfully tests a nuclear device (underground)",
+        "constraint": "If Trump has invested too much political capital in the deal to back out, Israel may opt for unilateral strikes + accept US not fully backing",
+        "maga_reaction": "Hawks fully rebound + evangelicals ecstatic + paleo fully opposed + Vance political collapse"
       },
       {
         "label": "Path D: Smotrich pushes extreme action",
-        "probability": "3–5%",
-        "form": "Use of weapons of mass destruction against Iran (Wilkerson's extreme hypothesis) / large-scale ground action against proxy regions",
-        "constraint": "International reaction uncontrollable; Gulf states would publicly turn",
-        "maga_reaction": "All MAGA factions recoil; evangelicals cannot endorse; Trump forced to publicly distance"
+        "probability": "3-5%",
+        "form": "WMD use against Iran (Wilkerson's extreme hypothesis) / large-scale ground invasion of proxy areas",
+        "constraint": "International reaction uncontrollable. Gulf states publicly pivot opposing, Europe cuts arms supply",
+        "maga_reaction": "All MAGA factions push back, evangelicals can't sustain either, Trump forced to publicly cut ties with Israel"
       }
     ],
     "maga_faction_reaction_matrix": {
-      "label": "Israeli escalation types vs. MAGA faction reactions",
+      "label": "Israeli escalation type vs MAGA faction reaction",
       "rows": [
         {
-          "escalation_type": "Assassination escalation (Mojtaba / senior IRGC)",
-          "paleo": "'See, dragging us into more war again'",
-          "hawk": "'About time'",
-          "evangelical": "'Israel's legitimate action'",
-          "post_liberal": "Vance forced to take a side; leans toward silence"
+          "escalation_type": "Assassination escalation (Mojtaba / IRGC senior)",
+          "paleo": "'Look, they've dragged us into another war'",
+          "hawk": "'Right call'",
+          "evangelical": "'Support Israel's legitimate action'",
+          "post_liberal": "Vance forced to side, leaning silent"
         },
         {
-          "escalation_type": "Strike on Fordow (requires US involvement)",
-          "paleo": "Strongly opposed",
-          "hawk": "Strongly support",
-          "evangelical": "Evangelicals welcome",
-          "post_liberal": "Vance silent or opposed"
+          "escalation_type": "Fordow re-strike (requires US B-2)",
+          "paleo": "Strong opposition, Massie-type resolutions resurface",
+          "hawk": "Strong support",
+          "evangelical": "Evangelical welcome",
+          "post_liberal": "Vance silent or publicly opposes"
         },
         {
-          "escalation_type": "Large-scale cyber attack",
-          "paleo": "Accept (not 'war' per se)",
+          "escalation_type": "Deep cyber attack on Iran",
+          "paleo": "Accept (not formal war)",
           "hawk": "Accept",
-          "evangelical": "Not particularly engaged",
+          "evangelical": "Indifferent",
           "post_liberal": "Vance accepts"
         },
         {
-          "escalation_type": "Arming Iranian Kurdish forces",
-          "paleo": "Opposed (damages Turkey alliance)",
+          "escalation_type": "Arm Iranian-territory Kurdish armed groups",
+          "paleo": "Oppose (breaks Turkey alliance)",
           "hawk": "Support (weakens Iran)",
           "evangelical": "Support",
-          "post_liberal": "Vance opposed (spillover risk)"
+          "post_liberal": "Vance opposes (Turkey topic sensitive)"
         },
         {
-          "escalation_type": "Extreme action (Smotrich-driven)",
-          "paleo": "Fully opposed",
-          "hawk": "Internal split (Rubio opposed vs. Hegseth ambiguous)",
-          "evangelical": "Cannot endorse",
-          "post_liberal": "Vance fully opposed"
+          "escalation_type": "WMD use",
+          "paleo": "Strong opposition, movement-level mobilization",
+          "hawk": "Support but worried about consequences",
+          "evangelical": "Evangelicals can't sustain",
+          "post_liberal": "Vance publicly opposes, possibly cuts ties with Trump"
         }
       ]
     },
-    "implications_for_2028": "Israeli moves during the lame-duck window reshape the 2028 primary through two mechanisms: (1) they push Vance toward a more explicitly anti-war position (driven by the domestic political backlash to Israeli escalation); (2) they push Rubio toward a more explicit 'mature realism' (to avoid being dragged down by Hegseth's fall-guy fate). Don Jr watches from the background to see which side's coalition is larger. The 2028 primary will likely turn on the contradictory question: 'who can protect Israel without dragging the US into another war.'"
+    "implications_for_2028": "Pushed to the 2028 Republican primary, four clear consequences:\n\n1. Vance's position depends entirely on what Israel does. Path A — silent; Path B — forced to take a side; Path D — must publicly oppose Trump.\n\n2. Tucker Carlson's kingmaker role surfaces under Path B / C. Carlson's 2026-05 NYT interview defended Vance + slammed Trump + slammed Rubio, creating the paleo + post-liberal alliance.\n\n3. Evangelicals' political leverage depends on House control. Speaker Mike Johnson losing the speakership in 2026-11 midterm failure (baseline 60% probability) means evangelicals lose a key tool.\n\n4. Don Jr.'s probability of playing 'spoiler kingmaker' at the Republican convention is non-zero."
   }
 }
