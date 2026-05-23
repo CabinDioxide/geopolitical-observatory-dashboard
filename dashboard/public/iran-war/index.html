@@ -6,154 +6,332 @@
 <title>伊朗危机沙盘推演 · Iran Crisis Sandbox</title>
 <link rel="stylesheet" href="regime-scenarios/css/scenarios.css">
 <style>
-.hub-intro {
-  font-family: var(--font-display);
-  font-size: 22px;
-  line-height: 1.45;
-  color: var(--label);
-  margin: 0 0 80px;
-  max-width: 880px;
-  letter-spacing: -0.018em;
+:root {
+  --content-max: 900px;
+  --section-gap: 80px;
 }
-.hub-intro em { color: var(--blue); font-style: normal; font-weight: 600; }
-
-.report-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  margin-bottom: 72px;
+body {
+  background: #fafafa;
 }
-.report-card {
-  background: var(--surface);
-  border-radius: var(--r-lg);
-  padding: 32px 36px 28px;
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.hdr-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 18px 32px;
   display: flex;
-  flex-direction: column;
-  gap: 14px;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hdr h1 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.hdr .sub {
+  font-size: 13px;
+  color: var(--label-3, #86868b);
+  margin-top: 2px;
+}
+.hdr-meta {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--label-2, #515154);
+}
+.hdr-meta a {
+  color: var(--blue, #0071e3);
   text-decoration: none;
-  color: inherit;
-  box-shadow: var(--card-shadow);
-  transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease);
-  cursor: pointer;
-  position: relative;
-  min-height: 240px;
-}
-.report-card:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 0 0 0.5px rgba(0, 0, 0, 0.06),
-    0 4px 10px rgba(0, 0, 0, 0.05),
-    0 16px 36px rgba(0, 0, 0, 0.06);
 }
 
-.card-num {
-  font-family: var(--font-mono);
-  font-size: 11.5px;
-  letter-spacing: 0.04em;
-  color: var(--label-3);
+/* ============ Stance ============ */
+.stance {
+  background: #fff;
+  border-radius: 14px;
+  padding: 36px 40px;
+  margin: 36px 0 var(--section-gap);
+  box-shadow: 0 0 0 0.5px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03);
+}
+.stance h2 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-.card-title {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--label);
-  margin: 0;
-  line-height: 1.2;
-  letter-spacing: -0.022em;
-}
-.card-thesis {
-  font-family: var(--font-text);
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: var(--label-2);
-  margin: 0;
-  flex: 1;
-  letter-spacing: -0.005em;
-}
-.card-meta {
-  font-family: var(--font-mono);
-  font-size: 11.5px;
-  color: var(--label-3);
-  letter-spacing: -0.005em;
-  padding-top: 12px;
-  border-top: 0.5px solid var(--hairline);
-}
-.card-cta {
-  font-family: var(--font-display);
-  font-size: 13.5px;
-  font-weight: 500;
-  letter-spacing: -0.005em;
-  color: var(--blue);
-}
-
-.context-block {
-  background: var(--surface);
-  border-radius: var(--r-lg);
-  padding: 24px 28px;
-  margin-bottom: 56px;
-  box-shadow: var(--card-shadow);
-  position: relative;
-  max-width: 920px;
-}
-.context-block::before {
-  content: "";
-  position: absolute;
-  top: 24px;
-  bottom: 24px;
-  left: 0;
-  width: 3px;
-  background: var(--orange);
-  border-radius: 0 2px 2px 0;
-}
-.context-block .label {
-  font-family: var(--font-display);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--orange);
-  margin-bottom: 10px;
-}
-.context-block .label::before { content: "● "; }
-.context-block .text {
-  font-family: var(--font-text);
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--label);
-  letter-spacing: -0.005em;
-}
-.context-block .text em { color: var(--label); font-style: italic; font-weight: 600; }
-
-.methodology-block {
-  background: var(--surface);
-  border-radius: var(--r-lg);
-  padding: 28px 32px;
-  margin-bottom: 48px;
-  box-shadow: var(--card-shadow);
-}
-.methodology-block h3 {
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--label);
+  color: var(--orange, #ff9500);
   margin: 0 0 16px;
+}
+.stance p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--label, #1d1d1f);
+  margin: 0 0 14px;
+  letter-spacing: -0.005em;
+}
+.stance p:last-child { margin-bottom: 0; }
+
+/* ============ Section heading ============ */
+.sec {
+  margin-bottom: var(--section-gap);
+}
+.sec-num {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 12px;
+  color: var(--label-3, #86868b);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.sec h2.sec-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+  color: var(--label, #1d1d1f);
+}
+.sec-sub {
+  font-size: 15px;
+  color: var(--label-2, #515154);
+  margin-bottom: 28px;
+  line-height: 1.55;
+}
+
+/* ============ Variable card ============ */
+.var-block {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 36px;
+  margin-bottom: 22px;
+  box-shadow: 0 0 0 0.5px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03);
+  border-left: 3px solid #5e8ab0;
+}
+.var-block.major { border-left-color: #ff3b30; }
+.var-block.minor { border-left-color: #ff9500; }
+.var-block.supply { border-left-color: #34c759; }
+.var-block h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 14px;
   letter-spacing: -0.015em;
 }
-.methodology-block ul {
-  margin: 0;
+.var-block h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 22px 0 8px;
+  color: var(--label, #1d1d1f);
+  letter-spacing: -0.005em;
+}
+.var-block p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--label, #1d1d1f);
+  margin: 0 0 12px;
+}
+.var-block p:last-child { margin-bottom: 0; }
+.var-block ul {
+  margin: 0 0 12px;
   padding-left: 22px;
   font-size: 14.5px;
   line-height: 1.7;
-  color: var(--label-2);
-  letter-spacing: -0.005em;
 }
-.methodology-block li { margin-bottom: 10px; }
-.methodology-block em { color: var(--label); font-style: italic; font-weight: 500; }
+.var-block li { margin-bottom: 6px; }
+.var-block a { color: var(--blue, #0071e3); text-decoration: none; }
+.var-block a:hover { text-decoration: underline; }
 
-@media (max-width: 880px) {
-  .report-grid { grid-template-columns: 1fr; }
-  .report-card { padding: 24px 22px; }
-  .card-title { font-size: 19px; }
+/* citation superscript */
+sup.cite { color: var(--blue, #0071e3); font-weight: 500; font-size: 11px; padding: 0 1px; }
+sup.cite a { color: inherit; text-decoration: none; }
+sup.cite a:hover { text-decoration: underline; }
+
+/* ============ Faction grid ============ */
+.faction-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+.faction-card {
+  background: rgba(0,0,0,0.02);
+  border-radius: 10px;
+  padding: 16px 18px;
+  border-left: 3px solid #5e8ab0;
+}
+.faction-card.paleo { border-left-color: #5856d6; }
+.faction-card.hawk { border-left-color: #ff3b30; }
+.faction-card.evangelical { border-left-color: #ff9500; }
+.faction-card.postliberal { border-left-color: #34c759; }
+.faction-card h5 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.faction-card p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--label-2, #515154);
+  margin: 0;
+}
+
+/* ============ Quadrant ============ */
+.quadrant-wrap {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 36px;
+  margin-bottom: 22px;
+  box-shadow: 0 0 0 0.5px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03);
+}
+.quadrant {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  grid-template-rows: 40px 1fr 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+.q-corner { grid-column: 1; grid-row: 1; }
+.q-col-head {
+  grid-row: 1;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--label-2, #515154);
+}
+.q-row-head {
+  grid-column: 1;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--label-2, #515154);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.q-cell {
+  background: rgba(0,0,0,0.02);
+  border-radius: 10px;
+  padding: 18px 20px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--label, #1d1d1f);
+}
+.q-cell.worst { background: rgba(255, 59, 48, 0.06); border-left: 3px solid #ff3b30; }
+.q-cell .q-label {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* ============ Worst case ============ */
+.worst-block {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 36px;
+  margin-bottom: 22px;
+  box-shadow: 0 0 0 0.5px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03);
+  border-left: 3px solid #ff3b30;
+}
+.worst-block h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+.worst-block h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 22px 0 12px;
+}
+.country-row {
+  border-top: 0.5px solid rgba(0,0,0,0.08);
+  padding: 14px 0 10px;
+}
+.country-row:first-of-type { border-top: none; }
+.country-row h5 {
+  font-size: 14.5px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--label, #1d1d1f);
+}
+.country-row p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--label-2, #515154);
+  margin: 0;
+}
+.worst-block p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+.worst-block ul {
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin: 0 0 12px;
+  padding-left: 22px;
+}
+
+/* ============ Observation table ============ */
+.obs-tier {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 0 0.5px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03);
+  border-left: 3px solid #5e8ab0;
+}
+.obs-tier.t1 { border-left-color: #ff3b30; }
+.obs-tier.t2 { border-left-color: #ff9500; }
+.obs-tier.t3 { border-left-color: #ffcc00; }
+.obs-tier.t4 { border-left-color: #5856d6; }
+.obs-tier h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+.obs-tier table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.obs-tier th, .obs-tier td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.06);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.obs-tier th {
+  font-weight: 600;
+  color: var(--label-3, #86868b);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============ Footer / sources ============ */
+.footer {
+  border-top: 0.5px solid rgba(0,0,0,0.1);
+  padding: 32px 0 60px;
+  font-size: 12.5px;
+  color: var(--label-3, #86868b);
+  line-height: 1.7;
+}
+.footer h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--label, #1d1d1f);
+  margin: 0 0 8px;
+}
+.footer a { color: var(--blue, #0071e3); text-decoration: none; }
+
+@media (max-width: 700px) {
+  .faction-grid { grid-template-columns: 1fr; }
+  .quadrant { grid-template-columns: 60px 1fr 1fr; }
+  .container { padding: 0 20px; }
 }
 </style>
 </head>
@@ -162,185 +340,381 @@
 <header class="hdr">
   <div class="hdr-inner">
     <div>
-      <h1 id="hdr-title">伊朗危机沙盘推演</h1>
-      <div class="sub" id="hdr-sub">Iran Crisis Sandbox · 哈梅内伊死后的连锁推演</div>
+      <h1>伊朗危机沙盘推演</h1>
+      <div class="sub">主要变量 · 次要变量 · 沙盘四象限 · 最坏情景 · 观察节点</div>
     </div>
     <nav class="hdr-meta">
-      <a href="/">主图</a>
-      <span>基线 2026-05-19</span>
-      <button id="lang-toggle" class="lang-toggle" title="Switch language">EN</button>
+      <a href="regime-scenarios/">政权情景 →</a>
+      <a href="supply-chain/">供应链 →</a>
+      <a href="maga-split/">MAGA 撕裂 →</a>
+      <span>基线 2026-05-24</span>
     </nav>
   </div>
 </header>
 
 <main class="container">
 
-  <div class="context-block">
-    <div class="label" data-i18n="hub.context.label">研究的事实基础</div>
-    <div class="text" data-i18n="hub.context.text">
-      哈梅内伊在 <em>2026 年 2 月 28 日「史诗愤怒」行动</em> 中被以色列斩首杀死。长子莫杰塔巴接位但缺乏什叶派宪法要求的"马尔贾"（最高宗教权威）资格，合法性悬而未决。同期：革命卫队 70% 弹道导弹发射架 + 92% 海军舰艇被摧毁、里亚尔从战前 1:42K 跌至 1:90K+、巴基斯坦斡旋两周条件性停火持续延期超过 5 周。三件事同时发生，是 1979 年以来从未有过的存量打击。
-    </div>
+<!-- ============ Stance ============ -->
+<section class="stance">
+  <h2>引言</h2>
+  <p>伊朗战争的走向，不仅可能影响伊朗政权本身的维系情况和中东其它国家的稳定，还有可能通过影响霍尔木兹海峡航道进一步波及全球油气和半导体供应链，将风险传导到更多脆弱国家。本沙盘推演拟先模拟战争的最坏情况，并由此倒推出这条传导路径上的主要观察节点。</p>
+  <p>我们初步认为，目前以色列、美国和伊朗的和平谈判很可能不会持续并取得成果，战争可能延续，并可能在全球范围内引发连锁反应。这一判断基于对 <strong>两个主要变量</strong>（伊朗政权脆弱、以色列战略目标未达成）和 <strong>两个次要变量</strong>（MAGA 分裂、中俄态度）的理解。</p>
+</section>
+
+<!-- ============ Section 1: 主要变量 ============ -->
+<section class="sec">
+  <div class="sec-num">SECTION 1 · 主要变量</div>
+  <h2 class="sec-title">决定方向的两个变量</h2>
+  <div class="sec-sub">这两个变量直接决定战争是否延续、海峡命运如何。</div>
+
+  <div class="var-block major">
+    <h3>1.1 伊朗政权仍十分脆弱</h3>
+
+    <h4>最高领袖宗教地位不稳</h4>
+    <p>1979 年伊斯兰革命后，鲁霍拉·霍梅尼（Ruhollah Khomeini）建立起一套神权政体。霍梅尼在伊朗的国家机器之外设计了一套神权控制体系——在总统、议会、定期选举和最高法院之上设立 <strong>"最高领袖"（Supreme Leader）</strong>一职，对国家进行监护，直接控制武装力量、司法、国家广播、革命卫队、对外宣战权力。</p>
+    <p>按照霍梅尼当时的设计，最高领袖本身应是神学权威——在什叶派中称 <strong>马尔贾（Marja' / Ayatollah al-Uzma，大阿亚图拉）</strong>，全球仅 5-7 人具备此资格。但霍梅尼去世后，继任的哈梅内伊只是中级阿亚图拉。1989 年通过宪法修正案去掉了"最高领袖必须是马尔贾"的要求<sup class="cite"><a href="https://en.wikipedia.org/wiki/1989_Iranian_constitutional_referendum" target="_blank">1</a></sup>，并通过阿亚图拉理事会（Assembly of Experts）"集体追认"哈梅内伊为马尔贾级，他才得以顺利接班。</p>
+    <p>哈梅内伊 2026-02-28 在以色列空袭中死后<sup class="cite"><a href="https://en.wikipedia.org/wiki/2026_Iranian_supreme_leader_election" target="_blank">2</a></sup>，他的次子莫杰塔巴（Mojtaba Khamenei）接班。但莫杰塔巴宗教身份更低——只是 Hojatoleslam（中级教士）级别<sup class="cite"><a href="https://en.wikipedia.org/wiki/Mojtaba_Khamenei" target="_blank">3</a></sup>。虽然他已被阿亚图拉理事会选为最高领袖，但什叶派现在世且地位最高的马尔贾是 <strong>伊拉克纳杰夫的西斯塔尼（Sistani）</strong>，他与哈梅内伊关系一直微妙，目前没有从宗教上背书莫杰塔巴接班。莫杰塔巴接任后 3 个月未公开露面<sup class="cite"><a href="https://www.cnn.com/2026/04/21/middleeast/iran-supreme-leader-intl" target="_blank">4</a></sup>，地位仍不稳固。</p>
+
+    <h4>革命卫队（IRGC）</h4>
+    <p>哈梅内伊当年因权威不足，扩充了 <strong>伊斯兰革命卫队（Islamic Revolutionary Guard Corps，IRGC）</strong> 来巩固自己的地位。IRGC 可以被理解为服从最高领袖指示的禁军，包含 5 个军种<sup class="cite"><a href="https://en.wikipedia.org/wiki/Islamic_Revolutionary_Guard_Corps" target="_blank">5</a></sup>：</p>
+    <ul>
+      <li>陆军（IRGC Ground Forces）</li>
+      <li>航空航天军（Aerospace Force）——同时管理空军和战略弹道导弹</li>
+      <li>海军（IRGC Navy）——独立于正规海军，专门负责波斯湾不对称作战</li>
+      <li>圣城旅（Quds Force）——海外特种行动部门，主管对外代理人战争（胡塞武装、真主党、哈马斯、伊拉克什叶派民兵）</li>
+      <li>Basij 民兵</li>
+    </ul>
+    <p>IRGC 还控制伊朗约 <strong>30-50% 的工业</strong>（旗下旗舰公司 Khatam al-Anbiya 主导建筑、能源服务、电信、汽车等领域）<sup class="cite"><a href="https://en.wikipedia.org/wiki/Economic_activities_of_the_Iranian_Revolutionary_Guard_Corps" target="_blank">6</a></sup>以及国家媒体的一部分。</p>
+    <p>哈梅内伊死后 IRGC 的反应将左右国家未来。当前实际权力结构：<strong>莫杰塔巴名义</strong>、<strong>新任 IRGC 总司令 Ahmad Vahidi</strong>（2026-03-01 紧急上任，前任 Pakpour 与哈梅内伊同日被杀<sup class="cite"><a href="https://en.wikipedia.org/wiki/Mohammad_Pakpour" target="_blank">7</a></sup>）主导决策。Vahidi 是 <strong>1988-1997 圣城旅首任司令</strong><sup class="cite"><a href="https://en.wikipedia.org/wiki/Ahmad_Vahidi" target="_blank">8</a></sup>，圣城旅现任司令 Qaani 是他的"旧部"，所以 IRGC 总部和圣城旅当前是同源协作而非对抗关系。如果这套结构出现内部分裂，伊朗有很大概率陷入分裂并走向内战。</p>
+
+    <h4>民族矛盾</h4>
+    <p>伊朗的主体民族是波斯人，约占伊朗人口 61%。其他 39% 分布如下<sup class="cite"><a href="https://en.wikipedia.org/wiki/Ethnicities_in_Iran" target="_blank">9</a></sup>：</p>
+    <ul>
+      <li><strong>阿塞拜疆人 16%</strong>——主要在伊朗西北，跟北边阿塞拜疆共和国是同族，多数什叶派</li>
+      <li><strong>库尔德人 10%</strong>——伊朗西部，跟伊拉克、土耳其、叙利亚的库尔德人同族，多数逊尼派</li>
+      <li><strong>洛尔人（Lurs）6%</strong>——伊朗西部山区</li>
+      <li><strong>阿拉伯人 2%</strong>——主要在伊朗西南胡齐斯坦省，多数逊尼派</li>
+      <li><strong>俾路支人 2%</strong>——伊朗东南，跟巴基斯坦、阿富汗的俾路支人同族，多数逊尼派</li>
+    </ul>
+    <p>这种民族结构让"伊朗瓦解"在理论上是可能的——如果中央权威崩溃，少数民族聚居区可能寻求独立或自治。</p>
+    <p>需要特别关注 <strong>胡齐斯坦（Khuzestan）</strong>——伊朗西南、紧邻伊拉克的省份。这里集中了伊朗 <strong>80% 的陆上石油储量（占伊朗总储量 57%）</strong><sup class="cite"><a href="https://en.wikipedia.org/wiki/Khuzestan_province" target="_blank">10</a></sup>。胡齐斯坦的人口主要是阿拉伯族裔，2019 年汽油涨价抗议和 2021 年水危机抗议<sup class="cite"><a href="https://en.wikipedia.org/wiki/2021_Khuzestan_protests" target="_blank">11</a></sup>都是这一带的事件。如果伊朗中央权威崩溃，胡齐斯坦是最可能脱离控制的地区——而它一旦失控，伊朗的石油经济立刻崩溃。</p>
   </div>
 
-  <p class="hub-intro" data-i18n="hub.intro">
-    本沙盘从四个互锁视角推演伊朗危机的连锁后果：<em>美国大选传导链</em>（霍尔木兹冲击如何转化为 2026 中期 + 2028 总统大选）、<em>伊朗政权情景</em>（哈梅内伊死后政权的四种走向 + 关键观察节点）、<em>MAGA 分裂派系</em>（伊朗战争如何撕裂 Trump 阵营内部）、<em>全球供应链传导</em>（霍尔木兹封锁的五条链冲击 + 国家政治脆弱性矩阵）。四份报告各有独立分析，但共享同一基线事实和观察节点框架。
-  </p>
-
-  <section>
-    <h2 class="block-title" data-i18n="hub.reports.title">四份分析报告</h2>
-
-    <div class="report-grid">
-
-      <!-- 1. Election -->
-      <a href="/election/" class="report-card">
-        <div class="card-num">01 · US POLITICS</div>
-        <h3 class="card-title" data-i18n="hub.card.election.title">霍尔木兹冲击 → 美国大选追踪盘</h3>
-        <p class="card-thesis" data-i18n="hub.card.election.thesis">
-          2026 中期 + 2028 总统 · 5 种情形 · 油价 → 通胀 → 选票 9 步传导链 · 美国地图 · 1980/2008 历史对照
-        </p>
-        <div class="card-meta" data-i18n="hub.card.election.meta">9 个传导观测点 · 5 种情形推演 · 双语界面</div>
-        <div class="card-cta" data-i18n="hub.card.election.cta">打开传导链 →</div>
-      </a>
-
-      <!-- 2. Iran regime -->
-      <a href="/iran-war/regime-scenarios/" class="report-card">
-        <div class="card-num">02 · IRAN REGIME</div>
-        <h3 class="card-title" data-i18n="hub.card.regime.title">伊朗政权情景前瞻</h3>
-        <p class="card-thesis" data-i18n="hub.card.regime.thesis">
-          维持 40-45% / 军政府化 15-20% / 缓慢崩塌 12-15% / 瓦解加内战 8-12% · 因果链交互图 · 关键变量：西斯塔尼
-        </p>
-        <div class="card-meta" data-i18n="hub.card.regime.meta">33 个 box 详细分析 · 10 个观察节点 · 双语界面</div>
-        <div class="card-cta" data-i18n="hub.card.regime.cta">打开情景推演 →</div>
-      </a>
-
-      <!-- 3. MAGA split -->
-      <a href="/iran-war/maga-split/" class="report-card">
-        <div class="card-num">03 · MAGA SPLIT</div>
-        <h3 class="card-title" data-i18n="hub.card.maga.title">MAGA 分裂的派系结构</h3>
-        <p class="card-thesis" data-i18n="hub.card.maga.thesis">
-          介入主义 × 收缩主义 × 建制 × 反建制 四派定位 · 2025-06 Carlson vs Shapiro 公开对撕到 2026-03 CPAC 全面分裂的时间线
-        </p>
-        <div class="card-meta" data-i18n="hub.card.maga.meta">4 派系定位 · 关键时间线 · 6 个观察节点 · 双语界面</div>
-        <div class="card-cta" data-i18n="hub.card.maga.cta">打开派系分析 →</div>
-      </a>
-
-      <!-- 4. Supply chain -->
-      <a href="/iran-war/supply-chain/" class="report-card">
-        <div class="card-num">04 · SUPPLY CHAIN</div>
-        <h3 class="card-title" data-i18n="hub.card.supply.title">全球供应链传导</h3>
-        <p class="card-thesis" data-i18n="hub.card.supply.thesis">
-          五条链（油气 / 海运保险 / 国防 / 半导体 / 金融）+ 4 种霍尔木兹操作模式 + 最坏情景 5 阶段时间线 + 7 国政治脆弱性矩阵（含日本加速转向）
-        </p>
-        <div class="card-meta" data-i18n="hub.card.supply.meta">5 条链 + 跨链反馈 · 7 国脆弱性 + 4 国际冲突焦点 · 双语界面</div>
-        <div class="card-cta" data-i18n="hub.card.supply.cta">打开供应链推演 →</div>
-      </a>
-
-    </div>
-  </section>
-
-  <div class="methodology-block">
-    <h3 data-i18n="hub.methodology.title">方法论说明</h3>
+  <div class="var-block major">
+    <h3>1.2 以色列战略目标尚未达成</h3>
+    <p>自 1948 年以来，先后爆发过五次中东战争。其中除第一次（1948）和第四次（1973 赎罪日）是以色列被动应战以外，其它三次（1956 苏伊士、1967 六日、1982 黎巴嫩）都是以色列主动出击，且每次都取得一定战果（多次击败埃及，瓦解约旦、叙利亚和黎巴嫩支持巴勒斯坦的力量；埃及和约旦在美国斡旋下事实上不再成为以色列的军事对手）。</p>
+    <p>如果把 2023 年哈马斯袭击以色列到现在的伊朗战争看作 <strong>第六次中东战争</strong>，那么站在以色列的立场上，这场战争的最终战略目标应该是：</p>
     <ul>
-      <li data-i18n="hub.methodology.1"><em>不预测，给观察节点。</em>每份报告下都有 falsifiable 观察事件——事件触发时手动更新数据文件，看板重新渲染。</li>
-      <li data-i18n="hub.methodology.2"><em>概率手动维护。</em>当前版本不做"观察节点触发 → 自动重算概率"——这层假精确性比留白更危险。所有概率反映 2026-05-19 基线日的分析判断。</li>
-      <li data-i18n="hub.methodology.3"><em>所有结论引用一级和二级文献。</em>详情面板每个证据条目均带外部链接（智库报告、政府文件、同行评审论文）。无第一手来源的判断不写入看板。</li>
-      <li data-i18n="hub.methodology.4"><em>跨史对照只作类比启发。</em>1968/2003（MAGA 部分）、1991 苏联（伊朗政权部分）、1973 石油危机（供应链部分）、1980/2008（大选部分）—— 提供节点序列的形式参考，不作为因果根据。</li>
+      <li>确保伊朗不能获得核武器</li>
+      <li>确保伊朗丧失威胁以色列本土的能力（包括长程弹道导弹和战机等）</li>
+      <li>确保伊朗丧失发起代理人战争的能力（摧毁"抵抗之弧"——胡塞武装、真主党、哈马斯、伊拉克什叶派民兵）</li>
+    </ul>
+    <p>目前伊朗方面提出的和平谈判条件离以色列战略目标相去甚远。当然，参考前三次中东战争，以色列未必能毕其功于一役。但目前以色列有一个相当充足的动机：他们评估 <strong>特朗普总统将是未来一段时间对以色列最为亲善的美国总统</strong>，趁特朗普在任期间彻底将伊朗无害化的动机非常强烈。</p>
+    <p>但是，以色列必须考虑特朗普的政治利益，尤其是中期选举。背后原因很直接：以军高度依赖美国的武器供应，尤其是萨德和爱国者防空导弹，但美国目前武器库已经遭受大量消耗——PAC-3 / THAAD / Patriot 三种反导拦截弹的战前总库存被消耗 <strong>45-50%</strong><sup class="cite"><a href="https://www.csis.org/analysis/empty-bins-wartime-environment" target="_blank">12</a></sup>，无法同时兼顾俄乌战场和中东，更无法维持在台海的威慑。在霍尔木兹海峡封锁影响全球通胀的背景下，特朗普可能担心中期选举选情而暂时冻结战争。</p>
+    <p>然而，<strong>中期选举（2026-11-03）结束后</strong>，我们认为以色列有相当强的动机再度发起攻击——例如对莫杰塔巴或革命卫队的领导人再度发起斩首行动。摆脱了选民压力的特朗普很可能再度支持以色列的行动。综合评估，以色列在 2026-11 至 2028-01 的 lame duck 窗口内实施某种形式单方面升级的概率为 <strong>50-65%</strong>。</p>
+  </div>
+</section>
+
+<!-- ============ Section 2: 次要变量 ============ -->
+<section class="sec">
+  <div class="sec-num">SECTION 2 · 次要变量</div>
+  <h2 class="sec-title">影响节奏的两个变量</h2>
+  <div class="sec-sub">这两个变量虽然也对伊朗战争走向有较大影响，但不如主要变量决定性。</div>
+
+  <div class="var-block minor">
+    <h3>2.1 MAGA 的分裂</h3>
+    <p>MAGA 是当下共和党的主体，他们团结在特朗普周围，但内部对伊朗战争存在四种立场。如果这四种立场裂痕进一步扩大，可能影响特朗普对以色列的支持态度：</p>
+    <div class="faction-grid">
+      <div class="faction-card paleo">
+        <h5>孤立主义</h5>
+        <p>反对美国介入任何海外战争。代表：班农、塔克·卡尔森、托马斯·马西。特朗普发动战争后这一派非常失望——卡尔森公开批评特朗普和鲁比奥，马西提案将美国以色列公共事务委员会（AIPAC）列为外国代理人。</p>
+      </div>
+      <div class="faction-card hawk">
+        <h5>务实强硬派</h5>
+        <p>支持美国从现实利益出发打击伊朗政权。代表：海格塞斯、鲁比奥、斯蒂芬·米勒。这一派支持特朗普第一任期退出伊朗核协议并斩首苏莱曼尼。</p>
+      </div>
+      <div class="faction-card evangelical">
+        <h5>福音派锡安主义</h5>
+        <p>从神学上支持以色列。代表：迈克·约翰逊、林赛·格雷厄姆。基督教锡安主义把以色列视为圣经预言的核心，神学义务高于政策考虑。</p>
+      </div>
+      <div class="faction-card postliberal">
+        <h5>中立派</h5>
+        <p>在伊朗问题上有保留，整体希望美国将更多资源用于本土。这一派主要围绕在 J.D. 万斯周围。万斯 2024 大选时反对新战争，现在作为副总统被迫公开支持战争。</p>
+      </div>
+    </div>
+    <p style="margin-top: 20px;">目前 MAGA 内部分裂程度的主要观测点是 <strong>万斯的态度</strong>——孤立主义和中立派都把万斯看作最重要的代表者。但我们判断这对伊朗战争和海峡命运的影响较小，原因：<strong>如果 MAGA 保持团结，特朗普继续坚定支持以色列概率很大；如果 MAGA 分裂，美国反而可能失去约束以色列的能力</strong>。因此不论出现何种情形，以色列都有较大可能继续采取强硬举措。</p>
+  </div>
+
+  <div class="var-block minor">
+    <h3>2.2 中俄的态度</h3>
+    <p>在霍尔木兹海峡上，中国和俄罗斯都有支持伊朗政权的理由——如果伊朗能持续消耗美国军力，可以减轻两国的地缘政治承压。但两国动机的强烈程度不同。</p>
+
+    <h4>中国：受限于海峡通畅性的双重诉求</h4>
+    <p>中国与伊朗的经济合作动机强烈——2021 年签署的 25 年综合合作协议中，中方承诺投资约 4000 亿美元换伊朗折扣价石油；当前中国 13% 的石油进口来自伊朗。但 <strong>中国从根本上希望的是霍尔木兹海峡畅通——中国约 40% 的原油进口经此海峡</strong><sup class="cite"><a href="https://www.vortexa.com/insights/chinas-crude-import-stress-resistance" target="_blank">13</a></sup>。</p>
+    <p>问题在于：中国对伊朗的持续军事支持反倒不一定能保证海峡畅通，反倒可能升级冲突并引发海峡长期封闭。<strong>因为伊朗在报复行动中也袭击了沙特、卡塔尔、阿联酋的炼化中心和军事基地（如 2026-03-18 Ras Laffan 事件）</strong>。这三国中，沙特有油气管道连接到红海（东西管线 5 mb/d 设计容量<sup class="cite"><a href="https://www.cnbc.com/2026/03/12/strait-of-hormuz-oil-pipelines-iran-war-saudi-arabia-uae.html" target="_blank">14</a></sup>），但卡塔尔和阿联酋的能源出口几乎完全依赖霍尔木兹。如果伊朗军事实力增强并与卡塔尔和阿联酋发生冲突，那也有可能导致霍尔木兹海峡封闭。</p>
+    <p>因此 <strong>中国可能通过更多的经济支持来避免伊朗现政权垮台，但没有强烈动机投入太多军事支持</strong>。</p>
+
+    <h4>俄罗斯：受限于乌克兰战场的有心无力</h4>
+    <p>俄罗斯与伊朗之间长期存在军事和情报合作。2022 年俄乌战争以来俄方依赖伊朗 Shahed-136 自杀式无人机（累计交付超 8000 架），2025-01 双方在莫斯科签《全面战略伙伴关系条约》。</p>
+    <p>但俄罗斯对伊朗的支持力度取决于乌克兰战场的进度。<strong>目前俄乌战争陷入胶着</strong>，而俄罗斯经济虽然没有恶化到危及政权存续的地步，但已经退化为传统的军工制造业，无力进一步投资先进科技产业。在这种情况下，俄罗斯就算想支持伊朗，很可能也在很大程度上有心无力。</p>
+  </div>
+</section>
+
+<!-- ============ Section 3: 霍尔木兹与供应链 ============ -->
+<section class="sec">
+  <div class="sec-num">SECTION 3 · 传导链条</div>
+  <h2 class="sec-title">霍尔木兹海峡与全球供应链</h2>
+  <div class="sec-sub">伊朗战争主要影响伊朗政权存续和中东地缘，但霍尔木兹海峡的关闭却对全球供应链有严重影响。可能存在"政权维系但海峡关闭"（伊朗与卡塔尔/阿联酋冲突）或"政权垮台但海峡开放"（美军有效护航）的情形。</div>
+
+  <div class="var-block supply">
+    <h3>3.1 油气供应链</h3>
+    <p>全球约 30% 的海运石油和 20% 的液化天然气（LNG）经霍尔木兹海峡运输<sup class="cite"><a href="https://www.eia.gov/todayinenergy/detail.php?id=65504" target="_blank">15</a></sup>。中国是世界上对霍尔木兹依赖最深的国家——约 40% 的原油进口经此海峡。要绕开霍尔木兹，唯一办法是在陆地上铺设输油管道，把海湾国家的石油直接送到红海或阿曼湾出口。</p>
+    <p>目前真正存在的"绕开管道"只有两条：</p>
+    <ul>
+      <li><strong>沙特东西海岸管道</strong>：从波斯湾的 Abqaiq 油田到红海的 Yanbu 港，<strong>5 mb/d 设计容量</strong>（但满载工作时间有限）</li>
+      <li><strong>阿联酋 Habshan-Fujairah 管道（ADCOP）</strong>：从 Habshan 油田到阿曼湾 Fujairah 港，<strong>1.5-1.8 mb/d 设计容量</strong></li>
+    </ul>
+    <p>两条管道合计设计容量约 6.8 mb/d，<strong>但实际可立即调用的紧急绕行容量约 2.6 mb/d</strong>（管道平时不满载，需要逐步加压）。而霍尔木兹海峡战前每天通过的石油是 <strong>20.5 mb/d</strong>。绕行容量是海峡流量的约 1/8。</p>
+    <p>比石油更严重的是 LNG。LNG 必须用专门的 LNG 船运输，<strong>不能用普通管道远距离跨海洋运输</strong>。卡塔尔是全球最大的 LNG 出口国之一（与澳大利亚、美国并列三大），而 <strong>卡塔尔的 LNG 出口 100% 经过霍尔木兹海峡，没有任何陆路替代</strong>。</p>
+  </div>
+
+  <div class="var-block supply">
+    <h3>3.2 半导体供应链</h3>
+    <p>伊朗战争除了打击全球油气供应链外，还会通过三条路径影响全球半导体供应链：</p>
+
+    <h4>以色列的半导体生产和设计</h4>
+    <p>南部的 <strong>Kiryat Gat 是英特尔（Intel）的 18A fab</strong>，北部的 <strong>Yokneam 是英伟达（NVIDIA）的研发中心</strong>（负责数据中心 GPU 的网络芯片设计）<sup class="cite"><a href="https://www.timesofisrael.com/intel-clinches-3-2b-government-grant-for-25b-chip-plant-expansion-in-southern-israel/" target="_blank">16</a></sup>。北部的 <strong>Migdal HaEmek 有 Tower Semiconductor 的晶圆厂、Camtek 测试设备厂、Nova Measuring 量测设备厂</strong>——半导体行业的"配套生态"。</p>
+    <p>这些半导体工厂都在伊朗弹道导弹的有效射程内。此外，fab 这个东西对环境极度敏感——洁净室对震动、电压、温度都有严格要求。附近爆炸（即使没直接命中工厂）可能让光刻机失准、让在产芯片报废、让生产停滞数周。</p>
+
+    <h4>台积电的液化天然气</h4>
+    <p>半导体生产对电力的稳定性要求极高——电压闪烁千分之一秒就可能让在产芯片整批报废。台积电关键厂区使用专用的稳定电源，而台湾本身不产天然气，<strong>超过 96% 的能源依赖进口</strong>，LNG 占发电量约一半，其中 <strong>33.7% 来自卡塔尔</strong><sup class="cite"><a href="https://whitehsu.blog/2026/03/12/taiwan-semiconductor-supply-chain-energy-risk/" target="_blank">17</a></sup>。<strong>台湾全岛 LNG 储备只够 11 天</strong>——一旦霍尔木兹海峡封闭，台湾的发电稳定性立刻面临风险。</p>
+
+    <h4>半导体生产的特种气体</h4>
+    <p>半导体生产除了需要硅片和电力，还需要多种"特种气体"——氖（neon）、氪（krypton）、氙（xenon）、三氟化氮（NF3）、氟（F2）等，用于光刻、刻蚀、清洗等关键工艺。每生产一片晶圆都需要消耗几种特种气体。</p>
+    <p>此前氖气全球约 70% 来自乌克兰 + 俄罗斯（这俩都是钢铁工业大国，氖是钢铁冶炼的副产品），但 2022 年俄乌战争后乌克兰氖气产能基本停滞。除俄乌以外，海湾国家和中国也是特种气体供应商。<strong>如果伊朗战争导致霍尔木兹海峡持续封锁，中国占特种气体的全球生产份额将从战前 25% 上升到 50% 以上</strong>。TSMC、三星、SK 海力士三家都在做"中国管制风险"压力测试，SK 海力士 2027 年产能预测已经下调 12%。</p>
+  </div>
+
+  <div class="var-block supply">
+    <h3>3.3 其它关键链条</h3>
+    <h4>食品安全</h4>
+    <p>化肥 90% 用天然气作原料。霍尔木兹海峡关闭 → LNG 价格暴涨 → 化肥价格暴涨 → 全球粮食价格暴涨，传导链清晰且无可阻断。</p>
+
+    <h4>海运保险</h4>
+    <p>所有商船都需要保险。战争风险险（war risk insurance）平时几乎免费（保费占货值 0.02%），战时跳升到 0.5-1.5%。<strong>伦敦劳合社（Lloyd's of London，1688 年成立，全球航运保险的核心市场）已经把整个波斯湾列为"高风险水域"</strong>。私人保险市场可能撤退，迫使美国政府的国际开发金融公司（DFC）做"最后保险人"——已经联合 Chubb 等承保商投入 <strong>400 亿美元再保险设施</strong><sup class="cite"><a href="https://www.dfc.gov/media/press-releases/dfc-chubb-announce-additional-american-reinsurance-partners-and-40b-coverage" target="_blank">18</a></sup>。但截至 2026-05 这个设施尚未承保过一艘船——因为只覆盖美军护航船只，而护航编队规模有限。</p>
+  </div>
+</section>
+
+<!-- ============ Section 4: 沙盘推演 ============ -->
+<section class="sec">
+  <div class="sec-num">SECTION 4 · 沙盘推演</div>
+  <h2 class="sec-title">四象限可能性</h2>
+  <div class="sec-sub">综合伊朗政权的命运和霍尔木兹海峡的状况，我们可以得出这样四个象限。</div>
+
+  <div class="quadrant-wrap">
+    <div class="quadrant">
+      <div class="q-corner"></div>
+      <div class="q-col-head">政权存续</div>
+      <div class="q-col-head">政权崩溃</div>
+      <div class="q-row-head">海峡开放</div>
+      <div class="q-cell">
+        <span class="q-label">巴基斯坦斡旋有效</span>
+        伊朗接受部分去核 + 部分制裁解除，达成和平协议。以色列在选举前压力下接受现状。中俄维持战略观望。这是最佳情景但概率不高（约 15-20%）。
+      </div>
+      <div class="q-cell">
+        <span class="q-label">美军成功护航</span>
+        伊朗政权崩溃但美军成功攻占格什姆岛或拉拉克岛并实现对海峡的有效控制 + 全面护航。需要美军愿意承担印太预留消耗（约 25-30% 概率）。
+      </div>
+      <div class="q-row-head">海峡关闭</div>
+      <div class="q-cell">
+        <span class="q-label">伊朗封锁 + 美军反封锁</span>
+        伊朗政权幸存但用水雷封锁海峡并持续袭击油轮，还有可能再次袭击卡塔尔/阿联酋；美军则进行反封锁。冲突持续但有限度（约 30-35% 概率）。
+      </div>
+      <div class="q-cell worst">
+        <span class="q-label">⚠️ 最坏情景</span>
+        伊朗内战，革命卫队分裂成不同恐怖组织对海峡发动袭击，而美军放弃控制海峡并护航。约 3-5% 概率但破坏量级最大。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Section 5: 最坏情景 ============ -->
+<section class="sec">
+  <div class="sec-num">SECTION 5 · 最坏情景</div>
+  <h2 class="sec-title">两条最坏的可能性</h2>
+  <div class="sec-sub">概率不高但破坏量级最大，是沙盘推演的核心警示。</div>
+
+  <div class="worst-block">
+    <h3>最坏可能 1：伊朗政权崩溃 + 霍尔木兹海峡彻底关闭</h3>
+    <p>如果以色列升级攻击，伊朗现政权崩溃且陷入内战，内战进一步波及到周边的沙特、卡塔尔、阿联酋、科威特、伊拉克、埃及、阿塞拜疆、土耳其和阿富汗等地区，导致战乱进一步扩大，且霍尔木兹海峡遭到彻底关闭。地缘政治危机和供应链危机沿两条传导链条同时爆发。</p>
+
+    <h4>更乱的中东</h4>
+    <p>革命卫队分裂后，大量部队失去控制，与恐怖主义和极端宗教派别相结合，革命卫队武器流出到胡塞武装、巴勒斯坦解放组织、圣战军乃至其它机构，对以色列、伊拉克、叙利亚、黎巴嫩、沙特、卡塔尔、阿联酋等周边国家发动袭击。此外，革命卫队很可能跟伊朗各少数民族武装部队开战，引发的冲突可能波及阿塞拜疆、阿富汗、伊拉克和土耳其。</p>
+
+    <h4>因通胀危机陷入困境的国家</h4>
+
+    <div class="country-row">
+      <h5>巴基斯坦</h5>
+      <p>巴基斯坦 GDP 的 8% 来自海湾国家汇款，如果海湾国家陷入战争，巴基斯坦将损失大笔收入。此外，如果油价从 $70 跃至 $180-220，这将让 2024 年 IMF 与巴基斯坦签订的 EFF 项目无法持续。巴基斯坦会在 3 个月内耗尽外汇储备用于进口能源。这可能引发大规模街头抗议，导致军事政变，甚至造成国家分裂或与印度的全面战争。</p>
+    </div>
+
+    <div class="country-row">
+      <h5>埃及</h5>
+      <p>埃及有四大经济支柱：运河、旅游、侨汇、石油。第六次中东战争已经导致胡塞武装对红海的袭击，<strong>埃及苏伊士运河的收入已经下降到战前的一半</strong>。旅游业自 2024 年以来已因加沙战争下降 40%，地区全面冲突会让旅游业再降 60%。<strong>埃及 GDP 约有 7-8% 来自海湾国家汇款</strong>（主要是沙特和阿联酋）<sup class="cite"><a href="https://www.cbe.org.eg/en/news-publications/news/2026/02/23/11/17/remittances-from-egyptians-working-abroad-record-usd-41,-d-,5-billion-during-2025" target="_blank">19</a></sup>。最后，埃及 2022 年成为天然气净进口国后对霍尔木兹 LNG 严重依赖，油价 + LNG 价格会让燃料补贴体系（占财政支出 8%）无法承担。埃及可能再度爆发动荡，穆斯林兄弟会可能回归。</p>
+    </div>
+
+    <div class="country-row">
+      <h5>土耳其</h5>
+      <p>土耳其面临四大问题：(1) 能源进口依赖俄国、阿塞拜疆、伊拉克和伊朗；(2) 里拉已经在恶性贬值，通胀率达到 60% 以上；(3) 制造业出口依赖海湾国家 + 北非 + 欧洲；(4) 库尔德区域可能因为伊朗政权瓦解而动荡加剧。</p>
+    </div>
+
+    <div class="country-row">
+      <h5>南亚 + 东南亚</h5>
+      <p>斯里兰卡（2022 年）、孟加拉国（2024 年）和印尼（2025 年）刚遭遇国内政治动荡，缅甸则持续内战中，通胀会进一步恶化这些国家的处境。印度本身有大量贫困人口，可能因为通胀和化肥危机遭遇困难。<strong>菲律宾高度依赖海湾国家的侨汇，且石油高度依赖中东进口，是东南亚国家中因霍尔木兹海峡关闭遭遇最大危机的一个</strong>。泰国自身处在威权化过程中，预计将遭遇严重衰退和政治动荡。马来西亚自身出产石油，承压较小。</p>
+    </div>
+
+    <div class="country-row">
+      <h5>非洲国家</h5>
+      <p>非洲对霍尔木兹海峡依赖程度最高的国家是 <strong>埃塞俄比亚、肯尼亚、苏丹、马达加斯加、毛里求斯、塞舌尔和南非</strong>，其中南非的韧性最强。北非和西非主要依赖大西洋盆地油气，不是 Hormuz 直接受害者。但非洲本身已经因为恐怖主义、分裂运动和俄乌战争波及爆发了多轮政权更迭，全球通胀和欧洲经济危机将恶化这些国家的处境。</p>
+    </div>
+
+    <div class="country-row">
+      <h5>欧洲国家</h5>
+      <p>欧洲本身能源高度依赖俄国和中东进口。一旦霍尔木兹海峡遭到长期封锁，欧洲将迎来更漫长的经济寒冬，这有可能导致欧洲国家的政权持续极端化，欧洲经济和政治会呈现拉美化特征。</p>
+    </div>
+
+    <div class="country-row">
+      <h5>日本</h5>
+      <p>日本是发达国家，但能源高度依赖中东。一旦霍尔木兹海峡出现危机，日本不会面临政治崩溃，但可能面临二战以来最大的政治转向：<strong>日本将全面右转并在五年内实现快速武装化</strong>。</p>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 13.5px; color: var(--label-2, #515154);">必须强调，出现这种最坏情形的可能性非常小，因为前提是以色列全面升级战争，且美军决定不再护航霍尔木兹海峡。但这是海湾三国（沙特、卡塔尔、阿联酋）最恐惧的情形——沙特已经要求美国在升级任何战争举措前必须知会沙特，而卡塔尔和阿联酋则强烈要求，如果以色列升级战事，美军必须增强对海峡的控制和护航。因此，<strong>以色列升级战事和美军放弃对海峡护航，两者很难同时存在</strong>。</p>
+  </div>
+
+  <div class="worst-block">
+    <h3>最坏可能 2：美军精力被牵制 + 台海战争爆发</h3>
+    <p>美国对以色列的弹药支援消耗了 <strong>PrSM（精确打击导弹）库存的 45%</strong>、<strong>THAAD 拦截弹的 50%</strong>、<strong>"爱国者"拦截弹的 50%</strong>。这将导致美国对台湾、日本、韩国的 PAC-3 / THAAD 交付被推迟 18-36 个月。这可能导致中国在台海发动战争的可能性上升。一旦这种情形发生且不能马上结束并恢复秩序的话，全球半导体供应链将完全被中断，全球 GDP 损失在 10% 以上，科技进步的引擎将熄灭，日本必须介入，这将与中东战争叠加，导致二战以来最为毁灭性的局面爆发。</p>
+    <p>但是，发生这种情形的概率比第一种还要小。原因如下：</p>
+    <ul>
+      <li>美国军工产业的产能正在迅速扩张，国防生产法（Defense Production Act）正在令美国制造业进入准战时状态</li>
+      <li>中国军队高层刚刚进行调整，指挥链重建需要时间</li>
+      <li>中国经济正在承受房地产下行周期的压力，北京有大量内部问题要解决</li>
+      <li>北京依然相信"东升西降"叙事，没有充分的理由进行地缘政治冒险</li>
+      <li>日本再军事化的速度比预期要快，可能在北京重建指挥链之前建立起威慑能力</li>
     </ul>
   </div>
+</section>
 
-  <footer class="footer" data-i18n="hub.footer">
-    数据基线 2026-05-19 · 主要文献：UK Commons CBP-10637 · FPRI Golkar 2025-10 · Chatham House Quilliam 2026-05 · INSS Guzansky 2026-02 · RAND Cohen 2026-04 · FDD Dubowitz 2025-12 · CFR Setser 2026-04 · Atlantic Council 2026-03 · Hanna Notte Foreign Affairs 2026-05 · IAEA 5 份 Iran safeguards 报告
-  </footer>
+<!-- ============ Section 6: 观察节点 ============ -->
+<section class="sec">
+  <div class="sec-num">SECTION 6 · 观察节点</div>
+  <h2 class="sec-title">关键观察清单</h2>
+  <div class="sec-sub">按重要性分四档。每个节点都附触发阈值——一旦触发就意味着情景实质变化。建议一档二档每月 review 一次，三档每周看一次，四档突发监控。</div>
+
+  <div class="obs-tier t1">
+    <h4>一档 · 决定整个战争走向（伊朗政权 + 以色列战略）</h4>
+    <table>
+      <thead>
+        <tr><th>观察节点</th><th>触发阈值</th><th>含义</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mojtaba 公开露面</td><td>超过 90 天仍未露面 / 突然密集露面</td><td>前者意味"IRGC 在隐瞒死亡或植物状态"；后者意味"权威修复尝试"</td></tr>
+        <tr><td>Sistani 公开发声</td><td>任何形式的公开声明</td><td>Sistani 打破沉默会动摇整个 IRGC + Mojtaba 框架的合法性根基</td></tr>
+        <tr><td>Vahidi 与 Qaani 公开同框</td><td>联合公开露面 vs 分别露面</td><td>同源圣城旅系是否仍紧密结盟</td></tr>
+        <tr><td>Pezeshkian 国际露面</td><td>出现在 G20、UN 等国际场合</td><td>Vahidi 圈层把他推到前台做谈判台面人物——经济压力到了临界点</td></tr>
+        <tr><td>胡齐斯坦再现抗议</td><td>任何大规模阿拉伯族裔抗议</td><td>直接威胁伊朗 80% 油田生产</td></tr>
+        <tr><td>Knesset 选举结果</td><td>2026-10-27 投票当晚</td><td>决定后 4 年以色列对伊政策方向</td></tr>
+        <tr><td>Smotrich 党门槛</td><td>跌破 3.25% 出局 / 联盟通过降低门槛立法</td><td>前者极端派失内阁席位；后者 Netanyahu 强行保住极端派</td></tr>
+        <tr><td>Mossad 大规模暗杀波</td><td>一周内 5+ 名 IRGC 高层被杀</td><td>路径 A/B 启动</td></tr>
+        <tr><td>以色列再次空袭伊朗本土</td><td>任何越境空袭</td><td>升级阶段确认</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="obs-tier t2">
+    <h4>二档 · 决定路径选择（MAGA + 中俄）</h4>
+    <table>
+      <thead>
+        <tr><th>观察节点</th><th>触发阈值</th><th>含义</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>美国中期选举</td><td>2026-11-03 当晚</td><td>Trump 是否进入 lame duck</td></tr>
+        <tr><td>Trump 伊战支持率</td><td>跌破 35% / 回升至 50%</td><td>国内政治压力调整窗口</td></tr>
+        <tr><td>Vance-Rubio 公开冲突</td><td>任何政策分歧的公开表态</td><td>MAGA 内部裂痕加深</td></tr>
+        <tr><td>B-2 出动拆 Fordow</td><td>卸任前 30 天的飞行准备信号</td><td>Trump 战略遗产决策最后一搏</td></tr>
+        <tr><td>乌克兰停火</td><td>任何形式的临时停火协议</td><td>俄罗斯抽身后可能加深对伊援助</td></tr>
+        <tr><td>中国 J-10C 交付伊朗</td><td>公开确认任何战机到货</td><td>全球能源市场震动信号</td></tr>
+        <tr><td>mBridge 结算量披露</td><td>公开数据显示年化超 1000 亿美元</td><td>去美元化叙事质变</td></tr>
+        <tr><td>俄军事顾问公开赴伊</td><td>任何形式的官方声明</td><td>美俄直接对抗风险上升</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="obs-tier t3">
+    <h4>三档 · 决定供应链冲击程度（海湾 + 市场）</h4>
+    <table>
+      <thead>
+        <tr><th>观察节点</th><th>触发阈值</th><th>含义</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Ras Laffan 类事件再发生</td><td>任何 GCC 能源设施被伊朗直接攻击</td><td>海湾三国"条件性削弱伊朗" → "条件性反对升级"切换</td></tr>
+        <tr><td>MBS 公开会晤 Netanyahu</td><td>任何形式的公开会面 / 联合声明</td><td>海湾-以色列正式联盟形成</td></tr>
+        <tr><td>沙特停止配合美军护航</td><td>拒绝船只过境/补给</td><td>海湾"条件性对齐"破裂</td></tr>
+        <tr><td>Hormuz 实际通过流量</td><td>EIA 月报跌破 1 mb/d 持续 2 个月</td><td>全球能源危机模式</td></tr>
+        <tr><td>Brent 油价</td><td>突破 $180 / $200 / $250 三档</td><td>每档对应不同传导链条激活</td></tr>
+        <tr><td>Lloyd's 战争险溢价</td><td>突破船价 20%</td><td>独立船东全面撤离</td></tr>
+        <tr><td>VLCC 被击沉</td><td>任何一艘</td><td>保险跳档 + 独立船东恐慌</td></tr>
+        <tr><td>美军驱逐舰被击伤</td><td>任何反舰导弹命中</td><td>"印太 vs 中东"二选一加速</td></tr>
+        <tr><td>DFC 再保险首次启动</td><td>第一笔实际承保</td><td>美国政府正式承担"最后保险人"角色</td></tr>
+        <tr><td>TSMC LNG 库存吃紧</td><td>台湾整体 LNG 库存 &lt; 7 天</td><td>全球高端半导体生产风险显性化</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="obs-tier t4">
+    <h4>四档 · 极端尾部风险（Wildcard）</h4>
+    <table>
+      <thead>
+        <tr><th>事件</th><th>触发条件</th><th>后果</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>伊朗核试爆</td><td>任何地下试验确认</td><td>整个游戏规则重写</td></tr>
+        <tr><td>Hormuz 发现伊朗布雷</td><td>卫星 / 海军确认</td><td>立刻进入最坏路径</td></tr>
+        <tr><td>Vahidi-Qaani 反目</td><td>一方公开声明指控另一方</td><td>伊朗内战概率跳升</td></tr>
+        <tr><td>以色列使用大当量武器</td><td>任何 Smotrich 路径的极端动作</td><td>海湾国家全面转向 + 欧洲断武器</td></tr>
+        <tr><td>台海冲突激活</td><td>中国在印太采取实质行动</td><td>全球供应链彻底中断</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ Footer / Sources ============ -->
+<footer class="footer">
+  <h4>主要信源</h4>
+  <p>
+    [1] <a href="https://en.wikipedia.org/wiki/1989_Iranian_constitutional_referendum" target="_blank">1989 Iranian constitutional referendum</a> ·
+    [2] <a href="https://en.wikipedia.org/wiki/2026_Iranian_supreme_leader_election" target="_blank">2026 Iranian supreme leader election</a> ·
+    [3] <a href="https://en.wikipedia.org/wiki/Mojtaba_Khamenei" target="_blank">Mojtaba Khamenei</a> ·
+    [4] <a href="https://www.cnn.com/2026/04/21/middleeast/iran-supreme-leader-intl" target="_blank">Iran's new supreme leader is nowhere to be seen (CNN)</a> ·
+    [5] <a href="https://en.wikipedia.org/wiki/Islamic_Revolutionary_Guard_Corps" target="_blank">Islamic Revolutionary Guard Corps</a> ·
+    [6] <a href="https://en.wikipedia.org/wiki/Economic_activities_of_the_Iranian_Revolutionary_Guard_Corps" target="_blank">Economic activities of the IRGC</a> ·
+    [7] <a href="https://en.wikipedia.org/wiki/Mohammad_Pakpour" target="_blank">Mohammad Pakpour</a> ·
+    [8] <a href="https://en.wikipedia.org/wiki/Ahmad_Vahidi" target="_blank">Ahmad Vahidi</a> ·
+    [9] <a href="https://en.wikipedia.org/wiki/Ethnicities_in_Iran" target="_blank">Ethnicities in Iran</a> ·
+    [10] <a href="https://en.wikipedia.org/wiki/Khuzestan_province" target="_blank">Khuzestan province</a> ·
+    [11] <a href="https://en.wikipedia.org/wiki/2021_Khuzestan_protests" target="_blank">2021 Khuzestan protests</a> ·
+    [12] CSIS "Empty Bins in a Wartime Environment" report ·
+    [13] <a href="https://www.vortexa.com/insights/chinas-crude-import-stress-resistance" target="_blank">China's crude import stress resistance (Vortexa)</a> ·
+    [14] <a href="https://www.cnbc.com/2026/03/12/strait-of-hormuz-oil-pipelines-iran-war-saudi-arabia-uae.html" target="_blank">Two pipelines bypassing Hormuz (CNBC)</a> ·
+    [15] <a href="https://www.eia.gov/todayinenergy/detail.php?id=65504" target="_blank">EIA: Strait of Hormuz</a> ·
+    [16] <a href="https://www.timesofisrael.com/intel-clinches-3-2b-government-grant-for-25b-chip-plant-expansion-in-southern-israel/" target="_blank">Intel Kiryat Gat expansion</a> ·
+    [17] <a href="https://whitehsu.blog/2026/03/12/taiwan-semiconductor-supply-chain-energy-risk/" target="_blank">Taiwan semiconductor LNG dependency</a> ·
+    [18] <a href="https://www.dfc.gov/media/press-releases/dfc-chubb-announce-additional-american-reinsurance-partners-and-40b-coverage" target="_blank">DFC $40B reinsurance facility</a> ·
+    [19] <a href="https://www.cbe.org.eg/en/news-publications/news/2026/02/23/11/17/remittances-from-egyptians-working-abroad-record-usd-41,-d-,5-billion-during-2025" target="_blank">Egypt remittances 2025 (Central Bank of Egypt)</a>
+  </p>
+  <p style="margin-top: 16px;">数据基线 2026-05-24 · 沙盘推演为概率分析，非确定性预测 · 观察节点应根据新事件持续更新</p>
+</footer>
 
 </main>
-
-<script>
-// Simple bilingual support for the hub page
-const HUB_I18N = {
-  zh: {
-    'hdr-title': '伊朗危机沙盘推演',
-    'hdr-sub': 'Iran Crisis Sandbox · 哈梅内伊死后的连锁推演',
-    'hub.context.label': '研究的事实基础',
-    'hub.context.text': '哈梅内伊在 <em>2026 年 2 月 28 日「史诗愤怒」行动</em> 中被以色列斩首杀死。长子莫杰塔巴接位但缺乏什叶派宪法要求的"马尔贾"（最高宗教权威）资格，合法性悬而未决。同期：革命卫队 70% 弹道导弹发射架 + 92% 海军舰艇被摧毁、里亚尔从战前 1:42K 跌至 1:90K+、巴基斯坦斡旋两周条件性停火持续延期超过 5 周。三件事同时发生，是 1979 年以来从未有过的存量打击。',
-    'hub.intro': '本沙盘从四个互锁视角推演伊朗危机的连锁后果：<em>美国大选传导链</em>（霍尔木兹冲击如何转化为 2026 中期 + 2028 总统大选）、<em>伊朗政权情景</em>（哈梅内伊死后政权的四种走向 + 关键观察节点）、<em>MAGA 分裂派系</em>（伊朗战争如何撕裂 Trump 阵营内部）、<em>全球供应链传导</em>（霍尔木兹封锁的五条链冲击 + 国家政治脆弱性矩阵）。四份报告各有独立分析，但共享同一基线事实和观察节点框架。',
-    'hub.reports.title': '四份分析报告',
-    'hub.card.election.title': '霍尔木兹冲击 → 美国大选追踪盘',
-    'hub.card.election.thesis': '2026 中期 + 2028 总统 · 5 种情形 · 油价 → 通胀 → 选票 9 步传导链 · 美国地图 · 1980/2008 历史对照',
-    'hub.card.election.meta': '9 个传导观测点 · 5 种情形推演 · 双语界面',
-    'hub.card.election.cta': '打开传导链 →',
-    'hub.card.regime.title': '伊朗政权情景前瞻',
-    'hub.card.regime.thesis': '维持 40-45% / 军政府化 15-20% / 缓慢崩塌 12-15% / 瓦解加内战 8-12% · 因果链交互图 · 关键变量：西斯塔尼',
-    'hub.card.regime.meta': '33 个 box 详细分析 · 10 个观察节点 · 双语界面',
-    'hub.card.regime.cta': '打开情景推演 →',
-    'hub.card.maga.title': 'MAGA 分裂的派系结构',
-    'hub.card.maga.thesis': '介入主义 × 收缩主义 × 建制 × 反建制 四派定位 · 2025-06 Carlson vs Shapiro 公开对撕到 2026-03 CPAC 全面分裂的时间线',
-    'hub.card.maga.meta': '4 派系定位 · 关键时间线 · 6 个观察节点 · 双语界面',
-    'hub.card.maga.cta': '打开派系分析 →',
-    'hub.card.supply.title': '全球供应链传导',
-    'hub.card.supply.thesis': '五条链（油气 / 海运保险 / 国防 / 半导体 / 金融）+ 4 种霍尔木兹操作模式 + 最坏情景 5 阶段时间线 + 7 国政治脆弱性矩阵（含日本加速转向）',
-    'hub.card.supply.meta': '5 条链 + 跨链反馈 · 7 国脆弱性 + 4 国际冲突焦点 · 双语界面',
-    'hub.card.supply.cta': '打开供应链推演 →',
-    'hub.methodology.title': '方法论说明',
-    'hub.methodology.1': '<em>不预测，给观察节点。</em>每份报告下都有 falsifiable 观察事件——事件触发时手动更新数据文件，看板重新渲染。',
-    'hub.methodology.2': '<em>概率手动维护。</em>当前版本不做"观察节点触发 → 自动重算概率"——这层假精确性比留白更危险。所有概率反映 2026-05-19 基线日的分析判断。',
-    'hub.methodology.3': '<em>所有结论引用一级和二级文献。</em>详情面板每个证据条目均带外部链接（智库报告、政府文件、同行评审论文）。无第一手来源的判断不写入看板。',
-    'hub.methodology.4': '<em>跨史对照只作类比启发。</em>1968/2003（MAGA 部分）、1991 苏联（伊朗政权部分）、1973 石油危机（供应链部分）、1980/2008（大选部分）—— 提供节点序列的形式参考，不作为因果根据。',
-    'hub.footer': '数据基线 2026-05-19 · 主要文献：UK Commons CBP-10637 · FPRI Golkar 2025-10 · Chatham House Quilliam 2026-05 · INSS Guzansky 2026-02 · RAND Cohen 2026-04 · FDD Dubowitz 2025-12 · CFR Setser 2026-04 · Atlantic Council 2026-03 · Hanna Notte Foreign Affairs 2026-05 · IAEA 5 份 Iran safeguards 报告'
-  },
-  en: {
-    'hdr-title': 'Iran Crisis Sandbox',
-    'hdr-sub': 'Iran Crisis Sandbox · cascading consequences after Khamenei\'s death',
-    'hub.context.label': 'Factual baseline',
-    'hub.context.text': 'Khamenei was killed by an Israeli decapitation strike during <em>Operation Epic Fury on 28 February 2026</em>. His eldest son Mojtaba succeeded him but lacks the "Marja" (highest Shia religious authority) qualification required by the constitution — legitimacy unresolved. At the same time: 70% of IRGC ballistic missile launchers and 92% of naval vessels destroyed; the rial fell from a pre-war 1:42K to 1:90K+; the Pakistan-brokered two-week conditional ceasefire has been rolling-extended for over 5 weeks. These three shocks stacking simultaneously has never occurred since 1979.',
-    'hub.intro': 'This sandbox tracks the cascading consequences of the Iran crisis across four interlocking perspectives: <em>US election transmission</em> (how the Hormuz shock translates into 2026 midterms + 2028 presidential), <em>Iran regime paths</em> (the four post-Khamenei trajectories + key observation nodes), <em>MAGA factional split</em> (how the Iran war tears Trump\'s coalition), and <em>global supply chain transmission</em> (the five-chain shock from Hormuz closure + the political-fragility matrix across countries). Each report stands alone but shares the same factual baseline and observation-node framework.',
-    'hub.reports.title': 'Four analytical reports',
-    'hub.card.election.title': 'Hormuz shock → US election tracker',
-    'hub.card.election.thesis': '2026 midterms + 2028 presidential · 5 scenarios · oil → inflation → vote-share 9-step chain · US map · 1980/2008 historical comparison',
-    'hub.card.election.meta': '9 transmission checkpoints · 5 scenarios · bilingual UI',
-    'hub.card.election.cta': 'Open transmission chain →',
-    'hub.card.regime.title': 'Iran regime scenarios',
-    'hub.card.regime.thesis': 'Continuity 40-45% / Junta 15-20% / Slow collapse 12-15% / Disintegration + civil war 8-12% · interactive causal map · key variable: Sistani',
-    'hub.card.regime.meta': '33 boxes of detailed analysis · 10 observation nodes · bilingual UI',
-    'hub.card.regime.cta': 'Open scenarios →',
-    'hub.card.maga.title': 'MAGA factional split',
-    'hub.card.maga.thesis': 'Interventionist × restrainer × establishment × anti-establishment four-quadrant mapping · timeline from June 2025 Carlson vs Shapiro public split to March 2026 CPAC full schism',
-    'hub.card.maga.meta': '4 factions · key timeline · 6 observation nodes · bilingual UI',
-    'hub.card.maga.cta': 'Open factional analysis →',
-    'hub.card.supply.title': 'Global supply chain transmission',
-    'hub.card.supply.thesis': 'Five chains (oil & gas / maritime & insurance / defense / semiconductors / financial) + 4 Hormuz operational modes + 5-stage worst-case timeline + 7-country political fragility matrix (including Japan\'s accelerated pivot)',
-    'hub.card.supply.meta': '5 chains + cross-chain feedback · 7 countries + 4 international conflict focal points · bilingual UI',
-    'hub.card.supply.cta': 'Open supply chain →',
-    'hub.methodology.title': 'Methodology',
-    'hub.methodology.1': '<em>No predictions, only observation nodes.</em> Each report lists falsifiable observable events — when one triggers, edit the data file and redeploy.',
-    'hub.methodology.2': '<em>Probabilities are maintained manually.</em> Current version does not auto-recompute probabilities when nodes trigger — that pseudo-precision is more dangerous than leaving the seam visible. All probabilities reflect 2026-05-19 baseline judgment.',
-    'hub.methodology.3': '<em>All conclusions cite primary or secondary literature.</em> Every evidence item in the detail panel carries an external link (think-tank reports, government documents, peer-reviewed papers). Judgments without first-hand sourcing are not published.',
-    'hub.methodology.4': '<em>Cross-historical comparisons are heuristic only.</em> 1968/2003 (MAGA), 1991 Soviet (regime), 1973 oil crisis (supply chain), 1980/2008 (election) — these provide formal node-sequence references, not causal grounding.',
-    'hub.footer': 'Data baseline 2026-05-19 · Primary sources: UK Commons CBP-10637 · FPRI Golkar 2025-10 · Chatham House Quilliam 2026-05 · INSS Guzansky 2026-02 · RAND Cohen 2026-04 · FDD Dubowitz 2025-12 · CFR Setser 2026-04 · Atlantic Council 2026-03 · Hanna Notte Foreign Affairs 2026-05 · IAEA 5 Iran safeguards reports'
-  }
-};
-
-const lang = localStorage.getItem('iran-lang') || 'zh';
-function applyLang() {
-  const dict = HUB_I18N[lang];
-  document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
-  Object.entries(dict).forEach(([key, val]) => {
-    const el = key === 'hdr-title' ? document.getElementById('hdr-title')
-             : key === 'hdr-sub' ? document.getElementById('hdr-sub')
-             : document.querySelector(`[data-i18n="${key}"]`);
-    if (el) el.innerHTML = val;
-  });
-  const btn = document.getElementById('lang-toggle');
-  if (btn) btn.textContent = lang === 'zh' ? 'EN' : '中';
-}
-document.addEventListener('DOMContentLoaded', () => {
-  applyLang();
-  document.getElementById('lang-toggle').addEventListener('click', () => {
-    const newLang = lang === 'zh' ? 'en' : 'zh';
-    localStorage.setItem('iran-lang', newLang);
-    location.reload();
-  });
-});
-</script>
 
 </body>
 </html>
