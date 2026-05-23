@@ -25,7 +25,8 @@ jobs:
       - name: Install dependencies
         # osint-geo-extractor is required by the bellingcat source — without
         # it that source silently fails (logged as "geo_extractor not installed").
-        run: pip install requests geojson flask flask-cors websocket-client osint-geo-extractor
+        # numpy is needed by pipeline.processors.backtest (OLS via lstsq).
+        run: pip install requests geojson flask flask-cors websocket-client osint-geo-extractor numpy
 
       - name: Run data pipeline
         env:

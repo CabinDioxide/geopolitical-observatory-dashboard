@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-08T07:26:40.423631Z",
+  "computed_at": "2026-05-23T08:08:41.447438Z",
   "scenarios": [
     {
       "scenario": "A_easing",
@@ -12,12 +12,21 @@
         "brent_premium_vs_baseline": 7,
         "rally_2026_pp": 0.0,
         "rally_2028_pp": 0.0,
+        "tariff_decomposition": {
+          "tariff_rate_pct": 13.5,
+          "pre_2025_baseline_rate_pct": 2.5,
+          "tariff_cpi_pp_in_current_yoy": 1.1,
+          "tariff_shift_vs_baseline_pp": 0.0,
+          "note": "Tariff-attributable CPI elevation is already in current_cpi_yoy and is shown here for blame-attribution. Counterfactual 'no-tariff' CPI YoY would be lower by tariff_cpi_pp_in_current_yoy."
+        },
         "projected_2026_2028_macro": {
           "G_real_growth_pct": 1.74,
           "P_admin_inflation_pct": 3.07,
           "Z_good_news_quarters": 5,
-          "cpi_yoy_2026_2028": 3.43,
-          "michigan_ics": 52.8,
+          "cpi_yoy_2026_2028": 3.93,
+          "cpi_yoy_no_tariff_counterfactual": 2.83,
+          "unrate_pct": 4.43,
+          "michigan_ics": 49.3,
           "approval_net": -13.4,
           "approval_net_2026": -13.4,
           "approval_net_2028": -13.4
@@ -50,13 +59,13 @@
       },
       "hibbs_2028": {
         "incumbent_party": "R",
-        "incumbent_two_party_pct": 51.26,
-        "lower_95ci": 47.56,
-        "upper_95ci": 54.96,
+        "incumbent_two_party_pct": 51.59,
+        "lower_95ci": 47.89,
+        "upper_95ci": 55.29,
         "rmse": 1.85,
-        "win_prob": 0.753,
+        "win_prob": 0.805,
         "inputs": {
-          "weighted_real_dpi_growth": 1.4797915126683912,
+          "weighted_real_dpi_growth": 1.5729156925440364,
           "cumulative_fatalities": 0
         }
       },
@@ -73,23 +82,94 @@
           "term2": 0
         }
       },
+      "lewis_beck_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 45.89,
+        "lower_95ci": 40.89,
+        "upper_95ci": 50.89,
+        "rmse": 2.5,
+        "win_prob": 0.05,
+        "inputs": {
+          "unrate_pct": 4.43,
+          "cpi_yoy_pct": 3.93,
+          "misery_index": 8.36
+        },
+        "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample."
+      },
       "ensemble_2028": {
-        "incumbent_two_party_pct": 49.71,
-        "lower_95ci": 47.34,
-        "upper_95ci": 52.07,
-        "ensemble_rmse": 1.18,
-        "win_prob": 0.401,
+        "incumbent_two_party_pct": 48.98,
+        "lower_95ci": 46.84,
+        "upper_95ci": 51.13,
+        "ensemble_rmse": 1.07,
+        "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
+        "win_prob": 0.171,
         "weights": {
-          "fair": 0.273,
-          "hibbs": 0.369,
-          "abramowitz": 0.359
+          "fair": 0.214,
+          "hibbs": 0.29,
+          "abramowitz": 0.282,
+          "lewis_beck": 0.214
         },
         "components": {
           "fair_pct": 56.44,
-          "hibbs_pct": 51.26,
-          "abramowitz_pct": 42.99
+          "hibbs_pct": 51.59,
+          "abramowitz_pct": 42.99,
+          "lewis_beck_pct": 45.89
         }
       },
+      "tariff_sensitivity_2028": [
+        {
+          "tariff_key": "rollback",
+          "tariff_rate_pct": 5.0,
+          "label": "\u8d38\u6613\u548c\u89e3\uff0c\u5173\u7a0e\u56de\u5230 5%",
+          "is_baseline_tariff": false,
+          "projected_cpi_yoy": 3.08,
+          "projected_approval_2028": -13.4,
+          "ensemble_R_two_party_pct": 49.26,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": 0.28,
+          "components": {
+            "fair": 57.02,
+            "hibbs_invariant": 51.59,
+            "abramowitz": 42.99,
+            "lewis_beck": 46.62
+          }
+        },
+        {
+          "tariff_key": "current",
+          "tariff_rate_pct": 13.5,
+          "label": "\u7ef4\u6301\u5f53\u524d 13.5%\uff08\u57fa\u7ebf\uff09",
+          "is_baseline_tariff": true,
+          "projected_cpi_yoy": 3.93,
+          "projected_approval_2028": -13.4,
+          "ensemble_R_two_party_pct": 48.98,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": 0.0,
+          "components": {
+            "fair": 56.44,
+            "hibbs_invariant": 51.59,
+            "abramowitz": 42.99,
+            "lewis_beck": 45.89
+          }
+        },
+        {
+          "tariff_key": "escalation",
+          "tariff_rate_pct": 22.0,
+          "label": "\u518d\u6b21\u5347\u7ea7\u5230 22%\uff084 \u6708\u5cf0\u503c\u6c34\u5e73\uff09",
+          "is_baseline_tariff": false,
+          "projected_cpi_yoy": 4.78,
+          "projected_approval_2028": -13.4,
+          "ensemble_R_two_party_pct": 48.7,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": -0.28,
+          "components": {
+            "fair": 55.85,
+            "hibbs_invariant": 51.59,
+            "abramowitz": 42.99,
+            "lewis_beck": 45.17
+          }
+        }
+      ],
+      "casualty_sensitivity_2028": null,
       "bew_2026_house": {
         "in_party": "R",
         "in_party_seat_change": -39.5,
@@ -125,12 +205,21 @@
         "brent_premium_vs_baseline": 25,
         "rally_2026_pp": 0.0,
         "rally_2028_pp": 0.0,
+        "tariff_decomposition": {
+          "tariff_rate_pct": 13.5,
+          "pre_2025_baseline_rate_pct": 2.5,
+          "tariff_cpi_pp_in_current_yoy": 1.1,
+          "tariff_shift_vs_baseline_pp": 0.0,
+          "note": "Tariff-attributable CPI elevation is already in current_cpi_yoy and is shown here for blame-attribution. Counterfactual 'no-tariff' CPI YoY would be lower by tariff_cpi_pp_in_current_yoy."
+        },
         "projected_2026_2028_macro": {
           "G_real_growth_pct": 1.07,
           "P_admin_inflation_pct": 3.27,
           "Z_good_news_quarters": 4,
-          "cpi_yoy_2026_2028": 3.82,
-          "michigan_ics": 51.6,
+          "cpi_yoy_2026_2028": 4.31,
+          "cpi_yoy_no_tariff_counterfactual": 3.21,
+          "unrate_pct": 4.77,
+          "michigan_ics": 48.1,
           "approval_net": -13.3,
           "approval_net_2026": -13.3,
           "approval_net_2028": -13.3
@@ -163,13 +252,13 @@
       },
       "hibbs_2028": {
         "incumbent_party": "R",
-        "incumbent_two_party_pct": 49.39,
-        "lower_95ci": 45.69,
-        "upper_95ci": 53.09,
+        "incumbent_two_party_pct": 49.72,
+        "lower_95ci": 46.02,
+        "upper_95ci": 53.42,
         "rmse": 1.85,
-        "win_prob": 0.372,
+        "win_prob": 0.44,
         "inputs": {
-          "weighted_real_dpi_growth": 0.9440547556927679,
+          "weighted_real_dpi_growth": 1.037178935568413,
           "cumulative_fatalities": 0
         }
       },
@@ -186,23 +275,94 @@
           "term2": 0
         }
       },
+      "lewis_beck_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 45.28,
+        "lower_95ci": 40.28,
+        "upper_95ci": 50.28,
+        "rmse": 2.5,
+        "win_prob": 0.03,
+        "inputs": {
+          "unrate_pct": 4.77,
+          "cpi_yoy_pct": 4.31,
+          "misery_index": 9.08
+        },
+        "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample."
+      },
       "ensemble_2028": {
-        "incumbent_two_party_pct": 48.58,
-        "lower_95ci": 46.22,
-        "upper_95ci": 50.95,
-        "ensemble_rmse": 1.18,
-        "win_prob": 0.115,
+        "incumbent_two_party_pct": 47.97,
+        "lower_95ci": 45.83,
+        "upper_95ci": 50.11,
+        "ensemble_rmse": 1.07,
+        "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
+        "win_prob": 0.029,
         "weights": {
-          "fair": 0.273,
-          "hibbs": 0.369,
-          "abramowitz": 0.359
+          "fair": 0.214,
+          "hibbs": 0.29,
+          "abramowitz": 0.282,
+          "lewis_beck": 0.214
         },
         "components": {
           "fair_pct": 54.87,
-          "hibbs_pct": 49.39,
-          "abramowitz_pct": 42.98
+          "hibbs_pct": 49.72,
+          "abramowitz_pct": 42.98,
+          "lewis_beck_pct": 45.28
         }
       },
+      "tariff_sensitivity_2028": [
+        {
+          "tariff_key": "rollback",
+          "tariff_rate_pct": 5.0,
+          "label": "\u8d38\u6613\u548c\u89e3\uff0c\u5173\u7a0e\u56de\u5230 5%",
+          "is_baseline_tariff": false,
+          "projected_cpi_yoy": 3.46,
+          "projected_approval_2028": -13.3,
+          "ensemble_R_two_party_pct": 48.25,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": 0.28,
+          "components": {
+            "fair": 55.45,
+            "hibbs_invariant": 49.72,
+            "abramowitz": 42.98,
+            "lewis_beck": 46.0
+          }
+        },
+        {
+          "tariff_key": "current",
+          "tariff_rate_pct": 13.5,
+          "label": "\u7ef4\u6301\u5f53\u524d 13.5%\uff08\u57fa\u7ebf\uff09",
+          "is_baseline_tariff": true,
+          "projected_cpi_yoy": 4.31,
+          "projected_approval_2028": -13.3,
+          "ensemble_R_two_party_pct": 47.97,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": 0.0,
+          "components": {
+            "fair": 54.87,
+            "hibbs_invariant": 49.72,
+            "abramowitz": 42.98,
+            "lewis_beck": 45.28
+          }
+        },
+        {
+          "tariff_key": "escalation",
+          "tariff_rate_pct": 22.0,
+          "label": "\u518d\u6b21\u5347\u7ea7\u5230 22%\uff084 \u6708\u5cf0\u503c\u6c34\u5e73\uff09",
+          "is_baseline_tariff": false,
+          "projected_cpi_yoy": 5.16,
+          "projected_approval_2028": -13.3,
+          "ensemble_R_two_party_pct": 47.69,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": -0.28,
+          "components": {
+            "fair": 54.28,
+            "hibbs_invariant": 49.72,
+            "abramowitz": 42.98,
+            "lewis_beck": 44.56
+          }
+        }
+      ],
+      "casualty_sensitivity_2028": null,
       "bew_2026_house": {
         "in_party": "R",
         "in_party_seat_change": -39.4,
@@ -238,12 +398,21 @@
         "brent_premium_vs_baseline": 45,
         "rally_2026_pp": 0.0,
         "rally_2028_pp": 0.0,
+        "tariff_decomposition": {
+          "tariff_rate_pct": 13.5,
+          "pre_2025_baseline_rate_pct": 2.5,
+          "tariff_cpi_pp_in_current_yoy": 1.1,
+          "tariff_shift_vs_baseline_pp": 0.0,
+          "note": "Tariff-attributable CPI elevation is already in current_cpi_yoy and is shown here for blame-attribution. Counterfactual 'no-tariff' CPI YoY would be lower by tariff_cpi_pp_in_current_yoy."
+        },
         "projected_2026_2028_macro": {
           "G_real_growth_pct": 0.32,
           "P_admin_inflation_pct": 3.48,
           "Z_good_news_quarters": 3,
-          "cpi_yoy_2026_2028": 4.24,
-          "michigan_ics": 50.2,
+          "cpi_yoy_2026_2028": 4.74,
+          "cpi_yoy_no_tariff_counterfactual": 3.64,
+          "unrate_pct": 5.14,
+          "michigan_ics": 46.7,
           "approval_net": -13.2,
           "approval_net_2026": -13.2,
           "approval_net_2028": -13.2
@@ -276,13 +445,13 @@
       },
       "hibbs_2028": {
         "incumbent_party": "R",
-        "incumbent_two_party_pct": 47.3,
-        "lower_95ci": 43.6,
-        "upper_95ci": 51.0,
+        "incumbent_two_party_pct": 47.63,
+        "lower_95ci": 43.93,
+        "upper_95ci": 51.33,
         "rmse": 1.85,
-        "win_prob": 0.072,
+        "win_prob": 0.1,
         "inputs": {
-          "weighted_real_dpi_growth": 0.34434943072005536,
+          "weighted_real_dpi_growth": 0.4374736105957005,
           "cumulative_fatalities": 0
         }
       },
@@ -299,23 +468,94 @@
           "term2": 0
         }
       },
+      "lewis_beck_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 44.6,
+        "lower_95ci": 39.6,
+        "upper_95ci": 49.6,
+        "rmse": 2.5,
+        "win_prob": 0.015,
+        "inputs": {
+          "unrate_pct": 5.14,
+          "cpi_yoy_pct": 4.74,
+          "misery_index": 9.88
+        },
+        "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample."
+      },
       "ensemble_2028": {
-        "incumbent_two_party_pct": 47.36,
-        "lower_95ci": 45.0,
-        "upper_95ci": 49.72,
-        "ensemble_rmse": 1.18,
-        "win_prob": 0.013,
+        "incumbent_two_party_pct": 46.87,
+        "lower_95ci": 44.72,
+        "upper_95ci": 49.01,
+        "ensemble_rmse": 1.07,
+        "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
+        "win_prob": 0.002,
         "weights": {
-          "fair": 0.273,
-          "hibbs": 0.369,
-          "abramowitz": 0.359
+          "fair": 0.214,
+          "hibbs": 0.29,
+          "abramowitz": 0.282,
+          "lewis_beck": 0.214
         },
         "components": {
           "fair_pct": 53.24,
-          "hibbs_pct": 47.3,
-          "abramowitz_pct": 42.96
+          "hibbs_pct": 47.63,
+          "abramowitz_pct": 42.96,
+          "lewis_beck_pct": 44.6
         }
       },
+      "tariff_sensitivity_2028": [
+        {
+          "tariff_key": "rollback",
+          "tariff_rate_pct": 5.0,
+          "label": "\u8d38\u6613\u548c\u89e3\uff0c\u5173\u7a0e\u56de\u5230 5%",
+          "is_baseline_tariff": false,
+          "projected_cpi_yoy": 3.89,
+          "projected_approval_2028": -13.2,
+          "ensemble_R_two_party_pct": 47.15,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": 0.28,
+          "components": {
+            "fair": 53.83,
+            "hibbs_invariant": 47.63,
+            "abramowitz": 42.96,
+            "lewis_beck": 45.32
+          }
+        },
+        {
+          "tariff_key": "current",
+          "tariff_rate_pct": 13.5,
+          "label": "\u7ef4\u6301\u5f53\u524d 13.5%\uff08\u57fa\u7ebf\uff09",
+          "is_baseline_tariff": true,
+          "projected_cpi_yoy": 4.74,
+          "projected_approval_2028": -13.2,
+          "ensemble_R_two_party_pct": 46.87,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": 0.0,
+          "components": {
+            "fair": 53.24,
+            "hibbs_invariant": 47.63,
+            "abramowitz": 42.96,
+            "lewis_beck": 44.6
+          }
+        },
+        {
+          "tariff_key": "escalation",
+          "tariff_rate_pct": 22.0,
+          "label": "\u518d\u6b21\u5347\u7ea7\u5230 22%\uff084 \u6708\u5cf0\u503c\u6c34\u5e73\uff09",
+          "is_baseline_tariff": false,
+          "projected_cpi_yoy": 5.59,
+          "projected_approval_2028": -13.2,
+          "ensemble_R_two_party_pct": 46.59,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": -0.28,
+          "components": {
+            "fair": 52.65,
+            "hibbs_invariant": 47.63,
+            "abramowitz": 42.96,
+            "lewis_beck": 43.88
+          }
+        }
+      ],
+      "casualty_sensitivity_2028": null,
       "bew_2026_house": {
         "in_party": "R",
         "in_party_seat_change": -39.2,
@@ -351,12 +591,21 @@
         "brent_premium_vs_baseline": 15,
         "rally_2026_pp": 2.5,
         "rally_2028_pp": -2.75,
+        "tariff_decomposition": {
+          "tariff_rate_pct": 13.5,
+          "pre_2025_baseline_rate_pct": 2.5,
+          "tariff_cpi_pp_in_current_yoy": 1.1,
+          "tariff_shift_vs_baseline_pp": 0.0,
+          "note": "Tariff-attributable CPI elevation is already in current_cpi_yoy and is shown here for blame-attribution. Counterfactual 'no-tariff' CPI YoY would be lower by tariff_cpi_pp_in_current_yoy."
+        },
         "projected_2026_2028_macro": {
           "G_real_growth_pct": 1.44,
           "P_admin_inflation_pct": 3.16,
           "Z_good_news_quarters": 4,
-          "cpi_yoy_2026_2028": 3.6,
-          "michigan_ics": 52.3,
+          "cpi_yoy_2026_2028": 4.1,
+          "cpi_yoy_no_tariff_counterfactual": 3.0,
+          "unrate_pct": 4.58,
+          "michigan_ics": 48.8,
           "approval_net": -10.9,
           "approval_net_2026": -10.9,
           "approval_net_2028": -16.1
@@ -389,13 +638,13 @@
       },
       "hibbs_2028": {
         "incumbent_party": "R",
-        "incumbent_two_party_pct": 50.43,
-        "lower_95ci": 46.73,
-        "upper_95ci": 54.13,
+        "incumbent_two_party_pct": 50.75,
+        "lower_95ci": 47.05,
+        "upper_95ci": 54.45,
         "rmse": 1.85,
-        "win_prob": 0.591,
+        "win_prob": 0.658,
         "inputs": {
-          "weighted_real_dpi_growth": 1.239909382679306,
+          "weighted_real_dpi_growth": 1.3330335625549512,
           "cumulative_fatalities": 0
         }
       },
@@ -412,23 +661,131 @@
           "term2": 0
         }
       },
+      "lewis_beck_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 45.62,
+        "lower_95ci": 40.62,
+        "upper_95ci": 50.62,
+        "rmse": 2.5,
+        "win_prob": 0.04,
+        "inputs": {
+          "unrate_pct": 4.58,
+          "cpi_yoy_pct": 4.1,
+          "misery_index": 8.68
+        },
+        "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample."
+      },
       "ensemble_2028": {
-        "incumbent_two_party_pct": 48.42,
-        "lower_95ci": 46.06,
-        "upper_95ci": 50.78,
-        "ensemble_rmse": 1.18,
-        "win_prob": 0.091,
+        "incumbent_two_party_pct": 47.92,
+        "lower_95ci": 45.77,
+        "upper_95ci": 50.06,
+        "ensemble_rmse": 1.07,
+        "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
+        "win_prob": 0.026,
         "weights": {
-          "fair": 0.273,
-          "hibbs": 0.369,
-          "abramowitz": 0.359
+          "fair": 0.214,
+          "hibbs": 0.29,
+          "abramowitz": 0.282,
+          "lewis_beck": 0.214
         },
         "components": {
           "fair_pct": 55.19,
-          "hibbs_pct": 50.43,
-          "abramowitz_pct": 41.22
+          "hibbs_pct": 50.75,
+          "abramowitz_pct": 41.22,
+          "lewis_beck_pct": 45.62
         }
       },
+      "tariff_sensitivity_2028": [
+        {
+          "tariff_key": "rollback",
+          "tariff_rate_pct": 5.0,
+          "label": "\u8d38\u6613\u548c\u89e3\uff0c\u5173\u7a0e\u56de\u5230 5%",
+          "is_baseline_tariff": false,
+          "projected_cpi_yoy": 3.25,
+          "projected_approval_2028": -16.1,
+          "ensemble_R_two_party_pct": 48.2,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": 0.28,
+          "components": {
+            "fair": 55.78,
+            "hibbs_invariant": 50.75,
+            "abramowitz": 41.22,
+            "lewis_beck": 46.34
+          }
+        },
+        {
+          "tariff_key": "current",
+          "tariff_rate_pct": 13.5,
+          "label": "\u7ef4\u6301\u5f53\u524d 13.5%\uff08\u57fa\u7ebf\uff09",
+          "is_baseline_tariff": true,
+          "projected_cpi_yoy": 4.1,
+          "projected_approval_2028": -16.1,
+          "ensemble_R_two_party_pct": 47.92,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": 0.0,
+          "components": {
+            "fair": 55.19,
+            "hibbs_invariant": 50.75,
+            "abramowitz": 41.22,
+            "lewis_beck": 45.62
+          }
+        },
+        {
+          "tariff_key": "escalation",
+          "tariff_rate_pct": 22.0,
+          "label": "\u518d\u6b21\u5347\u7ea7\u5230 22%\uff084 \u6708\u5cf0\u503c\u6c34\u5e73\uff09",
+          "is_baseline_tariff": false,
+          "projected_cpi_yoy": 4.95,
+          "projected_approval_2028": -16.1,
+          "ensemble_R_two_party_pct": 47.63,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": -0.29,
+          "components": {
+            "fair": 54.6,
+            "hibbs_invariant": 50.75,
+            "abramowitz": 41.22,
+            "lewis_beck": 44.9
+          }
+        }
+      ],
+      "casualty_sensitivity_2028": [
+        {
+          "casualty_key": "low_casualty",
+          "label": "\u6210\u529f\u62a4\u822a / \u4f4e\u4f24\u4ea1 (1991 GW pattern, ~150 KIA)",
+          "label_en": "Successful escort / low casualty (1991 GW, ~150 KIA)",
+          "rally_effect_pp": 12,
+          "casualty_drag_pp": -1,
+          "approval_2026": -8.0,
+          "approval_2028": -14.1,
+          "abramowitz_2028_R_pct": 42.49,
+          "ensemble_2028_R_pct": 48.27,
+          "ensemble_rmse": 1.07
+        },
+        {
+          "casualty_key": "median",
+          "label": "\u5f53\u524d calibration (median guess)",
+          "label_en": "Current calibration (median guess)",
+          "rally_effect_pp": 8,
+          "casualty_drag_pp": -3,
+          "approval_2026": -11.0,
+          "approval_2028": -16.2,
+          "abramowitz_2028_R_pct": 41.12,
+          "ensemble_2028_R_pct": 47.89,
+          "ensemble_rmse": 1.07
+        },
+        {
+          "casualty_key": "high_casualty",
+          "label": "\u6301\u4e45\u519b\u4e8b\u884c\u52a8 / \u91cd\u5927\u4f24\u4ea1 (Iraq pattern, ~2400 KIA)",
+          "label_en": "Prolonged engagement / high casualty (Iraq, ~2400 KIA)",
+          "rally_effect_pp": 15,
+          "casualty_drag_pp": -8,
+          "approval_2026": -10.0,
+          "approval_2028": -21.0,
+          "abramowitz_2028_R_pct": 38.05,
+          "ensemble_2028_R_pct": 47.02,
+          "ensemble_rmse": 1.07
+        }
+      ],
       "bew_2026_house": {
         "in_party": "R",
         "in_party_seat_change": -35.9,
@@ -464,12 +821,21 @@
         "brent_premium_vs_baseline": 90,
         "rally_2026_pp": 0.0,
         "rally_2028_pp": 0.0,
+        "tariff_decomposition": {
+          "tariff_rate_pct": 13.5,
+          "pre_2025_baseline_rate_pct": 2.5,
+          "tariff_cpi_pp_in_current_yoy": 1.1,
+          "tariff_shift_vs_baseline_pp": 0.0,
+          "note": "Tariff-attributable CPI elevation is already in current_cpi_yoy and is shown here for blame-attribution. Counterfactual 'no-tariff' CPI YoY would be lower by tariff_cpi_pp_in_current_yoy."
+        },
         "projected_2026_2028_macro": {
           "G_real_growth_pct": -1.36,
           "P_admin_inflation_pct": 3.96,
           "Z_good_news_quarters": 1,
-          "cpi_yoy_2026_2028": 5.2,
-          "michigan_ics": 47.2,
+          "cpi_yoy_2026_2028": 5.69,
+          "cpi_yoy_no_tariff_counterfactual": 4.59,
+          "unrate_pct": 5.98,
+          "michigan_ics": 43.7,
           "approval_net": -12.8,
           "approval_net_2026": -12.8,
           "approval_net_2028": -12.8
@@ -502,13 +868,13 @@
       },
       "hibbs_2028": {
         "incumbent_party": "R",
-        "incumbent_two_party_pct": 42.61,
-        "lower_95ci": 38.91,
-        "upper_95ci": 46.31,
+        "incumbent_two_party_pct": 42.94,
+        "lower_95ci": 39.24,
+        "upper_95ci": 46.64,
         "rmse": 1.85,
         "win_prob": 0.0,
         "inputs": {
-          "weighted_real_dpi_growth": -0.9989904972188208,
+          "weighted_real_dpi_growth": -0.9058663173431758,
           "cumulative_fatalities": 0
         }
       },
@@ -525,23 +891,94 @@
           "term2": 0
         }
       },
+      "lewis_beck_2028": {
+        "incumbent_party": "R",
+        "incumbent_two_party_pct": 43.08,
+        "lower_95ci": 38.08,
+        "upper_95ci": 48.08,
+        "rmse": 2.5,
+        "win_prob": 0.003,
+        "inputs": {
+          "unrate_pct": 5.98,
+          "cpi_yoy_pct": 5.69,
+          "misery_index": 11.67
+        },
+        "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample."
+      },
       "ensemble_2028": {
-        "incumbent_two_party_pct": 44.73,
-        "lower_95ci": 42.37,
-        "upper_95ci": 47.09,
-        "ensemble_rmse": 1.18,
+        "incumbent_two_party_pct": 44.47,
+        "lower_95ci": 42.33,
+        "upper_95ci": 46.61,
+        "ensemble_rmse": 1.07,
+        "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
         "win_prob": 0.0,
         "weights": {
-          "fair": 0.273,
-          "hibbs": 0.369,
-          "abramowitz": 0.359
+          "fair": 0.214,
+          "hibbs": 0.29,
+          "abramowitz": 0.282,
+          "lewis_beck": 0.214
         },
         "components": {
           "fair_pct": 49.82,
-          "hibbs_pct": 42.61,
-          "abramowitz_pct": 43.04
+          "hibbs_pct": 42.94,
+          "abramowitz_pct": 43.04,
+          "lewis_beck_pct": 43.08
         }
       },
+      "tariff_sensitivity_2028": [
+        {
+          "tariff_key": "rollback",
+          "tariff_rate_pct": 5.0,
+          "label": "\u8d38\u6613\u548c\u89e3\uff0c\u5173\u7a0e\u56de\u5230 5%",
+          "is_baseline_tariff": false,
+          "projected_cpi_yoy": 4.84,
+          "projected_approval_2028": -12.8,
+          "ensemble_R_two_party_pct": 44.75,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": 0.28,
+          "components": {
+            "fair": 50.41,
+            "hibbs_invariant": 42.94,
+            "abramowitz": 43.04,
+            "lewis_beck": 43.8
+          }
+        },
+        {
+          "tariff_key": "current",
+          "tariff_rate_pct": 13.5,
+          "label": "\u7ef4\u6301\u5f53\u524d 13.5%\uff08\u57fa\u7ebf\uff09",
+          "is_baseline_tariff": true,
+          "projected_cpi_yoy": 5.69,
+          "projected_approval_2028": -12.8,
+          "ensemble_R_two_party_pct": 44.47,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": 0.0,
+          "components": {
+            "fair": 49.82,
+            "hibbs_invariant": 42.94,
+            "abramowitz": 43.04,
+            "lewis_beck": 43.08
+          }
+        },
+        {
+          "tariff_key": "escalation",
+          "tariff_rate_pct": 22.0,
+          "label": "\u518d\u6b21\u5347\u7ea7\u5230 22%\uff084 \u6708\u5cf0\u503c\u6c34\u5e73\uff09",
+          "is_baseline_tariff": false,
+          "projected_cpi_yoy": 6.54,
+          "projected_approval_2028": -12.8,
+          "ensemble_R_two_party_pct": 44.19,
+          "ensemble_rmse": 1.07,
+          "delta_vs_baseline_pp": -0.28,
+          "components": {
+            "fair": 49.23,
+            "hibbs_invariant": 42.94,
+            "abramowitz": 43.04,
+            "lewis_beck": 42.36
+          }
+        }
+      ],
+      "casualty_sensitivity_2028": null,
       "bew_2026_house": {
         "in_party": "R",
         "in_party_seat_change": -38.6,
@@ -569,19 +1006,23 @@
   ],
   "weighted_summary": {
     "2028_R_two_party_fair": 54.73,
-    "2028_R_two_party_hibbs": 49.26,
+    "2028_R_two_party_hibbs": 49.58,
     "2028_R_two_party_abramowitz": 42.72,
-    "2028_R_two_party_ensemble": 48.4,
-    "2028_incumbent_two_party_pct": 48.4,
+    "2028_R_two_party_lewis_beck": 45.24,
+    "2028_R_two_party_ensemble": 47.82,
+    "2028_incumbent_two_party_pct": 47.82,
     "2028_incumbent_party": "R",
     "2026_in_party_seat_change": -38.8
   },
   "method_notes": [
-    "Three-model ensemble: Fair (rmse 2.5) + Hibbs Bread&Peace (rmse 1.85) + Abramowitz Time-for-Change (rmse 1.90).",
-    "Inverse-RMSE weights: Hibbs ~0.36, Abramowitz ~0.36, Fair ~0.27.",
+    "Four-model ensemble: Fair (rmse 2.5) + Hibbs Bread&Peace (rmse 1.85) + Abramowitz Time-for-Change (rmse 1.90) + Lewis-Beck-Tien sociotropic (rmse 2.5, [CALIBRATION_PENDING]).",
+    "Inverse-RMSE weights: Hibbs ~0.30, Abramowitz ~0.29, Fair ~0.22, Lewis-Beck ~0.22 (approx).",
     "All 2028 calcs assume R is open-seat, first-term incumbent party (DPER=0, DUR=0, TERM2=0).",
-    "Hibbs's R = \u03bb-weighted real per-capita DPI growth across 15 quarters (\u03bb=0.915).",
+    "Hibbs's R = \u03bb-weighted real per-capita DPI growth across 15 quarters (\u03bb=0.915). Past quarters now use BEA-realized QoQ annualized (not YoY).",
     "BEW House: 2026 in-party=R defending ~220 seats; flip threshold = 218.",
-    "Macro projection elasticities calibrated from 1980 Iran-Iraq, 1990 Gulf War, 2008 oil peak, 2022 RU-UA."
+    "Macro projection elasticities calibrated from 1980 Iran-Iraq, 1990 Gulf War, 2008 oil peak, 2022 RU-UA.",
+    "Lewis-Beck misery index uses projected UNRATE (Okun's law from growth) + projected CPI YoY.",
+    "Tariff CPI passthrough exposed as 'tariff_decomposition' in each scenario; pre-2025 baseline 2.5%, current 13.5%, elasticity 0.10pp CPI per pp tariff (Cavallo et al 2021 conservative).",
+    "TODO [B3]: ensemble RMSE assumes residual independence; backtest on 1948-2020 needed for realistic confidence bands."
   ]
 }

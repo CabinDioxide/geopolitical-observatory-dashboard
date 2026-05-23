@@ -13,13 +13,14 @@ const I18N = {
     'tab.overlay': '④ 历史对照',
     'tab.methodology': '⑤ 方法论',
     // Tab 1
-    'chain.title': '传导链：从油价到选票的九个观测点',
-    'chain.intro1': '霍尔木兹封锁通过九个步骤传导至选举结果。每一格显示当前值、基线（中性水平）、告警（5pp 选票损失对应水平）。每条 bar 分三段彩色区间——指针落在哪一段，直接读出风险级别：',
+    'chain.title': '传导链：从油价到选票的十个观测点',
+    'chain.intro1': '霍尔木兹封锁通过十个步骤传导至选举结果（2026-05 PR 加入第 10 步失业率作为 sociotropic 第二支柱，与 step 6 RDPI 平行）。每一格显示当前值、基线（中性水平）、告警（5pp 选票损失对应水平）。每条 bar 分三段彩色区间——指针落在哪一段，直接读出风险级别：',
     'chain.intro2': '<span class="tag-inline" style="background:#2a9d8f; color:#fff;">上游</span>（绿，0–33）该指标处于安全区间，风险尚未传导到下一环节；<span class="tag-inline" style="background:#f4a261; color:#fff;">中游</span>（橙，33–66）指标正在恶化，下游将开始受影响；<span class="tag-inline" style="background:#e63946; color:#fff;">下游</span>（红，66–100）指标接近或突破告警，对选票已构成直接威胁。',
     'chain.intro3': '<b>告警的统一定义</b>：每个指标的告警阈值都对应"该指标单独达到此水平时，历史上执政党在下次选举损失 ≥5pp 两党票"。',
     'chain.zone_upstream': '上游', 'chain.zone_mid': '中游', 'chain.zone_down': '下游',
     'chain.epu_label': 'EPU 经济政策不确定性',
     'chain.updated_label': '最近更新',
+    'chain.caveats_pointer': '⚠️ 每个 link 的 evidence 评级和 caveat 已在卡片上显示。完整的诚实标注 panel（含 6 个 runtime disclosures + B3 backtest 真实 RMSE 表 + 4×4 残差相关矩阵 + ensemble 修正）已移至 <a href="#" class="goto-methodology">⑤ 方法论</a> tab 顶部，与其他方法学说明 collocate。',
     // Tab 2
     'scen.title': '5 种情形的推演：霍尔木兹未来走向对 2026 中期 + 2028 大选的影响',
     'scen.intro1': '每种霍尔木兹未来走向通过传导链产生不同的宏观结果（油价、通胀、收入、信心、支持率），再带入 4 个学术模型输出选举结果。下方每张卡片展示一个情形的<b>选举含义</b>：共和党在 2026 中期会失多少席位、控不控得住众议院；2028 大选会输多少（或赢多少）。带宽为 ±2·均方根误差（RMSE，95% 置信区间）。',
@@ -116,6 +117,7 @@ const I18N = {
     // Tab 5
     'meth.title': '方法论说明',
     'meth.intro': '本 dashboard 的核心任务是将地缘政治冲击（霍尔木兹海峡封锁）通过宏观与政治传导链转换为美国选举结果预测。下文逐项说明所用模型、选择理由、历史预测准确度、传导链结构与数据来源。',
+    'meth.snapshot': '<b>关于本页硬编码数字</b>：以下章节中的具体数值（ensemble R %、scenario 跨度、Fair vs Abramowitz gap 等）是 <b>2026-05-14 快照</b>。实时数字以本页顶部 panel + ② 情景 tab + ① 传导链 tab 卡片为准（由 daily cron 自动更新）。如硬编码数字与顶部 panel 数据不一致，以 panel 数据为准——本节文本是叙述性，runtime panel 是单一事实来源。',
     // Tab 3 collapsibles
     'map.senate_full_table': '参议院全部 33 席原始表格（按竞争度排序）',
     'map.house_full_table': '众议院各州预测表（按 D 净增席位排序）',
@@ -142,9 +144,10 @@ const I18N = {
     'tab.overlay': '④ Historical Comparison',
     'tab.methodology': '⑤ Methodology',
     // Tab 1
-    'chain.title': 'Transmission Chain: From Oil Prices to Votes via Nine Observation Points',
-    'chain.intro1': 'A Hormuz blockade reaches election outcomes through nine steps. Each cell shows the current value, baseline (neutral level), and alarm (level associated with a 5pp two-party vote loss). Each bar is divided into three colored zones — where the pointer falls tells you the risk level:',
+    'chain.title': 'Transmission Chain: From Oil Prices to Votes via Ten Observation Points',
+    'chain.intro1': 'A Hormuz blockade reaches election outcomes through ten steps (the 2026-05 PR added step 10 unemployment as a sociotropic second pillar parallel to step 6 RDPI). Each cell shows the current value, baseline (neutral level), and alarm (level associated with a 5pp two-party vote loss). Each bar is divided into three colored zones — where the pointer falls tells you the risk level:',
     'chain.intro2': '<span class="tag-inline" style="background:#2a9d8f; color:#fff;">Upstream</span> (green, 0–33) safe zone, risk has not propagated to the next link; <span class="tag-inline" style="background:#f4a261; color:#fff;">Midstream</span> (orange, 33–66) deteriorating, downstream beginning to react; <span class="tag-inline" style="background:#e63946; color:#fff;">Downstream</span> (red, 66–100) approaching or breaching alarm — direct threat to the in-party vote.',
+    'chain.caveats_pointer': '⚠️ Each link\'s evidence rating and caveat is shown on its card. The full honest-disclosure panel (6 runtime disclosures + B3 backtest paper-vs-sample RMSE table + 4×4 residual correlation + ensemble correction) has been moved to the top of the <a href="#" class="goto-methodology">⑤ Methodology</a> tab, collocated with the other methodology content.',
     'chain.intro3': '<b>Unified alarm definition</b>: each indicator\'s alarm corresponds to "the level at which this indicator alone has historically been associated with the in-party losing ≥5pp two-party vote in the next election."',
     'chain.zone_upstream': 'Upstream', 'chain.zone_mid': 'Midstream', 'chain.zone_down': 'Downstream',
     'chain.epu_label': 'EPU (Economic Policy Uncertainty)',
@@ -245,6 +248,7 @@ const I18N = {
     // Tab 5
     'meth.title': 'Methodology',
     'meth.intro': 'The dashboard\'s core task is to convert geopolitical shocks (a Hormuz Strait blockade) through macro and political transmission chains into US electoral predictions. Below we describe each model used, the rationale for choosing it, historical predictive accuracy, transmission chain structure, and data sources.',
+    'meth.snapshot': '<b>About hardcoded numbers on this page</b>: the specific values in the sections below (ensemble R %, scenario ranges, Fair vs Abramowitz gap, etc.) are a <b>2026-05-14 snapshot</b>. Live numbers are sourced from the panel at the top of this page + ② Scenarios tab + ① Chain tab cards (auto-updated by the daily cron). If hardcoded values disagree with the top-of-page panel, treat the panel as authoritative — this section is narrative; the runtime panel is the single source of truth.',
     // Tab 3 collapsibles
     'map.senate_full_table': 'All 33 Senate races (raw table, sorted by competitiveness)',
     'map.house_full_table': 'All states House projection table (sorted by D net seat change)',
@@ -357,6 +361,24 @@ document.querySelectorAll('.tab').forEach(btn => {
   });
 });
 
+// Event-delegated handler for .goto-methodology cross-references injected
+// via i18n (e.g., the caveats-pointer paragraph at the bottom of the
+// chain tab links to the methodology tab where the dynamic panel lives).
+document.body.addEventListener('click', (e) => {
+  const target = e.target.closest('.goto-methodology');
+  if (!target) return;
+  e.preventDefault();
+  const methBtn = document.querySelector('.tab[data-tab="methodology"]');
+  if (methBtn) {
+    methBtn.click();
+    // Scroll to the dynamic panel after the tab switch + render
+    setTimeout(() => {
+      const panel = document.getElementById('methodology-caveats');
+      if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+});
+
 // --- Boot ---
 loadAll();
 
@@ -452,23 +474,56 @@ const TAG_COLORS = { '上游': '#94a3b8', '中游': '#f4a261', '下游': '#e6394
 function renderChain(state) {
   const grid = document.getElementById('chain-grid');
   grid.innerHTML = '';
+  // Parallel-group notice: explain to readers why some steps share a colored
+  // border and should be read as co-driven signals, not a causal sequence.
+  renderParallelNotice(state);
   state.chain.forEach(link => {
     const card = document.createElement('div');
-    card.className = 'chain-card' + (link.current === null ? ' no-data' : '');
+    const parallelClass = link.parallel_group ? ` parallel-${link.parallel_group}` : '';
+    card.className = 'chain-card' + (link.current === null ? ' no-data' : '') + parallelClass;
     const pct = link.pressure !== null ? link.pressure : 0;
     const valStr = link.current !== null ? Number(link.current).toLocaleString(undefined, {maximumFractionDigits: 2}) : 'no data';
     // Pick language-specific name + interpretation + unit if available
   const name = (CURRENT_LANG === 'en' && link.name_en) ? link.name_en : link.name;
   const interp = (CURRENT_LANG === 'en' && link.interpretation_en) ? link.interpretation_en : link.interpretation;
   const unit = (CURRENT_LANG === 'en' && link.unit_en) ? link.unit_en : link.unit;
+  // Optional sub-metrics (e.g., RDPI 18m cumulative + drawdown-from-peak)
+  let subMetricsHtml = '';
+  if (Array.isArray(link.sub_metrics) && link.sub_metrics.length) {
+    const rows = link.sub_metrics.map(sm => {
+      const subLabel = (CURRENT_LANG === 'en' && sm.label_en) ? sm.label_en : sm.label;
+      const subUnit = (CURRENT_LANG === 'en' && sm.unit_en) ? sm.unit_en : (sm.unit || '');
+      const subVal = sm.value !== null && sm.value !== undefined
+        ? Number(sm.value).toLocaleString(undefined, {maximumFractionDigits: 2})
+        : '—';
+      const cls = (typeof sm.value === 'number' && sm.value < 0) ? 'neg' : 'pos';
+      const peakBadge = sm.peak_date ? `<span class="sub-peak"> (peak ${sm.peak_date})</span>` : '';
+      return `<div class="sub-metric"><span class="sub-label">${subLabel}</span><span class="sub-value ${cls}">${subVal}${subUnit}${peakBadge}</span></div>`;
+    }).join('');
+    subMetricsHtml = `<div class="sub-metrics">${rows}</div>`;
+  }
+  // Evidence rating (stars) + papers (tooltip) + optional caveat warning
+  const strength = link.strength;
+  const starsHtml = strength ? `<span class="evidence-stars s${strength}" title="${(link.papers || []).join('; ')}">${'★'.repeat(strength)}${'☆'.repeat(3 - strength)}</span>` : '';
+  const caveatRaw = (CURRENT_LANG === 'en' && link.caveat_en) ? link.caveat_en : link.caveat;
+  const caveatHtml = caveatRaw ? `<div class="evidence-caveat">${caveatRaw}</div>` : '';
+  const papersHtml = (link.papers && link.papers.length)
+    ? `<div class="evidence-papers"><span class="papers-label">${CURRENT_LANG === 'en' ? 'Key papers' : '主要文献'}:</span> ${link.papers.join(' · ')}</div>`
+    : '';
   card.innerHTML = `
-      <div class="step-num">STEP ${link.step}</div>
+      <div class="step-row">
+        <div class="step-num">STEP ${link.step}</div>
+        ${starsHtml}
+      </div>
       <div class="name">${name}</div>
       <div class="value-row">
         <span class="value">${valStr}</span>
         <span class="unit">${unit}</span>
       </div>
+      ${subMetricsHtml}
       <div class="interp">${interp}</div>
+      ${caveatHtml}
+      ${papersHtml}
       <div class="gauge" style="--p: ${pct}%"></div>
       <div class="gauge-zones"><span>${t('chain.zone_upstream')}</span><span>${t('chain.zone_mid')}</span><span>${t('chain.zone_down')}</span></div>
       <div class="baseline-alarm">
@@ -482,6 +537,208 @@ function renderChain(state) {
 
   document.getElementById('epu-val').textContent = fmt(state.epu_index, 1);
   document.getElementById('chain-updated').textContent = formatDate(state.as_of);
+  renderMethodologyCaveats(state.methodology_caveats);
+}
+
+// Parallel-group notice: prepended to the chain grid so readers see the
+// structure note before reading the cards in step order. Idempotent —
+// removes existing notice before re-rendering (lang switch safe).
+function renderParallelNotice(state) {
+  const grid = document.getElementById('chain-grid');
+  // Remove any previously-rendered parallel notice
+  const existing = document.querySelector('.parallel-notice');
+  if (existing) existing.remove();
+  const meta = state.parallel_group_meta || {};
+  const groups = Object.entries(meta);
+  if (!groups.length) return;
+  const isEn = CURRENT_LANG === 'en';
+  const notice = document.createElement('div');
+  notice.className = 'parallel-notice';
+  notice.innerHTML = groups.map(([gid, g]) => {
+    const label = isEn && g.label_en ? g.label_en : g.label;
+    const text = isEn && g.explanation_en ? g.explanation_en : g.explanation;
+    const steps = state.chain.filter(c => c.parallel_group === gid).map(c => c.step).join('+');
+    return `<div class="parallel-group-note parallel-${gid}">
+      <span class="pg-pill">${isEn ? 'Parallel signals' : '并行信号'} · STEP ${steps}</span>
+      <span class="pg-label">${label}</span>
+      <div class="pg-explain">${text}</div>
+    </div>`;
+  }).join('');
+  if (grid.parentNode) grid.parentNode.insertBefore(notice, grid);
+}
+
+// Honest-disclosure panel: renders RMSE caveats + per-link issues from JSON.
+// Sits at the bottom of the chain tab so it's read in context — readers see
+// the chain, then immediately see what NOT to over-interpret.
+function renderMethodologyCaveats(caveats) {
+  const container = document.getElementById('methodology-caveats');
+  if (!container) return;
+  if (!caveats) { container.innerHTML = ''; return; }
+  const isEn = CURRENT_LANG === 'en';
+  const pickReason = (item) => isEn && item.reason_en ? item.reason_en : (item.reason || '');
+  const pickIssue = (item) => isEn && item.issue_en ? item.issue_en : (item.issue || '');
+  const ensCav = caveats.ensemble_rmse_honesty || {};
+  const hibbsCav = caveats.hibbs_out_of_sample || {};
+  const lbCav = caveats.lewis_beck_pending || {};
+  const icsCav = caveats.ics_approval_causal || {};
+  const tariffCav = caveats.tariff_elasticity || {};
+  const rallyCav = caveats.rally_effect_estimate || {};
+  const leg = caveats.evidence_legend || {};
+  const legend = isEn
+    ? `<div class="caveat-legend">
+         <span><span class="evidence-stars s3">★★★</span> ${leg.strength_3_en || ''}</span>
+         <span><span class="evidence-stars s2">★★☆</span> ${leg.strength_2_en || ''}</span>
+         <span><span class="evidence-stars s1">★☆☆</span> ${leg.strength_1_en || ''}</span>
+       </div>`
+    : `<div class="caveat-legend">
+         <span><span class="evidence-stars s3">★★★</span> ${leg.strength_3 || ''}</span>
+         <span><span class="evidence-stars s2">★★☆</span> ${leg.strength_2 || ''}</span>
+         <span><span class="evidence-stars s1">★☆☆</span> ${leg.strength_1 || ''}</span>
+       </div>`;
+  const title = isEn ? 'Honest disclosure — what NOT to over-interpret' : '诚实标注 — 不要过度解读的部分';
+  const sub = isEn
+    ? 'Every model in this dashboard has known limitations. This panel is the runtime list — read before quoting any number.'
+    : '本 dashboard 的每个模型都有已知 limitations。本 panel 是运行时清单——引用任何具体数字之前先读。';
+  const items = [
+    {
+      tag: isEn ? 'Ensemble RMSE under-states uncertainty' : 'Ensemble RMSE 低估不确定性',
+      severity: 'high',
+      body: `${pickReason(ensCav)} <span class="caveat-num">${isEn ? 'displayed' : '当前显示'}: ±${ensCav.displayed} · ${isEn ? 'realistic range' : '真实区间'}: ±${(ensCav.realistic_estimate_range || []).join('—')}</span>`,
+    },
+    {
+      tag: isEn ? 'Hibbs out-of-sample degradation' : 'Hibbs out-of-sample 退化',
+      severity: 'med',
+      body: `${pickReason(hibbsCav)} <span class="caveat-num">in-sample: ${hibbsCav.in_sample_rmse} · out-of-sample est: ${hibbsCav.out_of_sample_rmse_estimate}</span>`,
+    },
+    {
+      tag: isEn ? 'Lewis-Beck calibration pending' : 'Lewis-Beck 系数未校准',
+      severity: 'med',
+      body: `${pickReason(lbCav)} <span class="caveat-num">${lbCav.status || ''}</span>`,
+    },
+    {
+      tag: pickIssue(icsCav),
+      severity: 'high',
+      body: pickReason(icsCav),
+    },
+    {
+      tag: isEn ? 'Tariff elasticity not swept' : 'Tariff 弹性未做 sensitivity',
+      severity: 'low',
+      body: `${pickReason(tariffCav)} <span class="caveat-num">${isEn ? 'used' : '当前用'}: ${tariffCav.displayed_value} · ${isEn ? 'lit range' : '文献区间'}: ${(tariffCav.literature_range || []).join('—')}</span>`,
+    },
+    {
+      tag: isEn ? 'Rally effect median guess' : 'Rally effect 仅 median guess',
+      severity: 'med',
+      body: `${pickReason(rallyCav)} <span class="caveat-num">${isEn ? 'used' : '当前用'}: +${rallyCav.displayed_value}pp · ${isEn ? 'historical range' : '历史区间'}: +${(rallyCav.historical_range || []).join('—')}pp</span>`,
+    },
+  ];
+  const rows = items.map(it => `
+    <div class="caveat-row sev-${it.severity}">
+      <div class="caveat-tag">${it.tag}</div>
+      <div class="caveat-body">${it.body}</div>
+    </div>
+  `).join('');
+  // Optional backtest results block — only if backtest has been run
+  const backtestHtml = caveats.backtest ? renderBacktestBlock(caveats.backtest, isEn) : '';
+  container.innerHTML = `
+    <div class="caveat-panel">
+      <h3 class="caveat-title">${title}</h3>
+      <p class="caveat-sub">${sub}</p>
+      ${legend}
+      <div class="caveat-rows">${rows}</div>
+      ${backtestHtml}
+    </div>
+  `;
+}
+
+// Backtest results sub-section — displays n, paper vs sample RMSE,
+// residual correlation, and the corrected ensemble RMSE.
+function renderBacktestBlock(bt, isEn) {
+  const electionsTxt = bt.elections ? bt.elections.join(', ') : '';
+  const paperRmse = bt.paper_rmse_per_model || {};
+  const correction = bt.ensemble_rmse_correction || {};
+  const corr = bt.residual_correlation || [];
+  const legend = bt.residual_correlation_legend || ['fair','hibbs','abramowitz','lewis_beck'];
+  const reCoefs = bt.re_estimated_coefficients || {};
+  const warnings = bt.warnings || [];
+
+  // Paper RMSE comparison table
+  const productionRmse = { fair: 2.5, hibbs: 1.85, abramowitz: 1.9, lewis_beck: 2.5 };
+  const rmseRows = Object.entries(paperRmse).map(([model, sampleR]) => {
+    const paperR = productionRmse[model] || '—';
+    const ratio = paperR ? (sampleR / paperR).toFixed(2) : '—';
+    return `<tr>
+      <td>${model}</td>
+      <td>${paperR}</td>
+      <td>${sampleR.toFixed(2)}</td>
+      <td class="${sampleR > paperR * 1.5 ? 'bt-bad' : sampleR > paperR ? 'bt-warn' : 'bt-ok'}">${ratio}×</td>
+    </tr>`;
+  }).join('');
+
+  // Correlation matrix as small heatmap
+  const corrRows = corr.map((row, i) => {
+    const cells = row.map((v, j) => {
+      const intensity = Math.abs(v);
+      const color = v >= 0 ? `rgba(99, 102, 241, ${intensity})` : `rgba(220, 38, 38, ${intensity})`;
+      return `<td style="background:${color}; color:${intensity > 0.5 ? '#fff' : '#0f172a'};">${v.toFixed(2)}</td>`;
+    }).join('');
+    return `<tr><th>${legend[i] || ''}</th>${cells}</tr>`;
+  }).join('');
+  const corrHeader = `<tr><th></th>${legend.map(l => `<th>${l}</th>`).join('')}</tr>`;
+
+  // Re-estimated coefs (small print)
+  const coefRows = Object.entries(reCoefs).map(([model, c]) => {
+    const cells = Object.entries(c)
+      .filter(([k]) => k !== 'n' && k !== 'rmse_in_sample')
+      .map(([k, v]) => `<span class="coef-cell">${k}=${v}</span>`).join(' ');
+    return `<div class="bt-coef-row"><b>${model}:</b> ${cells} <span class="coef-cell rmse-cell">in-sample RMSE=${c.rmse_in_sample}</span></div>`;
+  }).join('');
+
+  const t1 = isEn ? 'B3 backtest results' : 'B3 回测结果';
+  const t2 = isEn
+    ? `Partial sample n=${bt.n} (${electionsTxt}). Computed ${bt.computed_at?.slice(0, 10) || ''}. NOT used to update config.py — for inspection only.`
+    : `部分样本 n=${bt.n} 次选举 (${electionsTxt})。计算于 ${bt.computed_at?.slice(0, 10) || ''}。不用于更新 config.py——仅供 inspection。`;
+  const tRmse = isEn ? 'Paper RMSE vs out-of-sample RMSE' : 'Paper RMSE vs 实际样本 RMSE';
+  const tCorr = isEn ? 'Residual correlation matrix (Pearson)' : '残差相关矩阵（Pearson）';
+  const tEns = isEn ? 'Ensemble RMSE correction' : 'Ensemble RMSE 修正';
+  const tCoef = isEn ? 'Re-estimated coefficients (do NOT use — small sample, may have sign-flip noise)' : '重估系数（不要用——小样本，可能有符号翻转噪音）';
+  const ensTxt = isEn
+    ? `Independence assumption: ±${correction.independence_assumption_rmse} → realistic (correlated): ±${correction.correlated_realistic_rmse} (×${correction.inflation_factor} inflation). The 95% CI shown on the scenarios tab should be widened by this factor.`
+    : `独立假设: ±${correction.independence_assumption_rmse} → 真实（含相关性）: ±${correction.correlated_realistic_rmse} （×${correction.inflation_factor} 放大）。情景 tab 显示的 95% 置信区间应按此倍数放宽。`;
+  const warnHtml = warnings.length
+    ? `<ul class="bt-warnings">${warnings.map(w => `<li>${w}</li>`).join('')}</ul>`
+    : '';
+
+  return `
+    <div class="bt-block">
+      <h4 class="bt-title">${t1}</h4>
+      <p class="bt-sub">${t2}</p>
+      <div class="bt-grid">
+        <div class="bt-section">
+          <h5>${tRmse}</h5>
+          <table class="bt-table">
+            <thead><tr><th>${isEn ? 'Model' : '模型'}</th><th>Paper</th><th>${isEn ? 'Sample' : '样本'}</th><th>${isEn ? 'Ratio' : '比率'}</th></tr></thead>
+            <tbody>${rmseRows}</tbody>
+          </table>
+        </div>
+        <div class="bt-section">
+          <h5>${tCorr}</h5>
+          <table class="bt-corr-table">
+            <thead>${corrHeader}</thead>
+            <tbody>${corrRows}</tbody>
+          </table>
+        </div>
+      </div>
+      <div class="bt-section bt-ens-section">
+        <h5>${tEns}</h5>
+        <p>${ensTxt}</p>
+      </div>
+      <details class="bt-coef-details">
+        <summary>${tCoef}</summary>
+        <div class="bt-coef-list">${coefRows}</div>
+      </details>
+      ${warnHtml}
+    </div>
+  `;
 }
 
 function formatBaseline(v, unit) {
@@ -526,6 +783,43 @@ function renderScenarios(data, summary) {
     const senControl = sen.d_majority_prob > 0.5 ? t('scen.senate_d_flip') : t('scen.senate_r_hold');
     const senDmajPct = (sen.d_majority_prob * 100).toFixed(0);
 
+    // Sensitivity sweeps — only show if backend computed them
+    const isEn = CURRENT_LANG === 'en';
+    const tariffSens = sc.tariff_sensitivity_2028 || [];
+    const tariffHtml = tariffSens.length ? `
+      <div class="sens-block">
+        <div class="sens-title">${isEn ? 'Tariff sensitivity (2028 R %)' : '关税敏感性（2028 R%）'}</div>
+        <div class="sens-rows">
+          ${tariffSens.map(t => {
+            const dlt = t.delta_vs_baseline_pp;
+            const dltStr = (dlt > 0 ? '+' : '') + (dlt !== null ? dlt.toFixed(2) : '—');
+            const cls = t.is_baseline_tariff ? 'sens-row baseline' : 'sens-row';
+            return `<div class="${cls}">
+              <span class="sens-label">${t.tariff_rate_pct}%</span>
+              <span class="sens-cpi">CPI ${fmt(t.projected_cpi_yoy, 1)}%</span>
+              <span class="sens-val">R ${fmt(t.ensemble_R_two_party_pct, 1)}%</span>
+              <span class="sens-delta ${dlt < 0 ? 'neg' : 'pos'}">${dltStr}pp</span>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>` : '';
+    const casualtySens = sc.casualty_sensitivity_2028 || [];
+    const casualtyHtml = casualtySens.length ? `
+      <div class="sens-block sens-casualty">
+        <div class="sens-title">${isEn ? 'Casualty / rally sensitivity (2028 R %)' : '伤亡 / Rally 敏感性（2028 R%）'}</div>
+        <div class="sens-rows">
+          ${casualtySens.map(cs => {
+            const label = isEn && cs.label_en ? cs.label_en : cs.label;
+            return `<div class="sens-row">
+              <span class="sens-label" title="${label}">${cs.casualty_key.replace('_', ' ')}</span>
+              <span class="sens-cpi">app2028 ${cs.approval_2028 > 0 ? '+' : ''}${fmt(cs.approval_2028, 1)}</span>
+              <span class="sens-val">R ${fmt(cs.ensemble_2028_R_pct, 1)}%</span>
+              <span class="sens-delta">rally +${cs.rally_effect_pp} / drag ${cs.casualty_drag_pp}</span>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>` : '';
+
     c.innerHTML = `
       <div class="scen-key">${t('scen.scenario_label')} ${sc.scenario.split('_')[0]} · ${t('scen.prior_prob')} ${(sc.probability_prior * 100).toFixed(0)}%</div>
       <div class="scen-label">${scLabel}</div>
@@ -553,6 +847,8 @@ function renderScenarios(data, summary) {
           ${t('scen.two_party_pred')} ${fmt(ens.incumbent_two_party_pct, 1)}% · ${t('scen.win_rate')} ${(ens.win_prob * 100).toFixed(0)}%
         </div>
       </div>
+      ${tariffHtml}
+      ${casualtyHtml}
     `;
     sum.appendChild(c);
   });

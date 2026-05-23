@@ -98,6 +98,195 @@ body[data-lang="en"] .lang-zh { display: none !important; }
 .chain-card .value { font-size: 26px; font-weight: 600; color: #0f172a; }
 .chain-card .unit { font-size: 12px; color: #94a3b8; }
 .chain-card .interp { font-size: 11px; color: #64748b; line-height: 1.45; min-height: 30px; }
+.chain-card .sub-metrics {
+  display: flex; flex-direction: column; gap: 3px;
+  margin: 4px 0 8px 0; padding: 6px 8px;
+  background: #f8fafc; border-left: 2px solid #cbd5e0; border-radius: 2px;
+}
+.chain-card .sub-metric {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 11px;
+}
+.chain-card .sub-metric .sub-label { color: #64748b; }
+.chain-card .sub-metric .sub-value { font-weight: 600; font-variant-numeric: tabular-nums; }
+.chain-card .sub-metric .sub-value.pos { color: #2a9d8f; }
+.chain-card .sub-metric .sub-value.neg { color: #e63946; }
+.chain-card .sub-metric .sub-peak { font-size: 10px; color: #94a3b8; font-weight: 400; margin-left: 4px; }
+
+/* Evidence rating: star badge in upper-right of card + caveat warning row */
+.chain-card .step-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 4px;
+}
+.chain-card .evidence-stars {
+  font-size: 11px; letter-spacing: 1px; font-weight: 700;
+  cursor: help; user-select: none;
+}
+.evidence-stars.s3 { color: #2a9d8f; }
+.evidence-stars.s2 { color: #d97706; }
+.evidence-stars.s1 { color: #b91c1c; }
+.chain-card .evidence-caveat {
+  font-size: 10.5px; line-height: 1.4; color: #92400e;
+  background: #fef3c7; border-left: 2px solid #d97706;
+  padding: 5px 7px; border-radius: 2px; margin: 4px 0;
+}
+.chain-card .evidence-papers {
+  font-size: 10px; line-height: 1.35; color: #64748b;
+  font-style: italic; margin: 2px 0 4px 0;
+}
+.chain-card .evidence-papers .papers-label { font-weight: 600; font-style: normal; color: #475569; }
+
+/* Honest-disclosure panel under the chain grid */
+#methodology-caveats { margin: 24px 0 12px 0; }
+.caveat-panel {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  padding: 16px 18px;
+}
+.caveat-title {
+  margin: 0 0 4px 0; font-size: 15px; font-weight: 600; color: #0f172a;
+}
+.caveat-sub {
+  margin: 0 0 12px 0; font-size: 12px; color: #64748b; line-height: 1.5;
+}
+.caveat-legend {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  font-size: 11px; color: #475569;
+  padding: 8px 10px; background: #f8fafc; border-radius: 4px; margin-bottom: 12px;
+}
+.caveat-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.caveat-rows { display: flex; flex-direction: column; gap: 8px; }
+.caveat-row {
+  display: grid; grid-template-columns: 180px 1fr; gap: 12px;
+  padding: 8px 10px; border-radius: 4px; font-size: 12px; line-height: 1.5;
+}
+.caveat-row.sev-high { background: #fef2f2; border-left: 3px solid #e63946; }
+.caveat-row.sev-med  { background: #fef3c7; border-left: 3px solid #d97706; }
+.caveat-row.sev-low  { background: #f1f5f9; border-left: 3px solid #94a3b8; }
+.caveat-row .caveat-tag { font-weight: 600; color: #0f172a; }
+.caveat-row .caveat-body { color: #334155; }
+.caveat-row .caveat-num { display: inline-block; margin-left: 6px; padding: 1px 6px; background: #fff; border: 1px solid #cbd5e0; border-radius: 3px; font-size: 10.5px; color: #475569; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 720px) {
+  .caveat-row { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* Parallel-group notice + cards co-driven by the same fundamentals */
+.parallel-notice {
+  display: flex; flex-direction: column; gap: 10px;
+  margin: 14px 0 8px 0;
+}
+.parallel-group-note {
+  background: #eef2ff; border-left: 3px solid #6366f1; border-radius: 4px;
+  padding: 10px 12px;
+}
+.parallel-group-note .pg-pill {
+  display: inline-block; padding: 2px 8px; background: #6366f1; color: #fff;
+  border-radius: 3px; font-size: 11px; font-weight: 700; margin-right: 8px;
+}
+.parallel-group-note .pg-label {
+  font-size: 13px; font-weight: 600; color: #312e81;
+}
+.parallel-group-note .pg-explain {
+  margin-top: 6px; font-size: 12px; line-height: 1.5; color: #475569;
+}
+.chain-card.parallel-perception_basement {
+  border-top: 3px solid #6366f1;
+  position: relative;
+}
+.chain-card.parallel-perception_basement::before {
+  content: '‖'; position: absolute; top: 2px; right: 8px;
+  color: #6366f1; font-size: 16px; font-weight: 700;
+  opacity: 0.7;
+}
+
+/* Sensitivity sweep displays in scenario cards */
+.scenario-card .sens-block {
+  margin-top: 12px; padding: 8px 10px;
+  background: #f1f5f9; border-radius: 5px;
+  font-size: 11px;
+}
+.scenario-card .sens-block.sens-casualty {
+  background: #fef3c7;
+}
+.scenario-card .sens-title {
+  font-size: 10.5px; color: #475569; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.4px;
+  margin-bottom: 5px;
+}
+.scenario-card .sens-rows {
+  display: flex; flex-direction: column; gap: 3px;
+}
+.scenario-card .sens-row {
+  display: grid; grid-template-columns: 80px 1fr 1fr auto; gap: 6px;
+  align-items: baseline;
+  padding: 3px 5px; border-radius: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.scenario-card .sens-row.baseline {
+  background: #e0e7ff; font-weight: 600;
+}
+.scenario-card .sens-row .sens-label { color: #475569; font-weight: 600; }
+.scenario-card .sens-row .sens-cpi { color: #64748b; font-size: 10.5px; }
+.scenario-card .sens-row .sens-val { color: #0f172a; font-weight: 600; }
+.scenario-card .sens-row .sens-delta {
+  color: #94a3b8; font-size: 10px; padding: 0 4px;
+  border: 1px solid #cbd5e0; border-radius: 2px;
+}
+.scenario-card .sens-row .sens-delta.pos { color: #047857; border-color: #6ee7b7; }
+.scenario-card .sens-row .sens-delta.neg { color: #b91c1c; border-color: #fca5a5; }
+
+/* Backtest block inside the methodology caveats panel */
+.bt-block { margin-top: 18px; padding-top: 14px; border-top: 1px dashed #cbd5e0; }
+.bt-title { margin: 0 0 4px 0; font-size: 14px; font-weight: 700; color: #0f172a; }
+.bt-sub { margin: 0 0 12px 0; font-size: 12px; color: #64748b; }
+.bt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.bt-section h5 { margin: 0 0 6px 0; font-size: 12px; font-weight: 600; color: #334155; text-transform: uppercase; letter-spacing: 0.4px; }
+.bt-table, .bt-corr-table { width: 100%; border-collapse: collapse; font-size: 11px; font-variant-numeric: tabular-nums; }
+.bt-table th, .bt-table td, .bt-corr-table th, .bt-corr-table td { padding: 4px 6px; text-align: right; border: 1px solid #e2e8f0; }
+.bt-table th { background: #f1f5f9; color: #334155; font-weight: 600; }
+.bt-table td:first-child { text-align: left; font-weight: 500; }
+.bt-table td.bt-ok { background: #dcfce7; color: #047857; }
+.bt-table td.bt-warn { background: #fef3c7; color: #92400e; }
+.bt-table td.bt-bad { background: #fee2e2; color: #b91c1c; }
+.bt-corr-table th { background: #f1f5f9; color: #334155; font-weight: 600; text-align: center; }
+.bt-ens-section { margin-top: 14px; padding: 10px 12px; background: #fef3c7; border-left: 3px solid #d97706; border-radius: 3px; }
+.bt-ens-section h5 { color: #92400e; }
+.bt-ens-section p { margin: 0; font-size: 12px; line-height: 1.5; color: #475569; }
+.bt-coef-details { margin-top: 12px; padding: 8px 12px; background: #f8fafc; border-radius: 4px; }
+.bt-coef-details summary { cursor: pointer; font-size: 12px; font-weight: 600; color: #475569; }
+.bt-coef-list { margin-top: 8px; font-size: 11px; line-height: 1.7; }
+.bt-coef-row { padding: 2px 0; border-bottom: 1px dotted #e2e8f0; }
+.bt-coef-row b { color: #0f172a; margin-right: 4px; }
+.coef-cell { display: inline-block; padding: 1px 6px; margin: 0 2px; background: #fff; border: 1px solid #cbd5e0; border-radius: 2px; font-variant-numeric: tabular-nums; }
+.coef-cell.rmse-cell { background: #fef3c7; border-color: #d97706; }
+.bt-warnings { margin-top: 10px; padding: 8px 12px 8px 28px; background: #fef2f2; border-left: 3px solid #e63946; border-radius: 3px; font-size: 11px; line-height: 1.5; color: #7f1d1d; }
+.bt-warnings li { margin-bottom: 3px; }
+
+@media (max-width: 720px) {
+  .bt-grid { grid-template-columns: 1fr; }
+}
+
+/* Cross-reference pointer at the bottom of the chain tab, pointing to
+   the dynamic methodology panel that now lives in the ⑤ methodology tab. */
+.caveats-pointer {
+  margin: 20px 0 6px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 3px solid #6366f1;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #475569;
+}
+.caveats-pointer a.goto-methodology {
+  color: #4338ca;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.caveats-pointer a.goto-methodology:hover {
+  color: #312e81;
+}
 .chain-card .gauge {
   margin-top: 10px; height: 14px; border-radius: 3px;
   background: linear-gradient(to right,

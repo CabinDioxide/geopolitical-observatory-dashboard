@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-05-08T07:14:35.918661Z",
-    "total_vessels": 1480,
-    "with_mmsi": 746,
-    "with_imo": 1476,
+    "fetched_at": "2026-05-23T08:04:37.880310Z",
+    "total_vessels": 1498,
+    "with_mmsi": 763,
+    "with_imo": 1494,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -27,11 +27,11 @@
       "IRAN-EO13876": 1,
       "CAATSA - RUSSIA": 1,
       "PEESA-EO14039": 17,
-      "RUSSIA-EO14024": 448,
+      "RUSSIA-EO14024": 447,
       "GLOMAG": 157,
       "IRAN-EO13846": 117,
-      "IRAN-EO13902": 269,
-      "UKRAINE-EO13662": 183
+      "IRAN-EO13902": 288,
+      "UKRAINE-EO13662": 182
     }
   },
   "by_mmsi": {
@@ -3563,20 +3563,6 @@
       "mmsi": "574005550",
       "call_sign": "XVKF7",
       "vessel_type": "Crude Oil Tanker",
-      "flag": "Vietnam"
-    },
-    "574005470": {
-      "uid": "51551",
-      "name": "ASTRA",
-      "remarks": "(Linked To: SAO VIET PETROL TRANSPORTATION COMPANY LIMITED)",
-      "programs": [
-        "RUSSIA-EO14024",
-        "UKRAINE-EO13662"
-      ],
-      "imo": "9273387",
-      "mmsi": "574005470",
-      "call_sign": "XVJT7",
-      "vessel_type": "Chemical/Oil Tanker",
       "flag": "Vietnam"
     },
     "373482000": {
@@ -9921,6 +9907,240 @@
       "call_sign": "3E6068",
       "vessel_type": "Oil Products Tanker",
       "flag": "Panama"
+    },
+    "577697000": {
+      "uid": "57667",
+      "name": "FEADSHIP",
+      "remarks": "(Linked To: MOZART MARITIME INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9322279",
+      "mmsi": "577697000",
+      "call_sign": "YJRK9",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Vanuatu"
+    },
+    "518999378": {
+      "uid": "57672",
+      "name": "DAKUSH",
+      "remarks": "(Linked To: MEKONG LINES INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9278698",
+      "mmsi": "518999378",
+      "call_sign": "E5U5359",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Cook Islands"
+    },
+    "477524600": {
+      "uid": "57673",
+      "name": "GALA ROSE",
+      "remarks": "(Linked To: SPARKLING COURAGE LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9126015",
+      "mmsi": "477524600",
+      "call_sign": "VROT2",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Hong Kong"
+    },
+    "352002323": {
+      "uid": "57675",
+      "name": "TEJAS",
+      "remarks": "(Linked To: ROMY LINES INCORPORATED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9326067",
+      "mmsi": "352002323",
+      "call_sign": "3E2257",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Panama"
+    },
+    "314001124": {
+      "uid": "57676",
+      "name": "GREAT SAIL",
+      "remarks": "(Linked To: GREAT SAIL SHIPPING LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9177583",
+      "mmsi": "314001124",
+      "call_sign": "8PZW3",
+      "vessel_type": "LPG Tanker",
+      "flag": "Barbados"
+    },
+    "511101945": {
+      "uid": "57677",
+      "name": "OCEAN WAVE",
+      "remarks": "(Linked To: OW MARITIME INCORPORATED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9387152",
+      "mmsi": "511101945",
+      "call_sign": "T8A5483",
+      "vessel_type": "Products Tanker",
+      "flag": "Palau"
+    },
+    "667002478": {
+      "uid": "57678",
+      "name": "LUNA LUSTER",
+      "remarks": "(Linked To: GLOBAL FORTUNE SHIPPING LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9292187",
+      "mmsi": "667002478",
+      "call_sign": "9LS2181",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Sierra Leone"
+    },
+    "374176000": {
+      "uid": "57680",
+      "name": "SWIFT FALCON",
+      "remarks": "(Linked To: ARDEN ANGEL SHIPPING COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9246803",
+      "mmsi": "374176000",
+      "call_sign": "3EMI9",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Panama"
+    },
+    "477227800": {
+      "uid": "57682",
+      "name": "MIGHTY NAVIGATOR",
+      "remarks": "(Linked To: VERDA GAS CO LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9206396",
+      "mmsi": "477227800",
+      "call_sign": "VRXQ6",
+      "vessel_type": "LPG Tanker",
+      "flag": "Hong Kong"
+    },
+    "352006683": {
+      "uid": "57688",
+      "name": "MIDAS",
+      "remarks": "(Linked To: OCEAN MARVEL SHIPPING COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9266841",
+      "mmsi": "352006683",
+      "call_sign": "3E8015",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Panama"
+    },
+    "626480000": {
+      "uid": "57691",
+      "name": "GAS ENDURANCE",
+      "remarks": "(Linked To: AQUILA WORLDWIDE MARINE DEVELOPMENTS CORP.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9240419",
+      "mmsi": "626480000",
+      "call_sign": "TRBS7",
+      "vessel_type": "LPG Tanker",
+      "flag": "Gabon"
+    },
+    "511101444": {
+      "uid": "57692",
+      "name": "OCEAN RADIANCE",
+      "remarks": "(Linked To: AURORA BUSINESS COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9194969",
+      "mmsi": "511101444",
+      "call_sign": "T8A4807",
+      "vessel_type": "LPG Tanker",
+      "flag": "Palau"
+    },
+    "352003912": {
+      "uid": "57693",
+      "name": "QUANTUM STAR",
+      "remarks": "(Linked To: TAURUS GAS COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9225342",
+      "mmsi": "352003912",
+      "call_sign": "3E5322",
+      "vessel_type": "LPG Tanker",
+      "flag": "Panama"
+    },
+    "626457000": {
+      "uid": "57694",
+      "name": "GAS STRENGTH",
+      "remarks": "(Linked To: VEINTO GLOBAL MARINE INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9172636",
+      "mmsi": "626457000",
+      "call_sign": "TRBP8",
+      "vessel_type": "LPG Tanker",
+      "flag": "Gabon"
+    },
+    "374670000": {
+      "uid": "57705",
+      "name": "BRIGHT GOLD",
+      "remarks": "(Linked To: GS CHEMICAL TRANSPORTATION LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9171503",
+      "mmsi": "374670000",
+      "call_sign": "3EEC9",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Panama"
+    },
+    "268252804": {
+      "uid": "57706",
+      "name": "DOUBLE IN",
+      "remarks": "(Linked To: SCIENCE OBEDIENT INTERNATIONAL COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8917807",
+      "mmsi": "268252804",
+      "call_sign": "T7DJ2",
+      "vessel_type": "LPG Tanker",
+      "flag": "San Marino"
+    },
+    "613913606": {
+      "uid": "57707",
+      "name": "NARSIS",
+      "remarks": "(Linked To: SUN OCEAN SHIPPING INCORPORATED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9408358",
+      "mmsi": "613913606",
+      "call_sign": "TJM5238",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Cameroon"
+    },
+    "620999798": {
+      "uid": "57708",
+      "name": "G JADES",
+      "remarks": "(Linked To: GJADES SHIPPING COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9131096",
+      "mmsi": "620999798",
+      "call_sign": "D6A3797",
+      "vessel_type": "LPG Tanker",
+      "flag": "Comoros"
     }
   },
   "by_imo": {
@@ -22901,20 +23121,6 @@
       "vessel_type": "Crude Oil Tanker",
       "flag": "Vietnam"
     },
-    "9273387": {
-      "uid": "51551",
-      "name": "ASTRA",
-      "remarks": "(Linked To: SAO VIET PETROL TRANSPORTATION COMPANY LIMITED)",
-      "programs": [
-        "RUSSIA-EO14024",
-        "UKRAINE-EO13662"
-      ],
-      "imo": "9273387",
-      "mmsi": "574005470",
-      "call_sign": "XVJT7",
-      "vessel_type": "Chemical/Oil Tanker",
-      "flag": "Vietnam"
-    },
     "9223540": {
       "uid": "51553",
       "name": "OWENS",
@@ -29576,6 +29782,253 @@
       "call_sign": "3E6068",
       "vessel_type": "Oil Products Tanker",
       "flag": "Panama"
+    },
+    "9322279": {
+      "uid": "57667",
+      "name": "FEADSHIP",
+      "remarks": "(Linked To: MOZART MARITIME INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9322279",
+      "mmsi": "577697000",
+      "call_sign": "YJRK9",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Vanuatu"
+    },
+    "9252333": {
+      "uid": "57669",
+      "name": "VASLATI",
+      "remarks": "(Linked To: SPLENDID LEXY TRADING COMPANY LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9252333",
+      "mmsi": null,
+      "call_sign": "TJMA15",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Cameroon"
+    },
+    "9278698": {
+      "uid": "57672",
+      "name": "DAKUSH",
+      "remarks": "(Linked To: MEKONG LINES INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9278698",
+      "mmsi": "518999378",
+      "call_sign": "E5U5359",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Cook Islands"
+    },
+    "9126015": {
+      "uid": "57673",
+      "name": "GALA ROSE",
+      "remarks": "(Linked To: SPARKLING COURAGE LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9126015",
+      "mmsi": "477524600",
+      "call_sign": "VROT2",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Hong Kong"
+    },
+    "9326067": {
+      "uid": "57675",
+      "name": "TEJAS",
+      "remarks": "(Linked To: ROMY LINES INCORPORATED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9326067",
+      "mmsi": "352002323",
+      "call_sign": "3E2257",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Panama"
+    },
+    "9177583": {
+      "uid": "57676",
+      "name": "GREAT SAIL",
+      "remarks": "(Linked To: GREAT SAIL SHIPPING LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9177583",
+      "mmsi": "314001124",
+      "call_sign": "8PZW3",
+      "vessel_type": "LPG Tanker",
+      "flag": "Barbados"
+    },
+    "9387152": {
+      "uid": "57677",
+      "name": "OCEAN WAVE",
+      "remarks": "(Linked To: OW MARITIME INCORPORATED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9387152",
+      "mmsi": "511101945",
+      "call_sign": "T8A5483",
+      "vessel_type": "Products Tanker",
+      "flag": "Palau"
+    },
+    "9292187": {
+      "uid": "57678",
+      "name": "LUNA LUSTER",
+      "remarks": "(Linked To: GLOBAL FORTUNE SHIPPING LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9292187",
+      "mmsi": "667002478",
+      "call_sign": "9LS2181",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Sierra Leone"
+    },
+    "9246803": {
+      "uid": "57680",
+      "name": "SWIFT FALCON",
+      "remarks": "(Linked To: ARDEN ANGEL SHIPPING COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9246803",
+      "mmsi": "374176000",
+      "call_sign": "3EMI9",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Panama"
+    },
+    "9206396": {
+      "uid": "57682",
+      "name": "MIGHTY NAVIGATOR",
+      "remarks": "(Linked To: VERDA GAS CO LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9206396",
+      "mmsi": "477227800",
+      "call_sign": "VRXQ6",
+      "vessel_type": "LPG Tanker",
+      "flag": "Hong Kong"
+    },
+    "9266841": {
+      "uid": "57688",
+      "name": "MIDAS",
+      "remarks": "(Linked To: OCEAN MARVEL SHIPPING COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9266841",
+      "mmsi": "352006683",
+      "call_sign": "3E8015",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Panama"
+    },
+    "9240419": {
+      "uid": "57691",
+      "name": "GAS ENDURANCE",
+      "remarks": "(Linked To: AQUILA WORLDWIDE MARINE DEVELOPMENTS CORP.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9240419",
+      "mmsi": "626480000",
+      "call_sign": "TRBS7",
+      "vessel_type": "LPG Tanker",
+      "flag": "Gabon"
+    },
+    "9194969": {
+      "uid": "57692",
+      "name": "OCEAN RADIANCE",
+      "remarks": "(Linked To: AURORA BUSINESS COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9194969",
+      "mmsi": "511101444",
+      "call_sign": "T8A4807",
+      "vessel_type": "LPG Tanker",
+      "flag": "Palau"
+    },
+    "9225342": {
+      "uid": "57693",
+      "name": "QUANTUM STAR",
+      "remarks": "(Linked To: TAURUS GAS COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9225342",
+      "mmsi": "352003912",
+      "call_sign": "3E5322",
+      "vessel_type": "LPG Tanker",
+      "flag": "Panama"
+    },
+    "9172636": {
+      "uid": "57694",
+      "name": "GAS STRENGTH",
+      "remarks": "(Linked To: VEINTO GLOBAL MARINE INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9172636",
+      "mmsi": "626457000",
+      "call_sign": "TRBP8",
+      "vessel_type": "LPG Tanker",
+      "flag": "Gabon"
+    },
+    "9171503": {
+      "uid": "57705",
+      "name": "BRIGHT GOLD",
+      "remarks": "(Linked To: GS CHEMICAL TRANSPORTATION LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9171503",
+      "mmsi": "374670000",
+      "call_sign": "3EEC9",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Panama"
+    },
+    "8917807": {
+      "uid": "57706",
+      "name": "DOUBLE IN",
+      "remarks": "(Linked To: SCIENCE OBEDIENT INTERNATIONAL COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8917807",
+      "mmsi": "268252804",
+      "call_sign": "T7DJ2",
+      "vessel_type": "LPG Tanker",
+      "flag": "San Marino"
+    },
+    "9408358": {
+      "uid": "57707",
+      "name": "NARSIS",
+      "remarks": "(Linked To: SUN OCEAN SHIPPING INCORPORATED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9408358",
+      "mmsi": "613913606",
+      "call_sign": "TJM5238",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Cameroon"
+    },
+    "9131096": {
+      "uid": "57708",
+      "name": "G JADES",
+      "remarks": "(Linked To: GJADES SHIPPING COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9131096",
+      "mmsi": "620999798",
+      "call_sign": "D6A3797",
+      "vessel_type": "LPG Tanker",
+      "flag": "Comoros"
     }
   }
 }
