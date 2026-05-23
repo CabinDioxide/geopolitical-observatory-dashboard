@@ -9,14 +9,14 @@
       "path": "/iran-war/reports/02_iran_regime_scenarios.docx",
       "version": "4"
     },
-    "stance_summary": "The most important fact in the current Iran-Israel-US standoff is that Khamenei is dead. His son Mojtaba has taken over as Supreme Leader, but only nominally — the real decision-makers are IRGC commander Salami and Quds Force commander Qaani.\n\nThe Hormuz Strait is the chokepoint for 21% of global oil shipping, and throughput is now running at only about a tenth of pre-war levels (10-14%).\n\nThe next critical node is the November 2026 US midterm election. Trump will likely lose the House, putting his remaining two years in lame duck status with legislative paralysis. Israel's read on this is direct — Trump is the last reliable US president they can count on. From the midterm loss through Trump's January 2028 exit, that's 14 months in which the probability of Israel taking some unilateral escalation runs at 50-65%.\n\nThe real risk is not nuclear proliferation. It is Hormuz getting stuck at 10-14% throughput for 18-24 months, and one runaway event triggering a global energy system cascade."
+    "stance_summary": "The most important fact in the current Iran-Israel-US standoff is that Khamenei is dead. He was killed in an Israeli strike on 2026-02-28; the IRGC commander at the time, Pakpour, was killed the same day. His son Mojtaba was nominally named the new Supreme Leader on 3-09 but hasn't appeared publicly in 3 months — the actual decision-makers are the emergency-appointed new IRGC commander Vahidi (since 3-01) and Quds Force commander Qaani.\n\nThe Hormuz Strait is the chokepoint for 21% of global oil shipping, and throughput is now running at only about a tenth of pre-war levels (10-14%).\n\nThe next critical node is the November 2026 US midterm election. Trump will likely lose the House, putting his remaining two years in lame duck status with legislative paralysis. Israel's read on this is direct — Trump is the last reliable US president they can count on. From the midterm loss through Trump's January 2028 exit, that's 14 months in which the probability of Israel taking some unilateral escalation runs at 50-65%.\n\nThe real risk is not nuclear proliferation. It is Hormuz getting stuck at 10-14% throughput for 18-24 months, and one runaway event triggering a global energy system cascade."
   },
   "glossary": [
     {
       "term": "IRGC",
       "zh": "伊斯兰革命卫队",
       "en": "Islamic Revolutionary Guard Corps",
-      "note": "Iran's core armed force, commanded by Hossein Salami. Comprises five service branches (ground forces, navy, aerospace force, Quds Force for overseas special operations, and the Basij militia) plus 17 provincial corps. Through its commercial empire it controls roughly 30-40% of Iranian GDP."
+      "note": "Iran's core armed force, commanded by Hossein Vahidi. Comprises five service branches (ground forces, navy, aerospace force, Quds Force for overseas special operations, and the Basij militia) plus 17 provincial corps. Through its commercial empire it controls roughly 30-40% of Iranian GDP."
     },
     {
       "term": "Marja",
@@ -356,21 +356,21 @@
             },
             {
               "id": "ii-pre-irgc-leader",
-              "label": "IRGC commander Hossein Salami leads in practice",
-              "analysis": "Salami has been IRGC commander since 2019. During Mojtaba's incapacitation he is effectively the senior decision-maker. The relationships among Salami, Quds Force commander Esmail Qaani, and Mojtaba will shape IRGC's internal politics."
+              "label": "IRGC commander Hossein Vahidi leads in practice",
+              "analysis": "Vahidi has been IRGC commander since 2019. During Mojtaba's incapacitation he is effectively the senior decision-maker. The relationships among Vahidi, Quds Force commander Esmail Qaani, and Mojtaba will shape IRGC's internal politics."
             }
           ],
           "mechanism": {
             "id": "ii-mech",
             "label": "Mojtaba in name + IRGC in fact + courier communications",
-            "analysis": "Iran's supreme power structure has three institutions: the Supreme Leader, the IRGC (Islamic Revolutionary Guard Corps), and the 88-member Assembly of Experts.\n\nKhamenei died 2026-02-28. Ten days later, the Assembly of Experts spent 4 hours voting to approve his son Mojtaba as the new Supreme Leader. One detail of the vote was abnormal — both IRGC commander Salami and Quds Force commander Qaani showed up at the venue. Military presence at a religious vote is not how this is supposed to work.\n\nMojtaba has not appeared publicly in the 3 months since taking over. Nominally he is Supreme Leader; the actual decision-makers are Salami and Qaani. The Assembly of Experts, having just voted yes, cannot publicly oppose IRGC anymore — its check-and-balance function is paralyzed.\n\nWhat to watch from here is the disagreement between Salami and Qaani. The split between their factions has been surfacing in Iranian opposition media (e.g., Iran International) since 2025-11, but it's still at the anonymous-source level. If it ever escalates to public statements — one faction arresting the other's deputies, public speeches implying the other's strategic misjudgment, or a Jamkaran-type collective religious declaration favoring one side — then within 30 days Iran's foreign posture will shift visibly.\n\nThe two most likely directions: pragmatists win and Iran starts willing to negotiate (oil falls $20-30/bbl), or the situation slides toward civil war with each faction pulling armed forces (oil breaks $200/bbl)."
+            "analysis": "Iran's supreme power structure has three institutions: the Supreme Leader, the IRGC (Islamic Revolutionary Guard Corps), and the 88-member Assembly of Experts.\n\nOn 2026-02-28, Israel hit an underground facility near Tehran in a joint strike. Both Khamenei and the IRGC commander at the time, Pakpour (who took over in June 2025 after Salami was killed in the 12-day war), died the same day. On 3-01 Ahmad Vahidi was urgently named the new IRGC commander. On 3-08 the Assembly of Experts spent 4 hours voting to approve Khamenei's son Mojtaba as the new Supreme Leader. One abnormal detail of that vote: both Vahidi and Quds Force commander Qaani were physically present — military presence at a religious vote is not how this is supposed to work.\n\nMojtaba has not appeared publicly in the 3 months since taking over. Nominally he is Supreme Leader; the actual decision-makers are Vahidi and Qaani. The Assembly of Experts, having just voted yes, cannot publicly oppose IRGC anymore — its check-and-balance function is paralyzed.\n\nWhat to watch from here is the friction between Vahidi and Qaani. Vahidi was an emergency appointee; his authority isn't consolidated, and he needs internal purges to establish standing. Qaani has a different problem — he mysteriously survived several Israeli strikes in 2024-2025 (earning the nickname 'man with nine lives'), and since March 2026 there have been voices inside IRGC suspecting him of being a Mossad asset. These two facts together give Vahidi both motive and pretext to move on Qaani.\n\nIf the disagreement breaks out into the open — one side arrests the other's deputies, public speeches imply the other's strategic misjudgment, or a Jamkaran-type collective religious declaration favors one side — then within 30 days Iran's foreign posture shifts visibly.\n\nThe two most likely directions: pragmatists win and Iran starts willing to negotiate (oil falls $20-30/bbl), or the situation slides toward civil war with each faction pulling armed forces (oil breaks $200/bbl)."
           },
           "consequences": [
             {
               "id": "ii-con-recover",
               "label": "Mojtaba recovers and rules substantively (15–25%)",
               "weight": 0.2,
-              "analysis": "If Mojtaba's injuries heal enough for public appearances, meetings, and audiences with foreign leaders, he can gradually reclaim decision authority from IRGC. But that requires IRGC to cede ground — Salami and others won't yield easily."
+              "analysis": "If Mojtaba's injuries heal enough for public appearances, meetings, and audiences with foreign leaders, he can gradually reclaim decision authority from IRGC. But that requires IRGC to cede ground — Vahidi and others won't yield easily."
             },
             {
               "id": "ii-con-paralysis",
@@ -648,7 +648,7 @@
               "id": "ie-con-pre-election",
               "label": "Limited unilateral action before the Knesset election (25–35%)",
               "weight": 0.3,
-              "analysis": "Israel acts between 2026-08 and 2026-10 — assassinations + missile-site strikes. Aim: visible decisiveness ahead of the vote so the coalition crosses the Knesset threshold. Limited scale, does not break the deal framework. Possible forms: assassinations of senior IRGC (Salami, Qaani), strikes on Iranian missile lines, cyber attacks on nuclear-linked infrastructure."
+              "analysis": "Israel acts between 2026-08 and 2026-10 — assassinations + missile-site strikes. Aim: visible decisiveness ahead of the vote so the coalition crosses the Knesset threshold. Limited scale, does not break the deal framework. Possible forms: assassinations of senior IRGC (Vahidi, Qaani), strikes on Iranian missile lines, cyber attacks on nuclear-linked infrastructure."
             },
             {
               "id": "ie-con-lameduck",
@@ -788,7 +788,7 @@
       "phase": 1,
       "period": "2026-05 to 2026-10",
       "label": "Pre-election tension accumulation",
-      "description": "These 5 months are the last window before the Israeli Knesset election on 2026-10-27.\n\nNetanyahu's coalition sits at 52 seats — 9 short of the 61-seat majority. So he needs something in Iran policy before the election to lift his polling.\n\nBut his strategy is not immediate large moves; it's sustained low-intensity harassment — Mossad assassinating 2-3 mid-level IRGC officials per month plus cyber harassment. Doing anything large over 5 months would fatigue voters and risk Iranian mass retaliation disrupting the election schedule.\n\nOn the Iran side, the Mojtaba regime looks stable but is really run by Salami and Qaani. Ras Laffan-type red line attacks are projected to recur 1-2 times, each pushing global oil prices up $20-30/bbl.\n\nIn the US, MAGA's split continues to surface publicly. Vance, Rubio, and Don Jr. keep consuming each other. Midterm polling stays unfavorable for Republicans.",
+      "description": "These 5 months are the last window before the Israeli Knesset election on 2026-10-27.\n\nNetanyahu's coalition sits at 52 seats — 9 short of the 61-seat majority. So he needs something in Iran policy before the election to lift his polling.\n\nBut his strategy is not immediate large moves; it's sustained low-intensity harassment — Mossad assassinating 2-3 mid-level IRGC officials per month plus cyber harassment. Doing anything large over 5 months would fatigue voters and risk Iranian mass retaliation disrupting the election schedule.\n\nOn the Iran side, the Mojtaba regime looks stable but is really run by Vahidi and Qaani. Ras Laffan-type red line attacks are projected to recur 1-2 times, each pushing global oil prices up $20-30/bbl.\n\nIn the US, MAGA's split continues to surface publicly. Vance, Rubio, and Don Jr. keep consuming each other. Midterm polling stays unfavorable for Republicans.",
       "key_events": [
         "2026-06 IAEA quarterly report (still no enriched uranium verification)",
         "2026-07 G20 summit",
@@ -805,7 +805,7 @@
       "key_events": [
         "2026-11-03 US midterm election",
         "2026 late-Nov Israeli government reorganization",
-        "2026-12 IRGC internal Salami-Qaani factional fight may surface",
+        "2026-12 IRGC internal Vahidi-Qaani factional fight may surface",
         "2027-01 Trump's last State of the Union",
         "2027-02 most likely window for Israeli Mossad mass assassination wave or airstrikes"
       ]
@@ -814,7 +814,7 @@
       "phase": 3,
       "period": "2027-04 to 2027-10",
       "label": "Medium-intensity contest + key node preparation",
-      "description": "If the previous phase didn't produce a large-scale escalation, this phase moves into medium-intensity contest.\n\nIsrael keeps doing Mossad assassinations plus selective airstrikes; Iran retaliates in Ras Laffan mode but avoids full war. The GCC, led by Saudi Arabia, leans visibly toward Israel — what MBS said in the 2026-04-15 FT interview ('weakening Iran is a shared regional interest') gets operationalized: sharing IDF intel, permitting Israeli aircraft to transit GCC airspace. None of this would have been imaginable 40 years ago.\n\nChina-Russia divergence probability rises in this phase. If Ukraine hits a ceasefire at some point in 2027, Russia disengages from the Ukrainian front and its support for Iran could deepen (sending military advisors). China would then have to weigh keeping support for Iran (to preserve the mBridge dividend) against signing a new energy agreement with Saudi or UAE to dilute the Iran relationship.\n\nThe Mojtaba regime hits a critical test in 2027-06. If he still hasn't appeared publicly by then, IRGC's strategy of maintaining nominal legitimacy faces real challenge. The Salami-Qaani internal split could surface publicly for the first time at that node.",
+      "description": "If the previous phase didn't produce a large-scale escalation, this phase moves into medium-intensity contest.\n\nIsrael keeps doing Mossad assassinations plus selective airstrikes; Iran retaliates in Ras Laffan mode but avoids full war. The GCC, led by Saudi Arabia, leans visibly toward Israel — what MBS said in the 2026-04-15 FT interview ('weakening Iran is a shared regional interest') gets operationalized: sharing IDF intel, permitting Israeli aircraft to transit GCC airspace. None of this would have been imaginable 40 years ago.\n\nChina-Russia divergence probability rises in this phase. If Ukraine hits a ceasefire at some point in 2027, Russia disengages from the Ukrainian front and its support for Iran could deepen (sending military advisors). China would then have to weigh keeping support for Iran (to preserve the mBridge dividend) against signing a new energy agreement with Saudi or UAE to dilute the Iran relationship.\n\nThe Mojtaba regime hits a critical test in 2027-06. If he still hasn't appeared publicly by then, IRGC's strategy of maintaining nominal legitimacy faces real challenge. The Vahidi-Qaani internal split could surface publicly for the first time at that node.",
       "key_events": [
         "2027-04 US Q1 economic data (impact of high oil prices on GDP)",
         "2027-06 first anniversary of Mojtaba's succession",
@@ -838,10 +838,10 @@
   "worst_case": {
     "probability_24m": "3-5%",
     "label": "Collapse + maritime anarchy",
-    "description": "The worst-case trigger chain runs like this: the internal Salami-Qaani fratricide spirals out of control, the Mojtaba regime collapses, IRGC factional split sets off civil war, Hormuz fully closes, GCC states get directly drawn into combat. Iran as a whole enters a state resembling pre-revolution 1979 or post-US-invasion 2003 Iraq, and the region falls into maritime anarchy.\n\nThe 24-month baseline probability is 3-5%.\n\nLow probability, but the damage scale is the 1929 Depression plus the 1973 oil crisis plus the 2008 financial crisis plus the 2020 pandemic stacked — global GDP losing 8-12% in a single year, oil holding above $300/bbl for 60+ days, a global food crisis (Iran is the Central Asia-Middle East food corridor), a European winter energy crisis (North African gas depends on Middle East transit), East Asian manufacturing collapse (China and India absorb 70% of the energy price hike).\n\nLow probability doesn't mean ignorable. The 1929, 1973, 2008, and 2020 events all had ex-ante predicted probabilities below 5%.",
+    "description": "The worst-case trigger chain runs like this: the internal Vahidi-Qaani fratricide spirals out of control, the Mojtaba regime collapses, IRGC factional split sets off civil war, Hormuz fully closes, GCC states get directly drawn into combat. Iran as a whole enters a state resembling pre-revolution 1979 or post-US-invasion 2003 Iraq, and the region falls into maritime anarchy.\n\nThe 24-month baseline probability is 3-5%.\n\nLow probability, but the damage scale is the 1929 Depression plus the 1973 oil crisis plus the 2008 financial crisis plus the 2020 pandemic stacked — global GDP losing 8-12% in a single year, oil holding above $300/bbl for 60+ days, a global food crisis (Iran is the Central Asia-Middle East food corridor), a European winter energy crisis (North African gas depends on Middle East transit), East Asian manufacturing collapse (China and India absorb 70% of the energy price hike).\n\nLow probability doesn't mean ignorable. The 1929, 1973, 2008, and 2020 events all had ex-ante predicted probabilities below 5%.",
     "triggers": [
       "Mojtaba public death 2026-2027 + IRGC no consensus successor",
-      "Salami-Qaani factional civil war breaks out in Tehran streets",
+      "Vahidi-Qaani factional civil war breaks out in Tehran streets",
       "Israeli unilateral escalation triggers Iran's full Hormuz blockade",
       "Massive Chinese arms shipments arrive + Iran self-confidence surges + active escalation",
       "Trump uses B-2 to demolish Fordow in final 30 days, triggering Iran full counterstrike"
@@ -855,7 +855,7 @@
     ],
     "monitoring_signals": [
       "Mojtaba >90 days no public appearance + IRGC internal death rumors",
-      "Salami or Qaani arrested or killed by the other in Tehran",
+      "Vahidi or Qaani arrested or killed by the other in Tehran",
       "Iranian mine deployment found in Hormuz + first commercial ships sunk",
       "Confirmation of Chinese J-10C delivery to Iran",
       "Netanyahu publicly announces Israel will 'act alone' on Iran nuclear threat"

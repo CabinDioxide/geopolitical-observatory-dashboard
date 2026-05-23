@@ -815,7 +815,7 @@
           "id": "rh_pre_military",
           "label": "军政府化路径：IRGC 接管",
           "status": "watching",
-          "analysis": "军政府化路径的核心是 IRGC 在哈梅内伊体系无法平稳过渡的情况下事实接管伊朗。这条路成立的具体条件：\n\n- 莫杰塔巴接位过程出现公开争议（西斯塔尼表态质疑或库姆神学院公开反对）\n- IRGC 总司令 Hossein 萨拉米或圣城旅司令卡尼出面「稳定局势」\n- 假设阿亚图拉理事会（教法学家委员会）做出新的领袖选举但实际权力转移到 IRGC 手中\n- 民选政府（总统、议会）保留象征性地位但实际决策权下放到 IRGC 政治部模板是 1953-1979 年伊朗巴列维国王（Mohammad Reza Pahlavi）后期的 SAVAK 加军方控制结构，或 1980-2024 期间土耳其历次军方干政（特别是 1980 Evren 政变后的过渡）。差异是伊朗 IRGC 不会公开宣布政变——是「事实接管」而非「形式接管」。\n\n这条路下 IRGC 把霍尔木兹当政治杠杆。不是封锁——封锁等于全面战争。是周期性扣船加选择性放行的「差异化操作」：对美国旗帜船加重扣留概率、对 GCC 油轮提高通行费、对中国油轮免税通行。1987-88 油轮战争（Tanker War）期间 IRGC 扣留 67 艘船是这种模式的历史先例。\n\n按 Quilliam Chatham House 2026-05 报告测算，沙特阿美在军政府化路径下会把东西输油管道扩展（4 mb/d → 7 mb/d）加速到 2027 年完成。UAE 也会启动 Jebel Dhanna-富查伊拉第二条管道。中国变成最大受益者——通过 shadow fleet 加免税通行，中国买伊朗油的实际折扣可能加深到比布伦特低 30-40 美元/桶。",
+          "analysis": "军政府化路径的核心是 IRGC 在哈梅内伊体系无法平稳过渡的情况下事实接管伊朗。这条路成立的具体条件：\n\n- 莫杰塔巴接位过程出现公开争议（西斯塔尼表态质疑或库姆神学院公开反对）\n- IRGC 总司令 Hossein 瓦希迪或圣城旅司令卡尼出面「稳定局势」\n- 假设阿亚图拉理事会（教法学家委员会）做出新的领袖选举但实际权力转移到 IRGC 手中\n- 民选政府（总统、议会）保留象征性地位但实际决策权下放到 IRGC 政治部模板是 1953-1979 年伊朗巴列维国王（Mohammad Reza Pahlavi）后期的 SAVAK 加军方控制结构，或 1980-2024 期间土耳其历次军方干政（特别是 1980 Evren 政变后的过渡）。差异是伊朗 IRGC 不会公开宣布政变——是「事实接管」而非「形式接管」。\n\n这条路下 IRGC 把霍尔木兹当政治杠杆。不是封锁——封锁等于全面战争。是周期性扣船加选择性放行的「差异化操作」：对美国旗帜船加重扣留概率、对 GCC 油轮提高通行费、对中国油轮免税通行。1987-88 油轮战争（Tanker War）期间 IRGC 扣留 67 艘船是这种模式的历史先例。\n\n按 Quilliam Chatham House 2026-05 报告测算，沙特阿美在军政府化路径下会把东西输油管道扩展（4 mb/d → 7 mb/d）加速到 2027 年完成。UAE 也会启动 Jebel Dhanna-富查伊拉第二条管道。中国变成最大受益者——通过 shadow fleet 加免税通行，中国买伊朗油的实际折扣可能加深到比布伦特低 30-40 美元/桶。",
           "sources": [
             {
               "label": "Iran War 2025 / Report 2 军政府化路径",
@@ -904,7 +904,7 @@
           "id": "rh_obs_irgc",
           "label": "IRGC 海军每周声明频率与一致性",
           "threshold": "频率掉到每月 1-2 次或内容自相矛盾 → IRGC 指挥分散化的早期信号",
-          "analysis": "按 Atlantic Council 2026-03 Tehran's Toll Booth 报告记录，2026-04 以来 IRGC 海军每周发声 2-3 次（通过 Sepah News 和 Tasnim 同步发布），内容口径基本一致。如果这个频率掉到每月 1-2 次，或者出现 Bandar Abbas vs Bushehr 司令部对外说法矛盾的情况，是 IRGC 内部指挥分散化的早期信号。监测口径：Sepah News（IRGC 媒体）网站每周更新统计、Bandar Abbas + Bushehr 司令对外公开发声、IRGC 总司令 Hossein 萨拉米月度记者会。"
+          "analysis": "按 Atlantic Council 2026-03 Tehran's Toll Booth 报告记录，2026-04 以来 IRGC 海军每周发声 2-3 次（通过 Sepah News 和 Tasnim 同步发布），内容口径基本一致。如果这个频率掉到每月 1-2 次，或者出现 Bandar Abbas vs Bushehr 司令部对外说法矛盾的情况，是 IRGC 内部指挥分散化的早期信号。监测口径：Sepah News（IRGC 媒体）网站每周更新统计、Bandar Abbas + Bushehr 司令对外公开发声、IRGC 总司令 Hossein 瓦希迪月度记者会。"
         },
         {
           "id": "rh_obs_detain",

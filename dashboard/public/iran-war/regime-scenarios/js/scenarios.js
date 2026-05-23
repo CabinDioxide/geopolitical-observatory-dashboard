@@ -326,6 +326,18 @@ function findVariable(varId) {
   return null;
 }
 
+function setDrawer(tagText, html) {
+  const tag = document.getElementById('drawer-tag');
+  const body = document.getElementById('drawer-body');
+  if (!tag || !body) return;
+  tag.textContent = tagText || '';
+  body.innerHTML = html || '';
+  document.getElementById('drawer').classList.add('open');
+  document.getElementById('drawer-backdrop').classList.add('open');
+  document.getElementById('drawer').setAttribute('aria-hidden', 'false');
+  body.scrollTop = 0;
+}
+
 function openVariableDrawer(varId) {
   const v = findVariable(varId);
   if (!v) return;
