@@ -477,6 +477,14 @@ button.active { background: var(--blue); color: #fff; }
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: 140px;
+}
+/* drawer 内的 conn-flow 太窄时允许横向滚动而不挤压文字 */
+.drawer .conn-view {
+  overflow-x: auto;
+}
+.drawer .conn-flow {
+  min-width: 580px;
 }
 .conn-col-label {
   font-family: var(--font-display);
