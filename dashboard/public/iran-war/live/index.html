@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>实时信号追踪 · 伊朗危机沙盘推演</title>
+<link rel="stylesheet" href="../regime-scenarios/css/scenarios.css">
+<style>
+:root {
+  --content-max: 1100px;
+  --section-gap: 64px;
+}
+body {
+  background: #fafafa;
+}
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.hdr-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hdr h1 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.hdr .sub {
+  font-size: 13px;
+  color: var(--label-3, #86868b);
+  margin-top: 2px;
+}
+.hdr-meta {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--label-2, #515154);
+}
+.hdr-meta a {
+  color: var(--blue, #0071e3);
+  text-decoration: none;
+}
+
+/* ============ Intro ============ */
+.intro {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 36px;
+  margin: 36px 0 var(--section-gap);
+  box-shadow: 0 0 0 0.5px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03);
+}
+.intro h2 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange, #ff9500);
+  margin: 0 0 14px;
+}
+.intro p {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--label, #1d1d1f);
+  margin: 0 0 12px;
+}
+.intro p:last-child { margin-bottom: 0; }
+
+/* ============ Section heading ============ */
+.sec {
+  margin-bottom: var(--section-gap);
+}
+.sec-num {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 12px;
+  color: var(--label-3, #86868b);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.sec h2.sec-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+.sec-sub {
+  font-size: 14.5px;
+  color: var(--label-2, #515154);
+  margin-bottom: 24px;
+  line-height: 1.55;
+}
+
+/* ============ Timeline ============ */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: rgba(0,0,0,0.08);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 22px;
+  box-shadow: 0 0 0 0.5px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.03);
+  border-left: 3px solid #5e8ab0;
+}
+.timeline-item.tier-1 { border-left-color: #ff3b30; }
+.timeline-item.tier-2 { border-left-color: #ff9500; }
+.timeline-item.tier-3 { border-left-color: #ffcc00; }
+.timeline-item.tier-4 { border-left-color: #5856d6; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #5e8ab0;
+  box-shadow: 0 0 0 3px #fafafa, 0 0 0 4px rgba(0,0,0,0.08);
+}
+.timeline-item.tier-1::before { background: #ff3b30; }
+.timeline-item.tier-2::before { background: #ff9500; }
+.timeline-item.tier-3::before { background: #ffcc00; }
+.timeline-item.tier-4::before { background: #5856d6; }
+.event-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.event-date {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--label-2, #515154);
+}
+.event-tier {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(94, 138, 176, 0.1);
+  color: #5e8ab0;
+  text-transform: uppercase;
+}
+.tier-1 .event-tier { background: rgba(255, 59, 48, 0.1); color: #ff3b30; }
+.tier-2 .event-tier { background: rgba(255, 149, 0, 0.1); color: #ff9500; }
+.tier-3 .event-tier { background: rgba(255, 204, 0, 0.15); color: #b08800; }
+.tier-4 .event-tier { background: rgba(88, 86, 214, 0.1); color: #5856d6; }
+.event-source {
+  font-size: 11.5px;
+  color: var(--label-3, #86868b);
+}
+.event-source a { color: var(--blue, #0071e3); text-decoration: none; }
+.event-title {
+  font-size: 15.5px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--label, #1d1d1f);
+}
+.event-desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--label-2, #515154);
+  margin: 0;
+}
+.event-meaning {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 0.5px dashed rgba(0,0,0,0.1);
+  font-size: 12.5px;
+  color: var(--label-2, #515154);
+}
+.event-meaning strong { color: var(--label, #1d1d1f); }
+
+/* ============ Analyst matrix ============ */
+.lang-group {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 0 0.5px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03);
+}
+.lang-group h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+.lang-group .lang-note {
+  font-size: 12.5px;
+  color: var(--label-3, #86868b);
+  margin-bottom: 16px;
+}
+.analyst-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+.analyst-table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--label-3, #86868b);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 8px 10px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.08);
+}
+.analyst-table td {
+  padding: 10px 10px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.05);
+  vertical-align: top;
+  line-height: 1.55;
+}
+.analyst-table tr:last-child td { border-bottom: none; }
+.analyst-name {
+  font-weight: 600;
+  color: var(--label, #1d1d1f);
+}
+.analyst-affil {
+  font-size: 11px;
+  color: var(--label-3, #86868b);
+  margin-top: 2px;
+}
+.stance-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.stance-hawk { background: rgba(255, 59, 48, 0.1); color: #c83020; }
+.stance-dove { background: rgba(52, 199, 89, 0.12); color: #1d8a3d; }
+.stance-centrist { background: rgba(94, 138, 176, 0.12); color: #3c6890; }
+.stance-opp { background: rgba(88, 86, 214, 0.12); color: #4a48b0; }
+.stance-gov { background: rgba(255, 149, 0, 0.12); color: #b27000; }
+.stance-gulf { background: rgba(0, 113, 227, 0.1); color: #0058b3; }
+.stance-realist { background: rgba(142, 142, 147, 0.15); color: #545458; }
+.analyst-view {
+  color: var(--label, #1d1d1f);
+}
+.analyst-view a { color: var(--blue, #0071e3); text-decoration: none; }
+
+/* ============ Native quotes ============ */
+.quote-block {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 14px;
+  box-shadow: 0 0 0 0.5px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.03);
+  border-left: 3px solid #5e8ab0;
+}
+.quote-source {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.lang-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+.lang-fa { background: #fef3e8; color: #b45309; }
+.lang-ar { background: #ecfeff; color: #0c7280; }
+.lang-he { background: #f3e8ff; color: #6b21a8; }
+.quote-source-name { font-size: 12px; font-weight: 600; color: var(--label-2, #515154); }
+.quote-source-date { font-size: 11.5px; color: var(--label-3, #86868b); }
+.quote-original {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--label, #1d1d1f);
+  margin: 0 0 8px;
+  font-weight: 500;
+}
+.quote-translation {
+  font-size: 13px;
+  color: var(--label-2, #515154);
+  line-height: 1.6;
+  margin: 0 0 8px;
+  font-style: italic;
+}
+.quote-meaning {
+  font-size: 12.5px;
+  color: var(--label, #1d1d1f);
+  padding-top: 8px;
+  border-top: 0.5px dashed rgba(0,0,0,0.08);
+  line-height: 1.6;
+}
+.quote-meaning strong { font-weight: 600; }
+
+/* ============ Footer ============ */
+.footer {
+  border-top: 0.5px solid rgba(0,0,0,0.1);
+  padding: 32px 0 60px;
+  font-size: 12.5px;
+  color: var(--label-3, #86868b);
+  line-height: 1.7;
+}
+.footer a { color: var(--blue, #0071e3); text-decoration: none; }
+
+@media (max-width: 700px) {
+  .container { padding: 0 20px; }
+  .analyst-table th:nth-child(2), .analyst-table td:nth-child(2) { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <div>
+      <h1>实时信号追踪 + 信源矩阵</h1>
+      <div class="sub">近 48 小时关键事件 · 四语种分析师视角 · 原语种关键引文</div>
+    </div>
+    <nav class="hdr-meta">
+      <a href="../">← 沙盘母页</a>
+      <span>更新 2026-05-24</span>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- ============ Intro ============ -->
+<section class="intro">
+  <h2>本页用途</h2>
+  <p>主页面（<a href="../">沙盘推演</a>）提供框架性判断和结构性变量分析，本页负责追踪两件事：<strong>近 48 小时的关键实时事件</strong>，以及<strong>来自四种语言渠道的分析师 / 媒体视角</strong>。每个事件都对应到沙盘观察节点的某个档级（一档=红 / 二档=橙 / 三档=黄 / 四档=紫）。</p>
+  <p>原语种渠道（波斯语、阿拉伯语、希伯来语）的视角往往跟英文报道的视角不同——本页特别保留了几条<strong>英文渠道没有抓到的关键原语种信号</strong>，主要集中在 IRGC 系媒体与外交部公开分裂这一线索。</p>
+</section>
+
+<!-- ============ Section 1: Timeline ============ -->
+<section class="sec">
+  <div class="sec-num">SECTION 1 · 实时事件追踪</div>
+  <h2 class="sec-title">近 48 小时关键事件</h2>
+  <div class="sec-sub">按时间倒序。每个事件附触发沙盘观察节点档级 + 信源链接 + 信号意义。</div>
+
+  <!-- 5-24 -->
+  <div class="timeline">
+
+    <div class="timeline-item tier-1">
+      <div class="event-meta">
+        <span class="event-date">2026-05-24</span>
+        <span class="event-tier">一档信号</span>
+        <span class="event-source"><a href="https://kayhan.london/1405/01/28/400744/" target="_blank">Kayhan London (波斯语)</a></span>
+      </div>
+      <div class="event-title">伊朗官方源否认 Trump 关于浓缩铀的说法</div>
+      <p class="event-desc">Trump 公开声称伊朗同意交出高浓缩铀库存。Kayhan London 援引伊朗官方源直接否认——"هیچ توافقی نشده"（没有达成任何协议）。</p>
+      <div class="event-meaning"><strong>意义</strong>：Trump 的对外宣传跟伊朗实际谈判进度脱节。可能是单方面施压策略，也可能是误判 Mojtaba 圈层的授权范围。</div>
+    </div>
+
+    <div class="timeline-item tier-1">
+      <div class="event-meta">
+        <span class="event-date">2026-05-24</span>
+        <span class="event-tier">一档信号</span>
+        <span class="event-source"><a href="https://fararu.com/fa/news/969942/" target="_blank">Fararu / Kayhan (波斯语)</a></span>
+      </div>
+      <div class="event-title">Kayhan 强硬派日报公开批评 IRGC 海军越权声明</div>
+      <p class="event-desc">IRGC 海军发表"船只可通过霍尔木兹"声明后，德黑兰强硬派日报 Kayhan 公开点名批评——质问在 Trump 仍坚持封锁、海上贸易封锁尚未解除的情况下，IRGC 海军为何发表此类声明。</p>
+      <div class="event-meaning"><strong>意义</strong>：<strong>IRGC 内部各分支不同步</strong>——IRGC 海军跟 IRGC 总部 + 强硬派媒体出现公开分歧。这是沙盘一档观察节点"Vahidi 与 Qaani 公开同框"之外的新分裂层级。</div>
+    </div>
+
+    <div class="timeline-item tier-1">
+      <div class="event-meta">
+        <span class="event-date">2026-05-24</span>
+        <span class="event-tier">一档信号</span>
+        <span class="event-source">Fars News (波斯语)</span>
+      </div>
+      <div class="event-title">Fars News（IRGC 直属）公开点名批评外长 Araghchi</div>
+      <p class="event-desc">Fars 把 Araghchi 关于霍尔木兹开放的推文称为"<strong>意料之外的</strong>"，指 Trump 的"<strong>神经质式咆哮</strong>"让伊朗社会陷入混乱，并强调最高国家安全委员会和谈判团队"<strong>绝对而奇怪的沉默</strong>"。</p>
+      <div class="event-meaning"><strong>意义</strong>：<strong>Vahidi 圈层（IRGC 媒体）公开约束 Araghchi 的让步空间</strong>。这件事的严重性在于：从"匿名消息源说"升级到"IRGC 直属媒体公开点名"——这是 Vahidi-外交部分裂从私下到公开的关键阈值。沙盘评估应据此<strong>下调</strong>协议签成概率。</div>
+    </div>
+
+    <div class="timeline-item tier-2">
+      <div class="event-meta">
+        <span class="event-date">2026-05-24</span>
+        <span class="event-tier">二档信号</span>
+        <span class="event-source"><a href="https://us.cnn.com/2026/05/24/world/live-news/iran-war-news" target="_blank">CNN Live (英文)</a></span>
+      </div>
+      <div class="event-title">Rubio 改口："今天、明天或几天内可能有消息"</div>
+      <p class="event-desc">国务卿 Rubio 周日对记者表示伊朗"有可能"接受协议——"今天、明天或几天内可能有消息"。比 Trump 周六的"已基本谈成"明显降调。Sunday deadline 已过，没有正式签字。</p>
+      <div class="event-meaning"><strong>意义</strong>：白宫内部认知不一致——Trump 在公开层面冲刺，Rubio 在缓和预期。MAGA 强袭派（Rubio）跟孤立派（Trump 倾向）之间的紧张提前显现。</div>
+    </div>
+
+    <!-- 5-23 -->
+
+    <div class="timeline-item tier-3">
+      <div class="event-meta">
+        <span class="event-date">2026-05-23</span>
+        <span class="event-tier">三档信号</span>
+        <span class="event-source"><a href="https://www.israelhayom.com/2026/05/24/israel-alarmed-as-iran-deal-takes-shape/" target="_blank">Israel Hayom (希伯来语原)</a></span>
+      </div>
+      <div class="event-title">以色列被切断关键谈判更新</div>
+      <p class="event-desc">以色列安全消息源透露：以色列领导层<strong>几乎完全被切断</strong>关键谈判更新，必须依靠外交和<strong>伊朗政权内部的情报源</strong>获得协议进展信息。</p>
+      <div class="event-meaning"><strong>意义</strong>：Trump 这次绕过了以色列。Netanyahu 失去美国掌控感后，10-27 选举前自行采取大规模行动的动机显著上升——沙盘 Path A（选举前 Mossad 暗杀波）概率应<strong>上调</strong>。</div>
+    </div>
+
+    <div class="timeline-item tier-1">
+      <div class="event-meta">
+        <span class="event-date">2026-05-23</span>
+        <span class="event-tier">一档信号</span>
+        <span class="event-source"><a href="https://www.aljazeera.net/news/2026/5/6/" target="_blank">Al Jazeera (阿拉伯语原)</a> · <a href="https://www.pbs.org/newshour/world/trump-says-deal-with-iran-including-opening-strait-of-hormuz-is-largely-negotiated" target="_blank">PBS (英文)</a></span>
+      </div>
+      <div class="event-title">Trump 公开宣称协议"已基本谈成" + 霍尔木兹将重开</div>
+      <p class="event-desc">Trump 周六单方面声明：跟伊朗的协议"已基本谈成"（largely negotiated），并"包括重新开放霍尔木兹海峡"。</p>
+      <div class="event-meaning"><strong>意义</strong>：Trump 在用 Hormuz 重开换 Israel 的核红线（这条希伯来语 Ynet 已经点破）。这是 Path C "协议达成"路径的最强信号，但当晚就被 Fars 公开否定。</div>
+    </div>
+
+    <div class="timeline-item tier-1">
+      <div class="event-meta">
+        <span class="event-date">2026-05-23 晚</span>
+        <span class="event-tier">一档信号</span>
+        <span class="event-source"><a href="https://arabic.cnn.com/middle-east/article/2026/05/24/behind-the-conflicting-us-and-iranian-messaging-on-the-strait-of-hormuz" target="_blank">CNN Arabic (阿拉伯语原)</a></span>
+      </div>
+      <div class="event-title">Fars 直接否定 Trump 关于霍尔木兹的说法</div>
+      <p class="event-desc">Fars News：基于最新草案，"霍尔木兹海峡<strong>仍将由伊朗管理</strong>。虽然伊朗同意通过船只数量恢复到战前水平，但这绝不意味着回到战前的'自由通行'条件"。</p>
+      <div class="event-meaning"><strong>意义</strong>：协议核心条款（Hormuz 是否自由通行）双方理解南辕北辙。即使签字也大概率执行崩盘——这件事直接挑战美军是否真有能力让通行恢复。</div>
+    </div>
+
+    <!-- 5-23 Rome talks -->
+
+    <div class="timeline-item tier-2">
+      <div class="event-meta">
+        <span class="event-date">2026-05-23</span>
+        <span class="event-tier">二档信号</span>
+        <span class="event-source"><a href="https://www.timesofisrael.com/liveblog-may-23-2026/" target="_blank">Times of Israel (英文)</a></span>
+      </div>
+      <div class="event-title">罗马第五轮谈判 2.5 小时，"有进展但未决定性"</div>
+      <p class="event-desc">Witkoff + Araghchi 在罗马开第五轮谈判，约 2.5 小时。官方表述"有进展但未达决定性"。Fars 则把这个描述称为不准确。</p>
+      <div class="event-meaning"><strong>意义</strong>：第五轮谈判没有解决核心争议。下一关键节点是 30 天细节谈判窗口的具体启动日。</div>
+    </div>
+
+    <!-- 5-22 / 5-21 -->
+
+    <div class="timeline-item tier-2">
+      <div class="event-meta">
+        <span class="event-date">2026-05-22</span>
+        <span class="event-tier">二档信号</span>
+        <span class="event-source"><a href="https://www.iranintl.com/en/" target="_blank">Iran International (波斯语)</a></span>
+      </div>
+      <div class="event-title">巴基斯坦陆军总参谋长 Asim Munir 在德黑兰</div>
+      <p class="event-desc">Pakistan 陆军总参谋长 Asim Munir 周三周四在德黑兰跟伊朗议长 Qalibaf 谈，并跟 Pezeshkian 总统及外长 Araghchi 会面。同时跟美国特使 Witkoff 保持联系。</p>
+      <div class="event-meaning"><strong>意义</strong>：印证沙盘"巴基斯坦斡旋有效"象限路径活跃。Pakistan + Qatar 双轨斡旋是当前唯一在动的非西方渠道。</div>
+    </div>
+
+    <div class="timeline-item tier-3">
+      <div class="event-meta">
+        <span class="event-date">2026-05-21</span>
+        <span class="event-tier">三档信号</span>
+        <span class="event-source"><a href="https://www.timesofisrael.com/liberman-slams-emerging-iran-deal-accuses-netanyahu-of-failing-to-win-war-on-any-front/" target="_blank">Times of Israel</a></span>
+      </div>
+      <div class="event-title">Liberman 斥责协议为"灾难"，抨击 Netanyahu</div>
+      <p class="event-desc">反对派 Yisrael Beytenu 党魁 Liberman 公开声明：任何结束伊朗战争的协议都将是"灾难"——会让阿亚图拉政权保住权力。Liberman 同时指控 Netanyahu "在任何前线都未能赢得战争"。</p>
+      <div class="event-meaning"><strong>意义</strong>：Netanyahu 同时承受左右两侧国内政治压力——左翼说他失败，右翼说他妥协。沙盘 Knesset 选举（10-27）观察节点的压力机制具体化。</div>
+    </div>
+
+    <!-- 5-20 -->
+
+    <div class="timeline-item tier-1">
+      <div class="event-meta">
+        <span class="event-date">2026-05-20</span>
+        <span class="event-tier">一档信号</span>
+        <span class="event-source"><a href="https://www.axios.com/2026/05/20/trump-netanyahu-call-iran-peace-plan" target="_blank">Axios (英文)</a> · <a href="https://www.mako.co.il/news-diplomatic/2026_q2/Article-c291484f2664e91026.htm" target="_blank">Mako N12 (希伯来语原)</a></span>
+      </div>
+      <div class="event-title">Trump-Netanyahu 通话："Bibi 的头发着火了"</div>
+      <p class="event-desc">Trump 和 Netanyahu 周二就新一轮伊朗谈判通话。一位消息源直接引用希伯来语成语"<strong>השערות של ביבי עלו באש</strong>"（Bibi's hair caught on fire）形容 Netanyahu 通话后的状态。Netanyahu 召集党魁 + 国防系统高层紧急会议。</p>
+      <div class="event-meaning"><strong>意义</strong>：Trump 第一次实质性绕过 Netanyahu。如果 Trump 继续推进谈判，Netanyahu 唯一的反制手段是<strong>在协议签字前单方面行动</strong>制造既成事实。</div>
+    </div>
+
+    <!-- Smotrich Lebanon clause -->
+
+    <div class="timeline-item tier-2">
+      <div class="event-meta">
+        <span class="event-date">2026-05-20</span>
+        <span class="event-tier">二档信号</span>
+        <span class="event-source"><a href="https://houseofsaud.com/lebanon-clause-iran-deal/" target="_blank">Analysis: Lebanon clause</a></span>
+      </div>
+      <div class="event-title">Netanyahu 试图在协议中加入"黎巴嫩条款"</div>
+      <p class="event-desc">Netanyahu 试图加入一条限制以色列对真主党行动自由度的条款的反向版——即要求协议<strong>不限制</strong>以色列在黎巴嫩前线的军事行动。Trump 拒绝接受。</p>
+      <div class="event-meaning"><strong>意义</strong>：Netanyahu 已经在为协议崩盘准备"合理理由"——如果黎巴嫩条款无法纳入，可作为反对协议的体面借口。</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ Section 2: Analyst Matrix ============ -->
+<section class="sec">
+  <div class="sec-num">SECTION 2 · 信源矩阵</div>
+  <h2 class="sec-title">四语种分析师 + 媒体视角</h2>
+  <div class="sec-sub">按语种分组。每位分析师 / 每个媒体附立场标签 + 当前核心观点 + 跟踪链接。立场标签：<span class="stance-tag stance-hawk">鹰</span> <span class="stance-tag stance-dove">鸽</span> <span class="stance-tag stance-centrist">中</span> <span class="stance-tag stance-opp">反对派</span> <span class="stance-tag stance-gov">政府线</span> <span class="stance-tag stance-gulf">海湾</span> <span class="stance-tag stance-realist">现实主义</span></div>
+
+  <!-- English -->
+  <div class="lang-group">
+    <h3>🇺🇸 英文渠道（学者 + 智库）</h3>
+    <p class="lang-note">框架性分析为主，对伊朗内部细节依赖二手报道。</p>
+    <table class="analyst-table">
+      <thead>
+        <tr><th style="width: 22%;">分析师 / 机构</th><th style="width: 13%;">立场</th><th>当前核心观点</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="analyst-name">Trita Parsi</div><div class="analyst-affil">Quincy Institute</div></td>
+          <td><span class="stance-tag stance-dove">鸽</span></td>
+          <td class="analyst-view">美国海军封锁"反噬"了 Trump，正在阻碍外交进程。如果协议谈成，规模可能比 2015 JCPOA 更大。<a href="https://tritaparsi.substack.com/p/are-we-on-the-verge-of-a-us-iran" target="_blank">Substack 持续追踪 →</a></td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Karim Sadjadpour</div><div class="analyst-affil">Carnegie Endowment</div></td>
+          <td><span class="stance-tag stance-centrist">中</span></td>
+          <td class="analyst-view">局势"介于冷战与热战之间"。Trump 对伊朗政权快速决策能力有"不现实的期望"——这解释了为什么 Trump 的"已基本谈成"会跟 Iran 媒体口径直接矛盾。<a href="https://foreignpolicy.com/2026/04/22/karim-sadjadpour-iran-regime-future-war-gulf-energy-hormuz-cease-fire/" target="_blank">最新 FP 长文 →</a></td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Vali Nasr</div><div class="analyst-affil">Johns Hopkins SAIS</div></td>
+          <td><span class="stance-tag stance-centrist">中</span></td>
+          <td class="analyst-view">什叶派内部政治结构权威。框架（IRGC 内部分层 + 神职 vs 革命派）依然适用于解读当前 Vahidi-Araghchi 张力。</td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Ali Vaez</div><div class="analyst-affil">Crisis Group 伊朗项目主任</div></td>
+          <td><span class="stance-tag stance-dove">鸽</span></td>
+          <td class="analyst-view">直接跟 IRGC 高层接触。警告美伊都有升级激励，谈判破裂可能触发新一轮军事冲突。</td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Suzanne Maloney</div><div class="analyst-affil">Brookings</div></td>
+          <td><span class="stance-tag stance-centrist">中</span></td>
+          <td class="analyst-view">伊朗经济专家。看制裁解除的真实经济影响——能判断 Pezeshkian 是否会被推到前台的临界条件。</td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Esfandyar Batmanghelidj</div><div class="analyst-affil">Bourse & Bazaar Foundation</div></td>
+          <td><span class="stance-tag stance-realist">现实</span></td>
+          <td class="analyst-view">伊朗经济细节。当前关键追踪：制裁解除如果分阶段，每阶段对伊朗 GDP 的真实影响。</td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Sina Toossi</div><div class="analyst-affil">Center for International Policy</div></td>
+          <td><span class="stance-tag stance-dove">鸽</span></td>
+          <td class="analyst-view">德黑兰内部政治追踪。能区分官方表态与实际意图的区别。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Persian -->
+  <div class="lang-group">
+    <h3>🇮🇷 波斯语渠道（最关键的内部信号源）</h3>
+    <p class="lang-note">IRGC 系媒体与外交部之间的公开博弈通过这些渠道实时显现。</p>
+    <table class="analyst-table">
+      <thead>
+        <tr><th style="width: 22%;">媒体</th><th style="width: 13%;">立场</th><th>当前核心观点</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="analyst-name">Fars News</div><div class="analyst-affil">IRGC 直属</div></td>
+          <td><span class="stance-tag stance-hawk">鹰</span></td>
+          <td class="analyst-view">"Hormuz 仍由伊朗管理"——直接否定 Trump。最近<strong>公开点名外长 Araghchi 的推文"意料之外"</strong>。是 Vahidi 圈层对外发声的核心管道。</td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Tasnim News</div><div class="analyst-affil">IRGC 关联</div></td>
+          <td><span class="stance-tag stance-hawk">鹰</span></td>
+          <td class="analyst-view">"伊朗在这一阶段谈判中没有接受任何关于核问题的行动"——划定 Araghchi 让步红线。</td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Kayhan</div><div class="analyst-affil">德黑兰强硬派日报</div></td>
+          <td><span class="stance-tag stance-hawk">鹰</span></td>
+          <td class="analyst-view"><strong>最近公开批评 IRGC 海军越权声明</strong>——IRGC 内部各分支不同步的实证。代表最高领袖办公室强硬派。</td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">IRNA</div><div class="analyst-affil">伊朗官方通讯社</div></td>
+          <td><span class="stance-tag stance-gov">政府线</span></td>
+          <td class="analyst-view">外交部和总统办公室的官方口径出口。注意跟 IRGC 系媒体口径不一致的地方就是真实分歧。</td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Iran International</div><div class="analyst-affil">伦敦反对派频道</div></td>
+          <td><span class="stance-tag stance-opp">反对派</span></td>
+          <td class="analyst-view">有 IRGC 内部消息源。最近独家："美国谈判触发伊朗强硬派阵营史无前例分裂"。<a href="https://www.iranintl.com/en/" target="_blank">官网 →</a></td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Kayhan London</div><div class="analyst-affil">伦敦流亡保皇派</div></td>
+          <td><span class="stance-tag stance-opp">反对派</span></td>
+          <td class="analyst-view">直接报道伊朗官方源否认 Trump 的浓缩铀声明。提供官方"真实表态"与"对外宣传"的差距。</td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Amwaj Media</div><div class="analyst-affil">多语种区域分析平台</div></td>
+          <td><span class="stance-tag stance-realist">现实</span></td>
+          <td class="analyst-view">伊朗 + 沙特 + 土耳其同时有源。最早报道 Araghchi + Ali Larijani 实际拍板而非 Pezeshkian。<a href="https://amwaj.media" target="_blank">amwaj.media →</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Arabic -->
+  <div class="lang-group">
+    <h3>🇸🇦 阿拉伯语渠道（海湾视角）</h3>
+    <p class="lang-note">海湾国家的核心关切：协议是否会让伊朗保留对 GCC 国家的物理威慑。</p>
+    <table class="analyst-table">
+      <thead>
+        <tr><th style="width: 22%;">媒体</th><th style="width: 13%;">立场</th><th>当前核心观点</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="analyst-name">Al Jazeera</div><div class="analyst-affil">卡塔尔（多哈）</div></td>
+          <td><span class="stance-tag stance-gulf">海湾</span></td>
+          <td class="analyst-view">详细报道伊朗 14 点提议全文。把海湾国家 "敦促 Trump 暂停军事打击" 的立场作为重点框架。<a href="https://www.aljazeera.net/news/2026/5/6/" target="_blank">5-6 详报 →</a></td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">CNN Arabic</div><div class="analyst-affil">阿拉伯语版主流</div></td>
+          <td><span class="stance-tag stance-centrist">中</span></td>
+          <td class="analyst-view">5-24 专文分析"美伊关于霍尔木兹的矛盾信息意味着什么"，把这件事定位为协议的核心薄弱点。<a href="https://arabic.cnn.com/middle-east/article/2026/05/24/behind-the-conflicting-us-and-iranian-messaging-on-the-strait-of-hormuz" target="_blank">5-24 分析 →</a></td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Voice of Emirates</div><div class="analyst-affil">阿联酋</div></td>
+          <td><span class="stance-tag stance-gulf">海湾</span></td>
+          <td class="analyst-view">用"初步谅解 + 持续分歧"框架——核问题初步谅解 + 霍尔木兹持续分歧。<strong>阿联酋视角认为这种结构对海湾国家是坏消息</strong>——核问题被冻结但伊朗保留对海湾的物理威慑。</td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Al Arabiya</div><div class="analyst-affil">沙特官方背景</div></td>
+          <td><span class="stance-tag stance-gulf">海湾</span></td>
+          <td class="analyst-view">MBS 立场出口。关注美沙协调机制是否保留。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Hebrew -->
+  <div class="lang-group">
+    <h3>🇮🇱 希伯来语渠道（以色列政治光谱）</h3>
+    <p class="lang-note">以色列分析师集中在一个核心担忧：Trump 在用 Hormuz 重开换 Israel 的核红线。</p>
+    <table class="analyst-table">
+      <thead>
+        <tr><th style="width: 22%;">媒体</th><th style="width: 13%;">立场</th><th>当前核心观点</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="analyst-name">Mako N12</div><div class="analyst-affil">主流右翼</div></td>
+          <td><span class="stance-tag stance-hawk">鹰</span></td>
+          <td class="analyst-view">"<strong>Witkoff 在向 Trump 施压</strong>"——把 Witkoff 定位为对以色列不利的中间人。直接反映 Netanyahu 派系叙事。<a href="https://www.mako.co.il/news-diplomatic/2026_q2/Article-1b3b30a9ad55e91026.htm" target="_blank">N12 报道 →</a></td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Haaretz</div><div class="analyst-affil">中左翼</div></td>
+          <td><span class="stance-tag stance-centrist">中</span></td>
+          <td class="analyst-view">"以色列认为：伊朗在戏耍 Trump，达成核协议可能性低"——这反映以色列情报评估认为 Iran 实际并不打算让步。<a href="https://www.haaretz.co.il/news/politics/2026-05-23/ty-article/.premium/0000019e-55f5-d154-a5de-7ffd03550000" target="_blank">5-23 Haaretz →</a></td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Ynet</div><div class="analyst-affil">主流大众</div></td>
+          <td><span class="stance-tag stance-centrist">中</span></td>
+          <td class="analyst-view">"<strong>美伊谈判——结束战争的三阶段，不包括核问题</strong>"——直接揭穿协议的本质：Hormuz 跟核问题被解耦。这是以色列最害怕的。<a href="https://www.ynet.co.il/news/article/skbp5ujgze" target="_blank">Ynet 详报 →</a></td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Israel Hayom</div><div class="analyst-affil">Netanyahu 派系</div></td>
+          <td><span class="stance-tag stance-hawk">鹰</span></td>
+          <td class="analyst-view">5-24 标题"以色列对正在成形的伊朗协议警觉"——直接反映 Netanyahu 圈层立场。关键披露：以色列被切断关键谈判更新。<a href="https://www.israelhayom.com/2026/05/24/israel-alarmed-as-iran-deal-takes-shape/" target="_blank">5-24 报道 →</a></td>
+        </tr>
+        <tr>
+          <td><div class="analyst-name">Times of Israel</div><div class="analyst-affil">中等</div></td>
+          <td><span class="stance-tag stance-centrist">中</span></td>
+          <td class="analyst-view">反对派视角覆盖。Liberman 斥责协议"灾难"的报道，反映 Netanyahu 同时承受左右两侧压力。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ Section 3: Native Quotes ============ -->
+<section class="sec">
+  <div class="sec-num">SECTION 3 · 原语种关键引文</div>
+  <h2 class="sec-title">直接保留原文 + 翻译 + 信号意义</h2>
+  <div class="sec-sub">这些引文是英文报道没有完整传达的——保留原文是为了把"对内讲法"和"对外讲法"的差异显性化。</div>
+
+  <div class="quote-block">
+    <div class="quote-source">
+      <span class="lang-badge lang-fa">波斯语 فارسی</span>
+      <span class="quote-source-name">Kayhan London</span>
+      <span class="quote-source-date">2026-05-24</span>
+    </div>
+    <p class="quote-original" dir="rtl">"هیچ توافقی نشده"</p>
+    <p class="quote-translation">"没有达成任何协议"</p>
+    <div class="quote-meaning"><strong>信号</strong>：Trump 单方面宣称伊朗同意交出浓缩铀的同一时间，伊朗官方源直接否认。这是 Trump 对外宣传 vs 谈判实际进度之间最直接的反差证据。</div>
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-source">
+      <span class="lang-badge lang-fa">波斯语 فارسی</span>
+      <span class="quote-source-name">Fars News（IRGC 直属）</span>
+      <span class="quote-source-date">2026-05-24</span>
+    </div>
+    <p class="quote-original" dir="rtl">"توئیت عراقچی غیرمنتظره بود... سکوت مطلق و عجیب شورای عالی امنیت ملی و تیم مذاکره‌کننده"</p>
+    <p class="quote-translation">"Araghchi 的推文出乎意料……最高国家安全委员会和谈判团队保持绝对而奇怪的沉默"</p>
+    <div class="quote-meaning"><strong>信号</strong>：<strong>沙盘一档观察节点"Vahidi-Araghchi 公开分裂"实证</strong>。IRGC 直属媒体公开点名外长——级别已超过"匿名消息源"。沙盘据此应调整伊朗内部稳定性评估。</div>
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-source">
+      <span class="lang-badge lang-fa">波斯语 فارسی</span>
+      <span class="quote-source-name">Kayhan（德黑兰强硬派）</span>
+      <span class="quote-source-date">2026-05-24</span>
+    </div>
+    <p class="quote-original" dir="rtl">"چرا اعلام کردید کشتی‌ها می‌توانند از تنگه هرمز عبور کنند"</p>
+    <p class="quote-translation">"你们为什么宣布船只可以通过霍尔木兹？"</p>
+    <div class="quote-meaning"><strong>信号</strong>：IRGC 海军跟 IRGC 总部 + 强硬派媒体出现公开分歧。IRGC 内部不止 Vahidi-Araghchi 一条裂痕——还有 IRGC 海军 vs IRGC 总部 的细分层级。</div>
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-source">
+      <span class="lang-badge lang-he">希伯来语 עברית</span>
+      <span class="quote-source-name">Mako N12（消息源原话）</span>
+      <span class="quote-source-date">2026-05-20</span>
+    </div>
+    <p class="quote-original" dir="rtl">"השערות של ביבי עלו באש אחרי השיחה עם טראמפ"</p>
+    <p class="quote-translation">"Bibi 的头发在跟 Trump 通话后着火了"</p>
+    <div class="quote-meaning"><strong>信号</strong>：希伯来语成语形容 Netanyahu 失控状态。这是 Trump 第一次实质性绕过 Netanyahu 的信号。Netanyahu 唯一反制手段是在协议签字前单方面行动制造既成事实。</div>
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-source">
+      <span class="lang-badge lang-he">希伯来语 עברית</span>
+      <span class="quote-source-name">Ynet</span>
+      <span class="quote-source-date">2026-05-23</span>
+    </div>
+    <p class="quote-original" dir="rtl">"המו"מ בין ארה"ב ואיראן - שלושת השלבים לסיום המלחמה, בלי הגרעין"</p>
+    <p class="quote-translation">"美伊谈判——结束战争的三阶段，不包括核问题"</p>
+    <div class="quote-meaning"><strong>信号</strong>：以色列分析师揭穿协议本质——Hormuz 跟核问题被解耦。Trump 用 Hormuz 重开换以色列的红线。这条让以色列从"焦虑"升级到"准备单方面行动"。</div>
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-source">
+      <span class="lang-badge lang-ar">阿拉伯语 العربية</span>
+      <span class="quote-source-name">CNN Arabic</span>
+      <span class="quote-source-date">2026-05-24</span>
+    </div>
+    <p class="quote-original" dir="rtl">"تضارب الرسائل الأمريكية والإيرانية بشأن مضيق هرمز"</p>
+    <p class="quote-translation">"美伊关于霍尔木兹的矛盾信息"</p>
+    <div class="quote-meaning"><strong>信号</strong>：阿拉伯语主流媒体把"美伊对 Hormuz 的理解南辕北辙"定位为协议核心薄弱点。海湾视角认为这种模糊性<strong>对 GCC 国家是坏消息</strong>——意味着即使签字也大概率执行不动。</div>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer class="footer">
+  <h4 style="color: var(--label, #1d1d1f); font-size: 13px; font-weight: 600; margin: 0 0 8px;">追踪原则</h4>
+  <p>本页每 24-48 小时手动更新一次关键事件。原语种关键引文要求：(1) 必须来自原语种渠道，(2) 必须有英文报道未抓到的独立信息价值，(3) 必须能映射到沙盘观察节点。分析师矩阵每周校准一次。</p>
+  <p style="margin-top: 12px;">所有事件标签都映射到 <a href="../#observation">沙盘观察节点</a>。读者可以从单个事件回溯到沙盘判断框架，也可以从沙盘判断追踪到具体实时事件。</p>
+  <p style="margin-top: 16px;">数据基线 2026-05-24 · <a href="../">← 返回沙盘母页</a></p>
+</footer>
+
+</main>
+
+</body>
+</html>
