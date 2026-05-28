@@ -85,6 +85,22 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
 .obs-tier table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .obs-tier th, .obs-tier td { text-align: left; padding: 8px 10px; border-bottom: 0.5px solid rgba(0,0,0,0.06); vertical-align: top; line-height: 1.5; }
 .obs-tier th { font-weight: 600; color: var(--label-3, #86868b); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; }
+.obs-tier.constant-box { border-left-color: #007aff; background: #fafbfc; }
+.obs-tier.excluded { border-left-color: #86868b; background: #fafafa; }
+.var-body { display: flex; flex-direction: column; gap: 14px; margin-top: 10px; }
+.var-row h5 { font-size: 11px; font-weight: 700; color: var(--label-3, #86868b); margin: 0 0 5px; text-transform: uppercase; letter-spacing: 0.06em; }
+.var-row p { font-size: 13.5px; color: var(--label, #1d1d1f); margin: 0; line-height: 1.6; }
+.var-row ul { font-size: 13.5px; color: var(--label, #1d1d1f); margin: 0; padding-left: 18px; line-height: 1.6; }
+.var-row li { margin-bottom: 5px; }
+.var-row li b { color: #d8431a; font-weight: 600; }
+.causal-chain { background: #fafafa; border: 0.5px solid rgba(0,0,0,0.08); border-radius: 10px; padding: 18px 20px; margin-bottom: 24px; font-size: 12.5px; color: var(--label-2, #515154); }
+.cc-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; margin: 6px 0; }
+.cc-box { background: #fff; padding: 5px 11px; border-radius: 6px; border: 0.5px solid rgba(0,0,0,0.1); font-weight: 500; font-size: 12.5px; }
+.cc-box small { color: #86868b; font-weight: 400; margin-left: 4px; }
+.cc-box.constant { background: #e6f0ff; border-color: #c7dcff; }
+.cc-box.upstream { background: #fff5e6; border-color: #ffd699; }
+.cc-arrow { text-align: center; color: #86868b; font-size: 11px; margin: 4px 0; }
+.cc-link { color: #86868b; font-size: 11px; padding: 0 4px; }
 
 .footer { border-top: 0.5px solid rgba(0,0,0,0.1); padding: 32px 0 60px; font-size: 12.5px; color: var(--label-3, #86868b); line-height: 1.7; }
 .footer h4 { font-size: 13px; font-weight: 600; color: var(--label, #1d1d1f); margin: 0 0 8px; }
@@ -104,8 +120,8 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
     <div>
       <h1><span class="lang-zh-only">伊朗危机沙盘推演</span><span class="lang-en-only">Iran Crisis Sandbox</span></h1>
       <div class="sub">
-        <span class="lang-zh-only">主要变量 · 次要变量 · 沙盘四象限 · 最坏情景 · 观察节点</span>
-        <span class="lang-en-only">Primary &amp; Secondary Variables · 2×2 Quadrants · Worst Case · Observation Nodes</span>
+        <span class="lang-zh-only">主要变量 · 次要变量 · 沙盘四象限 · 最坏情景 · 关键变量监测</span>
+        <span class="lang-en-only">Primary &amp; Secondary Variables · 2×2 Quadrants · Worst Case · Key Variable Monitoring</span>
       </div>
     </div>
     <nav class="hdr-meta">
@@ -661,160 +677,325 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
 
 <section class="sec">
   <div class="sec-num">
-    <span class="lang-zh-only">SECTION 6 · 观察节点</span>
-    <span class="lang-en-only">SECTION 6 · OBSERVATION NODES</span>
+    <span class="lang-zh-only">SECTION 6 · 关键变量监测</span>
+    <span class="lang-en-only">SECTION 6 · KEY VARIABLE MONITORING</span>
   </div>
   <h2 class="sec-title">
-    <span class="lang-zh-only">关键观察清单</span>
-    <span class="lang-en-only">Key Watch List</span>
+    <span class="lang-zh-only">第一性原理筛选后的 4 个真变量 + 1 个常量</span>
+    <span class="lang-en-only">First-Principles Filter: 4 True Variables + 1 Constant</span>
   </h2>
   <div class="sec-sub">
-    <span class="lang-zh-only">按重要性分四档。每个节点都附触发阈值——一旦触发就意味着情景实质变化。建议一档二档每月 review 一次，三档每周看一次，四档突发监控。</span>
-    <span class="lang-en-only">Sorted into four tiers by importance. Each node has a trigger threshold — triggering means a substantive scenario change. Recommended: review Tier 1 and Tier 2 monthly, Tier 3 weekly, Tier 4 on-the-fly.</span>
+    <span class="lang-zh-only">沙盘的因果骨架来自一个常量（Israel Begin Doctrine，跨党派绑定）加四个真变量。我们不再追踪下游测量（里亚尔汇率、进口量）、噪声（内阁三角、单次媒体表态）和结构性常量（China 必选 GCC、Iran 必走核）——这些不是变量，无法移动沙盘象限。监测窗口 1-3 年。</span>
+    <span class="lang-en-only">The sandbox's causal skeleton: one constant (Israel's Begin Doctrine, cross-party binding) plus four true variables. We no longer track downstream measurements (rial rate, import volumes), noise (cabinet triangles, single media statements), or structural constants (China must pick GCC over Iran; Iran will always pursue nukes when able) — these are not variables and cannot move sandbox quadrants. Monitoring window: 1-3 years.</span>
+  </div>
+
+  <div class="causal-chain">
+    <div style="text-align:center; font-weight:600; margin-bottom:10px; color:#1d1d1f;">
+      <span class="lang-zh-only">因果传导骨架</span>
+      <span class="lang-en-only">Causal Skeleton</span>
+    </div>
+    <div class="cc-row">
+      <span class="cc-box constant"><span class="lang-zh-only">Begin Doctrine</span><span class="lang-en-only">Begin Doctrine</span><small><span class="lang-zh-only">常量</span><span class="lang-en-only">constant</span></small></span>
+    </div>
+    <div class="cc-arrow"><span class="lang-zh-only">↓ 强制激活</span><span class="lang-en-only">↓ forces activation</span></div>
+    <div class="cc-row">
+      <span class="cc-box"><span class="lang-zh-only">V2 · Iran 核重建</span><span class="lang-en-only">V2 · Iran nuclear reconstitution</span></span>
+      <span class="cc-link"><span class="lang-zh-only">⇄ 正反馈循环</span><span class="lang-en-only">⇄ positive feedback loop</span></span>
+      <span class="cc-box"><span class="lang-zh-only">Israel 重复打击</span><span class="lang-en-only">Israel repeat strikes</span></span>
+    </div>
+    <div class="cc-arrow"><span class="lang-zh-only">↑↓ 决定执行能力</span><span class="lang-en-only">↑↓ determines execution capacity</span></div>
+    <div class="cc-row">
+      <span class="cc-box upstream"><span class="lang-zh-only">V1 · Iran 决策能力</span><span class="lang-en-only">V1 · Iran decision capacity</span><small><span class="lang-zh-only">母变量</span><span class="lang-en-only">parent</span></small></span>
+    </div>
+    <div class="cc-arrow"><span class="lang-zh-only">↑ 政策方向 conditions</span><span class="lang-en-only">↑ conditions policy direction</span></div>
+    <div class="cc-row">
+      <span class="cc-box"><span class="lang-zh-only">V3 · Trump 个人方向</span><span class="lang-en-only">V3 · Trump's direction</span></span>
+      <span class="cc-link"><span class="lang-zh-only">← 时间贴现</span><span class="lang-en-only">← temporal discount</span></span>
+      <span class="cc-box"><span class="lang-zh-only">V4 · 后 Trump 时代</span><span class="lang-en-only">V4 · post-Trump era</span></span>
+    </div>
+  </div>
+
+  <div class="obs-tier constant-box">
+    <h4>
+      <span class="lang-zh-only">常量 · Begin Doctrine（1981）—— 以色列跨党派 doctrinal commitment</span>
+      <span class="lang-en-only">Constant · Begin Doctrine (1981) — Israel's cross-party doctrinal commitment</span>
+    </h4>
+    <div class="var-body">
+      <div class="var-row">
+        <h5><span class="lang-zh-only">性质</span><span class="lang-en-only">Nature</span></h5>
+        <p>
+          <span class="lang-zh-only">不是法律，是 doctrine，但在以色列国家安全决策中相当于宪法级。1981 年 Begin 政府空袭伊拉克 Osirak 核反应堆后正式确立。</span>
+          <span class="lang-en-only">Not statutory law but doctrine — functions at constitutional weight in Israeli national security decisions. Formally established by the Begin government after the 1981 strike on Iraq's Osirak reactor.</span>
+        </p>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">核心命题（转述）</span><span class="lang-en-only">Core Proposition (paraphrase)</span></h5>
+        <p>
+          <span class="lang-zh-only">当出现存在性威胁时，以色列将采取行动，即使独自行动。Begin 本人原话强调"now, not later, because later may be too late"。</span>
+          <span class="lang-en-only">When an existential threat arises, Israel will act, even alone. Begin's own words emphasized: "now, not later, because later may be too late."</span>
+        </p>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">应用记录</span><span class="lang-en-only">Application Record</span></h5>
+        <p>
+          <span class="lang-zh-only">1981 Osirak（伊拉克核反应堆）/ 2007 Deir ez-Zor / al-Kibar（叙利亚核设施）/ 2026 Iran（以方代号 Roaring Lion / Sha'agat Ha'Ari；美方代号 Epic Fury）。</span>
+          <span class="lang-en-only">1981 Osirak (Iraq); 2007 Deir ez-Zor / al-Kibar (Syria); 2026 Iran (IDF codename Roaring Lion / Sha'agat Ha'Ari; US codename Epic Fury).</span>
+        </p>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">法律依托</span><span class="lang-en-only">Legal Framework</span></h5>
+        <p>
+          <span class="lang-zh-only">Preventive Self-Defense（先发自卫）。宽泛解读 UN Charter Article 51 + 1837 Caroline Formula：自卫合法性要求"instant, overwhelming, leaving no choice of means, and no moment for deliberation"。国际法主流认为这属 preventive（先发）而非 anticipatory（预测性应对），与现行国际法存在张力——但以色列不在乎这一判定。</span>
+          <span class="lang-en-only">Preventive Self-Defense. A broad reading of UN Charter Article 51 plus the 1837 Caroline Formula: lawful self-defense requires "instant, overwhelming, leaving no choice of means, and no moment for deliberation." Mainstream international law treats this as preventive (not anticipatory) and finds tension with existing law — but Israel does not weight this judgment.</span>
+        </p>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">沙盘含义</span><span class="lang-en-only">Sandbox Implication</span></h5>
+        <p>
+          <span class="lang-zh-only">只要 Iran 核计划重启被发现，无论 Netanyahu / Lapid / Gantz 谁执政，Israel 都会再次打击。V2（Iran 核重建尝试）一旦激活，沙盘必有反应——这是骨架，不是变量。</span>
+          <span class="lang-en-only">Whenever Iran's nuclear program is observed to be reconstituting, Israel will strike again — regardless of whether Netanyahu, Lapid, or Gantz is in power. V2 (Iran's reconstitution attempt), once activated, structurally triggers a response. This is the skeleton, not a variable.</span>
+        </p>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">主要信源</span><span class="lang-en-only">Key Sources</span></h5>
+        <p>
+          <span class="lang-zh-only">INSS《Begin Doctrine: Lessons of Osirak and Deir ez-Zor》 · Duke Lawfire 法律分析 · Wikipedia "Begin Doctrine" · JPPI Shuki Friedman《Yes, Israel's war with Iran is legal》</span>
+          <span class="lang-en-only">INSS "Begin Doctrine: Lessons of Osirak and Deir ez-Zor" · Duke Lawfire legal analysis · Wikipedia "Begin Doctrine" · JPPI's Shuki Friedman, "Yes, Israel's war with Iran is legal"</span>
+        </p>
+      </div>
+    </div>
   </div>
 
   <div class="obs-tier t1">
     <h4>
-      <span class="lang-zh-only">一档 · 决定整个战争走向（伊朗政权 + 以色列战略）</span>
-      <span class="lang-en-only">Tier 1 · Determines the war's overall trajectory (Iran regime + Israel strategy)</span>
+      <span class="lang-zh-only">V1 · Iran 政权决策能力 —— 最上游母变量</span>
+      <span class="lang-en-only">V1 · Iran Regime Decision-Making Capacity — Most Upstream Parent Variable</span>
     </h4>
-    <table>
-      <thead>
-        <tr>
-          <th><span class="lang-zh-only">观察节点</span><span class="lang-en-only">Node</span></th>
-          <th><span class="lang-zh-only">触发阈值</span><span class="lang-en-only">Threshold</span></th>
-          <th><span class="lang-zh-only">含义</span><span class="lang-en-only">Meaning</span></th>
-        </tr>
-      </thead>
-      <tbody class="lang-zh-only">
-        <tr><td>Mojtaba 公开露面</td><td>超过 90 天仍未露面 / 突然密集露面</td><td>前者意味"IRGC 在隐瞒死亡或植物状态"；后者意味"权威修复尝试"</td></tr>
-        <tr><td>Sistani 公开发声</td><td>任何形式的公开声明</td><td>Sistani 打破沉默会动摇整个 IRGC + Mojtaba 框架的合法性根基</td></tr>
-        <tr><td>Vahidi 与 Qaani 公开同框</td><td>联合公开露面 vs 分别露面</td><td>同源圣城旅系是否仍紧密结盟</td></tr>
-        <tr><td>Pezeshkian 国际露面</td><td>出现在 G20、UN 等国际场合</td><td>Vahidi 圈层把他推到前台做谈判台面人物——经济压力到了临界点</td></tr>
-        <tr><td>胡齐斯坦再现抗议</td><td>任何大规模阿拉伯族裔抗议</td><td>直接威胁伊朗 80% 油田生产</td></tr>
-        <tr><td>Knesset 选举结果</td><td>2026-10-27 投票当晚</td><td>决定后 4 年以色列对伊政策方向</td></tr>
-        <tr><td>Smotrich 党门槛</td><td>跌破 3.25% 出局 / 联盟通过降低门槛立法</td><td>前者极端派失内阁席位；后者 Netanyahu 强行保住极端派</td></tr>
-        <tr><td>Mossad 大规模暗杀波</td><td>一周内 5+ 名 IRGC 高层被杀</td><td>路径 A/B 启动</td></tr>
-        <tr><td>以色列再次空袭伊朗本土</td><td>任何越境空袭</td><td>升级阶段确认</td></tr>
-      </tbody>
-      <tbody class="lang-en-only">
-        <tr><td>Mojtaba public appearance</td><td>90+ days still absent / sudden dense appearances</td><td>Former: IRGC may be hiding death or vegetative state. Latter: authority-repair attempt.</td></tr>
-        <tr><td>Sistani public statement</td><td>Any form of public declaration</td><td>If Sistani breaks his silence, it shakes the legitimacy foundation of the IRGC + Mojtaba framework</td></tr>
-        <tr><td>Vahidi &amp; Qaani public co-appearance</td><td>Joint vs separate appearances</td><td>Whether the shared Quds Force lineage remains tightly aligned</td></tr>
-        <tr><td>Pezeshkian international appearance</td><td>Appears at G20, UN, etc.</td><td>Vahidi circle is pushing him into the foreground as the negotiation face — economic pressure has hit critical</td></tr>
-        <tr><td>Khuzestan protests recur</td><td>Any large-scale Arab-ethnic protest</td><td>Direct threat to 80% of Iran's oil production</td></tr>
-        <tr><td>Knesset election result</td><td>Night of 2026-10-27</td><td>Sets Israel's Iran policy direction for the next 4 years</td></tr>
-        <tr><td>Smotrich party threshold</td><td>Falls below 3.25% / coalition lowers threshold by law</td><td>Former: extremists lose cabinet seats. Latter: Netanyahu forcibly preserves them</td></tr>
-        <tr><td>Mossad mass assassination wave</td><td>5+ senior IRGC killed in one week</td><td>Path A/B initiated</td></tr>
-        <tr><td>Israel strikes Iranian soil again</td><td>Any cross-border airstrike</td><td>Confirms escalation phase</td></tr>
-      </tbody>
-    </table>
+    <div class="var-body">
+      <div class="var-row">
+        <h5><span class="lang-zh-only">为什么是母变量</span><span class="lang-en-only">Why this is the parent variable</span></h5>
+        <p>
+          <span class="lang-zh-only">所有 Iran 侧的沙盘行为——是否封锁海峡、是否重建核计划、是否谈判、是否援助 proxy——都受这个变量制约。一个无法协调决策的德黑兰，连"是否封锁海峡"都不能算"伊朗的决定"，可能是某个 IRGC 海军次司令的擅自行动 → 高失控风险。</span>
+          <span class="lang-en-only">All Iranian-side sandbox behavior — whether to close the Strait, reconstitute nuclear, negotiate, fund proxies — is conditioned on this variable. A Tehran unable to coordinate decisions cannot properly "decide" to close the Strait at all; it could be a sub-commander's unilateral action — high escape-velocity risk.</span>
+        </p>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">当前状态（2026-05 核实）</span><span class="lang-en-only">Current state (2026-05 verified)</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">Khamenei 已于 2026-02-28 在美以联合打击中遇刺身亡</span><span class="lang-en-only">Khamenei was assassinated 2026-02-28 in the joint US-Israeli strike</span></li>
+          <li><span class="lang-zh-only">Mojtaba Khamenei 2026-03-09 由专家会议名义继任，但严重受伤（脸/臂/躯/腿三度烧伤，三次手术，等待假肢）</span><span class="lang-en-only">Mojtaba Khamenei was named successor 2026-03-09 by the Assembly of Experts but is severely injured (3rd-degree burns on face/arm/torso/leg, three surgeries, awaiting prosthetic)</span></li>
+          <li><span class="lang-zh-only">情报评估分裂：CNN/Fox 显示 Mojtaba 仍在主导对美战略；i24NEWS 等评估他在 Qom 昏迷、由 IRGC 控制</span><span class="lang-en-only">Intelligence assessments split: CNN/Fox indicate Mojtaba is still directing US strategy; i24NEWS and others assess he is unconscious in Qom and controlled by the IRGC</span></li>
+          <li><span class="lang-zh-only">议长 Qalibaf（IRGC+文官双背景）原是对美核心谈判渠道，但 2026-04 在 IRGC 内部压力下退出此角色</span><span class="lang-en-only">Speaker Qalibaf (IRGC+civilian background) was the main negotiation channel with the US but stepped down from this role in April 2026 under IRGC internal pressure</span></li>
+          <li><span class="lang-zh-only">2026-04 起官员、议员、教士、官媒在战争策略和对美谈判上公开冲突——NCRI 与 Iran International 共同形容为"指挥危机"</span><span class="lang-en-only">From April 2026, officials, lawmakers, clerics, and state media have been publicly clashing over war strategy and US negotiations — NCRI and Iran International both describe this as a "crisis of command"</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">3 年内的取值方向</span><span class="lang-en-only">Convergence values (1-3 year window)</span></h5>
+        <ul>
+          <li><span class="lang-zh-only"><b>A · 强人整合</b>：Vahidi-Qaani 联手 / 新强人崛起 → 凝聚的强硬政权，可决定海峡封锁、可加速核突破 → 沙盘进入"幸存 + 加速对抗"</span><span class="lang-en-only"><b>A · Strongman consolidation</b>: Vahidi-Qaani alliance or new strongman emerges → unified hardline regime, can decide on Strait, can accelerate nuclear breakout → "survived + accelerated confrontation"</span></li>
+          <li><span class="lang-zh-only"><b>B · 持续多派系</b>：Mojtaba 名义存在但实际分权 → 行为不可预测，IRGC 次司令、地方武装可能擅自启动重大事件 → 高失控风险</span><span class="lang-en-only"><b>B · Persistent multi-faction</b>: Mojtaba nominally present, real power divided → unpredictable behavior; IRGC sub-commanders, local forces may unilaterally trigger major events → high escape-velocity risk</span></li>
+          <li><span class="lang-zh-only"><b>C · 内部政变 / 新革命</b>：现有 elite 被推翻 → 沙盘进入"崩溃"行</span><span class="lang-en-only"><b>C · Internal coup / new revolution</b>: existing elite overthrown → sandbox enters "collapse" row</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">收敛 trigger（事件，不是数字）</span><span class="lang-en-only">Convergence triggers (events, not metrics)</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">Mojtaba 90+ 天未公开露面 / 突然密集露面</span><span class="lang-en-only">Mojtaba absent 90+ days / sudden burst of public appearances</span></li>
+          <li><span class="lang-zh-only">Sistani（伊拉克什叶最高权威）公开就 Iran 局势发声</span><span class="lang-en-only">Sistani (highest Iraqi Shia authority) makes any public statement on Iran</span></li>
+          <li><span class="lang-zh-only">Vahidi-Qaani 公开破裂（互相指控）</span><span class="lang-en-only">Vahidi-Qaani public break (mutual accusations)</span></li>
+          <li><span class="lang-zh-only">新 IRGC 总司令任命（替代 Vahidi）</span><span class="lang-en-only">New IRGC commander-in-chief appointed (replacing Vahidi)</span></li>
+          <li><span class="lang-zh-only">大规模高层官员公开倒戈</span><span class="lang-en-only">Large-scale defections of senior officials</span></li>
+          <li><span class="lang-zh-only">Pezeshkian 突然出现在 G20/UN 等国际场合（说明 Vahidi 圈把他推到谈判台前）</span><span class="lang-en-only">Pezeshkian suddenly appears at G20/UN (Vahidi circle pushing him forward as negotiation face)</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">权威信源</span><span class="lang-en-only">Authoritative sources to track</span></h5>
+        <p>
+          <span class="lang-zh-only">Raz Zimmt（INSS 伊朗与什叶轴心项目主任）· Iran International · RFE/RL Iran Desk · NCRI · CFR "Iran's Power Centers" · The Soufan Center "Iran's Power Structure Adapts to War" · TIME "The New Leaders Calling the Shots in Iran"（2026-05-06）</span>
+          <span class="lang-en-only">Raz Zimmt (INSS Iran & Shi'ite Axis program director) · Iran International · RFE/RL Iran Desk · NCRI · CFR "Iran's Power Centers" · The Soufan Center "Iran's Power Structure Adapts to War" · TIME "The New Leaders Calling the Shots in Iran" (2026-05-06)</span>
+        </p>
+      </div>
+    </div>
   </div>
 
   <div class="obs-tier t2">
     <h4>
-      <span class="lang-zh-only">二档 · 决定路径选择（MAGA + 中俄）</span>
-      <span class="lang-en-only">Tier 2 · Determines path selection (MAGA + China-Russia)</span>
+      <span class="lang-zh-only">V2 · Iran 核重建尝试 ⇄ Israel 重复打击的正反馈循环</span>
+      <span class="lang-en-only">V2 · Iran's Reconstitution Attempt ⇄ Israel's Repeat-Strike Positive Feedback Loop</span>
     </h4>
-    <table>
-      <thead>
-        <tr>
-          <th><span class="lang-zh-only">观察节点</span><span class="lang-en-only">Node</span></th>
-          <th><span class="lang-zh-only">触发阈值</span><span class="lang-en-only">Threshold</span></th>
-          <th><span class="lang-zh-only">含义</span><span class="lang-en-only">Meaning</span></th>
-        </tr>
-      </thead>
-      <tbody class="lang-zh-only">
-        <tr><td>美国中期选举</td><td>2026-11-03 当晚</td><td>Trump 是否进入 lame duck</td></tr>
-        <tr><td>Trump 伊战支持率</td><td>跌破 35% / 回升至 50%</td><td>国内政治压力调整窗口</td></tr>
-        <tr><td>Vance-Rubio 公开冲突</td><td>任何政策分歧的公开表态</td><td>MAGA 内部裂痕加深</td></tr>
-        <tr><td>B-2 出动拆 Fordow</td><td>卸任前 30 天的飞行准备信号</td><td>Trump 战略遗产决策最后一搏</td></tr>
-        <tr><td>乌克兰停火</td><td>任何形式的临时停火协议</td><td>俄罗斯抽身后可能加深对伊援助</td></tr>
-        <tr><td>中国 J-10C 交付伊朗</td><td>公开确认任何战机到货</td><td>全球能源市场震动信号</td></tr>
-        <tr><td>mBridge 结算量披露</td><td>公开数据显示年化超 1000 亿美元</td><td>去美元化叙事质变</td></tr>
-        <tr><td>俄军事顾问公开赴伊</td><td>任何形式的官方声明</td><td>美俄直接对抗风险上升</td></tr>
-      </tbody>
-      <tbody class="lang-en-only">
-        <tr><td>US midterm election</td><td>Night of 2026-11-03</td><td>Whether Trump enters lame duck</td></tr>
-        <tr><td>Trump Iran-war approval</td><td>Drops below 35% / recovers to 50%</td><td>Adjustment window for domestic political pressure</td></tr>
-        <tr><td>Vance–Rubio public conflict</td><td>Any public expression of policy disagreement</td><td>Deepens MAGA fracture</td></tr>
-        <tr><td>B-2 sortie to destroy Fordow</td><td>Pre-departure flight prep signals in final 30 days</td><td>Trump's strategic-legacy final push</td></tr>
-        <tr><td>Ukraine ceasefire</td><td>Any form of temporary ceasefire</td><td>Russia disengages from Ukraine, possibly deepening Iran aid</td></tr>
-        <tr><td>Chinese J-10C delivery to Iran</td><td>Public confirmation of any aircraft arrival</td><td>Global energy market shock signal</td></tr>
-        <tr><td>mBridge settlement volume disclosed</td><td>Public data shows annualized over $100B</td><td>De-dollarization narrative qualitative shift</td></tr>
-        <tr><td>Russian military advisors openly to Iran</td><td>Any form of official statement</td><td>US-Russia direct confrontation risk rises</td></tr>
-      </tbody>
-    </table>
+    <div class="var-body">
+      <div class="var-row">
+        <h5><span class="lang-zh-only">为什么是驱动引擎</span><span class="lang-en-only">Why this is the driving engine</span></h5>
+        <p>
+          <span class="lang-zh-only">Begin Doctrine 锁死了 Israel 反应——所以 Iran 是否重建核就是强迫 Israel 持续打击的引擎。Zimmt 的关键洞察：政权幸存反而加大 breakout 激励，因为核武是政权 vs 美以的唯一终极威慑。这就形成 deadly feedback loop：Iran 重建 → Israel 再打 → Iran 更有动机重建。</span>
+          <span class="lang-en-only">The Begin Doctrine locks Israel's response — so whether Iran reconstitutes nukes is the engine forcing Israel into sustained strikes. Zimmt's key insight: regime survival actually increases the breakout incentive, because nukes are the regime's only ultimate deterrent against US/Israel. This creates a deadly feedback loop: Iran reconstitutes → Israel strikes again → Iran has more motivation to reconstitute.</span>
+        </p>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">当前状态（2026-05 核实）</span><span class="lang-en-only">Current state (2026-05 verified)</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">主要核设施被打击：Natanz、Fordow、Isfahan（Operation Roaring Lion + Epic Fury）</span><span class="lang-en-only">Major nuclear facilities struck: Natanz, Fordow, Isfahan (Operation Roaring Lion + Epic Fury)</span></li>
+          <li><span class="lang-zh-only">IAEA 检查员准入战后受限</span><span class="lang-en-only">IAEA inspector access restricted post-strikes</span></li>
+          <li><span class="lang-zh-only">Zimmt 在 RFE/RL 访谈中警告：政权幸存反而加大 break out 激励——Mojtaba "可能冒险 break out，因为这是对美以的终极威慑"</span><span class="lang-en-only">Zimmt warned in an RFE/RL interview: regime survival actually increases breakout incentive — Mojtaba "might take the risk of breaking out, because this would be the ultimate deterrence vis-à-vis Israel and the US"</span></li>
+          <li><span class="lang-zh-only">Israel + US 2026-05-27/28 再次打击伊朗（Bandar Abbas 无人机地面控制站，击落伊朗无人机）——说明对重建迹象的关切持续</span><span class="lang-en-only">Israel + US struck Iran again 2026-05-27/28 (Bandar Abbas drone ground control station, downed Iranian drones) — concern over reconstitution signs is ongoing</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">3 年内的取值方向</span><span class="lang-en-only">Convergence values</span></h5>
+        <ul>
+          <li><span class="lang-zh-only"><b>A · 重建失败</b>：设施毁灭 + 决策瘫痪 → Israel 可宣告胜利收兵 → 沙盘进入"政权幸存 + 海峡缓慢恢复"稳态</span><span class="lang-en-only"><b>A · Reconstitution fails</b>: facilities destroyed + decision paralysis → Israel can declare victory and disengage → "regime survived + Strait gradually reopens" stable state</span></li>
+          <li><span class="lang-zh-only"><b>B · 缓慢隐蔽重建</b>：IRGC 在隐蔽地点恢复浓缩 → Israel 持续打击 → 沙盘维持"低烈度持续战争"</span><span class="lang-en-only"><b>B · Slow covert reconstitution</b>: IRGC restores enrichment at hidden sites → Israel sustains strikes → "low-intensity persistent war" mode</span></li>
+          <li><span class="lang-zh-only"><b>C · 快速隐蔽 break out</b>：在 IAEA 见不到的地方完成武器化 → 既成事实（Iran 成核武国家）→ 沙盘进入"区域核扩散"（沙特/土耳其连锁走核）</span><span class="lang-en-only"><b>C · Rapid covert breakout</b>: weaponization completed where IAEA cannot see → fait accompli (Iran becomes nuclear power) → "regional proliferation cascade" (Saudi/Turkey follow)</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">收敛 trigger</span><span class="lang-en-only">Convergence triggers</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">IAEA 季度理事会报告显示浓缩活动恢复 / 完全中断</span><span class="lang-en-only">IAEA quarterly Board of Governors report shows enrichment resumed / fully halted</span></li>
+          <li><span class="lang-zh-only">IAEA 检查员被驱逐 / 重新获准入</span><span class="lang-en-only">IAEA inspectors expelled / readmitted</span></li>
+          <li><span class="lang-zh-only">Israel 再次空袭伊朗本土（5/27-28 后的二次/三次）</span><span class="lang-en-only">Israel again strikes Iranian soil (subsequent strikes after 5/27-28)</span></li>
+          <li><span class="lang-zh-only">地震 / 辐射 signals 提示地下核试</span><span class="lang-en-only">Seismic / radiation signals suggesting underground test</span></li>
+          <li><span class="lang-zh-only">Maxar / Planet 卫星图像显示 Natanz、Fordow、Isfahan 新建活动</span><span class="lang-en-only">Maxar / Planet satellite imagery shows new construction at Natanz, Fordow, Isfahan</span></li>
+          <li><span class="lang-zh-only">Iran 公开宣布退出 NPT</span><span class="lang-en-only">Iran publicly announces NPT withdrawal</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">权威信源</span><span class="lang-en-only">Authoritative sources to track</span></h5>
+        <p>
+          <span class="lang-zh-only">IAEA Board of Governors Reports（季度）· David Albright / ISIS（Institute for Science and International Security）· Iran Watch（Wisconsin Project）· FDD Iran Program · Maxar + Planet 卫星图像分析（Decker Eveleth 等）· INSS Hayman + Zimmt《Principles for an Israeli Strategy to Address the Iranian Nuclear Threat》（2026-03-31）</span>
+          <span class="lang-en-only">IAEA Board of Governors Reports (quarterly) · David Albright / ISIS (Institute for Science and International Security) · Iran Watch (Wisconsin Project) · FDD Iran Program · Maxar + Planet satellite analysts (e.g. Decker Eveleth) · INSS Hayman + Zimmt, "Principles for an Israeli Strategy to Address the Iranian Nuclear Threat" (2026-03-31)</span>
+        </p>
+      </div>
+    </div>
   </div>
 
   <div class="obs-tier t3">
     <h4>
-      <span class="lang-zh-only">三档 · 决定供应链冲击程度（海湾 + 市场）</span>
-      <span class="lang-en-only">Tier 3 · Determines supply-chain shock magnitude (Gulf + markets)</span>
+      <span class="lang-zh-only">V3 · Trump 个人方向 + 时间约束</span>
+      <span class="lang-en-only">V3 · Trump's Personal Direction + Temporal Constraint</span>
     </h4>
-    <table>
-      <thead>
-        <tr>
-          <th><span class="lang-zh-only">观察节点</span><span class="lang-en-only">Node</span></th>
-          <th><span class="lang-zh-only">触发阈值</span><span class="lang-en-only">Threshold</span></th>
-          <th><span class="lang-zh-only">含义</span><span class="lang-en-only">Meaning</span></th>
-        </tr>
-      </thead>
-      <tbody class="lang-zh-only">
-        <tr><td>Ras Laffan 类事件再发生</td><td>任何 GCC 能源设施被伊朗直接攻击</td><td>海湾三国"条件性削弱伊朗" → "条件性反对升级"切换</td></tr>
-        <tr><td>MBS 公开会晤 Netanyahu</td><td>任何形式的公开会面 / 联合声明</td><td>海湾-以色列正式联盟形成</td></tr>
-        <tr><td>沙特停止配合美军护航</td><td>拒绝船只过境/补给</td><td>海湾"条件性对齐"破裂</td></tr>
-        <tr><td>Hormuz 实际通过流量</td><td>EIA 月报跌破 1 mb/d 持续 2 个月</td><td>全球能源危机模式</td></tr>
-        <tr><td>Brent 油价</td><td>突破 $180 / $200 / $250 三档</td><td>每档对应不同传导链条激活</td></tr>
-        <tr><td>Lloyd's 战争险溢价</td><td>突破船价 20%</td><td>独立船东全面撤离</td></tr>
-        <tr><td>VLCC 被击沉</td><td>任何一艘</td><td>保险跳档 + 独立船东恐慌</td></tr>
-        <tr><td>美军驱逐舰被击伤</td><td>任何反舰导弹命中</td><td>"印太 vs 中东"二选一加速</td></tr>
-        <tr><td>DFC 再保险首次启动</td><td>第一笔实际承保</td><td>美国政府正式承担"最后保险人"角色</td></tr>
-        <tr><td>TSMC LNG 库存吃紧</td><td>台湾整体 LNG 库存 &lt; 7 天</td><td>全球高端半导体生产风险显性化</td></tr>
-      </tbody>
-      <tbody class="lang-en-only">
-        <tr><td>Ras Laffan–type incident recurs</td><td>Any GCC energy facility hit by Iran directly</td><td>Gulf trio switches from "conditional Iran-weakening" to "conditional opposition to escalation"</td></tr>
-        <tr><td>MBS publicly meets Netanyahu</td><td>Any form of public meeting / joint statement</td><td>Formal Gulf-Israel alliance forms</td></tr>
-        <tr><td>Saudi Arabia stops cooperating with US escort</td><td>Refuses transit / resupply</td><td>Gulf "conditional alignment" breaks</td></tr>
-        <tr><td>Hormuz actual transit volume</td><td>EIA monthly drops below 1 mb/d for 2 consecutive months</td><td>Global energy crisis mode</td></tr>
-        <tr><td>Brent crude price</td><td>Breaks $180 / $200 / $250 thresholds</td><td>Each threshold activates a different transmission chain</td></tr>
-        <tr><td>Lloyd's war risk premium</td><td>Exceeds 20% of vessel value</td><td>Independent shipowners exit en masse</td></tr>
-        <tr><td>VLCC sunk</td><td>Any single vessel</td><td>Insurance jump + independent shipowner panic</td></tr>
-        <tr><td>US destroyer damaged</td><td>Any anti-ship missile hit</td><td>"Indo-Pacific vs Middle East" tradeoff accelerates</td></tr>
-        <tr><td>DFC reinsurance first activation</td><td>First actual policy issued</td><td>US government formally takes on "insurer of last resort" role</td></tr>
-        <tr><td>TSMC LNG stockpile critical</td><td>Taiwan-wide LNG stockpile &lt; 7 days</td><td>High-end semiconductor production risk becomes manifest</td></tr>
-      </tbody>
-    </table>
+    <div class="var-body">
+      <div class="var-row">
+        <h5><span class="lang-zh-only">为什么是关键变量</span><span class="lang-en-only">Why this is critical</span></h5>
+        <p>
+          <span class="lang-zh-only">框架要点：美国不是"约束以色列的力量"——美国是 Israel 行动的 enabler 与 multiplier（空中加油、精确弹药、防空拦截弹补给、情报）。所以真正的变量不是"美国能不能按住以色列"，而是 Trump 个人决策的方向——deal-seeking vs maximalist——以及他的时间约束。AIPAC、福音派、共和党亲以基本盘锁死了"约束"路径；唯一的可变性在 Trump 自己。</span>
+          <span class="lang-en-only">Framing point: the US is not "Israel's constraint" — the US is Israel's enabler and multiplier (aerial refueling, precision munitions, missile-defense interceptor resupply, intelligence). So the real variable is not "can the US restrain Israel" but Trump's personal directional choice — deal-seeking vs maximalist — plus his time constraint. AIPAC, evangelicals, and the GOP pro-Israel base lock the "restraint" pathway; the only variability is Trump himself.</span>
+        </p>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">当前状态（2026-05 核实）</span><span class="lang-en-only">Current state (2026-05 verified)</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">Trump 报道"weighing new Iran strikes"以求"decisive victory"，对谈判停滞表现挫折感</span><span class="lang-en-only">Trump reported "weighing new Iran strikes" seeking "decisive victory," frustrated with stalled talks</span></li>
+          <li><span class="lang-zh-only">Netanyahu 5 月被报道在对伊谈判中被"frozen out"——Trump 在绕过 Netanyahu 单独与 Iran 谈</span><span class="lang-en-only">Netanyahu reported "frozen out" of US-Iran talks in May — Trump bypassing him to engage Iran directly</span></li>
+          <li><span class="lang-zh-only">5/27-28 实际发动新一轮打击（Bandar Abbas 地面控制站）——说明 V3 已从摇摆向 maximalist 倾斜</span><span class="lang-en-only">5/27-28 actually launched new strikes (Bandar Abbas ground control station) — V3 has tilted from oscillation toward maximalist</span></li>
+          <li><span class="lang-zh-only">Bessent 5/14 表态：中国"will work behind the scenes" 推 Iran 重开海峡</span><span class="lang-en-only">Bessent stated 5/14: China "will work behind the scenes" to push Iran to reopen the Strait</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">3 年内的取值方向</span><span class="lang-en-only">Convergence values</span></h5>
+        <ul>
+          <li><span class="lang-zh-only"><b>A · 达成 Trump-Iran deal</b>：Iran 大幅让步（浓缩限制 + 检查机制）换制裁解除 → 沙盘进入"政权幸存 + 缓和"</span><span class="lang-en-only"><b>A · Trump-Iran deal reached</b>: Iran makes major concessions (enrichment limits + verification) in exchange for sanctions relief → "regime survived + de-escalation"</span></li>
+          <li><span class="lang-zh-only"><b>B · 持续军事压力 + 制裁，无正式 deal</b>：当前模式延续 → 沙盘维持"低烈度持续对抗"</span><span class="lang-en-only"><b>B · Sustained military pressure + sanctions, no formal deal</b>: current mode persists → "low-intensity sustained confrontation"</span></li>
+          <li><span class="lang-zh-only"><b>C · 全面升级 / 直接介入政权更迭</b>：B-2 出动打 Fordow 深井 / 美军特战支持反对派 → 沙盘进入"政权崩溃 + 美军直接卷入"</span><span class="lang-en-only"><b>C · Full escalation / direct involvement in regime change</b>: B-2 sorties against Fordow's deep facilities / US SOF backing opposition → "regime collapse + US directly engaged"</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">收敛 trigger</span><span class="lang-en-only">Convergence triggers</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">任何 deal 框架文本的实质公布（不是测气球）</span><span class="lang-en-only">Substantive deal framework text publicly released (not trial balloons)</span></li>
+          <li><span class="lang-zh-only">US CENTCOM 力量调整（增/减航母打击群、B-2 部署、地面部队规模）</span><span class="lang-en-only">US CENTCOM force adjustment (carrier strike group add/remove, B-2 deployments, ground force scaling)</span></li>
+          <li><span class="lang-zh-only">Trump 公开指示 Israel 行为（不允许某行动 / 公开鼓励）</span><span class="lang-en-only">Trump publicly directs Israeli action (forbids a strike / publicly endorses)</span></li>
+          <li><span class="lang-zh-only">deal 出现时 Lapid / Gantz 是否抵制（在野党反应揭示 deal 是否触碰以色列共识底线）</span><span class="lang-en-only">If a deal emerges, whether Lapid/Gantz resist (opposition reaction reveals whether deal touches Israeli consensus red line)</span></li>
+          <li><span class="lang-zh-only">2026-11 中期选举前后 Trump 对伊言论变化</span><span class="lang-en-only">Trump's rhetoric on Iran shifts around the 2026-11 midterms</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">权威信源</span><span class="lang-en-only">Authoritative sources to track</span></h5>
+        <p>
+          <span class="lang-zh-only">Axios "Behind the Curtain"（Mike Allen / Jonathan Swan）· WSJ National Security Desk · Trita Parsi（Quincy Institute）· Suzanne Maloney（Brookings）· Karim Sadjadpour（Carnegie）· Edward Luce（FT）· Politico Playbook</span>
+          <span class="lang-en-only">Axios "Behind the Curtain" (Mike Allen / Jonathan Swan) · WSJ National Security Desk · Trita Parsi (Quincy Institute) · Suzanne Maloney (Brookings) · Karim Sadjadpour (Carnegie) · Edward Luce (FT) · Politico Playbook</span>
+        </p>
+      </div>
+    </div>
   </div>
 
   <div class="obs-tier t4">
     <h4>
-      <span class="lang-zh-only">四档 · 极端尾部风险（Wildcard）</span>
-      <span class="lang-en-only">Tier 4 · Extreme tail risk (wildcards)</span>
+      <span class="lang-zh-only">V4 · 后 Trump 时代美国对以政策可预见性 —— 影响 Israel 当下决策的时间贴现率</span>
+      <span class="lang-en-only">V4 · Post-Trump US Policy Predictability — The Temporal Discount Rate on Israeli Decision-Making Today</span>
     </h4>
-    <table>
-      <thead>
-        <tr>
-          <th><span class="lang-zh-only">事件</span><span class="lang-en-only">Event</span></th>
-          <th><span class="lang-zh-only">触发条件</span><span class="lang-en-only">Trigger</span></th>
-          <th><span class="lang-zh-only">后果</span><span class="lang-en-only">Consequence</span></th>
-        </tr>
-      </thead>
-      <tbody class="lang-zh-only">
-        <tr><td>伊朗核试爆</td><td>任何地下试验确认</td><td>整个游戏规则重写</td></tr>
-        <tr><td>Hormuz 发现伊朗布雷</td><td>卫星 / 海军确认</td><td>立刻进入最坏路径</td></tr>
-        <tr><td>Vahidi-Qaani 反目</td><td>一方公开声明指控另一方</td><td>伊朗内战概率跳升</td></tr>
-        <tr><td>以色列使用大当量武器</td><td>任何 Smotrich 路径的极端动作</td><td>海湾国家全面转向 + 欧洲断武器</td></tr>
-        <tr><td>台海冲突激活</td><td>中国在印太采取实质行动</td><td>全球供应链彻底中断</td></tr>
-      </tbody>
-      <tbody class="lang-en-only">
-        <tr><td>Iran nuclear test</td><td>Any underground test confirmed</td><td>Entire game rules rewritten</td></tr>
-        <tr><td>Iranian mines found in Hormuz</td><td>Satellite / Navy confirmation</td><td>Immediately enters worst-case path</td></tr>
-        <tr><td>Vahidi–Qaani fall out</td><td>One side publicly accuses the other</td><td>Iran civil war probability jumps</td></tr>
-        <tr><td>Israel uses large-yield weapons</td><td>Any Smotrich-path extreme action</td><td>Full Gulf pivot + European weapons cutoff</td></tr>
-        <tr><td>Taiwan Strait conflict activated</td><td>China takes substantive action in Indo-Pacific</td><td>Global supply chain fully severed</td></tr>
-      </tbody>
-    </table>
+    <div class="var-body">
+      <div class="var-row">
+        <h5><span class="lang-zh-only">为什么是关键变量</span><span class="lang-en-only">Why this is critical</span></h5>
+        <p>
+          <span class="lang-zh-only">这是 Israel "窗口论"的核心假设：以色列战略圈相信"必须在 Trump 任内把 Iran 问题做完"。这个信念的强度决定了 Israel 当前行动的紧迫感——如果他们认为 Trump 之后还有亲以鹰派接班，可以慢慢做；如果他们认为 Dem 接班概率高，必须现在加速。所以 V4 不是"未来的事"——它正在影响今天的行动节奏。</span>
+          <span class="lang-en-only">This is the core assumption behind Israel's "window" thesis: the Israeli strategic class believes "we must finish the Iran problem within Trump's term." The strength of this belief determines current operational urgency — if they believe a pro-Israel hawk will succeed Trump, they can move slowly; if they expect a Democrat will succeed, they must accelerate now. So V4 is not "a future matter" — it shapes today's operational tempo.</span>
+        </p>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">当前状态（2026-05）</span><span class="lang-en-only">Current state (2026-05)</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">Trump 任期 2029-01 结束</span><span class="lang-en-only">Trump's term ends 2029-01</span></li>
+          <li><span class="lang-zh-only">2026-11 中期选举将决定众议院 MAGA 浓度和参议院控制权 → 决定 Trump 后两年是否跛脚</span><span class="lang-en-only">2026-11 midterms will determine House MAGA concentration and Senate control → determines whether Trump's final two years are lame-duck</span></li>
+          <li><span class="lang-zh-only">2028 共和党初选预计候选：Vance / Hegseth / DeSantis；民主党：Newsom / Khanna / Shapiro 等</span><span class="lang-en-only">Expected 2028 GOP primary candidates: Vance / Hegseth / DeSantis; Dem: Newsom / Khanna / Shapiro etc.</span></li>
+          <li><span class="lang-zh-only">Israel 战略圈表现已显示窗口焦虑——Operation Roaring Lion 行动时点从 mid-2026 提前到 02-28（Katz 确认是因 Iran 内部抗议 + Trump 立场允许同步打击的 timing 窗口）</span><span class="lang-en-only">Israeli strategic class has shown window anxiety — Operation Roaring Lion was moved up from mid-2026 to 02-28 (Katz confirmed: Iran protests + Trump's posture allowing simultaneous strikes timing)</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">3 年内的取值方向</span><span class="lang-en-only">Convergence values</span></h5>
+        <ul>
+          <li><span class="lang-zh-only"><b>A · MAGA 巩固，亲以鹰派接班</b>：2028 当选者继承对以单边许可 → Israel 时间贴现率低，可缓慢用 Begin Doctrine</span><span class="lang-en-only"><b>A · MAGA consolidates, pro-Israel hawk succeeds</b>: 2028 winner inherits unilateral permission → low Israeli temporal discount, Begin Doctrine applied gradually</span></li>
+          <li><span class="lang-zh-only"><b>B · 民主党接班</b>：重回 JCPOA 框架 → Israel 失单边许可 → 时间贴现率极高，迫使 Israel 现在做完所有想做的事</span><span class="lang-en-only"><b>B · Democrat succeeds</b>: return to JCPOA-style framework → Israel loses unilateral permission → very high temporal discount, forcing Israel to finish everything now</span></li>
+          <li><span class="lang-zh-only"><b>C · Vance / 孤立派接班</b>：美国减少介入但不阻拦 Israel → 中等贴现率，Israel 必须自己承担更多但仍有窗口</span><span class="lang-en-only"><b>C · Vance / isolationist succeeds</b>: US reduces engagement but doesn't block Israel → moderate discount, Israel must bear more itself but window remains</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">收敛 trigger</span><span class="lang-en-only">Convergence triggers</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">2026-11 众议院 MAGA 席位变化 + 参议院控制权易手</span><span class="lang-en-only">2026-11 House MAGA seat changes + Senate control flips</span></li>
+          <li><span class="lang-zh-only">2028 共和党初选辩论中 Vance / 其他候选浮出</span><span class="lang-en-only">2028 GOP primary debates: Vance or other candidates emerge</span></li>
+          <li><span class="lang-zh-only">Israeli 决策圈是否表现加速焦虑（INSS / IDF 发表"窗口快关"类论文）</span><span class="lang-en-only">Whether Israeli decision-makers show acceleration anxiety (INSS / IDF papers framing "window closing")</span></li>
+          <li><span class="lang-zh-only">美国民调：公众对 Israel 单边行动支持度变化（Pew / Gallup）</span><span class="lang-en-only">US polling: public support for Israeli unilateral action shifts (Pew / Gallup)</span></li>
+          <li><span class="lang-zh-only">Dem 国会重要议员对以态度变化（Sanders / Khanna / AOC 是否成 Dem 主流）</span><span class="lang-en-only">Key Dem legislators' Israel posture shifts (whether Sanders / Khanna / AOC become mainstream)</span></li>
+        </ul>
+      </div>
+      <div class="var-row">
+        <h5><span class="lang-zh-only">权威信源</span><span class="lang-en-only">Authoritative sources to track</span></h5>
+        <p>
+          <span class="lang-zh-only">Anshel Pfeffer（Haaretz，Bibi 传记作者）· Amos Harel（Haaretz 军事）· Lazar Berman（Times of Israel 外交）· Chuck Freilich（前 Israel 国安副顾问）· Tamir Hayman（INSS 主任）· Amos Yadlin（前 IDF 军情局长）· Politico Playbook（美国政治节奏）</span>
+          <span class="lang-en-only">Anshel Pfeffer (Haaretz, Bibi biographer) · Amos Harel (Haaretz military) · Lazar Berman (Times of Israel diplomatic) · Chuck Freilich (former Israel NSC deputy) · Tamir Hayman (INSS director) · Amos Yadlin (former IDF MI chief) · Politico Playbook (US political tempo)</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="obs-tier excluded">
+    <h4>
+      <span class="lang-zh-only">已剔除 · 看似关键但实际不应追踪的变量</span>
+      <span class="lang-en-only">Explicitly Excluded — Variables That Look Important But Should Not Be Tracked</span>
+    </h4>
+    <div class="var-body">
+      <div class="var-row">
+        <p>
+          <span class="lang-zh-only">第一性原理的目的不仅是找到真变量，也包括明确剔除那些貌似关键但实际是常量/下游测量/噪声的项目，以免观察资源被分散。下面这些项被剔除并说明原因：</span>
+          <span class="lang-en-only">First-principles work is not only about identifying true variables, but also explicitly excluding items that look critical but are actually constants, downstream measurements, or noise — so observational resources aren't fragmented. The following are excluded with reasons:</span>
+        </p>
+      </div>
+      <div class="var-row">
+        <ul>
+          <li><span class="lang-zh-only"><b>中国对伊朗实质支持</b> —— 结构性约束已锁死：China GCC 进口 &gt;40%、Iran 仅 ~10%。China-Iran 25 年战略伙伴 2021 签署但执行率极低（实际投资 ~$27B vs 承诺 $400B）。China 必须在 GCC 与 Iran 间选 GCC。可变范围被锁定在"verbal pressure + 继续买油 + 不出钱不出兵"。</span><span class="lang-en-only"><b>China's material support for Iran</b> — locked by structural constraint: China imports &gt;40% of crude from GCC, only ~10% from Iran. The China-Iran 25-year partnership (2021) has very low execution (~$27B actual vs $400B pledged). China must pick GCC over Iran. Variable range locked to "verbal pressure + keep buying oil + no money, no troops."</span></li>
+          <li><span class="lang-zh-only"><b>真主党重建</b> —— 威慑伞已实证失效：Hezbollah 被打残后 Israel 仍打 Iran 核 + 杀 Khamenei。即使重建到 25,000 火箭也无法恢复原威慑（Israel 已知"哪怕被报复也敢打"）。是 2-5 年后的二阶变量，不影响当前 1-3 年沙盘。</span><span class="lang-en-only"><b>Hezbollah reconstitution</b> — deterrence umbrella empirically failed: even after Hezbollah was degraded, Israel still struck Iran's nuclear program and killed Khamenei. Rebuilding to 25,000 rockets cannot restore the original deterrent (Israel now knows "we will strike even under retaliation"). A second-order variable on a 2-5 year horizon, not the current 1-3 year sandbox.</span></li>
+          <li><span class="lang-zh-only"><b>美国对以色列约束力</b> —— 框架错。AIPAC + 福音派 + 共和党亲以基本盘 + Begin Doctrine 法律基础锁死美国工具箱。美国是 Israel 的 enabler 不是 constrainer。真正的美国变量是 V3 + V4。</span><span class="lang-en-only"><b>US restraint on Israel</b> — wrong framing. AIPAC + evangelicals + GOP pro-Israel base + Begin Doctrine legal anchor lock the US toolbox. The US is Israel's enabler, not constrainer. The real US variables are V3 + V4.</span></li>
+          <li><span class="lang-zh-only"><b>Knesset 2026-10 选举</b> —— doctrine 跨党派一致。Gantz 在战争初期就表态"we are all standing together"，并要求战争必须打到"uranium 摧毁 + 长程导弹停产 + proxy 资助终止"。Lapid 批评 Trump 正在谈的 deal 太软，直言"we are not a vassal state and we are not a protectorate"。选举只决定 doctrine 执行的强度和方式，不决定方向。</span><span class="lang-en-only"><b>Knesset 2026-10 election</b> — doctrine is cross-party consensus. Gantz declared "we are all standing together" early in the war and set conditions: war must continue until "uranium destroyed + long-range missile production halted + proxy funding ended." Lapid criticized Trump's emerging deal as too soft, saying directly "we are not a vassal state and we are not a protectorate." The election only sets doctrine's execution intensity and style, not direction.</span></li>
+          <li><span class="lang-zh-only"><b>IAEA 浓缩水平作为独立变量</b> —— 是 V2 的指标，不是独立变量。本身被结构性常量（Iran 有条件必走核）锁定。</span><span class="lang-en-only"><b>IAEA enrichment level as an independent variable</b> — it is an indicator of V2, not a standalone variable. Locked by structural constant (Iran will always pursue nukes when conditions allow).</span></li>
+          <li><span class="lang-zh-only"><b>里亚尔黑市汇率</b> —— 下游测量。Iran 经济长期恶化，无明确传导到政权崩溃。无传导链。</span><span class="lang-en-only"><b>Rial black-market rate</b> — downstream measurement. Iranian economy has long deteriorated without clear transmission to regime collapse. No causal chain.</span></li>
+          <li><span class="lang-zh-only"><b>Trump cabinet 内阁三角（Vance / Hegseth / Rubio）</b> —— 噪声。人事天天变但实际政策传导极弱。</span><span class="lang-en-only"><b>Trump cabinet triangle (Vance / Hegseth / Rubio)</b> — noise. Personnel shifts daily but actual policy transmission is weak.</span></li>
+          <li><span class="lang-zh-only"><b>IRGC 中层人事变动</b> —— 噪声。除非顶级司令更迭。</span><span class="lang-en-only"><b>IRGC mid-level personnel shifts</b> — noise. Unless top commander changes.</span></li>
+          <li><span class="lang-zh-only"><b>Brent 油价单日波动</b> —— 下游测量，受多变量污染。看 Hormuz 实际通过量（更接近 V1 下游）更直接。</span><span class="lang-en-only"><b>Brent daily price moves</b> — downstream measurement, polluted by multiple variables. Actual Hormuz transit volume (closer to V1 downstream) is more direct.</span></li>
+          <li><span class="lang-zh-only"><b>Houthi 红海行动 / 伊拉克民兵单次袭击</b> —— 二阶事件。被去活的 proxy 不再传导主要后果。</span><span class="lang-en-only"><b>Houthi Red Sea operations / Iraqi militia single attacks</b> — second-order events. De-activated proxies no longer transmit significant downstream consequences.</span></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -843,11 +1024,26 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
     [17] <a href="https://whitehsu.blog/2026/03/12/taiwan-semiconductor-supply-chain-energy-risk/" target="_blank">Taiwan semiconductor LNG dependency</a> ·
     [18] <a href="https://www.dfc.gov/media/press-releases/dfc-chubb-announce-additional-american-reinsurance-partners-and-40b-coverage" target="_blank">DFC $40B reinsurance facility</a> ·
     [19] <a href="https://www.cbe.org.eg/en/news-publications/news/2026/02/23/11/17/remittances-from-egyptians-working-abroad-record-usd-41,-d-,5-billion-during-2025" target="_blank">Egypt remittances 2025</a> ·
-    [20] <a href="https://tanktransport.com/2026/05/hormuz-supply-risk/" target="_blank">Hormuz Supply Risk – Tank Transport 5-2026</a>
+    [20] <a href="https://tanktransport.com/2026/05/hormuz-supply-risk/" target="_blank">Hormuz Supply Risk – Tank Transport 5-2026</a> ·
+    [21] <a href="https://en.wikipedia.org/wiki/Begin_Doctrine" target="_blank">Begin Doctrine (Wikipedia)</a> ·
+    [22] <a href="https://www.inss.org.il/publication/the-begin-doctrine-the-lessons-of-osirak-and-deir-ez-zor/" target="_blank">INSS – Begin Doctrine: Lessons of Osirak and Deir ez-Zor</a> ·
+    [23] <a href="https://en.wikipedia.org/wiki/Caroline_test" target="_blank">Caroline Test (Wikipedia)</a> ·
+    [24] <a href="https://sites.duke.edu/lawfire/2026/03/13/three-independent-justifications-for-the-u-s-israeli-operations-against-iran/" target="_blank">Duke Lawfire – Justifications for US/Israeli operations against Iran</a> ·
+    [25] <a href="https://jppi.org.il/en/yes-israels-war-with-iran-is-legal/" target="_blank">JPPI Shuki Friedman – Yes, Israel's war with Iran is legal</a> ·
+    [26] <a href="https://www.inss.org.il/publication/nuclear-iran-2026/" target="_blank">INSS Hayman+Zimmt – Principles for an Israeli Strategy on Iran's Nuclear Threat (2026-03-31)</a> ·
+    [27] <a href="https://www.rferl.org/a/iran-mojtaba-khamenei-absence-raz-zimmt/33702088.html" target="_blank">RFE/RL – Zimmt interview on Mojtaba's absence</a> ·
+    [28] <a href="https://www.timesofisrael.com/liveblog_entry/israel-names-its-operation-against-iran-lions-roar/" target="_blank">Times of Israel – Operation Roaring Lion naming</a> ·
+    [29] <a href="https://www.timesofisrael.com/israeli-opposition-leaders-rally-behind-government-as-israel-and-us-strike-iran/" target="_blank">Times of Israel – Israeli opposition rallies behind government</a> ·
+    [30] <a href="https://www.pbs.org/newshour/world/israeli-opposition-leader-lapid-says-trumps-emerging-deal-with-iran-is-bad-for-the-region" target="_blank">PBS – Lapid on Trump's emerging Iran deal</a> ·
+    [31] <a href="https://time.com/article/2026/05/06/irans-new-leaders/" target="_blank">TIME – The New Leaders Calling the Shots in Iran (2026-05-06)</a> ·
+    [32] <a href="https://thesoufancenter.org/intelbrief-2026-march-26/" target="_blank">The Soufan Center – Iran's Power Structure Adapts to War</a> ·
+    [33] <a href="https://www.timesofisrael.com/trump-said-weighing-new-strikes-as-he-seeks-decisive-victory-amid-frustration-with-iran-talks/" target="_blank">Times of Israel – Trump weighing new strikes; Netanyahu frozen out</a> ·
+    [34] <a href="https://www.cnbc.com/2026/05/14/china-xi-trump-iran-war-oil-strait-hormuz-bessent.html" target="_blank">CNBC – Bessent on China and Hormuz</a> ·
+    [35] <a href="https://en.wikipedia.org/wiki/Assassination_of_Ali_Khamenei" target="_blank">Assassination of Ali Khamenei (Wikipedia)</a>
   </p>
   <p style="margin-top: 16px;">
-    <span class="lang-zh-only">数据基线 2026-05-25 · 沙盘推演为概率分析，非确定性预测 · 观察节点应根据新事件持续更新</span>
-    <span class="lang-en-only">Baseline 2026-05-25 · Sandbox is probabilistic analysis, not deterministic prediction · Observation nodes should be updated continuously as events unfold</span>
+    <span class="lang-zh-only">数据基线 2026-05-29 · 沙盘推演为概率分析，非确定性预测 · 观察节点应根据新事件持续更新 · 第一性原理筛选见 SECTION 6</span>
+    <span class="lang-en-only">Baseline 2026-05-29 · Sandbox is probabilistic analysis, not deterministic prediction · Observation nodes should be updated continuously as events unfold · See SECTION 6 for first-principles filtering rationale</span>
   </p>
 </footer>
 
