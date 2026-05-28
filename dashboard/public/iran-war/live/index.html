@@ -354,6 +354,7 @@ body {
   <h2>本页用途</h2>
   <p>主页面（<a href="../">沙盘推演</a>）提供框架性判断和结构性变量分析，本页负责追踪两件事：<strong>近 48 小时的关键实时事件</strong>，以及<strong>来自四种语言渠道的分析师 / 媒体视角</strong>。每个事件都对应到沙盘观察节点的某个档级（一档=红 / 二档=橙 / 三档=黄 / 四档=紫）。</p>
   <p>原语种渠道（波斯语、阿拉伯语、希伯来语）的视角往往跟英文报道的视角不同——本页特别保留了几条<strong>英文渠道没有抓到的关键原语种信号</strong>，主要集中在 IRGC 系媒体与外交部公开分裂这一线索。</p>
+  <p style="font-size: 13px; color: var(--label-2, #515154); margin-top: 14px; padding-top: 14px; border-top: 0.5px solid rgba(0,0,0,0.08);"><strong>自动更新机制</strong>：本页有定时任务每 4 小时主动拉取四语种实时信号验证沙盘观察节点，发现新信号自动更新时间线并 push 到 production。当前定时任务 7 天后到期。</p>
 </section>
 
 <!-- ============ Section 1: Timeline ============ -->
@@ -362,8 +363,65 @@ body {
   <h2 class="sec-title">近 48 小时关键事件</h2>
   <div class="sec-sub">按时间倒序。每个事件附触发沙盘观察节点档级 + 信源链接 + 信号意义。</div>
 
-  <!-- 5-24 -->
+  <!-- 5-25 NEW -->
   <div class="timeline">
+
+    <div class="timeline-item tier-3">
+      <div class="event-meta">
+        <span class="event-date">2026-05-25</span>
+        <span class="event-tier">三档信号</span>
+        <span class="event-source"><a href="https://tanktransport.com/2026/05/hormuz-supply-risk/" target="_blank">Tank Transport</a></span>
+      </div>
+      <div class="event-title">Hormuz 实际通过量再确认：4 月均 5% 战前，5 月 6 日起近乎为零</div>
+      <p class="event-desc">Vessel transponder data 显示：2026-04 月均通过量约战前 5%。2026-05-06 起开放通行降至近乎为零。1,550+ 艘商船滞留海峡周边（战前日均 138 艘）。海峡事实已经关闭三周。</p>
+      <div class="event-meaning"><strong>意义</strong>：政权幸存 + 海峡实质关闭——这是沙盘 2×2 象限里"伊朗封锁 + 美军反封锁"格子的当前实况。市场没立刻崩盘是因为绕行管线满载 + SPR 释放 + 中印补库存，但缓冲只能撑 30-60 天。</div>
+    </div>
+
+    <div class="timeline-item tier-2">
+      <div class="event-meta">
+        <span class="event-date">2026-05-25</span>
+        <span class="event-tier">二档信号</span>
+        <span class="event-source"><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank">2026 Iran war - Wikipedia</a></span>
+      </div>
+      <div class="event-title">美军主动打击伊朗目标（boats + missile sites）</div>
+      <p class="event-desc">5-25 当日美军实施新一轮针对伊朗目标的打击，包括 IRGC 海军快艇和导弹发射场。这件事跟 Trump 前一日宣称"协议基本谈成"完全矛盾——典型 dual-track：谈判桌上施压 + 战场上加码。</p>
+      <div class="event-meaning"><strong>意义</strong>：Trump 团队内部强袭派（Rubio + 军方）和谈判派（Witkoff）双线并行。意味协议即使签字，执行前还会继续动武。</div>
+    </div>
+
+    <div class="timeline-item tier-1">
+      <div class="event-meta">
+        <span class="event-date">2026-05-25</span>
+        <span class="event-tier">一档信号</span>
+        <span class="event-source"><a href="https://www.timesofisrael.com/liveblog-may-25-2026/" target="_blank">Times of Israel 5-25</a></span>
+      </div>
+      <div class="event-title">Netanyahu 命令 IDF 加强对真主党行动 + 召集 Kirya 安全磋商</div>
+      <p class="event-desc">Netanyahu 在 Tel Aviv 国防部 Kirya 总部召集国防部长 Israel Katz 和 IDF 总参谋长 Eyal Zamir 紧急安全磋商。会议后下令 IDF 加强对 Hezbollah 的行动。南贝鲁特居民开始撤离。</p>
+      <div class="event-meaning"><strong>意义</strong>：<strong>Netanyahu 找到了"绕开美国对伊朗直接行动限制"的 workaround</strong>——把军事压力转移到 Lebanon 真主党战场。如果 Hezbollah 反击，谈判会被迫崩盘。沙盘需要加新变量"Israel 通过 Lebanon 替代战场维持压力"。</div>
+    </div>
+
+    <div class="timeline-item tier-1">
+      <div class="event-meta">
+        <span class="event-date">2026-05-25</span>
+        <span class="event-tier">一档信号</span>
+        <span class="event-source"><a href="https://www.timesofisrael.com/netanyahu-said-frustrated-that-mossad-promises-of-iran-uprising-have-fallen-short/" target="_blank">Times of Israel</a></span>
+      </div>
+      <div class="event-title">IDF 总参谋长 Zamir 公开向 Netanyahu 施压：要求更大行动自由度</div>
+      <p class="event-desc">Times of Israel 报道：以色列因美伊谈判中美方压力大部分操作受限。IDF 总参谋长 Eyal Zamir <strong>公开向 Netanyahu 施压</strong>要求 IDF 获得更大行动自由度。另据报道 Netanyahu 对 Mossad 承诺的"伊朗起义"未能兑现感到沮丧。</p>
+      <div class="event-meaning"><strong>意义</strong>：以色列内部出现<strong>军方-政治领导层公开张力</strong>——沙盘原先没有捕捉这个变量。Mossad 的"煽动伊朗内部叛乱"路径失败迫使以色列必须考虑更直接的军事手段。</div>
+    </div>
+
+    <div class="timeline-item tier-1">
+      <div class="event-meta">
+        <span class="event-date">2026-05-25</span>
+        <span class="event-tier">一档信号</span>
+        <span class="event-source"><a href="https://www.foxnews.com/world/designated-target-mojtaba-khamenei-sign-trump-deal-unprecedented-courier-setup-.amp" target="_blank">Fox News</a></span>
+      </div>
+      <div class="event-title">Mojtaba 仍在隐匿，靠 courier 通信审批协议</div>
+      <p class="event-desc">Fox News 援引情报源：Mojtaba 自 2-28 哈梅内伊被杀后藏匿至今（87 天），<strong>伊朗最高级别官员都不知道他在哪里</strong>。所有协议条款需要 courier 网络送到他手中签字，"messages move by courier, responses arrive days late"。Washington 实际上在跟一个"完全看不见的对手"谈判。</p>
+      <div class="event-meaning"><strong>意义</strong>：沙盘原"90 天阈值"已经基本被穿透（87 天）。意味协议授权链可信度极低——即使签字，Mojtaba 死亡或被替换的可能性让条款执行风险大。</div>
+    </div>
+
+    <!-- 5-24 -->
 
     <div class="timeline-item tier-1">
       <div class="event-meta">
