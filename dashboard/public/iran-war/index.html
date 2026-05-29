@@ -102,6 +102,32 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
 .cc-arrow { text-align: center; color: #86868b; font-size: 11px; margin: 4px 0; }
 .cc-link { color: #86868b; font-size: 11px; padding: 0 4px; }
 
+.position-overlay { background: linear-gradient(180deg, #fff7e6 0%, #fff 100%); border: 0.5px solid rgba(255,149,0,0.3); border-radius: 12px; padding: 22px 26px; margin: 18px 0 22px; }
+.po-title { font-weight: 700; font-size: 15px; margin-bottom: 14px; color: #1d1d1f; }
+.po-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.po-cell { background: #fff; border-radius: 10px; padding: 12px 14px; border: 0.5px solid rgba(0,0,0,0.08); }
+.po-cell.now-here { border-left: 3px solid #34c759; }
+.po-cell.vec.down { border-left: 3px solid #ff9500; }
+.po-cell.vec.right { border-left: 3px solid #ff3b30; }
+.po-cell.vec.diag { border-left: 3px solid #af52de; }
+.po-cell p { margin: 0; font-size: 12.5px; line-height: 1.55; color: #515154; }
+.po-tag { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; padding: 2px 7px; border-radius: 4px; margin-bottom: 6px; }
+.po-tag.now { background: #d4f4dd; color: #1f7a3a; }
+.po-tag.risk { background: #ffe4c2; color: #b85d00; }
+.po-tag.risk-high { background: #ffd6d3; color: #c0392b; }
+.po-tag.risk-tail { background: #ecd9f7; color: #6b2a8f; }
+.po-foot { margin-top: 10px; font-size: 11px; color: #86868b; text-align: right; }
+@media (max-width: 600px) { .po-grid { grid-template-columns: 1fr; } }
+.var-row.recent-status { background: #f5f9fc; border-left: 2px solid #5e8ab0; padding: 10px 14px; border-radius: 6px; }
+.var-row.recent-status h5 { color: #5e8ab0; }
+.trigger-check { display: flex; align-items: flex-start; cursor: pointer; gap: 8px; padding: 2px 0; }
+.trigger-check input[type="checkbox"] { display: none; }
+.ck-mark { flex-shrink: 0; width: 16px; height: 16px; border: 1.5px solid #c7c7cc; border-radius: 4px; margin-top: 2px; background: #fff; position: relative; transition: all 0.15s; }
+.trigger-check input:checked + .ck-mark { background: #34c759; border-color: #34c759; }
+.trigger-check input:checked + .ck-mark::after { content: ""; position: absolute; left: 4px; top: 0.5px; width: 5px; height: 9px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.ck-content { flex: 1; }
+.trigger-check input:checked ~ .ck-content { color: #86868b; text-decoration: line-through; text-decoration-color: rgba(134,134,139,0.5); }
+
 .footer { border-top: 0.5px solid rgba(0,0,0,0.1); padding: 32px 0 60px; font-size: 12.5px; color: var(--label-3, #86868b); line-height: 1.7; }
 .footer h4 { font-size: 13px; font-weight: 600; color: var(--label, #1d1d1f); margin: 0 0 8px; }
 .footer a { color: var(--blue, #0071e3); text-decoration: none; }
@@ -531,6 +557,35 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
       </div>
     </div>
   </div>
+
+  <div class="position-overlay">
+    <div class="po-title">
+      <span class="lang-zh-only">📍 当前位置 + 风险向量（2026-05-29）</span>
+      <span class="lang-en-only">📍 Current Position + Risk Vectors (2026-05-29)</span>
+    </div>
+    <div class="po-grid">
+      <div class="po-cell now-here">
+        <div class="po-tag now"><span class="lang-zh-only">当前所在</span><span class="lang-en-only">CURRENT</span></div>
+        <p><span class="lang-zh-only">政权幸存（虚弱、crisis of command 中） + 海峡基本通（受 5/27-28 打击干扰但未关闭）</span><span class="lang-en-only">Regime survived (weakened, in "crisis of command") + Strait mostly open (disrupted by 5/27-28 strikes but not closed)</span></p>
+      </div>
+      <div class="po-cell vec down">
+        <div class="po-tag risk"><span class="lang-zh-only">↓ 中等风险</span><span class="lang-en-only">↓ Medium Risk</span></div>
+        <p><span class="lang-zh-only">V3 已实际向 B 倾斜（5/27-28 行动）+ V2 反馈循环激活 → 沿 y 轴向下推进政权崩溃概率</span><span class="lang-en-only">V3 has tilted to B (5/27-28 action) + V2 feedback loop active → pushes downward along y-axis toward regime collapse</span></p>
+      </div>
+      <div class="po-cell vec right">
+        <div class="po-tag risk-high"><span class="lang-zh-only">→ 高风险</span><span class="lang-en-only">→ High Risk</span></div>
+        <p><span class="lang-zh-only">V1 严重瘫痪——任何 IRGC 次级 actor 可能擅自封锁，且无法被中央叫停 → 沿 x 轴向右推进海峡关闭概率</span><span class="lang-en-only">V1 severely paralyzed — any IRGC sub-actor could unilaterally close the strait without central recall capability → pushes rightward along x-axis toward strait closure</span></p>
+      </div>
+      <div class="po-cell vec diag">
+        <div class="po-tag risk-tail"><span class="lang-zh-only">↘ 尾部风险</span><span class="lang-en-only">↘ Tail Risk</span></div>
+        <p><span class="lang-zh-only">V3 升级到 C（直接政权更迭）+ V1 收敛到 C（内部政变）的同时发生 → 跳到右下"最坏情景"象限。当前低概率但 5/27-28 后已不可忽略</span><span class="lang-en-only">V3 escalates to C (direct regime change) + V1 converges to C (internal coup) simultaneously → jumps to bottom-right "worst case" quadrant. Low probability now but no longer negligible after 5/27-28</span></p>
+      </div>
+    </div>
+    <div class="po-foot">
+      <span class="lang-zh-only">向量来源见 SECTION 6 · V1-V4 当月判定</span>
+      <span class="lang-en-only">Vector source: see SECTION 6 · V1-V4 monthly assessments</span>
+    </div>
+  </div>
 </section>
 
 <section class="sec">
@@ -789,6 +844,15 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
           <li><span class="lang-zh-only">2026-04 起官员、议员、教士、官媒在战争策略和对美谈判上公开冲突——NCRI 与 Iran International 共同形容为"指挥危机"</span><span class="lang-en-only">From April 2026, officials, lawmakers, clerics, and state media have been publicly clashing over war strategy and US negotiations — NCRI and Iran International both describe this as a "crisis of command"</span></li>
         </ul>
       </div>
+      <div class="var-row recent-status">
+        <h5><span class="lang-zh-only">近 30 天状态（2026-04-29 → 2026-05-29）</span><span class="lang-en-only">Past 30 Days (2026-04-29 → 2026-05-29)</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">Crisis of command 持续发酵：Iran International 4 月底报道决策圈在战争策略上公开冲突；5 月未见统一意志收敛迹象</span><span class="lang-en-only">Crisis of command continues: Iran International reported late April that the decision-making circle is publicly clashing on war strategy; no convergence of unified will observed in May</span></li>
+          <li><span class="lang-zh-only">Qalibaf 4 月退出对美谈判通道后，目前无明确替代渠道浮现</span><span class="lang-en-only">After Qalibaf withdrew from the US negotiation channel in April, no clear replacement has emerged</span></li>
+          <li><span class="lang-zh-only">Mojtaba 公开露面频率仍极低（CNN 4-21 称 "nowhere to be seen"）；5 月无新公开活动报道</span><span class="lang-en-only">Mojtaba's public appearances remain very rare (CNN 4-21: "nowhere to be seen"); no new public activity reported in May</span></li>
+          <li><span class="lang-zh-only"><b>当月判定：未收敛，介于 B（持续多派系）与 C（潜在政变）之间，远未到 A（强人整合）</b></span><span class="lang-en-only"><b>This month's assessment: not converging; between B (multi-faction persistence) and C (potential coup); far from A (strongman consolidation)</b></span></li>
+        </ul>
+      </div>
       <div class="var-row">
         <h5><span class="lang-zh-only">3 年内的取值方向</span><span class="lang-en-only">Convergence values (1-3 year window)</span></h5>
         <ul>
@@ -800,12 +864,12 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
       <div class="var-row">
         <h5><span class="lang-zh-only">收敛 trigger（事件，不是数字）</span><span class="lang-en-only">Convergence triggers (events, not metrics)</span></h5>
         <ul>
-          <li><span class="lang-zh-only">Mojtaba 90+ 天未公开露面 / 突然密集露面</span><span class="lang-en-only">Mojtaba absent 90+ days / sudden burst of public appearances</span></li>
-          <li><span class="lang-zh-only">Sistani（伊拉克什叶最高权威）公开就 Iran 局势发声</span><span class="lang-en-only">Sistani (highest Iraqi Shia authority) makes any public statement on Iran</span></li>
-          <li><span class="lang-zh-only">Vahidi-Qaani 公开破裂（互相指控）</span><span class="lang-en-only">Vahidi-Qaani public break (mutual accusations)</span></li>
-          <li><span class="lang-zh-only">新 IRGC 总司令任命（替代 Vahidi）</span><span class="lang-en-only">New IRGC commander-in-chief appointed (replacing Vahidi)</span></li>
-          <li><span class="lang-zh-only">大规模高层官员公开倒戈</span><span class="lang-en-only">Large-scale defections of senior officials</span></li>
-          <li><span class="lang-zh-only">Pezeshkian 突然出现在 G20/UN 等国际场合（说明 Vahidi 圈把他推到谈判台前）</span><span class="lang-en-only">Pezeshkian suddenly appears at G20/UN (Vahidi circle pushing him forward as negotiation face)</span></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v1-t1"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">Mojtaba 90+ 天未公开露面 / 突然密集露面</span><span class="lang-en-only">Mojtaba absent 90+ days / sudden burst of public appearances</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v1-t2"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">Sistani（伊拉克什叶最高权威）公开就 Iran 局势发声</span><span class="lang-en-only">Sistani (highest Iraqi Shia authority) makes any public statement on Iran</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v1-t3"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">Vahidi-Qaani 公开破裂（互相指控）</span><span class="lang-en-only">Vahidi-Qaani public break (mutual accusations)</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v1-t4"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">新 IRGC 总司令任命（替代 Vahidi）</span><span class="lang-en-only">New IRGC commander-in-chief appointed (replacing Vahidi)</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v1-t5"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">大规模高层官员公开倒戈</span><span class="lang-en-only">Large-scale defections of senior officials</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v1-t6"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">Pezeshkian 突然出现在 G20/UN 等国际场合（说明 Vahidi 圈把他推到谈判台前）</span><span class="lang-en-only">Pezeshkian suddenly appears at G20/UN (Vahidi circle pushing him forward as negotiation face)</span></span></label></li>
         </ul>
       </div>
       <div class="var-row">
@@ -840,6 +904,15 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
           <li><span class="lang-zh-only">Israel + US 2026-05-27/28 再次打击伊朗（Bandar Abbas 无人机地面控制站，击落伊朗无人机）——说明对重建迹象的关切持续</span><span class="lang-en-only">Israel + US struck Iran again 2026-05-27/28 (Bandar Abbas drone ground control station, downed Iranian drones) — concern over reconstitution signs is ongoing</span></li>
         </ul>
       </div>
+      <div class="var-row recent-status">
+        <h5><span class="lang-zh-only">近 30 天状态（2026-04-29 → 2026-05-29）</span><span class="lang-en-only">Past 30 Days (2026-04-29 → 2026-05-29)</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">5/27-28 Israel + US 对 Bandar Abbas 无人机控制站发动新一轮打击——V2 反馈循环已实证激活</span><span class="lang-en-only">5/27-28 Israel + US struck the Bandar Abbas drone control station — empirical confirmation that the V2 feedback loop is active</span></li>
+          <li><span class="lang-zh-only">暂无 Maxar / Planet 卫星图像公开发布新建工地分析</span><span class="lang-en-only">No Maxar / Planet satellite analyses of new construction sites publicly released</span></li>
+          <li><span class="lang-zh-only">下一次 IAEA Board of Governors 会议预计 6 月初，目前无新报告</span><span class="lang-en-only">Next IAEA Board of Governors meeting expected early June; no new report yet</span></li>
+          <li><span class="lang-zh-only"><b>当月判定：循环仍处 B 路径（缓慢重建受 Israel 重复打击）；尚未出现 C（隐蔽 break out）的信号</b></span><span class="lang-en-only"><b>This month's assessment: loop is on path B (slow reconstitution under Israel's repeat strikes); no signal of C (covert breakout) yet</b></span></li>
+        </ul>
+      </div>
       <div class="var-row">
         <h5><span class="lang-zh-only">3 年内的取值方向</span><span class="lang-en-only">Convergence values</span></h5>
         <ul>
@@ -851,12 +924,12 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
       <div class="var-row">
         <h5><span class="lang-zh-only">收敛 trigger</span><span class="lang-en-only">Convergence triggers</span></h5>
         <ul>
-          <li><span class="lang-zh-only">IAEA 季度理事会报告显示浓缩活动恢复 / 完全中断</span><span class="lang-en-only">IAEA quarterly Board of Governors report shows enrichment resumed / fully halted</span></li>
-          <li><span class="lang-zh-only">IAEA 检查员被驱逐 / 重新获准入</span><span class="lang-en-only">IAEA inspectors expelled / readmitted</span></li>
-          <li><span class="lang-zh-only">Israel 再次空袭伊朗本土（5/27-28 后的二次/三次）</span><span class="lang-en-only">Israel again strikes Iranian soil (subsequent strikes after 5/27-28)</span></li>
-          <li><span class="lang-zh-only">地震 / 辐射 signals 提示地下核试</span><span class="lang-en-only">Seismic / radiation signals suggesting underground test</span></li>
-          <li><span class="lang-zh-only">Maxar / Planet 卫星图像显示 Natanz、Fordow、Isfahan 新建活动</span><span class="lang-en-only">Maxar / Planet satellite imagery shows new construction at Natanz, Fordow, Isfahan</span></li>
-          <li><span class="lang-zh-only">Iran 公开宣布退出 NPT</span><span class="lang-en-only">Iran publicly announces NPT withdrawal</span></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v2-t1"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">IAEA 季度理事会报告显示浓缩活动恢复 / 完全中断</span><span class="lang-en-only">IAEA quarterly Board of Governors report shows enrichment resumed / fully halted</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v2-t2"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">IAEA 检查员被驱逐 / 重新获准入</span><span class="lang-en-only">IAEA inspectors expelled / readmitted</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v2-t3"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">Israel 再次空袭伊朗本土（5/27-28 后的二次/三次）</span><span class="lang-en-only">Israel again strikes Iranian soil (subsequent strikes after 5/27-28)</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v2-t4"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">地震 / 辐射 signals 提示地下核试</span><span class="lang-en-only">Seismic / radiation signals suggesting underground test</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v2-t5"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">Maxar / Planet 卫星图像显示 Natanz、Fordow、Isfahan 新建活动</span><span class="lang-en-only">Maxar / Planet satellite imagery shows new construction at Natanz, Fordow, Isfahan</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v2-t6"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">Iran 公开宣布退出 NPT</span><span class="lang-en-only">Iran publicly announces NPT withdrawal</span></span></label></li>
         </ul>
       </div>
       <div class="var-row">
@@ -891,6 +964,15 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
           <li><span class="lang-zh-only">Bessent 5/14 表态：中国"will work behind the scenes" 推 Iran 重开海峡</span><span class="lang-en-only">Bessent stated 5/14: China "will work behind the scenes" to push Iran to reopen the Strait</span></li>
         </ul>
       </div>
+      <div class="var-row recent-status">
+        <h5><span class="lang-zh-only">近 30 天状态（2026-04-29 → 2026-05-29）</span><span class="lang-en-only">Past 30 Days (2026-04-29 → 2026-05-29)</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">5/14 Bessent 称中国会"behind the scenes"压伊朗——Trump 仍希望通过外交 + 制裁 + 中国施压解决</span><span class="lang-en-only">5/14 Bessent said China would "work behind the scenes" to pressure Iran — Trump still hopes to resolve via diplomacy + sanctions + Chinese pressure</span></li>
+          <li><span class="lang-zh-only">5/20 CNN 报道 Trump-Netanyahu 紧张通话；Netanyahu 被"frozen out"对伊谈判</span><span class="lang-en-only">5/20 CNN reported a tense Trump-Netanyahu call; Netanyahu was "frozen out" of US-Iran talks</span></li>
+          <li><span class="lang-zh-only">5/27-28 实际军事行动——本月最终动作向 B-leaning（持续军事压力）倾斜</span><span class="lang-en-only">5/27-28 actual military action — the month's final action tilted B-leaning (sustained military pressure)</span></li>
+          <li><span class="lang-zh-only"><b>当月判定：在 A（deal seeking）与 B（持续军事压力）之间摇摆，实际行动倾向 B</b></span><span class="lang-en-only"><b>This month's assessment: oscillating between A (deal seeking) and B (sustained military pressure); actual actions tilt toward B</b></span></li>
+        </ul>
+      </div>
       <div class="var-row">
         <h5><span class="lang-zh-only">3 年内的取值方向</span><span class="lang-en-only">Convergence values</span></h5>
         <ul>
@@ -902,11 +984,11 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
       <div class="var-row">
         <h5><span class="lang-zh-only">收敛 trigger</span><span class="lang-en-only">Convergence triggers</span></h5>
         <ul>
-          <li><span class="lang-zh-only">任何 deal 框架文本的实质公布（不是测气球）</span><span class="lang-en-only">Substantive deal framework text publicly released (not trial balloons)</span></li>
-          <li><span class="lang-zh-only">US CENTCOM 力量调整（增/减航母打击群、B-2 部署、地面部队规模）</span><span class="lang-en-only">US CENTCOM force adjustment (carrier strike group add/remove, B-2 deployments, ground force scaling)</span></li>
-          <li><span class="lang-zh-only">Trump 公开指示 Israel 行为（不允许某行动 / 公开鼓励）</span><span class="lang-en-only">Trump publicly directs Israeli action (forbids a strike / publicly endorses)</span></li>
-          <li><span class="lang-zh-only">deal 出现时 Lapid / Gantz 是否抵制（在野党反应揭示 deal 是否触碰以色列共识底线）</span><span class="lang-en-only">If a deal emerges, whether Lapid/Gantz resist (opposition reaction reveals whether deal touches Israeli consensus red line)</span></li>
-          <li><span class="lang-zh-only">2026-11 中期选举前后 Trump 对伊言论变化</span><span class="lang-en-only">Trump's rhetoric on Iran shifts around the 2026-11 midterms</span></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v3-t7"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">任何 deal 框架文本的实质公布（不是测气球）</span><span class="lang-en-only">Substantive deal framework text publicly released (not trial balloons)</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v3-t8"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">US CENTCOM 力量调整（增/减航母打击群、B-2 部署、地面部队规模）</span><span class="lang-en-only">US CENTCOM force adjustment (carrier strike group add/remove, B-2 deployments, ground force scaling)</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v3-t9"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">Trump 公开指示 Israel 行为（不允许某行动 / 公开鼓励）</span><span class="lang-en-only">Trump publicly directs Israeli action (forbids a strike / publicly endorses)</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v3-t10"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">deal 出现时 Lapid / Gantz 是否抵制（在野党反应揭示 deal 是否触碰以色列共识底线）</span><span class="lang-en-only">If a deal emerges, whether Lapid/Gantz resist (opposition reaction reveals whether deal touches Israeli consensus red line)</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v3-t11"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">2026-11 中期选举前后 Trump 对伊言论变化</span><span class="lang-en-only">Trump's rhetoric on Iran shifts around the 2026-11 midterms</span></span></label></li>
         </ul>
       </div>
       <div class="var-row">
@@ -941,6 +1023,15 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
           <li><span class="lang-zh-only">Israel 战略圈表现已显示窗口焦虑——Operation Roaring Lion 行动时点从 mid-2026 提前到 02-28（Katz 确认是因 Iran 内部抗议 + Trump 立场允许同步打击的 timing 窗口）</span><span class="lang-en-only">Israeli strategic class has shown window anxiety — Operation Roaring Lion was moved up from mid-2026 to 02-28 (Katz confirmed: Iran protests + Trump's posture allowing simultaneous strikes timing)</span></li>
         </ul>
       </div>
+      <div class="var-row recent-status">
+        <h5><span class="lang-zh-only">近 30 天状态（2026-04-29 → 2026-05-29）</span><span class="lang-en-only">Past 30 Days (2026-04-29 → 2026-05-29)</span></h5>
+        <ul>
+          <li><span class="lang-zh-only">Israeli 战略圈未公开发表"窗口快关"紧迫性论文（INSS 4 月文章主题为 Iran 核策略 long-term，非时间贴现）</span><span class="lang-en-only">Israeli strategic class has not publicly released "window closing" urgency papers (INSS April papers focused on long-term Iran nuclear strategy, not temporal discount)</span></li>
+          <li><span class="lang-zh-only">2026-11 中期选举民调：Trump 支持率约 50-55%（RCP 平均），尚未进入 lame duck 区</span><span class="lang-en-only">2026-11 midterm polling: Trump approval ~50-55% (RCP average); not yet lame-duck territory</span></li>
+          <li><span class="lang-zh-only">2028 共和党初选活动尚未实质启动</span><span class="lang-en-only">2028 GOP primary activity has not substantively begun</span></li>
+          <li><span class="lang-zh-only"><b>当月判定：变量未到收敛窗口；估计需 2026-11 中期选举后才有首个 trigger 信号</b></span><span class="lang-en-only"><b>This month's assessment: variable has not entered convergence window; first trigger signal likely after 2026-11 midterms</b></span></li>
+        </ul>
+      </div>
       <div class="var-row">
         <h5><span class="lang-zh-only">3 年内的取值方向</span><span class="lang-en-only">Convergence values</span></h5>
         <ul>
@@ -952,11 +1043,11 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
       <div class="var-row">
         <h5><span class="lang-zh-only">收敛 trigger</span><span class="lang-en-only">Convergence triggers</span></h5>
         <ul>
-          <li><span class="lang-zh-only">2026-11 众议院 MAGA 席位变化 + 参议院控制权易手</span><span class="lang-en-only">2026-11 House MAGA seat changes + Senate control flips</span></li>
-          <li><span class="lang-zh-only">2028 共和党初选辩论中 Vance / 其他候选浮出</span><span class="lang-en-only">2028 GOP primary debates: Vance or other candidates emerge</span></li>
-          <li><span class="lang-zh-only">Israeli 决策圈是否表现加速焦虑（INSS / IDF 发表"窗口快关"类论文）</span><span class="lang-en-only">Whether Israeli decision-makers show acceleration anxiety (INSS / IDF papers framing "window closing")</span></li>
-          <li><span class="lang-zh-only">美国民调：公众对 Israel 单边行动支持度变化（Pew / Gallup）</span><span class="lang-en-only">US polling: public support for Israeli unilateral action shifts (Pew / Gallup)</span></li>
-          <li><span class="lang-zh-only">Dem 国会重要议员对以态度变化（Sanders / Khanna / AOC 是否成 Dem 主流）</span><span class="lang-en-only">Key Dem legislators' Israel posture shifts (whether Sanders / Khanna / AOC become mainstream)</span></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v4-t12"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">2026-11 众议院 MAGA 席位变化 + 参议院控制权易手</span><span class="lang-en-only">2026-11 House MAGA seat changes + Senate control flips</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v4-t13"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">2028 共和党初选辩论中 Vance / 其他候选浮出</span><span class="lang-en-only">2028 GOP primary debates: Vance or other candidates emerge</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v4-t14"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">Israeli 决策圈是否表现加速焦虑（INSS / IDF 发表"窗口快关"类论文）</span><span class="lang-en-only">Whether Israeli decision-makers show acceleration anxiety (INSS / IDF papers framing "window closing")</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v4-t15"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">美国民调：公众对 Israel 单边行动支持度变化（Pew / Gallup）</span><span class="lang-en-only">US polling: public support for Israeli unilateral action shifts (Pew / Gallup)</span></span></label></li>
+          <li><label class="trigger-check"><input type="checkbox" data-tid="v4-t16"><span class="ck-mark"></span><span class="ck-content"><span class="lang-zh-only">Dem 国会重要议员对以态度变化（Sanders / Khanna / AOC 是否成 Dem 主流）</span><span class="lang-en-only">Key Dem legislators' Israel posture shifts (whether Sanders / Khanna / AOC become mainstream)</span></span></label></li>
         </ul>
       </div>
       <div class="var-row">
@@ -1069,5 +1160,22 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
 })();
 </script>
 
+
+<script>
+(function(){
+  const KEY = 'iran-triggers';
+  let state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){}
+  const boxes = document.querySelectorAll('.trigger-check input[type="checkbox"]');
+  boxes.forEach(box => {
+    const tid = box.dataset.tid;
+    if (state[tid]) box.checked = true;
+    box.addEventListener('change', () => {
+      state[tid] = box.checked;
+      localStorage.setItem(KEY, JSON.stringify(state));
+    });
+  });
+})();
+</script>
 </body>
 </html>
