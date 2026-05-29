@@ -1,17 +1,17 @@
 {
-  "as_of": "2026-05-28T09:47:28.110135Z",
+  "as_of": "2026-05-29T09:37:02.212814Z",
   "chain": [
     {
       "step": 1,
       "name": "\u5e03\u4f26\u7279\u539f\u6cb9",
       "name_en": "Brent crude",
       "tag": "\u4e0a\u6e38",
-      "current": 116.73,
+      "current": 102.75,
       "unit": "USD/\u6876",
       "unit_en": "USD/bbl",
       "baseline": 80,
       "alarm": 145,
-      "pressure": 57,
+      "pressure": 35,
       "interpretation": "\u4f20\u5bfc\u94fe\u6e90\u5934\u3002\u672c\u8eab\u4e0d\u76f4\u63a5\u5f71\u54cd\u9009\u7968\u3002Alarm $145 \u4e3a\u63a8\u6c7d\u6cb9\u81f3\u5176 alarm $5.00 \u6240\u9700\u6cb9\u4ef7\uff08passthrough $0.025/$1\u00b7bbl\uff09\u3002",
       "interpretation_en": "Source of the transmission chain. Does not directly affect votes. Alarm of $145 is the level required to push gasoline to its alarm of $5.00 (passthrough $0.025/$1\u00b7bbl).",
       "strength": 3,
@@ -48,12 +48,12 @@
       "name": "\u6218\u7565\u77f3\u6cb9\u50a8\u5907 (SPR)",
       "name_en": "Strategic Petroleum Reserve (SPR)",
       "tag": "\u4e0a\u6e38",
-      "current": 374175.0,
+      "current": 365112.0,
       "unit": "\u5343\u6876",
       "unit_en": "kbbl",
       "baseline": 600000,
       "alarm": 350000,
-      "pressure": 90,
+      "pressure": 94,
       "interpretation": "\u7f8e\u56fd\u5e94\u6025\u6cb9\u50a8\u3002<3.5 \u4ebf\u6876 = 6 \u4e2a\u6708\u91ca\u653e\u5bb9\u91cf\u8017\u5c3d\uff08\u91ca\u653e\u901f\u5ea6 ~1 mb/day\uff09\uff0c\u65e0\u6cd5\u538b\u5236\u4e0b\u4e00\u8f6e\u6cb9\u4ef7\u51b2\u51fb \u2192 \u89e6\u53d1\u4e0a\u6e38 alarm\u3002",
       "interpretation_en": "US emergency oil reserve. <350 Mbbl = 6-month release capacity exhausted (release rate ~1 mb/day), cannot suppress the next oil shock \u2192 triggers upstream alarm.",
       "strength": 1,
@@ -111,19 +111,19 @@
       "name": "\u5b9e\u9645\u53ef\u652f\u914d\u6536\u5165\uff08\u4eba\u5747\u540c\u6bd4\uff09",
       "name_en": "Real DPI per capita (YoY)",
       "tag": "\u4e0b\u6e38",
-      "current": 0.11175512368829792,
+      "current": -1.4073892646532395,
       "unit": "%",
       "unit_en": "%",
       "baseline": 2.0,
       "alarm": -1.0,
-      "pressure": 63,
+      "pressure": 100,
       "interpretation": "Hibbs Bread & Peace \u76f4\u63a5\u8f93\u5165\u3002**\u5df2\u5207\u5230\u4eba\u5747 (A229RX0)** \u56e0\u4e3a Hibbs/Bartels \u539f\u59cb\u8bba\u6587\u5747\u660e\u786e\u4eba\u5747\u3002\u6301\u7eed YoY -1% \u2192 \u52a0\u6743 15 \u5b63\u5ea6 R \u2248 0.5% \u2192 Hibbs \u7cfb\u6570 3.49 \u00d7 1.43pp \u4e0b\u964d = -5pp \u9009\u7968\u3002\u6ce8\u610f YoY \u53ef\u80fd mask stagnation\uff1a\u770b sub-metrics \u91cc\u7684 18m \u7d2f\u8ba1\u548c\u8ddd 12m peak \u56de\u843d\u3002",
       "interpretation_en": "Direct input to Hibbs Bread & Peace. **Switched to per-capita (A229RX0)** to match Hibbs/Bartels specifications. Sustained YoY -1% \u2192 weighted 15-quarter R \u2248 0.5% \u2192 Hibbs coefficient 3.49 \u00d7 1.43pp drop = -5pp votes. YoY alone can mask stagnation; check the 18m cumulative and drawdown-from-12m-peak sub-metrics below.",
       "sub_metrics": [
         {
           "label": "18 \u4e2a\u6708\u7d2f\u8ba1\u53d8\u5316",
           "label_en": "18-month cumulative change",
-          "value": 1.33,
+          "value": 0.15,
           "unit": "%",
           "unit_en": "%",
           "interpretation": "\u4ece\u4e0a\u4e00\u6b21\u4e2d\u671f\u9009\u4e3e\u81f3\u4eca\u7684\u771f\u5b9e\u8d2d\u4e70\u529b\u51c0\u53d8\u5316\u3002\u8d1f\u503c = \u9009\u6c11\u4e24\u5e74\u5185\u66f4\u7a77\u3002",
@@ -132,7 +132,7 @@
         {
           "label": "\u8ddd\u8fc7\u53bb 12 \u6708\u5cf0\u503c\u56de\u843d",
           "label_en": "Drawdown from trailing 12-month peak",
-          "value": -0.45,
+          "value": -1.14,
           "unit": "%",
           "unit_en": "%",
           "peak_date": "2026-01-01",
@@ -238,7 +238,7 @@
       "caveat_en": "Coefficients are [CALIBRATION_PENDING] \u2014 derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."
     }
   ],
-  "epu_index": 225.97,
+  "epu_index": 298.21,
   "methodology_caveats": {
     "ensemble_rmse_honesty": {
       "displayed": 1.07,
@@ -412,20 +412,20 @@
     }
   },
   "raw_inputs_for_model": {
-    "brent": 116.73,
-    "wti": 112.25,
+    "brent": 102.75,
+    "wti": 97.63,
     "gas_retail": 4.475,
     "cpi_yoy": 3.7792458367415627,
     "core_cpi_yoy": 2.743309430968526,
-    "rdpi_yoy": 0.11175512368829792,
-    "rdpi_level_per_capita": 52853.0,
+    "rdpi_yoy": -1.4073892646532395,
+    "rdpi_level_per_capita": 52330.0,
     "rdpi_quarterly_path": [
       1.4034783048083588,
       1.808591398741477,
       1.3615306438583996,
       0.5548276129290652,
-      -0.30010223947097847,
-      1.3228752581060377
+      -1.1888509323677465,
+      0.6320278584860173
     ],
     "unrate": 4.3,
     "unrate_yoy_pct_change": 2.3809523809523725,
