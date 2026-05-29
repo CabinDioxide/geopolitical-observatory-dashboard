@@ -1175,11 +1175,11 @@
     }
   },
   "substitution_matrix": {
-    "intro": "The 10 supply chains classified into three tiers by 'can a substitute be found within 90 days of a cut.' This is the most actionable frame in the whole transmission analysis — real damage is set not by 'does it transit Hormuz' but by 'can it be replaced, how fast, at what cost.'",
+    "intro": "The 10 supply chains classified into three tiers by 'can a substitute be found within 90 days of a cut.' This is the most actionable frame in the whole transmission analysis. [2026-05-29 verification correction] On review, no strict IMPOSSIBLE item remains at the functional level — helium and LNG-to-power were previously overstated and are both reclassified SLOW (see each item's constraints). The only truly unsubstitutable thing is trapped producers' export revenue, which belongs to a different layer (see 'Gulf producer fiscal exposure').",
     "verdicts": {
       "impossible": {
         "label": "IMPOSSIBLE",
-        "desc": "No physical substitute, or locked by an immovable time window",
+        "desc": "No physical substitute, or locked by an immovable time window. [Empty after 2026-05 review]: helium (formerly here) was found to be a manageable cost, not a production-halting hard constraint — four historical shortages only raised prices without halting output, helium is <1% of wafer cost, chips sit atop the allocation queue, and Oxford Economics + TSMC both see no severe production threat. Moved to SLOW.",
         "color": "danger"
       },
       "slow": {
@@ -1269,20 +1269,20 @@
       {
         "id": "helium_korea",
         "name": "Qatar helium → Korea semiconductors",
-        "verdict": "impossible",
+        "verdict": "slow",
         "downstream": "Samsung/SK hynix memory (DRAM/NAND, ~60% global share); lithography/wafer cooling/leak detection",
-        "timeline": "No near-term fix; new US/Canada/Australia capacity needs 12-24 months",
-        "premium": "Spot $30+/L (3x baseline)",
-        "constraints": "Helium is a Ras Laffan LNG co-product — LNG stops, He stops. US BLM federal reserve sold to Messer in 2024, no strategic reserve to release. Korea 65% sourced from Qatar",
-        "country_damaged": "South Korea (semis = 25% of exports)",
+        "timeline": "Manageable within the buffer window: Korea's ~4-month government strategic reserve + fab working stock; diversification (US ramping from ~30% of Korean supply) + recovery (80-95% at leading fabs) backfill. New capacity 12-24 months",
+        "premium": "Spot +40-100%, contract +25-40%; but helium is only <1% of wafer cost (TrendForce), almost entirely passed through",
+        "constraints": "[2026-05 correction: previously mislabeled IMPOSSIBLE] Helium is a manageable cost, not a production-halting constraint — four historical shortages (2006-07/2011-13/2018-20/2021-22) only raised prices, never halted output; chips sit atop the helium allocation queue (MRI/welding/balloons/diving cut first). Oxford Economics ('Chip sector has enough helium, for now') + TSMC ('no notable impact anticipated') concur. Tail halt only under >90-day total blockade + diversification failure with drained buffers, and chips are cut last",
+        "country_damaged": "South Korea (semis ~21% of exports)",
         "sources": [
           {
-            "label": "Trendforce — helium crunch Korea/Taiwan",
-            "url": "https://www.trendforce.com/news/2026/03/23/news-under-qatars-shadow-helium-crunch-hits-south-korea-harder"
+            "label": "TrendForce — helium <1% of wafer cost + 80-95% recovery",
+            "url": "https://www.trendforce.com/news/2026/04/08/news-decoding-impact-asia-chipmakers-move-to-tackle-helium-strain-as-intel-gains-relative-buffer/"
           },
           {
-            "label": "USGS Helium 2026",
-            "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-helium.pdf"
+            "label": "Oxford Economics — Chip sector has enough helium, for now",
+            "url": "https://www.oxfordeconomics.com/resource/chip-sector-has-enough-helium-for-now/"
           }
         ]
       },
@@ -1321,16 +1321,20 @@
       {
         "id": "tsmc",
         "name": "Qatar helium+LNG → Taiwan TSMC",
-        "verdict": "impossible",
+        "verdict": "slow",
         "downstream": "3nm/5nm/7nm leading-edge logic → Apple/NVIDIA/AMD/Qualcomm",
-        "timeline": "Dual-vector exposure → resilience needs 18-24 months of two-track buildout",
-        "premium": "Compound helium + LNG premium",
-        "constraints": "LNG = 12% of Taiwan electricity + helium 69% GCC-sourced. TSMC Fab 18B He recovery 68.4% (industry best) but doesn't eliminate dependence. Taiwan can't trade one buffer for another",
+        "timeline": "Helium manageable (TSMC >2-month buffer + recovery); the real hard constraint, LNG-to-grid power, is coal-substitutable (SLOW)",
+        "premium": "Helium cost passthrough <0.1% of global semi market; constructed estimate ~$0.5-1.5bn industry-wide, almost all passed through",
+        "constraints": "[2026-05 correction: previously mislabeled IMPOSSIBLE] Of the dual vector, helium is a manageable cost (<1% of wafer, 80-95% recovery, TSMC >2-month buffer); the real risk is LNG-to-grid power (Taiwan 47% gas-fired, 8-11 day reserves) — but that too is coal-substitutable SLOW. TSMC anticipates no notable impact; the circulating DRAM/NAND cuts are AI-demand-driven reallocation, not helium",
         "country_damaged": "Taiwan (semis 17-21% GDP, TSMC alone 8.9%)",
         "sources": [
           {
-            "label": "Vortexa — Taiwan Qatari LNG",
-            "url": "https://www.vortexa.com/insights/korea-taiwan-singapore-qatari-lng"
+            "label": "TrendForce — helium <1% of wafer cost",
+            "url": "https://www.trendforce.com/news/2026/04/08/news-decoding-impact-asia-chipmakers-move-to-tackle-helium-strain-as-intel-gains-relative-buffer/"
+          },
+          {
+            "label": "Oxford Economics — Chip sector has enough helium, for now",
+            "url": "https://www.oxfordeconomics.com/resource/chip-sector-has-enough-helium-for-now/"
           }
         ]
       },

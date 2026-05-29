@@ -1175,11 +1175,11 @@
     }
   },
   "substitution_matrix": {
-    "intro": "把 10 条供应链按「90 天断供后能否找到替代」分三档。这是整个传导分析最 actionable 的框架——决定真实损害量级的不是「过不过 Hormuz」，而是「断了能不能补、多久能补、补的代价」。",
+    "intro": "把 10 条供应链按「90 天断供后能否找到替代」分三档。这是整个传导分析最 actionable 的框架——决定真实损害量级的不是「过不过 Hormuz」，而是「断了能不能补、多久能补、补的代价」。【2026-05-29 核查修正】经核实，下游链功能层面已无严格 IMPOSSIBLE 项——氦与 LNG→发电此前被高估，均已修正为 SLOW（见各条 constraints）。唯一真正无替代的是 trapped 产油国的出口收入，那属于另一层（见「海湾产油国财政暴露」）。",
     "verdicts": {
       "impossible": {
         "label": "IMPOSSIBLE",
-        "desc": "无物理替代，或受不可移动的时间窗口锁定",
+        "desc": "无物理替代，或受不可移动的时间窗口锁定。【2026-05 核查后此档为空】：氦（曾列此档）经查为可管理成本而非停产硬约束——四次历史短缺只涨价没停产、<1% 晶圆成本、芯片在分配序列最顶端、Oxford Economics + TSMC 均判断无显著产出威胁。已移至 SLOW。",
         "color": "danger"
       },
       "slow": {
@@ -1269,20 +1269,20 @@
       {
         "id": "helium_korea",
         "name": "卡塔尔 helium → 韩国半导体",
-        "verdict": "impossible",
+        "verdict": "slow",
         "downstream": "Samsung/SK hynix 内存（DRAM/NAND，全球 ~60% 份额）；光刻/晶圆冷却/泄漏检测",
-        "timeline": "近期无解；新美国/加拿大/澳洲产能需 12-24 个月",
-        "premium": "现货 $30+/L（baseline 3x）",
-        "constraints": "helium 是 Ras Laffan LNG 副产品——LNG 停则 He 停。美国 BLM 联邦氦储备 2024 已卖给 Messer，无战略储备可放。韩国 65% 来自卡塔尔",
-        "country_damaged": "韩国（半导体占出口 25%）",
+        "timeline": "缓冲窗口内可管理：韩国政府战略储备 ~4 个月 + fab working stock；多元化（美国从 ~30% 韩国供应起扩产）+ 回收（先进 fab 80-95%）填补。新产能 12-24 月",
+        "premium": "现货 +40-100%、合约 +25-40%；但氦仅 <1% 晶圆成本（TrendForce），几乎全转嫁",
+        "constraints": "【2026-05 修正：曾误列 IMPOSSIBLE】氦不是停产硬约束而是可管理成本——四次历史短缺（2006-07/2011-13/2018-20/2021-22）全都只涨价没停产；芯片在氦分配序列最顶端（先砍 MRI/焊接/气球/潜水）。Oxford Economics「Chip sector has enough helium, for now」+ TSMC「不预期显著影响」一致。尾部停产仅在 >90 天全封锁 + 多元化失败、缓冲耗尽时，且芯片最后停",
+        "country_damaged": "韩国（半导体占出口 ~21%）",
         "sources": [
           {
-            "label": "Trendforce — helium crunch Korea/Taiwan",
-            "url": "https://www.trendforce.com/news/2026/03/23/news-under-qatars-shadow-helium-crunch-hits-south-korea-harder"
+            "label": "TrendForce — 氦 <1% 晶圆成本 + 回收 80-95%",
+            "url": "https://www.trendforce.com/news/2026/04/08/news-decoding-impact-asia-chipmakers-move-to-tackle-helium-strain-as-intel-gains-relative-buffer/"
           },
           {
-            "label": "USGS Helium 2026",
-            "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-helium.pdf"
+            "label": "Oxford Economics — Chip sector has enough helium, for now",
+            "url": "https://www.oxfordeconomics.com/resource/chip-sector-has-enough-helium-for-now/"
           }
         ]
       },
@@ -1321,16 +1321,20 @@
       {
         "id": "tsmc",
         "name": "卡塔尔 helium+LNG → Taiwan TSMC",
-        "verdict": "impossible",
+        "verdict": "slow",
         "downstream": "3nm/5nm/7nm 高端逻辑芯片 → Apple/NVIDIA/AMD/Qualcomm",
-        "timeline": "双 vector 同时暴露 → 韧性需 18-24 个月双轨建设",
-        "premium": "helium + LNG 双重溢价",
-        "constraints": "LNG 占 12% 台湾电力 + helium 69% GCC 来源。TSMC 18B 厂 He 回收率 68.4%（行业最佳）但不消除依赖。台湾不能拿一个 buffer 换另一个",
+        "timeline": "氦可管理（TSMC 缓冲 >2 个月 + 回收）；真正硬约束 LNG→电网受煤电替代约束（SLOW）",
+        "premium": "氦成本传导 <0.1% 全球半导体市场；构造性估算全行业 ~$5-15 亿，几乎全转嫁",
+        "constraints": "【2026-05 修正：曾误列 IMPOSSIBLE】双 vector 中，氦是可管理成本（<1% 晶圆、回收 80-95%、TSMC 缓冲 >2 个月）；真正风险是 LNG→电网（台湾 47% 气电、储备 8-11 天）——但那也是煤可替代的 SLOW。TSMC 称不预期显著影响；流传的 DRAM/NAND 减产是 AI 需求驱动的产能再分配，非氦",
         "country_damaged": "台湾（半导体 17-21% GDP，TSMC 单一 8.9%）",
         "sources": [
           {
-            "label": "Vortexa — Taiwan Qatari LNG",
-            "url": "https://www.vortexa.com/insights/korea-taiwan-singapore-qatari-lng"
+            "label": "TrendForce — 氦 <1% 晶圆成本",
+            "url": "https://www.trendforce.com/news/2026/04/08/news-decoding-impact-asia-chipmakers-move-to-tackle-helium-strain-as-intel-gains-relative-buffer/"
+          },
+          {
+            "label": "Oxford Economics — Chip sector has enough helium, for now",
+            "url": "https://www.oxfordeconomics.com/resource/chip-sector-has-enough-helium-for-now/"
           }
         ]
       },
