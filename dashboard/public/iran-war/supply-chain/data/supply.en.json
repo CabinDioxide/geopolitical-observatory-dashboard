@@ -1661,5 +1661,362 @@
         "effect": "East Asian energy crisis doubles (LNG + coal both cut)"
       }
     ]
+  },
+  "upheaval_risk": {
+    "intro": "This block is the political-upheaval synthesis layer — producers and importers on one map, ranked by upheaval risk. Detailed companion: 'Report 04'.",
+    "framing": "Core judgment: upheaval risk is NOT proportional to economic shock. It tracks the intersection of four factors — large shock × weak repressive capacity × pre-existing fragility × no external buffer. This selects the two ends (buffer-poor producers + poorest importers), not the richest countries hit hardest. Strict FACT (already happened) vs FORECAST (mechanism-based risk): the timing of upheaval is unpredictable; what's reliable is which countries' 'dry tinder' is stacked, and which is already burning.",
+    "bifurcation_note": "Key correction: producers face a 'bifurcated shock,' not uniform fiscal collapse. Bypass-capable producers (Saudi via Petroline, Oman by geography) get a windfall at high prices; only the trapped + no-SWF + sectarian-fault-line trio face real fiscal collapse and political risk: Iran, Iraq, Bahrain.",
+    "mechanisms": [
+      {
+        "id": "fuel",
+        "name": "① Fuel shortage → street violence",
+        "speed": "Fastest (erupted)",
+        "desc": "Oil-import-dependent + thin reserves + weak fiscal states hit first",
+        "example": "[FACT] India/Bangladesh/Pakistan gas-pump workers killed over shortages; Kenya 5/16-18 nationwide protests ≥8 dead"
+      },
+      {
+        "id": "food",
+        "name": "② Food price spike → bread riots",
+        "speed": "Classic mechanism",
+        "desc": "Strongest academic basis (NECSI/Lagi 2011: FAO food-price index ~210 threshold triggers riots). Food = 43% of consumption in low-income countries (World Bank)",
+        "example": "[FACT] Egypt fuel +14-17% but firewalled bread prices (the rational move)"
+      },
+      {
+        "id": "fiscal",
+        "name": "③ Fiscal collapse → unpaid wages → instability",
+        "speed": "No-buffer producers only",
+        "desc": "Ability to keep paying salaries/subsidies decides everything; rich Gulf has 1-2 yr SWF buffer",
+        "example": "[FACT] Iraq monthly oil revenue $6.8B→$1.96B (−70%), >10M on transfers, no SWF"
+      },
+      {
+        "id": "sect",
+        "name": "④ Sectarian activation (cross-border)",
+        "speed": "Already occurring",
+        "desc": "Pro-Iran Shia mobilization, transmitting across borders",
+        "example": "[FACT] Pakistan Gilgit-Baltistan fatal sectarian protests + army deployment; Bahrain unrest+crackdown after Khamenei's killing"
+      }
+    ],
+    "countries": [
+      {
+        "id": "iran",
+        "name": "Iran",
+        "name_en": "Iran",
+        "tier": "Epicenter",
+        "status": "erupted",
+        "status_label": "Erupted",
+        "color": "danger",
+        "mechanism": "Intra-elite disintegration + succession crisis",
+        "buffer": "Low (blockaded)",
+        "fact": "Jan 2026 protests met largest crackdown in modern history (~30,000 median death estimate); crisis of command; GDP −6.1%, food inflation 99%",
+        "forecast": "Consensus 'survived but weakened' not collapse; Polymarket implies ~15% regime-falls-by-2026; instability registers as intra-elite disintegration not mass overthrow",
+        "confidence": "High on facts / Med on outcome",
+        "sources": [
+          {
+            "label": "Maloney (Brookings); Sadjadpour (Carnegie); Polymarket",
+            "url": "https://www.brookings.edu/articles/can-irans-regime-survive-the-war/"
+          }
+        ]
+      },
+      {
+        "id": "iraq",
+        "name": "Iraq",
+        "name_en": "Iraq",
+        "tier": "Tier 1",
+        "status": "partial",
+        "status_label": "Partial (anti-war not anti-govt)",
+        "color": "danger",
+        "mechanism": "Payroll-state collapse (>10M on transfers)",
+        "buffer": "No SWF",
+        "fact": "Oil >93% of fiscal revenue; monthly revenue −70%; Mar-Apr wages covered by pre-war sales, crunch ~now; PM-designate faces 'worst fiscal crisis in a decade'",
+        "forecast": "Highest contagion risk among producers; Tishreen-style wage uprising is latent not realized (the 2026 protests were anti-war Sadrist). Sadr 5-27 ordered militia into state forces — de-escalatory",
+        "confidence": "High",
+        "sources": [
+          {
+            "label": "IMF Iraq Article IV 2025; The National",
+            "url": "https://www.imf.org/en/news/articles/2025/07/08/pr-25243-iraq-imf-executive-board-concludes-2025-article-iv-consultation"
+          }
+        ]
+      },
+      {
+        "id": "pakistan",
+        "name": "Pakistan",
+        "name_en": "Pakistan",
+        "tier": "Tier 1",
+        "status": "erupted",
+        "status_label": "Erupted (fatal sectarian)",
+        "color": "danger",
+        "mechanism": "Pro-Iran Shia mobilization + thin reserves + IMF squeeze",
+        "buffer": "Low",
+        "fact": "Gilgit-Baltistan fatal sectarian protests (13-24 dead) + army deployment + 3-day curfew; $7.2B IMF EFF; FX reserves ~$15.1B; 99% LNG from UAE",
+        "forecast": "Among the highest risk; trigger is not just fuel price but sectarian mobilization around Iran. 'Four-day week' unconfirmed for Pakistan specifically",
+        "confidence": "High",
+        "sources": [
+          {
+            "label": "Al Jazeera 2026-03-02",
+            "url": "https://www.aljazeera.com/news/2026/3/2/pakistan-calls-troops-orders-3-day-curfew-as-24-killed-in-pro-iran-rallies"
+          }
+        ]
+      },
+      {
+        "id": "kenya",
+        "name": "Kenya",
+        "name_en": "Kenya",
+        "tier": "Tier 1",
+        "status": "erupted",
+        "status_label": "Erupted (5/16-18, ≥8 dead)",
+        "color": "danger",
+        "mechanism": "Nationwide fuel protests + transport strike + live-fire crackdown",
+        "buffer": "Low",
+        "fact": "5/16-18 nationwide fuel protests, ACLED ≥8 dead day one; burning barricades/ruling-party office/9 trucks; EPRA consecutive hikes (24.2%+23.5%)",
+        "forecast": "ACLED warns Finance Bill 2026 further austerity will reignite; Mozambique/Comoros protests same period",
+        "confidence": "High (ACLED-confirmed)",
+        "sources": [
+          {
+            "label": "ACLED; WaPo 2026-05-18",
+            "url": "https://www.washingtonpost.com/business/2026/05/18/kenya-fuel-prices-protests/"
+          }
+        ]
+      },
+      {
+        "id": "nigeria",
+        "name": "Nigeria",
+        "name_en": "Nigeria",
+        "tier": "Tier 1",
+        "status": "partial",
+        "status_label": "Partial (subsidy already gone)",
+        "color": "danger",
+        "mechanism": "No subsidy cushion + 65% pump spike + hunger-protest mechanism",
+        "buffer": "Low",
+        "fact": "Mar 2026 pump price +65% (highest in Africa) despite being largest producer; subsidy removed 2023; 27.2M in crisis-level hunger",
+        "forecast": "Very high — no cushion left, Aug-2024 hunger-protest precedent, shock lands on fully deregulated market. New 2026 nationwide protest unconfirmed — watch closely",
+        "confidence": "High",
+        "sources": [
+          {
+            "label": "Peoples Dispatch 2026-04-07",
+            "url": "https://peoplesdispatch.org/2026/04/07/"
+          }
+        ]
+      },
+      {
+        "id": "bangladesh",
+        "name": "Bangladesh",
+        "name_en": "Bangladesh",
+        "tier": "Tier 1",
+        "status": "erupted",
+        "status_label": "Erupted (fuel violence)",
+        "color": "danger",
+        "mechanism": "Brand-new untested government + recession + fuel-theft violence",
+        "buffer": "Low",
+        "fact": "Fuel syndicates stealing at night, pump workers killed; universities closed early; 2026-02-12 BNP landslide, new government with no incumbency buffer",
+        "forecast": "High risk — untested new government + recessionary conditions + daily fuel-theft violence",
+        "confidence": "High",
+        "sources": [
+          {
+            "label": "Wikipedia 2026 Iran war fuel crisis; CNN",
+            "url": "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
+          }
+        ]
+      },
+      {
+        "id": "somalia",
+        "name": "Somalia",
+        "name_en": "Somalia",
+        "tier": "Tier 1",
+        "status": "erupted",
+        "status_label": "Erupted (famine risk)",
+        "color": "danger",
+        "mechanism": "Fuel +150% → aid-delivery collapse → famine",
+        "buffer": "None",
+        "fact": "Real famine risk (UN 2026-05-15, ~6M going without food, 2M children acutely malnourished); fuel +150%",
+        "forecast": "Humanitarian-catastrophe channel rather than regime-overthrow; layered on pre-existing drought and conflict",
+        "confidence": "High (humanitarian)",
+        "sources": [
+          {
+            "label": "UN News 2026-05-15; Save the Children",
+            "url": "https://news.un.org/en/story/2026/05/1167516"
+          }
+        ]
+      },
+      {
+        "id": "srilanka",
+        "name": "Sri Lanka",
+        "name_en": "Sri Lanka",
+        "tier": "Tier 2",
+        "status": "erupted",
+        "status_label": "Erupted (four-day week)",
+        "color": "alert",
+        "mechanism": "2022 fuel-collapse mechanism + IMF austerity",
+        "buffer": "Low (~6-wk reserves)",
+        "fact": "Four-day work week (Wednesday holiday); sharp price hikes; ~6-week reserves; President Dissanayake",
+        "forecast": "Structurally primed to repeat 2022 fuel-driven upheaval — the 2022 fuel/FX crisis toppled Rajapaksa, a verified precedent",
+        "confidence": "Med-High",
+        "sources": [
+          {
+            "label": "Tamil Guardian; WSWS 2026-03-28",
+            "url": "https://www.wsws.org/en/articles/2026/03/28/hzkz-m28.html"
+          }
+        ]
+      },
+      {
+        "id": "bahrain",
+        "name": "Bahrain",
+        "name_en": "Bahrain",
+        "tier": "Tier 2",
+        "status": "erupted",
+        "status_label": "Erupted (unrest+crackdown)",
+        "color": "alert",
+        "mechanism": "Sectarian fault line + structural deficit; capped by Saudi backstop",
+        "buffer": "Low (~$18-20B)",
+        "fact": "Multi-city unrest after Khamenei's killing, prosecuting sympathizers; breakeven ~$110 (IMF 2026-01), 2024 deficit 11% GDP, debt 134% GDP",
+        "forecast": "Only monarchy combining low buffer + structural deficit + sectarian fault line + active crackdown; tail capped by GCC/Peninsula Shield",
+        "confidence": "Med-High",
+        "sources": [
+          {
+            "label": "IMF Article IV 2026-01; France24",
+            "url": "https://www.imf.org/en/news/articles/2026/01/27/pr-26023-the-kingdom-of-bahrain-imf-executive-board-concludes-2025-article-iv-consultation"
+          }
+        ]
+      },
+      {
+        "id": "philippines",
+        "name": "Philippines",
+        "name_en": "Philippines",
+        "tier": "Tier 2",
+        "status": "erupted",
+        "status_label": "Erupted (emergency+strikes)",
+        "color": "alert",
+        "mechanism": "Transport strikes + 98% ME oil + poverty surge",
+        "buffer": "—",
+        "fact": "2026-03-24 national energy emergency (EO 110); PISTON strike 70,000; 98% oil from Middle East; 1.3-3.1M projected into poverty",
+        "forecast": "High distress, moderate regime risk — institutions absorbing via emergency declaration rather than fracturing",
+        "confidence": "Medium",
+        "sources": [
+          {
+            "label": "Al Jazeera; Wikipedia 2026 Philippine energy crisis",
+            "url": "https://en.wikipedia.org/wiki/2026_Philippine_energy_crisis"
+          }
+        ]
+      },
+      {
+        "id": "egypt",
+        "name": "Egypt",
+        "name_en": "Egypt",
+        "tier": "Tier 3",
+        "status": "partial",
+        "status_label": "Partial (fuel up, bread held)",
+        "color": "warning",
+        "mechanism": "Bread-subsidy tripwire (if touched) + Suez revenue loss",
+        "buffer": "IMF program",
+        "fact": "Fuel +14-17% (3-10); mandatory 9pm retail closures; bread price firewalled; IMF EFF $8B",
+        "forecast": "Highest classic risk — IF bread (not just fuel) is touched (1977/2011 precedent). Firewalling bread is the rational move",
+        "confidence": "Medium",
+        "sources": [
+          {
+            "label": "The National 2026-03-10",
+            "url": "https://www.thenationalnews.com/business/2026/03/10/egypt-raises-fuel-prices-up-to-30-as-iran-war-pushes-up-oil/"
+          }
+        ]
+      },
+      {
+        "id": "vietnam",
+        "name": "Vietnam",
+        "name_en": "Vietnam",
+        "tier": "Tier 3",
+        "status": "erupted",
+        "status_label": "Erupted (rationing)",
+        "color": "warning",
+        "mechanism": "Severe economic shock but authoritarian buffer",
+        "buffer": "—",
+        "fact": "Energy rationing + work-from-home begun; gig workers hit by doubled fuel prices",
+        "forecast": "High economic disruption, low regime-collapse risk (single-party high coercive capacity)",
+        "confidence": "Med (econ) / Low (regime)",
+        "sources": [
+          {
+            "label": "Soufan 2026-04-15",
+            "url": "https://thesoufancenter.org/intelbrief-2026-april-15/"
+          }
+        ]
+      },
+      {
+        "id": "jordan",
+        "name": "Jordan",
+        "name_en": "Jordan",
+        "tier": "Tier 4",
+        "status": "stable",
+        "status_label": "Stable",
+        "color": "ok",
+        "mechanism": "Subsidies pre-reformed; refugee-burden channel",
+        "buffer": "IMF healthy / strong reserves",
+        "fact": "Fuel subsidy removed 2012 + cash transfers — lacks the fuel-subsidy tripwire; IMF EFF 4th review completed 2025-12",
+        "forecast": "Lower acute risk — main channel is regional spillover/refugee burden, not a fuel social-contract break",
+        "confidence": "Medium",
+        "sources": [
+          {
+            "label": "IMF PR 25/423",
+            "url": "https://www.imf.org/en/news/articles/2025/12/12/pr-25423-jordan-imf-completes-the-4th-rev-under-eff-and-1st-rev-under-rsf-arrang"
+          }
+        ]
+      },
+      {
+        "id": "rich_gulf",
+        "name": "Rich Gulf (Saudi/UAE/Kuwait/Qatar)",
+        "name_en": "Rich Gulf (Saudi/UAE/Kuwait/Qatar)",
+        "tier": "Tier 4",
+        "status": "stable",
+        "status_label": "Stable (GDP pain, politically stable)",
+        "color": "ok",
+        "mechanism": "SWF + repression + windfall insulation",
+        "buffer": "High (SWF $0.5-1.1T)",
+        "fact": "Saudi Petroline bypasses Hormuz → high-price windfall (est. surplus $42-48B); PIF $1.15T, ADIA $1.1T, KIA >$1T, QIA $557B",
+        "forecast": "GDP pain but SWF+repression+windfall keep it politically stable; Saudi long-run Vision 2030 failure has legitimacy implications",
+        "confidence": "Med-High",
+        "sources": [
+          {
+            "label": "Goldman (via WaPo); Global SWF",
+            "url": "https://www.washingtonpost.com/business/2026/05/10/iran-war-oil-gulf-economies/"
+          }
+        ]
+      },
+      {
+        "id": "oman",
+        "name": "Oman",
+        "name_en": "Oman",
+        "tier": "Tier 4",
+        "status": "stable",
+        "status_label": "Stable (lowest risk)",
+        "color": "ok",
+        "mechanism": "Outside-Hormuz geography + Ibadi cohesion",
+        "buffer": "Improved (breakeven ~$65)",
+        "fact": "Duqm/Salalah export routes all outside Hormuz (Gulf of Oman side); breakeven cut to ~$65; S&P: fiscal health + strategic location help",
+        "forecast": "Lowest upheaval risk of the eight — outside-Hormuz geography + Ibadi-majority society without the Sunni-Shia fault line",
+        "confidence": "High",
+        "sources": [
+          {
+            "label": "The National / S&P 2026-03-28",
+            "url": "https://www.thenationalnews.com/business/economy/2026/03/28/sp-says-omans-fiscal-health-and-strategic-location-to-help-against-conflict/"
+          }
+        ]
+      },
+      {
+        "id": "rich_asia",
+        "name": "Rich Asia (Japan/Korea/Taiwan/China)",
+        "name_en": "Rich Asia (Japan/Korea/Taiwan/China)",
+        "tier": "Tier 4",
+        "status": "stable",
+        "status_label": "Stable (cost shock, not upheaval)",
+        "color": "ok",
+        "mechanism": "Cost shock but wealthy/stable, strong governance",
+        "buffer": "High",
+        "fact": "Cost shock (energy bills rise) but wealthy, strong repression/governance; China also has rally-around-flag",
+        "forecast": "Economic pain, political stability; sustained 12-24mo turns 'absorbable cost' into structural deindustrialization pressure (Germany/Japan), but electoral-level not upheaval",
+        "confidence": "High",
+        "sources": [
+          {
+            "label": "Report 04 §7 quantitative anchors",
+            "url": "/iran-war/reports/04_political_upheaval_risk.docx"
+          }
+        ]
+      }
+    ]
   }
 }

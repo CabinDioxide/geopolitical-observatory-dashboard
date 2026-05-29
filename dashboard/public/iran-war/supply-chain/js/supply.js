@@ -98,7 +98,17 @@ const I18N = {
     'turn.uncertainties': '关键不确定性',
     'turn.accelerators': '加速链接（如果 X → 加速 Y）',
     'turn.branches': '分支',
-    'turn.prob': '概率'
+    'turn.prob': '概率',
+    'block.upheaval': '政治动荡风险综合',
+    'hint.upheaval': '产油国+进口国同图排序 · 已发生 vs 推演分层 · 点击查看详情',
+    'drawer.tag.upheaval': '政治动荡风险',
+    'ur.mechanisms': '四传导机制',
+    'ur.tier': '风险档',
+    'ur.mechanism': '主导机制',
+    'ur.buffer': '缓冲',
+    'ur.fact': '已发生【事实】',
+    'ur.forecast': '风险评估【推演】',
+    'ur.confidence': '置信度'
   },
   en: {
     'stance.label': 'Core judgment',
@@ -179,7 +189,17 @@ const I18N = {
     'turn.uncertainties': 'Key uncertainties',
     'turn.accelerators': 'Accelerator links (if X → accelerate Y)',
     'turn.branches': 'Branches',
-    'turn.prob': 'Probability'
+    'turn.prob': 'Probability',
+    'block.upheaval': 'Political upheaval risk synthesis',
+    'hint.upheaval': 'Producers + importers ranked on one map · FACT vs FORECAST layered · click for details',
+    'drawer.tag.upheaval': 'Upheaval risk',
+    'ur.mechanisms': 'Four transmission mechanisms',
+    'ur.tier': 'Risk tier',
+    'ur.mechanism': 'Primary mechanism',
+    'ur.buffer': 'Buffer',
+    'ur.fact': 'Already happened [FACT]',
+    'ur.forecast': 'Risk assessment [FORECAST]',
+    'ur.confidence': 'Confidence'
   }
 };
 
@@ -217,6 +237,8 @@ async function init() {
     renderTimeProjection();
     renderTurningPoints();
     renderCountries();
+    // v4 new: political upheaval risk synthesis
+    renderUpheavalRisk();
     renderCrossChain();
     renderHistoryCompare();
     renderGlossary();
@@ -646,6 +668,69 @@ function renderTurningPoints() {
   });
   html += '</div>';
   c.innerHTML = html;
+}
+
+/* ============ v4: Political upheaval risk synthesis ============ */
+
+function renderUpheavalRisk() {
+  const ur = STATE.data.upheaval_risk;
+  if (!ur) return;
+  const fr = document.getElementById('upheaval-framing');
+  if (fr) {
+    fr.innerHTML = `
+      <p class="block-intro-text">${escapeHtml(ur.intro)}</p>
+      <div class="ur-framing-box">${escapeHtml(ur.framing)}</div>
+      <div class="ur-bifurcation">${escapeHtml(ur.bifurcation_note)}</div>`;
+  }
+  const mech = document.getElementById('upheaval-mechanisms');
+  if (mech) {
+    mech.innerHTML = `
+      <div class="ur-mech-label">${t('ur.mechanisms')}</div>
+      <div class="ur-mech-grid">
+        ${(ur.mechanisms || []).map(m => `
+          <div class="ur-mech-card">
+            <div class="ur-mech-name">${escapeHtml(m.name)}</div>
+            <div class="ur-mech-speed">${escapeHtml(m.speed)}</div>
+            <div class="ur-mech-desc">${escapeHtml(m.desc)}</div>
+            <div class="ur-mech-example">${escapeHtml(m.example)}</div>
+          </div>
+        `).join('')}
+      </div>`;
+  }
+  const grid = document.getElementById('upheaval-grid');
+  if (grid) {
+    grid.innerHTML = '';
+    (ur.countries || []).forEach(co => {
+      const card = document.createElement('button');
+      card.className = `ur-card color-${co.color} status-${co.status}`;
+      card.innerHTML = `
+        <div class="ur-card-top">
+          <span class="ur-tier">${escapeHtml(co.tier)}</span>
+          <span class="ur-status-badge st-${co.status}">${escapeHtml(co.status_label)}</span>
+        </div>
+        <div class="ur-name">${escapeHtml(co.name)}</div>
+        <div class="ur-mech-tag">${escapeHtml(co.mechanism)}</div>
+      `;
+      card.addEventListener('click', () => openUpheavalDrawer(co.id));
+      grid.appendChild(card);
+    });
+  }
+}
+
+function openUpheavalDrawer(id) {
+  const ur = STATE.data.upheaval_risk;
+  const co = (ur.countries || []).find(x => x.id === id);
+  if (!co) return;
+  setDrawer(t('drawer.tag.upheaval'), `
+    <h2 class="d-title">${escapeHtml(co.name)}${co.name_en && co.name_en !== co.name ? ` · <span style="color:var(--label-3);font-weight:500">${escapeHtml(co.name_en)}</span>` : ''}</h2>
+    <div class="d-verdict-row"><span class="ur-status-badge st-${co.status}">${escapeHtml(co.status_label)}</span><span class="ur-tier-pill">${escapeHtml(co.tier)}</span></div>
+    <div class="d-section"><div class="d-section-label">${t('ur.mechanism')}</div><div class="d-prose">${escapeHtml(co.mechanism)}</div></div>
+    <div class="d-section"><div class="d-section-label">${t('ur.buffer')}</div><div class="d-prose">${escapeHtml(co.buffer)}</div></div>
+    <div class="d-section"><div class="d-section-label">${t('ur.fact')}</div><div class="d-prose">${escapeHtml(co.fact)}</div></div>
+    <div class="d-section"><div class="d-section-label">${t('ur.forecast')}</div><div class="d-prose">${escapeHtml(co.forecast)}</div></div>
+    <div class="d-section"><div class="d-section-label">${t('ur.confidence')}</div><div class="d-prose">${escapeHtml(co.confidence)}</div></div>
+    ${renderDrawerSources(co.sources)}
+  `);
 }
 
 function handleHashJump() {

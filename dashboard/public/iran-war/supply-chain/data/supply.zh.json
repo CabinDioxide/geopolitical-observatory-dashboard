@@ -1661,5 +1661,362 @@
         "effect": "东亚能源危机加倍（LNG + 煤双断）"
       }
     ]
+  },
+  "upheaval_risk": {
+    "intro": "本块是政治动荡风险的综合层——把产油国与进口国放在同一张图上，按动荡风险排序。配套详细报告见「报告 04」。",
+    "framing": "核心判断：动荡风险不与经济冲击成正比。它取决于四要素的交集——冲击大 × 镇压能力弱 × 既有脆弱 × 无外部缓冲。这把最高风险指向两端（无缓冲产油国 + 最穷进口国），而非受冲击最大的富裕大国。全文严格区分【事实】（已发生）与【推演】（机制风险）：动荡的时点不可预测，能可靠说的是哪些国家的「干柴」已堆好、哪些已在燃烧。",
+    "bifurcation_note": "关键修正：产油国是「双叉冲击」不是统一财政崩。能绕开海峡的（沙特 Petroline、阿曼地理）在高油价下是 windfall；真正财政崩+政治风险只有 trapped + 无主权基金 + 教派断层三国：伊朗、伊拉克、巴林。",
+    "mechanisms": [
+      {
+        "id": "fuel",
+        "name": "① 燃料短缺 → 街头暴力",
+        "speed": "最快（已爆发）",
+        "desc": "石油高度进口依赖 + 储备薄 + 财政弱的国家首当其冲",
+        "example": "【事实】印/孟/巴 加油站工人因缺油被袭击致死；肯尼亚 5/16-18 全国抗议 ≥8 死"
+      },
+      {
+        "id": "food",
+        "name": "② 粮价飙升 → 面包暴动",
+        "speed": "经典机制",
+        "desc": "学术基础最扎实（NECSI/Lagi 2011：FAO 食品价格指数 ~210 阈值触发暴动）。食品占低收入国消费 43%（World Bank）",
+        "example": "【事实】埃及燃油 +14-17% 但 firewall 守住面包价（理性之举）"
+      },
+      {
+        "id": "fiscal",
+        "name": "③ 财政崩 → 发不出工资 → 政权不稳",
+        "speed": "仅无缓冲产油国",
+        "desc": "能否继续付薪资/补贴决定一切；富裕海湾有主权基金缓冲 1-2 年",
+        "example": "【事实】伊拉克月度油收入 $6.8B→$1.96B（−70%），>1000 万人靠转移支付，无 SWF"
+      },
+      {
+        "id": "sect",
+        "name": "④ 教派激活（跨国）",
+        "speed": "已现",
+        "desc": "亲伊朗什叶动员，跨境传导",
+        "example": "【事实】巴基斯坦 Gilgit-Baltistan 致命教派抗议 + 军队部署；巴林 Khamenei 遇刺后骚乱+镇压"
+      }
+    ],
+    "countries": [
+      {
+        "id": "iran",
+        "name": "伊朗",
+        "name_en": "Iran",
+        "tier": "震中",
+        "status": "erupted",
+        "status_label": "已爆发",
+        "color": "danger",
+        "mechanism": "精英内部解体 + 继位危机",
+        "buffer": "低（被封锁）",
+        "fact": "2026-01 抗议遭现代史最大镇压（死亡中位 ~30,000）；政权指挥危机；GDP −6.1%、食品通胀 99%",
+        "forecast": "共识「幸存但削弱」非崩溃；Polymarket 隐含年内倒台 ~15%；不稳定形态是精英内部解体而非群众推翻",
+        "confidence": "事实高/结局中",
+        "sources": [
+          {
+            "label": "Maloney (Brookings)；Sadjadpour (Carnegie)；Polymarket",
+            "url": "https://www.brookings.edu/articles/can-irans-regime-survive-the-war/"
+          }
+        ]
+      },
+      {
+        "id": "iraq",
+        "name": "伊拉克",
+        "name_en": "Iraq",
+        "tier": "一档",
+        "status": "partial",
+        "status_label": "部分（反战非反政府）",
+        "color": "danger",
+        "mechanism": "付薪国家崩（>1000 万靠转移支付）",
+        "buffer": "无 SWF",
+        "fact": "油占财政 >93%；月度收入 −70%；3-4 月工资靠战前销售覆盖，crunch 约现在到来；PM-designate 面临「十年来最严重财政危机」",
+        "forecast": "产油国中最高传染风险；Tishreen 式薪资暴动是潜在而非已实现（已发生的是反战 Sadrist）。Sadr 5-27 令民兵并入国家武装——降级信号",
+        "confidence": "高",
+        "sources": [
+          {
+            "label": "IMF Iraq Article IV 2025；The National",
+            "url": "https://www.imf.org/en/news/articles/2025/07/08/pr-25243-iraq-imf-executive-board-concludes-2025-article-iv-consultation"
+          }
+        ]
+      },
+      {
+        "id": "pakistan",
+        "name": "巴基斯坦",
+        "name_en": "Pakistan",
+        "tier": "一档",
+        "status": "erupted",
+        "status_label": "已爆发（教派致命）",
+        "color": "danger",
+        "mechanism": "亲伊朗什叶动员 + 薄储备 + IMF 挤压",
+        "buffer": "低",
+        "fact": "Gilgit-Baltistan 致命教派抗议（13-24 死）+ 军队部署 + 3 天宵禁；$72 亿 IMF EFF；FX 储备 ~$151 亿；99% LNG 从 UAE",
+        "forecast": "最高风险之一；触发器不只油价，是围绕伊朗的教派动员。「四天工作周」对巴特定未确认",
+        "confidence": "高",
+        "sources": [
+          {
+            "label": "Al Jazeera 2026-03-02",
+            "url": "https://www.aljazeera.com/news/2026/3/2/pakistan-calls-troops-orders-3-day-curfew-as-24-killed-in-pro-iran-rallies"
+          }
+        ]
+      },
+      {
+        "id": "kenya",
+        "name": "肯尼亚",
+        "name_en": "Kenya",
+        "tier": "一档",
+        "status": "erupted",
+        "status_label": "已爆发（5/16-18，≥8 死）",
+        "color": "danger",
+        "mechanism": "全国燃油抗议 + 交通罢工 + 实弹镇压",
+        "buffer": "低",
+        "fact": "5/16-18 全国燃油抗议，ACLED 首日 ≥8 死；焚烧路障/执政党办公室/9 辆卡车；EPRA 连续上调（24.2%+23.5%）",
+        "forecast": "ACLED 警告 Finance Bill 2026 进一步撙节会再引爆；莫桑比克/科摩罗同期已现",
+        "confidence": "高（ACLED 确认）",
+        "sources": [
+          {
+            "label": "ACLED；WaPo 2026-05-18",
+            "url": "https://www.washingtonpost.com/business/2026/05/18/kenya-fuel-prices-protests/"
+          }
+        ]
+      },
+      {
+        "id": "nigeria",
+        "name": "尼日利亚",
+        "name_en": "Nigeria",
+        "tier": "一档",
+        "status": "partial",
+        "status_label": "部分（补贴已取消）",
+        "color": "danger",
+        "mechanism": "无补贴缓冲 + 65% 泵价 + 饥饿抗议机制",
+        "buffer": "低",
+        "fact": "2026-03 泵价 +65%（全非最高）尽管是最大产油国；补贴已 2023 取消；2720 万人危机级饥饿",
+        "forecast": "很高——补贴已无（无缓冲）、2024-08 饥饿抗议先例、冲击落在完全去管制市场。2026 新全国抗议未确认，重点观察",
+        "confidence": "高",
+        "sources": [
+          {
+            "label": "Peoples Dispatch 2026-04-07",
+            "url": "https://peoplesdispatch.org/2026/04/07/"
+          }
+        ]
+      },
+      {
+        "id": "bangladesh",
+        "name": "孟加拉国",
+        "name_en": "Bangladesh",
+        "tier": "一档",
+        "status": "erupted",
+        "status_label": "已爆发（燃料暴力）",
+        "color": "danger",
+        "mechanism": "全新未经考验政府 + 衰退 + 燃料盗窃暴力",
+        "buffer": "低",
+        "fact": "燃料黑帮夜间抢油、加油站工人被杀；大学提前停课；2026-02-12 BNP 压倒性胜选，新政府无在任缓冲",
+        "forecast": "高风险——无在任缓冲的新政府 + 衰退式条件 + 每日燃料盗窃暴力",
+        "confidence": "高",
+        "sources": [
+          {
+            "label": "Wikipedia 2026 Iran war fuel crisis；CNN",
+            "url": "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
+          }
+        ]
+      },
+      {
+        "id": "somalia",
+        "name": "索马里",
+        "name_en": "Somalia",
+        "tier": "一档",
+        "status": "erupted",
+        "status_label": "已爆发（饥荒风险）",
+        "color": "danger",
+        "mechanism": "燃料 +150% → 援助崩 → 饥荒",
+        "buffer": "无",
+        "fact": "真实饥荒风险（UN 2026-05-15，~600 万人挨饿、200 万儿童急性营养不良）；燃料 +150%",
+        "forecast": "人道灾难渠道而非政权推翻渠道；叠加既有干旱与冲突",
+        "confidence": "高（人道）",
+        "sources": [
+          {
+            "label": "UN News 2026-05-15；Save the Children",
+            "url": "https://news.un.org/en/story/2026/05/1167516"
+          }
+        ]
+      },
+      {
+        "id": "srilanka",
+        "name": "斯里兰卡",
+        "name_en": "Sri Lanka",
+        "tier": "二档",
+        "status": "erupted",
+        "status_label": "已爆发（四天工作周）",
+        "color": "alert",
+        "mechanism": "2022 燃料崩机制 + IMF austerity",
+        "buffer": "低（~6 周储备）",
+        "fact": "实施四天工作周（周三定假日）；价格大涨；储备约 6 周；总统 Dissanayake",
+        "forecast": "结构性预备重演 2022 燃料驱动动荡——2022 曾因燃料/FX 危机推翻 Rajapaksa 政府，已验证先例",
+        "confidence": "中高",
+        "sources": [
+          {
+            "label": "Tamil Guardian；WSWS 2026-03-28",
+            "url": "https://www.wsws.org/en/articles/2026/03/28/hzkz-m28.html"
+          }
+        ]
+      },
+      {
+        "id": "bahrain",
+        "name": "巴林",
+        "name_en": "Bahrain",
+        "tier": "二档",
+        "status": "erupted",
+        "status_label": "已爆发（骚乱+镇压）",
+        "color": "alert",
+        "mechanism": "教派断层 + 结构赤字；被沙特 backstop 封顶",
+        "buffer": "低（~$18-20B）",
+        "fact": "Khamenei 遇刺后多城骚乱、起诉同情者；breakeven ~$110（IMF 2026-01）、2024 赤字 11% GDP、债务 134% GDP",
+        "forecast": "八君主国中唯一同时具低缓冲+结构赤字+教派断层+主动镇压；上限被 GCC/半岛之盾封顶",
+        "confidence": "中高",
+        "sources": [
+          {
+            "label": "IMF Article IV 2026-01；France24",
+            "url": "https://www.imf.org/en/news/articles/2026/01/27/pr-26023-the-kingdom-of-bahrain-imf-executive-board-concludes-2025-article-iv-consultation"
+          }
+        ]
+      },
+      {
+        "id": "philippines",
+        "name": "菲律宾",
+        "name_en": "Philippines",
+        "tier": "二档",
+        "status": "erupted",
+        "status_label": "已爆发（紧急状态+罢工）",
+        "color": "alert",
+        "mechanism": "运输罢工 + 98% ME 油 + 贫困潮",
+        "buffer": "—",
+        "fact": "2026-03-24 宣布全国能源紧急状态（EO 110）；PISTON 罢工 7 万人；98% 石油来自中东；预测 130-310 万人陷贫困",
+        "forecast": "高经济困顿、中等政权风险——机构通过紧急宣布吸收而非碎裂",
+        "confidence": "中",
+        "sources": [
+          {
+            "label": "Al Jazeera；Wikipedia 2026 Philippine energy crisis",
+            "url": "https://en.wikipedia.org/wiki/2026_Philippine_energy_crisis"
+          }
+        ]
+      },
+      {
+        "id": "egypt",
+        "name": "埃及",
+        "name_en": "Egypt",
+        "tier": "三档",
+        "status": "partial",
+        "status_label": "部分（燃油涨,面包守）",
+        "color": "warning",
+        "mechanism": "面包补贴 tripwire（若被触）+ 苏伊士收入损",
+        "buffer": "IMF 程序",
+        "fact": "燃油 +14-17%（3-10）；强制零售 9pm 关门；面包价 firewall 守住；IMF EFF $80 亿",
+        "forecast": "最高经典风险——若面包（非仅燃油）被触动（1977/2011 先例）。目前 firewall 面包是理性之举",
+        "confidence": "中",
+        "sources": [
+          {
+            "label": "The National 2026-03-10",
+            "url": "https://www.thenationalnews.com/business/2026/03/10/egypt-raises-fuel-prices-up-to-30-as-iran-war-pushes-up-oil/"
+          }
+        ]
+      },
+      {
+        "id": "vietnam",
+        "name": "越南",
+        "name_en": "Vietnam",
+        "tier": "三档",
+        "status": "erupted",
+        "status_label": "已爆发（配给）",
+        "color": "warning",
+        "mechanism": "严重经济冲击但威权缓冲",
+        "buffer": "—",
+        "fact": "已开始能源配给 + 居家办公；gig 工人受油价翻倍冲击",
+        "forecast": "高经济扰动、低政权崩溃风险（单一政党高强制能力）",
+        "confidence": "中（经济）/低（政权）",
+        "sources": [
+          {
+            "label": "Soufan 2026-04-15",
+            "url": "https://thesoufancenter.org/intelbrief-2026-april-15/"
+          }
+        ]
+      },
+      {
+        "id": "jordan",
+        "name": "约旦",
+        "name_en": "Jordan",
+        "tier": "四档",
+        "status": "stable",
+        "status_label": "较稳",
+        "color": "ok",
+        "mechanism": "补贴已改革；难民负担渠道",
+        "buffer": "IMF 健康/储备强",
+        "fact": "燃油补贴 2012 已取消+现金转移——缺乏燃油补贴 tripwire；IMF EFF 第 4 次 review 2025-12 完成",
+        "forecast": "较低急性风险——主渠道是地区外溢/难民负担，非燃油社会契约断裂",
+        "confidence": "中",
+        "sources": [
+          {
+            "label": "IMF PR 25/423",
+            "url": "https://www.imf.org/en/news/articles/2025/12/12/pr-25423-jordan-imf-completes-the-4th-rev-under-eff-and-1st-rev-under-rsf-arrang"
+          }
+        ]
+      },
+      {
+        "id": "rich_gulf",
+        "name": "富裕海湾（沙特/UAE/科威特/卡塔尔）",
+        "name_en": "Rich Gulf (Saudi/UAE/Kuwait/Qatar)",
+        "tier": "四档",
+        "status": "stable",
+        "status_label": "较稳（GDP 痛但政治稳）",
+        "color": "ok",
+        "mechanism": "SWF + 镇压 + windfall 隔离",
+        "buffer": "高（SWF $0.5-1.1T）",
+        "fact": "沙特 Petroline 绕海峡→高油价 windfall（估盈余 $420-480 亿）；PIF $1.15T、ADIA $1.1T、KIA >$1T、QIA $557B",
+        "forecast": "GDP 痛但 SWF+镇压+windfall 政治稳；沙特长期 Vision 2030 失败有合法性隐患",
+        "confidence": "中高",
+        "sources": [
+          {
+            "label": "Goldman（经 WaPo）；Global SWF",
+            "url": "https://www.washingtonpost.com/business/2026/05/10/iran-war-oil-gulf-economies/"
+          }
+        ]
+      },
+      {
+        "id": "oman",
+        "name": "阿曼",
+        "name_en": "Oman",
+        "tier": "四档",
+        "status": "stable",
+        "status_label": "较稳（最低风险）",
+        "color": "ok",
+        "mechanism": "海峡外地理 + Ibadi 凝聚",
+        "buffer": "改善（breakeven ~$65）",
+        "fact": "Duqm/Salalah 出口路线全在海峡外（阿曼湾侧）；breakeven 砍到 ~$65；S&P 称财政健康+战略位置有助抵御",
+        "forecast": "八国中动荡风险最低——海峡外地理 + Ibadi 多数社会无逊尼-什叶断层",
+        "confidence": "高",
+        "sources": [
+          {
+            "label": "The National / S&P 2026-03-28",
+            "url": "https://www.thenationalnews.com/business/economy/2026/03/28/sp-says-omans-fiscal-health-and-strategic-location-to-help-against-conflict/"
+          }
+        ]
+      },
+      {
+        "id": "rich_asia",
+        "name": "富裕亚洲（日韩台中）",
+        "name_en": "Rich Asia (Japan/Korea/Taiwan/China)",
+        "tier": "四档",
+        "status": "stable",
+        "status_label": "较稳（成本冲击非动荡）",
+        "color": "ok",
+        "mechanism": "成本冲击但富裕稳定、治理强",
+        "buffer": "高",
+        "fact": "成本冲击（能源账单上涨）但富裕、镇压/治理能力强；中国还有 rally-around-flag",
+        "forecast": "经济疼、政治稳；持续 12-24 月「可吸收成本」累积成结构性去工业化压力（德/日），但偏选举层面非动荡",
+        "confidence": "高",
+        "sources": [
+          {
+            "label": "报告 04 §7 量化锚点",
+            "url": "/iran-war/reports/04_political_upheaval_risk.docx"
+          }
+        ]
+      }
+    ]
   }
 }
