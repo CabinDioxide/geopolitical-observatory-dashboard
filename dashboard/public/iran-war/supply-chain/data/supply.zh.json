@@ -38,7 +38,7 @@
           "url": "https://www.atlanticcouncil.org/dispatches/inside-tehrans-toll-booth/"
         }
       ],
-      "analysis": "霍尔木兹海峡是全球最关键的能源咽喉要道。EIA 2024 数据：海峡每天通过约 21 mb/d 海运石油（占全球海运石油 28-30%）+ 大约 130 bcm/年液化天然气（占全球海运液化天然气 20%）。无人能完全替代——沙特 East-West Pipeline 仅 5 mb/d 可绕开，阿联酋 Habshan-富查伊拉仅 1.5 mb/d，加起来不到霍尔木兹流量的三分之一。\n\n伊朗对海峡通行权的武器化不是封锁全部，而是选择性扰动——CRS R45281 报告记录历史模式：1980-1988 两伊战争「油轮战争」期间双方袭击对方支持的船只 500+ 次但海峡从未完全关闭；2019 年 IRGC 在霍尔木兹海域扣押英国油轮 Stena Impero 14 天；2024 年扣押 MSC Aries（以色列关联）等多船。Atlantic Council 2026-03《Tehran's Toll Booth》记录的「每船 200 万美元通行费」是新模式——把通行权使用从「禁运」转向「收费」，更可持续。\n\n维持情景下油价回到 $75-90 区间；瓦解 + 长期封锁则飙升到 180-220，超 1973 危机相对幅度。这跟 2024 年 EIA 模型「极端情景油价倍数」估算（2.4×）一致。\n\n维持路径下伊朗通过「每船 200 万美元通行费」从 IRGC 海军估算的日均 100 艘油轮收取年约 730 亿美元——跟伊朗战前石油出口 1.5 mb/d 的总收入大致相当。这是「地理租金」从「出口自己的油」到「对别人收过路费」的转移。瓦解路径下胡齐斯坦油田暴动如果波及沙特 Aramco 东西输油管道东端 Khorramshahr 阀门站，沙特+UAE 合计 4.7 mb/d 旁通能力直接归零，全球能源系统进入「无可替代」状态。\n\n中国对霍尔木兹通行的暴露最大（40% 原油进口经此），但通过 shadow fleet + 伊朗-中国双边贸易 95% 走 mBridge 结算（Atlantic Council Toll Booth 数据），中国实际买伊朗油的折扣可能加深到比布伦特低 30-40 美元/桶——是冷战后任何石油买方都未拿过的折扣。"
+      "analysis": "霍尔木兹海峡是全球最关键的能源咽喉要道。EIA 2024 数据：海峡每天通过约 21 mb/d 海运石油（占全球海运石油 28-30%）+ 大约 130 bcm/年液化天然气（占全球海运液化天然气 20%）。无人能完全替代——沙特 East-West Pipeline 仅 5 mb/d 可绕开，阿联酋 Habshan-富查伊拉仅 1.5 mb/d，加起来不到霍尔木兹流量的三分之一。但「物理过境无替代」不等于「终端用途无替代」——这是判断真实损害的关键区分：LNG 分子本身确实无 bypass（卡塔尔经 Ras Laffan 唯一出口），但 LNG→发电这一终端可被煤电部分替代（韩国已取消煤电 80% 上限 + 推迟 1.5GW 退役，台湾恢复购煤，日本放松监管）；化肥同理，全球名义产能 240Mt 远超需求 185Mt，但实际可调用 slack 被中国出口禁令锁定。各链替代可行性差异见下方「替代可行性矩阵」一节。\n\n伊朗对海峡通行权的武器化不是封锁全部，而是选择性扰动——CRS R45281 报告记录历史模式：1980-1988 两伊战争「油轮战争」期间双方袭击对方支持的船只 500+ 次但海峡从未完全关闭；2019 年 IRGC 在霍尔木兹海域扣押英国油轮 Stena Impero 14 天；2024 年扣押 MSC Aries（以色列关联）等多船。Atlantic Council 2026-03《Tehran's Toll Booth》记录的「每船 200 万美元通行费」是新模式——把通行权使用从「禁运」转向「收费」，更可持续。\n\n维持情景下油价回到 $75-90 区间；瓦解 + 长期封锁则飙升到 180-220，超 1973 危机相对幅度。这跟 2024 年 EIA 模型「极端情景油价倍数」估算（2.4×）一致。\n\n维持路径下伊朗通过「每船 200 万美元通行费」从 IRGC 海军估算的日均 100 艘油轮收取年约 730 亿美元——跟伊朗战前石油出口 1.5 mb/d 的总收入大致相当。这是「地理租金」从「出口自己的油」到「对别人收过路费」的转移。瓦解路径下胡齐斯坦油田暴动如果波及沙特 Aramco 东西输油管道东端 Khorramshahr 阀门站，沙特+UAE 合计 4.7 mb/d 旁通能力直接归零，全球能源系统进入「无可替代」状态。\n\n中国对霍尔木兹通行的暴露最大（40% 原油进口经此），但通过 shadow fleet + 伊朗-中国双边贸易 95% 走 mBridge 结算（Atlantic Council Toll Booth 数据），中国实际买伊朗油的折扣可能加深到比布伦特低 30-40 美元/桶——是冷战后任何石油买方都未拿过的折扣。"
     },
     {
       "id": "maritime",
@@ -1173,5 +1173,489 @@
       "page": "maga",
       "section_id": "bridging"
     }
+  },
+  "substitution_matrix": {
+    "intro": "把 10 条供应链按「90 天断供后能否找到替代」分三档。这是整个传导分析最 actionable 的框架——决定真实损害量级的不是「过不过 Hormuz」，而是「断了能不能补、多久能补、补的代价」。",
+    "verdicts": {
+      "impossible": {
+        "label": "IMPOSSIBLE",
+        "desc": "无物理替代，或受不可移动的时间窗口锁定",
+        "color": "danger"
+      },
+      "slow": {
+        "label": "SLOW",
+        "desc": "60-180 天有限替代，溢价 30-100%",
+        "color": "warning"
+      },
+      "elastic": {
+        "label": "ELASTIC",
+        "desc": "30-60 天可补，溢价 20-40%",
+        "color": "ok"
+      }
+    },
+    "items": [
+      {
+        "id": "lng_power",
+        "name": "卡塔尔 LNG → 东亚发电/工业",
+        "verdict": "slow",
+        "downstream": "日韩台基础发电（台湾 42-46% 电力来自气电、韩国 ~28%、日本 ~28%）；石化/钢/玻璃/陶瓷工业用热；城市燃气",
+        "timeline": "发电维度 30-90 天可部分替代（煤电）；LNG 分子本身无 Hormuz bypass",
+        "premium": "JKM 价格 +50-70%（$10.5→$15-17.8/MMBtu）；保险升至货值 15-25%",
+        "constraints": "煤电替代已实证（韩国取消 80% 上限、推迟 1.5GW 退役；台湾恢复购煤；日本放松监管）——但受煤进口 + 排放约束。City gas / 工业用热无快速替代",
+        "country_damaged": "台湾（LNG 储 11 天，最脆弱）",
+        "sources": [
+          {
+            "label": "CGEP — Asia's Gas Shock Playbook",
+            "url": "https://www.energypolicy.columbia.edu/asias-gas-shock-playbook-coal-curtailment-and-competing-for-lng/"
+          },
+          {
+            "label": "KUNR/AP — Asia boosts coal use",
+            "url": "https://www.kunr.org/world-headlines/2026-03-24/asia-boosts-coal-use-as-iran-war-squeezes-global-lng-supplies"
+          }
+        ]
+      },
+      {
+        "id": "methanol_mto",
+        "name": "伊朗/沙特 methanol → 中国 MTO",
+        "verdict": "slow",
+        "downstream": "乙烯/丙烯 → PE/PP → 包装、薄膜、汽车件、医疗器械",
+        "timeline": "国产煤制甲醇（CTM）30-90 天可加产 5-10%；Trinidad/美国湾岸 30-45 天到货",
+        "premium": "甲醇 $250→$400/t（+40-50%）",
+        "constraints": "中国进口甲醇 59% 真实来自伊朗（多通过沙特/阿曼/UAE 中转标签）；MTO 厂在 $320+/t 即亏本 → 宁波/连云港厂会强制停产",
+        "country_damaged": "中国（沿海 MTO 厂）",
+        "sources": [
+          {
+            "label": "IndexBox 2024 methanol trade",
+            "url": "https://www.indexbox.io/blog/methanol-world-market-overview-2024-11/"
+          }
+        ]
+      },
+      {
+        "id": "refined_eu",
+        "name": "海湾成品油 → EU 柴油/航煤",
+        "verdict": "elastic",
+        "downstream": "EU 卡车物流、农机柴油、商用航空、海运 bunker、工业柴油发电",
+        "timeline": "美国湾岸（Valero/Marathon/Motiva）+ 西非 Dangote 650kb/d + 印度 Reliance 30-45 天可分流",
+        "premium": "柴油 crack +$8-15/bbl",
+        "constraints": "印度炼厂自身用 Hormuz 原油（部分自抵消）；Dangote 未满负荷。EU 柴油储备 90 天（IEA 强制）是最有韧性的产业",
+        "country_damaged": "德国/荷兰（Rotterdam ARA 集散）",
+        "sources": [
+          {
+            "label": "EIA — Saudi diesel to EU post-Russia ban",
+            "url": "https://www.eia.gov/todayinenergy/detail.php?id=65504"
+          }
+        ]
+      },
+      {
+        "id": "fertilizer_ag",
+        "name": "海湾 urea/ammonia → 印度/巴西农业",
+        "verdict": "slow",
+        "downstream": "印度 rabi 小麦、kharif 水稻；巴西 safrinha 玉米（占巴西 corn 78%）、大豆顶肥",
+        "timeline": "全球产能 240Mt vs 需求 185Mt，名义 slack 55Mt；但实际可调用仅 ~8-10Mt",
+        "premium": "urea $510→$950/t（+86%）",
+        "constraints": "中国 2024 起禁 urea 出口（食品安全）锁定最大 slack；埃及夏季把气调给电力停产；俄罗斯部分被制裁。最大缓解杠杆在中国一念之间",
+        "country_damaged": "印度（农业 16% GDP，养 46% 人口）/ 巴西",
+        "sources": [
+          {
+            "label": "IFPRI — Hormuz fertilizer shocks",
+            "url": "https://www.ifpri.org/blog/how-fertilizer-policies-could-exacerbate-hormuz-price-shocks/"
+          },
+          {
+            "label": "SunSirs — global urea capacity",
+            "url": "https://www.sunsirs.com/commodity-news/petail-27843.html"
+          }
+        ]
+      },
+      {
+        "id": "helium_korea",
+        "name": "卡塔尔 helium → 韩国半导体",
+        "verdict": "impossible",
+        "downstream": "Samsung/SK hynix 内存（DRAM/NAND，全球 ~60% 份额）；光刻/晶圆冷却/泄漏检测",
+        "timeline": "近期无解；新美国/加拿大/澳洲产能需 12-24 个月",
+        "premium": "现货 $30+/L（baseline 3x）",
+        "constraints": "helium 是 Ras Laffan LNG 副产品——LNG 停则 He 停。美国 BLM 联邦氦储备 2024 已卖给 Messer，无战略储备可放。韩国 65% 来自卡塔尔",
+        "country_damaged": "韩国（半导体占出口 25%）",
+        "sources": [
+          {
+            "label": "Trendforce — helium crunch Korea/Taiwan",
+            "url": "https://www.trendforce.com/news/2026/03/23/news-under-qatars-shadow-helium-crunch-hits-south-korea-harder"
+          },
+          {
+            "label": "USGS Helium 2026",
+            "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-helium.pdf"
+          }
+        ]
+      },
+      {
+        "id": "aluminum",
+        "name": "海湾铝（EGA+ALBA）→ 汽车/航空/包装",
+        "verdict": "slow",
+        "downstream": "Tesla/BMW/Mercedes 底盘铸件、车轮、热交换器；Airbus/Boeing 航空级合金；易拉罐、铝箔、建筑挤压",
+        "timeline": "俄罗斯 3.8Mt 可补——但仅对亚洲买家（中印）；西方 OEM 因制裁+认证无法用俄铝",
+        "premium": "现货 ~$2,700/t + 海运保险 $150-300/t",
+        "constraints": "海湾铝 ~6% 世界一次产能；冶炼厂 100% 气电——断气即断产。航空合金需 OEM 多月认证 → 两层市场",
+        "country_damaged": "EU 汽车/航空 OEM",
+        "sources": [
+          {
+            "label": "EGA / ALBA 公司年报 + USGS Aluminum",
+            "url": "https://www.ega.ae/en"
+          }
+        ]
+      },
+      {
+        "id": "polymer",
+        "name": "海湾 PE/PP → 亚太 converter",
+        "verdict": "elastic",
+        "downstream": "食品包装、医疗器械（PP 输液袋/注射器/管）、汽车内饰、纺织、农膜",
+        "timeline": "美国湾岸（Exxon/Dow/Lyondell）+ 中国 PP 过剩 30-60 天可补",
+        "premium": "20-40% 过渡期",
+        "constraints": "商品级 ELASTIC；但医疗级（USP Class VI/ISO 10993）+ 汽车级需 3-6 个月重新认证 → SLOW",
+        "country_damaged": "越南/孟加拉/印尼 converter",
+        "sources": [
+          {
+            "label": "ITP — Middle East polymer trade 2024",
+            "url": "https://blog.itpweb.com/middle-easts-commodity-polymer-trade-in-2024/"
+          }
+        ]
+      },
+      {
+        "id": "tsmc",
+        "name": "卡塔尔 helium+LNG → Taiwan TSMC",
+        "verdict": "impossible",
+        "downstream": "3nm/5nm/7nm 高端逻辑芯片 → Apple/NVIDIA/AMD/Qualcomm",
+        "timeline": "双 vector 同时暴露 → 韧性需 18-24 个月双轨建设",
+        "premium": "helium + LNG 双重溢价",
+        "constraints": "LNG 占 12% 台湾电力 + helium 69% GCC 来源。TSMC 18B 厂 He 回收率 68.4%（行业最佳）但不消除依赖。台湾不能拿一个 buffer 换另一个",
+        "country_damaged": "台湾（半导体 17-21% GDP，TSMC 单一 8.9%）",
+        "sources": [
+          {
+            "label": "Vortexa — Taiwan Qatari LNG",
+            "url": "https://www.vortexa.com/insights/korea-taiwan-singapore-qatari-lng"
+          }
+        ]
+      },
+      {
+        "id": "steel_dri",
+        "name": "海湾 DRI/HBI → EU EAF 绿钢",
+        "verdict": "elastic",
+        "downstream": "欧盟 EAF 绿钢（占 44.4% 欧盟粗钢）→ 汽车（奔驰/宝马/大众承诺采购）、建筑、风机",
+        "timeline": "Voestalpine 德州 2Mt/y HBI 厂（ArcelorMittal 2025 买 80% 专供欧洲）+ 巴西 Vale + 美国 Nucor 30-90 天",
+        "premium": "10-25%",
+        "constraints": "当前实际欧洲绿钢贸易 <10 万吨——短期 ELASTIC；但 2027-2030 规划产能需 3-5 年新建周期 → SLOW",
+        "country_damaged": "德国/瑞典（Salzgitter/SSAB）",
+        "sources": [
+          {
+            "label": "Worldsteel DRI + EUROFER",
+            "url": "https://worldsteel.org/"
+          }
+        ]
+      },
+      {
+        "id": "mri",
+        "name": "卡塔尔 helium → MRI/制药 cryo",
+        "verdict": "slow",
+        "downstream": "MRI 影像（Siemens/GE/Philips/Canon/联影，每台需 >1,000L 液氦）；cryo-EM 药物研发；生物样本存储",
+        "timeline": "新机 30-90 天优先化（医疗 > 派对气球）；安装基量改造 12-24 个月",
+        "premium": "现货 +200-300%",
+        "constraints": "Siemens DryCool / Philips BlueSeal 已商用低氦机——但只解决新机，安装基量靠传统液氦的 MRI 无解。WHO 必需医疗优先",
+        "country_damaged": "全球医疗（美/欧/日安装基量）",
+        "sources": [
+          {
+            "label": "USGS Helium 2026 + Mordor MRI market",
+            "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-helium.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  "producer_fiscal": {
+    "intro": "现有「国家政治脆弱性矩阵」是 11 个消费国。这里补上传导链的源头——8 个海湾产油国的财政暴露。Hormuz 关闭对它们是双刃：既是武器，也是自杀。",
+    "countries": [
+      {
+        "id": "iraq",
+        "name": "伊拉克",
+        "name_en": "Iraq",
+        "hydrocarbon_gdp": "54%",
+        "fiscal_share": "~93%",
+        "breakeven": "$84/桶",
+        "exposure": "财政崩溃——已 4.2% 赤字，IMF 下行情景赤字达 11.5% GDP",
+        "buffer": "极少",
+        "color": "danger",
+        "sources": [
+          {
+            "label": "IMF Iraq 2025 Article IV",
+            "url": "https://www.imf.org/en/news/articles/2025/07/08/pr-25243-iraq-imf-executive-board-concludes-2025-article-iv-consultation"
+          }
+        ]
+      },
+      {
+        "id": "iran",
+        "name": "伊朗",
+        "name_en": "Iran",
+        "hydrocarbon_gdp": "~25%",
+        "fiscal_share": "油占出口 57%",
+        "breakeven": "受制裁定价",
+        "exposure": "自封锁等于自杀——已受制裁，1.5mb/d 出口打 10-15% 折扣",
+        "buffer": "受制裁，极少",
+        "color": "danger",
+        "sources": [
+          {
+            "label": "Atlantic Council / GIS Iran oil exports",
+            "url": "https://www.atlanticcouncil.org/"
+          }
+        ]
+      },
+      {
+        "id": "kuwait",
+        "name": "科威特",
+        "name_en": "Kuwait",
+        "hydrocarbon_gdp": "27.6%",
+        "fiscal_share": "~90%",
+        "breakeven": "—",
+        "exposure": "严重——2024 GDP 已因油价跌 $5B",
+        "buffer": "KIA 主权基金 ~$800B+",
+        "color": "alert",
+        "sources": [
+          {
+            "label": "AGBI Kuwait economy",
+            "url": "https://www.agbi.com/"
+          }
+        ]
+      },
+      {
+        "id": "oman",
+        "name": "阿曼",
+        "name_en": "Oman",
+        "hydrocarbon_gdp": "23.5%",
+        "fiscal_share": "~70%",
+        "breakeven": "—",
+        "exposure": "严重——但 Sohar/Salalah/Duqm 港在 Hormuz 外侧，反而是 bypass 节点",
+        "buffer": "有限",
+        "color": "alert",
+        "sources": [
+          {
+            "label": "World Bank Oman indicators",
+            "url": "https://www.worldbank.org/"
+          }
+        ]
+      },
+      {
+        "id": "saudi",
+        "name": "沙特",
+        "name_en": "Saudi Arabia",
+        "hydrocarbon_gdp": "~24%",
+        "fiscal_share": "63%（vs 2014 的 88%）",
+        "breakeven": "~$90/桶",
+        "exposure": "严重但有缓冲——Petroline 5mb/d 可绕开部分；Vision 2030 推迟",
+        "buffer": "SAMA $450B + PIF",
+        "color": "warning",
+        "sources": [
+          {
+            "label": "IMF Saudi 2025 Article IV",
+            "url": "https://www.imf.org/"
+          }
+        ]
+      },
+      {
+        "id": "qatar",
+        "name": "卡塔尔",
+        "name_en": "Qatar",
+        "hydrocarbon_gdp": "~35%",
+        "fiscal_share": "极高",
+        "breakeven": "—",
+        "exposure": "LNG 收入清零——Ras Laffan 是唯一出口，无 bypass",
+        "buffer": "QIA 主权基金 ~$500B",
+        "color": "warning",
+        "sources": [
+          {
+            "label": "IMF Qatar 2024 Article IV",
+            "url": "https://www.imf.org/"
+          }
+        ]
+      },
+      {
+        "id": "bahrain",
+        "name": "巴林",
+        "name_en": "Bahrain",
+        "hydrocarbon_gdp": "10.9%",
+        "fiscal_share": "~60-70%",
+        "breakeven": "—",
+        "exposure": "油气占 GDP 最低（最早多元化）；但财政本就弱",
+        "buffer": "少",
+        "color": "warning",
+        "sources": [
+          {
+            "label": "World Bank Bahrain indicators",
+            "url": "https://www.worldbank.org/"
+          }
+        ]
+      },
+      {
+        "id": "uae",
+        "name": "阿联酋",
+        "name_en": "UAE",
+        "hydrocarbon_gdp": "~24%",
+        "fiscal_share": "~30%",
+        "breakeven": "—",
+        "exposure": "可控——Dubai 非油经济持续；Habshan-Fujairah 管线 1.5mb/d 可绕开",
+        "buffer": "ADIA ~$1T",
+        "color": "ok",
+        "sources": [
+          {
+            "label": "UAE government 2024 GDP data",
+            "url": "https://u.ae/en"
+          }
+        ]
+      }
+    ]
+  },
+  "time_projection": {
+    "intro": "假设 Hormuz 持续部分至全部封锁（不达成正式停火），下面是基线条件路径——区别于「最坏情景 5 阶段」（3-5% 灾难路径）。",
+    "assumption": "Hormuz 持续中断 + Israel/Iran 维持当前 V3-B 倾向 + 伊朗决策瘫痪（V1）",
+    "phases": [
+      {
+        "horizon": "T+1 个月",
+        "label": "第一波价格冲击 + 紧急行政响应",
+        "color": "warning",
+        "price_action": "JKM LNG $15-17.8（已发生）；Brent $90+；helium 现货 3x；urea $950/t；铝 LME premium +$300/t",
+        "policy_response": "韩国取消煤电 80% 上限 + 推迟 1.5GW 退役；台湾恢复煤电；日本放松监管；美国 SPR 释放 + IEA 协调",
+        "industry_impact": "东亚化工厂电费上涨；中国 MTO 部分停产；EU 柴油 crack +$8-15/bbl",
+        "producer_state": "伊拉克财政立即承压（breakeven $84，油占财政 93%）",
+        "political": "G7 + GCC 紧急会议；IAEA 特别理事会"
+      },
+      {
+        "horizon": "T+3 个月",
+        "label": "库存耗尽 + 工业配给",
+        "color": "alert",
+        "price_action": "价格高位维持；煤炭进口需求飙升 → 印尼/澳洲 thermal coal +30-50%",
+        "policy_response": "东亚煤电利用率拉到 90%+；半导体厂启动 helium 配给（优先 AI 芯片）",
+        "industry_impact": "台湾 LNG（11 天）+ 韩国（30 天）库存耗尽；TSMC/Samsung helium 第 9 周紧张；中国 MTO 停产扩大",
+        "producer_state": "伊拉克进入财政危机；沙特启动 PIF 抛售；阿曼/科威特动用储备",
+        "political": "中国可能解除 urea 出口禁令；可能 China-broker Iran-US deal。**若延伸到 9-11 月 → 印度 rabi 灾难**"
+      },
+      {
+        "horizon": "T+6 个月",
+        "label": "结构性重组 + 政治转折窗口",
+        "color": "alert",
+        "price_action": "US LNG 2026 +57 MTPA 部分上线 → 缓解部分紧张",
+        "policy_response": "阿曼 Sohar/Salalah/Duqm 港扩张（部分）→ bypass 物流加强",
+        "industry_impact": "中国 MTO 部分永久关闭转 CTM；半导体 AI 芯片优先模式；韩台煤电成新基线（破 Net Zero）；印巴签长约 with 俄/北非化肥",
+        "producer_state": "科威特/巴林动用主权基金；伊拉克可能进入 IMF 紧急救助；伊朗经济崩溃接近 V1=C 路径",
+        "political": "**2026-11 美国中期选举**（V4 收敛节点）；可能达成 Trump-Iran deal（V3=A）或 Israel 升 C → 政权崩溃"
+      },
+      {
+        "horizon": "T+12 个月",
+        "label": "替代基础设施部分上线",
+        "color": "warning",
+        "price_action": "US LNG 出口 94→~125 MTPA；沙特 Petroline 全负荷 5→7mb/d；UAE Habshan 扩张提前",
+        "policy_response": "第一批新 helium 产能（美 Hugoton 重启 + Algeria）commissioning；印度自产化肥部分上线",
+        "industry_impact": "全球 MTO 重组完成；半导体 He recovery 普及（68%→行业 50%+）；东亚电力暂回煤主导（Net Zero 暂停）；海湾铝部分永久关闭",
+        "producer_state": "伊拉克 IMF 救助下重组；沙特 Vision 2030 推迟 5-10 年；卡塔尔靠 SWF 维持",
+        "political": "2028 美国大选周期启动；伊朗局势基本明朗（V1 收敛）"
+      },
+      {
+        "horizon": "T+24 个月",
+        "label": "Post-Hormuz Era 格局基本形成",
+        "color": "ok",
+        "price_action": "US LNG 出口达 172 MTPA；全球 LNG 进入供应过剩期；价格回归 baseline +10-20%",
+        "policy_response": "Sohar/Salalah/Duqm 成新中东能源出口枢纽",
+        "industry_impact": "印巴化肥自给率显著提升；半导体 helium 多源（Qatar 仅 ~50%）；东亚煤电复兴成永久；中国 MTO 转 CTM 不可逆",
+        "producer_state": "卡塔尔/UAE 财政恢复需 5-7 年；沙特 Vision 2030 实质失败；伊朗（若幸存）成被驯化二线产油国",
+        "political": "美国 2028 新政府；中东以色列-海湾正常化（V4 已收敛）；中国从伊朗撤资转向沙特/UAE"
+      }
+    ]
+  },
+  "turning_points": {
+    "intro": "整个传导推演的最大不确定性集中在 4 个变量上。它们的取值决定 Hormuz 危机是 6 个月还是 24 个月问题。",
+    "key_uncertainties": [
+      {
+        "factor": "中国对 urea 出口禁令的态度",
+        "note": "最直接、最便宜的缓解杠杆，中国一念之间",
+        "branches": [
+          {
+            "condition": "解除禁令",
+            "outcome": "全球化肥缺口瞬间消失，化肥危机缩短至 3-6 个月",
+            "prob": "中"
+          },
+          {
+            "condition": "维持禁令",
+            "outcome": "印度/巴西农业按播种窗口受灾",
+            "prob": "中高"
+          }
+        ]
+      },
+      {
+        "factor": "Israel 战略目标演化（V2）",
+        "note": "决定 Hormuz 危机是 6 个月还是 24 个月",
+        "branches": [
+          {
+            "condition": "A·有限核回滚",
+            "outcome": "6 个月问题，沙盘停在政权幸存",
+            "prob": "中"
+          },
+          {
+            "condition": "B·持续军事压力",
+            "outcome": "低烈度持续战争",
+            "prob": "中高"
+          },
+          {
+            "condition": "C·政权更迭",
+            "outcome": "24 个月+，沙盘进入政权崩溃",
+            "prob": "中低"
+          }
+        ]
+      },
+      {
+        "factor": "美国 2026-11 中期 + 2028 大选（V4）",
+        "note": "决定整个 sandbox 是 6 个月或 12 个月收敛",
+        "branches": [
+          {
+            "condition": "MAGA 巩固 / 亲以鹰派接班",
+            "outcome": "Israel 时间贴现率低，可缓慢用 Begin Doctrine",
+            "prob": "中"
+          },
+          {
+            "condition": "Dem 接班",
+            "outcome": "Israel 失单边许可 → 迫使现在加速做完",
+            "prob": "中"
+          }
+        ]
+      },
+      {
+        "factor": "印度/巴西播种窗口的 timing 命中",
+        "note": "化肥危机的实质损失取决于月份",
+        "branches": [
+          {
+            "condition": "5-7 月关闭",
+            "outcome": "印度 rabi 安全（已过 kharif）",
+            "prob": "当前情形"
+          },
+          {
+            "condition": "9-11 月关闭",
+            "outcome": "印度 rabi 灾难（小麦播种期）",
+            "prob": "延续情形"
+          },
+          {
+            "condition": "1-2 月关闭",
+            "outcome": "巴西 safrinha 灾难（占巴西 corn 78%）",
+            "prob": "延续情形"
+          }
+        ]
+      }
+    ],
+    "accelerators": [
+      {
+        "trigger": "V3 升 C（美国全面升级）",
+        "effect": "Hormuz 关闭可能持续 24 个月+ → T+24 格局加速 12 个月到来"
+      },
+      {
+        "trigger": "中国解除 urea 禁令",
+        "effect": "化肥危机缩短至 3-6 个月"
+      },
+      {
+        "trigger": "韩台煤进口被 Houthi 红海袭击影响",
+        "effect": "东亚能源危机加倍（LNG + 煤双断）"
+      }
+    ]
   }
 }

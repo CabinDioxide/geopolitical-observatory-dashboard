@@ -69,7 +69,36 @@ const I18N = {
     'drawer.applicability': '适用性',
     'drawer.narrative': '叙述',
     'history.current_judgment': '当前判断',
-    'risk_window': '风险窗口'
+    'risk_window': '风险窗口',
+    'block.substitution': '替代可行性矩阵',
+    'hint.substitution': '10 条链按「90 天断供能否替代」分三档 · 点击查看详情',
+    'block.producer_fiscal': '海湾产油国财政暴露',
+    'hint.producer_fiscal': '传导链的源头 · 8 国按严重度排序 · Hormuz 关闭对产油国是双刃',
+    'block.time_projection': '1–24 月基线推演',
+    'hint.time_projection': '基线条件路径（非灾难路径）· Hormuz 持续中断假设下',
+    'block.turning_points': '关键转折点与不确定性',
+    'hint.turning_points': '4 个变量决定危机是 6 个月还是 24 个月问题',
+    'drawer.tag.substitution': '替代可行性',
+    'sub.downstream': '下游产业',
+    'sub.timeline': '替代时间线',
+    'sub.premium': '溢价',
+    'sub.constraints': '硬约束',
+    'sub.country_damaged': '最受损国家',
+    'pf.hydrocarbon_gdp': '油气占 GDP',
+    'pf.fiscal_share': '油气占财政',
+    'pf.breakeven': '财政平衡油价',
+    'pf.exposure': '90 天断供后果',
+    'pf.buffer': '缓冲',
+    'tp.assumption': '推演假设',
+    'tp.price': '价格',
+    'tp.policy': '政策响应',
+    'tp.industry': '产业冲击',
+    'tp.producer': '产油国状态',
+    'tp.political': '政治',
+    'turn.uncertainties': '关键不确定性',
+    'turn.accelerators': '加速链接（如果 X → 加速 Y）',
+    'turn.branches': '分支',
+    'turn.prob': '概率'
   },
   en: {
     'stance.label': 'Core judgment',
@@ -121,7 +150,36 @@ const I18N = {
     'drawer.applicability': 'Applicability',
     'drawer.narrative': 'Narrative',
     'history.current_judgment': 'Current judgment',
-    'risk_window': 'Risk window'
+    'risk_window': 'Risk window',
+    'block.substitution': 'Substitution feasibility matrix',
+    'hint.substitution': '10 chains by "replaceable within 90 days of a cut" in three tiers · click for details',
+    'block.producer_fiscal': 'Gulf producer fiscal exposure',
+    'hint.producer_fiscal': 'Source of the transmission chain · 8 countries by severity · Hormuz closure is double-edged for producers',
+    'block.time_projection': '1–24 month baseline projection',
+    'hint.time_projection': 'Baseline conditional path (not the catastrophe path) · under sustained Hormuz disruption',
+    'block.turning_points': 'Key turning points & uncertainties',
+    'hint.turning_points': '4 variables decide whether the crisis is a 6-month or 24-month problem',
+    'drawer.tag.substitution': 'Substitution',
+    'sub.downstream': 'Downstream industries',
+    'sub.timeline': 'Substitution timeline',
+    'sub.premium': 'Cost premium',
+    'sub.constraints': 'Hard constraints',
+    'sub.country_damaged': 'Country most damaged',
+    'pf.hydrocarbon_gdp': 'Hydrocarbon % of GDP',
+    'pf.fiscal_share': 'Hydrocarbon % of fiscal',
+    'pf.breakeven': 'Fiscal breakeven oil price',
+    'pf.exposure': '90-day cut consequence',
+    'pf.buffer': 'Buffer',
+    'tp.assumption': 'Projection assumption',
+    'tp.price': 'Price',
+    'tp.policy': 'Policy response',
+    'tp.industry': 'Industry impact',
+    'tp.producer': 'Producer state',
+    'tp.political': 'Political',
+    'turn.uncertainties': 'Key uncertainties',
+    'turn.accelerators': 'Accelerator links (if X → accelerate Y)',
+    'turn.branches': 'Branches',
+    'turn.prob': 'Probability'
   }
 };
 
@@ -140,6 +198,8 @@ async function init() {
     renderHeader();
     renderStance();
     renderChains();
+    // v4 new: substitution feasibility matrix
+    renderSubstitutionMatrix();
     // v3 new: US Navy capacity hub
     renderUsNavyHub();
     // v3 new: Ras Laffan event
@@ -149,8 +209,13 @@ async function init() {
     renderHormuzModes();
     // v3 new: Gulf trio role
     renderGulfTrioRole();
+    // v4 new: Gulf producer fiscal exposure
+    renderProducerFiscal();
     renderHubs();
     renderWorstCase();
+    // v4 new: 1-24 month baseline projection + turning points
+    renderTimeProjection();
+    renderTurningPoints();
     renderCountries();
     renderCrossChain();
     renderHistoryCompare();
@@ -410,6 +475,177 @@ function renderGulfTrioRole() {
 function formatBold(text) {
   if (!text) return '';
   return escapeHtml(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+}
+
+/* ============ v4: Substitution feasibility matrix ============ */
+
+function renderSubstitutionMatrix() {
+  const c = document.getElementById('sub-matrix-grid');
+  const sm = STATE.data.substitution_matrix;
+  if (!c || !sm) return;
+  const introEl = document.getElementById('sub-matrix-intro');
+  if (introEl) introEl.innerHTML = `<p class="block-intro-text">${escapeHtml(sm.intro)}</p>`;
+  c.innerHTML = '';
+  const order = ['impossible', 'slow', 'elastic'];
+  order.forEach(vkey => {
+    const v = sm.verdicts[vkey];
+    if (!v) return;
+    const col = document.createElement('div');
+    col.className = `sub-col color-${v.color}`;
+    const items = sm.items.filter(it => it.verdict === vkey);
+    col.innerHTML = `
+      <div class="sub-col-head">
+        <span class="sub-verdict-badge color-${v.color}">${escapeHtml(v.label)}</span>
+        <span class="sub-verdict-count">${items.length}</span>
+        <div class="sub-verdict-desc">${escapeHtml(v.desc)}</div>
+      </div>
+      <div class="sub-col-items"></div>
+    `;
+    const itemsWrap = col.querySelector('.sub-col-items');
+    items.forEach(it => {
+      const card = document.createElement('button');
+      card.className = `sub-item-card color-${v.color}`;
+      card.innerHTML = `
+        <div class="sub-item-name">${escapeHtml(it.name)}</div>
+        <div class="sub-item-damaged">${escapeHtml(it.country_damaged)}</div>
+      `;
+      card.addEventListener('click', () => openSubstitutionDrawer(it.id));
+      itemsWrap.appendChild(card);
+    });
+    c.appendChild(col);
+  });
+}
+
+function openSubstitutionDrawer(id) {
+  const sm = STATE.data.substitution_matrix;
+  const it = sm.items.find(x => x.id === id);
+  if (!it) return;
+  const v = sm.verdicts[it.verdict];
+  setDrawer(t('drawer.tag.substitution'), `
+    <h2 class="d-title">${escapeHtml(it.name)}</h2>
+    <div class="d-verdict-row"><span class="sub-verdict-badge color-${v.color}">${escapeHtml(v.label)}</span><span class="d-verdict-desc">${escapeHtml(v.desc)}</span></div>
+    <div class="d-section"><div class="d-section-label">${t('sub.downstream')}</div><div class="d-prose">${escapeHtml(it.downstream)}</div></div>
+    <div class="d-section"><div class="d-section-label">${t('sub.timeline')}</div><div class="d-prose">${escapeHtml(it.timeline)}</div></div>
+    <div class="d-section"><div class="d-section-label">${t('sub.premium')}</div><div class="d-prose">${escapeHtml(it.premium)}</div></div>
+    <div class="d-section"><div class="d-section-label">${t('sub.constraints')}</div><div class="d-prose">${escapeHtml(it.constraints)}</div></div>
+    <div class="d-section"><div class="d-section-label">${t('sub.country_damaged')}</div><div class="d-prose">${escapeHtml(it.country_damaged)}</div></div>
+    ${renderDrawerSources(it.sources)}
+  `);
+}
+
+/* ============ v4: Gulf producer fiscal exposure ============ */
+
+function renderProducerFiscal() {
+  const c = document.getElementById('producer-fiscal-grid');
+  const pf = STATE.data.producer_fiscal;
+  if (!c || !pf) return;
+  const introEl = document.getElementById('producer-fiscal-intro');
+  if (introEl) introEl.innerHTML = `<p class="block-intro-text">${escapeHtml(pf.intro)}</p>`;
+  c.innerHTML = '';
+  pf.countries.forEach(co => {
+    const card = document.createElement('button');
+    card.className = `pf-card color-${co.color}`;
+    card.innerHTML = `
+      <div class="pf-card-head">
+        <span class="pf-name">${escapeHtml(co.name)}</span>
+        <span class="pf-name-en">${escapeHtml(co.name_en || '')}</span>
+      </div>
+      <div class="pf-metrics">
+        <div class="pf-metric"><span class="pf-metric-label">${t('pf.fiscal_share')}</span><span class="pf-metric-val">${escapeHtml(co.fiscal_share)}</span></div>
+        <div class="pf-metric"><span class="pf-metric-label">${t('pf.hydrocarbon_gdp')}</span><span class="pf-metric-val">${escapeHtml(co.hydrocarbon_gdp)}</span></div>
+      </div>
+      <div class="pf-exposure">${escapeHtml(co.exposure)}</div>
+    `;
+    card.addEventListener('click', () => openProducerDrawer(co.id));
+    c.appendChild(card);
+  });
+}
+
+function openProducerDrawer(id) {
+  const pf = STATE.data.producer_fiscal;
+  const co = pf.countries.find(x => x.id === id);
+  if (!co) return;
+  setDrawer(t('drawer.tag.country'), `
+    <h2 class="d-title">${escapeHtml(co.name)}${co.name_en ? ` · <span style="color:var(--label-3);font-weight:500">${escapeHtml(co.name_en)}</span>` : ''}</h2>
+    <div class="d-section"><div class="d-section-label">${t('pf.hydrocarbon_gdp')}</div><div class="d-prose">${escapeHtml(co.hydrocarbon_gdp)}</div></div>
+    <div class="d-section"><div class="d-section-label">${t('pf.fiscal_share')}</div><div class="d-prose">${escapeHtml(co.fiscal_share)}</div></div>
+    ${co.breakeven && co.breakeven !== '—' ? `<div class="d-section"><div class="d-section-label">${t('pf.breakeven')}</div><div class="d-prose">${escapeHtml(co.breakeven)}</div></div>` : ''}
+    <div class="d-section"><div class="d-section-label">${t('pf.exposure')}</div><div class="d-prose">${escapeHtml(co.exposure)}</div></div>
+    <div class="d-section"><div class="d-section-label">${t('pf.buffer')}</div><div class="d-prose">${escapeHtml(co.buffer)}</div></div>
+    ${renderDrawerSources(co.sources)}
+  `);
+}
+
+/* ============ v4: 1-24 month baseline projection ============ */
+
+function renderTimeProjection() {
+  const c = document.getElementById('time-projection-timeline');
+  const tp = STATE.data.time_projection;
+  if (!c || !tp) return;
+  const introEl = document.getElementById('time-projection-intro');
+  if (introEl) introEl.innerHTML = `
+    <p class="block-intro-text">${escapeHtml(tp.intro)}</p>
+    <div class="tp-assumption"><span class="tp-assumption-label">${t('tp.assumption')}</span> ${escapeHtml(tp.assumption)}</div>`;
+  c.innerHTML = '';
+  tp.phases.forEach(p => {
+    const card = document.createElement('div');
+    card.className = `tp-phase color-${p.color}`;
+    card.innerHTML = `
+      <div class="tp-phase-head">
+        <span class="tp-horizon">${escapeHtml(p.horizon)}</span>
+        <span class="tp-phase-label">${escapeHtml(p.label)}</span>
+      </div>
+      <div class="tp-rows">
+        <div class="tp-row"><span class="tp-row-label">${t('tp.price')}</span><span class="tp-row-val">${formatBold(p.price_action)}</span></div>
+        <div class="tp-row"><span class="tp-row-label">${t('tp.policy')}</span><span class="tp-row-val">${formatBold(p.policy_response)}</span></div>
+        <div class="tp-row"><span class="tp-row-label">${t('tp.industry')}</span><span class="tp-row-val">${formatBold(p.industry_impact)}</span></div>
+        <div class="tp-row"><span class="tp-row-label">${t('tp.producer')}</span><span class="tp-row-val">${formatBold(p.producer_state)}</span></div>
+        <div class="tp-row"><span class="tp-row-label">${t('tp.political')}</span><span class="tp-row-val">${formatBold(p.political)}</span></div>
+      </div>
+    `;
+    c.appendChild(card);
+  });
+}
+
+/* ============ v4: Key turning points & uncertainties ============ */
+
+function renderTurningPoints() {
+  const c = document.getElementById('turning-points-content');
+  const tn = STATE.data.turning_points;
+  if (!c || !tn) return;
+  const introEl = document.getElementById('turning-points-intro');
+  if (introEl) introEl.innerHTML = `<p class="block-intro-text">${escapeHtml(tn.intro)}</p>`;
+  let html = `<div class="turn-section-label">${t('turn.uncertainties')}</div><div class="turn-uncertainties">`;
+  (tn.key_uncertainties || []).forEach((u, i) => {
+    html += `
+      <div class="turn-card">
+        <div class="turn-factor"><span class="turn-num">U${i+1}</span>${escapeHtml(u.factor)}</div>
+        <div class="turn-note">${escapeHtml(u.note)}</div>
+        <div class="turn-branches">
+          ${(u.branches || []).map(b => `
+            <div class="turn-branch">
+              <span class="turn-branch-cond">${escapeHtml(b.condition)}</span>
+              <span class="turn-branch-arrow">→</span>
+              <span class="turn-branch-outcome">${escapeHtml(b.outcome)}</span>
+              <span class="turn-branch-prob">${escapeHtml(b.prob)}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  });
+  html += `</div><div class="turn-section-label">${t('turn.accelerators')}</div><div class="turn-accelerators">`;
+  (tn.accelerators || []).forEach(a => {
+    html += `
+      <div class="turn-accel">
+        <span class="turn-accel-trigger">${escapeHtml(a.trigger)}</span>
+        <span class="turn-accel-arrow">⇒</span>
+        <span class="turn-accel-effect">${escapeHtml(a.effect)}</span>
+      </div>
+    `;
+  });
+  html += '</div>';
+  c.innerHTML = html;
 }
 
 function handleHashJump() {

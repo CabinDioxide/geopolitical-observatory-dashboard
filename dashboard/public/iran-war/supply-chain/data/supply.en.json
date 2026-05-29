@@ -38,7 +38,7 @@
           "url": "https://www.atlanticcouncil.org/dispatches/inside-tehrans-toll-booth/"
         }
       ],
-      "analysis": "The Strait of Hormuz is the world's most critical energy chokepoint. EIA 2024 data: roughly 21 mb/d of seaborne oil pass through the strait each day (28–30% of global seaborne crude), along with about 130 bcm/year of LNG (20% of global seaborne LNG). No bypass can fully substitute — Saudi Arabia's East-West Pipeline can divert only 5 mb/d around the strait, the UAE's Habshan-Fujairah line just 1.5 mb/d. Together that is less than a third of Hormuz throughput.\n\nIran's weaponization of strait passage rights has never meant a full closure — it means selective disruption. CRS R45281 documents the historical pattern: during the 1980–88 Tanker War both sides attacked each other's commercial shipping over 500 times yet the strait was never fully closed; in 2019 the IRGC seized the British tanker Stena Impero in Hormuz waters for 14 days; in 2024 the MSC Aries (Israeli-linked) and other vessels were detained. The Atlantic Council's March 2026 report Tehran's Toll Booth documents a new mode — $2 million per ship in passage fees — that shifts the use of passage rights from \"embargo\" to \"toll-collection,\" a far more sustainable posture.\n\nUnder the maintained path oil settles back into $75–90. Under disintegration plus prolonged closure it spikes to $180–220, exceeding the relative magnitude of the 1973 shock. This is consistent with the EIA's 2024 extreme-scenario multiplier estimate of roughly 2.4×.\n\nOn the maintained path, Iran extracts roughly $73 billion a year through the \"$2 million per ship\" model, based on IRGC navy estimates of 100 tankers per day — comparable to Iran's pre-war oil export revenue at 1.5 mb/d. This is the migration of geographic rent from \"exporting our own oil\" to \"taxing everyone else's.\" Under the disintegration path, a Khuzestan uprising could reach Saudi Aramco's East-West pipeline terminus and the Khorramshahr valve station — knocking out the combined Saudi + UAE bypass capacity (4.7 mb/d), and pushing the global energy system into an \"irreplaceable\" state.\n\nChina is the most exposed to Hormuz transit (40% of its crude imports route through it), but via the shadow fleet plus 95% of Iran-China bilateral trade settled through mBridge (per Atlantic Council Toll Booth data), China's actual discount on Iranian crude may deepen to $30–40/barrel below Brent — a discount no oil buyer has commanded since the Cold War."
+      "analysis": "The Strait of Hormuz is the world's most critical energy chokepoint. EIA 2024 data: roughly 21 mb/d of seaborne oil pass through the strait each day (28–30% of global seaborne crude), along with about 130 bcm/year of LNG (20% of global seaborne LNG). No bypass can fully substitute — Saudi Arabia's East-West Pipeline can divert only 5 mb/d around the strait, the UAE's Habshan-Fujairah line just 1.5 mb/d. Together that is less than a third of Hormuz throughput. But 'no physical-transit substitute' does not equal 'no end-use substitute' — this is the key distinction for gauging real damage: LNG molecules genuinely have no bypass (Qatar's only export route is Ras Laffan), yet LNG-to-power can be partly substituted by coal (Korea has lifted its 80% coal cap + postponed 1.5GW retirements, Taiwan resumed coal purchases, Japan eased rules); fertilizer likewise — global nominal capacity 240Mt far exceeds 185Mt demand, but the actually-callable slack is locked by China's export ban. Substitution feasibility varies by chain — see the 'Substitution feasibility matrix' section below.\n\nIran's weaponization of strait passage rights has never meant a full closure — it means selective disruption. CRS R45281 documents the historical pattern: during the 1980–88 Tanker War both sides attacked each other's commercial shipping over 500 times yet the strait was never fully closed; in 2019 the IRGC seized the British tanker Stena Impero in Hormuz waters for 14 days; in 2024 the MSC Aries (Israeli-linked) and other vessels were detained. The Atlantic Council's March 2026 report Tehran's Toll Booth documents a new mode — $2 million per ship in passage fees — that shifts the use of passage rights from \"embargo\" to \"toll-collection,\" a far more sustainable posture.\n\nUnder the maintained path oil settles back into $75–90. Under disintegration plus prolonged closure it spikes to $180–220, exceeding the relative magnitude of the 1973 shock. This is consistent with the EIA's 2024 extreme-scenario multiplier estimate of roughly 2.4×.\n\nOn the maintained path, Iran extracts roughly $73 billion a year through the \"$2 million per ship\" model, based on IRGC navy estimates of 100 tankers per day — comparable to Iran's pre-war oil export revenue at 1.5 mb/d. This is the migration of geographic rent from \"exporting our own oil\" to \"taxing everyone else's.\" Under the disintegration path, a Khuzestan uprising could reach Saudi Aramco's East-West pipeline terminus and the Khorramshahr valve station — knocking out the combined Saudi + UAE bypass capacity (4.7 mb/d), and pushing the global energy system into an \"irreplaceable\" state.\n\nChina is the most exposed to Hormuz transit (40% of its crude imports route through it), but via the shadow fleet plus 95% of Iran-China bilateral trade settled through mBridge (per Atlantic Council Toll Booth data), China's actual discount on Iranian crude may deepen to $30–40/barrel below Brent — a discount no oil buyer has commanded since the Cold War."
     },
     {
       "id": "maritime",
@@ -1173,5 +1173,489 @@
       "page": "maga",
       "section_id": "bridging"
     }
+  },
+  "substitution_matrix": {
+    "intro": "The 10 supply chains classified into three tiers by 'can a substitute be found within 90 days of a cut.' This is the most actionable frame in the whole transmission analysis — real damage is set not by 'does it transit Hormuz' but by 'can it be replaced, how fast, at what cost.'",
+    "verdicts": {
+      "impossible": {
+        "label": "IMPOSSIBLE",
+        "desc": "No physical substitute, or locked by an immovable time window",
+        "color": "danger"
+      },
+      "slow": {
+        "label": "SLOW",
+        "desc": "Limited substitution in 60-180 days at 30-100% premium",
+        "color": "warning"
+      },
+      "elastic": {
+        "label": "ELASTIC",
+        "desc": "Replaceable in 30-60 days at 20-40% premium",
+        "color": "ok"
+      }
+    },
+    "items": [
+      {
+        "id": "lng_power",
+        "name": "Qatar LNG → East Asia power/industry",
+        "verdict": "slow",
+        "downstream": "Baseload power (Taiwan 42-46% gas-fired, Korea ~28%, Japan ~28%); industrial heat for petrochem/steel/glass/ceramics; city gas",
+        "timeline": "Power dimension 30-90 day partial substitution (coal); LNG molecules themselves have no Hormuz bypass",
+        "premium": "JKM +50-70% ($10.5→$15-17.8/MMBtu); insurance 15-25% of cargo value",
+        "constraints": "Coal substitution proven (Korea lifted 80% cap, postponed 1.5GW retirement; Taiwan resumed coal; Japan eased rules) — but constrained by coal imports + emissions. City gas / industrial heat have no fast substitute",
+        "country_damaged": "Taiwan (11-day LNG storage, most fragile)",
+        "sources": [
+          {
+            "label": "CGEP — Asia's Gas Shock Playbook",
+            "url": "https://www.energypolicy.columbia.edu/asias-gas-shock-playbook-coal-curtailment-and-competing-for-lng/"
+          },
+          {
+            "label": "KUNR/AP — Asia boosts coal use",
+            "url": "https://www.kunr.org/world-headlines/2026-03-24/asia-boosts-coal-use-as-iran-war-squeezes-global-lng-supplies"
+          }
+        ]
+      },
+      {
+        "id": "methanol_mto",
+        "name": "Iran/Saudi methanol → China MTO",
+        "verdict": "slow",
+        "downstream": "Ethylene/propylene → PE/PP → packaging, films, auto parts, medical devices",
+        "timeline": "Domestic coal-to-methanol can add 5-10% in 30-90 days; Trinidad/US Gulf 30-45 day voyages",
+        "premium": "Methanol $250→$400/t (+40-50%)",
+        "constraints": "59% of China's methanol imports are truly Iranian-origin (relabeled via Saudi/Oman/UAE); MTO plants lose money above $320/t → Ningbo/Lianyungang force-majeure shutdowns",
+        "country_damaged": "China (coastal MTO operators)",
+        "sources": [
+          {
+            "label": "IndexBox 2024 methanol trade",
+            "url": "https://www.indexbox.io/blog/methanol-world-market-overview-2024-11/"
+          }
+        ]
+      },
+      {
+        "id": "refined_eu",
+        "name": "Gulf refined products → EU diesel/jet",
+        "verdict": "elastic",
+        "downstream": "EU trucking, agricultural machinery, commercial aviation, marine bunker, industrial diesel power",
+        "timeline": "US Gulf Coast (Valero/Marathon/Motiva) + West Africa Dangote 650kb/d + India Reliance redirect in 30-45 days",
+        "premium": "Diesel cracks +$8-15/bbl",
+        "constraints": "Indian refiners themselves run on Hormuz crude (partial self-cancel); Dangote not at full ops. EU 90-day diesel reserve (IEA-mandated) makes this the most resilient sector",
+        "country_damaged": "Germany/Netherlands (Rotterdam ARA hub)",
+        "sources": [
+          {
+            "label": "EIA — Saudi diesel to EU post-Russia ban",
+            "url": "https://www.eia.gov/todayinenergy/detail.php?id=65504"
+          }
+        ]
+      },
+      {
+        "id": "fertilizer_ag",
+        "name": "Gulf urea/ammonia → India/Brazil agriculture",
+        "verdict": "slow",
+        "downstream": "India rabi wheat, kharif rice; Brazil safrinha corn (78% of Brazil corn), soybean topdressing",
+        "timeline": "Global capacity 240Mt vs demand 185Mt, nominal slack 55Mt; but real available slack only ~8-10Mt",
+        "premium": "Urea $510→$950/t (+86%)",
+        "constraints": "China's 2024 urea export ban (food security) locks the largest slack; Egypt diverts gas to power in summer; Russia partly sanctioned. The biggest relief lever is China's call",
+        "country_damaged": "India (agriculture 16% GDP, 46% of population) / Brazil",
+        "sources": [
+          {
+            "label": "IFPRI — Hormuz fertilizer shocks",
+            "url": "https://www.ifpri.org/blog/how-fertilizer-policies-could-exacerbate-hormuz-price-shocks/"
+          },
+          {
+            "label": "SunSirs — global urea capacity",
+            "url": "https://www.sunsirs.com/commodity-news/petail-27843.html"
+          }
+        ]
+      },
+      {
+        "id": "helium_korea",
+        "name": "Qatar helium → Korea semiconductors",
+        "verdict": "impossible",
+        "downstream": "Samsung/SK hynix memory (DRAM/NAND, ~60% global share); lithography/wafer cooling/leak detection",
+        "timeline": "No near-term fix; new US/Canada/Australia capacity needs 12-24 months",
+        "premium": "Spot $30+/L (3x baseline)",
+        "constraints": "Helium is a Ras Laffan LNG co-product — LNG stops, He stops. US BLM federal reserve sold to Messer in 2024, no strategic reserve to release. Korea 65% sourced from Qatar",
+        "country_damaged": "South Korea (semis = 25% of exports)",
+        "sources": [
+          {
+            "label": "Trendforce — helium crunch Korea/Taiwan",
+            "url": "https://www.trendforce.com/news/2026/03/23/news-under-qatars-shadow-helium-crunch-hits-south-korea-harder"
+          },
+          {
+            "label": "USGS Helium 2026",
+            "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-helium.pdf"
+          }
+        ]
+      },
+      {
+        "id": "aluminum",
+        "name": "Gulf aluminum (EGA+ALBA) → autos/aerospace/packaging",
+        "verdict": "slow",
+        "downstream": "Tesla/BMW/Mercedes chassis castings, wheels, heat exchangers; Airbus/Boeing aerospace alloys; cans, foil, construction extrusions",
+        "timeline": "Russia 3.8Mt can fill — but only for Asian buyers (China/India); Western OEMs barred by sanctions+certification",
+        "premium": "Spot ~$2,700/t + freight/insurance $150-300/t",
+        "constraints": "Gulf aluminum ~6% world primary; smelters 100% gas-fired — lose gas, lose output. Aerospace alloys need months of OEM cert → two-tier market",
+        "country_damaged": "EU auto/aerospace OEMs",
+        "sources": [
+          {
+            "label": "EGA / ALBA filings + USGS Aluminum",
+            "url": "https://www.ega.ae/en"
+          }
+        ]
+      },
+      {
+        "id": "polymer",
+        "name": "Gulf PE/PP → Asia-Pacific converters",
+        "verdict": "elastic",
+        "downstream": "Food packaging, medical devices (PP IV bags/syringes/tubing), auto interiors, textiles, ag film",
+        "timeline": "US Gulf (Exxon/Dow/Lyondell) + Chinese PP surplus replace in 30-60 days",
+        "premium": "20-40% transition",
+        "constraints": "Commodity grade ELASTIC; but medical (USP Class VI/ISO 10993) + auto grade need 3-6 month re-qualification → SLOW",
+        "country_damaged": "Vietnam/Bangladesh/Indonesia converters",
+        "sources": [
+          {
+            "label": "ITP — Middle East polymer trade 2024",
+            "url": "https://blog.itpweb.com/middle-easts-commodity-polymer-trade-in-2024/"
+          }
+        ]
+      },
+      {
+        "id": "tsmc",
+        "name": "Qatar helium+LNG → Taiwan TSMC",
+        "verdict": "impossible",
+        "downstream": "3nm/5nm/7nm leading-edge logic → Apple/NVIDIA/AMD/Qualcomm",
+        "timeline": "Dual-vector exposure → resilience needs 18-24 months of two-track buildout",
+        "premium": "Compound helium + LNG premium",
+        "constraints": "LNG = 12% of Taiwan electricity + helium 69% GCC-sourced. TSMC Fab 18B He recovery 68.4% (industry best) but doesn't eliminate dependence. Taiwan can't trade one buffer for another",
+        "country_damaged": "Taiwan (semis 17-21% GDP, TSMC alone 8.9%)",
+        "sources": [
+          {
+            "label": "Vortexa — Taiwan Qatari LNG",
+            "url": "https://www.vortexa.com/insights/korea-taiwan-singapore-qatari-lng"
+          }
+        ]
+      },
+      {
+        "id": "steel_dri",
+        "name": "Gulf DRI/HBI → EU EAF green steel",
+        "verdict": "elastic",
+        "downstream": "EU EAF green steel (44.4% of EU crude steel) → autos (Mercedes/BMW/VW offtake), construction, wind turbines",
+        "timeline": "Voestalpine Texas 2Mt/y HBI plant (ArcelorMittal bought 80% in 2025 for EU) + Brazil Vale + US Nucor in 30-90 days",
+        "premium": "10-25%",
+        "constraints": "Actual EU green steel trade <100kt — near-term ELASTIC; but 2027-2030 planned ramp needs 3-5 year buildouts → SLOW",
+        "country_damaged": "Germany/Sweden (Salzgitter/SSAB)",
+        "sources": [
+          {
+            "label": "Worldsteel DRI + EUROFER",
+            "url": "https://worldsteel.org/"
+          }
+        ]
+      },
+      {
+        "id": "mri",
+        "name": "Qatar helium → MRI/pharma cryogenics",
+        "verdict": "slow",
+        "downstream": "MRI imaging (Siemens/GE/Philips/Canon/United Imaging, >1,000L liquid He each); cryo-EM drug discovery; biospecimen storage",
+        "timeline": "New units prioritized in 30-90 days (medical > party balloons); installed base retrofit 12-24 months",
+        "premium": "Spot +200-300%",
+        "constraints": "Siemens DryCool / Philips BlueSeal low-helium units commercial — but only for new builds; installed base needing refills has no substitute. WHO essential-medicine priority",
+        "country_damaged": "Global healthcare (US/EU/Japan installed base)",
+        "sources": [
+          {
+            "label": "USGS Helium 2026 + Mordor MRI market",
+            "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-helium.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  "producer_fiscal": {
+    "intro": "The existing 'country political fragility matrix' covers 11 consumer countries. This adds the source of the transmission chain — fiscal exposure of 8 Gulf producers. A Hormuz closure is double-edged for them: a weapon and a suicide.",
+    "countries": [
+      {
+        "id": "iraq",
+        "name": "Iraq",
+        "name_en": "Iraq",
+        "hydrocarbon_gdp": "54%",
+        "fiscal_share": "~93%",
+        "breakeven": "$84/bbl",
+        "exposure": "Fiscal collapse — already 4.2% deficit; IMF downside scenario deficit hits 11.5% of GDP",
+        "buffer": "Minimal",
+        "color": "danger",
+        "sources": [
+          {
+            "label": "IMF Iraq 2025 Article IV",
+            "url": "https://www.imf.org/en/news/articles/2025/07/08/pr-25243-iraq-imf-executive-board-concludes-2025-article-iv-consultation"
+          }
+        ]
+      },
+      {
+        "id": "iran",
+        "name": "Iran",
+        "name_en": "Iran",
+        "hydrocarbon_gdp": "~25%",
+        "fiscal_share": "oil = 57% of exports",
+        "breakeven": "Sanctions-discounted",
+        "exposure": "Self-blockade = suicide — already sanctioned, 1.5mb/d exports at 10-15% discount",
+        "buffer": "Sanctioned, minimal",
+        "color": "danger",
+        "sources": [
+          {
+            "label": "Atlantic Council / GIS Iran oil exports",
+            "url": "https://www.atlanticcouncil.org/"
+          }
+        ]
+      },
+      {
+        "id": "kuwait",
+        "name": "Kuwait",
+        "name_en": "Kuwait",
+        "hydrocarbon_gdp": "27.6%",
+        "fiscal_share": "~90%",
+        "breakeven": "—",
+        "exposure": "Severe — 2024 GDP already fell $5B on lower oil prices",
+        "buffer": "KIA SWF ~$800B+",
+        "color": "alert",
+        "sources": [
+          {
+            "label": "AGBI Kuwait economy",
+            "url": "https://www.agbi.com/"
+          }
+        ]
+      },
+      {
+        "id": "oman",
+        "name": "Oman",
+        "name_en": "Oman",
+        "hydrocarbon_gdp": "23.5%",
+        "fiscal_share": "~70%",
+        "breakeven": "—",
+        "exposure": "Severe — but Sohar/Salalah/Duqm ports are outside Hormuz, becoming bypass nodes",
+        "buffer": "Limited",
+        "color": "alert",
+        "sources": [
+          {
+            "label": "World Bank Oman indicators",
+            "url": "https://www.worldbank.org/"
+          }
+        ]
+      },
+      {
+        "id": "saudi",
+        "name": "Saudi Arabia",
+        "name_en": "Saudi Arabia",
+        "hydrocarbon_gdp": "~24%",
+        "fiscal_share": "63% (vs 88% in 2014)",
+        "breakeven": "~$90/bbl",
+        "exposure": "Severe but buffered — Petroline 5mb/d bypasses some; Vision 2030 stalls",
+        "buffer": "SAMA $450B + PIF",
+        "color": "warning",
+        "sources": [
+          {
+            "label": "IMF Saudi 2025 Article IV",
+            "url": "https://www.imf.org/"
+          }
+        ]
+      },
+      {
+        "id": "qatar",
+        "name": "Qatar",
+        "name_en": "Qatar",
+        "hydrocarbon_gdp": "~35%",
+        "fiscal_share": "Very high",
+        "breakeven": "—",
+        "exposure": "LNG revenue zeroes out — Ras Laffan is the only export route, no bypass",
+        "buffer": "QIA SWF ~$500B",
+        "color": "warning",
+        "sources": [
+          {
+            "label": "IMF Qatar 2024 Article IV",
+            "url": "https://www.imf.org/"
+          }
+        ]
+      },
+      {
+        "id": "bahrain",
+        "name": "Bahrain",
+        "name_en": "Bahrain",
+        "hydrocarbon_gdp": "10.9%",
+        "fiscal_share": "~60-70%",
+        "breakeven": "—",
+        "exposure": "Lowest hydrocarbon GDP share (earliest diversifier); but fiscal base is inherently weak",
+        "buffer": "Low",
+        "color": "warning",
+        "sources": [
+          {
+            "label": "World Bank Bahrain indicators",
+            "url": "https://www.worldbank.org/"
+          }
+        ]
+      },
+      {
+        "id": "uae",
+        "name": "UAE",
+        "name_en": "UAE",
+        "hydrocarbon_gdp": "~24%",
+        "fiscal_share": "~30%",
+        "breakeven": "—",
+        "exposure": "Manageable — Dubai non-oil economy continues; Habshan-Fujairah pipeline 1.5mb/d bypasses",
+        "buffer": "ADIA ~$1T",
+        "color": "ok",
+        "sources": [
+          {
+            "label": "UAE government 2024 GDP data",
+            "url": "https://u.ae/en"
+          }
+        ]
+      }
+    ]
+  },
+  "time_projection": {
+    "intro": "Assuming Hormuz stays partially-to-fully blockaded (no formal ceasefire), this is the baseline conditional path — distinct from the 'worst-case 5-stage' (3-5% catastrophe path).",
+    "assumption": "Sustained Hormuz disruption + Israel/Iran maintain current V3-B tilt + Iranian decision paralysis (V1)",
+    "phases": [
+      {
+        "horizon": "T+1 month",
+        "label": "First price shock + emergency administrative response",
+        "color": "warning",
+        "price_action": "JKM LNG $15-17.8 (occurred); Brent $90+; spot helium 3x; urea $950/t; aluminum LME premium +$300/t",
+        "policy_response": "Korea lifts coal 80% cap + postpones 1.5GW retirement; Taiwan resumes coal; Japan eases rules; US SPR release + IEA coordination",
+        "industry_impact": "East Asian chemical plant power costs rise; China MTO partial shutdowns; EU diesel cracks +$8-15/bbl",
+        "producer_state": "Iraq fiscal stress immediate (breakeven $84, oil = 93% of revenue)",
+        "political": "G7 + GCC emergency meetings; IAEA special Board session"
+      },
+      {
+        "horizon": "T+3 months",
+        "label": "Inventories exhausted + industrial rationing",
+        "color": "alert",
+        "price_action": "Prices stay elevated; coal import demand surges → Indonesia/Australia thermal coal +30-50%",
+        "policy_response": "East Asian coal utilization pushed to 90%+; fabs begin helium rationing (AI chips first)",
+        "industry_impact": "Taiwan LNG (11d) + Korea (30d) inventories exhausted; TSMC/Samsung helium tight by week 9; China MTO shutdowns expand",
+        "producer_state": "Iraq enters fiscal crisis; Saudi begins PIF selldown; Oman/Kuwait draw reserves",
+        "political": "China may lift urea export ban; possible China-brokered Iran-US deal. **If it extends to Sep-Nov → India rabi catastrophe**"
+      },
+      {
+        "horizon": "T+6 months",
+        "label": "Structural reorganization + political inflection window",
+        "color": "alert",
+        "price_action": "US LNG 2026 +57 MTPA partly online → eases some tightness",
+        "policy_response": "Oman Sohar/Salalah/Duqm port expansion (partial) → bypass logistics strengthen",
+        "industry_impact": "China MTO partial permanent closures shift to CTM; semis go AI-chip-priority; Korea/Taiwan coal becomes new baseline (breaks Net Zero); India/Brazil sign long-term contracts with Russia/N.Africa fertilizer",
+        "producer_state": "Kuwait/Bahrain draw SWFs; Iraq may enter IMF emergency program; Iran economic collapse nears V1=C path",
+        "political": "**2026-11 US midterms** (V4 convergence node); possible Trump-Iran deal (V3=A) or Israel escalates to C → regime collapse"
+      },
+      {
+        "horizon": "T+12 months",
+        "label": "Substitution infrastructure partly online",
+        "color": "warning",
+        "price_action": "US LNG exports 94→~125 MTPA; Saudi Petroline full 5→7mb/d; UAE Habshan expansion accelerated",
+        "policy_response": "First new helium capacity (US Hugoton restart + Algeria) commissioning; India domestic fertilizer partly online",
+        "industry_impact": "Global MTO reorganization complete; semi He recovery widespread (68%→industry 50%+); East Asia power back to coal-dominant (Net Zero paused); Gulf aluminum partial permanent closures",
+        "producer_state": "Iraq restructures under IMF; Saudi Vision 2030 delayed 5-10 years; Qatar sustains via SWF",
+        "political": "2028 US election cycle begins; Iran situation largely clarified (V1 converges)"
+      },
+      {
+        "horizon": "T+24 months",
+        "label": "Post-Hormuz Era takes shape",
+        "color": "ok",
+        "price_action": "US LNG exports reach 172 MTPA; global LNG enters glut; prices return to baseline +10-20%",
+        "policy_response": "Sohar/Salalah/Duqm become new Middle East energy export hubs",
+        "industry_impact": "India/Brazil fertilizer self-sufficiency rises sharply; semi helium multi-sourced (Qatar only ~50%); East Asian coal revival permanent; China MTO→CTM irreversible",
+        "producer_state": "Qatar/UAE fiscal recovery needs 5-7 years; Saudi Vision 2030 effectively fails; Iran (if surviving) becomes a tamed second-tier producer",
+        "political": "US 2028 new administration; Middle East Israel-Gulf normalization (V4 converged); China divests from Iran toward Saudi/UAE"
+      }
+    ]
+  },
+  "turning_points": {
+    "intro": "The biggest uncertainties in the whole transmission projection concentrate on 4 variables. Their values determine whether the Hormuz crisis is a 6-month or 24-month problem.",
+    "key_uncertainties": [
+      {
+        "factor": "China's stance on the urea export ban",
+        "note": "The most direct, cheapest relief lever — China's call",
+        "branches": [
+          {
+            "condition": "Lifts the ban",
+            "outcome": "Global fertilizer gap vanishes instantly; fertilizer crisis shortens to 3-6 months",
+            "prob": "Medium"
+          },
+          {
+            "condition": "Keeps the ban",
+            "outcome": "India/Brazil agriculture suffers by planting window",
+            "prob": "Med-High"
+          }
+        ]
+      },
+      {
+        "factor": "Israel strategic goal evolution (V2)",
+        "note": "Determines whether Hormuz crisis is a 6-month or 24-month problem",
+        "branches": [
+          {
+            "condition": "A·Limited nuclear rollback",
+            "outcome": "6-month problem, sandbox stays at regime-survived",
+            "prob": "Medium"
+          },
+          {
+            "condition": "B·Sustained military pressure",
+            "outcome": "Low-intensity persistent war",
+            "prob": "Med-High"
+          },
+          {
+            "condition": "C·Regime change",
+            "outcome": "24-months+, sandbox enters regime collapse",
+            "prob": "Med-Low"
+          }
+        ]
+      },
+      {
+        "factor": "US 2026-11 midterms + 2028 election (V4)",
+        "note": "Determines whether the whole sandbox converges in 6 or 12 months",
+        "branches": [
+          {
+            "condition": "MAGA consolidates / pro-Israel hawk succeeds",
+            "outcome": "Low Israeli temporal discount, Begin Doctrine applied gradually",
+            "prob": "Medium"
+          },
+          {
+            "condition": "Democrat succeeds",
+            "outcome": "Israel loses unilateral license → forced to accelerate now",
+            "prob": "Medium"
+          }
+        ]
+      },
+      {
+        "factor": "India/Brazil planting-window timing hit",
+        "note": "Real fertilizer damage depends on the month",
+        "branches": [
+          {
+            "condition": "May-Jul closure",
+            "outcome": "India rabi safe (kharif already planted)",
+            "prob": "Current case"
+          },
+          {
+            "condition": "Sep-Nov closure",
+            "outcome": "India rabi catastrophe (wheat planting window)",
+            "prob": "Extended case"
+          },
+          {
+            "condition": "Jan-Feb closure",
+            "outcome": "Brazil safrinha catastrophe (78% of Brazil corn)",
+            "prob": "Extended case"
+          }
+        ]
+      }
+    ],
+    "accelerators": [
+      {
+        "trigger": "V3 escalates to C (US full escalation)",
+        "effect": "Hormuz closure may last 24-months+ → T+24 endgame arrives 12 months early"
+      },
+      {
+        "trigger": "China lifts urea ban",
+        "effect": "Fertilizer crisis shortens to 3-6 months"
+      },
+      {
+        "trigger": "Korea/Taiwan coal imports hit by Houthi Red Sea attacks",
+        "effect": "East Asian energy crisis doubles (LNG + coal both cut)"
+      }
+    ]
   }
 }
