@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-31T08:37:26.684188Z",
+  "computed_at": "2026-06-01T11:11:26.676790Z",
   "scenarios": [
     {
       "scenario": "A_easing",
@@ -23,8 +23,8 @@
           "G_real_growth_pct": 1.74,
           "P_admin_inflation_pct": 3.07,
           "Z_good_news_quarters": 5,
-          "cpi_yoy_2026_2028": 3.15,
-          "cpi_yoy_no_tariff_counterfactual": 2.05,
+          "cpi_yoy_2026_2028": 3.93,
+          "cpi_yoy_no_tariff_counterfactual": 2.83,
           "unrate_pct": 4.63,
           "michigan_ics": 49.3,
           "approval_net": -13.4,
@@ -84,25 +84,25 @@
       },
       "lewis_beck_2028": {
         "incumbent_party": "R",
-        "incumbent_two_party_pct": 46.39,
-        "lower_95ci": 41.39,
-        "upper_95ci": 51.39,
+        "incumbent_two_party_pct": 45.72,
+        "lower_95ci": 40.72,
+        "upper_95ci": 50.72,
         "rmse": 2.5,
-        "win_prob": 0.074,
+        "win_prob": 0.044,
         "inputs": {
           "unrate_pct": 4.63,
-          "cpi_yoy_pct": 3.15,
-          "misery_index": 7.78
+          "cpi_yoy_pct": 3.93,
+          "misery_index": 8.56
         },
         "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample."
       },
       "ensemble_2028": {
-        "incumbent_two_party_pct": 49.02,
-        "lower_95ci": 46.88,
-        "upper_95ci": 51.16,
+        "incumbent_two_party_pct": 48.87,
+        "lower_95ci": 46.73,
+        "upper_95ci": 51.02,
         "ensemble_rmse": 1.07,
         "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
-        "win_prob": 0.18,
+        "win_prob": 0.147,
         "weights": {
           "fair": 0.214,
           "hibbs": 0.29,
@@ -113,7 +113,7 @@
           "fair_pct": 56.44,
           "hibbs_pct": 51.34,
           "abramowitz_pct": 42.99,
-          "lewis_beck_pct": 46.39
+          "lewis_beck_pct": 45.72
         }
       },
       "tariff_sensitivity_2028": [
@@ -122,16 +122,16 @@
           "tariff_rate_pct": 5.0,
           "label": "\u8d38\u6613\u548c\u89e3\uff0c\u5173\u7a0e\u56de\u5230 5%",
           "is_baseline_tariff": false,
-          "projected_cpi_yoy": 2.3,
+          "projected_cpi_yoy": 3.08,
           "projected_approval_2028": -13.4,
-          "ensemble_R_two_party_pct": 49.3,
+          "ensemble_R_two_party_pct": 49.16,
           "ensemble_rmse": 1.07,
-          "delta_vs_baseline_pp": 0.28,
+          "delta_vs_baseline_pp": 0.29,
           "components": {
             "fair": 57.02,
             "hibbs_invariant": 51.34,
             "abramowitz": 42.99,
-            "lewis_beck": 47.11
+            "lewis_beck": 46.45
           }
         },
         {
@@ -139,16 +139,16 @@
           "tariff_rate_pct": 13.5,
           "label": "\u7ef4\u6301\u5f53\u524d 13.5%\uff08\u57fa\u7ebf\uff09",
           "is_baseline_tariff": true,
-          "projected_cpi_yoy": 3.15,
+          "projected_cpi_yoy": 3.93,
           "projected_approval_2028": -13.4,
-          "ensemble_R_two_party_pct": 49.02,
+          "ensemble_R_two_party_pct": 48.87,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": 0.0,
           "components": {
             "fair": 56.44,
             "hibbs_invariant": 51.34,
             "abramowitz": 42.99,
-            "lewis_beck": 46.39
+            "lewis_beck": 45.72
           }
         },
         {
@@ -156,16 +156,16 @@
           "tariff_rate_pct": 22.0,
           "label": "\u518d\u6b21\u5347\u7ea7\u5230 22%\uff084 \u6708\u5cf0\u503c\u6c34\u5e73\uff09",
           "is_baseline_tariff": false,
-          "projected_cpi_yoy": 4.0,
+          "projected_cpi_yoy": 4.78,
           "projected_approval_2028": -13.4,
-          "ensemble_R_two_party_pct": 48.74,
+          "ensemble_R_two_party_pct": 48.59,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": -0.28,
           "components": {
             "fair": 55.85,
             "hibbs_invariant": 51.34,
             "abramowitz": 42.99,
-            "lewis_beck": 45.66
+            "lewis_beck": 45.0
           }
         }
       ],
@@ -216,8 +216,8 @@
           "G_real_growth_pct": 1.07,
           "P_admin_inflation_pct": 3.27,
           "Z_good_news_quarters": 4,
-          "cpi_yoy_2026_2028": 3.53,
-          "cpi_yoy_no_tariff_counterfactual": 2.43,
+          "cpi_yoy_2026_2028": 4.31,
+          "cpi_yoy_no_tariff_counterfactual": 3.21,
           "unrate_pct": 4.97,
           "michigan_ics": 48.1,
           "approval_net": -13.3,
@@ -277,25 +277,25 @@
       },
       "lewis_beck_2028": {
         "incumbent_party": "R",
-        "incumbent_two_party_pct": 45.77,
-        "lower_95ci": 40.77,
-        "upper_95ci": 50.77,
+        "incumbent_two_party_pct": 45.11,
+        "lower_95ci": 40.11,
+        "upper_95ci": 50.11,
         "rmse": 2.5,
-        "win_prob": 0.046,
+        "win_prob": 0.025,
         "inputs": {
           "unrate_pct": 4.97,
-          "cpi_yoy_pct": 3.53,
-          "misery_index": 8.5
+          "cpi_yoy_pct": 4.31,
+          "misery_index": 9.28
         },
         "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample."
       },
       "ensemble_2028": {
-        "incumbent_two_party_pct": 48.0,
-        "lower_95ci": 45.86,
-        "upper_95ci": 50.15,
+        "incumbent_two_party_pct": 47.86,
+        "lower_95ci": 45.72,
+        "upper_95ci": 50.01,
         "ensemble_rmse": 1.07,
         "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
-        "win_prob": 0.031,
+        "win_prob": 0.023,
         "weights": {
           "fair": 0.214,
           "hibbs": 0.29,
@@ -306,7 +306,7 @@
           "fair_pct": 54.87,
           "hibbs_pct": 49.47,
           "abramowitz_pct": 42.98,
-          "lewis_beck_pct": 45.77
+          "lewis_beck_pct": 45.11
         }
       },
       "tariff_sensitivity_2028": [
@@ -315,16 +315,16 @@
           "tariff_rate_pct": 5.0,
           "label": "\u8d38\u6613\u548c\u89e3\uff0c\u5173\u7a0e\u56de\u5230 5%",
           "is_baseline_tariff": false,
-          "projected_cpi_yoy": 2.68,
+          "projected_cpi_yoy": 3.46,
           "projected_approval_2028": -13.3,
-          "ensemble_R_two_party_pct": 48.29,
+          "ensemble_R_two_party_pct": 48.14,
           "ensemble_rmse": 1.07,
-          "delta_vs_baseline_pp": 0.29,
+          "delta_vs_baseline_pp": 0.28,
           "components": {
             "fair": 55.45,
             "hibbs_invariant": 49.47,
             "abramowitz": 42.98,
-            "lewis_beck": 46.5
+            "lewis_beck": 45.83
           }
         },
         {
@@ -332,16 +332,16 @@
           "tariff_rate_pct": 13.5,
           "label": "\u7ef4\u6301\u5f53\u524d 13.5%\uff08\u57fa\u7ebf\uff09",
           "is_baseline_tariff": true,
-          "projected_cpi_yoy": 3.53,
+          "projected_cpi_yoy": 4.31,
           "projected_approval_2028": -13.3,
-          "ensemble_R_two_party_pct": 48.0,
+          "ensemble_R_two_party_pct": 47.86,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": 0.0,
           "components": {
             "fair": 54.87,
             "hibbs_invariant": 49.47,
             "abramowitz": 42.98,
-            "lewis_beck": 45.77
+            "lewis_beck": 45.11
           }
         },
         {
@@ -349,16 +349,16 @@
           "tariff_rate_pct": 22.0,
           "label": "\u518d\u6b21\u5347\u7ea7\u5230 22%\uff084 \u6708\u5cf0\u503c\u6c34\u5e73\uff09",
           "is_baseline_tariff": false,
-          "projected_cpi_yoy": 4.38,
+          "projected_cpi_yoy": 5.16,
           "projected_approval_2028": -13.3,
-          "ensemble_R_two_party_pct": 47.72,
+          "ensemble_R_two_party_pct": 47.58,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": -0.28,
           "components": {
             "fair": 54.28,
             "hibbs_invariant": 49.47,
             "abramowitz": 42.98,
-            "lewis_beck": 45.05
+            "lewis_beck": 44.39
           }
         }
       ],
@@ -409,8 +409,8 @@
           "G_real_growth_pct": 0.32,
           "P_admin_inflation_pct": 3.48,
           "Z_good_news_quarters": 3,
-          "cpi_yoy_2026_2028": 3.96,
-          "cpi_yoy_no_tariff_counterfactual": 2.86,
+          "cpi_yoy_2026_2028": 4.74,
+          "cpi_yoy_no_tariff_counterfactual": 3.64,
           "unrate_pct": 5.34,
           "michigan_ics": 46.7,
           "approval_net": -13.2,
@@ -470,25 +470,25 @@
       },
       "lewis_beck_2028": {
         "incumbent_party": "R",
-        "incumbent_two_party_pct": 45.09,
-        "lower_95ci": 40.09,
-        "upper_95ci": 50.09,
+        "incumbent_two_party_pct": 44.43,
+        "lower_95ci": 39.43,
+        "upper_95ci": 49.43,
         "rmse": 2.5,
-        "win_prob": 0.025,
+        "win_prob": 0.013,
         "inputs": {
           "unrate_pct": 5.34,
-          "cpi_yoy_pct": 3.96,
-          "misery_index": 9.3
+          "cpi_yoy_pct": 4.74,
+          "misery_index": 10.08
         },
         "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample."
       },
       "ensemble_2028": {
-        "incumbent_two_party_pct": 46.9,
-        "lower_95ci": 44.76,
-        "upper_95ci": 49.04,
+        "incumbent_two_party_pct": 46.76,
+        "lower_95ci": 44.61,
+        "upper_95ci": 48.9,
         "ensemble_rmse": 1.07,
         "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
-        "win_prob": 0.002,
+        "win_prob": 0.001,
         "weights": {
           "fair": 0.214,
           "hibbs": 0.29,
@@ -499,7 +499,7 @@
           "fair_pct": 53.24,
           "hibbs_pct": 47.38,
           "abramowitz_pct": 42.96,
-          "lewis_beck_pct": 45.09
+          "lewis_beck_pct": 44.43
         }
       },
       "tariff_sensitivity_2028": [
@@ -508,16 +508,16 @@
           "tariff_rate_pct": 5.0,
           "label": "\u8d38\u6613\u548c\u89e3\uff0c\u5173\u7a0e\u56de\u5230 5%",
           "is_baseline_tariff": false,
-          "projected_cpi_yoy": 3.11,
+          "projected_cpi_yoy": 3.89,
           "projected_approval_2028": -13.2,
-          "ensemble_R_two_party_pct": 47.18,
+          "ensemble_R_two_party_pct": 47.04,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": 0.28,
           "components": {
             "fair": 53.83,
             "hibbs_invariant": 47.38,
             "abramowitz": 42.96,
-            "lewis_beck": 45.82
+            "lewis_beck": 45.15
           }
         },
         {
@@ -525,16 +525,16 @@
           "tariff_rate_pct": 13.5,
           "label": "\u7ef4\u6301\u5f53\u524d 13.5%\uff08\u57fa\u7ebf\uff09",
           "is_baseline_tariff": true,
-          "projected_cpi_yoy": 3.96,
+          "projected_cpi_yoy": 4.74,
           "projected_approval_2028": -13.2,
-          "ensemble_R_two_party_pct": 46.9,
+          "ensemble_R_two_party_pct": 46.76,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": 0.0,
           "components": {
             "fair": 53.24,
             "hibbs_invariant": 47.38,
             "abramowitz": 42.96,
-            "lewis_beck": 45.09
+            "lewis_beck": 44.43
           }
         },
         {
@@ -542,16 +542,16 @@
           "tariff_rate_pct": 22.0,
           "label": "\u518d\u6b21\u5347\u7ea7\u5230 22%\uff084 \u6708\u5cf0\u503c\u6c34\u5e73\uff09",
           "is_baseline_tariff": false,
-          "projected_cpi_yoy": 4.81,
+          "projected_cpi_yoy": 5.59,
           "projected_approval_2028": -13.2,
-          "ensemble_R_two_party_pct": 46.62,
+          "ensemble_R_two_party_pct": 46.48,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": -0.28,
           "components": {
             "fair": 52.65,
             "hibbs_invariant": 47.38,
             "abramowitz": 42.96,
-            "lewis_beck": 44.37
+            "lewis_beck": 43.71
           }
         }
       ],
@@ -602,8 +602,8 @@
           "G_real_growth_pct": 1.44,
           "P_admin_inflation_pct": 3.16,
           "Z_good_news_quarters": 4,
-          "cpi_yoy_2026_2028": 3.32,
-          "cpi_yoy_no_tariff_counterfactual": 2.22,
+          "cpi_yoy_2026_2028": 4.1,
+          "cpi_yoy_no_tariff_counterfactual": 3.0,
           "unrate_pct": 4.78,
           "michigan_ics": 48.8,
           "approval_net": -10.9,
@@ -663,25 +663,25 @@
       },
       "lewis_beck_2028": {
         "incumbent_party": "R",
-        "incumbent_two_party_pct": 46.12,
-        "lower_95ci": 41.12,
-        "upper_95ci": 51.12,
+        "incumbent_two_party_pct": 45.45,
+        "lower_95ci": 40.45,
+        "upper_95ci": 50.45,
         "rmse": 2.5,
-        "win_prob": 0.06,
+        "win_prob": 0.034,
         "inputs": {
           "unrate_pct": 4.78,
-          "cpi_yoy_pct": 3.32,
-          "misery_index": 8.1
+          "cpi_yoy_pct": 4.1,
+          "misery_index": 8.88
         },
         "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample."
       },
       "ensemble_2028": {
-        "incumbent_two_party_pct": 47.95,
-        "lower_95ci": 45.81,
-        "upper_95ci": 50.09,
+        "incumbent_two_party_pct": 47.81,
+        "lower_95ci": 45.66,
+        "upper_95ci": 49.95,
         "ensemble_rmse": 1.07,
         "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
-        "win_prob": 0.028,
+        "win_prob": 0.02,
         "weights": {
           "fair": 0.214,
           "hibbs": 0.29,
@@ -692,7 +692,7 @@
           "fair_pct": 55.19,
           "hibbs_pct": 50.5,
           "abramowitz_pct": 41.22,
-          "lewis_beck_pct": 46.12
+          "lewis_beck_pct": 45.45
         }
       },
       "tariff_sensitivity_2028": [
@@ -701,16 +701,16 @@
           "tariff_rate_pct": 5.0,
           "label": "\u8d38\u6613\u548c\u89e3\uff0c\u5173\u7a0e\u56de\u5230 5%",
           "is_baseline_tariff": false,
-          "projected_cpi_yoy": 2.47,
+          "projected_cpi_yoy": 3.25,
           "projected_approval_2028": -16.1,
-          "ensemble_R_two_party_pct": 48.23,
+          "ensemble_R_two_party_pct": 48.09,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": 0.28,
           "components": {
             "fair": 55.78,
             "hibbs_invariant": 50.5,
             "abramowitz": 41.22,
-            "lewis_beck": 46.84
+            "lewis_beck": 46.17
           }
         },
         {
@@ -718,16 +718,16 @@
           "tariff_rate_pct": 13.5,
           "label": "\u7ef4\u6301\u5f53\u524d 13.5%\uff08\u57fa\u7ebf\uff09",
           "is_baseline_tariff": true,
-          "projected_cpi_yoy": 3.32,
+          "projected_cpi_yoy": 4.1,
           "projected_approval_2028": -16.1,
-          "ensemble_R_two_party_pct": 47.95,
+          "ensemble_R_two_party_pct": 47.81,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": 0.0,
           "components": {
             "fair": 55.19,
             "hibbs_invariant": 50.5,
             "abramowitz": 41.22,
-            "lewis_beck": 46.12
+            "lewis_beck": 45.45
           }
         },
         {
@@ -735,16 +735,16 @@
           "tariff_rate_pct": 22.0,
           "label": "\u518d\u6b21\u5347\u7ea7\u5230 22%\uff084 \u6708\u5cf0\u503c\u6c34\u5e73\uff09",
           "is_baseline_tariff": false,
-          "projected_cpi_yoy": 4.17,
+          "projected_cpi_yoy": 4.95,
           "projected_approval_2028": -16.1,
-          "ensemble_R_two_party_pct": 47.67,
+          "ensemble_R_two_party_pct": 47.53,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": -0.28,
           "components": {
             "fair": 54.6,
             "hibbs_invariant": 50.5,
             "abramowitz": 41.22,
-            "lewis_beck": 45.39
+            "lewis_beck": 44.73
           }
         }
       ],
@@ -758,7 +758,7 @@
           "approval_2026": -8.0,
           "approval_2028": -14.1,
           "abramowitz_2028_R_pct": 42.49,
-          "ensemble_2028_R_pct": 48.31,
+          "ensemble_2028_R_pct": 48.16,
           "ensemble_rmse": 1.07
         },
         {
@@ -770,7 +770,7 @@
           "approval_2026": -11.0,
           "approval_2028": -16.2,
           "abramowitz_2028_R_pct": 41.12,
-          "ensemble_2028_R_pct": 47.92,
+          "ensemble_2028_R_pct": 47.78,
           "ensemble_rmse": 1.07
         },
         {
@@ -782,7 +782,7 @@
           "approval_2026": -10.0,
           "approval_2028": -21.0,
           "abramowitz_2028_R_pct": 38.05,
-          "ensemble_2028_R_pct": 47.06,
+          "ensemble_2028_R_pct": 46.91,
           "ensemble_rmse": 1.07
         }
       ],
@@ -832,8 +832,8 @@
           "G_real_growth_pct": -1.36,
           "P_admin_inflation_pct": 3.96,
           "Z_good_news_quarters": 1,
-          "cpi_yoy_2026_2028": 4.91,
-          "cpi_yoy_no_tariff_counterfactual": 3.81,
+          "cpi_yoy_2026_2028": 5.69,
+          "cpi_yoy_no_tariff_counterfactual": 4.59,
           "unrate_pct": 6.18,
           "michigan_ics": 43.7,
           "approval_net": -12.8,
@@ -893,22 +893,22 @@
       },
       "lewis_beck_2028": {
         "incumbent_party": "R",
-        "incumbent_two_party_pct": 43.57,
-        "lower_95ci": 38.57,
-        "upper_95ci": 48.57,
+        "incumbent_two_party_pct": 42.91,
+        "lower_95ci": 37.91,
+        "upper_95ci": 47.91,
         "rmse": 2.5,
-        "win_prob": 0.005,
+        "win_prob": 0.002,
         "inputs": {
           "unrate_pct": 6.18,
-          "cpi_yoy_pct": 4.91,
-          "misery_index": 11.09
+          "cpi_yoy_pct": 5.69,
+          "misery_index": 11.87
         },
         "calibration_note": "Priors only; coefficients to be re-estimated on 1948-2020 sample."
       },
       "ensemble_2028": {
-        "incumbent_two_party_pct": 44.5,
-        "lower_95ci": 42.36,
-        "upper_95ci": 46.65,
+        "incumbent_two_party_pct": 44.36,
+        "lower_95ci": 42.22,
+        "upper_95ci": 46.51,
         "ensemble_rmse": 1.07,
         "ensemble_rmse_note": "Lower bound assuming residual independence (see B3 TODO).",
         "win_prob": 0.0,
@@ -922,7 +922,7 @@
           "fair_pct": 49.82,
           "hibbs_pct": 42.69,
           "abramowitz_pct": 43.04,
-          "lewis_beck_pct": 43.57
+          "lewis_beck_pct": 42.91
         }
       },
       "tariff_sensitivity_2028": [
@@ -931,16 +931,16 @@
           "tariff_rate_pct": 5.0,
           "label": "\u8d38\u6613\u548c\u89e3\uff0c\u5173\u7a0e\u56de\u5230 5%",
           "is_baseline_tariff": false,
-          "projected_cpi_yoy": 4.06,
+          "projected_cpi_yoy": 4.84,
           "projected_approval_2028": -12.8,
-          "ensemble_R_two_party_pct": 44.79,
+          "ensemble_R_two_party_pct": 44.64,
           "ensemble_rmse": 1.07,
-          "delta_vs_baseline_pp": 0.29,
+          "delta_vs_baseline_pp": 0.28,
           "components": {
             "fair": 50.41,
             "hibbs_invariant": 42.69,
             "abramowitz": 43.04,
-            "lewis_beck": 44.3
+            "lewis_beck": 43.63
           }
         },
         {
@@ -948,16 +948,16 @@
           "tariff_rate_pct": 13.5,
           "label": "\u7ef4\u6301\u5f53\u524d 13.5%\uff08\u57fa\u7ebf\uff09",
           "is_baseline_tariff": true,
-          "projected_cpi_yoy": 4.91,
+          "projected_cpi_yoy": 5.69,
           "projected_approval_2028": -12.8,
-          "ensemble_R_two_party_pct": 44.5,
+          "ensemble_R_two_party_pct": 44.36,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": 0.0,
           "components": {
             "fair": 49.82,
             "hibbs_invariant": 42.69,
             "abramowitz": 43.04,
-            "lewis_beck": 43.57
+            "lewis_beck": 42.91
           }
         },
         {
@@ -965,16 +965,16 @@
           "tariff_rate_pct": 22.0,
           "label": "\u518d\u6b21\u5347\u7ea7\u5230 22%\uff084 \u6708\u5cf0\u503c\u6c34\u5e73\uff09",
           "is_baseline_tariff": false,
-          "projected_cpi_yoy": 5.76,
+          "projected_cpi_yoy": 6.54,
           "projected_approval_2028": -12.8,
-          "ensemble_R_two_party_pct": 44.22,
+          "ensemble_R_two_party_pct": 44.08,
           "ensemble_rmse": 1.07,
           "delta_vs_baseline_pp": -0.28,
           "components": {
             "fair": 49.23,
             "hibbs_invariant": 42.69,
             "abramowitz": 43.04,
-            "lewis_beck": 42.85
+            "lewis_beck": 42.19
           }
         }
       ],
@@ -1008,9 +1008,9 @@
     "2028_R_two_party_fair": 54.73,
     "2028_R_two_party_hibbs": 49.34,
     "2028_R_two_party_abramowitz": 42.72,
-    "2028_R_two_party_lewis_beck": 45.73,
-    "2028_R_two_party_ensemble": 47.85,
-    "2028_incumbent_two_party_pct": 47.85,
+    "2028_R_two_party_lewis_beck": 45.07,
+    "2028_R_two_party_ensemble": 47.71,
+    "2028_incumbent_two_party_pct": 47.71,
     "2028_incumbent_party": "R",
     "2026_in_party_seat_change": -38.8
   },

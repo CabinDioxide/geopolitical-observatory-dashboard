@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-05-31T08:37:26.700926Z",
-  "duration_seconds": 264.5,
+  "last_run": "2026-06-01T11:11:26.692548Z",
+  "duration_seconds": 265.6,
   "sources": {
     "gdelt": {
       "status": "ok",
-      "features": 708
+      "features": 1363
     },
     "acled": {
       "status": "skipped",
@@ -26,13 +26,13 @@
     },
     "ais": {
       "status": "ok",
-      "features": 667,
-      "sanctioned_in_chokepoints": 1
+      "features": 481,
+      "sanctioned_in_chokepoints": 0
     },
     "fred": {
       "status": "ok",
-      "series_ok": 6,
-      "series_failed": 8
+      "series_ok": 8,
+      "series_failed": 6
     },
     "eia": {
       "status": "ok",
@@ -41,7 +41,7 @@
     "election_models": {
       "status": "ok",
       "transmission_max_pressure": 100,
-      "weighted_2028_R_pct": 47.85,
+      "weighted_2028_R_pct": 47.71,
       "weighted_2026_R_seat_change": -38.8
     }
   }
