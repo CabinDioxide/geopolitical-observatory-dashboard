@@ -2,12 +2,12 @@
   "meta": {
     "title": "Global Supply Chain Transmission",
     "subtitle": "Five chains · Four control states for the Strait of Hormuz · Five-stage worst-case timeline · Country political fragility · Cross-chain feedback",
-    "baseline_date": "2026-05-29",
+    "baseline_date": "2026-06-01",
     "source_report": {
       "title": "Global supply chain exposure under Iran regime scenarios",
       "path": "/iran-war/reports/03_supply_chain_transmission.docx"
     },
-    "stance_summary": "**Hormuz is currently in a mixed-mode operational state** — some ships paying tolls, others being cyclically detained, the US Navy escorting selectively, and the marine insurance market retreating in tiers. Actual transit has collapsed to **~5% of pre-war** (≤1 mb/d vs ~20 mb/d normal; ~10 daily passages vs 125-140 pre-war), with **1,550+ vessels + ~22,500 mariners stranded in the Persian Gulf** (IMO Apr 21). Brent is in the $80–95 band. **On May 23 Trump said an Iran deal to reopen the strait was \"largely negotiated\" and imminent, but Iran's Fars agency dismissed it as \"incomplete and inconsistent with reality\" — the strait remains under Iranian management.**\n\n**The US Navy 5th Fleet is the key hard constraint** — escorting a 5–10 ship convoy requires 8–10 destroyers, and **even at full effort the Navy can restore only 10% of pre-war Hormuz flow**. Hegseth publicly calls the escort posture \"a gift to the whole world,\" but CNN's May coverage flatly reports \"why US warships will not escort commercial vessels\" — the political messaging diverges sharply from operational reality.\n\n**Iran has now empirically tested the red line**: the March 18, 2026 coordinated attack on Qatar's Ras Laffan, Saudi SAMREF, and Kuwaiti and UAE energy infrastructure. Qatar expelled Iran's military attaché; Saudi Arabia publicly stated it \"reserves the right to take military action against Iran.\" Trump publicly extended deterrence — \"the US will act if Qatar is hit again.\" The Gulf Trio has reversed from the \"low hostility\" of the 2023 Beijing reconciliation to **de facto hostility** — but the form their opposition takes is **opposition to the kind of escalation that would drag them in**, **not opposition to Iran being weakened** (on which point they are in fact aligned with Israel's strategic goals).\n\n**Global supply chains transmit through five chains + one hard constraint**: oil & gas / marine insurance / defense industry / semiconductors / financial plumbing + US Navy capacity. Semiconductors are the most counterintuitive but most critical chain — Israel's fab cluster (Intel 18A / NVIDIA Mellanox / Tower Semi) all sits inside Iranian missile range; TSMC's LNG buffer is just 7 days, and any disruption to Qatari exports forces immediate output cuts.\n\n**The seven most dangerous countries**: Pakistan (6–12 months), Egypt (6–12 months), Sri Lanka (12–18 months), Bangladesh (12–18 months), Jordan (12–24 months), Turkey (12–24 months, with new PKK risk), Japan (no collapse, but political pivot)."
+    "stance_summary": "**Hormuz is currently in a mixed-mode operational state** — some ships paying tolls, others being cyclically detained, the US Navy escorting selectively, and the marine insurance market retreating in tiers. Actual transit has collapsed to **~5% of pre-war** (≤1 mb/d vs ~20 mb/d normal; ~10 daily passages vs 125-140 pre-war), with **1,500+ vessels + ~22,000 mariners stranded in the Persian Gulf** (late-May data). Brent is in the $80–95 band. **5/28 US-Iran finalized deal text; 5/31 Trump sent it back demanding tougher nuclear commitments and HEU disposal language (CNN) — final signature pending; the strait remains under Iranian management. In May the IRGC redefined Hormuz as a \"vast operational area\" extending from Jask to Siri Island.**\n\n**The US Navy 5th Fleet is the key hard constraint** — escorting a 5–10 ship convoy requires 8–10 destroyers, and **even at full effort the Navy can restore only 10% of pre-war Hormuz flow**. Hegseth publicly calls the escort posture \"a gift to the whole world,\" but CNN's May coverage flatly reports \"why US warships will not escort commercial vessels\" — the political messaging diverges sharply from operational reality.\n\n**Iran has now empirically tested the red line**: the March 18, 2026 coordinated attack on Qatar's Ras Laffan, Saudi SAMREF, and Kuwaiti and UAE energy infrastructure. Qatar expelled Iran's military attaché; Saudi Arabia publicly stated it \"reserves the right to take military action against Iran.\" Trump publicly extended deterrence — \"the US will act if Qatar is hit again.\" The Gulf Trio has reversed from the \"low hostility\" of the 2023 Beijing reconciliation to **de facto hostility** — but the form their opposition takes is **opposition to the kind of escalation that would drag them in**, **not opposition to Iran being weakened** (on which point they are in fact aligned with Israel's strategic goals).\n\n**Global supply chains transmit through five chains + one hard constraint**: oil & gas / marine insurance / defense industry / semiconductors / financial plumbing + US Navy capacity. Semiconductors are the most counterintuitive but most critical chain — Israel's fab cluster (Intel 18A / NVIDIA Mellanox / Tower Semi) all sits inside Iranian missile range; TSMC's LNG buffer is just 7 days, and any disruption to Qatari exports forces immediate output cuts.\n\n**The seven most dangerous countries**: Pakistan (6–12 months), Egypt (6–12 months), Sri Lanka (12–18 months), Bangladesh (12–18 months), Jordan (12–24 months), Turkey (12–24 months, with new PKK risk), Japan (no collapse, but political pivot)."
   },
   "chains": [
     {
@@ -1018,7 +1018,7 @@
     "id": "us-navy-capacity",
     "label": "US Navy actual Hormuz capacity",
     "short_desc": "5th Fleet max effort recovers only 10% pre-war",
-    "current_state": "Current actual transit ~5% of pre-war (escort can restore a ceiling of 10%); 1,550+ vessels + ~22,500 mariners stranded in the Gulf",
+    "current_state": "Current actual transit ~5% of pre-war (escort can restore a ceiling of 10%); 1,500+ vessels + ~22,000 mariners stranded in the Gulf; Iran has committed to restoring 100 ships/day transit within 30 days if deal is signed",
     "color": "alert",
     "key_data": [
       {
@@ -1035,7 +1035,7 @@
       },
       {
         "label": "Currently stranded in the Gulf",
-        "value": "1,550+ vessels + ~22,500 mariners (IMO Apr 21; mostly bulk/container, not all tankers)"
+        "value": "1,500+ vessels + ~22,000 mariners (late-May data; mostly bulk/container, not all tankers)"
       },
       {
         "label": "Navy's official line to industry",
@@ -1123,7 +1123,7 @@
     ]
   },
   "hormuz_modes_meta": {
-    "current_actual_state": "Near-closure (actual transit ~5% of pre-war, ~10 daily passages) + pending reopening talks",
+    "current_actual_state": "Near-closure (actual transit ~5% of pre-war, ~10 daily passages) + Trump-Iran deal in final drafting (Trump sent back changes May 31 demanding tougher nuclear language; signature pending)",
     "description": "Hormuz's current operation is not any single pure mode — it's a mix of four pure modes.\n\nSome ships pay tolls and pass normally (Iran charges Chinese tankers a $0.5-1/bbl 'protection fee'). Some ships get periodically seized (18 seizure events across 2024-2025). The US Fifth Fleet selectively escorts high-value tankers (8-10 VLCCs per week). The marine insurance market is in tiered withdrawal (independent shipowners have largely exited; state-owned and Chinese fleets continue to run).\n\nThe 4 modes listed below are the pure analytical types. The actual state is a mix dynamically determined by three variables: Iranian regime status, US Navy physical capacity, and Iranian red-line triggers. What to watch over the next 24 months is not 'which pure mode will appear' but 'how the mix shifts.'",
     "base_case_probabilities_24m": {
       "Mixed Mode (current continues)": "40-50%",
