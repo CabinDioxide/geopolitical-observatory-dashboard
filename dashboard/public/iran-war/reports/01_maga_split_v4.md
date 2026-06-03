@@ -8,7 +8,7 @@
 
 ## 摘要
 
-2026 年 2 月 28 日美国参与对伊朗发动联合打击之后，MAGA 运动出现了 2016 年以来最公开、最结构性的内部分裂。这场分裂的表面现象——Tucker Carlson 指责特朗普背叛承诺，Candace Owens 暗示应该送特朗普"进养老院"，MTG 预言共和党将在 2026 年中期选举丢掉众议院——容易被理解为个人忠诚的破裂。本报告的核心论点与此不同。
+2026 年 2 月 28 日美国参与对伊朗发动联合打击之后，MAGA（"让美国再次伟大"，特朗普的政治运动）运动出现了 2016 年以来最公开、最结构性的内部分裂。这场分裂的表面现象——Tucker Carlson 指责特朗普背叛承诺，Candace Owens 暗示应该送特朗普"进养老院"，MTG 预言共和党将在 2026 年中期选举丢掉众议院——容易被理解为个人忠诚的破裂。本报告的核心论点与此不同。
 
 **分裂的根本原因是四个派系对"MAGA 核心承诺"含义的不同理解，而非对特朗普个人的态度分歧。** 这四个派系在 2016 至 2024 年间各自形成，各有独立的思想来源、利益基础和选民基础；它们围绕伊朗战争分裂，是因为战争把这四套"Trump 主义"内部彼此不相容的逻辑同时激活了。
 
@@ -38,6 +38,8 @@ Steve Bannon、Tucker Carlson、Megyn Kelly、Candace Owens、Marjorie Taylor Gr
 
 这一派的思想来源是 20 世纪初美国孤立主义传统（Pat Buchanan 式"America First"），经由 Bannon 在 2013 至 2016 年间将其与民粹经济主义结合，最终在 2017 年 Bannon 主导特朗普政府外交政策叙事时达到顶峰。其核心逻辑是：美国的真实威胁来自内部（非法移民、文化左翼、"深层政府"）和外部竞争对手中国，而非中东——中东战争是精英掠夺纳税人资源的工具。
 
+这一派在思想谱系上属于古典保守主义（paleoconservative，古老保守派，强调传统主义、孤立主义的右翼传统），与新保守主义（neoconservative，主张通过军事手段推广民主、维持美国霸权）形成直接对立。
+
 ### 【事实】伊朗战争中的立场与行动
 
 **Tucker Carlson** 在其节目中明确表态："We promised to end stupid foreign wars, not jump back into the Middle East again."（[Newsweek，2025-06-16](https://www.newsweek.com/tucker-carlson-steve-bannon-maga-trump-iran-israel-war-2086346)）他将伊朗战争定性为"Israel's war, not America's war"。
@@ -56,7 +58,7 @@ MTG 于 2026 年 5 月 18 日接受 Time 采访时预测共和党将因伊朗战
 
 这是迄今孤立派在国会层面的最重要具体行动。
 
-决议由 Thomas Massie（R-KY）和 Ro Khanna（D-CA）共同提出（[congress.gov](https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/38)），援引《战争权力决议》要求总统在 30 天内从伊朗冲突中撤军。
+决议由 Thomas Massie（R-KY）和 Ro Khanna（D-CA）共同提出（[congress.gov](https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/38)），援引 WPR（1973年战争权力决议法案，要求总统在60天内获国会批准才能继续军事行动）要求总统在 30 天内从伊朗冲突中撤军。H.Con.Res.38（众议院第38号联合决议，引用战争权力法要求撤兵）的推动标志着孤立派首次将批评转化为具体立法程序。
 
 **【事实】2026 年 3 月 5 日众议院投票结果**：212 赞成，219 反对，以 7 票之差失败。（[House Clerk Roll Call #85](https://clerk.house.gov/Votes/202685)）投票中仅有 **2 名共和党人**赞成：Thomas Massie（KY）和 Warren Davidson（OH）。Davidson 在下月后续决议中投"present"（实际弃权），反映了持续的政治压力。
 
@@ -106,7 +108,7 @@ Mike Johnson（众议院议长）、Pete Hegseth（同时属于此派）、Mike 
 
 ### 【事实】Johnson 的具体行动
 
-**资金来源**：多源核实范围为 823,000 至 898,393 美元（FEC 可查；[The Intercept](https://theintercept.com/2024/01/20/israel-aipac-house-mike-johnson/)；[TrackAIPAC X 账号，2024-08](https://x.com/TrackAIPAC)；[BoughtByZionism.org](https://boughtzionism.org/)）。AIPAC 为 Johnson 2023 年最大捐款人。其中 95,000 美元在 Johnson 推动 140 亿美元以色列援助法案后流入（The Intercept）。
+**资金来源**：多源核实范围为 823,000 至 898,393 美元（FEC 可查；[The Intercept](https://theintercept.com/2024/01/20/israel-aipac-house-mike-johnson/)；[TrackAIPAC X 账号，2024-08](https://x.com/TrackAIPAC)；[BoughtByZionism.org](https://boughtzionism.org/)）。AIPAC（美以公共事务委员会，美国最大的亲以色列游说组织）为 Johnson 2023 年最大捐款人。其中 95,000 美元在 Johnson 推动 140 亿美元以色列援助法案后流入（The Intercept）。
 
 **约旦河西岸之行**：Johnson 赴"红母牛"基地（red heifer site）与内塔尼亚胡会面，称："We pray for our nation and for peace in Jerusalem, for peace for Israel."
 
@@ -166,7 +168,7 @@ Vance 于 2026 年 4 月 7 日回应："If you're going to opine on matters of t
 
 【事实】2026 年 1 月 4 日：Musk 用波斯语在 X 上回复哈梅内伊帖子，称其"妄想"（[Iran International](https://www.iranintl.com/en/202601043827)）。2026 年 1 月 8 日：X 平台将伊朗国旗表情符号改为 1979 年前的版本（狮日旗），主动发表政治声明。（[Al Jazeera，2026-01-08](https://www.aljazeera.com/amp/news/2026/1/8/elon-musk-iran-flag-x-twitter)）
 
-【事实】2026 年 5 月 26 日（最新）：Pentagon 与 SpaceX 就 Starlink 涨价发生冲突——五角大楼称支付约 5,000 美元/终端，SpaceX 声称实际服务层级价值约 25,000 美元，要求追补（[CNBC，2026-05-26](https://www.cnbc.com/2026/05/26/pentagon-spars-with-spacex-over-starlink-price-hike-during-iran-war.html)）。Musk 同时澄清 Starlink 服务条款禁止将终端用于武器系统。
+【事实】2026 年 5 月 26 日（最新）：Pentagon 与 SpaceX 就 Starlink 涨价发生冲突——五角大楼称支付约 5,000 美元/终端，SpaceX 声称实际服务层级价值约 25,000 美元，要求追补。Musk 同时澄清 Starlink 服务条款禁止将终端用于武器系统。（[CNBC，2026-05-26](https://www.cnbc.com/2026/05/26/pentagon-spars-with-spacex-over-starlink-price-hike-during-iran-war.html)）
 
 这呈现了一个复杂的利益矩阵：Musk 本人支持伊朗战争的政治目标，但在商业利益上向军方施加了价格压力。
 
@@ -214,6 +216,8 @@ a16z 发布"No Man Left Behind"博文，论证自主战争"不是尽管有我们
 
 Walt 和 Mearsheimer 于 2026 年 4 月 4 日（《以色列游说团》发表 20 周年）接受 Tom Switzer 访谈，重新检视其论点在伊朗战争背景下的适用性，对自己的核心命题作出肯定。（[Unz Review，2026-04-04](https://www.unz.com/article/is-israel-driving-the-iran-war-john-mearsheimer-and-stephen-walt-in-debate-with-tom-switzer-on-the-20th-anniversary-of-the-israel-lobby/)）
 
+CFR（美国外交关系协会）同期刊文分析国会在伊朗战争授权问题上的角色，记录了国会拒绝介入的制度性原因。（[CFR：Congress and Iran War Powers](https://www.cfr.org/articles/congress-declines-to-demand-a-say-in-the-iran-war)）
+
 ---
 
 ## 八、民调数据：90% 支持背后的方法论问题
@@ -222,7 +226,7 @@ Walt 和 Mearsheimer 于 2026 年 4 月 4 日（《以色列游说团》发表 2
 
 | 民调 | 数据 | 来源/日期/方法 |
 |------|------|------|
-| 自认 MAGA 共和党人支持伊朗打击 | **90%**（反对 5%）| NBC News，2026-02-27 至 03-03，n=1000，MOE±3.1pp |
+| 自认 MAGA 共和党人支持伊朗打击 | **90%**（反对 5%）| NBC News，2026-02-27 至 03-03，n=1000，MOE±3.1pp（百分点）|
 | 共和党整体支持 | 77%（反对 15%）| 同一 NBC 民调 |
 | 全体选民净支持率 | -22.8%（截至 2026-06-02）| [Nate Silver/Silver Bulletin](https://www.natesilver.net/p/iran-war-polls-popularity-approval) |
 | 独立人士特朗普支持率 | 28% | Quinnipiac 大学民调 |
