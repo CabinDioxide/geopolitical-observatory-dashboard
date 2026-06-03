@@ -68,7 +68,7 @@
 
 工业收缩的量化证据密集且来自多个独立源头：
 
-[VCI（德国化工工业协会）2025 年 Q2 报告](https://www.vci.de/ergaenzende-downloads/qb-2025-02-en.pdf)提供了迄今最精确的部门数字：化工开工率 2025 年 Q3 降至 **70%**，2025 年全年均值 72.5%，2024 年全年均值 75%。VCI 自己定义的盈利阈值是 **80%**——德国化工已连续三年（2023、2024、2025）低于盈利线。2024 年化工/医药产量比 2018 年水平低约 16%，订单较 2021 年峰值下跌约 20%。这是二战后欧洲化工持续时间最长的一次低谷，而且与 2009 年金融危机后的短期冲击后快速反弹性质不同——那是需求冲击，这是结构性能源成本高企叠加需求疲软。
+[VCI Jahresbilanz 2025](https://www.vci.de/presse/pressemitteilungen/jahresbilanz-2025.jsp)（德语，2026年初发布）：化工产能利用率2025年**全年均值70%**，为历史低点——连续三年（2023、2024、2025）低于VCI自定义盈利阈值80%；就业减少2400人（-0.5%）；累计订单量较2021年峰值下跌超20%。[VCI Quartalsbericht 1/2026](https://www.vci.de/ergaenzende-downloads/qb-2026-01.pdf)（德语，2026年5月29日）显示Q1 2026产能利用率75.1%，生产同比**-6%**，VCI明确表示"Keine Trendwende"（没有转折点迹象）。**最值得注意的前瞻信号**：VCI调查显示**20%的德国化工企业**正计划将生产迁往德国以外或关闭整个生产基地。VCI 自己定义的盈利阈值是 **80%**——德国化工已连续三年（2023、2024、2025）低于盈利线。2024 年化工/医药产量比 2018 年水平低约 16%，订单较 2021 年峰值下跌约 20%。这是二战后欧洲化工持续时间最长的一次低谷，而且与 2009 年金融危机后的短期冲击后快速反弹性质不同——那是需求冲击，这是结构性能源成本高企叠加需求疲软。
 
 外迁意向调查提供了更令人不安的前瞻指标。[DIHK（德国工商会）2024 年调查](https://www.dihk.de/en/german-economy/energy-issues-solidify-trends-of-relocation--120838)：**37%的德国工业企业正在考虑生产限制或外迁**（2023 年：32%；2022 年：21%）——两年内从五分之一上升到超过三分之一。能源成本高的企业中这一比例达到 45%（2022 年仅 25%）；500 名以上员工的大企业中达到 51%。这一轨迹表明，外迁从个别决策向行业性迁移正在加速。
 
@@ -98,13 +98,17 @@
 
 第一，[阿联酋 ADNOC 于 2024 年 10 月 1 日完成对德国化工巨头科思创（Covestro）的收购](https://www.covestro.com/press/adnoc-takeover-offer-for-covestro-successful/)，总价约 **164 亿美元（147 亿欧元）**，是 ADNOC 有史以来最大收购。科思创是全球聚碳酸酯和聚氨酯前体的主要生产商，员工 17500 人，49 个全球生产基地——欧洲核心化工资产通过资本市场转移到海湾主权基金手中。
 
-第二，[沙特 SABIC 于 2024 年 4 月正式关闭荷兰 Geleen 裂解装置](https://www.ogj.com/refining-processing/refining/operations/article/55020035/sabic-to-permanently-shutter-naphtha-cracker-in-the-netherlands)，乙烯产能 55 万吨/年永久退出。SABIC 明确将其归因于"欧洲市场条件"——低成本原料在沙特本土更具竞争力，没有理由在欧洲维持高成本生产。
+第二，[沙特 SABIC 于 2024 年 4 月正式关闭荷兰 Geleen 裂解装置](https://www.ogj.com/refining-processing/refining/operations/article/55020035/sabic-to-permanently-shutter-naphtha-cracker-in-the-netherlands)，乙烯产能 55 万吨/年永久退出。SABIC 明确将其归因于"欧洲市场条件"——低成本原料在沙特本土更具竞争力，没有理由在欧洲维持高成本生产。2026年1月，[SABIC一次性完成对欧洲全部石化制造资产的清仓式出售](https://cen.acs.org/business/petrochemicals/SABIC-sell-US-European-assets/104/web/2026/01)：欧洲聚烯烃业务以5亿美元出售给Aequita（慕尼黑私募），欧洲+美洲工程热塑性塑料业务以4.5亿美元出售给Mutares（慕尼黑私募）。合计约9.5亿美元——化工界称之为"賤賣"（selling on the cheap）。Argaam（阿拉伯语沙特财经媒体）对SABIC 2026年战略的报道称其明确定位为"从沙特出口"而非"在欧洲本地生产"。这是海湾国家对欧洲的战略定位从"在欧建厂"转向"欧洲是出口市场"的最清晰案例。
 
 这两个案例揭示的是同一个方向：能源成本结构使欧洲成为化工的**消费市场**而非**生产基地**，海湾国家通过低成本能源优势同时做两件事——收购有价值的欧洲品牌技术，关闭不再经济的欧洲产能。
 
 **→ 印度与东南亚：非主要目的地**
 
 印度更适合接收劳动密集型和制药原料药类产业，承接欧洲重化工的产业基础不在——基础设施差距、监管不确定性、EU-India FTA 尚未签署。东南亚已经是"中国+1"的电子组装接收地（越南、马来西亚），但承接欧洲钢铁/化工的产业条件不具备。两者对欧洲工业外迁的吸引力，在 2026 年的时间节点上，基本可以排除在主要目的地之外。
+
+**新的意外变量：霍尔木兹危机同时打断海湾出口**
+
+上述"海湾出口弥补欧洲产能"的逻辑存在一个在2026年初才浮现的结构性矛盾。[沙特阿美-陶氏合资Sadara化工公司（朱拜勒，年产约300万吨）于2026年3月底因霍尔木兹供应链中断宣布停产](https://www.bloomberg.com/news/articles/2026-03-31/saudi-chemical-plant-shuts-down-as-war-disrupts-supply-chains)（Bloomberg 2026-03-31）——这座号称海湾区最大化工综合体的工厂，因其自身的供应链就依赖霍尔木兹通道，无法在海峡封锁期间正常运营。这个事件揭示了一个层次更深的脆弱性：欧洲去工业化留下的产能缺口，原本预期由海湾出口填补；但一旦触发欧洲危机的同一个地缘政治事件（霍尔木兹封锁），就能同时打断海湾供应方的产出——危机和替代来源绑在同一条传导链上。
 
 **底线**：欧洲去工业化的目的地不是统一的——能源密集型化工随价差流向美国和被中东收购；绿色制造在美欧之间争夺；汽车产能在美国/中国分别扩张；欧洲本土保留的是高附加值、依赖技能和制度的制造环节。"去工业化"描述的不是整体迁移，而是**产业链在全球重新落位**，欧洲在这个过程中丢失的是能源密集的中间段。
 
@@ -116,7 +120,11 @@
 
 [CEFIC（欧洲化学工业协会）2022–2025年化工关闭与投资雷达](https://cefic.org/resources/european-chemical-closures-investments-radar-2022-2025/)显示：四年内欧洲宣布关闭的化工产能累计 **3700万吨**，占欧洲化工总产能的 **9%**；其中上游石化占关闭量的 48%（约1780万吨）。同期，新增资本开支从2022年的 **76亿欧元**崩至2025年的 **15亿欧元**，跌幅81%。直接失业约2万个岗位，间接受威胁岗位约8.9万个。
 
+[CEFIC 2026年1月更新报告](https://cefic.org/news/chemical-plant-closures-surge-six-fold-in-europe-since-2022-reaching-37mt-new-report-finds/)（涵盖至2025年12月）给出了更令人警觉的趋势：年度关闭速度从2022年的**290万吨/年急升至2025年的1720万吨/年——6年内增速6倍**；而新增投资量从2022年的**270万吨/年崩至2025年的30万吨/年**（跌幅89%）。Eurostat 2026年3月工业生产数据：欧元区同比**-2.1%**，仍无稳定信号。
+
 这个数字说明一件事：欧洲的产能退出不是渐进调整，而是结构性坍塌。
+
+**2025年最大单体关闭事件**：意大利ENI旗下Versalis于2025年完成欧洲基础化工史上规模最大的单次撤出——[布林迪西裂解装置3月永久关闭](https://www.fortuneita.com/2025/03/25/versalis-laddio-alla-chimica-di-base-tra-opposizioni-e-perplessita/)（乙烯49万吨/年+丙烯25.5万吨/年，意大利语，Fortune Italia），[普里奥洛（西西里）裂解装置12月完成关闭](https://www.lagazzettaaugustana.it/eni-versalis-a-priolo-via-libera-alla-bioraffineria-impianto-etilene-sara-smantellato/)（乙烯49万吨/年+丙烯27.5万吨/年，意大利语）。意大利据此**彻底退出基础石化生产**，成为欧洲去工业化在单一国家层面最具标志性的节点。Federchimica（意大利化工协会）数据：2025年意大利化工产量-1.5%，为连续第四年下滑；中国在意大利化工进口中的份额从2021年的6%升至**2025年8月的17%**（[Federchimica 2025年10月报告](https://www.federchimica.it/webmagazine/dettaglio-news/2025/10/27/in-un-contesto-di-profonda-incertezza-la-produzione-chimica-in-italia-non-riparte)，意大利语）。
 
 **第二层（塑料、合成橡胶、化肥、MDI）：本土萎缩，进口填补**
 
@@ -129,6 +137,8 @@
 - **氮肥（农业命脉）**：这是传导最深、主权风险最高的环节。氮肥的核心前体是氨，天然气同时是氨生产的能源和原料（占成本约90%）。能源危机峰值时，**欧洲70%的氨产能停产**。一手数据：[EU氮肥进口依存度](https://capreform.eu/import-dependence-for-nitrogen-supply/)从2019年的**28%升至2022年的45%**，进口来源包括埃及、俄罗斯、阿尔及利亚、美国、中国。具体永久关闭案例：Yara比利时Tertre工厂（**40万吨/年**氨，[已宣布永久关闭](https://www.newaginternational.com/specialty-fertilizer/yara-has-announced-that-it-is-closing-its-400000-t-y-ammonia-plant-at-tertre-belgium/)）、CF Fertilisers英国Billingham工厂（100万吨氨和硝酸铵，永久关闭）。欧洲农民无法"搬走"，只能承受化肥价格波动和供应链脆弱性。
 
 - **MDI/TDI（聚氨酯前体）**：欧洲是全球最大MDI消费市场（年消耗约90万吨），但本土生产能力正在被中国化工巨头万华化学（Wanhua）替代。万华2025年烟台产能扩至80万吨/年并继续扩张；[中国TDI出口2025年上半年同比暴增82%](https://www.pudaily.com/Home/NewsDetails/57704)。值得注意的是，万华在匈牙利持有BorsodChem子公司——这意味着部分"欧洲产"MDI实际上是中国企业控制的产能。SABIC将欧洲和美洲石化资产出售后，[明确转型为向欧洲出口的纯商业模式](https://www.thechemicalengineer.com/news/sabic-to-sell-european-and-americas-petrochemicals-assets-shifting-focus-to-exports/)。
+
+荷兰的情形提供了欧洲化工集中式崩溃的最新案例：2025年3月至7月短短**6个月内**，荷兰发生四起重大化工关闭：[Westlake关闭Pernis工厂](https://www.vnci.nl/nieuws/nieuwsbericht/vnci-betreurt-sluiting-westlake-fabrieken-in-pernis-zorgwekkende-trend-in-nederlandse-chemiesector)（230岗，荷兰语，VNCI）、[Vynova宣布停止Beek的PVC生产](https://www.vnci.nl/nieuws/nieuwsbericht/vnci-geraakt-door-aangekondigde-sluiting-vynova-fabriek)（荷兰语）、LyondellBasell关闭Maasvlakte PO11装置（约160岗）。荷兰化工行业联合会VNCI主席Manon Bloemer表示："这是令人担忧的趋势……荷兰化工业处于转折点"——失去这个产业将危及国家的战略独立性。
 
 **第三层（汽车、建筑、农业）：无法迁移，只能原地承压**
 
@@ -147,8 +157,8 @@
 | 来源 | 填补品类 | 战略含义 |
 |------|---------|---------|
 | 中国 | 塑料（35.8%进口份额）、TDI/MDI、API | 规模最大；万华/中国化工在欧洲获得定价权；EU反倾销调查开启但尚未终裁 |
-| 美国 | 乙烯（INEOS项目，2026年Q3投产）、塑料（11.6%）、氮肥 | 价差驱动；INEOS是欧洲唯一采用美国乙烷的新建裂解装置 |
-| 沙特/中东 | 塑料原料（SABIC，11.9%）、氮肥（低碳氨出口规划中） | 以出口商姿态进入，同时通过资本收购（Covestro）获取技术资产 |
+| 美国 | 乙烯（[INEOS Project One](https://www.hydrocarbonprocessing.com/news/2025/06/ineos-4-b-project-one-ethane-cracker-in-antwerp-reaches-70-completion/)（2025年6月已完成70%，2,500名工地工人），机械竣工日期推迟至**2026年底**，预计启动**2027年初**（较原计划延迟））、塑料（11.6%）、氮肥 | 价差驱动；INEOS是欧洲唯一采用美国乙烷的新建裂解装置 |
+| 沙特/中东 | 塑料原料（SABIC，11.9%）、氮肥（低碳氨出口规划中） | 以出口商姿态进入，同时通过资本收购（Covestro）获取技术资产；注：Sadara停产（见下）表明霍尔木兹封锁同时打断海湾替代供应 |
 
 **从三层传导看欧洲工业损伤的真实规模**
 
@@ -328,9 +338,11 @@ Krastev & Leonard 的核心结论：**MAGA-欧洲合流所需的"欧洲右翼统
 
 | 指标 | 数值 | 时间 | 来源 |
 |------|------|------|------|
-| EU 化工开工率 | 70%（历史低点）| 2025 Q3 | [VCI](https://www.vci.de/ergaenzende-downloads/qb-2025-02-en.pdf) |
+| EU 化工开工率（2025全年均值） | 70%（历史低点）| 2025全年 | [VCI Jahresbilanz 2025](https://www.vci.de/presse/pressemitteilungen/jahresbilanz-2025.jsp) |
+| EU 化工开工率（Q1 2026） | 75.1%，生产同比-6% | 2026 Q1 | [VCI QB 1/2026](https://www.vci.de/ergaenzende-downloads/qb-2026-01.pdf) |
 | VCI 盈利阈值 | 80% | 定义值 | VCI |
 | 连续低于盈利线年数 | 3年（2023/24/25）| 截至2025 | VCI |
+| 德国化工企业计划迁出/关闭 | 20% | 2026初调查 | VCI QB 1/2026 |
 | 德国工业外迁意向 | 37%（2024），21%（2022）| 2024 | [DIHK](https://www.dihk.de/en/german-economy/energy-issues-solidify-trends-of-relocation--120838) |
 | 大企业外迁意向（500人+）| 51% | 2024 | DIHK |
 | EU 储气满库率 | 28%（约29 bcm）| 2026-04-01 | [ENTSOG/ACER](https://www.entsog.eu/sites/default/files/2026-04/SO0069-26_Summer%20Supply%20Outlook%202026.pdf) |
