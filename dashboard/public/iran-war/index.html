@@ -1090,6 +1090,223 @@ body.lang-en .q-row-head { writing-mode: horizontal-tb; font-size: 12px; }
   </div>
 </section>
 
+<style>
+.reports-sec { margin-bottom: var(--section-gap); }
+.reports-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
+.report-card { background: #fff; border-radius: 14px; padding: 22px 22px 18px; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03); border-top: 3px solid #f0a500; display: flex; flex-direction: column; gap: 10px; transition: box-shadow 0.15s; }
+.report-card:hover { box-shadow: 0 0 0 0.5px rgba(0,0,0,0.1), 0 4px 16px rgba(0,0,0,0.07); }
+.report-card.rc-1 { border-top-color: #e85d04; }
+.report-card.rc-2 { border-top-color: #d62828; }
+.report-card.rc-3 { border-top-color: #2d7d46; }
+.report-card.rc-4 { border-top-color: #c77dff; }
+.report-card.rc-5 { border-top-color: #1d6fa4; }
+.report-card.rc-6 { border-top-color: #e76f51; }
+.report-card.rc-7 { border-top-color: #457b9d; }
+.report-card.rc-8 { border-top-color: #6d4c41; }
+.report-card-title { font-size: 14.5px; font-weight: 700; color: var(--label, #1d1d1f); line-height: 1.35; letter-spacing: -0.01em; }
+.report-card-thesis { font-size: 12.5px; color: var(--label-2, #515154); line-height: 1.55; margin: 0; }
+.report-card-data { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.report-card-data li { font-size: 11.5px; color: var(--label-3, #86868b); line-height: 1.5; padding-left: 12px; position: relative; }
+.report-card-data li::before { content: "·"; position: absolute; left: 2px; color: #f0a500; font-weight: 700; }
+.report-card-link { margin-top: auto; padding-top: 8px; border-top: 0.5px solid rgba(0,0,0,0.07); font-size: 12px; font-weight: 600; color: var(--blue, #0071e3); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+.report-card-link:hover { text-decoration: underline; }
+.reports-note { font-size: 12px; color: var(--label-3, #86868b); margin-top: 16px; text-align: center; }
+@media (max-width: 900px) { .reports-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .reports-grid { grid-template-columns: 1fr; } }
+</style>
+
+<section class="sec reports-sec">
+  <div class="sec-num">
+    <span class="lang-zh-only">DEEP REPORTS · 深度分析报告</span>
+    <span class="lang-en-only">DEEP REPORTS · 深度分析报告</span>
+  </div>
+  <h2 class="sec-title">
+    <span class="lang-zh-only">深度分析报告</span>
+    <span class="lang-en-only">Deep Analysis Reports</span>
+  </h2>
+  <div class="sec-sub">
+    <span class="lang-zh-only">基于一手智库来源，全程区分事实与推演</span>
+    <span class="lang-en-only">Based on primary think-tank sources, with fact/inference distinction throughout</span>
+  </div>
+
+  <div class="reports-grid">
+
+    <!-- Card 1: MAGA分裂 -->
+    <div class="report-card rc-1">
+      <div class="report-card-title">
+        <span class="lang-zh-only">MAGA联盟的伊朗战争裂变</span>
+        <span class="lang-en-only">MAGA's Iran War Split</span>
+      </div>
+      <p class="report-card-thesis">
+        <span class="lang-zh-only">四派谱系（孤立主义/强袭/福音/后自由）在伊朗战争上的结构性断裂；FDD鹰派公开承认误判</span>
+        <span class="lang-en-only">Structural fracture across MAGA's four factions; even FDD hawks admit miscalculation</span>
+      </p>
+      <ul class="report-card-data">
+        <li>H.Con.Res.38 战争权力挑战</li>
+        <li>Kagan/Gerecht鹰派脱队</li>
+        <li>CPAC公开对峙</li>
+      </ul>
+      <a class="report-card-link" href="../iran-war/reports/01_maga_split_v4.md" target="_blank">
+        <span class="lang-zh-only">阅读报告 →</span>
+        <span class="lang-en-only">Read Report →</span>
+      </a>
+    </div>
+
+    <!-- Card 2: 伊朗政权情景 -->
+    <div class="report-card rc-2">
+      <div class="report-card-title">
+        <span class="lang-zh-only">伊朗政权的四种前景</span>
+        <span class="lang-en-only">Iran Regime: Four Scenarios</span>
+      </div>
+      <p class="report-card-thesis">
+        <span class="lang-zh-only">维持40-45%/军政府化10-15%/缓慢崩塌12-15%/瓦解内战8-12%; 军事化已实质发生</span>
+        <span class="lang-en-only">Survival 40-45%, junta 10-15%, slow erosion 12-15%, collapse 8-12%; militarization already underway</span>
+      </p>
+      <ul class="report-card-data">
+        <li>Vahidi接任IRGC</li>
+        <li>Mojtaba重伤/Qalibaf代行</li>
+        <li>Maloney/Sadjadpour/Nasr分析师辩论</li>
+      </ul>
+      <a class="report-card-link" href="../iran-war/reports/02_iran_regime_scenarios_v2.md" target="_blank">
+        <span class="lang-zh-only">阅读报告 →</span>
+        <span class="lang-en-only">Read Report →</span>
+      </a>
+    </div>
+
+    <!-- Card 3: 供应链传导 -->
+    <div class="report-card rc-3">
+      <div class="report-card-title">
+        <span class="lang-zh-only">霍尔木兹危机的全球供应链传导</span>
+        <span class="lang-en-only">Hormuz Crisis: Global Supply Chain Transmission</span>
+      </div>
+      <p class="report-card-thesis">
+        <span class="lang-zh-only">决定损害大小的是买方适应速度; 半导体灾难被高估但结构上持久; 台湾11天LNG储备是真实脆弱点</span>
+        <span class="lang-en-only">Damage determined by buyer adaptation speed; semiconductor disaster overstated but structurally persistent</span>
+      </p>
+      <ul class="report-card-data">
+        <li>绕行上限5.5mb/d vs通行20mb/d</li>
+        <li>台湾LNG 8-11天</li>
+        <li>氦气实际回收15-35%</li>
+      </ul>
+      <a class="report-card-link" href="../iran-war/reports/03_supply_chain_transmission_v3.md" target="_blank">
+        <span class="lang-zh-only">阅读报告 →</span>
+        <span class="lang-en-only">Read Report →</span>
+      </a>
+    </div>
+
+    <!-- Card 4: 政治动荡风险 -->
+    <div class="report-card rc-4">
+      <div class="report-card-title">
+        <span class="lang-zh-only">霍尔木兹中断的政治动荡风险</span>
+        <span class="lang-en-only">Political Upheaval Risk from Hormuz Disruption</span>
+      </div>
+      <p class="report-card-thesis">
+        <span class="lang-zh-only">动荡风险不与经济冲击成正比; 最高风险=伊拉克/巴基斯坦/肯尼亚; 产油国是双叉冲击而非统一财政崩</span>
+        <span class="lang-en-only">Upheaval risk ≠ economic shock magnitude; highest risk = Iraq/Pakistan/Kenya</span>
+      </p>
+      <ul class="report-card-data">
+        <li>肯尼亚5/18死4人抗议</li>
+        <li>伊拉克3月收入-70%</li>
+        <li>WFP 4500万人急性饥饿风险</li>
+      </ul>
+      <a class="report-card-link" href="../iran-war/reports/04_political_upheaval_risk_v2.md" target="_blank">
+        <span class="lang-zh-only">阅读报告 →</span>
+        <span class="lang-en-only">Read Report →</span>
+      </a>
+    </div>
+
+    <!-- Card 5: 欧洲评估 -->
+    <div class="report-card rc-5">
+      <div class="report-card-title">
+        <span class="lang-zh-only">欧洲：管理式收缩与主权派脱钩</span>
+        <span class="lang-en-only">Europe: Managed Contraction &amp; Sovereignist Decoupling</span>
+      </div>
+      <p class="report-card-thesis">
+        <span class="lang-zh-only">伊朗冲击是加速器; 欧洲右转但不与MAGA合流; 工业外迁到美国/中国; Sadara停产打断'海湾填补欧洲缺口'逻辑</span>
+        <span class="lang-en-only">Iran shock is an accelerator; Europe tilts right but won't merge with MAGA; industry migrates to US/China</span>
+      </p>
+      <ul class="report-card-data">
+        <li>VCI Q1 2026产能利用率75.1%/-6% YoY</li>
+        <li>SABIC 2026年完全撤出欧洲制造</li>
+        <li>CEFIC 37Mt产能关闭</li>
+      </ul>
+      <a class="report-card-link" href="../iran-war/reports/05_europe_assessment_2026-05_v2.md" target="_blank">
+        <span class="lang-zh-only">阅读报告 →</span>
+        <span class="lang-en-only">Read Report →</span>
+      </a>
+    </div>
+
+    <!-- Card 6: 日本评估 -->
+    <div class="report-card rc-6">
+      <div class="report-card-title">
+        <span class="lang-zh-only">日本：时间有界的韧性与安全民族主义右转</span>
+        <span class="lang-en-only">Japan: Time-Bounded Resilience &amp; Security Nationalism</span>
+      </div>
+      <p class="report-card-thesis">
+        <span class="lang-zh-only">原油90-95%经霍尔木兹但LNG仅6%; 250天储备买的是时间不是豁免; 高市=戴高乐式而非MAGA式</span>
+        <span class="lang-en-only">Oil 90-95% via Hormuz but LNG only 6%; 250-day buffer buys time not immunity; Takaichi = Gaullist not MAGA</span>
+      </p>
+      <ul class="report-card-data">
+        <li>已批准核重启17座</li>
+        <li>JERA ¥9万亿转向美国LNG</li>
+        <li>¥3万亿补正预算通过</li>
+      </ul>
+      <a class="report-card-link" href="../iran-war/reports/06_japan_assessment_2026-05_v2.md" target="_blank">
+        <span class="lang-zh-only">阅读报告 →</span>
+        <span class="lang-en-only">Read Report →</span>
+      </a>
+    </div>
+
+    <!-- Card 7: 东南亚评估 -->
+    <div class="report-card rc-7">
+      <div class="report-card-title">
+        <span class="lang-zh-only">东南亚：最碎片的脆弱 + 华人处境的冷战公式反转</span>
+        <span class="lang-en-only">Southeast Asia: Fragmented Vulnerability &amp; Chinese Diaspora Role Reversal</span>
+      </div>
+      <p class="report-card-thesis">
+        <span class="lang-zh-only">缓冲最薄(越南30天/泰国38天); 华人危险从'美国动员的牺牲品'反转为'北京拥抱的负债'; ASEAN失效</span>
+        <span class="lang-en-only">Thinnest buffers (Vietnam 30d/Thailand 38d); diaspora danger reversed from US mobilization to Beijing embrace</span>
+      </p>
+      <ul class="report-card-data">
+        <li>越南稳定基金转赤字-1611亿盾</li>
+        <li>ISEAS 52%倒向中国</li>
+        <li>菲律宾南海冲突最高华人风险</li>
+      </ul>
+      <a class="report-card-link" href="../iran-war/reports/07_southeast_asia_assessment_2026-05_v2.md" target="_blank">
+        <span class="lang-zh-only">阅读报告 →</span>
+        <span class="lang-en-only">Read Report →</span>
+      </a>
+    </div>
+
+    <!-- Card 8: 俄乌战争 -->
+    <div class="report-card rc-8">
+      <div class="report-card-title">
+        <span class="lang-zh-only">俄乌战争：三重消耗稳态与双外生托底</span>
+        <span class="lang-en-only">Russia-Ukraine War: Triple Attrition Equilibrium</span>
+      </div>
+      <p class="report-card-thesis">
+        <span class="lang-zh-only">战争走向由两个外生托底决定: 俄罗斯油价托底(伊朗危机意外抬升)+乌克兰外援托底; 中国无人机禁令结构上无法执行</span>
+        <span class="lang-en-only">War trajectory determined by two external props: Russia's oil price floor &amp; Ukraine's foreign aid floor</span>
+      </p>
+      <ul class="report-card-data">
+        <li>俄月损耗35,000&gt;再生30,000临界</li>
+        <li>乌外援依赖$500亿/年</li>
+        <li>中国零部件双重用途无法区分</li>
+      </ul>
+      <a class="report-card-link" href="../russia-ukraine/reports/01_war_assessment_v4.md" target="_blank">
+        <span class="lang-zh-only">阅读报告 →</span>
+        <span class="lang-en-only">Read Report →</span>
+      </a>
+    </div>
+
+  </div>
+
+  <p class="reports-note">
+    <span class="lang-zh-only">所有报告链接至 Markdown 源文件（含完整超链接）</span>
+    <span class="lang-en-only">All reports link to Markdown source (with full hyperlinks)</span>
+  </p>
+</section>
+
 <footer class="footer">
   <h4>
     <span class="lang-zh-only">主要信源</span>

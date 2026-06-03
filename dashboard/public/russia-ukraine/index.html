@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>俄乌战争沙盘 · Russia-Ukraine War Sandbox</title>
+<style>
+:root {
+  --bg: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #243043;
+  --bg-subtle: #152035;
+  --border: rgba(148,163,184,0.12);
+  --border-strong: rgba(148,163,184,0.2);
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --blue: #3b82f6;
+  --blue-light: #60a5fa;
+  --blue-dim: rgba(59,130,246,0.15);
+  --amber: #f59e0b;
+  --amber-dim: rgba(245,158,11,0.12);
+  --green: #22c55e;
+  --green-dim: rgba(34,197,94,0.12);
+  --red: #ef4444;
+  --red-dim: rgba(239,68,68,0.12);
+  --content-max: 920px;
+  --section-gap: 72px;
+  --radius: 14px;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.lang-zh .lang-en-only { display: none !important; }
+body.lang-en .lang-zh-only { display: none !important; }
+
+/* ─── Header ─────────────────────────────────── */
+.hdr {
+  border-bottom: 1px solid var(--border);
+  background: rgba(15,23,42,0.95);
+  backdrop-filter: blur(12px);
+  position: sticky; top: 0; z-index: 100;
+}
+.hdr-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hdr-title h1 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.hdr-title .sub {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+.hdr-meta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+.hdr-meta a {
+  color: var(--blue-light);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.hdr-meta a:hover { color: var(--text); }
+.back-link {
+  color: var(--text-muted) !important;
+  font-size: 12px;
+}
+.back-link:hover { color: var(--text) !important; }
+
+#lang-toggle {
+  background: rgba(59,130,246,0.15);
+  border: 1px solid rgba(59,130,246,0.3);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--blue-light);
+  letter-spacing: 0.04em;
+  transition: all 0.15s;
+}
+#lang-toggle:hover {
+  background: rgba(59,130,246,0.25);
+  border-color: rgba(59,130,246,0.5);
+}
+
+/* ─── Container ───────────────────────────────── */
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
+
+/* ─── Premise / Intro ─────────────────────────── */
+.premise {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  margin: 40px 0 var(--section-gap);
+}
+.premise-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  margin-bottom: 14px;
+}
+.premise p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  letter-spacing: -0.005em;
+}
+.premise p + p { margin-top: 12px; }
+
+/* ─── Section Headers ─────────────────────────── */
+.sec { margin-bottom: var(--section-gap); }
+.sec-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.sec-title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.sec-sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  line-height: 1.55;
+}
+
+/* ─── Status Cards (Section 1) ────────────────── */
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.status-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  transition: border-color 0.2s;
+}
+.status-card:hover { border-color: var(--border-strong); }
+.status-card-icon {
+  font-size: 20px;
+  margin-bottom: 12px;
+  display: block;
+}
+.status-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+.status-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.status-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+.status-card .stat-num {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--blue-light);
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+.status-card.danger .stat-num { color: var(--red); }
+.status-card.warn .stat-num { color: var(--amber); }
+.status-divider {
+  border-top: 1px solid var(--border);
+  margin: 10px 0;
+}
+
+/* ─── Judgment Cards (Section 2) ──────────────── */
+.judgment-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.judgment-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: border-color 0.2s;
+}
+.judgment-card:hover { border-color: var(--border-strong); }
+.judgment-card.j-blue { border-left: 3px solid var(--blue); }
+.judgment-card.j-amber { border-left: 3px solid var(--amber); }
+.judgment-card.j-green { border-left: 3px solid var(--green); }
+.j-badge {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+.j-blue .j-badge { background: var(--blue-dim); color: var(--blue-light); }
+.j-amber .j-badge { background: var(--amber-dim); color: var(--amber); }
+.j-green .j-badge { background: var(--green-dim); color: var(--green); }
+.judgment-card p {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+/* ─── Variable Monitor (Section 3) ────────────── */
+.var-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.var-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: border-color 0.2s;
+}
+.var-panel:hover { border-color: var(--border-strong); }
+.var-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.var-num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.var-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 4px;
+  letter-spacing: -0.01em;
+}
+.var-title-en {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 2px;
+  font-weight: 400;
+}
+.signal-pill {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.signal-pill::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.signal-red { background: var(--red-dim); color: var(--red); }
+.signal-red::before { background: var(--red); box-shadow: 0 0 6px var(--red); }
+.signal-amber { background: var(--amber-dim); color: var(--amber); }
+.signal-amber::before { background: var(--amber); box-shadow: 0 0 6px var(--amber); }
+.signal-green { background: var(--green-dim); color: var(--green); }
+.signal-green::before { background: var(--green); }
+
+.var-row-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 5px;
+}
+.var-row-content {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+.var-divider {
+  border-top: 1px solid var(--border);
+}
+.var-sources {
+  font-size: 11.5px;
+  color: var(--text-dim);
+}
+.var-sources span {
+  display: inline-block;
+  background: rgba(148,163,184,0.08);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 7px;
+  margin: 2px 3px 2px 0;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Timeline (Section 4) ────────────────────── */
+.timeline {
+  position: relative;
+  padding-left: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blue), rgba(59,130,246,0.2));
+  border-radius: 2px;
+}
+.tl-item {
+  position: relative;
+  padding: 16px 0 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.tl-item:last-child { border-bottom: none; }
+.tl-dot {
+  position: absolute;
+  left: -33px;
+  top: 22px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--blue);
+  z-index: 1;
+}
+.tl-dot.red-dot { border-color: var(--red); }
+.tl-dot.amber-dot { border-color: var(--amber); }
+.tl-dot.green-dot { border-color: var(--green); }
+.tl-dot.active {
+  background: var(--blue);
+  box-shadow: 0 0 8px var(--blue);
+}
+.tl-date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--blue-light);
+  margin-bottom: 5px;
+}
+.tl-item.red-event .tl-date { color: var(--red); }
+.tl-item.amber-event .tl-date { color: var(--amber); }
+.tl-item.green-event .tl-date { color: var(--green); }
+.tl-headline {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+  letter-spacing: -0.005em;
+}
+.tl-detail {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ─── Deep Report Card (Section 5) ────────────── */
+.report-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+.report-card:hover {
+  border-color: var(--blue);
+  background: var(--bg-card-hover);
+}
+.report-card-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.report-card-info p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.report-card-arrow {
+  flex-shrink: 0;
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--blue-dim);
+  border: 1px solid rgba(59,130,246,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-light);
+  font-size: 18px;
+  transition: all 0.2s;
+}
+.report-card:hover .report-card-arrow {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+.report-card-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  background: var(--blue-dim);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-bottom: 10px;
+}
+
+/* ─── Footer ──────────────────────────────────── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0 0;
+  margin-top: var(--section-gap);
+  font-size: 12.5px;
+  color: var(--text-dim);
+  line-height: 1.75;
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ─── Responsive ──────────────────────────────── */
+@media (max-width: 720px) {
+  .status-grid { grid-template-columns: 1fr; }
+  .var-grid { grid-template-columns: 1fr; }
+  .hdr-inner { padding: 14px 18px; }
+  .container { padding: 0 18px 60px; }
+  .judgment-card { flex-direction: column; gap: 12px; }
+  .premise { padding: 22px 22px; }
+  .sec-title { font-size: 22px; }
+  .report-card { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .status-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body class="lang-zh">
+
+<!-- ─── Header ─────────────────────────────────── -->
+<header class="hdr">
+  <div class="hdr-inner">
+    <div class="hdr-title">
+      <h1>
+        <span class="lang-zh-only">俄乌战争沙盘</span>
+        <span class="lang-en-only">Russia-Ukraine War Sandbox</span>
+      </h1>
+      <div class="sub">
+        <span class="lang-zh-only">战场均衡 · 力量生成 · 财政韧性 · 外交轨迹 · 关键变量监测</span>
+        <span class="lang-en-only">Battlefield Balance · Force Generation · Fiscal Resilience · Diplomatic Trajectory</span>
+      </div>
+    </div>
+    <nav class="hdr-meta">
+      <a href="../" class="back-link">
+        <span class="lang-zh-only">← 返回首页</span>
+        <span class="lang-en-only">← Back</span>
+      </a>
+      <a href="reports/01_war_assessment_v4.md">
+        <span class="lang-zh-only">深度报告 v4 →</span>
+        <span class="lang-en-only">Full Report v4 →</span>
+      </a>
+      <span>
+        <span class="lang-zh-only">基线 2026-06-03</span>
+        <span class="lang-en-only">Baseline 2026-06-03</span>
+      </span>
+      <button id="lang-toggle">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- ─── Premise ─────────────────────────────────── -->
+<div class="premise">
+  <div class="premise-label">
+    <span class="lang-zh-only">核心判断框架</span>
+    <span class="lang-en-only">Core Analytical Framework</span>
+  </div>
+  <div class="lang-zh-only">
+    <p>到2026年6月，俄乌战争已凝固成<strong>三重消耗的稳态</strong>：战场上，无人机透明化封锁了双方机动，没有一方能取得战役级突破；财政上，两国都吃紧，但脆弱性性质根本不同——俄罗斯是内生、慢性、自控的失血，乌克兰是外生、可能骤断、命在他人的悬崖；政治上，俄罗斯是"压制式稳定"，乌克兰是"动荡但制度撑住"。</p>
+    <p>这场战争的走向<strong>不主要由战场决定，而由两个"外生托底"决定</strong>——俄罗斯的油价托底（受伊朗/霍尔木兹危机意外抬升）和乌克兰的外援托底（美欧政治意志）。谁的外生托底先撤，谁先接近临界。</p>
+  </div>
+  <div class="lang-en-only">
+    <p>By June 2026, the Russia-Ukraine war has solidified into a <strong>triple-attrition equilibrium</strong>: on the battlefield, drone-induced transparency has locked out maneuver for both sides; fiscally, both countries are under strain but with fundamentally different vulnerabilities — Russia is bleeding internally, chronically, under self-control; Ukraine faces an externally-imposed, potentially sudden cliff where survival depends on others.</p>
+    <p>This war's trajectory is <strong>determined not primarily by the battlefield but by two "external floors"</strong> — Russia's oil price floor (unexpectedly elevated by the Iran/Hormuz crisis) and Ukraine's external aid floor (US-European political will). Whoever's external floor collapses first approaches the critical threshold first.</p>
+  </div>
+</div>
+
+<!-- ─── SECTION 1: War Status Snapshot ─────────── -->
+<section class="sec">
+  <div class="sec-num">
+    <span class="lang-zh-only">SECTION 1 · 战争现状快照</span>
+    <span class="lang-en-only">SECTION 1 · WAR STATUS SNAPSHOT</span>
+  </div>
+  <h2 class="sec-title">
+    <span class="lang-zh-only">战争现状快照 · 2026-06-03</span>
+    <span class="lang-en-only">War Status Snapshot · 2026-06-03</span>
+  </h2>
+  <p class="sec-sub">
+    <span class="lang-zh-only">三个维度的当前状态：战场均衡、伤亡对比、财政状态。</span>
+    <span class="lang-en-only">Current state across three dimensions: battlefield balance, casualty rates, fiscal position.</span>
+  </p>
+
+  <div class="status-grid">
+    <!-- Card 1: Battlefield -->
+    <div class="status-card warn">
+      <span class="status-card-icon">⚔</span>
+      <div class="status-card-label">
+        <span class="lang-zh-only">战场均衡</span>
+        <span class="lang-en-only">Battlefield Balance</span>
+      </div>
+      <span class="stat-num">&lt;3 km²/mo</span>
+      <p>
+        <span class="lang-zh-only">俄军月均净推进，vs 2025年同期 <strong>9.76 km²/mo</strong>（降幅94%）。战线透明化锁死机动，双方均无战役级突破能力。</span>
+        <span class="lang-en-only">Russian monthly net advance, vs <strong>9.76 km²/mo</strong> same period 2025 (−94%). Drone-induced battlefield transparency locks out maneuver; neither side can achieve operational-level breakthroughs.</span>
+      </p>
+      <div class="status-divider"></div>
+      <p style="font-size:12px; color:var(--text-dim);">
+        <span class="lang-zh-only">来源: ISW / Russia Matters</span>
+        <span class="lang-en-only">Source: ISW / Russia Matters</span>
+      </p>
+    </div>
+
+    <!-- Card 2: Casualties -->
+    <div class="status-card danger">
+      <span class="status-card-icon">📊</span>
+      <div class="status-card-label">
+        <span class="lang-zh-only">伤亡对比</span>
+        <span class="lang-en-only">Casualty Comparison</span>
+      </div>
+      <span class="stat-num">35,000 / mo</span>
+      <p>
+        <span class="lang-zh-only">俄月损耗（阵亡+重伤）vs 月招募再生 <strong>~30,000</strong>——已跨越临界线。乌月损耗约 <strong>~20,000</strong>，补充率仅 17,000-24,000/月，逃兵净流出 10,000-15,000/月。</span>
+        <span class="lang-en-only">Russian monthly losses (KIA+WIA) vs monthly recruitment ~<strong>30,000</strong> — has crossed the critical threshold. Ukrainian monthly losses ~<strong>20,000</strong>, replacement rate only 17,000–24,000/mo, net desertion outflow 10,000–15,000/mo.</span>
+      </p>
+      <div class="status-divider"></div>
+      <p style="font-size:12px; color:var(--text-dim);">
+        <span class="lang-zh-only">来源: Al Jazeera / ISW / IISS</span>
+        <span class="lang-en-only">Source: Al Jazeera / ISW / IISS</span>
+      </p>
+    </div>
+
+    <!-- Card 3: Fiscal -->
+    <div class="status-card warn">
+      <span class="status-card-icon">💰</span>
+      <div class="status-card-label">
+        <span class="lang-zh-only">财政状态</span>
+        <span class="lang-en-only">Fiscal State</span>
+      </div>
+      <span class="stat-num">$478亿 NWF</span>
+      <p>
+        <span class="lang-zh-only">俄罗斯国家财富基金 &lt;2% GDP；1-4月赤字已超全年1.6%目标。乌克兰外援依赖 <strong>$500亿/年</strong>；Q1 2026外援流入骤降73%；IMF警告2026年中可能见底。</span>
+        <span class="lang-en-only">Russia's National Wealth Fund &lt;2% GDP; Jan–Apr deficit already exceeds full-year 1.6% target. Ukraine aid dependency <strong>$50B/yr</strong>; Q1 2026 aid inflows crashed 73%; IMF warns funds may run out mid-2026.</span>
+      </p>
+      <div class="status-divider"></div>
+      <p style="font-size:12px; color:var(--text-dim);">
+        <span class="lang-zh-only">来源: BOFIT / IMF / Kiel Institute</span>
+        <span class="lang-en-only">Source: BOFIT / IMF / Kiel Institute</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 2: Core Judgments ──────────────── -->
+<section class="sec">
+  <div class="sec-num">
+    <span class="lang-zh-only">SECTION 2 · 核心判断</span>
+    <span class="lang-en-only">SECTION 2 · CORE JUDGMENTS</span>
+  </div>
+  <h2 class="sec-title">
+    <span class="lang-zh-only">核心判断</span>
+    <span class="lang-en-only">Core Judgments</span>
+  </h2>
+  <p class="sec-sub">
+    <span class="lang-zh-only">三个关键分析判断，基于多轮研究综合，区分事实与推演。</span>
+    <span class="lang-en-only">Three key analytical judgments synthesized from multi-round research, distinguishing fact from inference.</span>
+  </p>
+
+  <div class="judgment-grid">
+
+    <div class="judgment-card j-blue">
+      <div class="j-badge">J1</div>
+      <p>
+        <span class="lang-zh-only"><strong>两个外生托底决定走向。</strong>战争走向由两个外生托底决定——俄罗斯油价托底（伊朗危机意外抬升：3月Brent +52%，4月Urals $112.3/桶，超G7价格上限155%）与乌克兰外援托底（美欧政治意志：欧盟€90B贷款2026-27，PURL机制）。谁的托底先撤，谁先接近临界。这不是对等的结构——俄罗斯是内生失血可自控，乌克兰是命在他人的悬崖。</span>
+        <span class="lang-en-only"><strong>Two external floors determine the outcome.</strong> The war trajectory is determined by two external floors — Russia's oil price floor (unexpectedly elevated by the Iran crisis: March Brent +52%, April Urals $112.3/bbl, 155% above G7 price cap) and Ukraine's external aid floor (US-European political will: EU €90B loan 2026–27, PURL mechanism). Whoever's floor collapses first approaches the critical threshold first. This is not a symmetric structure — Russia's bleeding is internal and self-controlled; Ukraine's cliff depends entirely on others.</span>
+      </p>
+    </div>
+
+    <div class="judgment-card j-amber">
+      <div class="j-badge">J2</div>
+      <p>
+        <span class="lang-zh-only"><strong>战场锁死在三重约束稳态。</strong>三个互锁约束同时绑死：① 兵力——俄月损耗35,203人（2026年4月），招募28,200-30,000/月，已超临界；② 装备——苏联存量装备见底，APC库存降至战前39%，IISS判断"无足够坦克支撑有效进攻"；③ 无人机透明化——FPV+光纤无人机造出15-40km击杀区，任何兵力集结在集结前即被发现摧毁。双方均无突破能力。这是"定格运动"，不是任何一方即将突破的前兆。</span>
+        <span class="lang-en-only"><strong>Battlefield locked in triple-constraint equilibrium.</strong> Three interlocking constraints simultaneously bind: ① Manpower — Russian monthly losses 35,203 (April 2026), recruitment 28,200–30,000/mo, already past critical threshold; ② Equipment — Soviet-era stockpiles exhausted, APC inventory down to 39% of pre-war levels, IISS judges insufficient tanks for effective offensives; ③ Drone transparency — FPV + fiber-optic drones create 15–40km kill zones; any force concentration is detected and destroyed before it assembles. Neither side can break through. This is "stop-motion war," not a precursor to any imminent breakthrough.</span>
+      </p>
+    </div>
+
+    <div class="judgment-card j-green">
+      <div class="j-badge">J3</div>
+      <p>
+        <span class="lang-zh-only"><strong>中国对乌克兰无人机的近期钳制能力被高估。</strong>RUSI 2025年11月深度研究（18位专家访谈）明确判断：乌克兰的无人机生产模式近期不受中国供应链断供威胁——双重用途结构让零部件禁令结构上无法执行；乌方月产FPV拦截无人机&gt;2,000架/天，长程FP-1无人机3,000架/月，已有工业规模对等能力。真正的命门是中国对<strong>西方主权生产</strong>的长期掌控。</span>
+        <span class="lang-en-only"><strong>China's near-term chokehold on Ukrainian drones is overstated.</strong> RUSI November 2025 deep research (18 expert interviews) explicitly concludes: Ukraine's drone production model faces no near-term threat from Chinese supply chain disruption — the dual-use structure makes component bans structurally unenforceable; Ukraine now produces &gt;2,000 FPV intercept drones/day, 3,000 long-range FP-1 drones/month, achieving industrial-scale parity. The real long-term vulnerability is China's control over <strong>Western sovereign production</strong>.</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── SECTION 3: Variable Monitor ────────────── -->
+<section class="sec">
+  <div class="sec-num">
+    <span class="lang-zh-only">SECTION 3 · 关键变量监测</span>
+    <span class="lang-en-only">SECTION 3 · KEY VARIABLE MONITOR</span>
+  </div>
+  <h2 class="sec-title">
+    <span class="lang-zh-only">四个关键变量监测</span>
+    <span class="lang-en-only">Four Key Variable Monitor</span>
+  </h2>
+  <p class="sec-sub">
+    <span class="lang-zh-only">实时追踪决定战局走向的四个核心变量，区分当前状态与折断信号。</span>
+    <span class="lang-en-only">Real-time tracking of four core variables that determine the war's trajectory, distinguishing current state from inflection signals.</span>
+  </p>
+
+  <div class="var-grid">
+
+    <!-- V1: Force Generation -->
+    <div class="var-panel">
+      <div class="var-header">
+        <div>
+          <div class="var-num">V1</div>
+          <div class="var-title">
+            <span class="lang-zh-only">俄罗斯力量生成</span>
+            <span class="lang-en-only">Russia Force Generation</span>
+          </div>
+          <div class="var-title-en lang-zh-only">Force Generation</div>
+        </div>
+        <div class="signal-pill signal-red">
+          <span class="lang-zh-only">危险</span>
+          <span class="lang-en-only">CRITICAL</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="var-row-label">
+          <span class="lang-zh-only">当前状态</span>
+          <span class="lang-en-only">Current State</span>
+        </div>
+        <div class="var-row-content">
+          <span class="lang-zh-only">月招募 ~30,000–34,000 vs 月损耗 ~35,000（损耗已超再生，临界越过）。约40%新兵来自"脆弱人群"（囚犯、债务人）。Putin 2026-05-26 签法免除新兵最高14万美元债务——在用涨价购买持续缩水的兵源。</span>
+          <span class="lang-en-only">Monthly recruitment ~30,000–34,000 vs monthly losses ~35,000 (losses exceed regeneration, critical threshold crossed). ~40% of recruits from "vulnerable populations" (prisoners, debtors). Putin signed law 2026-05-26 forgiving recruits up to $140K in debt — buying shrinking supply with rising price.</span>
+        </div>
+      </div>
+
+      <div class="var-divider"></div>
+
+      <div>
+        <div class="var-row-label">
+          <span class="lang-zh-only">折断信号</span>
+          <span class="lang-en-only">Break Signal</span>
+        </div>
+        <div class="var-row-content">
+          <span class="lang-zh-only">月招募是否持续低于月损耗 → 力量生成净负转为不可逆；是否触发第二次总动员（当前政治红线）；APC库存降至战前25%以下。</span>
+          <span class="lang-en-only">Monthly recruitment persistently below monthly losses → force generation irreversibly negative; whether second general mobilization is triggered (current political red line); APC inventory falls below 25% of pre-war levels.</span>
+        </div>
+      </div>
+
+      <div class="var-divider"></div>
+
+      <div class="var-sources">
+        <span class="lang-zh-only">来源：</span>
+        <span class="lang-en-only">Sources:</span>
+        <span>ISW</span><span>Al Jazeera</span><span>Carnegie</span><span>LBC</span>
+      </div>
+    </div>
+
+    <!-- V2: External Aid -->
+    <div class="var-panel">
+      <div class="var-header">
+        <div>
+          <div class="var-num">V2</div>
+          <div class="var-title">
+            <span class="lang-zh-only">乌克兰外援稳定性</span>
+            <span class="lang-en-only">Ukraine External Aid Stability</span>
+          </div>
+          <div class="var-title-en lang-zh-only">External Aid Stability</div>
+        </div>
+        <div class="signal-pill signal-amber">
+          <span class="lang-zh-only">风险</span>
+          <span class="lang-en-only">AT RISK</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="var-row-label">
+          <span class="lang-zh-only">当前状态</span>
+          <span class="lang-en-only">Current State</span>
+        </div>
+        <div class="var-row-content">
+          <span class="lang-zh-only">外援依赖$500亿/年 | 欧盟€90B贷款覆盖约2/3缺口（2026-27）| PURL机制承压：五角大楼挪$7.5亿用于补充美国自身库存而非转交乌克兰 | Q1 2026外援流入骤降73% | IMF警告"钱柜可能2026年中见底"。</span>
+          <span class="lang-en-only">Aid dependency $50B/yr | EU €90B loan covers ~2/3 of gap (2026–27) | PURL mechanism under pressure: Pentagon redirected $750M to replenish US stocks rather than transfer to Ukraine | Q1 2026 aid inflows crashed 73% | IMF warns funds may run out mid-2026.</span>
+        </div>
+      </div>
+
+      <div class="var-divider"></div>
+
+      <div>
+        <div class="var-row-label">
+          <span class="lang-zh-only">观察节点</span>
+          <span class="lang-en-only">Watch Points</span>
+        </div>
+        <div class="var-row-content">
+          <span class="lang-zh-only">PURL是否实际执行（欧洲资金用于购买美制武器转交乌克兰） | 欧盟€90B拨款时序是否延迟 | 美国政策是否转向（Rubio"僵局"宣告后续） | Patriot PAC-3拦截弹供应——这是纯财政数字覆盖不了的战备死穴。</span>
+          <span class="lang-en-only">Whether PURL is actually executed (European funds buying US weapons for Ukraine) | Whether EU €90B disbursement timeline slips | Whether US policy pivots (follow-through after Rubio's "deadlock" declaration) | Patriot PAC-3 interceptor supply — this is the combat-readiness blind spot that pure fiscal numbers cannot cover.</span>
+        </div>
+      </div>
+
+      <div class="var-divider"></div>
+
+      <div class="var-sources">
+        <span class="lang-zh-only">来源：</span>
+        <span class="lang-en-only">Sources:</span>
+        <span>Kiel Institute</span><span>Ukrainska Pravda</span><span>WaPo</span><span>IMF</span>
+      </div>
+    </div>
+
+    <!-- V3: Russia Fiscal -->
+    <div class="var-panel">
+      <div class="var-header">
+        <div>
+          <div class="var-num">V3</div>
+          <div class="var-title">
+            <span class="lang-zh-only">俄罗斯财政韧性</span>
+            <span class="lang-en-only">Russia Fiscal Resilience</span>
+          </div>
+          <div class="var-title-en lang-zh-only">Fiscal Resilience</div>
+        </div>
+        <div class="signal-pill signal-amber">
+          <span class="lang-zh-only">慢性流血</span>
+          <span class="lang-en-only">SLOW BLEED</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="var-row-label">
+          <span class="lang-zh-only">当前状态</span>
+          <span class="lang-en-only">Current State</span>
+        </div>
+        <div class="var-row-content">
+          <span class="lang-zh-only">赤字2.5% GDP（1-4月已超全年1.6%计划） | NWF流动资产$478亿（&lt;2% GDP，战前约6%） | 3月化石燃料出口日均收入EUR 713M/天（环比+52%，伊朗危机提振）| 4月Urals均价$112.3/桶，超G7价格上限155% | Siluanov要求冻结除军费外所有预算线。</span>
+          <span class="lang-en-only">Deficit 2.5% GDP (Jan–Apr already exceeds full-year 1.6% target) | NWF liquid assets $47.8B (&lt;2% GDP, was ~6% pre-war) | March fossil fuel export revenue EUR 713M/day avg (+52% MoM, Iran crisis boost) | April Urals avg $112.3/bbl, 155% above G7 price cap | Finance Minister Siluanov ordered freeze on all budget lines except military.</span>
+        </div>
+      </div>
+
+      <div class="var-divider"></div>
+
+      <div>
+        <div class="var-row-label">
+          <span class="lang-zh-only">观察节点</span>
+          <span class="lang-en-only">Watch Points</span>
+        </div>
+        <div class="var-row-content">
+          <span class="lang-zh-only">油价回落至$70-80区间时NWF消耗速率（霍尔木兹重开后） | 制裁+油价双击是否同步 | 月招募是否靠持续涨价维持（债务豁免的追加成本） | 俄罗斯基准利率（当前14.5%）和通胀（5.7%）走势。分析共识：靠本土借债、加税、货币贬值，莫斯科可再撑至少2-3年。</span>
+          <span class="lang-en-only">NWF drawdown rate once oil prices return to $70–80 range (after Hormuz reopening) | Whether sanctions + oil price double-hit synchronize | Whether monthly recruitment is sustained purely through rising financial incentives | Russia's benchmark rate (14.5%) and inflation (5.7%) trajectory. Analytical consensus: through domestic borrowing, tax increases, and currency devaluation, Moscow can sustain at least 2–3 more years.</span>
+        </div>
+      </div>
+
+      <div class="var-divider"></div>
+
+      <div class="var-sources">
+        <span class="lang-zh-only">来源：</span>
+        <span class="lang-en-only">Sources:</span>
+        <span>BOFIT</span><span>CREA</span><span>KSE</span><span>Carnegie</span>
+      </div>
+    </div>
+
+    <!-- V4: Diplomatic Trajectory -->
+    <div class="var-panel">
+      <div class="var-header">
+        <div>
+          <div class="var-num">V4</div>
+          <div class="var-title">
+            <span class="lang-zh-only">外交谈判轨迹</span>
+            <span class="lang-en-only">Diplomatic Trajectory</span>
+          </div>
+          <div class="var-title-en lang-zh-only">Diplomatic Trajectory</div>
+        </div>
+        <div class="signal-pill signal-red">
+          <span class="lang-zh-only">停滞</span>
+          <span class="lang-en-only">STALLED</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="var-row-label">
+          <span class="lang-zh-only">当前状态</span>
+          <span class="lang-en-only">Current State</span>
+        </div>
+        <div class="var-row-content">
+          <span class="lang-zh-only">完全停滞。欧洲"30天完全停火"提议被俄方拒绝（拉夫罗夫提"去军事化"+"去纳粹化"作为前提）。美方Rubio 5月28日宣告"陷入僵局"，称"不参加没有成果的无休止会议"。乌克兰拒绝任何领土承认方案。普京"趁油价高位待价而沽"是谈判停滞的外生结构性原因。</span>
+          <span class="lang-en-only">Fully stalled. Europe's "30-day complete ceasefire" proposal rejected by Russia (Lavrov demanded "demilitarization" + "denazification" as preconditions). US Secretary Rubio declared "deadlock" May 28, saying "won't attend endless meetings without results." Ukraine rejects any territorial concession framework. Putin "holding out while oil prices are high" is the exogenous structural cause of negotiation stagnation.</span>
+        </div>
+      </div>
+
+      <div class="var-divider"></div>
+
+      <div>
+        <div class="var-row-label">
+          <span class="lang-zh-only">观察节点</span>
+          <span class="lang-en-only">Watch Points</span>
+        </div>
+        <div class="var-row-content">
+          <span class="lang-zh-only">任何谈判框架文本公布（而非口头声明） | Trump-Putin直接会谈是否发生 | 欧洲内部分裂（支持vs反对停火条件）是否扩大 | 油价回落至$70以下是否改变俄罗斯议价意愿 | 美国"结果前提"是否松动（从要求成果到接受过程）。</span>
+          <span class="lang-en-only">Any negotiation framework text published (not just verbal statements) | Whether Trump-Putin direct meeting occurs | Whether European internal split (pro vs anti ceasefire terms) widens | Whether oil price return to below $70 changes Russian bargaining willingness | Whether US "results precondition" softens (from demanding outcomes to accepting process).</span>
+        </div>
+      </div>
+
+      <div class="var-divider"></div>
+
+      <div class="var-sources">
+        <span class="lang-zh-only">来源：</span>
+        <span class="lang-en-only">Sources:</span>
+        <span>Ukrainska Pravda</span><span>Reuters</span><span>RFE/RL</span><span>WaPo</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── SECTION 4: Timeline ─────────────────────── -->
+<section class="sec">
+  <div class="sec-num">
+    <span class="lang-zh-only">SECTION 4 · 时间轴</span>
+    <span class="lang-en-only">SECTION 4 · TIMELINE</span>
+  </div>
+  <h2 class="sec-title">
+    <span class="lang-zh-only">关键节点时间轴</span>
+    <span class="lang-en-only">Key Events Timeline</span>
+  </h2>
+  <p class="sec-sub">
+    <span class="lang-zh-only">2025-2026年影响战局走向的关键节点，【事实】标记可核实事件。</span>
+    <span class="lang-en-only">Key 2025–2026 inflection points that have shifted the war's trajectory. [FACT] marks verified events.</span>
+  </p>
+
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">2025-07</div>
+      <div class="tl-headline">
+        <span class="lang-zh-only">朝鲜军队进入库尔斯克</span>
+        <span class="lang-en-only">North Korean Troops Enter Kursk</span>
+      </div>
+      <div class="tl-detail">
+        <span class="lang-zh-only">【事实】约1.1万朝鲜军队进入库尔斯克参与俄方地面作战，累计伤亡约6,000人（来源：韩国国家情报院 NIS）。标志俄罗斯兵源危机已严重到需要外部补充。</span>
+        <span class="lang-en-only">[FACT] ~11,000 North Korean troops entered Kursk to support Russian ground operations; cumulative casualties ~6,000 (source: South Korea NIS). Signals Russia's manpower crisis severe enough to require external supplementation.</span>
+      </div>
+    </div>
+
+    <div class="tl-item amber-event">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-date">2025-11</div>
+      <div class="tl-headline">
+        <span class="lang-zh-only">Operation Midas 腐败案：Yermak 下台，Budanov 接任</span>
+        <span class="lang-en-only">Operation Midas Corruption Case: Yermak Out, Budanov In</span>
+      </div>
+      <div class="tl-detail">
+        <span class="lang-zh-only">【事实】乌克兰总统办公室主任Yermak涉腐败案下台，军情局局长Budanov接任。乌克兰政治动荡中制度仍在运转。</span>
+        <span class="lang-en-only">[FACT] Presidential Office Chief Yermak resigned amid corruption investigation; GUR Director Budanov appointed as replacement. Ukrainian political turbulence but institutions holding.</span>
+      </div>
+    </div>
+
+    <div class="tl-item green-event">
+      <div class="tl-dot green-dot"></div>
+      <div class="tl-date">2026-01</div>
+      <div class="tl-headline">
+        <span class="lang-zh-only">F-16 累计击落 1,000 个航空目标</span>
+        <span class="lang-en-only">F-16 Cumulative 1,000 Aerial Kills</span>
+      </div>
+      <div class="tl-detail">
+        <span class="lang-zh-only">【事实，来源：Aviation Week】乌克兰空军F-16累计击落约1,000个航空目标（巡航导弹+单程攻击无人机），主要承担防空拦截角色。已知损失至少4架，其中3架系停场遭无人机袭击而非空战击落。</span>
+        <span class="lang-en-only">[FACT, source: Aviation Week] Ukrainian Air Force F-16s achieved cumulative ~1,000 aerial kills (cruise missiles + kamikaze drones), primarily performing air-defense intercept role. At least 4 F-16s lost, 3 of which were destroyed on the ground by drone attacks rather than in aerial combat.</span>
+      </div>
+    </div>
+
+    <div class="tl-item red-event">
+      <div class="tl-dot red-dot active"></div>
+      <div class="tl-date">2026-02-28</div>
+      <div class="tl-headline">
+        <span class="lang-zh-only">霍尔木兹危机爆发——俄罗斯油价托底意外抬升</span>
+        <span class="lang-en-only">Hormuz Crisis Erupts — Russia's Oil Price Floor Unexpectedly Elevated</span>
+      </div>
+      <div class="tl-detail">
+        <span class="lang-zh-only">【事实】美以联合空袭伊朗后，伊朗宣布封锁霍尔木兹海峡。Brent从~$72.5/桶开始飙升——3月8日突破$100，3月19日峰值~$126（迪拜原油$166创纪录）。这是与俄罗斯无关的外生事件，意外成为俄罗斯制裁规避的最大帮手。</span>
+        <span class="lang-en-only">[FACT] Following US-Israeli joint strikes on Iran, Iran declared closure of the Strait of Hormuz. Brent surged from ~$72.5/bbl — breaking $100 on March 8, peaking at ~$126 on March 19 (Dubai crude $166 hit record). An exogenous event unrelated to Russia became Russia's biggest unexpected windfall against sanctions.</span>
+      </div>
+    </div>
+
+    <div class="tl-item red-event">
+      <div class="tl-dot red-dot"></div>
+      <div class="tl-date">2026-03</div>
+      <div class="tl-headline">
+        <span class="lang-zh-only">俄罗斯 3 月收入同比 +52%（CREA估）</span>
+        <span class="lang-en-only">Russia March Revenue +52% YoY (CREA Estimate)</span>
+      </div>
+      <div class="tl-detail">
+        <span class="lang-zh-only">【事实，高可信度，CREA独立机构】3月化石燃料出口日均收入EUR 713M/天（两年来峰值，环比+52%）；海运原油收入+115% MoM；KSE估3月石油出口收入总额$190亿（环比增加$93亿）。G7价格上限形同虚设：Urals实际交易价格vs上限差价~$68/桶完全由俄方截留。</span>
+        <span class="lang-en-only">[FACT, high confidence, CREA independent source] March fossil fuel export avg daily revenue EUR 713M/day (two-year peak, +52% MoM); seaborne crude revenue +115% MoM; KSE estimates March total oil export revenue $19B (+$9.3B MoM). G7 price cap rendered meaningless: Urals actual trading price vs cap differential ~$68/bbl entirely retained by Russia.</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">2026-05</div>
+      <div class="tl-headline">
+        <span class="lang-zh-only">俄军 5 月净失地，夏季攻势停滞</span>
+        <span class="lang-en-only">Russia Net Territorial Loss in May, Summer Offensive Stalled</span>
+      </div>
+      <div class="tl-detail">
+        <span class="lang-zh-only">【事实】5月俄军整体净失地（局部波动：4月28日-5月26日四周净获54平方公里，但月度整体为负）。2026年全年累计净推进104平方公里（同期2025年1,619平方公里，降幅94%）。斯洛维扬斯克、沃夫昌斯克方向持续未能推进。</span>
+        <span class="lang-en-only">[FACT] Russia net territorial loss in May (local fluctuation: 54 km² net gain Apr 28–May 26, but month overall negative). 2026 YTD cumulative net advance 104 km² (same period 2025: 1,619 km², −94% decline). Sloviansk and Vovchansk axes persistently failing to advance.</span>
+      </div>
+    </div>
+
+    <div class="tl-item amber-event">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-date">2026-05-26</div>
+      <div class="tl-headline">
+        <span class="lang-zh-only">Putin 签法免除新兵最高 14 万美元债务</span>
+        <span class="lang-en-only">Putin Signs Law Forgiving Recruits Up to $140K in Debt</span>
+      </div>
+      <div class="tl-detail">
+        <span class="lang-zh-only">【事实】这是在用涨价购买持续缩水的兵源——约40%新兵来自"脆弱人群"（囚犯、债务人），兵员质量持续下滑。征兵危机的政策应对转向加大经济激励，而非扩大人口池。</span>
+        <span class="lang-en-only">[FACT] Buying a shrinking supply with rising prices — ~40% of recruits come from "vulnerable populations" (prisoners, debtors), with continuing quality decline. Policy response to recruitment crisis shifting toward larger financial incentives rather than expanding the population pool.</span>
+      </div>
+    </div>
+
+    <div class="tl-item red-event">
+      <div class="tl-dot red-dot"></div>
+      <div class="tl-date">2026-05-28</div>
+      <div class="tl-headline">
+        <span class="lang-zh-only">Rubio 宣告谈判"陷入僵局"</span>
+        <span class="lang-en-only">Rubio Declares Negotiations "At an Impasse"</span>
+      </div>
+      <div class="tl-detail">
+        <span class="lang-zh-only">【事实】美国国务卿Rubio公开宣告俄乌谈判"陷入僵局"，以"局势升级"为由宣告停滞，但称"如条件改变随时准备重返"。欧洲"30天完全无条件停火"提议（Macron/Merz/Starmer/Tusk联名）被俄方断然拒绝。谈判无实质进展，双方立场距离比2026年初更远。</span>
+        <span class="lang-en-only">[FACT] US Secretary of State Rubio publicly declared Russia-Ukraine negotiations "at an impasse," citing "escalation" as reason for stalemate but saying "ready to return if conditions change." Europe's "30-day unconditional ceasefire" proposal (Macron/Merz/Starmer/Tusk joint) flatly rejected by Russia. No substantive progress; positions further apart than at start of 2026.</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── SECTION 5: Deep Report Link ────────────── -->
+<section class="sec">
+  <div class="sec-num">
+    <span class="lang-zh-only">SECTION 5 · 深度报告</span>
+    <span class="lang-en-only">SECTION 5 · DEEP REPORT</span>
+  </div>
+  <h2 class="sec-title">
+    <span class="lang-zh-only">链接深度报告</span>
+    <span class="lang-en-only">Deep Report</span>
+  </h2>
+  <p class="sec-sub">
+    <span class="lang-zh-only">完整的战争结构性评估，包含详细的战场数据、财政分析、武器供应和外交轨迹。</span>
+    <span class="lang-en-only">Complete structural war assessment including detailed battlefield data, fiscal analysis, weapons supply, and diplomatic trajectory.</span>
+  </p>
+
+  <a href="reports/01_war_assessment_v4.md" class="report-card">
+    <div class="report-card-info">
+      <div class="report-card-tag">
+        <span class="lang-zh-only">综合分析报告 v4</span>
+        <span class="lang-en-only">Comprehensive Assessment v4</span>
+      </div>
+      <h3>
+        <span class="lang-zh-only">俄乌战争结构性评估 v4（2026年6月2日）</span>
+        <span class="lang-en-only">Russia-Ukraine Structural War Assessment v4 (June 2, 2026)</span>
+      </h3>
+      <p>
+        <span class="lang-zh-only">七个章节：战场锁死状态、Attrition数学与转折点量化、伊朗/霍尔木兹危机财政影响、两国财政不对称、武器供应（PURL/F-16/无人机）、外交谈判时序、情景推演。全程区分【事实】与【推演】。</span>
+        <span class="lang-en-only">Seven chapters: battlefield locked state, attrition math and threshold quantification, Iran/Hormuz fiscal impact, bilateral fiscal asymmetry, weapons supply (PURL/F-16/drones), diplomatic timeline, scenario analysis. Full fact/inference distinction throughout.</span>
+      </p>
+    </div>
+    <div class="report-card-arrow">→</div>
+  </a>
+</section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────── -->
+<footer class="container">
+  <div class="footer">
+    <div class="footer-grid">
+      <span>
+        <span class="lang-zh-only">数据基线 2026-06-03 · 概率分析，非确定性预测 · 持续更新</span>
+        <span class="lang-en-only">Data baseline 2026-06-03 · Probabilistic analysis, not deterministic forecasts · Continuously updated</span>
+      </span>
+      <span>
+        <a href="../" style="color: var(--text-dim); text-decoration: none;">
+          <span class="lang-zh-only">← 返回首页 / Geopolitical Observatory</span>
+          <span class="lang-en-only">← Back to Geopolitical Observatory</span>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'ru_sandbox_lang';
+  var btn = document.getElementById('lang-toggle');
+  var body = document.body;
+
+  function setLang(lang) {
+    if (lang === 'en') {
+      body.classList.remove('lang-zh');
+      body.classList.add('lang-en');
+      btn.textContent = 'ZH';
+      try { localStorage.setItem(STORAGE_KEY, 'en'); } catch(e){}
+    } else {
+      body.classList.remove('lang-en');
+      body.classList.add('lang-zh');
+      btn.textContent = 'EN';
+      try { localStorage.setItem(STORAGE_KEY, 'zh'); } catch(e){}
+    }
+  }
+
+  // Load saved preference
+  var saved;
+  try { saved = localStorage.getItem(STORAGE_KEY); } catch(e){}
+  if (saved) setLang(saved);
+
+  btn.addEventListener('click', function () {
+    var current = body.classList.contains('lang-en') ? 'en' : 'zh';
+    setLang(current === 'en' ? 'zh' : 'en');
+  });
+})();
+</script>
+
+</body>
+</html>
