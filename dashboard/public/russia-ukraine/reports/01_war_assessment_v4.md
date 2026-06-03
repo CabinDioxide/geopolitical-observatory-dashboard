@@ -285,7 +285,23 @@ Putin掌控仍稳但更个人化（[Stanovaya](https://carnegieendowment.org/rus
 
 **③ RUSI Key Finding（[Tollast，2025年11月](https://www.rusi.org/explore-our-research/publications/research-papers/drones-decoupling-supply-chains-china)）原文**："Ukraine's affordable 'dronisation' model **may not be threatened by Chinese restrictions on components in the near-term**, but it will be difficult for NATO to substitute components when shortages arise." 真正补不上的是**NATO主权生产**，不是乌克兰现有战争。
 
-**总判断**：中国握的是对西方主权生产的长期结构性命门+一个文档化的偏袒俄罗斯的倾斜；但"近期掐死乌克兰无人机战争"是媒体强化版，最可靠的深度研究明确说乌克兰近期不受此威胁。参见[CSIS无人机供应链分析](https://www.csis.org/analysis/drone-supply-chain-war-identifying-chokepoints-making-drone)。
+**④ 双重用途困境：中国为什么在结构上很难禁止**
+
+这是RUSI结论成立的一个深层机制，但经常被讨论遗漏。中国FPV无人机零部件（电机、ESC电调、飞控、图传、电池）从深圳工厂流出时，是作为**民用消费电子**销售的——用于农业植保、摄影、竞速、快递。军用FPV和民用FPV使用的是**完全相同的组件**，物理上不可区分。
+
+这造成了一个执行层面的结构困境：
+
+- **无法在货源端区分**：深圳一家电机工厂的出货，目的地可能是波兰摄影师、泰国植保公司、或者经由中间商辗转进入乌克兰战场——工厂本身可能都不知道最终用途。[RUSI报告](https://www.rusi.org/explore-our-research/publications/research-papers/drones-decoupling-supply-chains-china)明确记录了乌克兰通过"多跳"第三国（立陶宛、波兰、土耳其、格鲁吉亚）建立采购渠道，每一跳都进一步稀释了溯源能力。
+
+- **无法在用途端区分**：DJI已对官方军用渠道实施禁售，但同款消费级产品在全球任何电商平台公开销售。这个禁令形同虚设——军事用途的FPV组件进入战场时，走的是消费品通路，不走军售通路。
+
+- **中国民用无人机产业规模决定了禁令代价极高**：中国是全球无人机出口的主导方，2023年无人机出口额超过130亿美元（[中国海关统计数据](https://www.customs.gov.cn/)），其中绝大多数是民用或两用。对整个品类实施管控，等于主动放弃一个高增长出口产业，且大量民用客户（农业、物流、检测）会受到无辜伤害——政治成本极高。
+
+- **"无法区分"本身是一种战略便利**：中国官方在面对西方压力时一贯以"无法证明军用目的"作为不采取行动的理由。这个说法并非完全虚假——技术上确实无法区分——但它同时也是一个方便的政策挡箭牌，允许北京在不正式支持俄罗斯的情况下维持对俄罗斯有利的供应流。
+
+【推演】这个双重用途结构的政策含义是：**对乌克兰来说，中国的禁止能力比中国的偏袒意愿更受限**。即使北京真心想禁绝，执行成本也极高、漏洞极大——这正是RUSI"近期不受威胁"结论的底层支撑之一。中国的真正钳制能力不在于禁止FPV消费组件（这做不到，也不想做），而在于对特定高端材料（永磁、特殊半导体）实施定向出口管制——这个能力已经在锗管制中有所展示，但针对性地打击乌克兰还需要政治意愿的大幅提升。
+
+**总判断**：中国握的是对西方主权生产的长期结构性命门+一个文档化的偏袒俄罗斯的倾斜；但"近期掐死乌克兰无人机战争"是媒体强化版，最可靠的深度研究明确说乌克兰近期不受此威胁——部分原因正是双重用途结构让中国本身也无法精准封堵。参见[CSIS无人机供应链分析](https://www.csis.org/analysis/drone-supply-chain-war-identifying-chokepoints-making-drone)。
 
 ---
 
