@@ -45,11 +45,11 @@
 - **【事实】** 巴基斯坦 2026 年 4 月起全国燃油涨价超 40%；全国市场强制晚 8 点关门；国家能源紧急状态实际执行（[Wikipedia, Pakistan in 2026 Iran war](https://en.wikipedia.org/wiki/Pakistan_in_the_2026_Iran_war)）。
 - **【事实】** 菲律宾 2026 年 3 月底交通工人全国罢工，70,000 人参与，马尼拉 15-20 个中心瘫痪；马科斯于 2026 年 3 月 24 日宣布 EO 110 全国能源紧急状态（[PNA](https://www.pna.gov.ph/articles/1271702)）。
 
-**学术先例：** Atlantic Council（Webster/I'Anson 2026-04-21）明确援引哈萨克斯坦 2022 年 LPG 补贴骤撤案例——"几乎立即触发全国抗议和政治不稳"；安哥拉 2025 年 IMF 支持的燃油补贴削减（柴油 +33%）触发全国抗议，约 30 人死亡，1500+ 人被捕（HRW）。
+**学术先例：** [Atlantic Council（Webster/I'Anson 2026-04-21）](https://www.atlanticcouncil.org/dispatches/the-strait-of-hormuz-closure-forces-a-choice-ration-oil-now-or-pay-a-steep-price-later/)明确援引哈萨克斯坦 2022 年 LPG 补贴骤撤案例——"几乎立即触发全国抗议和政治不稳"；安哥拉 2025 年 IMF 支持的燃油补贴削减（柴油 +33%）触发全国抗议，约 30 人死亡，1500+ 人被捕（[HRW 2025-07-18](https://www.hrw.org/news/2025/07/18/angola-police-use-excessive-force-against-peaceful-protesters)）。
 
 ### 机制 ② 粮价飙升 → 面包暴动（经典机制）
 
-学术基础最扎实。**NECSI / Lagi et al. (2011)** 给出 FAO 食品价格指数约 210 的阈值（*非同行评审；须与同行评审的局部价格冲击文献并用*）。2007-08 和 2010-11（阿拉伯之春前夜）的暴动峰值与价格峰值高度吻合。
+学术基础最扎实。**[NECSI / Lagi et al. (2011)](https://arxiv.org/abs/1203.1313)** 给出 FAO 食品价格指数约 210 的阈值（*非同行评审；须与同行评审的局部价格冲击文献并用*）。2007-08 和 2010-11（阿拉伯之春前夜）的暴动峰值与价格峰值高度吻合。
 
 **【事实】世界银行（CMO 2026-04-28）量化核心脊柱：食品占低收入国家消费 43%（vs 新兴市场 25%、发达国 12%）。** 这是为什么最穷进口国的动荡风险最集中的量化基础。
 
@@ -97,19 +97,19 @@
 
 | 国家 | 已发生【事实】 | 信源 |
 |---|---|---|
-| **伊朗** | 2026 年 1 月抗议遭历史最大规模镇压，死亡数中位估计 ~30,000（hospital records）；政权"指挥危机"；继位 Mojtaba Khamenei（受伤、经 IRGC 中介沟通） | Wikipedia 2026 Iran massacres；Amnesty；HRW |
+| **伊朗** | 2026 年 1 月抗议遭历史最大规模镇压，死亡数中位估计 ~30,000（hospital records）；政权"指挥危机"；继位 Mojtaba Khamenei（受伤、经 IRGC 中介沟通） | [Wikipedia 2026 Iran massacres](https://en.wikipedia.org/wiki/2026_Iran_massacres)；[Amnesty（2026-01）](https://www.amnesty.org/en/latest/news/2026/01/iran-massacre-of-protesters-demands-global-diplomatic-action-to-signal-an-end-to-impunity/)；[HRW 2026-01](https://www.hrw.org/news/2026/01/08/iran-authorities-renewed-cycle-of-protest-bloodshed) |
 | **巴林** | 3月1日什叶派大示威；3月5日禁止集会；3月19日"扫荡性逮捕"超300人（含死刑威胁，最高刑为"间谍罪"）；在押者 Sayed al-Musawi 死亡，显示酷刑痕迹；5月3日 HRW 报告镇压蔓延至经济抗议 | [HRW 2026-03-19](https://www.hrw.org/news/2026/03/19/bahrain-sweeping-arrests-amid-conflict)；[HRW 2026-05-03](https://www.hrw.org/news/2026/05/03/bahrain-end-media-repression) |
 | **巴基斯坦** | Gilgit-Baltistan 教派抗议致命（13-24死）；军队部署 + 3天宵禁；UN观察员办公室被焚；4月起燃油+40%；GB 2026-05-31 仍处于"政治、经济、人道三重危机" | [Al Jazeera 2026-03-02](https://www.aljazeera.com/)；[Daily Guardian 2026-05-31](https://thedailyguardian.com/world/pakistan-accused-of-deepening-crisis-in-pojk-pogb-amid-mounting-public-anger20260531135840-702342/) |
 | **菲律宾** | 2026-03-24 宣布全国能源紧急状态（EO 110）；PISTON（菲律宾公共交通组织全国联盟，菲律宾最大运输工会）罢工7万人；马尼拉15-20个中心；5月13日吕宋电网大停电（2462MW断供）；938个加油站纳入补贴运营 | [PNA EO 110](https://www.pna.gov.ph/articles/1271702)；[PIA 2026-05](https://pia.gov.ph/press-release/doe-enforces-emergency-measures-to-keep-power-stable-protect-consumers-from-price-spikes/) |
-| **孟加拉国** | 燃料黑帮夜间抢油，加油站工人被杀；大学提前停课；143台发电机中70台停运；LPG价格+67%；2026-02-12 BNP压倒性胜选，新政府在危机中接掌——"脆弱蜜月期" | Wikipedia；CNN；[The Daily Star 2026-04](https://www.thedailystar.net/) |
+| **孟加拉国** | 燃料黑帮夜间抢油，加油站工人被杀；大学提前停课；143台发电机中70台停运；LPG价格+67%；2026-02-12 BNP压倒性胜选，新政府在危机中接掌——"脆弱蜜月期" | [Wikipedia 2026 Iran war fuel crisis](https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis)；[CNN（链接待核实）]；[The Daily Star 2026-04（燃料危机）](https://www.thedailystar.net/news/bangladesh/news/fuel-price-hike-lays-bare-stress-economy-4155731) |
 | **肯尼亚** | **5月18日全国抗议爆发：4死、30+伤，内罗毕/蒙巴萨/基苏木"全面瘫痪"**；全国交通罢工；执政党办公室被焚；安全部队用实弹；政府5月20日让步削减柴油价格（财政损失$2100万） | [WaPo 2026-05-18](https://www.washingtonpost.com/business/2026/05/18/kenya-fuel-prices-protests/5318a2c0-5291-11f1-9c40-7a0a12d9e745_story.html)；[Semafor 2026-05-20](https://www.semafor.com/article/05/20/2026/kenya-cuts-fuel-prices-after-deadly-protests)；[S&P Global 2026-05-18](https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/051826-kenya-hit-by-protests-over-rising-fuel-prices) |
-| **斯里兰卡** | 四天工作周（周三定假）；燃料价格大涨；储备约6周；IMF EFF（扩展融资工具，IMF 针对结构性收支问题提供的中长期贷款）要求取消补贴而非扩大 | Tamil Guardian；WSWS 2026-03-28 |
+| **斯里兰卡** | 四天工作周（周三定假）；燃料价格大涨；储备约6周；IMF EFF（扩展融资工具，IMF 针对结构性收支问题提供的中长期贷款）要求取消补贴而非扩大 | [Tamil Guardian（四天工作周）](https://www.tamilguardian.com/content/sri-lanka-imposes-four-day-week-fuel-crisis-fears-mount)；[WSWS 2026-03-28](https://www.wsws.org/en/articles/2026/03/28/hzkz-m28.html) |
 | **索马里** | 燃油 +150%（$0.60→$1.50/L）；旱灾+燃油+冲突三重叠加；600万人急性饥饿，200万儿童急性营养不良；近临饥荒 | [Global Voices 2026-05-28](https://globalvoices.org/2026/05/28/somalia-drought-fuel-prices-and-conflicts-heighten-famine-risk/)；[Save the Children 2026](https://www.savethechildren.org/us/about-us/media-and-news/2026-press-releases/somalia-emergency-escalates-middle-east-conflict-prices) |
-| **尼日利亚** | 泵价+65%（全非最高），尽管是最大产油国；补贴已于2023-05取消（无补贴缓冲）；2720万人危机级饥饿（全球最高，联合国） | Peoples Dispatch 2026-04-07 |
+| **尼日利亚** | 泵价+65%（全非最高），尽管是最大产油国；补贴已于2023-05取消（无补贴缓冲）；2720万人危机级饥饿（全球最高，联合国） | [Peoples Dispatch 2026-04-07](https://peoplesdispatch.org/2026/04/07/why-is-nigeria-africas-largest-oil-producer-facing-the-continents-highest-reported-rise-in-fuel-prices/) |
 | **埃及** | 2026-03-10 国内燃油+14-17%；强制零售9pm关门一个月；**面包价格防火墙守住**（2025/26补贴约$30亿） | [The National 2026-03-10](https://www.thenationalnews.com/) |
-| **越南** | 能源配给+居家办公；gig工人受油价翻倍冲击 | Soufan 2026-04-15 |
-| **南非** | 反移民示威（公用事业费大涨、失业率31%为底层触发）；ACLED 5月非洲报告记录 | ACLED Africa May 2026 |
-| **莫桑比克/科摩罗** | 燃油抗议已现 | ACLED；Responsible Statecraft |
+| **越南** | 能源配给+居家办公；gig工人受油价翻倍冲击 | [Soufan Center 2026-04-15](https://thesoufancenter.org/intelbrief-2026-april-15/) |
+| **南非** | 反移民示威（公用事业费大涨、失业率31%为底层触发）；ACLED 5月非洲报告记录 | [ACLED Africa May 2026](https://acleddata.com/update/africa-overview-may-2026) |
+| **莫桑比克/科摩罗** | 燃油抗议已现 | [ACLED Africa May 2026](https://acleddata.com/update/africa-overview-may-2026)；[Responsible Statecraft（非洲燃油抗议）](https://responsiblestatecraft.org/diesel-fuel-protests-africa/) |
 
 ![图2 2026年3-5月政治动荡事件时间线](assets/fig04_2.png)
 
@@ -155,7 +155,7 @@
 **政治脆弱性：**
 - 镇压工具碎片化：军队 + PMF（人民动员力量，伊拉克什叶派民兵联合组织，下辖约 60 个武装派别）+ Sadrist，本身是不稳定源而非统一镇压工具
 - 2019 Tishreen 抗议（数百死）是模板——但 **2026 年已发生的伊拉克抗议是反战的（Sadrist），非反政府薪资抗议**；Tishreen 式薪资暴动是潜在机制，非已实现
-- **【事实降级信号】** Sadr 2026-05-27 命令其 Saraya al-Salam（萨德尔运动的武装翼，与 Badr、Kataib 等亲伊朗民兵并列为伊拉克最大准军事力量之一）脱离亲伊朗什叶联盟、并入国家武装——**降低代理动员风险**
+- **【事实降级信号】** Sadr 2026-05-27 命令其 Saraya al-Salam（萨德尔运动的武装翼，与 Badr、Kataib 等亲伊朗民兵并列为伊拉克最大准军事力量之一）脱离亲伊朗什叶联盟、并入国家武装——**降低代理动员风险**（[The National 2026-05-27](https://www.thenationalnews.com/news/mena/2026/05/27/iraqs-moqtada-al-sadr-announces-integration-of-armed-faction-into-iraq-state-forces/)）
 
 #### 巴林：海湾君主国例外
 
@@ -168,7 +168,7 @@
 **政治脆弱性：**
 - 什叶派多数 + 逊尼 Al Khalifa 君主统治 + 2011 起义先例
 - **【事实】2026 年已发生骚乱与大规模镇压**：300+ 人被捕，部分被要求死刑，在押者死于酷刑，禁止集会
-- BTI（贝塔斯曼转型指数，德国贝塔斯曼基金会发布的全球治理评估）2026 将巴林列为面临"政权更迭威胁"
+- [BTI（贝塔斯曼转型指数，德国贝塔斯曼基金会发布的全球治理评估）2026](https://bti-project.org/en/reports/country-report/BHR) 将巴林列为面临"政权更迭威胁"
 - **稳定性评估：** 当前稳定依靠镇压 + GCC 财政输血，而非内生稳定——HRW 和 BTI 均明确区分了这一点
 - 上限风险被 GCC/"半岛之盾"（沙特钱+兵，如 2011 年）封顶
 
@@ -192,11 +192,11 @@
 
 共识倾向"幸存但削弱"，非崩溃：
 
-- **Suzanne Maloney**（Brookings）：外部军事压力"很少产生其设计者预期的快速政治转型"；残余政权"武装精良、根基深"
-- **Karim Sadjadpour**（Carnegie）："政权幸存了，但这没让它像自以为的那么强"；"我们处在冷战和热战之间"
-- **Vali Nasr**（JHU SAIS）：美以制造了"无人能填补的权力真空"
-- **Gen. James Mattis**（经 Brookings Maloney 对谈转引）：美国"可能误判了伊朗政权的虚弱"；政权在 1 月抗议后**强化**而非削弱了控制
-- **市场锚【推演】**：Polymarket 隐含 2026 年内政权倒台约 15%（子市场"挺过美国打击" 98%）
+- **[Suzanne Maloney](https://www.brookings.edu/articles/can-irans-regime-survive-the-war/)（Brookings）**：外部军事压力"很少产生其设计者预期的快速政治转型"；残余政权"武装精良、根基深"
+- **[Karim Sadjadpour](https://carnegieendowment.org/emissary/2026/01/iran-regime-power-protests-revolutionary-guard)（Carnegie）**："政权幸存了，但这没让它像自以为的那么强"；"我们处在冷战和热战之间"
+- **[Vali Nasr](https://dawnmena.org/a-war-launched-on-assumptions-that-proved-wrong-vali-nasr-on-miscalculations-in-the-u-s-israel-war-with-iran/)（JHU SAIS）**：美以制造了"无人能填补的权力真空"
+- **Gen. James Mattis**（经 [Brookings Maloney](https://www.brookings.edu/articles/can-irans-regime-survive-the-war/) 对谈转引）：美国"可能误判了伊朗政权的虚弱"；政权在 1 月抗议后**强化**而非削弱了控制
+- **市场锚【推演】**：[Polymarket](https://polymarket.com/event/will-the-iranian-regime-fall-by-the-end-of-2026) 隐含 2026 年内政权倒台约 15%（子市场"挺过美国打击" 98%）
 
 **综合：** 伊朗同时拥有最严重的财政崩塌**和**最高的绝对镇压能力（杀了数万人仍维持）。不稳定真实，但登记为**精英内部解体**（派系 + 继位危机），而非迫近的革命推翻——这是教科书"财政崩→群众推翻"路径的反面。
 
@@ -362,7 +362,7 @@
 - [The National 2026-05-11](https://www.thenationalnews.com/business/energy/2026/05/11/iraqs-pm-designate-confronts-worst-fiscal-crisis-in-decade-after-iran-war-oil-shock/)
 - [Manara Magazine 2026-03](https://manaramagazine.org/2026/03/iraqs-oil-shock-becoming-payroll-crisis/)
 - [AGBI Wage Stability Fund 2026-05](https://www.agbi.com/economy/2026/05/iraq-considers-wage-stability-fund-as-cash-crisis-worsens/)
-- [Shafaq News](https://shafaq.com/en/Economy/Iraq-s-liquidity-crisis-threatens-public-sector-salaries-and-pensions)；[Rudaw 2026-05-23](https://www.rudaw.net/)
+- [Shafaq News](https://shafaq.com/en/Economy/Iraq-s-liquidity-crisis-threatens-public-sector-salaries-and-pensions)；[Rudaw 2026-05-23（链接待核实）](https://www.rudaw.net/)
 
 **巴林：**
 - [Middle East Eye 2026-03-05](https://www.middleeasteye.net/news/war-iran-ignited-civil-unrest-bahrain)
@@ -390,11 +390,11 @@
 - [Save the Children 2026](https://www.savethechildren.org/us/about-us/media-and-news/2026-press-releases/somalia-emergency-escalates-middle-east-conflict-prices)
 
 **智库：**
-- Atlantic Council（Webster/I'Anson 2026-04-21）；Brookings（Gross；Maloney）；Soufan Center（05-07；05-14；04-15）；Carnegie（Sadjadpour）；CSIS（Renad Mansour；Seigle）；Oxford Economics；Goldman Sachs（经 WaPo）；Eurasia Group
+- [Atlantic Council（Webster/I'Anson 2026-04-21）](https://www.atlanticcouncil.org/dispatches/the-strait-of-hormuz-closure-forces-a-choice-ration-oil-now-or-pay-a-steep-price-later/)；Brookings（[Gross](https://www.brookings.edu/articles/the-iran-conflicts-energy-shocks-are-not-yet-fully-realized/)；[Maloney](https://www.brookings.edu/articles/can-irans-regime-survive-the-war/)）；Soufan Center（[05-07](https://thesoufancenter.org/intelbrief-2026-may-7/)；[05-14](https://thesoufancenter.org/intelbrief-2026-may-14/)；[04-15](https://thesoufancenter.org/intelbrief-2026-april-15/)）；[Carnegie（Sadjadpour）](https://carnegieendowment.org/emissary/2026/01/iran-regime-power-protests-revolutionary-guard)；CSIS（[Renad Mansour（Chatham House/CSIS）](https://www.chathamhouse.org/2026/04/political-deadlock-has-left-iraqs-kurdistan-region-dangerously-exposed-amid-iran-war)；[CSIS Iraq](https://www.csis.org/analysis/irans-real-war-against-global-economy)）；[Oxford Economics（链接待核实）]；Goldman Sachs（经 [WaPo 2026-05-10](https://www.washingtonpost.com/business/2026/05/10/iran-war-oil-gulf-economies/)）；[Eurasia Group](https://www.eurasiagroup.net/issues/top-risks-2026)
 
-**学术：** Lagi et al. NECSI (2011)（arXiv 1203.1313）；Bretton Woods Project（安哥拉补贴抗议）。
+**学术：** [Lagi et al. NECSI (2011)（arXiv 1203.1313）](https://arxiv.org/abs/1203.1313)；[Bretton Woods Project（安哥拉补贴抗议，2025-10）](https://www.brettonwoodsproject.org/2025/10/mass-protests-erupt-in-angola-following-imf-backed-fuel-subsidy-removals/)。
 
-**市场：** Polymarket（伊朗政权倒台概率）。
+**市场：** [Polymarket（伊朗政权倒台概率）](https://polymarket.com/event/will-the-iranian-regime-fall-by-the-end-of-2026)。
 
 ---
 
