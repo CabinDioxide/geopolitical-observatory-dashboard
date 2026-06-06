@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-05T09:32:15.935201Z",
+  "as_of": "2026-06-06T08:27:06.603022Z",
   "chain": [
     {
       "step": 1,
@@ -48,12 +48,12 @@
       "name": "\u6218\u7565\u77f3\u6cb9\u50a8\u5907 (SPR)",
       "name_en": "Strategic Petroleum Reserve (SPR)",
       "tag": "\u4e0a\u6e38",
-      "current": null,
+      "current": 357119.0,
       "unit": "\u5343\u6876",
       "unit_en": "kbbl",
       "baseline": 600000,
       "alarm": 350000,
-      "pressure": null,
+      "pressure": 97,
       "interpretation": "\u7f8e\u56fd\u5e94\u6025\u6cb9\u50a8\u3002<3.5 \u4ebf\u6876 = 6 \u4e2a\u6708\u91ca\u653e\u5bb9\u91cf\u8017\u5c3d\uff08\u91ca\u653e\u901f\u5ea6 ~1 mb/day\uff09\uff0c\u65e0\u6cd5\u538b\u5236\u4e0b\u4e00\u8f6e\u6cb9\u4ef7\u51b2\u51fb \u2192 \u89e6\u53d1\u4e0a\u6e38 alarm\u3002",
       "interpretation_en": "US emergency oil reserve. <350 Mbbl = 6-month release capacity exhausted (release rate ~1 mb/day), cannot suppress the next oil shock \u2192 triggers upstream alarm.",
       "strength": 1,
@@ -238,7 +238,7 @@
       "caveat_en": "Coefficients are [CALIBRATION_PENDING] \u2014 derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."
     }
   ],
-  "epu_index": 564.07,
+  "epu_index": 262.64,
   "methodology_caveats": {
     "ensemble_rmse_honesty": {
       "displayed": 1.07,
@@ -428,7 +428,7 @@
       0.6320278584860173
     ],
     "unrate": 4.3,
-    "unrate_yoy_pct_change": 2.3809523809523725,
+    "unrate_yoy_pct_change": 0.0,
     "ics": 49.8,
     "inflation_expect": 4.7,
     "approval_net": -13.5,

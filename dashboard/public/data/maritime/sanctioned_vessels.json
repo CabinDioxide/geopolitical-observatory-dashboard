@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-06-05T09:28:11.680394Z",
-    "total_vessels": 1492,
-    "with_mmsi": 763,
-    "with_imo": 1488,
+    "fetched_at": "2026-06-06T08:23:01.514923Z",
+    "total_vessels": 1498,
+    "with_mmsi": 769,
+    "with_imo": 1494,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -30,7 +30,7 @@
       "RUSSIA-EO14024": 446,
       "GLOMAG": 157,
       "IRAN-EO13846": 125,
-      "IRAN-EO13902": 288,
+      "IRAN-EO13902": 294,
       "UKRAINE-EO13662": 182
     }
   },
@@ -10141,6 +10141,84 @@
       "call_sign": "TJMQ3",
       "vessel_type": "Crude Oil Tanker",
       "flag": "Cameroon"
+    },
+    "511101848": {
+      "uid": "57883",
+      "name": "MD 23",
+      "remarks": "(Linked To: LIMRA GAS LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9158240",
+      "mmsi": "511101848",
+      "call_sign": "T8A5356",
+      "vessel_type": "LPG Tanker",
+      "flag": "Palau"
+    },
+    "356634000": {
+      "uid": "57885",
+      "name": "GLENDALE",
+      "remarks": "(Linked To: ECOSEAS MARITIME LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9139945",
+      "mmsi": "356634000",
+      "call_sign": "3FFP9",
+      "vessel_type": "LPG Tanker",
+      "flag": "Panama"
+    },
+    "314550001": {
+      "uid": "57887",
+      "name": "AMIR GAS",
+      "remarks": "(Linked To: BLUE SEA MARINE INCORPORATED AND FAATEH MARITIME INCORPORATED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9167409",
+      "mmsi": "314550001",
+      "call_sign": "V4WK5",
+      "vessel_type": "LPG Tanker",
+      "flag": "St. Kitts and Nevis"
+    },
+    "352002989": {
+      "uid": "57888",
+      "name": "GAS LAGOON",
+      "remarks": "(Linked To: ADAMAS SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9386304",
+      "mmsi": "352002989",
+      "call_sign": "3E4737",
+      "vessel_type": "LPG Tanker",
+      "flag": "Panama"
+    },
+    "352002974": {
+      "uid": "57892",
+      "name": "MILE",
+      "remarks": "(Linked To: BLACK GOLD TRADE CORPORATION)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8910897",
+      "mmsi": "352002974",
+      "call_sign": "3E4726",
+      "vessel_type": "LPG Tanker",
+      "flag": "Panama"
+    },
+    "352002853": {
+      "uid": "57894",
+      "name": "GAZ GMS",
+      "remarks": "(Linked To: GAS GMS LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9131539",
+      "mmsi": "352002853",
+      "call_sign": "3E4634",
+      "vessel_type": "LPG Tanker",
+      "flag": "Panama"
     }
   },
   "by_imo": {
@@ -29950,6 +30028,84 @@
       "call_sign": "TJMQ3",
       "vessel_type": "Crude Oil Tanker",
       "flag": "Cameroon"
+    },
+    "9158240": {
+      "uid": "57883",
+      "name": "MD 23",
+      "remarks": "(Linked To: LIMRA GAS LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9158240",
+      "mmsi": "511101848",
+      "call_sign": "T8A5356",
+      "vessel_type": "LPG Tanker",
+      "flag": "Palau"
+    },
+    "9139945": {
+      "uid": "57885",
+      "name": "GLENDALE",
+      "remarks": "(Linked To: ECOSEAS MARITIME LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9139945",
+      "mmsi": "356634000",
+      "call_sign": "3FFP9",
+      "vessel_type": "LPG Tanker",
+      "flag": "Panama"
+    },
+    "9167409": {
+      "uid": "57887",
+      "name": "AMIR GAS",
+      "remarks": "(Linked To: BLUE SEA MARINE INCORPORATED AND FAATEH MARITIME INCORPORATED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9167409",
+      "mmsi": "314550001",
+      "call_sign": "V4WK5",
+      "vessel_type": "LPG Tanker",
+      "flag": "St. Kitts and Nevis"
+    },
+    "9386304": {
+      "uid": "57888",
+      "name": "GAS LAGOON",
+      "remarks": "(Linked To: ADAMAS SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9386304",
+      "mmsi": "352002989",
+      "call_sign": "3E4737",
+      "vessel_type": "LPG Tanker",
+      "flag": "Panama"
+    },
+    "8910897": {
+      "uid": "57892",
+      "name": "MILE",
+      "remarks": "(Linked To: BLACK GOLD TRADE CORPORATION)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8910897",
+      "mmsi": "352002974",
+      "call_sign": "3E4726",
+      "vessel_type": "LPG Tanker",
+      "flag": "Panama"
+    },
+    "9131539": {
+      "uid": "57894",
+      "name": "GAZ GMS",
+      "remarks": "(Linked To: GAS GMS LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9131539",
+      "mmsi": "352002853",
+      "call_sign": "3E4634",
+      "vessel_type": "LPG Tanker",
+      "flag": "Panama"
     }
   }
 }
