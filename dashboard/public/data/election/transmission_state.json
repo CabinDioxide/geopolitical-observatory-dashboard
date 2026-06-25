@@ -1,17 +1,17 @@
 {
-  "as_of": "2026-06-24T08:55:29.927629Z",
+  "as_of": "2026-06-25T08:49:14.238327Z",
   "chain": [
     {
       "step": 1,
       "name": "\u5e03\u4f26\u7279\u539f\u6cb9",
       "name_en": "Brent crude",
       "tag": "\u4e0a\u6e38",
-      "current": 84.36,
+      "current": 76.49,
       "unit": "USD/\u6876",
       "unit_en": "USD/bbl",
       "baseline": 80,
       "alarm": 145,
-      "pressure": 7,
+      "pressure": 0,
       "interpretation": "\u4f20\u5bfc\u94fe\u6e90\u5934\u3002\u672c\u8eab\u4e0d\u76f4\u63a5\u5f71\u54cd\u9009\u7968\u3002Alarm $145 \u4e3a\u63a8\u6c7d\u6cb9\u81f3\u5176 alarm $5.00 \u6240\u9700\u6cb9\u4ef7\uff08passthrough $0.025/$1\u00b7bbl\uff09\u3002",
       "interpretation_en": "Source of the transmission chain. Does not directly affect votes. Alarm of $145 is the level required to push gasoline to its alarm of $5.00 (passthrough $0.025/$1\u00b7bbl).",
       "strength": 3,
@@ -48,7 +48,7 @@
       "name": "\u6218\u7565\u77f3\u6cb9\u50a8\u5907 (SPR)",
       "name_en": "Strategic Petroleum Reserve (SPR)",
       "tag": "\u4e0a\u6e38",
-      "current": 340251.0,
+      "current": 331191.0,
       "unit": "\u5343\u6876",
       "unit_en": "kbbl",
       "baseline": 600000,
@@ -412,8 +412,8 @@
     }
   },
   "raw_inputs_for_model": {
-    "brent": 84.36,
-    "wti": 84.65,
+    "brent": 76.49,
+    "wti": 78.94,
     "gas_retail": 3.914,
     "cpi_yoy": 4.166614684049648,
     "core_cpi_yoy": 2.8229420636110314,

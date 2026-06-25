@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-06-24T08:51:24.730837Z",
-    "total_vessels": 1498,
+    "fetched_at": "2026-06-25T08:45:09.174218Z",
+    "total_vessels": 1496,
     "with_mmsi": 769,
-    "with_imo": 1494,
+    "with_imo": 1492,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -27,7 +27,7 @@
       "IRAN-EO13876": 1,
       "CAATSA - RUSSIA": 1,
       "PEESA-EO14039": 17,
-      "RUSSIA-EO14024": 446,
+      "RUSSIA-EO14024": 444,
       "GLOMAG": 157,
       "IRAN-EO13846": 125,
       "IRAN-EO13902": 294,
@@ -19448,32 +19448,6 @@
       "imo": "9924352",
       "mmsi": null,
       "call_sign": "UBDW5",
-      "vessel_type": "General Cargo",
-      "flag": "Russia"
-    },
-    "9945136": {
-      "uid": "42195",
-      "name": "VYACHESLAV ARSHINOV",
-      "remarks": "(Linked To: JOINT STOCK COMPANY STATE TRANSPORTATION LEASING COMPANY)",
-      "programs": [
-        "RUSSIA-EO14024"
-      ],
-      "imo": "9945136",
-      "mmsi": null,
-      "call_sign": "UBGX2",
-      "vessel_type": "General Cargo",
-      "flag": "Russia"
-    },
-    "9945124": {
-      "uid": "42198",
-      "name": "GENNADY EGOROV",
-      "remarks": "(Linked To: JOINT STOCK COMPANY STATE TRANSPORTATION LEASING COMPANY)",
-      "programs": [
-        "RUSSIA-EO14024"
-      ],
-      "imo": "9945124",
-      "mmsi": null,
-      "call_sign": "UBGX4",
       "vessel_type": "General Cargo",
       "flag": "Russia"
     },
