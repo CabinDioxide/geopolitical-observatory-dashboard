@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-26T08:52:52.642600Z",
+  "as_of": "2026-06-27T08:29:03.516171Z",
   "chain": [
     {
       "step": 1,
@@ -154,7 +154,7 @@
       "name": "\u5bc6\u6b47\u6839\u5927\u5b66\u6d88\u8d39\u8005\u4fe1\u5fc3 (ICS)",
       "name_en": "Michigan Consumer Sentiment (ICS)",
       "tag": "\u4e0b\u6e38",
-      "current": 49.8,
+      "current": 44.8,
       "unit": "\u6307\u6570",
       "unit_en": "index",
       "baseline": 85,
@@ -429,8 +429,8 @@
     ],
     "unrate": 4.3,
     "unrate_yoy_pct_change": 0.0,
-    "ics": 49.8,
-    "inflation_expect": 4.7,
+    "ics": 44.8,
+    "inflation_expect": 4.8,
     "approval_net": -13.5,
     "generic_ballot_dem_lead": 3.5
   }
