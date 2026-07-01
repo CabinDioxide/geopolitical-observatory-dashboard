@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-30T08:58:47.776103Z",
+  "as_of": "2026-07-01T09:31:12.333130Z",
   "chain": [
     {
       "step": 1,
@@ -28,12 +28,12 @@
       "name": "\u7f8e\u56fd\u96f6\u552e\u6c7d\u6cb9",
       "name_en": "US retail gasoline",
       "tag": "\u4e2d\u6e38",
-      "current": 3.914,
+      "current": 3.831,
       "unit": "USD/\u52a0\u4ed1",
       "unit_en": "USD/gal",
       "baseline": 3.4,
       "alarm": 5.0,
-      "pressure": 32,
+      "pressure": 27,
       "interpretation": "Alarm $5.00 \u53d6\u81ea 2022 \u5cf0\u503c $5.03 \u7684\u5b9e\u8bc1\uff1a\u62dc\u767b\u51c0\u652f\u6301\u7387\u4ece -10 \u8dcc\u81f3 -20\u3002\u6c7d\u6cb9\u4e0d\u76f4\u63a5\u8fdb\u9009\u7968\u6a21\u578b\uff0c\u4e3b\u8981\u901a\u8fc7 CPI \u4f20\u5bfc\u3002",
       "interpretation_en": "Alarm $5.00 anchored to 2022 peak $5.03: Biden's net approval fell from -10 to -20. Gasoline doesn't enter vote models directly; it transmits via CPI.",
       "strength": 3,
@@ -238,7 +238,7 @@
       "caveat_en": "Coefficients are [CALIBRATION_PENDING] \u2014 derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."
     }
   ],
-  "epu_index": 502.49,
+  "epu_index": 276.76,
   "methodology_caveats": {
     "ensemble_rmse_honesty": {
       "displayed": 1.07,
@@ -414,7 +414,7 @@
   "raw_inputs_for_model": {
     "brent": 76.49,
     "wti": 78.94,
-    "gas_retail": 3.914,
+    "gas_retail": 3.831,
     "cpi_yoy": 4.166614684049648,
     "core_cpi_yoy": 2.8229420636110314,
     "rdpi_yoy": -0.2642133475260887,
