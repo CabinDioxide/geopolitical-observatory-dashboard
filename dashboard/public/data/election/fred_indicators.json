@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-04T08:25:50.625409Z",
+  "fetched_at": "2026-07-05T08:42:48.967272Z",
   "series": {
     "DCOILBRENTEU": {
       "name": "Brent crude (USD/bbl)",
@@ -16077,10 +16077,6 @@
         "value": 147.45
       },
       "observations": [
-        {
-          "date": "2020-07-05",
-          "value": 415.94
-        },
         {
           "date": "2020-07-06",
           "value": 389.2
