@@ -1,12 +1,12 @@
 {
-  "as_of": "2026-07-08T08:10:06.393257Z",
+  "as_of": "2026-07-09T09:22:36.884802Z",
   "chain": [
     {
       "step": 1,
       "name": "\u5e03\u4f26\u7279\u539f\u6cb9",
       "name_en": "Brent crude",
       "tag": "\u4e0a\u6e38",
-      "current": 71.59,
+      "current": 69.56,
       "unit": "USD/\u6876",
       "unit_en": "USD/bbl",
       "baseline": 80,
@@ -48,7 +48,7 @@
       "name": "\u6218\u7565\u77f3\u6cb9\u50a8\u5907 (SPR)",
       "name_en": "Strategic Petroleum Reserve (SPR)",
       "tag": "\u4e0a\u6e38",
-      "current": 325655.0,
+      "current": 319489.0,
       "unit": "\u5343\u6876",
       "unit_en": "kbbl",
       "baseline": 600000,
@@ -238,7 +238,7 @@
       "caveat_en": "Coefficients are [CALIBRATION_PENDING] \u2014 derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."
     }
   ],
-  "epu_index": 279.09,
+  "epu_index": 181.76,
   "methodology_caveats": {
     "ensemble_rmse_honesty": {
       "displayed": 1.07,
@@ -412,8 +412,8 @@
     }
   },
   "raw_inputs_for_model": {
-    "brent": 71.59,
-    "wti": 71.87,
+    "brent": 69.56,
+    "wti": 69.6,
     "gas_retail": 3.777,
     "cpi_yoy": 4.166614684049648,
     "core_cpi_yoy": 2.8229420636110314,
