@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-07-14T07:49:07.022098Z",
-  "duration_seconds": 264.5,
+  "last_run": "2026-07-15T07:52:47.949948Z",
+  "duration_seconds": 262.4,
   "sources": {
     "gdelt": {
       "status": "ok",
-      "features": 1157
+      "features": 1239
     },
     "acled": {
       "status": "skipped",
@@ -20,13 +20,13 @@
     },
     "ofac": {
       "status": "ok",
-      "vessels": 1496,
-      "with_mmsi": 769,
-      "with_imo": 1492
+      "vessels": 1516,
+      "with_mmsi": 785,
+      "with_imo": 1512
     },
     "ais": {
       "status": "ok",
-      "features": 255,
+      "features": 272,
       "sanctioned_in_chokepoints": 0
     },
     "fred": {
@@ -41,7 +41,7 @@
     "election_models": {
       "status": "ok",
       "transmission_max_pressure": 100,
-      "weighted_2028_R_pct": 47.7,
+      "weighted_2028_R_pct": 47.83,
       "weighted_2026_R_seat_change": -38.8
     }
   }

@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-07-14T07:45:02.147132Z",
-    "total_vessels": 1496,
-    "with_mmsi": 769,
-    "with_imo": 1492,
+    "fetched_at": "2026-07-15T07:48:43.281546Z",
+    "total_vessels": 1516,
+    "with_mmsi": 785,
+    "with_imo": 1512,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -30,7 +30,7 @@
       "RUSSIA-EO14024": 444,
       "GLOMAG": 157,
       "IRAN-EO13846": 125,
-      "IRAN-EO13902": 294,
+      "IRAN-EO13902": 314,
       "UKRAINE-EO13662": 182
     }
   },
@@ -10219,6 +10219,214 @@
       "call_sign": "3E4634",
       "vessel_type": "LPG Tanker",
       "flag": "Panama"
+    },
+    "422058200": {
+      "uid": "58096",
+      "name": "SEPEHR PAYAM",
+      "remarks": "(Linked To: AVA TARABAR DARYA COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9110535",
+      "mmsi": "422058200",
+      "call_sign": "EPCU9",
+      "vessel_type": "Container Ship",
+      "flag": "Iran"
+    },
+    "422049900": {
+      "uid": "58097",
+      "name": "ERIKA",
+      "remarks": "(Linked To: RAHBAR MADANI, Mohammad Reza)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8721454",
+      "mmsi": "422049900",
+      "call_sign": "EPCL7",
+      "vessel_type": "General Cargo",
+      "flag": "Iran"
+    },
+    "422075700": {
+      "uid": "58098",
+      "name": "ARKANOOR 2",
+      "remarks": "(Linked To: SEPEHR NOOR MOBIN COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8727848",
+      "mmsi": "422075700",
+      "call_sign": "EPDO3",
+      "vessel_type": "General Cargo",
+      "flag": "Iran"
+    },
+    "422077300": {
+      "uid": "58099",
+      "name": "ARKANOOR 3",
+      "remarks": "(Linked To: SEPEHR NOOR MOBIN COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8832083",
+      "mmsi": "422077300",
+      "call_sign": "EPDP9",
+      "vessel_type": "General Cargo",
+      "flag": "Iran"
+    },
+    "305007400": {
+      "uid": "58106",
+      "name": "CICCIO",
+      "remarks": "(Linked To: KANGRI 1 INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9192442",
+      "mmsi": "305007400",
+      "call_sign": "V2C2007",
+      "vessel_type": "Container Ship",
+      "flag": "Antigua & Barbuda"
+    },
+    "352005129": {
+      "uid": "58107",
+      "name": "SHENTON WAY",
+      "remarks": "(Linked To: SEA LEAD SHIPPING PTE. LTD.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9146314",
+      "mmsi": "352005129",
+      "call_sign": "3E8302",
+      "vessel_type": "Container Ship",
+      "flag": "Panama"
+    },
+    "352006054": {
+      "uid": "58109",
+      "name": "TANJONG PAGAR 1",
+      "remarks": "(Linked To: SEA LEAD SHIPPING PTE. LTD.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9404508",
+      "mmsi": "352006054",
+      "call_sign": "3E8523",
+      "vessel_type": "Container Ship",
+      "flag": "Panama"
+    },
+    "352002167": {
+      "uid": "58110",
+      "name": "VIRENT",
+      "remarks": "(Linked To: PLATINUM KNIGHTS LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9332171",
+      "mmsi": "352002167",
+      "call_sign": "3E3834",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Panama"
+    },
+    "305008400": {
+      "uid": "58117",
+      "name": "HOPE 1",
+      "remarks": "(Linked To: HOPE 1 SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9514339",
+      "mmsi": "305008400",
+      "call_sign": "V2C2008",
+      "vessel_type": "Bulk Carrier",
+      "flag": "Antigua and Barbuda"
+    },
+    "305005400": {
+      "uid": "58118",
+      "name": "JADE",
+      "remarks": "(Linked To: NUVETRRO SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9418999",
+      "mmsi": "305005400",
+      "call_sign": "V2C2005",
+      "vessel_type": "General Cargo",
+      "flag": "Antigua and Barbuda"
+    },
+    "305006400": {
+      "uid": "58119",
+      "name": "OPAL",
+      "remarks": "(Linked To: VELTRRIVO SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9467158",
+      "mmsi": "305006400",
+      "call_sign": "V2C2006",
+      "vessel_type": "General Cargo",
+      "flag": "Antigua and Barbuda"
+    },
+    "314159000": {
+      "uid": "58120",
+      "name": "ELPINIKI",
+      "remarks": "(Linked To: OCEAN SEARUM ONE LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9606015",
+      "mmsi": "314159000",
+      "call_sign": "8PQT",
+      "vessel_type": "General Cargo",
+      "flag": "Barbados"
+    },
+    "352005381": {
+      "uid": "58121",
+      "name": "DARIKA",
+      "remarks": "(Linked To: HANSA SHIPPING INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9506693",
+      "mmsi": "352005381",
+      "call_sign": "3E8661",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Panama"
+    },
+    "511873000": {
+      "uid": "58153",
+      "name": "GEMMA",
+      "remarks": "(Linked To: LUBECK SHIPPING LLC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9509097",
+      "mmsi": "511873000",
+      "call_sign": "T8A3035",
+      "vessel_type": "General Cargo",
+      "flag": "Palau"
+    },
+    "341765000": {
+      "uid": "58155",
+      "name": "NADIA",
+      "remarks": "(Linked To: AARE LINES INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9122461",
+      "mmsi": "341765000",
+      "call_sign": "V4CL4",
+      "vessel_type": "Container Ship",
+      "flag": "St Kitts & Nevis"
+    },
+    "305003400": {
+      "uid": "58159",
+      "name": "PAYA LEBAR",
+      "remarks": "(Linked To: SEA LEAD SHIPPING PTE. LTD.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9134232",
+      "mmsi": "305003400",
+      "call_sign": "V2C2003",
+      "vessel_type": "Container Ship",
+      "flag": "Antigua & Barbuda"
     }
   },
   "by_imo": {
@@ -30080,6 +30288,266 @@
       "call_sign": "3E4634",
       "vessel_type": "LPG Tanker",
       "flag": "Panama"
+    },
+    "9110535": {
+      "uid": "58096",
+      "name": "SEPEHR PAYAM",
+      "remarks": "(Linked To: AVA TARABAR DARYA COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9110535",
+      "mmsi": "422058200",
+      "call_sign": "EPCU9",
+      "vessel_type": "Container Ship",
+      "flag": "Iran"
+    },
+    "8721454": {
+      "uid": "58097",
+      "name": "ERIKA",
+      "remarks": "(Linked To: RAHBAR MADANI, Mohammad Reza)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8721454",
+      "mmsi": "422049900",
+      "call_sign": "EPCL7",
+      "vessel_type": "General Cargo",
+      "flag": "Iran"
+    },
+    "8727848": {
+      "uid": "58098",
+      "name": "ARKANOOR 2",
+      "remarks": "(Linked To: SEPEHR NOOR MOBIN COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8727848",
+      "mmsi": "422075700",
+      "call_sign": "EPDO3",
+      "vessel_type": "General Cargo",
+      "flag": "Iran"
+    },
+    "8832083": {
+      "uid": "58099",
+      "name": "ARKANOOR 3",
+      "remarks": "(Linked To: SEPEHR NOOR MOBIN COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8832083",
+      "mmsi": "422077300",
+      "call_sign": "EPDP9",
+      "vessel_type": "General Cargo",
+      "flag": "Iran"
+    },
+    "8729963": {
+      "uid": "58100",
+      "name": "SEA CRUISER",
+      "remarks": "(Linked To: SHAMKHANI, Mohammad Hossein)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8729963",
+      "mmsi": null,
+      "call_sign": null,
+      "vessel_type": "General Cargo",
+      "flag": "Unknown"
+    },
+    "8891572": {
+      "uid": "58101",
+      "name": "SEA CASTLE",
+      "remarks": "(Linked To: SHAMKHANI, Mohammad Hossein)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8891572",
+      "mmsi": null,
+      "call_sign": null,
+      "vessel_type": "General Cargo",
+      "flag": "Unknown"
+    },
+    "8858099": {
+      "uid": "58102",
+      "name": "SEA ANCHOR",
+      "remarks": "(Linked To: SHAMKHANI, Mohammad Hossein)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8858099",
+      "mmsi": null,
+      "call_sign": null,
+      "vessel_type": "General Cargo",
+      "flag": "Unknown"
+    },
+    "9192442": {
+      "uid": "58106",
+      "name": "CICCIO",
+      "remarks": "(Linked To: KANGRI 1 INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9192442",
+      "mmsi": "305007400",
+      "call_sign": "V2C2007",
+      "vessel_type": "Container Ship",
+      "flag": "Antigua & Barbuda"
+    },
+    "9146314": {
+      "uid": "58107",
+      "name": "SHENTON WAY",
+      "remarks": "(Linked To: SEA LEAD SHIPPING PTE. LTD.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9146314",
+      "mmsi": "352005129",
+      "call_sign": "3E8302",
+      "vessel_type": "Container Ship",
+      "flag": "Panama"
+    },
+    "9404508": {
+      "uid": "58109",
+      "name": "TANJONG PAGAR 1",
+      "remarks": "(Linked To: SEA LEAD SHIPPING PTE. LTD.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9404508",
+      "mmsi": "352006054",
+      "call_sign": "3E8523",
+      "vessel_type": "Container Ship",
+      "flag": "Panama"
+    },
+    "9332171": {
+      "uid": "58110",
+      "name": "VIRENT",
+      "remarks": "(Linked To: PLATINUM KNIGHTS LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9332171",
+      "mmsi": "352002167",
+      "call_sign": "3E3834",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Panama"
+    },
+    "9514339": {
+      "uid": "58117",
+      "name": "HOPE 1",
+      "remarks": "(Linked To: HOPE 1 SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9514339",
+      "mmsi": "305008400",
+      "call_sign": "V2C2008",
+      "vessel_type": "Bulk Carrier",
+      "flag": "Antigua and Barbuda"
+    },
+    "9418999": {
+      "uid": "58118",
+      "name": "JADE",
+      "remarks": "(Linked To: NUVETRRO SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9418999",
+      "mmsi": "305005400",
+      "call_sign": "V2C2005",
+      "vessel_type": "General Cargo",
+      "flag": "Antigua and Barbuda"
+    },
+    "9467158": {
+      "uid": "58119",
+      "name": "OPAL",
+      "remarks": "(Linked To: VELTRRIVO SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9467158",
+      "mmsi": "305006400",
+      "call_sign": "V2C2006",
+      "vessel_type": "General Cargo",
+      "flag": "Antigua and Barbuda"
+    },
+    "9606015": {
+      "uid": "58120",
+      "name": "ELPINIKI",
+      "remarks": "(Linked To: OCEAN SEARUM ONE LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9606015",
+      "mmsi": "314159000",
+      "call_sign": "8PQT",
+      "vessel_type": "General Cargo",
+      "flag": "Barbados"
+    },
+    "9506693": {
+      "uid": "58121",
+      "name": "DARIKA",
+      "remarks": "(Linked To: HANSA SHIPPING INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9506693",
+      "mmsi": "352005381",
+      "call_sign": "3E8661",
+      "vessel_type": "Chemical/Oil Tanker",
+      "flag": "Panama"
+    },
+    "9509097": {
+      "uid": "58153",
+      "name": "GEMMA",
+      "remarks": "(Linked To: LUBECK SHIPPING LLC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9509097",
+      "mmsi": "511873000",
+      "call_sign": "T8A3035",
+      "vessel_type": "General Cargo",
+      "flag": "Palau"
+    },
+    "9122461": {
+      "uid": "58155",
+      "name": "NADIA",
+      "remarks": "(Linked To: AARE LINES INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9122461",
+      "mmsi": "341765000",
+      "call_sign": "V4CL4",
+      "vessel_type": "Container Ship",
+      "flag": "St Kitts & Nevis"
+    },
+    "8843666": {
+      "uid": "58158",
+      "name": "SEA GALLEON",
+      "remarks": "(Linked To: SHAMKHANI, Mohammad Hossein)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "8843666",
+      "mmsi": null,
+      "call_sign": null,
+      "vessel_type": "General Cargo",
+      "flag": "Unknown"
+    },
+    "9134232": {
+      "uid": "58159",
+      "name": "PAYA LEBAR",
+      "remarks": "(Linked To: SEA LEAD SHIPPING PTE. LTD.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9134232",
+      "mmsi": "305003400",
+      "call_sign": "V2C2003",
+      "vessel_type": "Container Ship",
+      "flag": "Antigua & Barbuda"
     }
   }
 }
