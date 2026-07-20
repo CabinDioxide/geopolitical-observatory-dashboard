@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-07-19T08:00:59.200291Z",
-  "duration_seconds": 279.6,
+  "last_run": "2026-07-20T08:41:07.400629Z",
+  "duration_seconds": 262.8,
   "sources": {
     "gdelt": {
       "status": "ok",
-      "features": 1023
+      "features": 1270
     },
     "acled": {
       "status": "skipped",
@@ -25,9 +25,8 @@
       "with_imo": 1512
     },
     "ais": {
-      "status": "ok",
-      "features": 230,
-      "sanctioned_in_chokepoints": 0
+      "status": "skipped",
+      "reason": "no API key or no data"
     },
     "fred": {
       "status": "ok",
