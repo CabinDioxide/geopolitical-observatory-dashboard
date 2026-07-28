@@ -2,9 +2,9 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-07-27T09:26:54.247215Z",
-    "total_vessels": 1516,
-    "with_mmsi": 785,
+    "fetched_at": "2026-07-28T08:12:33.506982Z",
+    "total_vessels": 1515,
+    "with_mmsi": 784,
     "with_imo": 1512,
     "programs": {
       "CUBA": 2,
@@ -4426,19 +4426,6 @@
       "call_sign": "8P2422",
       "vessel_type": "LNG Carrier",
       "flag": "Barbados"
-    },
-    "352002494": {
-      "uid": "52327",
-      "name": "TASCA",
-      "remarks": "(Linked To: BRECALIN HONG KONG CO LTD)",
-      "programs": [
-        "IRAN-EO13846"
-      ],
-      "imo": "9313149",
-      "mmsi": "352002494",
-      "call_sign": "3E2647",
-      "vessel_type": "Crude Oil Tanker",
-      "flag": "Panama"
     },
     "352001461": {
       "uid": "51713",
@@ -24207,17 +24194,19 @@
       "flag": "Barbados"
     },
     "9313149": {
-      "uid": "52327",
+      "uid": "51712",
       "name": "TASCA",
-      "remarks": "(Linked To: BRECALIN HONG KONG CO LTD)",
+      "remarks": "(Linked To: SUNNE CO LIMITED; Linked To: BRECALIN HONG KONG CO LTD)",
       "programs": [
+        "RUSSIA-EO14024",
+        "UKRAINE-EO13662",
         "IRAN-EO13846"
       ],
       "imo": "9313149",
-      "mmsi": "352002494",
-      "call_sign": "3E2647",
+      "mmsi": null,
+      "call_sign": null,
       "vessel_type": "Crude Oil Tanker",
-      "flag": "Panama"
+      "flag": "Unknown"
     },
     "9199127": {
       "uid": "51713",
