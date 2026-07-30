@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-07-29T08:17:00.214642Z",
-    "total_vessels": 1515,
-    "with_mmsi": 784,
-    "with_imo": 1512,
+    "fetched_at": "2026-07-30T08:05:13.754730Z",
+    "total_vessels": 1523,
+    "with_mmsi": 791,
+    "with_imo": 1520,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -30,7 +30,7 @@
       "RUSSIA-EO14024": 444,
       "GLOMAG": 157,
       "IRAN-EO13846": 125,
-      "IRAN-EO13902": 314,
+      "IRAN-EO13902": 322,
       "UKRAINE-EO13662": 182
     }
   },
@@ -10414,6 +10414,97 @@
       "call_sign": "V2C2003",
       "vessel_type": "Container Ship",
       "flag": "Antigua & Barbuda"
+    },
+    "538012177": {
+      "uid": "58190",
+      "name": "WELL SAIL",
+      "remarks": "(Linked To: QI HANG SHIP MANAGEMENT LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9321938",
+      "mmsi": "538012177",
+      "call_sign": "V7A4071",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Marshall Islands"
+    },
+    "314231000": {
+      "uid": "58218",
+      "name": "NATSUMI",
+      "remarks": "(Linked To: MARINOVA FREIGHT LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9331244",
+      "mmsi": "314231000",
+      "call_sign": "8PTM",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Barbados"
+    },
+    "577715000": {
+      "uid": "58219",
+      "name": "NIRETA",
+      "remarks": "(Linked To: OCEAN TRANQUILITY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9237785",
+      "mmsi": "577715000",
+      "call_sign": "YJRR9",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Vanuatu"
+    },
+    "577706000": {
+      "uid": "58220",
+      "name": "CRYSTAL",
+      "remarks": "(Linked To: VAST MIGHTY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9223887",
+      "mmsi": "577706000",
+      "call_sign": "YJRP6",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Vanuatu"
+    },
+    "314001154": {
+      "uid": "58221",
+      "name": "YEHOPE",
+      "remarks": "(Linked To: BRANCH SAYING INTERNATIONAL TRADING CO LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9243320",
+      "mmsi": "314001154",
+      "call_sign": "8PPX",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Barbados"
+    },
+    "353502000": {
+      "uid": "58227",
+      "name": "LILY",
+      "remarks": "(Linked To: CONFIDENT APEX LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9294331",
+      "mmsi": "353502000",
+      "call_sign": "3EVK3",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Mozambique"
+    },
+    "314887000": {
+      "uid": "58236",
+      "name": "BREEZE V",
+      "remarks": "(Linked To: NEVADA SPIRIT COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9259355",
+      "mmsi": "314887000",
+      "call_sign": "8P2249",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Barbados"
     }
   },
   "by_imo": {
@@ -30537,6 +30628,110 @@
       "call_sign": "V2C2003",
       "vessel_type": "Container Ship",
       "flag": "Antigua & Barbuda"
+    },
+    "9321938": {
+      "uid": "58190",
+      "name": "WELL SAIL",
+      "remarks": "(Linked To: QI HANG SHIP MANAGEMENT LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9321938",
+      "mmsi": "538012177",
+      "call_sign": "V7A4071",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Marshall Islands"
+    },
+    "9331244": {
+      "uid": "58218",
+      "name": "NATSUMI",
+      "remarks": "(Linked To: MARINOVA FREIGHT LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9331244",
+      "mmsi": "314231000",
+      "call_sign": "8PTM",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Barbados"
+    },
+    "9237785": {
+      "uid": "58219",
+      "name": "NIRETA",
+      "remarks": "(Linked To: OCEAN TRANQUILITY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9237785",
+      "mmsi": "577715000",
+      "call_sign": "YJRR9",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Vanuatu"
+    },
+    "9223887": {
+      "uid": "58220",
+      "name": "CRYSTAL",
+      "remarks": "(Linked To: VAST MIGHTY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9223887",
+      "mmsi": "577706000",
+      "call_sign": "YJRP6",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Vanuatu"
+    },
+    "9243320": {
+      "uid": "58221",
+      "name": "YEHOPE",
+      "remarks": "(Linked To: BRANCH SAYING INTERNATIONAL TRADING CO LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9243320",
+      "mmsi": "314001154",
+      "call_sign": "8PPX",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Barbados"
+    },
+    "9294331": {
+      "uid": "58227",
+      "name": "LILY",
+      "remarks": "(Linked To: CONFIDENT APEX LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9294331",
+      "mmsi": "353502000",
+      "call_sign": "3EVK3",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Mozambique"
+    },
+    "9298296": {
+      "uid": "58232",
+      "name": "AL SALMI",
+      "remarks": "(Linked To: BILLION NEXUS INT'L CO., LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9298296",
+      "mmsi": null,
+      "call_sign": null,
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Unknown"
+    },
+    "9259355": {
+      "uid": "58236",
+      "name": "BREEZE V",
+      "remarks": "(Linked To: NEVADA SPIRIT COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9259355",
+      "mmsi": "314887000",
+      "call_sign": "8P2249",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Barbados"
     }
   }
 }
