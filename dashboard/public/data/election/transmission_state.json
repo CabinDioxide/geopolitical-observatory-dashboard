@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07-31T08:35:32.652406Z",
+  "as_of": "2026-08-01T08:05:17.653481Z",
   "chain": [
     {
       "step": 1,
@@ -154,7 +154,7 @@
       "name": "\u5bc6\u6b47\u6839\u5927\u5b66\u6d88\u8d39\u8005\u4fe1\u5fc3 (ICS)",
       "name_en": "Michigan Consumer Sentiment (ICS)",
       "tag": "\u4e0b\u6e38",
-      "current": 44.8,
+      "current": 49.5,
       "unit": "\u6307\u6570",
       "unit_en": "index",
       "baseline": 85,
@@ -238,7 +238,7 @@
       "caveat_en": "Coefficients are [CALIBRATION_PENDING] \u2014 derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."
     }
   ],
-  "epu_index": 282.75,
+  "epu_index": 310.2,
   "methodology_caveats": {
     "ensemble_rmse_honesty": {
       "displayed": 1.07,
@@ -429,8 +429,8 @@
     ],
     "unrate": 4.2,
     "unrate_yoy_pct_change": 2.4390243902439157,
-    "ics": 44.8,
-    "inflation_expect": 4.8,
+    "ics": 49.5,
+    "inflation_expect": 4.6,
     "approval_net": -13.5,
     "generic_ballot_dem_lead": 3.5
   }

@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-07-31T08:35:32.739827Z",
-  "duration_seconds": 260.5,
+  "last_run": "2026-08-01T08:05:17.737982Z",
+  "duration_seconds": 263.8,
   "sources": {
     "gdelt": {
       "status": "ok",
-      "features": 1286
+      "features": 783
     },
     "acled": {
       "status": "skipped",
@@ -19,12 +19,14 @@
       "features": 2515
     },
     "ofac": {
-      "status": "error",
-      "error": "403 Client Error: Forbidden for url: https://sanctionslistservice.ofac.treas.gov/api/publicationpreview/exports/sdn.xml"
+      "status": "ok",
+      "vessels": 1523,
+      "with_mmsi": 791,
+      "with_imo": 1520
     },
     "ais": {
       "status": "ok",
-      "features": 317,
+      "features": 137,
       "sanctioned_in_chokepoints": 0
     },
     "fred": {
