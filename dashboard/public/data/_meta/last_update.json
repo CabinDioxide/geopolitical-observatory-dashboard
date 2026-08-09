@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-08-08T06:36:13.751556Z",
-  "duration_seconds": 262.3,
+  "last_run": "2026-08-09T06:40:16.668755Z",
+  "duration_seconds": 262.9,
   "sources": {
     "gdelt": {
       "status": "ok",
-      "features": 664
+      "features": 559
     },
     "acled": {
       "status": "skipped",
