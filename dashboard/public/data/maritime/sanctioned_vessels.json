@@ -2,7 +2,7 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-08-16T06:20:49.677438Z",
+    "fetched_at": "2026-08-17T06:31:01.201247Z",
     "total_vessels": 1523,
     "with_mmsi": 791,
     "with_imo": 1520,
