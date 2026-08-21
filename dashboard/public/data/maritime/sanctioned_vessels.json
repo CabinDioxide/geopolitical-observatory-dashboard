@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-08-20T06:24:54.266171Z",
-    "total_vessels": 1523,
-    "with_mmsi": 791,
-    "with_imo": 1520,
+    "fetched_at": "2026-08-21T06:25:51.645002Z",
+    "total_vessels": 1533,
+    "with_mmsi": 801,
+    "with_imo": 1522,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -31,7 +31,8 @@
       "GLOMAG": 157,
       "IRAN-EO13846": 125,
       "IRAN-EO13902": 322,
-      "UKRAINE-EO13662": 182
+      "UKRAINE-EO13662": 182,
+      "ILLICIT-DRUGS-EO14059": 10
     }
   },
   "by_mmsi": {
@@ -10505,6 +10506,136 @@
       "call_sign": "8P2249",
       "vessel_type": "Crude Oil Tanker",
       "flag": "Barbados"
+    },
+    "735058319": {
+      "uid": "58353",
+      "name": "TODOS VUELVEN",
+      "remarks": "(Linked To: MERO ARCENTALES, Edwar Alexis; Linked To: ALARCON HOLGUIN, Jimmy Leonidas)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": null,
+      "mmsi": "735058319",
+      "call_sign": "HC4983",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
+    },
+    "735058087": {
+      "uid": "58354",
+      "name": "ARCA DE NOE III",
+      "remarks": "(Linked To: MERO ARCENTALES, Edwar Alexis; Linked To: MERO ARCENTALES, Roberth Alfonso)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": null,
+      "mmsi": "735058087",
+      "call_sign": "HC4100",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
+    },
+    "735059969": {
+      "uid": "58355",
+      "name": "ARCA DE NOE III JR",
+      "remarks": "(Linked To: MERO ARCENTALES, Edwar Alexis)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": "8456035",
+      "mmsi": "735059969",
+      "call_sign": "HC6372",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
+    },
+    "735058088": {
+      "uid": "58356",
+      "name": "ARCA DE NOE IV",
+      "remarks": "(Linked To: MERO MERO, Alfonso)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": null,
+      "mmsi": "735058088",
+      "call_sign": "HC4361",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
+    },
+    "735058089": {
+      "uid": "58357",
+      "name": "ARCA DE NOE V",
+      "remarks": "(Linked To: MERO ARCENTALES, Edwar Alexis)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": null,
+      "mmsi": "735058089",
+      "call_sign": "HC4733",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
+    },
+    "735058725": {
+      "uid": "58358",
+      "name": "REY DE ARCA",
+      "remarks": "(Linked To: MERO MERO, Alfonso)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": null,
+      "mmsi": "735058725",
+      "call_sign": "HC4440",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
+    },
+    "735058993": {
+      "uid": "58363",
+      "name": "SIEMPRE MI ARCA",
+      "remarks": "(Linked To: MERO ARCENTALES, Edwar Alexis)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": "8555518",
+      "mmsi": "735058993",
+      "call_sign": "HC5299",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
+    },
+    "735058723": {
+      "uid": "58367",
+      "name": "CONQUISTA",
+      "remarks": "(Linked To: MERO ARCENTALES, Edwar Alexis)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": null,
+      "mmsi": "735058723",
+      "call_sign": "HC4941",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
+    },
+    "735059710": {
+      "uid": "58370",
+      "name": "SOLO ES MEJOR",
+      "remarks": "(Linked To: ALARCON HOLGUIN, Jimmy Leonidas)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": null,
+      "mmsi": "735059710",
+      "call_sign": "HC6172",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
+    },
+    "735057861": {
+      "uid": "58371",
+      "name": "COSTA MARLIN",
+      "remarks": "(Linked To: ALARCON HOLGUIN, Jimmy Leonidas)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": null,
+      "mmsi": "735057861",
+      "call_sign": "HC4338",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
     }
   },
   "by_imo": {
@@ -30732,6 +30863,32 @@
       "call_sign": "8P2249",
       "vessel_type": "Crude Oil Tanker",
       "flag": "Barbados"
+    },
+    "8456035": {
+      "uid": "58355",
+      "name": "ARCA DE NOE III JR",
+      "remarks": "(Linked To: MERO ARCENTALES, Edwar Alexis)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": "8456035",
+      "mmsi": "735059969",
+      "call_sign": "HC6372",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
+    },
+    "8555518": {
+      "uid": "58363",
+      "name": "SIEMPRE MI ARCA",
+      "remarks": "(Linked To: MERO ARCENTALES, Edwar Alexis)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "imo": "8555518",
+      "mmsi": "735058993",
+      "call_sign": "HC5299",
+      "vessel_type": "Fishing Vessel",
+      "flag": "Ecuador"
     }
   }
 }
