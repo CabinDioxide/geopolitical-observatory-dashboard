@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-08-24T06:38:33.808081Z",
-  "duration_seconds": 262.4,
+  "last_run": "2026-08-25T06:29:23.095165Z",
+  "duration_seconds": 266.2,
   "sources": {
     "gdelt": {
       "status": "ok",
-      "features": 769
+      "features": 744
     },
     "acled": {
       "status": "skipped",
@@ -20,13 +20,13 @@
     },
     "ofac": {
       "status": "ok",
-      "vessels": 1533,
-      "with_mmsi": 801,
-      "with_imo": 1522
+      "vessels": 1539,
+      "with_mmsi": 805,
+      "with_imo": 1528
     },
     "ais": {
       "status": "ok",
-      "features": 209,
+      "features": 221,
       "sanctioned_in_chokepoints": 0
     },
     "fred": {

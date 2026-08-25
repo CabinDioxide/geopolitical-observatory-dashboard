@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-08-24T06:34:29.510126Z",
-    "total_vessels": 1533,
-    "with_mmsi": 801,
-    "with_imo": 1522,
+    "fetched_at": "2026-08-25T06:25:17.150348Z",
+    "total_vessels": 1539,
+    "with_mmsi": 805,
+    "with_imo": 1528,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -29,8 +29,8 @@
       "PEESA-EO14039": 17,
       "RUSSIA-EO14024": 444,
       "GLOMAG": 157,
-      "IRAN-EO13846": 125,
-      "IRAN-EO13902": 322,
+      "IRAN-EO13846": 126,
+      "IRAN-EO13902": 327,
       "UKRAINE-EO13662": 182,
       "ILLICIT-DRUGS-EO14059": 10
     }
@@ -10507,6 +10507,45 @@
       "vessel_type": "Crude Oil Tanker",
       "flag": "Barbados"
     },
+    "577708000": {
+      "uid": "58320",
+      "name": "QUANTUM HOPE",
+      "remarks": "(Linked To: RIQUEZA GROUP LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9233650",
+      "mmsi": "577708000",
+      "call_sign": "YJRQ4",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Vanuatu"
+    },
+    "629009052": {
+      "uid": "58321",
+      "name": "VOYAGE ELITE",
+      "remarks": "(Linked To: LILIMOON NAVIGATION INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9286138",
+      "mmsi": "629009052",
+      "call_sign": "C5J66",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Gambia"
+    },
+    "629009824": {
+      "uid": "58323",
+      "name": "TELA",
+      "remarks": "(Linked To: ESTANICA TRADING LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9189110",
+      "mmsi": "629009824",
+      "call_sign": "C5J926",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Gambia"
+    },
     "735058319": {
       "uid": "58353",
       "name": "TODOS VUELVEN",
@@ -10636,6 +10675,19 @@
       "call_sign": "HC4338",
       "vessel_type": "Fishing Vessel",
       "flag": "Ecuador"
+    },
+    "314001143": {
+      "uid": "58438",
+      "name": "STAR PIONE",
+      "remarks": "(Linked To: CLEVER SHIPPING LIMITED)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9389019",
+      "mmsi": "314001143",
+      "call_sign": "8PZY6",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Barbados"
     }
   },
   "by_imo": {
@@ -30864,6 +30916,71 @@
       "vessel_type": "Crude Oil Tanker",
       "flag": "Barbados"
     },
+    "9185346": {
+      "uid": "58311",
+      "name": "SIFRA",
+      "remarks": "(Linked To: SIFRA SHIPPING COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9185346",
+      "mmsi": null,
+      "call_sign": null,
+      "vessel_type": "LPG Tanker",
+      "flag": "Botswana False"
+    },
+    "9139696": {
+      "uid": "58313",
+      "name": "G SILVER",
+      "remarks": "(Linked To: VIENNA SHIPPING CO., LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9139696",
+      "mmsi": null,
+      "call_sign": null,
+      "vessel_type": "LPG Tanker",
+      "flag": "Cameroon"
+    },
+    "9233650": {
+      "uid": "58320",
+      "name": "QUANTUM HOPE",
+      "remarks": "(Linked To: RIQUEZA GROUP LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9233650",
+      "mmsi": "577708000",
+      "call_sign": "YJRQ4",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Vanuatu"
+    },
+    "9286138": {
+      "uid": "58321",
+      "name": "VOYAGE ELITE",
+      "remarks": "(Linked To: LILIMOON NAVIGATION INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9286138",
+      "mmsi": "629009052",
+      "call_sign": "C5J66",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Gambia"
+    },
+    "9189110": {
+      "uid": "58323",
+      "name": "TELA",
+      "remarks": "(Linked To: ESTANICA TRADING LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9189110",
+      "mmsi": "629009824",
+      "call_sign": "C5J926",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Gambia"
+    },
     "8456035": {
       "uid": "58355",
       "name": "ARCA DE NOE III JR",
@@ -30889,6 +31006,19 @@
       "call_sign": "HC5299",
       "vessel_type": "Fishing Vessel",
       "flag": "Ecuador"
+    },
+    "9389019": {
+      "uid": "58438",
+      "name": "STAR PIONE",
+      "remarks": "(Linked To: CLEVER SHIPPING LIMITED)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9389019",
+      "mmsi": "314001143",
+      "call_sign": "8PZY6",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Barbados"
     }
   }
 }
