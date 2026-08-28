@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-27T17:06:11.308638Z",
+  "as_of": "2026-08-28T17:54:46.479759Z",
   "chain": [
     {
       "step": 1,
@@ -154,12 +154,12 @@
       "name": "\u5bc6\u6b47\u6839\u5927\u5b66\u6d88\u8d39\u8005\u4fe1\u5fc3 (ICS)",
       "name_en": "Michigan Consumer Sentiment (ICS)",
       "tag": "\u4e0b\u6e38",
-      "current": 49.5,
+      "current": 55.2,
       "unit": "\u6307\u6570",
       "unit_en": "index",
       "baseline": 85,
       "alarm": 55,
-      "pressure": 100,
+      "pressure": 99,
       "interpretation": "Alarm 55 \u4e3a\u5b9e\u8bc1\u5371\u673a\u5e95\uff1a1980 \u5e95 51 (Carter -10pp \u666e\u9009)\u30012008 \u5e95 55 (McCain -7pp)\u30012022 \u5e95 50 (\u4e2d\u671f + 2024 \u5927\u9009 -3pp)\u3002",
       "interpretation_en": "Alarm 55 = empirical crisis trough: 1980 bottom 51 (Carter -10pp popular vote), 2008 bottom 55 (McCain -7pp), 2022 bottom 50 (midterm + 2024 -3pp).",
       "strength": 1,
@@ -238,7 +238,7 @@
       "caveat_en": "Coefficients are [CALIBRATION_PENDING] \u2014 derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."
     }
   ],
-  "epu_index": 215.44,
+  "epu_index": 131.19,
   "methodology_caveats": {
     "ensemble_rmse_honesty": {
       "displayed": 1.07,
@@ -429,8 +429,8 @@
     ],
     "unrate": 4.1,
     "unrate_yoy_pct_change": -4.651162790697679,
-    "ics": 49.5,
-    "inflation_expect": 4.6,
+    "ics": 55.2,
+    "inflation_expect": 4.2,
     "approval_net": -13.5,
     "generic_ballot_dem_lead": 3.5
   }

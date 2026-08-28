@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-08-27T17:06:11.355457Z",
+  "computed_at": "2026-08-28T17:54:46.546769Z",
   "scenarios": [
     {
       "scenario": "A_easing",
@@ -26,7 +26,7 @@
           "cpi_yoy_2026_2028": 3.45,
           "cpi_yoy_no_tariff_counterfactual": 2.35,
           "unrate_pct": 4.23,
-          "michigan_ics": 49.0,
+          "michigan_ics": 54.7,
           "approval_net": -13.4,
           "approval_net_2026": -13.4,
           "approval_net_2028": -13.4
@@ -219,7 +219,7 @@
           "cpi_yoy_2026_2028": 3.84,
           "cpi_yoy_no_tariff_counterfactual": 2.74,
           "unrate_pct": 4.57,
-          "michigan_ics": 47.8,
+          "michigan_ics": 53.5,
           "approval_net": -13.3,
           "approval_net_2026": -13.3,
           "approval_net_2028": -13.3
@@ -412,7 +412,7 @@
           "cpi_yoy_2026_2028": 4.26,
           "cpi_yoy_no_tariff_counterfactual": 3.16,
           "unrate_pct": 4.94,
-          "michigan_ics": 46.4,
+          "michigan_ics": 52.1,
           "approval_net": -13.2,
           "approval_net_2026": -13.2,
           "approval_net_2028": -13.2
@@ -605,7 +605,7 @@
           "cpi_yoy_2026_2028": 3.62,
           "cpi_yoy_no_tariff_counterfactual": 2.52,
           "unrate_pct": 4.38,
-          "michigan_ics": 48.5,
+          "michigan_ics": 54.2,
           "approval_net": -10.9,
           "approval_net_2026": -10.9,
           "approval_net_2028": -16.1
@@ -835,7 +835,7 @@
           "cpi_yoy_2026_2028": 5.22,
           "cpi_yoy_no_tariff_counterfactual": 4.12,
           "unrate_pct": 5.78,
-          "michigan_ics": 43.4,
+          "michigan_ics": 49.1,
           "approval_net": -12.8,
           "approval_net_2026": -12.8,
           "approval_net_2028": -12.8
