@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-11T10:13:28.076757Z",
+  "as_of": "2026-09-12T09:48:02.189756Z",
   "chain": [
     {
       "step": 1,
@@ -69,12 +69,12 @@
       "name": "CPI \u901a\u80c0\uff08\u5934\u6761\uff09",
       "name_en": "CPI YoY (headline)",
       "tag": "\u4e2d\u6e38",
-      "current": 3.303856050706308,
+      "current": 3.353016322755652,
       "unit": "%",
       "unit_en": "%",
       "baseline": 2.5,
       "alarm": 8.0,
-      "pressure": 15,
+      "pressure": 16,
       "interpretation": "Alarm 8% \u53d6\u81ea 2022 \u5b9e\u8bc1\uff1aCPI 9.1% \u62d6 ICS \u81f3 50\u3002CPI \u4e0d\u76f4\u63a5\u5bf9\u9009\u7968\u9020\u6210 5pp \u635f\u5931\uff08Fair \u7cfb\u6570 -0.69pp/pp \u9700 14% \u901a\u80c0\uff09\uff0c\u901a\u8fc7 ICS \u95f4\u63a5\u4f20\u5bfc\u3002",
       "interpretation_en": "Alarm 8% from 2022 evidence: CPI 9.1% pulled ICS to 50. CPI alone doesn't deliver 5pp vote loss (Fair coefficient -0.69pp/pp would need 14% inflation); transmits indirectly through ICS.",
       "strength": 2,
@@ -90,7 +90,7 @@
       "name": "\u6838\u5fc3 CPI\uff08\u5254\u80fd\u6e90\u98df\u54c1\uff09",
       "name_en": "Core CPI (excl. food/energy)",
       "tag": "\u4e2d\u6e38",
-      "current": 2.4665177892309194,
+      "current": 2.4461631786472546,
       "unit": "%",
       "unit_en": "%",
       "baseline": 2.5,
@@ -238,7 +238,7 @@
       "caveat_en": "Coefficients are [CALIBRATION_PENDING] \u2014 derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."
     }
   ],
-  "epu_index": 275.99,
+  "epu_index": 725.88,
   "methodology_caveats": {
     "ensemble_rmse_honesty": {
       "displayed": 1.07,
@@ -415,8 +415,8 @@
     "brent": 109.51,
     "wti": 97.26,
     "gas_retail": 4.157,
-    "cpi_yoy": 3.303856050706308,
-    "core_cpi_yoy": 2.4665177892309194,
+    "cpi_yoy": 3.353016322755652,
+    "core_cpi_yoy": 2.4461631786472546,
     "rdpi_yoy": 0.20667425104285173,
     "rdpi_level_per_capita": 52849.0,
     "rdpi_quarterly_path": [
