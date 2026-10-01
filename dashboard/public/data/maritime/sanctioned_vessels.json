@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-09-30T11:31:26.840509Z",
-    "total_vessels": 1539,
+    "fetched_at": "2026-10-01T11:59:59.129556Z",
+    "total_vessels": 1538,
     "with_mmsi": 805,
-    "with_imo": 1528,
+    "with_imo": 1527,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -14,7 +14,7 @@
       "DPRK3": 11,
       "UKRAINE-EO13685": 7,
       "DPRK4": 65,
-      "LIBYA3": 8,
+      "LIBYA3": 7,
       "NPWMD": 122,
       "IFSR": 128,
       "IRAN-CON-ARMS-EO": 1,
@@ -15594,19 +15594,6 @@
       "call_sign": "EPDE7",
       "vessel_type": null,
       "flag": "Iran"
-    },
-    "7514517": {
-      "uid": "28301",
-      "name": "MARAYA",
-      "remarks": "(Linked To: ALWEFAQ LTD)",
-      "programs": [
-        "LIBYA3"
-      ],
-      "imo": "7514517",
-      "mmsi": null,
-      "call_sign": null,
-      "vessel_type": "Palletized Cargo Ship",
-      "flag": "Samoa"
     },
     "9588885": {
       "uid": "28323",

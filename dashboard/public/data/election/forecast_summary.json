@@ -1,14 +1,14 @@
 {
-  "computed_at": "2026-09-30T11:35:33.448647Z",
+  "computed_at": "2026-10-01T12:04:07.689314Z",
   "transmission_max_pressure": 100,
   "scenarios_2028_range": {
-    "min_R_pct_ensemble": 44.37,
-    "max_R_pct_ensemble": 48.88,
+    "min_R_pct_ensemble": 44.59,
+    "max_R_pct_ensemble": 49.11,
     "weighted_R_pct_fair": 54.73,
-    "weighted_R_pct_hibbs": 48.85,
+    "weighted_R_pct_hibbs": 49.61,
     "weighted_R_pct_abramowitz": 42.72,
-    "weighted_R_pct_ensemble": 47.72,
-    "weighted_R_pct": 47.72
+    "weighted_R_pct_ensemble": 47.95,
+    "weighted_R_pct": 47.95
   },
   "scenarios_2026_house_range": {
     "min_R_seat_change": -39.5,
@@ -20,7 +20,7 @@
     "R_majority_prob": 0.41500000000000004
   },
   "model_disagreement": {
-    "fair_minus_hibbs": 5.88,
+    "fair_minus_hibbs": 5.12,
     "fair_minus_abramowitz": 12.01,
     "interpretation": "Large gaps signal that perception/data divergence is driving model uncertainty (1992 Bush 41 mode)."
   }
