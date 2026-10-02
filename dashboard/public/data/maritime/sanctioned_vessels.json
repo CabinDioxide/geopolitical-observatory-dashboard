@@ -2,7 +2,7 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-10-01T11:59:59.129556Z",
+    "fetched_at": "2026-10-02T11:31:36.827713Z",
     "total_vessels": 1538,
     "with_mmsi": 805,
     "with_imo": 1527,
@@ -10029,7 +10029,7 @@
     "511101961": {
       "uid": "57763",
       "name": "MAYMEI",
-      "remarks": "(Linked To: EVER SHINING LIMITED)",
+      "remarks": "(Linked To: EVER SHINING LTD)",
       "programs": [
         "IRAN-EO13846"
       ],
@@ -10042,7 +10042,7 @@
     "538006405": {
       "uid": "57764",
       "name": "FLORA",
-      "remarks": "(Linked To: EVER SHINING LIMITED)",
+      "remarks": "(Linked To: EVER SHINING LTD)",
       "programs": [
         "IRAN-EO13846"
       ],
@@ -30360,7 +30360,7 @@
     "9133082": {
       "uid": "57763",
       "name": "MAYMEI",
-      "remarks": "(Linked To: EVER SHINING LIMITED)",
+      "remarks": "(Linked To: EVER SHINING LTD)",
       "programs": [
         "IRAN-EO13846"
       ],
@@ -30373,7 +30373,7 @@
     "9133070": {
       "uid": "57764",
       "name": "FLORA",
-      "remarks": "(Linked To: EVER SHINING LIMITED)",
+      "remarks": "(Linked To: EVER SHINING LTD)",
       "programs": [
         "IRAN-EO13846"
       ],
