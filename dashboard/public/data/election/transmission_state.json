@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-02T11:35:41.787326Z",
+  "as_of": "2026-10-03T10:50:41.236878Z",
   "chain": [
     {
       "step": 1,
@@ -220,7 +220,7 @@
       "name": "\u5931\u4e1a\u7387 (U-3)",
       "name_en": "Unemployment rate (U-3)",
       "tag": "\u4e0b\u6e38",
-      "current": 4.1,
+      "current": 4.2,
       "unit": "%",
       "unit_en": "%",
       "baseline": 4.5,
@@ -238,7 +238,7 @@
       "caveat_en": "Coefficients are [CALIBRATION_PENDING] \u2014 derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."
     }
   ],
-  "epu_index": 175.08,
+  "epu_index": 160.6,
   "methodology_caveats": {
     "ensemble_rmse_honesty": {
       "displayed": 1.07,
@@ -427,8 +427,8 @@
       2.2651380168724033,
       -0.38128778449224576
     ],
-    "unrate": 4.1,
-    "unrate_yoy_pct_change": -4.651162790697679,
+    "unrate": 4.2,
+    "unrate_yoy_pct_change": -4.545454545454549,
     "ics": 51.7,
     "inflation_expect": 4.0,
     "approval_net": -13.5,
