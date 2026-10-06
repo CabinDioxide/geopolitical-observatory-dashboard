@@ -2,7 +2,7 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-10-05T12:55:58.747710Z",
+    "fetched_at": "2026-10-06T12:22:23.648975Z",
     "total_vessels": 1538,
     "with_mmsi": 805,
     "with_imo": 1527,
@@ -362,7 +362,7 @@
       "vessel_type": "Bunkering Tanker",
       "flag": "Iran"
     },
-    "572441210": {
+    "422075200": {
       "uid": "15074",
       "name": "NAVARZ",
       "remarks": "(Linked To: NATIONAL IRANIAN TANKER COMPANY)",
@@ -370,8 +370,8 @@
         "IRAN"
       ],
       "imo": "9079078",
-      "mmsi": "572441210",
-      "call_sign": "T2DQ4",
+      "mmsi": "422075200",
+      "call_sign": "EPDN6",
       "vessel_type": "Crude Oil Tanker",
       "flag": "Iran"
     },
@@ -1927,7 +1927,7 @@
     },
     "677070800": {
       "uid": "48695",
-      "name": "LA PEARL",
+      "name": "JAMES II",
       "remarks": "(Linked To: SAONE SHIPPING CORPORATION)",
       "programs": [
         "SDGT"
@@ -1936,7 +1936,7 @@
       "mmsi": "677070800",
       "call_sign": "5IM808",
       "vessel_type": "Crude Oil Tanker",
-      "flag": "Tanzania"
+      "flag": "Curacao"
     },
     "518998388": {
       "uid": "48713",
@@ -2133,18 +2133,18 @@
       "vessel_type": "LPG Tanker",
       "flag": "Eswatini"
     },
-    "668116259": {
+    "350179000": {
       "uid": "50454",
-      "name": "VICTORIA",
+      "name": "DA LI",
       "remarks": "(Linked To: KAI HENG LONG GLOBAL ENERGY LIMITED)",
       "programs": [
         "SDGT"
       ],
       "imo": "9113379",
-      "mmsi": "668116259",
+      "mmsi": "350179000",
       "call_sign": "S9Z6",
       "vessel_type": "LPG Tanker",
-      "flag": "Sao Tome and Principe"
+      "flag": "Nicaragua"
     },
     "668116262": {
       "uid": "50455",
@@ -11116,8 +11116,8 @@
         "IRAN"
       ],
       "imo": "9079078",
-      "mmsi": "572441210",
-      "call_sign": "T2DQ4",
+      "mmsi": "422075200",
+      "call_sign": "EPDN6",
       "vessel_type": "Crude Oil Tanker",
       "flag": "Iran"
     },
@@ -21391,7 +21391,7 @@
     },
     "9174660": {
       "uid": "48695",
-      "name": "LA PEARL",
+      "name": "JAMES II",
       "remarks": "(Linked To: SAONE SHIPPING CORPORATION)",
       "programs": [
         "SDGT"
@@ -21400,7 +21400,7 @@
       "mmsi": "677070800",
       "call_sign": "5IM808",
       "vessel_type": "Crude Oil Tanker",
-      "flag": "Tanzania"
+      "flag": "Curacao"
     },
     "9240914": {
       "uid": "48713",
@@ -21963,16 +21963,16 @@
     },
     "9113379": {
       "uid": "50454",
-      "name": "VICTORIA",
+      "name": "DA LI",
       "remarks": "(Linked To: KAI HENG LONG GLOBAL ENERGY LIMITED)",
       "programs": [
         "SDGT"
       ],
       "imo": "9113379",
-      "mmsi": "668116259",
+      "mmsi": "350179000",
       "call_sign": "S9Z6",
       "vessel_type": "LPG Tanker",
-      "flag": "Sao Tome and Principe"
+      "flag": "Nicaragua"
     },
     "9005065": {
       "uid": "50455",
