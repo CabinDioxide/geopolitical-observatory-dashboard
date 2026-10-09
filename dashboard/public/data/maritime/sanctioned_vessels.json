@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-10-08T12:24:55.199544Z",
-    "total_vessels": 1538,
-    "with_mmsi": 805,
-    "with_imo": 1527,
+    "fetched_at": "2026-10-09T12:14:19.847471Z",
+    "total_vessels": 1558,
+    "with_mmsi": 825,
+    "with_imo": 1547,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -29,8 +29,8 @@
       "PEESA-EO14039": 17,
       "RUSSIA-EO14024": 444,
       "GLOMAG": 157,
-      "IRAN-EO13846": 126,
-      "IRAN-EO13902": 327,
+      "IRAN-EO13846": 131,
+      "IRAN-EO13902": 342,
       "UKRAINE-EO13662": 182,
       "ILLICIT-DRUGS-EO14059": 10
     }
@@ -7595,19 +7595,6 @@
       "vessel_type": "Container Ship",
       "flag": "Liberia"
     },
-    "636021002": {
-      "uid": "54931",
-      "name": "HAKUNA MATATA",
-      "remarks": "(Linked To: MARVISE SMC DMCC)",
-      "programs": [
-        "IRAN-EO13902"
-      ],
-      "imo": "9354167",
-      "mmsi": "636021002",
-      "call_sign": "5LBT7",
-      "vessel_type": "Container Ship",
-      "flag": "Liberia"
-    },
     "636017505": {
       "uid": "54932",
       "name": "LIDIA",
@@ -7631,19 +7618,6 @@
       "imo": "9292151",
       "mmsi": "636021323",
       "call_sign": "5LDK2",
-      "vessel_type": "Container Ship",
-      "flag": "Liberia"
-    },
-    "636020659": {
-      "uid": "54934",
-      "name": "PINOCCHIO",
-      "remarks": "(Linked To: MARVISE SMC DMCC)",
-      "programs": [
-        "IRAN-EO13902"
-      ],
-      "imo": "9400112",
-      "mmsi": "636020659",
-      "call_sign": "5LAB8",
       "vessel_type": "Container Ship",
       "flag": "Liberia"
     },
@@ -10688,6 +10662,292 @@
       "call_sign": "8PZY6",
       "vessel_type": "Crude Oil Tanker",
       "flag": "Barbados"
+    },
+    "457677000": {
+      "uid": "58473",
+      "name": "G SPRING",
+      "remarks": "(Linked To: JLS DRAGON COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9040118",
+      "mmsi": "457677000",
+      "call_sign": "JVYG8",
+      "vessel_type": "LPG Tanker",
+      "flag": "Mongolia"
+    },
+    "620800211": {
+      "uid": "58474",
+      "name": "PARITOSH",
+      "remarks": "(Linked To: PARITOSH SHIPPING INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9383352",
+      "mmsi": "620800211",
+      "call_sign": "D6A4211",
+      "vessel_type": "Asphalt/Bitumen Tanker",
+      "flag": "Comoros"
+    },
+    "511101460": {
+      "uid": "58475",
+      "name": "KANHA",
+      "remarks": "(Linked To: KANHA SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9308766",
+      "mmsi": "511101460",
+      "call_sign": "T8A4829",
+      "vessel_type": "Products Tanker",
+      "flag": "Palau"
+    },
+    "613561602": {
+      "uid": "58476",
+      "name": "KING CHAIN",
+      "remarks": "(Linked To: SAINT ABUNDANT INTERNATIONAL CO LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9277761",
+      "mmsi": "613561602",
+      "call_sign": "TJM23G",
+      "vessel_type": "Crude/Oil Products Tanker",
+      "flag": "Cameroon"
+    },
+    "677057400": {
+      "uid": "58477",
+      "name": "POLAR",
+      "remarks": "(Linked To: TERRA NAV SHIPPING LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9050187",
+      "mmsi": "677057400",
+      "call_sign": "5IM674",
+      "vessel_type": "LPG Tanker",
+      "flag": "Tanzania"
+    },
+    "352004730": {
+      "uid": "58478",
+      "name": "BITU",
+      "remarks": "(Linked To: ORNELLA SHIPPING INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9531765",
+      "mmsi": "352004730",
+      "call_sign": "3E6982",
+      "vessel_type": "Asphalt/Bitumen Tanker",
+      "flag": "Panama"
+    },
+    "352004620": {
+      "uid": "58479",
+      "name": "STARWAY",
+      "remarks": "(Linked To: HECHUANG INTERNATIONAL GROUP LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9273246",
+      "mmsi": "352004620",
+      "call_sign": "3E6902",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Panama"
+    },
+    "311002319": {
+      "uid": "58480",
+      "name": "GAS LUCKY",
+      "remarks": "(Linked To: SHUNHANG SHIP MANAGEMENT LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9177557",
+      "mmsi": "311002319",
+      "call_sign": "C6LP5",
+      "vessel_type": "LPG Tanker",
+      "flag": "Bahamas"
+    },
+    "620800324": {
+      "uid": "58715",
+      "name": "YASHAR",
+      "remarks": "(Linked To: HORIZON SHIP MANAGEMENT FZE)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9129380",
+      "mmsi": "620800324",
+      "call_sign": "D6A4324",
+      "vessel_type": "LPG Tanker",
+      "flag": "Comoros"
+    },
+    "629009846": {
+      "uid": "58748",
+      "name": "YONG TAI",
+      "remarks": "(Linked To: ONE PLUS INTERNATIONAL CO LTD)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9231511",
+      "mmsi": "629009846",
+      "call_sign": "C5J948",
+      "vessel_type": "Oil Products Tanker",
+      "flag": "Gambia"
+    },
+    "334934000": {
+      "uid": "58750",
+      "name": "ARGO MARIS",
+      "remarks": "(Linked To: HESSONITE SHIP MANAGEMENT LLC)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9041643",
+      "mmsi": "334934000",
+      "call_sign": "PJQ10",
+      "vessel_type": "Asphalt/Bitumen Tanker",
+      "flag": "Honduras"
+    },
+    "334935000": {
+      "uid": "58751",
+      "name": "BLACK MAYA",
+      "remarks": "(Linked To: HESSONITE SHIP MANAGEMENT LLC)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9118800",
+      "mmsi": "334935000",
+      "call_sign": "PJN9",
+      "vessel_type": "Asphalt/Bitumen Tanker",
+      "flag": "Honduras"
+    },
+    "334931000": {
+      "uid": "58752",
+      "name": "ATHE NOVA",
+      "remarks": "(Linked To: HESSONITE SHIP MANAGEMENT LLC)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9188116",
+      "mmsi": "334931000",
+      "call_sign": "HQZT4",
+      "vessel_type": "Asphalt/Bitumen Tanker",
+      "flag": "Honduras"
+    },
+    "577710000": {
+      "uid": "58812",
+      "name": "TINA 5",
+      "remarks": "(Linked To: NOSTALGIA CO., LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9237761",
+      "mmsi": "577710000",
+      "call_sign": "YJRL8",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Vanuatu"
+    },
+    "620800513": {
+      "uid": "58815",
+      "name": "SOGL",
+      "remarks": "(Linked To: GRAVION MARITIME CO.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9208227",
+      "mmsi": "620800513",
+      "call_sign": "D6A4513",
+      "vessel_type": "LPG Tanker",
+      "flag": "Comoros"
+    },
+    "352002500": {
+      "uid": "58821",
+      "name": "MACKEREL",
+      "remarks": "(Linked To: BETTA SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9234628",
+      "mmsi": "352002500",
+      "call_sign": "3E2653",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Panama"
+    },
+    "667002467": {
+      "uid": "58822",
+      "name": "GAS MARAKUA",
+      "remarks": "(Linked To: MAKARUA SHIPPING LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9240421",
+      "mmsi": "667002467",
+      "call_sign": "9LS2170",
+      "vessel_type": "LPG Tanker",
+      "flag": "Sierra Leone"
+    },
+    "314283000": {
+      "uid": "58823",
+      "name": "ZIXUAN",
+      "remarks": "(Linked To: GODDESS SHIPPING CORP.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9317298",
+      "mmsi": "314283000",
+      "call_sign": "8PVK",
+      "vessel_type": "LPG Tanker",
+      "flag": "Barbados"
+    },
+    "477226000": {
+      "uid": "58824",
+      "name": "AVA 6",
+      "remarks": "(Linked To: STANDWILL SHIPPING LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9226140",
+      "mmsi": "477226000",
+      "call_sign": "VRXU4",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Hong Kong"
+    },
+    "268268101": {
+      "uid": "58831",
+      "name": "NOBLE SEA",
+      "remarks": "(Linked To: BRICH SHIPPING COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9343118",
+      "mmsi": "268268101",
+      "call_sign": "T7EK8",
+      "vessel_type": "LPG Tanker",
+      "flag": "San Marino"
+    },
+    "613290000": {
+      "uid": "58832",
+      "name": "SHENZHEN",
+      "remarks": "(Linked To: NORTHPORT NAVIGATION INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9276561",
+      "mmsi": "613290000",
+      "call_sign": null,
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Cameroon"
+    },
+    "629009020": {
+      "uid": "58834",
+      "name": "EXFLAME",
+      "remarks": "(Linked To: SCIENCE RU TRADING CO LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9294678",
+      "mmsi": "629009020",
+      "call_sign": "C5J36",
+      "vessel_type": "Oil Products Tanker",
+      "flag": "Gambia"
     }
   },
   "by_imo": {
@@ -27770,19 +28030,6 @@
       "vessel_type": "Container Ship",
       "flag": "Liberia"
     },
-    "9354167": {
-      "uid": "54931",
-      "name": "HAKUNA MATATA",
-      "remarks": "(Linked To: MARVISE SMC DMCC)",
-      "programs": [
-        "IRAN-EO13902"
-      ],
-      "imo": "9354167",
-      "mmsi": "636021002",
-      "call_sign": "5LBT7",
-      "vessel_type": "Container Ship",
-      "flag": "Liberia"
-    },
     "9330501": {
       "uid": "54932",
       "name": "LIDIA",
@@ -27806,19 +28053,6 @@
       "imo": "9292151",
       "mmsi": "636021323",
       "call_sign": "5LDK2",
-      "vessel_type": "Container Ship",
-      "flag": "Liberia"
-    },
-    "9400112": {
-      "uid": "54934",
-      "name": "PINOCCHIO",
-      "remarks": "(Linked To: MARVISE SMC DMCC)",
-      "programs": [
-        "IRAN-EO13902"
-      ],
-      "imo": "9400112",
-      "mmsi": "636020659",
-      "call_sign": "5LAB8",
       "vessel_type": "Container Ship",
       "flag": "Liberia"
     },
@@ -31006,6 +31240,292 @@
       "call_sign": "8PZY6",
       "vessel_type": "Crude Oil Tanker",
       "flag": "Barbados"
+    },
+    "9040118": {
+      "uid": "58473",
+      "name": "G SPRING",
+      "remarks": "(Linked To: JLS DRAGON COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9040118",
+      "mmsi": "457677000",
+      "call_sign": "JVYG8",
+      "vessel_type": "LPG Tanker",
+      "flag": "Mongolia"
+    },
+    "9383352": {
+      "uid": "58474",
+      "name": "PARITOSH",
+      "remarks": "(Linked To: PARITOSH SHIPPING INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9383352",
+      "mmsi": "620800211",
+      "call_sign": "D6A4211",
+      "vessel_type": "Asphalt/Bitumen Tanker",
+      "flag": "Comoros"
+    },
+    "9308766": {
+      "uid": "58475",
+      "name": "KANHA",
+      "remarks": "(Linked To: KANHA SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9308766",
+      "mmsi": "511101460",
+      "call_sign": "T8A4829",
+      "vessel_type": "Products Tanker",
+      "flag": "Palau"
+    },
+    "9277761": {
+      "uid": "58476",
+      "name": "KING CHAIN",
+      "remarks": "(Linked To: SAINT ABUNDANT INTERNATIONAL CO LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9277761",
+      "mmsi": "613561602",
+      "call_sign": "TJM23G",
+      "vessel_type": "Crude/Oil Products Tanker",
+      "flag": "Cameroon"
+    },
+    "9050187": {
+      "uid": "58477",
+      "name": "POLAR",
+      "remarks": "(Linked To: TERRA NAV SHIPPING LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9050187",
+      "mmsi": "677057400",
+      "call_sign": "5IM674",
+      "vessel_type": "LPG Tanker",
+      "flag": "Tanzania"
+    },
+    "9531765": {
+      "uid": "58478",
+      "name": "BITU",
+      "remarks": "(Linked To: ORNELLA SHIPPING INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9531765",
+      "mmsi": "352004730",
+      "call_sign": "3E6982",
+      "vessel_type": "Asphalt/Bitumen Tanker",
+      "flag": "Panama"
+    },
+    "9273246": {
+      "uid": "58479",
+      "name": "STARWAY",
+      "remarks": "(Linked To: HECHUANG INTERNATIONAL GROUP LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9273246",
+      "mmsi": "352004620",
+      "call_sign": "3E6902",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Panama"
+    },
+    "9177557": {
+      "uid": "58480",
+      "name": "GAS LUCKY",
+      "remarks": "(Linked To: SHUNHANG SHIP MANAGEMENT LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9177557",
+      "mmsi": "311002319",
+      "call_sign": "C6LP5",
+      "vessel_type": "LPG Tanker",
+      "flag": "Bahamas"
+    },
+    "9129380": {
+      "uid": "58715",
+      "name": "YASHAR",
+      "remarks": "(Linked To: HORIZON SHIP MANAGEMENT FZE)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9129380",
+      "mmsi": "620800324",
+      "call_sign": "D6A4324",
+      "vessel_type": "LPG Tanker",
+      "flag": "Comoros"
+    },
+    "9231511": {
+      "uid": "58748",
+      "name": "YONG TAI",
+      "remarks": "(Linked To: ONE PLUS INTERNATIONAL CO LTD)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9231511",
+      "mmsi": "629009846",
+      "call_sign": "C5J948",
+      "vessel_type": "Oil Products Tanker",
+      "flag": "Gambia"
+    },
+    "9041643": {
+      "uid": "58750",
+      "name": "ARGO MARIS",
+      "remarks": "(Linked To: HESSONITE SHIP MANAGEMENT LLC)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9041643",
+      "mmsi": "334934000",
+      "call_sign": "PJQ10",
+      "vessel_type": "Asphalt/Bitumen Tanker",
+      "flag": "Honduras"
+    },
+    "9118800": {
+      "uid": "58751",
+      "name": "BLACK MAYA",
+      "remarks": "(Linked To: HESSONITE SHIP MANAGEMENT LLC)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9118800",
+      "mmsi": "334935000",
+      "call_sign": "PJN9",
+      "vessel_type": "Asphalt/Bitumen Tanker",
+      "flag": "Honduras"
+    },
+    "9188116": {
+      "uid": "58752",
+      "name": "ATHE NOVA",
+      "remarks": "(Linked To: HESSONITE SHIP MANAGEMENT LLC)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "imo": "9188116",
+      "mmsi": "334931000",
+      "call_sign": "HQZT4",
+      "vessel_type": "Asphalt/Bitumen Tanker",
+      "flag": "Honduras"
+    },
+    "9237761": {
+      "uid": "58812",
+      "name": "TINA 5",
+      "remarks": "(Linked To: NOSTALGIA CO., LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9237761",
+      "mmsi": "577710000",
+      "call_sign": "YJRL8",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Vanuatu"
+    },
+    "9208227": {
+      "uid": "58815",
+      "name": "SOGL",
+      "remarks": "(Linked To: GRAVION MARITIME CO.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9208227",
+      "mmsi": "620800513",
+      "call_sign": "D6A4513",
+      "vessel_type": "LPG Tanker",
+      "flag": "Comoros"
+    },
+    "9234628": {
+      "uid": "58821",
+      "name": "MACKEREL",
+      "remarks": "(Linked To: BETTA SHIPPING INC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9234628",
+      "mmsi": "352002500",
+      "call_sign": "3E2653",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Panama"
+    },
+    "9240421": {
+      "uid": "58822",
+      "name": "GAS MARAKUA",
+      "remarks": "(Linked To: MAKARUA SHIPPING LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9240421",
+      "mmsi": "667002467",
+      "call_sign": "9LS2170",
+      "vessel_type": "LPG Tanker",
+      "flag": "Sierra Leone"
+    },
+    "9317298": {
+      "uid": "58823",
+      "name": "ZIXUAN",
+      "remarks": "(Linked To: GODDESS SHIPPING CORP.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9317298",
+      "mmsi": "314283000",
+      "call_sign": "8PVK",
+      "vessel_type": "LPG Tanker",
+      "flag": "Barbados"
+    },
+    "9226140": {
+      "uid": "58824",
+      "name": "AVA 6",
+      "remarks": "(Linked To: STANDWILL SHIPPING LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9226140",
+      "mmsi": "477226000",
+      "call_sign": "VRXU4",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Hong Kong"
+    },
+    "9343118": {
+      "uid": "58831",
+      "name": "NOBLE SEA",
+      "remarks": "(Linked To: BRICH SHIPPING COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9343118",
+      "mmsi": "268268101",
+      "call_sign": "T7EK8",
+      "vessel_type": "LPG Tanker",
+      "flag": "San Marino"
+    },
+    "9276561": {
+      "uid": "58832",
+      "name": "SHENZHEN",
+      "remarks": "(Linked To: NORTHPORT NAVIGATION INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9276561",
+      "mmsi": "613290000",
+      "call_sign": null,
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Cameroon"
+    },
+    "9294678": {
+      "uid": "58834",
+      "name": "EXFLAME",
+      "remarks": "(Linked To: SCIENCE RU TRADING CO LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9294678",
+      "mmsi": "629009020",
+      "call_sign": "C5J36",
+      "vessel_type": "Oil Products Tanker",
+      "flag": "Gambia"
     }
   }
 }
