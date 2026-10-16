@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-10-16T02:41:31.741638Z",
+  "computed_at": "2026-10-16T10:21:53.965781Z",
   "scenarios": [
     {
       "scenario": "A_easing",
@@ -65,7 +65,7 @@
         "rmse": 1.85,
         "win_prob": 0.809,
         "inputs": {
-          "weighted_real_dpi_growth": 1.5804002331615237,
+          "weighted_real_dpi_growth": 1.5804002331615241,
           "cumulative_fatalities": 0
         }
       },
@@ -258,7 +258,7 @@
         "rmse": 1.85,
         "win_prob": 0.445,
         "inputs": {
-          "weighted_real_dpi_growth": 1.0446634761859006,
+          "weighted_real_dpi_growth": 1.0446634761859008,
           "cumulative_fatalities": 0
         }
       },
@@ -451,7 +451,7 @@
         "rmse": 1.85,
         "win_prob": 0.102,
         "inputs": {
-          "weighted_real_dpi_growth": 0.4449581512131882,
+          "weighted_real_dpi_growth": 0.4449581512131883,
           "cumulative_fatalities": 0
         }
       },
@@ -644,7 +644,7 @@
         "rmse": 1.85,
         "win_prob": 0.663,
         "inputs": {
-          "weighted_real_dpi_growth": 1.3405181031724387,
+          "weighted_real_dpi_growth": 1.340518103172439,
           "cumulative_fatalities": 0
         }
       },
@@ -874,7 +874,7 @@
         "rmse": 1.85,
         "win_prob": 0.0,
         "inputs": {
-          "weighted_real_dpi_growth": -0.8983817767256876,
+          "weighted_real_dpi_growth": -0.898381776725688,
           "cumulative_fatalities": 0
         }
       },

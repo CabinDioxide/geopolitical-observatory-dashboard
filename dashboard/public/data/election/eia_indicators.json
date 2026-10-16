@@ -1,33 +1,33 @@
 {
-  "fetched_at": "2026-10-15T10:34:41.686458Z",
+  "fetched_at": "2026-10-16T10:21:53.900705Z",
   "source": "https://ir.eia.gov/wpsr/table1.csv",
   "metrics": {
     "commercial_crude_mbbl": {
       "label": "Commercial (Excluding SPR)",
-      "current": 424.134,
-      "previous_week": 427.32,
-      "year_ago": 420.261,
-      "current_date": "10/2/26",
-      "prev_week_date": "9/25/26",
-      "year_ago_date": "10/3/25"
+      "current": 415.577,
+      "previous_week": 424.134,
+      "year_ago": 423.785,
+      "current_date": "10/9/26",
+      "prev_week_date": "10/2/26",
+      "year_ago_date": "10/10/25"
     },
     "spr_mbbl": {
       "label": "Strategic Petroleum Reserve (SPR)",
       "current": 282.983,
-      "previous_week": 283.767,
-      "year_ago": 406.985,
-      "current_date": "10/2/26",
-      "prev_week_date": "9/25/26",
-      "year_ago_date": "10/3/25"
+      "previous_week": 282.983,
+      "year_ago": 407.745,
+      "current_date": "10/9/26",
+      "prev_week_date": "10/2/26",
+      "year_ago_date": "10/10/25"
     },
     "total_stocks_mbbl": {
       "label": "Total Stocks (Including SPR)",
-      "current": 1520.383,
-      "previous_week": 1528.08,
-      "year_ago": 1694.142,
-      "current_date": "10/2/26",
-      "prev_week_date": "9/25/26",
-      "year_ago_date": "10/3/25"
+      "current": 1506.999,
+      "previous_week": 1520.383,
+      "year_ago": 1696.565,
+      "current_date": "10/9/26",
+      "prev_week_date": "10/2/26",
+      "year_ago_date": "10/10/25"
     }
   },
   "_meta": {
