@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-15T10:34:41.691925Z",
+  "as_of": "2026-10-16T02:41:31.705965Z",
   "chain": [
     {
       "step": 1,
@@ -176,7 +176,7 @@
       "name": "\u7279\u6717\u666e\u51c0\u652f\u6301\u7387",
       "name_en": "Trump net approval",
       "tag": "\u4e0b\u6e38",
-      "current": -13.5,
+      "current": -20.4,
       "unit": "pp",
       "unit_en": "pp",
       "baseline": -3,
@@ -199,12 +199,12 @@
       "name": "\u901a\u7528\u56fd\u4f1a\u9009\u7968\uff08D \u9886\u5148\uff09",
       "name_en": "Generic Ballot (D lead)",
       "tag": "\u4e0b\u6e38",
-      "current": 3.5,
+      "current": 8.0,
       "unit": "pp",
       "unit_en": "pp",
       "baseline": 1,
       "alarm": 6,
-      "pressure": 50,
+      "pressure": 100,
       "interpretation": "GB \u4e0e House \u666e\u9009\u8fd1 1:1 \u6620\u5c04\u3002D+6 = R \u666e\u9009\u8f93\u7ea6 5pp = \u89e6\u53d1 5pp alarm \u5b9a\u4e49\u3002",
       "interpretation_en": "Generic Ballot maps near 1:1 to House popular vote. D+6 = R loses popular vote by ~5pp = triggers the 5pp alarm definition.",
       "strength": 3,
@@ -431,7 +431,7 @@
     "unrate_yoy_pct_change": -4.545454545454549,
     "ics": 51.7,
     "inflation_expect": 4.0,
-    "approval_net": -13.5,
-    "generic_ballot_dem_lead": 3.5
+    "approval_net": -20.4,
+    "generic_ballot_dem_lead": 8.0
   }
 }

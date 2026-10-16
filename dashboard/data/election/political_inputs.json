@@ -1,8 +1,8 @@
 {
   "_meta": {
     "description": "Manually maintained political inputs. Update from RCP / Silver Bulletin / 538 weekly. The model reads from here directly. Auto-fetch is deferred to Phase 2 because aggregator scraping is fragile.",
-    "last_updated": "2026-05-08",
-    "next_review": "2026-05-15",
+    "last_updated": "2026-10-16",
+    "next_review": "2026-10-23",
     "sources": {
       "approval": "https://www.realclearpolling.com/polls/approval/donald-trump/approval",
       "generic_ballot": "https://www.realclearpolling.com/polls/generic-congressional-vote",
@@ -11,19 +11,21 @@
   },
 
   "trump_approval": {
-    "approve_pct": 41.5,
-    "disapprove_pct": 55.0,
-    "net": -13.5,
-    "as_of": "2026-05-05",
-    "source": "RCP average"
+    "approve_pct": 38.8,
+    "disapprove_pct": 59.2,
+    "net": -20.4,
+    "as_of": "2026-10-15",
+    "window": "2026-09-26 to 2026-10-14",
+    "source": "RCP average, read from Wayback snapshot 20261015215029 of the RCP approval page (live page blocked by bot check)"
   },
 
   "generic_ballot": {
-    "dem_pct": 47.0,
-    "rep_pct": 43.5,
-    "dem_lead": 3.5,
-    "as_of": "2026-05-05",
-    "source": "RCP average"
+    "dem_pct": 50.0,
+    "rep_pct": 42.0,
+    "dem_lead": 8.0,
+    "as_of": "2026-10-15",
+    "window": "2026-09-24 to 2026-10-13",
+    "source": "RCP average, read from Wayback snapshot 20261016001403 of the RCP generic ballot page (live page blocked by bot check)"
   },
 
   "right_track_wrong_track": {
@@ -31,14 +33,15 @@
     "wrong_track_pct": 64,
     "net": -36,
     "as_of": "2026-04",
-    "source": "RCP average / NBC poll"
+    "source": "RCP average / NBC poll",
+    "note": "NOT refreshed on 2026-10-16 (no verifiable October figure found). Not read by the model."
   },
 
   "most_important_problem_economy_pct": {
     "value": 41,
     "as_of": "2026-04",
     "source": "Gallup MIP",
-    "note": "Combined economy + inflation + cost of living"
+    "note": "Combined economy + inflation + cost of living. NOT refreshed on 2026-10-16 (no verifiable September/October figure found). Not read by the model."
   },
 
   "structural_2026_midterm": {

@@ -25,7 +25,7 @@ const I18N = {
     'scen.title': '5 种情形的推演：霍尔木兹未来走向对 2026 中期 + 2028 大选的影响',
     'scen.intro1': '每种霍尔木兹未来走向通过传导链产生不同的宏观结果（油价、通胀、收入、信心、支持率），再带入 4 个学术模型输出选举结果。下方每张卡片展示一个情形的<b>选举含义</b>：共和党在 2026 中期会失多少席位、控不控得住众议院；2028 大选会输多少（或赢多少）。带宽为 ±2·均方根误差（RMSE，95% 置信区间）。',
     'scen.intro2': '<b>预测模型说明</b>：2026 中期参议院使用 PVI + 国家环境的 logistic 州层模型 + 蒙特卡洛多数概率；2026 中期众议院使用 Bafumi-Erikson-Wlezien 模型；2028 总统大选取三个独立模型（Fair Vote Equation、Hibbs 面包与和平、Abramowitz Time-for-Change）的反向 RMSE 加权集合预测。各模型公式与选择理由见⑤方法论页。',
-    'scen.senate_caveat': '<b>⚠️ 关于参议院预测的诚实说明</b>：2026 参议院 Class II 改选结构对民主党极不友好——22 个共和党席位防守 vs 11 个民主党席位。即便霍尔木兹冲击大幅恶化政治环境，民主党最多净增 2-4 席。<br><br><b>各情景的差异主要体现在两个维度</b>：(1) 油价/通胀传导对选民信心的影响（A 缓解 → E 全面战争 共和党两党票从 49.7% 下降到 44.7%）；(2) 美军直接介入（情景 D）触发"军事胜利 rally + 长期伤亡拖累"双重效应——短期参议院多数概率从 60% 降至 53%（rally 拉高支持率有利共和党守 ME/NC 等关键席位），但 2028 总统大选 rally 完全衰减后 (Mueller 1973 半衰期 ~6 个月)，伤亡累积反而把支持率拖到 -16，反不如其他情景。这是 1991 老布什"沙漠风暴 89% 支持率 → 18 个月后 34%"的镜像。',
+    'scen.senate_caveat': '<b>⚠️ 关于参议院预测的诚实说明</b>：2026 参议院 Class II 改选结构对民主党极不友好——22 个共和党席位防守 vs 11 个民主党席位，共和党防守的席位大多位于共和党占优的州。这一结构限制了民主党可以增加的席位数。不过，按当前民调，民主党仍很可能取得参议院多数：按 10 月 15 日 RCP 的民调平均值，模型估计民主党净增约 6.1 席，五种情景的结果介于 5.8 至 6.2 席之间，取得参议院多数的概率为 88.9%。<br><br><b>各情景的差异主要体现在两个维度</b>：(1) 油价/通胀传导对选民信心的影响（A 缓解 → E 全面战争 共和党两党票从 47.8% 下降到 43.3%）；(2) 美军直接介入（情景 D）触发"军事胜利 rally + 长期伤亡拖累"双重效应——短期参议院多数概率从 90% 降至 86%（rally 拉高支持率有利共和党守 ME/NC 等关键席位），但 2028 总统大选 rally 完全衰减后 (Mueller 1973 半衰期 ~6 个月)，伤亡累积反而把支持率拖到 -23，反不如其他情景。这是 1991 老布什"沙漠风暴 89% 支持率 → 18 个月后 34%"的镜像。',
     'scen.table_h': '各情景下的政治结果对比表',
     'scen.table_desc': '下表按情景列出宏观传导结果（油价/增长/通胀/信心/支持率）与最终选举预测（2028 共和党两党票集合预测、2026 共和党众院净增减席位）。最后一行是按各情景先验概率的加权汇总。',
     'scen.scenario_label': '情景',
@@ -96,10 +96,10 @@ const I18N = {
     'ovl.title': '历史对照：2026 与四次历史石油-政治危机的全面比较',
     'ovl.intro1': '过去 50 年里，美国执政党遭遇过四次显著的能源/政治冲击：1980 伊朗革命+两伊战争、1990 海湾战争、2008 油价峰值、2022 俄乌战争。这四次事件均提供了"地缘政治冲击 → 油价 → 通胀 → 选民感知 → 选举结果"的完整案例。本节将四次事件按 <b>t=0</b>（事件起点）对齐，与当前 2026 危机进行直接同期比较。',
     'ovl.intro2': '阅读建议：先看顶部"同期对比卡"了解 2026 的相对位置；再看"指标对比图"观察各危机的演化轨迹；最后看"事件详情"了解每次危机的完整背景与最终政治后果。',
-    'ovl.sec1': '第一部分：t=2（事件起点后 2 个月）的同期对比',
-    'ovl.sec1_desc': '2026 危机起点为 2026-02-28（美以空袭伊朗），当前 t=2 对应 2026-04。下方卡片显示同样 t=2 时各次历史危机的指标读数与最终政治结果，便于直接判断 2026 的相对严重程度。',
+    'ovl.sec1': '第一部分：t=6（事件起点后 6 个月）的同期对比',
+    'ovl.sec1_desc': '2026 危机起点为 2026-02-28（美以空袭伊朗），按月对齐时记 2026 年 2 月为 t=0。消费者信心、CPI 和支持率三项都已公布的最近月份是 2026 年 8 月，即 t=6。下方卡片显示同样 t=6 时各次历史危机的指标读数与最终政治结果，便于直接判断 2026 的相对严重程度。',
     'ovl.sec2': '第二部分：指标对比图（按月对齐 t=0 至 t=33）',
-    'ovl.sec2_desc': '五条颜色线分别代表 1980/1990/2008/2022 四次历史危机轨迹 + 2026 当前危机轨迹（黑色加粗线，已观测 t=0 至 t=3 共 4 个数据点）。X 轴是事件起点后的月数，Y 轴是所选指标。红色虚线标记 2026 中期选举（t=8）和 2028 大选（t=33）的位置——可以直接读出"在那个时间点，历史上各次危机的指标处于什么位置，2026 的轨迹延伸到哪里会和哪条历史线接近"。',
+    'ovl.sec2_desc': '五条颜色线分别代表 1980/1990/2008/2022 四次历史危机轨迹 + 2026 当前危机轨迹（黑色加粗线，已观测 t=0 至 t=8，即 2026 年 2 月至 10 月，尚未公布的月份留空）。X 轴是事件起点后的月数，Y 轴是所选指标。红色虚线标记 2026 中期选举（t=9）和 2028 大选（t=33）的位置——可以直接读出"在那个时间点，历史上各次危机的指标处于什么位置，2026 的轨迹延伸到哪里会和哪条历史线接近"。',
     'ovl.sec3': '第三部分：核心结论 — 2026 在四次危机中的相对位置',
     'ovl.sec4': '第四部分：四次历史危机详情',
     'ovl.sec4_desc': '每张卡片包含一次危机的完整背景、关键宏观数据（油价/汽油/CPI/ICS/支持率）、最终政治结果，以及对当前 2026 危机的具体启示。这些案例是模型传导弹性参数的校准来源。',
@@ -117,7 +117,7 @@ const I18N = {
     // Tab 5
     'meth.title': '方法论说明',
     'meth.intro': '本 dashboard 的核心任务是将地缘政治冲击（霍尔木兹海峡封锁）通过宏观与政治传导链转换为美国选举结果预测。下文逐项说明所用模型、选择理由、历史预测准确度、传导链结构与数据来源。',
-    'meth.snapshot': '<b>关于本页硬编码数字</b>：以下章节中的具体数值（ensemble R %、scenario 跨度、Fair vs Abramowitz gap 等）是 <b>2026-05-14 快照</b>。实时数字以本页顶部 panel + ② 情景 tab + ① 传导链 tab 卡片为准（由 daily cron 自动更新）。如硬编码数字与顶部 panel 数据不一致，以 panel 数据为准——本节文本是叙述性，runtime panel 是单一事实来源。',
+    'meth.snapshot': '<b>关于本页硬编码数字</b>：以下章节中的具体数值（ensemble R %、scenario 跨度、Fair vs Abramowitz gap 等）是 <b>2026-10-16 快照</b>。实时数字以本页顶部 panel + ② 情景 tab + ① 传导链 tab 卡片为准（由 daily cron 自动更新）。如硬编码数字与顶部 panel 数据不一致，以 panel 数据为准——本节文本是叙述性，runtime panel 是单一事实来源。',
     // Tab 3 collapsibles
     'map.senate_full_table': '参议院全部 33 席原始表格（按竞争度排序）',
     'map.house_full_table': '众议院各州预测表（按 D 净增席位排序）',
@@ -130,7 +130,7 @@ const I18N = {
     'ovl.chart_pres_marker': '2028 大选',
     'ovl.chart_now_label': '2026 当下',
     // 2026 today outcome pending
-    'ovl.outcome_pending': '进行中：距 2026 中期 8 个月，距 2028 大选 33 个月',
+    'ovl.outcome_pending': '进行中：中期选举 2026 年 11 月 3 日，总统选举 2028 年 11 月 7 日',
     'ovl.event_2026_today_label': '2026 当下（进行中）',
   },
   en: {
@@ -156,7 +156,7 @@ const I18N = {
     'scen.title': '5 Scenario Walk-throughs: How Hormuz Trajectories Affect 2026 Midterms + 2028 Presidential',
     'scen.intro1': 'Each Hormuz future propagates through the transmission chain producing different macro outcomes (oil prices, inflation, income, sentiment, approval), then runs through 4 academic models for electoral output. Each card below shows a scenario\'s <b>electoral implications</b>: how many seats the Republicans lose in the 2026 midterms, whether they hold the House; and the 2028 presidential margin (win or loss). Bands are ±2·root mean squared error (RMSE, 95% CI).',
     'scen.intro2': '<b>Forecasting models</b>: the 2026 Senate uses a PVI + national-environment logistic state-level model with Monte Carlo majority probability; the 2026 House uses the Bafumi-Erikson-Wlezien model; the 2028 presidential takes the inverse-RMSE weighted ensemble of three independent models (Fair Vote Equation, Hibbs Bread-and-Peace, Abramowitz Time-for-Change). Formulas and selection rationale are in the ⑤ Methodology tab.',
-    'scen.senate_caveat': '<b>⚠️ An honest note on Senate forecasts</b>: The 2026 Senate Class II map is structurally hostile to Democrats — 22 Republican seats defending vs only 11 Democratic seats. Even a major Hormuz shock can yield Democrats at most 2-4 net seat gains.<br><br><b>Scenario differences operate on two dimensions</b>: (1) Oil/inflation transmission to voter sentiment (Republican 2028 two-party share ranges 49.7% under A_easing down to 44.7% under E_total_war); (2) Direct US military intervention (scenario D) triggers a dual "military victory rally + long-term casualty drag" effect — short-term D Senate majority probability drops from 60% to 53% (rally lifts approval, helping R hold ME/NC), but by 2028 the rally has fully decayed (Mueller 1973 half-life ~6 months) and accumulated casualties pull approval to -16, leaving R worse off than under the baseline scenarios. This mirrors the 1991 Bush 41 case ("Desert Storm 89% approval → 34% after 18 months").',
+    'scen.senate_caveat': '<b>⚠️ An honest note on Senate forecasts</b>: The 2026 Senate Class II map is structurally hostile to Democrats — 22 Republican seats defending vs only 11 Democratic seats, most of the Republican seats in Republican-leaning states. This structure limits how many seats Democrats can gain. Even so, on current polling Democrats are likely to win the Senate majority: using the October 15 RCP polling averages, the model expects Democrats to net about 6.1 seats (5.8 to 6.2 across the five scenarios), with a 88.9% probability of winning the majority.<br><br><b>Scenario differences operate on two dimensions</b>: (1) Oil/inflation transmission to voter sentiment (Republican 2028 two-party share ranges 47.8% under A_easing down to 43.3% under E_total_war); (2) Direct US military intervention (scenario D) triggers a dual "military victory rally + long-term casualty drag" effect — short-term D Senate majority probability drops from 90% to 86% (rally lifts approval, helping R hold ME/NC), but by 2028 the rally has fully decayed (Mueller 1973 half-life ~6 months) and accumulated casualties pull approval to -23, leaving R worse off than under the baseline scenarios. This mirrors the 1991 Bush 41 case ("Desert Storm 89% approval → 34% after 18 months").',
     'scen.table_h': 'Comparison table of political outcomes by scenario',
     'scen.table_desc': 'Below: macro transmission outputs (oil/growth/inflation/sentiment/approval) and final electoral predictions (2028 Republican two-party share via ensemble; 2026 Republican net House seat change) for each scenario. Last row is the prior-probability-weighted aggregate.',
     'scen.scenario_label': 'Scenario',
@@ -227,10 +227,10 @@ const I18N = {
     'ovl.title': 'Historical Comparison: 2026 vs Four Historical Oil-Political Crises',
     'ovl.intro1': 'Over the past 50 years, the US incumbent party has faced four major energy/political shocks: 1980 Iranian Revolution + Iran-Iraq war, 1990 Gulf War, 2008 oil peak, and 2022 Russia-Ukraine war. Each provides a complete case of "geopolitical shock → oil prices → inflation → voter sentiment → electoral outcome." This section aligns the four episodes by <b>t=0</b> (event start) and compares them directly with the current 2026 crisis.',
     'ovl.intro2': 'Suggested reading order: first, the "synchronous comparison cards" at the top to gauge 2026\'s relative position; then the "indicator comparison chart" to see how each crisis evolved; finally the "event details" for the full background and political fallout of each crisis.',
-    'ovl.sec1': 'Section 1: Synchronous comparison at t=2 (2 months past event start)',
-    'ovl.sec1_desc': 'The 2026 crisis anchor is 2026-02-28 (US-Israel airstrikes on Iran). Current t=2 corresponds to April 2026. The cards below show indicator readings and final political outcomes at the same t=2 in each historical crisis, allowing direct judgment of 2026\'s relative severity.',
+    'ovl.sec1': 'Section 1: Synchronous comparison at t=6 (6 months past event start)',
+    'ovl.sec1_desc': 'The 2026 crisis began on 2026-02-28 (US-Israel airstrikes on Iran); in the monthly alignment February 2026 is t=0. The latest month with consumer sentiment, CPI and approval all published is August 2026, which is t=6. The cards below show indicator readings and final political outcomes at the same t=6 in each historical crisis, allowing direct judgment of 2026\'s relative severity.',
     'ovl.sec2': 'Section 2: Indicator comparison chart (aligned monthly, t=0 to t=33)',
-    'ovl.sec2_desc': 'Five colored lines represent the 1980/1990/2008/2022 historical crisis trajectories + 2026 current crisis trajectory (thick black line, 4 observed data points from t=0 to t=3). X-axis: months past event start. Y-axis: selected indicator. Red dashed lines mark 2026 midterms (t=8) and 2028 presidential (t=33) — read off "where does the 2026 trajectory extend to and which historical line does it most resemble?"',
+    'ovl.sec2_desc': 'Five colored lines represent the 1980/1990/2008/2022 historical crisis trajectories + 2026 current crisis trajectory (thick black line, observed from t=0 to t=8, i.e. February to October 2026; months not yet published are left blank). X-axis: months past event start. Y-axis: selected indicator. Red dashed lines mark 2026 midterms (t=9) and 2028 presidential (t=33) — read off "where does the 2026 trajectory extend to and which historical line does it most resemble?"',
     'ovl.sec3': 'Section 3: Key conclusion — 2026\'s position among the four historical crises',
     'ovl.sec4': 'Section 4: Detailed account of the four historical crises',
     'ovl.sec4_desc': 'Each card shows the full crisis background, key macro data (oil/gas/CPI/ICS/approval), final political outcome, and specific implications for the 2026 crisis. These cases are the calibration source for the model\'s transmission elasticity parameters.',
@@ -248,7 +248,7 @@ const I18N = {
     // Tab 5
     'meth.title': 'Methodology',
     'meth.intro': 'The dashboard\'s core task is to convert geopolitical shocks (a Hormuz Strait blockade) through macro and political transmission chains into US electoral predictions. Below we describe each model used, the rationale for choosing it, historical predictive accuracy, transmission chain structure, and data sources.',
-    'meth.snapshot': '<b>About hardcoded numbers on this page</b>: the specific values in the sections below (ensemble R %, scenario ranges, Fair vs Abramowitz gap, etc.) are a <b>2026-05-14 snapshot</b>. Live numbers are sourced from the panel at the top of this page + ② Scenarios tab + ① Chain tab cards (auto-updated by the daily cron). If hardcoded values disagree with the top-of-page panel, treat the panel as authoritative — this section is narrative; the runtime panel is the single source of truth.',
+    'meth.snapshot': '<b>About hardcoded numbers on this page</b>: the specific values in the sections below (ensemble R %, scenario ranges, Fair vs Abramowitz gap, etc.) are a <b>2026-10-16 snapshot</b>. Live numbers are sourced from the panel at the top of this page + ② Scenarios tab + ① Chain tab cards (auto-updated by the daily cron). If hardcoded values disagree with the top-of-page panel, treat the panel as authoritative — this section is narrative; the runtime panel is the single source of truth.',
     // Tab 3 collapsibles
     'map.senate_full_table': 'All 33 Senate races (raw table, sorted by competitiveness)',
     'map.house_full_table': 'All states House projection table (sorted by D net seat change)',
@@ -260,7 +260,7 @@ const I18N = {
     'ovl.chart_midterm_marker': '2026 Midterms',
     'ovl.chart_pres_marker': '2028 Presidential',
     'ovl.chart_now_label': '2026 today',
-    'ovl.outcome_pending': 'Ongoing: 8 months to 2026 midterms, 33 months to 2028 presidential',
+    'ovl.outcome_pending': 'Ongoing: midterms on November 3, 2026; presidential election on November 7, 2028',
     'ovl.event_2026_today_label': '2026 today (ongoing)',
   },
 };
@@ -983,16 +983,16 @@ function renderMultiOverlay(data, transmission) {
   CURRENT_OVERLAY_DATA = data;
   CURRENT_TRANSMISSION = transmission;
 
-  // 1) Comparison cards at t=2
+  // 1) Comparison cards at the latest month with all three indicators (cmp.t)
   const cur = readCurrent2026Values(transmission);
   const grid = document.getElementById('overlay-comparison-grid');
-  const cmp = data.comparison_at_t2 || {};
+  const cmp = data.comparison_at_t || {};
   const cardData = [
-    { key: '1980_iran_iraq',     ev: cmp['1980_at_t2'],   meta: data.events['1980_iran_iraq'] },
-    { key: '1990_gulf_war',      ev: cmp['1990_at_t2'],   meta: data.events['1990_gulf_war'] },
-    { key: '2008_oil_peak',      ev: cmp['2008_at_t2'],   meta: data.events['2008_oil_peak'] },
-    { key: '2022_russia_ukraine',ev: cmp['2022_at_t2'],   meta: data.events['2022_russia_ukraine'] },
-    { key: '2026_current',       ev: cmp['2026_today'],   meta: { label: t('ovl.event_2026_today_label'), outcome: t('ovl.outcome_pending') } },
+    { key: '1980_iran_iraq',     ev: cmp['1980'],   meta: data.events['1980_iran_iraq'] },
+    { key: '1990_gulf_war',      ev: cmp['1990'],   meta: data.events['1990_gulf_war'] },
+    { key: '2008_oil_peak',      ev: cmp['2008'],   meta: data.events['2008_oil_peak'] },
+    { key: '2022_russia_ukraine',ev: cmp['2022'],   meta: data.events['2022_russia_ukraine'] },
+    { key: '2026_current',       ev: cmp['2026'],   meta: { label: t('ovl.event_2026_today_label'), outcome: t('ovl.outcome_pending') } },
   ];
   const isEnCards = CURRENT_LANG === 'en';
   const pickC = (zh, en) => (isEnCards && en) ? en : zh;
@@ -1004,7 +1004,7 @@ function renderMultiOverlay(data, transmission) {
     return `
     <div class="overlay-event-card ${c.key === '2026_current' ? 'now-card' : ''}" style="--ev-color: ${EVENT_COLORS_HIST[c.key]}">
       <div class="ev-label">${pickC(c.meta.label, c.meta.label_en)}</div>
-      <div class="ev-month">t=2 → ${c.ev.month}</div>
+      <div class="ev-month">t=${c.ev.t} → ${c.ev.month}</div>
       <div class="ev-stat"><span>${lblIcs}</span><span class="v">${c.ev.ics}</span></div>
       <div class="ev-stat"><span>${lblCpi}</span><span class="v">${c.ev.cpi_yoy}%</span></div>
       <div class="ev-stat"><span>${lblApp}</span><span class="v">${c.ev.approval > 0 ? '+' : ''}${c.ev.approval}</span></div>
@@ -1056,11 +1056,11 @@ function renderMultiOverlay(data, transmission) {
             <tr>
               <td>${m.t}</td>
               <td>${m.month}</td>
-              <td class="num">$${m.brent}</td>
-              <td class="num">${m.cpi_yoy}%</td>
-              <td class="num">$${m.gas.toFixed(2)}</td>
-              <td class="num">${m.ics}</td>
-              <td class="num">${m.approval_net >= 0 ? '+' : ''}${m.approval_net}</td>
+              <td class="num">${m.brent != null ? '$' + m.brent : '—'}</td>
+              <td class="num">${m.cpi_yoy != null ? m.cpi_yoy + '%' : '—'}</td>
+              <td class="num">${m.gas != null ? '$' + m.gas.toFixed(2) : '—'}</td>
+              <td class="num">${m.ics != null ? m.ics : '—'}</td>
+              <td class="num">${m.approval_net != null ? (m.approval_net >= 0 ? '+' : '') + m.approval_net : '—'}</td>
             </tr>
           `).join('')}
         </tbody>

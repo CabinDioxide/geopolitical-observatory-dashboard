@@ -1,27 +1,27 @@
 {
-  "computed_at": "2026-10-15T10:34:41.741517Z",
+  "computed_at": "2026-10-16T02:41:31.750201Z",
   "transmission_max_pressure": 100,
   "scenarios_2028_range": {
-    "min_R_pct_ensemble": 44.51,
-    "max_R_pct_ensemble": 49.02,
+    "min_R_pct_ensemble": 43.26,
+    "max_R_pct_ensemble": 47.77,
     "weighted_R_pct_fair": 54.73,
     "weighted_R_pct_hibbs": 49.61,
-    "weighted_R_pct_abramowitz": 42.72,
-    "weighted_R_pct_ensemble": 47.86,
-    "weighted_R_pct": 47.86
+    "weighted_R_pct_abramowitz": 38.29,
+    "weighted_R_pct_ensemble": 46.61,
+    "weighted_R_pct": 46.61
   },
   "scenarios_2026_house_range": {
-    "min_R_seat_change": -39.5,
-    "max_R_seat_change": -35.9,
-    "weighted_R_seat_change": -38.8
+    "min_R_seat_change": -58.0,
+    "max_R_seat_change": -54.4,
+    "weighted_R_seat_change": -57.3
   },
   "senate_2026_majority_probs": {
-    "D_majority_prob": 0.585,
-    "R_majority_prob": 0.41500000000000004
+    "D_majority_prob": 0.889,
+    "R_majority_prob": 0.11099999999999999
   },
   "model_disagreement": {
     "fair_minus_hibbs": 5.12,
-    "fair_minus_abramowitz": 12.01,
+    "fair_minus_abramowitz": 16.44,
     "interpretation": "Large gaps signal that perception/data divergence is driving model uncertainty (1992 Bush 41 mode)."
   }
 }

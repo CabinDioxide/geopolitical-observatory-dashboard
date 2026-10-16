@@ -2,7 +2,8 @@
   "_meta": {
     "description": "四次危机的月度指标轨迹，按 t=危机起点对齐，方便和当下 2026 比较。每个事件都标注了它对应的总统选举（如果有）和最终政治结果。",
     "compiled": "2026-05-08",
-    "warning": "这些数字是从 EIA / BLS / Gallup 历史档案拼接出来的，部分月份做了线性插值。正式分析前应核对原始来源。"
+    "warning": "这些数字是从 EIA / BLS / Gallup 历史档案拼接出来的，部分月份做了线性插值。正式分析前应核对原始来源。",
+    "2026_series_note": "2026 monthly series rebuilt 2026-10-16 from actuals: Brent (DCOILBRENTEU), gasoline (GASREGW) and Michigan sentiment (UMCSENT) are FRED monthly means; CPI YoY from CPIAUCSL; net approval is the monthly mean of the daily RCP average (Wayback snapshot 20261015215029). Months with no published value omit that field. The earlier Feb-May 2026 values were rough estimates and have been replaced."
   },
 
   "events": {
@@ -93,18 +94,23 @@
       "anchor_date": "2026-02",
       "anchor_event": "美以空袭伊朗 + 哈梅内伊被刺",
       "election_date_midterm": "2026-11",
-      "midterm_t_offset": 8,
+      "midterm_t_offset": 9,
       "election_date_pres": "2028-11",
       "pres_t_offset": 33,
       "incumbent": "Trump (R) → 2028 open seat",
-      "outcome": "尚在进行——观测点 t=2/t=3",
-      "outcome_en": "Ongoing — observation points t=2/t=3",
+      "outcome": "尚在进行——三项指标齐全的最近月份为 t=6（2026 年 8 月）",
+      "outcome_en": "Ongoing — latest month with all three indicators is t=6 (August 2026)",
       "key_dynamic": "波斯湾地缘政治 + 通胀温和但消费者信心已崩。属于 Stantcheva 'cumulative price level memory' 模式。",
       "monthly": [
-        {"t":  0, "month": "2026-02", "brent": 78,  "cpi_yoy": 3.0, "gas": 3.45, "ics": 62, "approval_net": -10},
-        {"t":  1, "month": "2026-03", "brent": 95,  "cpi_yoy": 3.1, "gas": 3.80, "ics": 58, "approval_net": -12},
-        {"t":  2, "month": "2026-04", "brent": 118, "cpi_yoy": 3.3, "gas": 4.45, "ics": 53, "approval_net": -13.5},
-        {"t":  3, "month": "2026-05", "brent": 100, "cpi_yoy": 3.4, "gas": 4.40, "ics": 53, "approval_net": -13.5}
+        {"t":  0, "month": "2026-02", "brent": 71, "cpi_yoy": 2.4, "gas": 2.91, "ics": 56.6, "approval_net": -12.7},
+        {"t":  1, "month": "2026-03", "brent": 103, "cpi_yoy": 3.3, "gas": 3.64, "ics": 53.3, "approval_net": -13.0},
+        {"t":  2, "month": "2026-04", "brent": 117, "cpi_yoy": 3.8, "gas": 4.10, "ics": 49.8, "approval_net": -15.7},
+        {"t":  3, "month": "2026-05", "brent": 107, "cpi_yoy": 4.2, "gas": 4.48, "ics": 44.8, "approval_net": -17.0},
+        {"t":  4, "month": "2026-06", "brent": 85, "cpi_yoy": 3.5, "gas": 4.05, "ics": 49.5, "approval_net": -16.6},
+        {"t":  5, "month": "2026-07", "brent": 84, "cpi_yoy": 3.3, "gas": 3.93, "ics": 55.2, "approval_net": -16.1},
+        {"t":  6, "month": "2026-08", "brent": 91, "cpi_yoy": 3.4, "gas": 4.06, "ics": 51.7, "approval_net": -18.5},
+        {"t":  7, "month": "2026-09", "brent": 114, "cpi_yoy": 3.7, "gas": 4.35, "approval_net": -18.7},
+        {"t":  8, "month": "2026-10", "brent": 125, "gas": 4.34, "approval_net": -21.5}
       ]
     },
 
@@ -145,19 +151,20 @@
   "current_2026_anchor": {
     "anchor_date": "2026-02",
     "anchor_event": "美以空袭伊朗 + 哈梅内伊被刺",
-    "current_t": 2,
-    "midterm_t_offset": 8,
+    "current_t": 8,
+    "midterm_t_offset": 9,
     "pres_t_offset": 33
   },
 
-  "comparison_at_t2": {
-    "what_2026_is_at": "t=2 (2026-04 estimate / current)",
-    "1980_at_t2":   {"month": "1980-01", "ics": 67, "cpi_yoy": 13.9, "approval": 3,   "outcome_at_t12": "Carter -55pp EC margin loss"},
-    "1990_at_t2":   {"month": "1990-10", "ics": 64, "cpi_yoy": 6.3,  "approval": 25,  "outcome_at_t27": "Bush 41 -7pp popular vote loss"},
-    "2008_at_t2":   {"month": "2008-02", "ics": 70, "cpi_yoy": 4.0,  "approval": -32, "outcome_at_t11": "McCain -7.4pp loss"},
-    "2022_at_t2":   {"month": "2022-04", "ics": 65, "cpi_yoy": 8.3,  "approval": -13, "outcome_at_t9":  "Dems -9 House (better than feared); but lost 2024"},
-    "2026_today":   {"month": "2026-04", "ics": 53, "cpi_yoy": 3.3,  "approval": -13.5,"outcome_pending": "进行中：距 2026 中期 8 个月，距 2028 大选 33 个月"},
-    "key_insight": "2026 当下（t=2）的 Michigan 消费者信心指数为 53，低于过去 50 年所有四次能源-政治危机的同期水平：1980 年 1 月为 67，1990 年 10 月为 64，2008 年 2 月为 70，2022 年 4 月为 65。然而 2026 当下的 CPI 通胀仅为 3.3%，远低于 2022 同期的 8.3% 与 1980 同期的 13.9%。\n\n这种『低通胀 + 极低信心』的组合在历史上是异常的——通常消费者信心与通胀率高度负相关，但当下出现通胀温和、信心却已崩盘。Stantcheva (2024 NBER) 论文将此称为『累积价格水平记忆』效应：选民厌恶的不是当期通胀率，而是过去几年累计的物价水平偏离基线，因此通胀回落到温和水平后，政治压力仍持续存在。\n\n这种经济数据与选民感知严重背离的状态，过去 50 年仅出现于 1992（老布什执政期 GDP 回升但选民感知仍认为是衰退，最终败选）和 2024（拜登执政期通胀回落但选民仍痛恨累积价格上涨，哈里斯败选）。两次共同特征是经济模型预测执政党赢、实际却败。当下 2026 的背离程度比这两次更严重，对共和党 2026 中期 + 2028 大选构成显著政治风险。",
-    "key_insight_en": "Michigan Consumer Sentiment at t=2 (currently April 2026) is 53 — lower than the same-period reading in all four major energy-political crises of the past 50 years: January 1980 was 67, October 1990 was 64, February 2008 was 70, April 2022 was 65. Yet 2026 CPI inflation is only 3.3%, far below 2022's 8.3% or 1980's 13.9% at the same offset.\n\nThis 'low inflation + extremely low confidence' combination is historically anomalous — voter sentiment is normally highly negatively correlated with inflation, but we now see mild inflation with collapsed confidence. Stantcheva (2024 NBER) terms this the 'cumulative price level memory' effect: voters dislike not the current inflation rate but the cumulative deviation of price levels from baseline over the past few years. Political pressure persists even after inflation moderates.\n\nThis severe data-perception divergence has occurred only twice in the past 50 years: 1992 (Bush 41 saw GDP recover but voters still perceived recession — he lost) and 2024 (Biden saw inflation moderate but voters resented cumulative price increases — Harris lost). Common feature: economic models predicted the incumbent party would win; reality went the other way. The 2026 divergence is more severe than either, posing significant political risk to Republicans in the 2026 midterms and 2028 presidential."
+  "comparison_at_t": {
+    "t": 6,
+    "what_2026_is_at": "t=6 (2026-08, latest month with ICS, CPI and approval all published); live readings at t=8 (2026-10)",
+    "1980":   {"t": 6, "month": "1980-05", "ics": 51, "cpi_yoy": 14.4, "approval": -22, "outcome_at_t12": "Carter -55pp EC margin loss"},
+    "1990":   {"t": 6, "month": "1991-02", "ics": 71, "cpi_yoy": 5.3, "approval": 56, "outcome_at_t27": "Bush 41 -7pp popular vote loss"},
+    "2008":   {"t": 6, "month": "2008-06", "ics": 56, "cpi_yoy": 5.0, "approval": -41, "outcome_at_t11": "McCain -7.4pp loss"},
+    "2022":   {"t": 6, "month": "2022-08", "ics": 58, "cpi_yoy": 8.3, "approval": -14, "outcome_at_t9": "Dems -9 House (better than feared); but lost 2024"},
+    "2026":   {"t": 6, "month": "2026-08", "ics": 51.7, "cpi_yoy": 3.4, "approval": -18.5, "outcome_pending": "进行中：中期选举 2026-11-03，总统选举 2028-11-07"},
+    "key_insight": "危机开始后第 6 个月，即 2026 年 8 月，Michigan 消费者信心指数为 51.7，与 1980 年同期（5 月）的 51 基本持平，低于另外三次能源-政治危机的同期水平：1991 年 2 月为 71，2008 年 6 月为 56，2022 年 8 月为 58。然而，2026 年 8 月的 CPI 同比涨幅只有 3.4%，1980 年同期为 14.4%，2022 年同期为 8.3%。\n\n这种『低通胀 + 极低信心』的组合在历史上是异常的——通常消费者信心与通胀率高度负相关，但当下出现通胀温和、信心却已崩盘。Stantcheva (2024 NBER) 论文将此称为『累积价格水平记忆』效应：选民厌恶的不是当期通胀率，而是过去几年累计的物价水平偏离基线，因此通胀回落到温和水平后，政治压力仍持续存在。\n\n这种经济数据与选民感知严重背离的状态，过去 50 年仅出现于 1992（老布什执政期 GDP 回升但选民感知仍认为是衰退，最终败选）和 2024（拜登执政期通胀回落但选民仍痛恨累积价格上涨，哈里斯败选）。两次共同特征是经济模型预测执政党赢、实际却败。当下 2026 的背离程度比这两次更严重，对共和党 2026 中期 + 2028 大选构成显著政治风险。",
+    "key_insight_en": "Six months after the crisis began, in August 2026, Michigan Consumer Sentiment stood at 51.7 — about level with the same point in 1980 (May, 51) and below the other three energy-political crises at the same offset: 71 in February 1991, 56 in June 2008, 58 in August 2022. Yet CPI inflation in August 2026 was only 3.4%, against 14.4% at the same point in 1980 and 8.3% in 2022.\n\nThis 'low inflation + extremely low confidence' combination is historically anomalous — voter sentiment is normally highly negatively correlated with inflation, but we now see mild inflation with collapsed confidence. Stantcheva (2024 NBER) terms this the 'cumulative price level memory' effect: voters dislike not the current inflation rate but the cumulative deviation of price levels from baseline over the past few years. Political pressure persists even after inflation moderates.\n\nThis severe data-perception divergence has occurred only twice in the past 50 years: 1992 (Bush 41 saw GDP recover but voters still perceived recession — he lost) and 2024 (Biden saw inflation moderate but voters resented cumulative price increases — Harris lost). Common feature: economic models predicted the incumbent party would win; reality went the other way. The 2026 divergence is more severe than either, posing significant political risk to Republicans in the 2026 midterms and 2028 presidential."
   }
 }
