@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-10-21T10:46:37.949821Z",
-    "total_vessels": 1558,
-    "with_mmsi": 825,
-    "with_imo": 1547,
+    "fetched_at": "2026-10-22T10:47:52.945541Z",
+    "total_vessels": 1567,
+    "with_mmsi": 834,
+    "with_imo": 1556,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -30,7 +30,7 @@
       "RUSSIA-EO14024": 444,
       "GLOMAG": 157,
       "IRAN-EO13846": 131,
-      "IRAN-EO13902": 342,
+      "IRAN-EO13902": 351,
       "UKRAINE-EO13662": 182,
       "ILLICIT-DRUGS-EO14059": 10
     }
@@ -10948,6 +10948,123 @@
       "call_sign": "C5J36",
       "vessel_type": "Oil Products Tanker",
       "flag": "Gambia"
+    },
+    "470132000": {
+      "uid": "58873",
+      "name": "WHALES DIAMOND",
+      "remarks": "(Linked To: WHALES SHIPPING LINE LLC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9375032",
+      "mmsi": "470132000",
+      "call_sign": "A6E2076",
+      "vessel_type": "Crew/Supply Vessel",
+      "flag": "United Arab Emirates"
+    },
+    "470034000": {
+      "uid": "58874",
+      "name": "WHALES PEARL",
+      "remarks": "(Linked To: WHALES SHIPPING LINE LLC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9483114",
+      "mmsi": "470034000",
+      "call_sign": null,
+      "vessel_type": "Crew/Supply Vessel",
+      "flag": "United Arab Emirates"
+    },
+    "352898798": {
+      "uid": "58955",
+      "name": "ANEMOS",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9205952",
+      "mmsi": "352898798",
+      "call_sign": "3E2064",
+      "vessel_type": "General Cargo",
+      "flag": "Panama"
+    },
+    "352003155": {
+      "uid": "58956",
+      "name": "GLORIS",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9449510",
+      "mmsi": "352003155",
+      "call_sign": "3E6032",
+      "vessel_type": "Bulk Carrier",
+      "flag": "Panama"
+    },
+    "352003589": {
+      "uid": "58957",
+      "name": "PRIDE",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9487407",
+      "mmsi": "352003589",
+      "call_sign": "3E5229",
+      "vessel_type": "Bulk Carrier",
+      "flag": "Panama"
+    },
+    "370662000": {
+      "uid": "58963",
+      "name": "DESTINY",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9385491",
+      "mmsi": "370662000",
+      "call_sign": "3FRG6",
+      "vessel_type": "General Cargo",
+      "flag": "Panama"
+    },
+    "352002503": {
+      "uid": "58964",
+      "name": "FLAMINGO 1",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9474199",
+      "mmsi": "352002503",
+      "call_sign": "3E2656",
+      "vessel_type": "Bulk Carrier",
+      "flag": "Panama"
+    },
+    "352003307": {
+      "uid": "58965",
+      "name": "HARMONY",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9449522",
+      "mmsi": "352003307",
+      "call_sign": "3E7470",
+      "vessel_type": "General Cargo",
+      "flag": "Panama"
+    },
+    "352005105": {
+      "uid": "58966",
+      "name": "PRINCE",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9548316",
+      "mmsi": "352005105",
+      "call_sign": "3E8283",
+      "vessel_type": "Bulk Carrier",
+      "flag": "Panama"
     }
   },
   "by_imo": {
@@ -31526,6 +31643,123 @@
       "call_sign": "C5J36",
       "vessel_type": "Oil Products Tanker",
       "flag": "Gambia"
+    },
+    "9375032": {
+      "uid": "58873",
+      "name": "WHALES DIAMOND",
+      "remarks": "(Linked To: WHALES SHIPPING LINE LLC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9375032",
+      "mmsi": "470132000",
+      "call_sign": "A6E2076",
+      "vessel_type": "Crew/Supply Vessel",
+      "flag": "United Arab Emirates"
+    },
+    "9483114": {
+      "uid": "58874",
+      "name": "WHALES PEARL",
+      "remarks": "(Linked To: WHALES SHIPPING LINE LLC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9483114",
+      "mmsi": "470034000",
+      "call_sign": null,
+      "vessel_type": "Crew/Supply Vessel",
+      "flag": "United Arab Emirates"
+    },
+    "9205952": {
+      "uid": "58955",
+      "name": "ANEMOS",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9205952",
+      "mmsi": "352898798",
+      "call_sign": "3E2064",
+      "vessel_type": "General Cargo",
+      "flag": "Panama"
+    },
+    "9449510": {
+      "uid": "58956",
+      "name": "GLORIS",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9449510",
+      "mmsi": "352003155",
+      "call_sign": "3E6032",
+      "vessel_type": "Bulk Carrier",
+      "flag": "Panama"
+    },
+    "9487407": {
+      "uid": "58957",
+      "name": "PRIDE",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9487407",
+      "mmsi": "352003589",
+      "call_sign": "3E5229",
+      "vessel_type": "Bulk Carrier",
+      "flag": "Panama"
+    },
+    "9385491": {
+      "uid": "58963",
+      "name": "DESTINY",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9385491",
+      "mmsi": "370662000",
+      "call_sign": "3FRG6",
+      "vessel_type": "General Cargo",
+      "flag": "Panama"
+    },
+    "9474199": {
+      "uid": "58964",
+      "name": "FLAMINGO 1",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9474199",
+      "mmsi": "352002503",
+      "call_sign": "3E2656",
+      "vessel_type": "Bulk Carrier",
+      "flag": "Panama"
+    },
+    "9449522": {
+      "uid": "58965",
+      "name": "HARMONY",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9449522",
+      "mmsi": "352003307",
+      "call_sign": "3E7470",
+      "vessel_type": "General Cargo",
+      "flag": "Panama"
+    },
+    "9548316": {
+      "uid": "58966",
+      "name": "PRINCE",
+      "remarks": "(Linked To: ROXETTE MARITIME SHIPPING AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "imo": "9548316",
+      "mmsi": "352005105",
+      "call_sign": "3E8283",
+      "vessel_type": "Bulk Carrier",
+      "flag": "Panama"
     }
   }
 }
