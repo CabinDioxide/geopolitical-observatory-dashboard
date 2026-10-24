@@ -61,4 +61,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'chore: update dashboard data [automated]'
-          file_pattern: 'dashboard/public/data/**'
+          # political_inputs.json is also committed in data/ so that the RCP
+          # values fetched by pipeline/sources/rcp_polls.py persist: the next
+          # run falls back to them (not the older hand-entered values) if the
+          # Wayback fetch fails.
+          file_pattern: 'dashboard/public/data/** dashboard/data/election/political_inputs.json'

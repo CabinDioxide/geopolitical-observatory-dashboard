@@ -21,7 +21,7 @@ dashboard_dir = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(dashboard_dir))
 
 from pipeline.config import CONFLICTS_DIR, META_DIR, LOG_DIR
-from pipeline.sources import gdelt, acled, ucdp, bellingcat, ais, ofac, fred, eia
+from pipeline.sources import gdelt, acled, ucdp, bellingcat, ais, ofac, fred, eia, rcp_polls
 from pipeline.processors.normalize import normalize_gdelt, normalize_acled, merge_conflict_sources
 from pipeline.processors import election_models
 
@@ -195,9 +195,22 @@ def run_pipeline():
         logger.error(f"EIA failed: {e}")
         sources_status["eia"] = {"status": "error", "error": str(e)}
 
+    # --- RCP poll averages (approval + generic ballot) via Wayback snapshots ---
+    # Refreshes trump_approval / generic_ballot in political_inputs.json before
+    # the election models read it. Per series: on failure or a stale snapshot
+    # the existing values are kept and the reason is recorded here.
+    try:
+        logger.info("--- Fetching RCP poll averages ---")
+        rcp_status = rcp_polls.run()
+        ok = all(v.get("status") == "ok" for v in rcp_status.values())
+        sources_status["rcp_polls"] = {"status": "ok" if ok else "partial", **rcp_status}
+    except Exception as e:
+        logger.error(f"RCP polls failed: {e}")
+        sources_status["rcp_polls"] = {"status": "error", "error": str(e)}
+
     # --- Election models (Fair / BEW / scenario engine / Senate state map) ---
-    # Runs only if FRED data exists. Reads political_inputs.json + historical
-    # analogues from data/election/ (manually maintained), produces:
+    # Runs only if FRED data exists. Reads political_inputs.json (polls
+    # refreshed above) + historical analogues from data/election/, produces:
     #   transmission_state.json, scenarios.json, senate_2026.json, forecast_summary.json
     try:
         logger.info("--- Computing election models ---")
