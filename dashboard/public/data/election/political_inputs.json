@@ -1,33 +1,31 @@
 {
   "_meta": {
-    "description": "Manually maintained political inputs. Update from RCP / Silver Bulletin / 538 weekly. The model reads from here directly. Auto-fetch is deferred to Phase 2 because aggregator scraping is fragile.",
+    "description": "trump_approval and generic_ballot are refreshed daily by pipeline/sources/rcp_polls.py from the newest Wayback snapshot of the RCP pages; on failure the previous values are kept. Other blocks are maintained by hand. The model reads only trump_approval.net and generic_ballot.dem_lead.",
     "last_updated": "2026-10-16",
-    "next_review": "2026-10-23",
     "sources": {
-      "approval": "https://www.realclearpolling.com/polls/approval/donald-trump/approval",
-      "generic_ballot": "https://www.realclearpolling.com/polls/generic-congressional-vote",
+      "approval": "https://www.realclearpolling.com/polls/approval/donald-trump/approval-rating",
+      "generic_ballot": "https://www.realclearpolling.com/polls/state-of-the-union/generic-congressional-vote",
       "silver_bulletin": "https://www.natesilver.net/p/silver-bulletin-2026-midterm-elections"
     }
   },
-
   "trump_approval": {
     "approve_pct": 38.8,
     "disapprove_pct": 59.2,
     "net": -20.4,
     "as_of": "2026-10-15",
     "window": "2026-09-26 to 2026-10-14",
-    "source": "RCP average, read from Wayback snapshot 20261015215029 of the RCP approval page (live page blocked by bot check)"
+    "source": "RCP average, read automatically from Wayback snapshot 20261015215029 of the RCP approval page (live page blocked by bot check)",
+    "snapshot": "20261015215029"
   },
-
   "generic_ballot": {
     "dem_pct": 50.0,
     "rep_pct": 42.0,
     "dem_lead": 8.0,
     "as_of": "2026-10-15",
     "window": "2026-09-24 to 2026-10-13",
-    "source": "RCP average, read from Wayback snapshot 20261016001403 of the RCP generic ballot page (live page blocked by bot check)"
+    "source": "RCP average, read automatically from Wayback snapshot 20261016001403 of the RCP generic ballot page (live page blocked by bot check)",
+    "snapshot": "20261016001403"
   },
-
   "right_track_wrong_track": {
     "right_track_pct": 28,
     "wrong_track_pct": 64,
@@ -36,14 +34,12 @@
     "source": "RCP average / NBC poll",
     "note": "NOT refreshed on 2026-10-16 (no verifiable October figure found). Not read by the model."
   },
-
   "most_important_problem_economy_pct": {
     "value": 41,
     "as_of": "2026-04",
     "source": "Gallup MIP",
     "note": "Combined economy + inflation + cost of living. NOT refreshed on 2026-10-16 (no verifiable September/October figure found). Not read by the model."
   },
-
   "structural_2026_midterm": {
     "house_seats_in_party": 220,
     "house_seats_out_party": 215,
@@ -54,7 +50,6 @@
     "senate_seats_up_for_grabs_2026_out_party": 11,
     "note": "Senate Class II is heavily R-leaning in 2026 (22 R defending vs 11 D defending), which structurally limits the size of any Dem wave in Senate even if national environment is D+5."
   },
-
   "structural_2028_presidential": {
     "incumbent_party": "R",
     "incumbent_running": false,
