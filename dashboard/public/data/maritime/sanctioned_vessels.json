@@ -2,10 +2,10 @@
   "_meta": {
     "source": "OFAC SDN",
     "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
-    "fetched_at": "2026-11-05T13:40:25.446295Z",
-    "total_vessels": 1567,
-    "with_mmsi": 834,
-    "with_imo": 1556,
+    "fetched_at": "2026-11-06T13:24:13.397105Z",
+    "total_vessels": 1569,
+    "with_mmsi": 839,
+    "with_imo": 1558,
     "programs": {
       "CUBA": 2,
       "IRAN": 188,
@@ -19,6 +19,7 @@
       "IFSR": 128,
       "IRAN-CON-ARMS-EO": 1,
       "VENEZUELA-EO13850": 54,
+      "CUBA-EO14404": 5,
       "CYBER2": 1,
       "ELECTION-EO13848": 1,
       "UKRAINE-EO13661": 3,
@@ -493,6 +494,20 @@
       "vessel_type": null,
       "flag": "Malta"
     },
+    "323142000": {
+      "uid": "26704",
+      "name": "ESPERANZA",
+      "remarks": "(Linked To: CAROIL TRANSPORT MARINE LTD)",
+      "programs": [
+        "VENEZUELA-EO13850",
+        "CUBA-EO14404"
+      ],
+      "imo": "9289166",
+      "mmsi": "323142000",
+      "call_sign": "CLBM",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Cuba"
+    },
     "375311000": {
       "uid": "27200",
       "name": "ST. VITAMIN",
@@ -507,6 +522,34 @@
       "call_sign": null,
       "vessel_type": "Pleasure Craft",
       "flag": "St. Vincent and the Grenadines"
+    },
+    "323143000": {
+      "uid": "27425",
+      "name": "LOURDES",
+      "remarks": "(Linked To: PETROLEOS MARITIMOS DEL CARIBE S.A.)",
+      "programs": [
+        "VENEZUELA-EO13850",
+        "CUBA-EO14404"
+      ],
+      "imo": "9259692",
+      "mmsi": "323143000",
+      "call_sign": "CLBO",
+      "vessel_type": "Crude Oil Tanker",
+      "flag": "Cuba"
+    },
+    "323147000": {
+      "uid": "27431",
+      "name": "MARIA CRISTINA",
+      "remarks": "(Linked To: CAROIL TRANSPORT MARINE LTD)",
+      "programs": [
+        "VENEZUELA-EO13850",
+        "CUBA-EO14404"
+      ],
+      "imo": "9502453",
+      "mmsi": "323147000",
+      "call_sign": "CLBN",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Cuba"
     },
     "636016459": {
       "uid": "28323",
@@ -10975,6 +11018,19 @@
       "vessel_type": "Crew/Supply Vessel",
       "flag": "United Arab Emirates"
     },
+    "323145000": {
+      "uid": "58910",
+      "name": "GLORIA C",
+      "remarks": "(Linked To: CAROIL TRANSPORT MARINE LTD)",
+      "programs": [
+        "CUBA-EO14404"
+      ],
+      "imo": "9540273",
+      "mmsi": "323145000",
+      "call_sign": "CLBR",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Cuba"
+    },
     "352898798": {
       "uid": "58955",
       "name": "ANEMOS",
@@ -11065,6 +11121,19 @@
       "call_sign": "3E8283",
       "vessel_type": "Bulk Carrier",
       "flag": "Panama"
+    },
+    "323150000": {
+      "uid": "59068",
+      "name": "EMILIA",
+      "remarks": "(Linked To: PETROLEOS MARITIMOS DEL CARIBE S.A.)",
+      "programs": [
+        "CUBA-EO14404"
+      ],
+      "imo": "9242209",
+      "mmsi": "323150000",
+      "call_sign": "CLBS",
+      "vessel_type": "LPG Tanker",
+      "flag": "Cuba"
     }
   },
   "by_imo": {
@@ -15637,11 +15706,12 @@
       "name": "ESPERANZA",
       "remarks": "(Linked To: CAROIL TRANSPORT MARINE LTD)",
       "programs": [
-        "VENEZUELA-EO13850"
+        "VENEZUELA-EO13850",
+        "CUBA-EO14404"
       ],
       "imo": "9289166",
-      "mmsi": null,
-      "call_sign": null,
+      "mmsi": "323142000",
+      "call_sign": "CLBM",
       "vessel_type": "Crude Oil Tanker",
       "flag": "Cuba"
     },
@@ -15790,29 +15860,31 @@
     },
     "9259692": {
       "uid": "27425",
-      "name": "GIRALT",
-      "remarks": "(Linked To: BLUELANE OVERSEAS SA)",
+      "name": "LOURDES",
+      "remarks": "(Linked To: PETROLEOS MARITIMOS DEL CARIBE S.A.)",
       "programs": [
-        "VENEZUELA-EO13850"
+        "VENEZUELA-EO13850",
+        "CUBA-EO14404"
       ],
       "imo": "9259692",
-      "mmsi": null,
-      "call_sign": null,
+      "mmsi": "323143000",
+      "call_sign": "CLBO",
       "vessel_type": "Crude Oil Tanker",
-      "flag": "Panama"
+      "flag": "Cuba"
     },
     "9502453": {
       "uid": "27431",
-      "name": "CARLOTA C",
+      "name": "MARIA CRISTINA",
       "remarks": "(Linked To: CAROIL TRANSPORT MARINE LTD)",
       "programs": [
-        "VENEZUELA-EO13850"
+        "VENEZUELA-EO13850",
+        "CUBA-EO14404"
       ],
       "imo": "9502453",
-      "mmsi": null,
-      "call_sign": null,
+      "mmsi": "323147000",
+      "call_sign": "CLBN",
       "vessel_type": "Chemical/Products Tanker",
-      "flag": "Panama"
+      "flag": "Cuba"
     },
     "9441178": {
       "uid": "27432",
@@ -31670,6 +31742,19 @@
       "vessel_type": "Crew/Supply Vessel",
       "flag": "United Arab Emirates"
     },
+    "9540273": {
+      "uid": "58910",
+      "name": "GLORIA C",
+      "remarks": "(Linked To: CAROIL TRANSPORT MARINE LTD)",
+      "programs": [
+        "CUBA-EO14404"
+      ],
+      "imo": "9540273",
+      "mmsi": "323145000",
+      "call_sign": "CLBR",
+      "vessel_type": "Chemical/Products Tanker",
+      "flag": "Cuba"
+    },
     "9205952": {
       "uid": "58955",
       "name": "ANEMOS",
@@ -31760,6 +31845,19 @@
       "call_sign": "3E8283",
       "vessel_type": "Bulk Carrier",
       "flag": "Panama"
+    },
+    "9242209": {
+      "uid": "59068",
+      "name": "EMILIA",
+      "remarks": "(Linked To: PETROLEOS MARITIMOS DEL CARIBE S.A.)",
+      "programs": [
+        "CUBA-EO14404"
+      ],
+      "imo": "9242209",
+      "mmsi": "323150000",
+      "call_sign": "CLBS",
+      "vessel_type": "LPG Tanker",
+      "flag": "Cuba"
     }
   }
 }
