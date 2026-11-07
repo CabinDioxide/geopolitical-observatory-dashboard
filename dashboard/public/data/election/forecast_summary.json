@@ -1,14 +1,14 @@
 {
-  "computed_at": "2026-11-06T13:28:18.977728Z",
+  "computed_at": "2026-11-07T12:06:03.822172Z",
   "transmission_max_pressure": 100,
   "scenarios_2028_range": {
-    "min_R_pct_ensemble": 43.27,
-    "max_R_pct_ensemble": 47.78,
+    "min_R_pct_ensemble": 43.29,
+    "max_R_pct_ensemble": 47.8,
     "weighted_R_pct_fair": 54.73,
     "weighted_R_pct_hibbs": 49.64,
     "weighted_R_pct_abramowitz": 38.29,
-    "weighted_R_pct_ensemble": 46.62,
-    "weighted_R_pct": 46.62
+    "weighted_R_pct_ensemble": 46.64,
+    "weighted_R_pct": 46.64
   },
   "scenarios_2026_house_range": {
     "min_R_seat_change": -58.0,
