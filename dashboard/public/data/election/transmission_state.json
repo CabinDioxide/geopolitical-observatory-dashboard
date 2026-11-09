@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-08T12:27:11.139474Z",
+  "as_of": "2026-11-09T14:41:29.164447Z",
   "chain": [
     {
       "step": 1,
@@ -238,7 +238,7 @@
       "caveat_en": "Coefficients are [CALIBRATION_PENDING] \u2014 derived from a 2-point prior on 1980/2010, not from OLS on the 1948-2020 sample. Outputs are indicative."
     }
   ],
-  "epu_index": 168.2,
+  "epu_index": 292.85,
   "methodology_caveats": {
     "ensemble_rmse_honesty": {
       "displayed": 1.07,
