@@ -660,7 +660,7 @@ PYTHONPATH=. python3 -m pipeline.processors.backtest
           <tr><td>实际 GDP</td><td>FRED (GDPC1)</td><td>季度</td><td>FRED key</td></tr>
           <tr><td>密歇根消费者信心 + 通胀预期</td><td>FRED (UMCSENT/MICH)</td><td>月底</td><td>FRED key</td></tr>
           <tr><td>经济政策不确定性</td><td>FRED (USEPUINDXD)</td><td>日</td><td>FRED key</td></tr>
-          <tr><td>总统支持率 + Generic Ballot</td><td>RCP / Silver Bulletin（手动维护 political_inputs.json）</td><td>每周一手动更新</td><td>无（无可靠 API）</td></tr>
+          <tr><td>总统支持率 + Generic Ballot</td><td>RCP 平均值，取 Wayback Machine 最新存档页（RCP 原站有机器人验证）</td><td>每日自动抓取；抓取失败或存档超过 7 天时沿用上次数值</td><td>无</td></tr>
           <tr><td>美国州地图</td><td>PublicaMundi GeoJSON（一次性下载，89KB）</td><td>静态</td><td>无</td></tr>
         </tbody>
       </table>
@@ -1202,7 +1202,7 @@ PYTHONPATH=. python3 -m pipeline.processors.backtest
           <tr><td>Real GDP</td><td>FRED (GDPC1)</td><td>Quarterly</td><td>FRED key</td></tr>
           <tr><td>Michigan Consumer Sentiment + inflation expectations</td><td>FRED (UMCSENT/MICH)</td><td>End-of-month</td><td>FRED key</td></tr>
           <tr><td>Economic Policy Uncertainty</td><td>FRED (USEPUINDXD)</td><td>Daily</td><td>FRED key</td></tr>
-          <tr><td>Presidential approval + Generic Ballot</td><td>RCP / Silver Bulletin (manually maintained political_inputs.json)</td><td>Manual update each Monday</td><td>None (no reliable API)</td></tr>
+          <tr><td>Presidential approval + Generic Ballot</td><td>RCP average, read from the newest Wayback Machine snapshot (the live RCP site has a bot check)</td><td>Fetched daily; previous values kept if the fetch fails or the snapshot is over 7 days old</td><td>None</td></tr>
           <tr><td>US states map</td><td>PublicaMundi GeoJSON (one-time download, 89KB)</td><td>Static</td><td>None</td></tr>
         </tbody>
       </table>
