@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-11-17T15:09:59.000394Z",
-  "duration_seconds": 265.8,
+  "last_run": "2026-11-18T14:48:48.014054Z",
+  "duration_seconds": 262.8,
   "sources": {
     "gdelt": {
       "status": "ok",
-      "features": 1424
+      "features": 1460
     },
     "acled": {
       "status": "skipped",
@@ -26,7 +26,7 @@
     },
     "ais": {
       "status": "ok",
-      "features": 192,
+      "features": 173,
       "sanctioned_in_chokepoints": 0
     },
     "fred": {
@@ -35,8 +35,8 @@
       "series_failed": 0
     },
     "eia": {
-      "status": "ok",
-      "rows": 3
+      "status": "error",
+      "error": "403 Client Error: Forbidden for url: https://ir.eia.gov/secure/wpsr/table1.csv?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pci5laWEuZ292L3NlY3VyZS93cHNyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTU2MTY0MDB9LCJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5NTAxNTgwMH19fV19&Signature=rrVa3C46LfdtjQh3ZIPVpgd6RbFrPDA8JIritPvz4~UooWd9hQdhbC5KQZnNs16ynupaSUYzjTIEKcooGTDbw2-304KXV6S2qeq1x05WlHjAVOcKr1cpWH5kMzf91ltiErttAx7e5aT5yL10eOcsicbs5RizdhmXDjMvz-DhSRc575nMCEdITKFx9-pR195S-V2ooxT8KrNTdiyS0fH13m3ETHp~vwYCnegTZ-mRcJBeMTi7E5w1AY6sdN6qYiLAkOBXDC07JtzxRP3G4g2IU1Odeb8Q4uHpoPLA0sLoMBsEPV8RAa2vtKEylXrxIWUGoBrz0vSuIbgzEDf3YQPzWg&Key-Pair-Id=K35C1YG379GDBZ"
     },
     "election_models": {
       "status": "ok",
