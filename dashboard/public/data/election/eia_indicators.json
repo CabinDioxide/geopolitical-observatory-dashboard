@@ -1,6 +1,37 @@
 {
+  "fetched_at": "2026-11-19T14:55:50.146416Z",
+  "source": "https://ir.eia.gov/wpsr/table1.csv",
+  "metrics": {
+    "commercial_crude_mbbl": {
+      "label": "Commercial (Excluding SPR)",
+      "current": 417.797,
+      "previous_week": 414.417,
+      "year_ago": 424.155,
+      "current_date": "11/13/26",
+      "prev_week_date": "11/6/26",
+      "year_ago_date": "11/14/25"
+    },
+    "spr_mbbl": {
+      "label": "Strategic Petroleum Reserve (SPR)",
+      "current": 276.361,
+      "previous_week": 279.535,
+      "year_ago": 410.926,
+      "current_date": "11/13/26",
+      "prev_week_date": "11/6/26",
+      "year_ago_date": "11/14/25"
+    },
+    "total_stocks_mbbl": {
+      "label": "Total Stocks (Including SPR)",
+      "current": 1501.299,
+      "previous_week": 1495.268,
+      "year_ago": 1680.113,
+      "current_date": "11/13/26",
+      "prev_week_date": "11/6/26",
+      "year_ago_date": "11/14/25"
+    }
+  },
   "_meta": {
-    "status": "error",
-    "error": "403 Client Error: Forbidden for url: https://ir.eia.gov/secure/wpsr/table1.csv?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pci5laWEuZ292L3NlY3VyZS93cHNyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTU2MTY0MDB9LCJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5NTAxNTgwMH19fV19&Signature=rrVa3C46LfdtjQh3ZIPVpgd6RbFrPDA8JIritPvz4~UooWd9hQdhbC5KQZnNs16ynupaSUYzjTIEKcooGTDbw2-304KXV6S2qeq1x05WlHjAVOcKr1cpWH5kMzf91ltiErttAx7e5aT5yL10eOcsicbs5RizdhmXDjMvz-DhSRc575nMCEdITKFx9-pR195S-V2ooxT8KrNTdiyS0fH13m3ETHp~vwYCnegTZ-mRcJBeMTi7E5w1AY6sdN6qYiLAkOBXDC07JtzxRP3G4g2IU1Odeb8Q4uHpoPLA0sLoMBsEPV8RAa2vtKEylXrxIWUGoBrz0vSuIbgzEDf3YQPzWg&Key-Pair-Id=K35C1YG379GDBZ"
+    "status": "ok",
+    "rows": 3
   }
 }
